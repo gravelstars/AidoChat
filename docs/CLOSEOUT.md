@@ -1,10 +1,10 @@
 # 项目收尾状态
 
-日期：2026-10-16。功能代码基线：158b4e1；后续 TASK-016 修复首次原生 CI 发现的 Windows 文件 URI 与 macOS 磁盘映像忙碌问题。
+日期：2026-10-16。功能代码基线：158b4e1；后续 TASK-016 修复首次原生 CI 发现的 Windows 文件 URI、检出换行、NSIS 路径/编码与 macOS 磁盘映像忙碌问题。
 
 ## 结论
 
-功能开发及整体审查修复已完成，当前 macOS 桌面源码可构建并通过原生桥接回归。项目具备本地使用条件；跨平台安装和正式分发验收尚未全部完成。
+功能开发及整体审查修复已完成，当前 macOS 桌面源码可构建并通过原生桥接回归；Windows、macOS、Ubuntu 原生 CI 的自检和安装包构建全部通过。项目具备本地使用条件；跨平台安装和正式分发验收尚未全部完成。
 
 ## 本轮验证
 
@@ -24,9 +24,9 @@
 
 | 项目 | 当前边界 |
 | --- | --- |
-| Windows | 交叉编译及资源/引导安装器检查已做，原生 CI 和安装、WebView2、凭证、对话验收待补 |
-| Linux | GTK4/WebKitGTK 6.0 的 tar/deb/AppImage 配方就绪，原生 CI 和安装/启动待补；AppImage 不捆绑全部系统库 |
-| 图标 | 所有者已于 2026-10-16 批准现有 SVG 母版；仓库变量 APP_ICON_APPROVED=true 已启用，正在验证生成及打包 |
+| Windows | 原生 CI 全部自检、exe/zip、图标资源与 NSIS 安装器构建通过；安装后 WebView2、凭证、对话真机验收待补 |
+| Linux | Ubuntu 24.04 原生 CI 全部自检和 tar/deb/AppImage 构建通过；安装/启动交互待补，AppImage 不捆绑全部系统库 |
+| 图标 | 所有者已于 2026-10-16 批准现有 SVG 母版；仓库变量 APP_ICON_APPROVED=true 已启用，三平台生成及打包通过 |
 | 中文输入法与窗口 | macOS 真正输入法候选确认、Windows/Linux 拖拽缩放/重启恢复等仍需人工验收 |
 | 正式分发 | macOS 尚无 Developer ID/公证，Windows 尚无发布签名；当前 macOS 包使用 ad-hoc 签名 |
 | 系统版本 | macOS 12 为构建目标，旧版本尚未真机验证；Linux 优先 Ubuntu 24.04 |
@@ -41,4 +41,8 @@
 
 ## GitHub 首次原生 CI
 
-干净源码已上传到 https://github.com/rickepicepic/group-chat-ai 。首次运行 38913777806：Ubuntu 自检及 tar/deb 构建通过；Windows 测试发现盘符 URI 问题；macOS 编译、签名和 zip 成功，但创建 dmg 返回 Resource busy。已修复并准备下一轮验证，最终结果以 TASK-016 交付记录及 Actions 为准。
+干净源码已上传到 https://github.com/rickepicepic/group-chat-ai 。首次运行 38913777806：Ubuntu 自检及 tar/deb 构建通过；Windows 测试发现盘符 URI 问题；macOS 编译、签名和 zip 成功，但创建 dmg 返回 Resource busy。已逐项修复，最终源码提交为 `7a6ff5dcdc44edbd45af3407ba9ab561179e3bc4`。最终 [CI 38920611754](https://github.com/rickepicepic/group-chat-ai/actions/runs/38920611754) 的 macos-14、windows-2022、ubuntu-24.04 三个 job 全部 success。该运行的 Artifacts 提供各平台包；不是已经完成真机安装验收的正式发行版。
+
+本机最终 macOS 包已复制到外部归档 release/macos，含批准图标，双架构、签名完整性和 DMG 校验通过；前一版本单独留在 release/macos-before-platform-validation。本机 macOS 26 的 iconutil 拒绝该 iconset，采用同一已批准 SVG 的 PNG ICNS 块打包并经 sips 解码校验；macos-14 CI 使用原脚本生成成功。安装包下载网络较慢，Windows/Linux 包以成功 CI 的 Artifacts 为准，没有把不完整下载作为本地交付。
+
+全部历史及本次任务过程记录已归档到源码目录之外，当前 docs/tasks 仅保留未来任务指引。源码目录已清理 node_modules、dist、build/bin、任务缓存与临时归档；再次开发需 npm ci。用户数据、凭证和本机旧源码分支均保留。

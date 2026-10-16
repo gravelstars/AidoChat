@@ -7,11 +7,14 @@
 | 文件 | 内容 |
 | --- | --- |
 | project-history.tar.gz | 旧交接、旧 README、TASK-001–014、过程计划及 QA 证据，共 69 文件 |
+| closeout-records.tar.gz / closeout-records-manifest.json | TASK-015/016 最终交付和调查记录 |
 | history-manifest.json | 原始相对路径、大小、逐文件 SHA-256，代码基线 158b4e1 |
 | legacy-builds.tar.gz | 历史 build/bin 内容，仅供追溯，不作为最新安装包 |
 | legacy-builds-manifest.json | 旧包逐文件校验表 |
 | archive-index.json / SHA256SUMS | 外层归档文件大小和校验值 |
 | verification/closeout-macos/ | 本轮原生桥接报告、截图和日志 |
+| verification/platform-validation/ | 最终三平台 CI 与本地最新包验证记录 |
+| release/macos-before-platform-validation/ | 本轮平台修复前的已验证 macOS 包 |
 | release/macos/ | 收尾时重新构建的本地安装包及校验表（已构建并校验） |
 
 历史源码提交和本地分支仍保留在 .git，未压缩或重写。GitHub 初次发布使用清理后的源码快照，避免上传历史截图和旧构建。

@@ -1,6 +1,6 @@
 # ai-group-chat 使用说明书
 
-版本：0.1.0 · 文档日期：2026-10-16 · 功能代码基线：158b4e1
+版本：0.1.0 · 文档日期：2026-10-16 · 功能代码基线：158b4e1；平台修复与 CI：7a6ff5d
 
 这是一个在自己电脑上运行的 AI 群聊应用。你可以把使用不同模型、担任不同角色的 AI 成员放进同一个群，点名讨论，并把有用的结论整理成带来源的群纪要。
 
@@ -52,7 +52,7 @@ wails3 dev
 
 ### Windows 与 Linux
 
-已有 Windows NSIS、Linux deb/AppImage 的构建配方，但尚无完整原生安装验收，不应当作已验证发行版。
+Windows NSIS、Linux deb/AppImage 已通过原生 CI 构建，但尚无完整真机安装验收。安装包可在 [三平台 CI 的 Artifacts](https://github.com/rickepicepic/group-chat-ai/actions/runs/38920611754) 下载；当前属于本地测试交付。
 
 - Windows 需要 WebView2；NSIS 配方已包含缺失时的在线引导，安装时可能需要网络。
 - Linux 需要 GTK4/WebKitGTK 6.0；AppImage 当前不能据此承诺在任意发行版免依赖运行。

@@ -57,7 +57,7 @@ AppImage 另需 appimagetool 与已生成的应用 PNG 图标：`wails3 task lin
 
 ## CI 与验收边界
 
-.github/workflows/desktop-build.yml 使用三个原生 runner，执行自检并产出各平台包。只有远程运行成功才算 CI 通过；安装后窗口、中文输入法、系统凭证和实际聊天仍需真机检查。当前结论见 [收尾说明](../docs/CLOSEOUT.md)。构建产物、依赖和本地数据库不提交。
+.github/workflows/desktop-build.yml 使用三个原生 runner，执行自检并产出各平台包。只有远程运行成功才算 CI 通过；安装后窗口、中文输入法、系统凭证和实际聊天仍需真机检查。最终三平台原生 CI 38920611754 全部通过；当前结论和下载入口见 [收尾说明](../docs/CLOSEOUT.md)。构建产物、依赖和本地数据库不提交。
 
 ## 可复用桌面 QA
 
