@@ -26,3 +26,5 @@
 - 第二轮 Windows 全部 Go 竞态测试通过，随后保护检查因 Windows checkout 自动 CRLF 使清单路径带回车而失败。新增 .gitattributes 固定文本 LF；不改保护脚本、文件或指纹。
 
 - 第三轮 Windows 已通过全部自检、保护检查、图标生成与 exe/zip；NSIS 对混合斜杠的 WebView2 路径报 no files found，而固定 Wails CLI 已成功生成该文件。打包入口改用 PowerShell 把路径统一为 Windows 绝对路径，并在调用 makensis 前检查应用和引导程序确实存在，保留失败退出码。
+
+- 第四轮 Windows 5.1 PowerShell 将无 BOM 的 UTF-8 中文脚本按 ANSI 解析，中文字节产生引号并报 ParserError；为 .ps1 和 NSIS 中文源显式添加 UTF-8 BOM，保留文本和功能，避免依赖系统代码页。macOS/Linux 本轮继续通过。

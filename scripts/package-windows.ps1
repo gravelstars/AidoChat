@@ -1,4 +1,4 @@
-param(
+﻿param(
     [Parameter(Mandatory = $true)][string]$BinDir,
     [Parameter(Mandatory = $true)][string]$InstallerScript
 )

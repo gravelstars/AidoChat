@@ -1,4 +1,4 @@
-; ai-group-chat 的 Windows 安装包（TASK-012）。未在真机验证；由 CI 的 windows-2022 runner 用 makensis 构建。
+﻿; ai-group-chat 的 Windows 安装包（TASK-012）。未在真机验证；由 CI 的 windows-2022 runner 用 makensis 构建。
 ; 调用：makensis -DSRC=<bin目录> -DWEBVIEW2=<bootstrapper路径> -DOUT=<输出 setup.exe> installer.nsi
 ; WebView2 缺失时运行固定 Wails CLI 附带的在线引导程序；失败时中止安装。
 
