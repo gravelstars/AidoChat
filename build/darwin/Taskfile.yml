@@ -1,0 +1,46 @@
+version: '3'
+tasks:
+  build:
+    deps: [':common:build:frontend']
+    cmds:
+      - go build {{if ne .DEV "true"}}-tags production -trimpath -ldflags="-s -w"{{end}} -o "{{.BIN_DIR}}/{{.APP_NAME}}" .
+    env:
+      CGO_ENABLED: '1'
+      MACOSX_DEPLOYMENT_TARGET: '12.0'
+      CGO_CFLAGS: -mmacosx-version-min=12.0
+      CGO_LDFLAGS: -mmacosx-version-min=12.0
+  # 通用二进制：分别编 arm64 与 amd64，再用 lipo 合并，供 Intel 与 Apple Silicon 共用。
+  build:universal:
+    deps: [':common:build:frontend']
+    cmds:
+      - GOARCH=amd64 go build {{if ne .DEV "true"}}-tags production -trimpath -ldflags="-s -w"{{end}} -o "{{.BIN_DIR}}/{{.APP_NAME}}-amd64" .
+      - GOARCH=arm64 go build {{if ne .DEV "true"}}-tags production -trimpath -ldflags="-s -w"{{end}} -o "{{.BIN_DIR}}/{{.APP_NAME}}-arm64" .
+      - lipo -create -output "{{.BIN_DIR}}/{{.APP_NAME}}" "{{.BIN_DIR}}/{{.APP_NAME}}-amd64" "{{.BIN_DIR}}/{{.APP_NAME}}-arm64"
+      - rm -f "{{.BIN_DIR}}/{{.APP_NAME}}-amd64" "{{.BIN_DIR}}/{{.APP_NAME}}-arm64"
+    env:
+      CGO_ENABLED: '1'
+      MACOSX_DEPLOYMENT_TARGET: '12.0'
+      CGO_CFLAGS: -mmacosx-version-min=12.0
+      CGO_LDFLAGS: -mmacosx-version-min=12.0
+  bundle:
+    cmds:
+      - mkdir -p "{{.BIN_DIR}}/{{.APP_NAME}}.app/Contents/MacOS" "{{.BIN_DIR}}/{{.APP_NAME}}.app/Contents/Resources"
+      - cp "{{.BIN_DIR}}/{{.APP_NAME}}" "{{.BIN_DIR}}/{{.APP_NAME}}.app/Contents/MacOS/{{.APP_NAME}}"
+      - cp "{{.ROOT_DIR}}/build/darwin/Info.plist" "{{.BIN_DIR}}/{{.APP_NAME}}.app/Contents/Info.plist"
+      - if [ -f "{{.ROOT_DIR}}/build/darwin/icon.icns" ]; then cp "{{.ROOT_DIR}}/build/darwin/icon.icns" "{{.BIN_DIR}}/{{.APP_NAME}}.app/Contents/Resources/iconfile.icns"; fi
+      - codesign --force --deep --sign - "{{.BIN_DIR}}/{{.APP_NAME}}.app"
+  dmg:
+    cmds:
+      - task: build:universal
+      - task: bundle
+      - hdiutil create -volname "{{.APP_NAME}}" -srcfolder "{{.BIN_DIR}}/{{.APP_NAME}}.app" -ov -format UDZO "{{.BIN_DIR}}/{{.APP_NAME}}.dmg"
+  package:
+    cmds:
+      - task: build:universal
+      - task: bundle
+      - ditto -c -k --sequesterRsrc --keepParent "{{.BIN_DIR}}/{{.APP_NAME}}.app" "{{.BIN_DIR}}/{{.APP_NAME}}-macos.zip"
+      - hdiutil create -volname "{{.APP_NAME}}" -srcfolder "{{.BIN_DIR}}/{{.APP_NAME}}.app" -ov -format UDZO "{{.BIN_DIR}}/{{.APP_NAME}}.dmg"
+  run:
+    cmds:
+      - task: bundle
+      - '"{{.BIN_DIR}}/{{.APP_NAME}}.app/Contents/MacOS/{{.APP_NAME}}"'

@@ -1,0 +1,10 @@
+Package: ai-group-chat
+Version: 0.1.0
+Section: utils
+Priority: optional
+Architecture: amd64
+Maintainer: ai-group-chat <local@ai-group-chat>
+Depends: libgtk-4-1, libwebkitgtk-6.0-4
+Description: 本地运行的 AI 群聊桌面应用
+ 一个在本地运行的 AI 群聊：你 @ 成员，他们回应，你盖章确认结论。
+ Build: TASK-012。

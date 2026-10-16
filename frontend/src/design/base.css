@@ -1,0 +1,334 @@
+/*
+ * 全局基础样式 —— 受保护文件。重置、滚动条、焦点、选区、正文排版、共享动画。
+ */
+@import "@fontsource-variable/noto-sans-sc/index.css";
+@import "@fontsource-variable/noto-serif-sc/index.css";
+@import "@fontsource-variable/jetbrains-mono/index.css";
+@import "./tokens.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--text-md);
+  line-height: var(--leading-ui);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "palt" 0;
+  overflow: hidden;
+  /* 桌面应用：默认不可选中界面文字，正文区域单独开启 */
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: default;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: 0;
+  padding: 0;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+input,
+textarea {
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: var(--cinnabar-wash);
+  color: inherit;
+}
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  box-shadow: var(--focus-ring);
+  border-radius: var(--radius-sm);
+}
+
+/* 统一滚动条：Windows 默认滚动条会直接破坏纸面感 */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--rule-strong) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--rule-strong);
+  border: 3px solid transparent;
+  background-clip: content-box;
+  border-radius: var(--radius-pill);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--ink-4);
+}
+
+/* Wails 拖拽区域约定：标题栏加 .drag，内部可点元素自动排除 */
+.drag {
+  --wails-draggable: drag;
+  -webkit-app-region: drag;
+}
+
+.drag button,
+.drag input,
+.drag a,
+.drag [role="button"],
+.no-drag {
+  --wails-draggable: no-drag;
+  -webkit-app-region: no-drag;
+}
+
+.selectable {
+  user-select: text;
+  -webkit-user-select: text;
+  cursor: text;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ---- 正文排版：AI 回复的 Markdown ---- */
+.prose {
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+
+.prose > :first-child {
+  margin-top: 0;
+}
+
+.prose > :last-child {
+  margin-bottom: 0;
+}
+
+.prose p,
+.prose ul,
+.prose ol,
+.prose blockquote,
+.prose pre,
+.prose table {
+  margin: 0 0 0.7em;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  font-family: var(--font-serif);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-tight);
+  margin: 1.1em 0 0.5em;
+}
+
+.prose h1 {
+  font-size: var(--text-xl);
+}
+
+.prose h2 {
+  font-size: var(--text-lg);
+}
+
+.prose h3,
+.prose h4 {
+  font-size: var(--text-body);
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.4em;
+}
+
+.prose li {
+  margin: 0.2em 0;
+}
+
+.prose li::marker {
+  color: var(--ink-3);
+}
+
+.prose strong {
+  font-weight: var(--weight-semibold);
+}
+
+.prose blockquote {
+  padding: 0.1em 0 0.1em 1em;
+  border-left: 2px solid var(--rule-strong);
+  color: var(--ink-2);
+}
+
+.prose code {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  padding: 0.1em 0.35em;
+  border-radius: var(--radius-xs);
+  background: var(--paper-deep);
+}
+
+.prose pre {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-sm);
+  background: var(--paper-sunk);
+  border: 1px solid var(--rule);
+  overflow-x: auto;
+  line-height: 1.6;
+}
+
+.prose pre code {
+  padding: 0;
+  background: none;
+  font-size: var(--text-sm);
+}
+
+.prose table {
+  border-collapse: collapse;
+  font-size: var(--text-md);
+}
+
+.prose th,
+.prose td {
+  border-bottom: 1px solid var(--rule);
+  padding: 0.35em 0.8em 0.35em 0;
+  text-align: left;
+}
+
+.prose th {
+  font-weight: var(--weight-semibold);
+  border-bottom-color: var(--rule-strong);
+}
+
+.prose hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 1.2em 0;
+}
+
+.prose a {
+  color: var(--ink);
+  text-decoration-color: var(--rule-strong);
+  text-underline-offset: 3px;
+}
+
+/* ---- 共享动画 ---- */
+@keyframes enter-up {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+@keyframes enter-fade {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes marker-flash {
+  0%,
+  35% {
+    background-color: var(--marker);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes brush-blink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  55%,
+  100% {
+    opacity: 0.15;
+  }
+}
+
+@keyframes stamp-in {
+  0% {
+    opacity: 0;
+    transform: scale(1.9) rotate(-14deg);
+    filter: blur(2px);
+  }
+  60% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(-6deg);
+  }
+}
+
+@keyframes ink-bleed {
+  0% {
+    opacity: 0.5;
+    transform: scale(0.6);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.8);
+  }
+}
+
+@keyframes shake-x {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-3px);
+  }
+  75% {
+    transform: translateX(3px);
+  }
+}

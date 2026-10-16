@@ -1,0 +1,83 @@
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  height: 34px;
+  padding: 0 var(--space-4);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-md);
+  font-weight: var(--weight-medium);
+  line-height: 1;
+  white-space: nowrap;
+  transition:
+    background-color var(--dur-quick) var(--ease-out),
+    border-color var(--dur-quick) var(--ease-out),
+    color var(--dur-quick) var(--ease-out),
+    transform var(--dur-press) var(--ease-out);
+}
+
+/* 按下反馈：立即、短促、往下沉 1px。所有可点元素都应有这种手感 */
+.btn:active:not(:disabled) {
+  transform: translateY(1px) scale(0.985);
+  transition-duration: 0ms;
+}
+
+.btn:disabled {
+  opacity: 0.45;
+}
+
+.sm {
+  height: 28px;
+  padding: 0 var(--space-3);
+  font-size: var(--text-sm);
+  gap: 6px;
+}
+
+.iconOnly {
+  padding: 0;
+  width: 34px;
+}
+
+.sm.iconOnly {
+  width: 28px;
+}
+
+.primary {
+  background: var(--ink);
+  color: var(--paper-raised);
+}
+
+.primary:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--ink) 86%, var(--paper));
+}
+
+.accent {
+  background: var(--cinnabar);
+  color: var(--on-cinnabar);
+}
+
+.accent:hover:not(:disabled) {
+  background: var(--cinnabar-strong);
+}
+
+.ghost {
+  border: 1px solid var(--rule-strong);
+  color: var(--ink);
+  background: var(--paper-raised);
+}
+
+.ghost:hover:not(:disabled) {
+  border-color: var(--ink-3);
+  background: var(--paper);
+}
+
+.quiet {
+  color: var(--ink-2);
+}
+
+.quiet:hover:not(:disabled) {
+  color: var(--ink);
+  background: color-mix(in srgb, var(--ink) 6%, transparent);
+}

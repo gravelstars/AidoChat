@@ -1,0 +1,66 @@
+/* 案头配色来自 lib/highlight.ts 里 css-variables 主题的 variableDefaults，
+   直接引用 tokens.css 的 --ink / --ink-2 / --ink-3 与颜料色，日间/夜间随 data-paper 切换。 */
+.block {
+  position: relative;
+  margin: var(--space-3) 0;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-md);
+  background: var(--paper-sunk);
+  overflow: hidden;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 28px;
+  padding: 0 var(--space-2) 0 var(--space-3);
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper-raised);
+}
+
+.lang {
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  letter-spacing: 0.04em;
+  color: var(--ink-3);
+  text-transform: uppercase;
+}
+
+.copy {
+  opacity: 0;
+  transition: opacity var(--dur-quick) var(--ease-out);
+}
+
+.block:hover .copy,
+.copy:focus-visible {
+  opacity: 1;
+}
+
+.bar .copy {
+  opacity: 0;
+}
+
+.bar:hover .copy,
+.copy[data-copied="true"] {
+  opacity: 1;
+}
+
+.pre {
+  margin: 0;
+  padding: var(--space-3) var(--space-4);
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  line-height: 1.7;
+  color: var(--ink);
+}
+
+.pre :global(pre) {
+  margin: 0;
+  background: transparent !important;
+}
+
+.pre :global(code) {
+  font-family: inherit;
+}

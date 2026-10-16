@@ -1,0 +1,38 @@
+.controls {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  --wails-draggable: no-drag;
+  -webkit-app-region: no-drag;
+}
+
+.btn {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 32px;
+  color: var(--ink-2);
+  transition:
+    background-color var(--dur-quick) var(--ease-out),
+    color var(--dur-quick) var(--ease-out);
+}
+
+.btn:hover {
+  background: color-mix(in srgb, var(--ink) 8%, transparent);
+  color: var(--ink);
+}
+
+.btn:active {
+  background: color-mix(in srgb, var(--ink) 14%, transparent);
+}
+
+.close:hover {
+  background: #c42b1c;
+  color: #fff;
+}
+
+.close:active {
+  background: #a52517;
+}

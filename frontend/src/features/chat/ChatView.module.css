@@ -1,0 +1,87 @@
+.chat {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+  background-color: var(--paper);
+  background-image: var(--grain);
+}
+
+.head {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  min-height: 64px;
+  padding: var(--space-3) var(--space-8);
+  border-bottom: 1px solid var(--rule);
+}
+
+.head[data-edge="right"] {
+  padding-right: var(--edge-right, var(--space-8));
+}
+
+.titles {
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-tight);
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.topic {
+  margin: 2px 0 0;
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.roster {
+  display: flex;
+  gap: 6px;
+}
+
+.rosterSlot {
+  position: relative;
+  display: inline-flex;
+}
+
+.rosterItem {
+  border-radius: var(--radius-sm);
+  transition: transform var(--dur-quick) var(--ease-out);
+}
+
+.rosterItem:hover,
+.rosterItem[aria-expanded="true"] {
+  transform: translateY(-2px);
+}
+
+.rosterItem:active {
+  transform: translateY(0);
+  transition-duration: 0ms;
+}
+
+.badge {
+  display: inline-grid;
+  place-items: center;
+  min-width: 16px;
+  height: 16px;
+  margin-left: 4px;
+  padding: 0 4px;
+  border-radius: var(--radius-pill);
+  background: var(--ink);
+  color: var(--paper-raised);
+  font-family: var(--font-mono);
+  font-size: 10px;
+}

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ai-group-chat</title>
+    <script>
+      // 在样式首次绘制前恢复纸张，避免夜间启动时先出现白纸。
+      try {
+        const a = JSON.parse(localStorage.getItem('agc.appearance') || '{}')
+        const dark = a.mode === 'night' || (a.mode === 'system' && matchMedia('(prefers-color-scheme: dark)').matches)
+        const paper = dark ? a.nightPaper : a.paper
+        if (['xuan', 'su', 'ma', 'qing', 'ye', 'wujin'].includes(paper)) document.documentElement.dataset.paper = paper
+      } catch {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

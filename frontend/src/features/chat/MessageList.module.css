@@ -1,0 +1,120 @@
+.wrap {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+}
+
+.scroller {
+  height: 100%;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scroll-padding: var(--space-8);
+}
+
+.column {
+  max-width: calc(var(--reading-width) + 120px);
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-8) var(--space-10);
+}
+
+.day {
+  width: max-content;
+  margin: var(--space-4) auto var(--space-2);
+  font-size: var(--text-2xs);
+  letter-spacing: 0.3em;
+  color: var(--ink-4);
+}
+
+.jump {
+  position: absolute;
+  left: 50%;
+  bottom: var(--space-4);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 30px;
+  padding: 0 var(--space-3);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-pill);
+  background: var(--paper-raised);
+  box-shadow: var(--lift-2);
+  font-size: var(--text-xs);
+  color: var(--ink-2);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 8px);
+  transition:
+    opacity var(--dur-base) var(--ease-out),
+    transform var(--dur-base) var(--ease-out);
+}
+
+.jumpShow {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+
+.jump:active {
+  transform: translate(-50%, 1px);
+}
+
+.empty {
+  margin: var(--space-10) auto 0;
+  max-width: 440px;
+  text-align: center;
+  animation: enter-up var(--dur-slow) var(--ease-out) both;
+}
+
+.emptyTitle {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
+}
+
+.emptyText {
+  margin: 0 0 var(--space-5);
+  font-size: var(--text-sm);
+  color: var(--ink-3);
+}
+
+.emptyChips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 30px;
+  padding: 0 var(--space-3) 0 6px;
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-sm);
+  background: var(--paper-raised);
+  font-size: var(--text-sm);
+  color: var(--ink);
+  transition:
+    border-color var(--dur-quick) var(--ease-out),
+    transform var(--dur-press) var(--ease-out);
+}
+
+.chip:last-child {
+  padding-left: var(--space-3);
+  color: var(--cinnabar);
+}
+
+.chip:hover {
+  border-color: var(--ink-3);
+}
+
+.chip:active {
+  transform: translateY(1px);
+}
+
+.chipBrief {
+  color: var(--ink-3);
+  font-size: var(--text-xs);
+}

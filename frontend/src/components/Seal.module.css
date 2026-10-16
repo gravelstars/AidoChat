@@ -1,0 +1,106 @@
+.seal {
+  --size: 32px;
+  position: relative;
+  flex: none;
+  display: inline-grid;
+  place-items: center;
+  width: var(--size);
+  height: var(--size);
+  border-radius: calc(var(--size) * 0.16);
+  background: var(--seal);
+  color: var(--paper-raised);
+  /* 印章的内框：一圈纸色细线，模拟篆刻边栏 */
+  box-shadow:
+    inset 0 0 0 calc(var(--size) * 0.07) var(--seal),
+    inset 0 0 0 calc(var(--size) * 0.07 + 1px) rgb(250 247 241 / 0.55);
+  overflow: hidden;
+  transition:
+    filter var(--dur-base) var(--ease-out),
+    opacity var(--dur-base) var(--ease-out);
+}
+
+/* 印泥的颗粒感：极淡的噪点叠在色块上 */
+.seal::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--grain);
+  mix-blend-mode: multiply;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.glyph {
+  font-family: var(--font-serif);
+  font-weight: var(--weight-bold);
+  font-size: calc(var(--size) * 0.5);
+  line-height: 1;
+  transform: translateY(-0.02em);
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 图片头像：保留方形与圆角，去掉篆刻内框和印泥颗粒 */
+.hasImage {
+  background: var(--paper-deep);
+  box-shadow: inset 0 0 0 1px rgb(0 0 0 / 0.06);
+}
+
+.hasImage::after {
+  display: none;
+}
+
+.userSeal {
+  flex: none;
+  display: block;
+  overflow: visible;
+}
+
+.sealText {
+  font-family: var(--font-serif);
+  font-weight: var(--weight-bold);
+}
+
+.xs {
+  --size: 18px;
+}
+
+.sm {
+  --size: 24px;
+}
+
+.md {
+  --size: 32px;
+}
+
+.lg {
+  --size: 40px;
+}
+
+.xl {
+  --size: 64px;
+}
+
+.xs,
+.sm {
+  box-shadow: none;
+}
+
+.muted {
+  filter: grayscale(1);
+  opacity: 0.4;
+}
+
+.active {
+  animation: breathe 1.8s var(--ease-in-out) infinite;
+}
+
+@keyframes breathe {
+  50% {
+    filter: brightness(1.12) saturate(1.1);
+  }
+}

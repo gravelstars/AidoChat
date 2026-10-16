@@ -1,0 +1,22 @@
+# 受保护文件清单（相对仓库根目录）。执行者不得修改这些文件。
+# 需要改动时：在任务单写阻塞记录，由项目所有者修改后运行 scripts/check-protected.sh --update。
+docs/DESIGN.md
+docs/adr/0001-only-user-triggers.md
+docs/adr/0002-multi-mention-reply-mode.md
+docs/adr/0003-wails-v3-cross-platform.md
+docs/adr/0004-visual-identity-antou.md
+docs/adr/0005-group-memory-model.md
+docs/adr/0006-frontend-stack.md
+docs/adr/0007-one-active-turn-per-group.md
+docs/adr/0008-diy-scope.md
+frontend/src/design/tokens.css
+frontend/src/design/base.css
+frontend/src/components/Seal.tsx
+frontend/src/components/Seal.module.css
+frontend/src/features/memory/MemoryPanel.module.css
+internal/contextbuilder/builder.go
+internal/memory/memory.go
+testdata/mentions.json
+scripts/check-protected.sh
+scripts/check-contrast.py
+scripts/protected.txt

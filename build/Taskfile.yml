@@ -1,0 +1,10 @@
+version: '3'
+tasks:
+  build:frontend:
+    dir: '{{.ROOT_DIR}}/frontend'
+    cmds:
+      - npm run build
+  dev:frontend:
+    dir: '{{.ROOT_DIR}}/frontend'
+    cmds:
+      - npm run dev

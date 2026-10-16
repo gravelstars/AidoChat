@@ -1,0 +1,537 @@
+import type {
+  Appearance,
+  Avatar,
+  Backend,
+  BackendEvent,
+  Bootstrap,
+  CreateGroupInput,
+  Group,
+  GroupDetail,
+  MemoryConfig,
+  MemoryItem,
+  Member,
+  Message,
+  ProviderConfig,
+  ReplyMode,
+  SaveProviderInput,
+  SendResult,
+  UpdateGroupInput,
+  UserSeal,
+} from './contract'
+import { DEFAULT_APPEARANCE, DEFAULT_USER_SEAL, USER_ID } from './contract'
+import { parseMentions, planTargets } from '../lib/mention'
+
+/**
+ * 浏览器开发用的模拟后端。行为对齐 internal/turn/orchestrator.go：
+ * 占位 → 串行/并行流式 → 收尾；停止保留已生成部分；失败不阻塞后续成员。
+ * 这里的文案只是演示，不代表模型真实输出。
+ */
+
+const iso = (d: Date) => d.toISOString()
+const minutesAgo = (n: number) => iso(new Date(Date.now() - n * 60_000))
+let idSeq = 1000
+const nid = (p: string) => `${p}${++idSeq}`
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms))
+
+const members: Member[] = [
+  {
+    id: 'mo', name: '墨白', avatar: { glyph: '墨', color: 'shiqing' }, brief: '体验设计，交互与视觉',
+    rolePrompt: '你是资深体验设计师，偏好克制、可读性优先。', providerId: 'p1', model: 'claude-sonnet-5-5', contextTokens: 64000,
+  },
+  {
+    id: 'qy', name: '青砚', avatar: { glyph: '青', color: 'shilv' }, brief: '代码审查，挑实现上的坑',
+    rolePrompt: '你是严格的代码审查者。', providerId: 'p2', model: 'deepseek-chat', contextTokens: 32000,
+  },
+  {
+    id: 'sy', name: '拾遗', avatar: { glyph: '拾', color: 'zheshi' }, brief: '产品经理，追问需求、补漏洞',
+    rolePrompt: '你是产品经理，擅长追问。', providerId: 'p1', model: 'claude-haiku-5-5', contextTokens: 32000,
+  },
+  {
+    id: 'gl', name: '观澜', avatar: { glyph: '澜', color: 'dai' }, brief: '数据分析，用数字说话',
+    rolePrompt: '你是数据分析师。', providerId: 'p3', model: 'qwen-max', contextTokens: 32000,
+  },
+]
+const memberById: Record<string, Member> = Object.fromEntries(members.map((m) => [m.id, m]))
+// 已软删除、但仍用于渲染历史消息的成员
+const retired = new Set<string>()
+
+function msg(p: Partial<Message> & Pick<Message, 'groupId' | 'seq' | 'authorKind' | 'authorId' | 'content'>): Message {
+  return {
+    id: `m-${p.groupId}-${p.seq}`, mentions: [], mentionAll: false, replyToId: '', turnId: '', provider: '', model: '',
+    contextSeq: 0, status: 'done', error: '', createdAt: minutesAgo(60), replyMode: 'serial', ...p,
+  }
+}
+
+function seedHome(): GroupDetail {
+  const g = 'g1'
+  const messages: Message[] = [
+    msg({ groupId: g, seq: 1, authorKind: 'system', authorId: '', content: '你创建了群聊，邀请了 墨白、青砚、拾遗', createdAt: minutesAgo(180) }),
+    msg({ groupId: g, seq: 2, authorKind: 'user', authorId: USER_ID, turnId: 't1', mentions: ['mo', 'qy'], createdAt: minutesAgo(52),
+      content: '@墨白 @青砚 官网首页现在是三栏，信息太散。想改成单列，你们先各自看看可行性。' }),
+    msg({ groupId: g, seq: 3, authorKind: 'member', authorId: 'mo', turnId: 't1', replyToId: 'm-g1-2', model: 'claude-sonnet-5-5', contextSeq: 2, createdAt: minutesAgo(51),
+      content: '单列可行，而且更适合现在以移动端为主的访问结构。建议这样排：\n\n1. **首屏**：一句话价值主张 + 搜索框，去掉轮播\n2. **核心场景**：三张纵向卡片，每张只讲一件事\n3. **信任背书**：客户 logo 与一句引言\n\n三栏里的「最新动态」可以下沉到页脚，访问数据里它的点击率很低。' }),
+    msg({ groupId: g, seq: 4, authorKind: 'member', authorId: 'qy', turnId: 't1', replyToId: 'm-g1-2', model: 'deepseek-chat', contextSeq: 3, createdAt: minutesAgo(50),
+      content: '同意墨白在 #3 的结构。实现上补两点：\n\n- 三张卡片如果都依赖接口数据，首屏会有明显的空白闪烁，**需要骨架屏**\n- 现在的轮播组件被其他三个页面复用，删首页的引用即可，组件本身先别动' }),
+    msg({ groupId: g, seq: 5, authorKind: 'user', authorId: USER_ID, turnId: 't2', createdAt: minutesAgo(40),
+      content: '单列就这么定了。首屏保留搜索框，低保真稿我来画。' }),
+    msg({ groupId: g, seq: 6, authorKind: 'user', authorId: USER_ID, turnId: 't3', mentions: ['sy'], createdAt: minutesAgo(22),
+      content: '@拾遗 从需求角度，这次改版还有什么没考虑到的？' }),
+    msg({ groupId: g, seq: 7, authorKind: 'member', authorId: 'sy', turnId: 't3', replyToId: 'm-g1-6', model: 'claude-haiku-5-5', contextSeq: 6, createdAt: minutesAgo(21),
+      content: '有三个问题需要先回答：\n\n1. 老用户习惯从三栏右侧进入「文档」，改版后入口在哪？建议首屏导航里保留\n2. M1 定了单列，但没定**桌面端最大宽度**，大屏上单列会很空\n3. 改版效果怎么衡量？建议先定一个指标，比如首屏到注册页的转化率' }),
+    msg({ groupId: g, seq: 8, authorKind: 'user', authorId: USER_ID, turnId: 't4', mentions: ['gl'], mentionAll: false, createdAt: minutesAgo(9),
+      content: '@墨白 桌面端最大宽度你建议多少？' }),
+    msg({ groupId: g, seq: 9, authorKind: 'member', authorId: 'mo', turnId: 't4', replyToId: 'm-g1-8', model: 'claude-sonnet-5-5', status: 'stopped', contextSeq: 8, createdAt: minutesAgo(8),
+      content: '正文区建议 **720px** 左右，这是中文阅读比较舒服的行宽（每行 36–40 字）。卡片区可以放宽到 1080px，两侧留白用浅色底区分' }),
+  ]
+  messages[7].mentions = ['mo']
+  const t = (n: number) => minutesAgo(n)
+  const memory: MemoryItem[] = [
+    { id: 'k1', groupId: g, ref: 1, kind: 'decision', content: '官网首页由三栏改为单列布局', status: 'confirmed', origin: 'member', proposedBy: 'mo',
+      sources: [{ messageId: 'm-g1-3', seq: 3, role: 'proposed' }, { messageId: 'm-g1-5', seq: 5, role: 'discussed' }], confirmedAt: t(39), supersededBy: '', createdAt: t(45), updatedAt: t(39) },
+    { id: 'k2', groupId: g, ref: 2, kind: 'plan', content: '首屏保留搜索框，去掉轮播', status: 'proposed', origin: 'user', proposedBy: USER_ID,
+      sources: [{ messageId: 'm-g1-3', seq: 3, role: 'proposed' }, { messageId: 'm-g1-5', seq: 5, role: 'discussed' }], supersededBy: '', createdAt: t(39), updatedAt: t(39) },
+    { id: 'k3', groupId: g, ref: 3, kind: 'plan', content: '卡片数据加载期间使用骨架屏，避免首屏空白闪烁', status: 'proposed', origin: 'member', proposedBy: 'qy',
+      sources: [{ messageId: 'm-g1-4', seq: 4, role: 'proposed' }], supersededBy: '', createdAt: t(39), updatedAt: t(39) },
+    { id: 'k4', groupId: g, ref: 4, kind: 'todo', content: '画首页单列低保真稿', status: 'proposed', origin: 'user', proposedBy: USER_ID,
+      sources: [{ messageId: 'm-g1-5', seq: 5, role: 'proposed' }], supersededBy: '', createdAt: t(39), updatedAt: t(39) },
+    { id: 'k5', groupId: g, ref: 5, kind: 'todo', content: '确定改版效果的衡量指标', status: 'proposed', origin: 'member', proposedBy: 'sy',
+      sources: [{ messageId: 'm-g1-7', seq: 7, role: 'proposed' }], supersededBy: '', createdAt: t(20), updatedAt: t(20) },
+    { id: 'k6', groupId: g, ref: 6, kind: 'background', content: '官网访问以移动端为主', status: 'proposed', origin: 'member', proposedBy: 'mo',
+      sources: [{ messageId: 'm-g1-3', seq: 3, role: 'proposed' }], supersededBy: '', createdAt: t(45), updatedAt: t(45) },
+    { id: 'k7', groupId: g, ref: 7, kind: 'plan', content: '「最新动态」整栏保留在首页右侧', status: 'rejected', origin: 'member', proposedBy: 'qy',
+      sources: [{ messageId: 'm-g1-4', seq: 4, role: 'proposed' }], supersededBy: '', createdAt: t(45), updatedAt: t(30) },
+    { id: 'k8', groupId: g, ref: 8, kind: 'todo', content: '盘点轮播组件的复用页面', status: 'done', origin: 'member', proposedBy: 'qy',
+      sources: [{ messageId: 'm-g1-4', seq: 4, role: 'proposed' }], supersededBy: '', createdAt: t(45), updatedAt: t(25) },
+  ]
+  return {
+    group: { id: g, title: '首页改版评审', topic: '官网首页从三栏改为单列，评估设计与实现影响', memberIds: ['mo', 'qy', 'sy'], memberAvatars: {}, archived: false,
+      defaultMode: 'serial', memoryCursor: 7, createdAt: minutesAgo(180), updatedAt: minutesAgo(8) },
+    messages, memory, busy: false,
+  }
+}
+
+function seedSmall(id: string, title: string, topic: string, memberIds: string[], lines: [string, string][]): GroupDetail {
+  const messages = lines.map(([who, content], i) =>
+    msg({ groupId: id, seq: i + 1, authorKind: who === USER_ID ? 'user' : 'member', authorId: who, content, createdAt: minutesAgo(600 - i * 3), turnId: `t${id}${Math.floor(i / 2)}` }),
+  )
+  return { group: { id, title, topic, memberIds, memberAvatars: {}, archived: false, defaultMode: 'parallel', memoryCursor: 0, createdAt: minutesAgo(900), updatedAt: minutesAgo(560) }, messages, memory: [], busy: false }
+}
+
+const db: Record<string, GroupDetail> = {
+  g1: seedHome(),
+  g2: seedSmall('g2', 'Go 学习小组', '每周一个并发主题', ['qy', 'gl'], [
+    [USER_ID, '@青砚 @观澜 这周想搞懂 context 取消是怎么传播的'],
+    ['qy', '核心就一句话：**父 context 取消时，所有子 context 都会收到 Done 信号**。建议从 `context.WithCancel` 的源码读起，重点看 `propagateCancel`。'],
+  ]),
+  g3: seedSmall('g3', '周报润色', '', ['sy'], [[USER_ID, '@拾遗 帮我把这周周报改得更有重点']]),
+}
+
+// 可变的模型服务与纪要整理设置（TASK-008 设置页）
+const providers: ProviderConfig[] = [
+  { id: 'p1', name: 'Anthropic', kind: 'anthropic', baseUrl: 'https://api.anthropic.com', hasKey: true },
+  { id: 'p2', name: 'DeepSeek', kind: 'openai', baseUrl: 'https://api.deepseek.com', hasKey: true },
+  { id: 'p3', name: '通义千问', kind: 'openai', baseUrl: 'https://dashscope.aliyuncs.com/compatible-mode/v1', hasKey: false },
+]
+const memoryConfig: MemoryConfig = { providerId: '', model: '' }
+
+type Handler = (e: BackendEvent) => void
+const handlers = new Set<Handler>()
+const emit = (e: BackendEvent) => handlers.forEach((h) => h(e))
+const running = new Map<string, AbortController>()
+
+function summary(d: GroupDetail) {
+  const last = [...d.messages].reverse().find((m) => m.status === 'done' || m.status === 'stopped')
+  return {
+    ...d.group,
+    lastMessage: last && { authorId: last.authorId, authorKind: last.authorKind, preview: last.content.replace(/[#*`>\n-]+/g, ' ').slice(0, 60), at: last.createdAt },
+  }
+}
+
+// ---- 演示用回复 ----
+function draftReply(self: Member, userText: string, before: Message[], mode: ReplyMode): string {
+  const prev = before[before.length - 1]
+  const prevName = prev ? memberById[prev.authorId]?.name : ''
+  const topic = userText.replace(/[@＠]\S+/g, '').trim().slice(0, 24) || '这个问题'
+  const lines: Record<string, string[]> = {
+    mo: [
+      `关于「${topic}」，从体验角度我的看法是：`,
+      '',
+      '1. **先保证可读性**：正文行宽控制在 36–40 个汉字，行距 1.75 左右',
+      '2. **减少同屏决策**：每一屏只让用户做一件事',
+      '3. **状态要可见**：加载、空、错误三种状态都要有设计稿',
+      '',
+      '如果要排优先级，我会先做第 1 点，成本最低、收益最直接。',
+    ],
+    qy: [
+      prev ? `${prevName}在 #${prev.seq} 说的方向我同意，补几个实现上的风险：` : `「${topic}」在实现上有几个点要注意：`,
+      '',
+      '- 不要在渲染路径里做同步的大计算，**列表超过 200 项要虚拟化**',
+      '- 接口失败时要有降级，不能整页白屏',
+      '- 改动前先确认影响面，`grep` 一下所有引用点',
+      '',
+      '```ts\n// 建议的数据获取方式\nconst { data, error } = useQuery(key, fetcher, { staleTime: 30_000 })\n```',
+    ],
+    sy: [
+      prev ? `在 ${prevName} 的基础上，我想追问两个需求层面的问题：` : `「${topic}」我先追问几个问题：`,
+      '',
+      '1. 这件事要解决的是谁的问题？有没有具体的用户反馈？',
+      '2. 做完之后用什么指标判断它是成功的？',
+      '',
+      '这两点不明确的话，建议先别急着动手。',
+    ],
+    gl: [
+      `从数据看「${topic}」，我建议先拉三个数字：`,
+      '',
+      '| 指标 | 口径 | 现状 |\n| --- | --- | --- |\n| 首屏跳出率 | 7 日均值 | 待拉取 |\n| 注册转化 | 首页 → 注册页 | 待拉取 |\n| 移动端占比 | UV | 待拉取 |',
+      '',
+      mode === 'parallel' ? '我没看到其他人的回答，以上是我独立的判断。' : '有了这些再讨论方案会更有底。',
+    ],
+  }
+  return (lines[self.id] ?? [`收到，关于「${topic}」我需要更多信息。`]).join('\n')
+}
+
+async function streamInto(groupId: string, m: Message, text: string, signal: AbortSignal) {
+  // 先"思考"一会儿，再按不规则的小块吐字，模拟真实流式节奏。
+  await sleep(500 + Math.random() * 700)
+  let i = 0
+  while (i < text.length) {
+    if (signal.aborted) return
+    const n = 1 + Math.floor(Math.random() * 4)
+    const delta = text.slice(i, i + n)
+    i += n
+    m.content += delta
+    emit({ kind: 'delta', groupId, messageId: m.id, delta })
+    await sleep(18 + Math.random() * 30)
+  }
+}
+
+function update(groupId: string, m: Message, patch: Partial<Message>) {
+  Object.assign(m, patch)
+  emit({ kind: 'message', groupId, message: { ...m } })
+}
+
+async function runTurn(d: GroupDetail, user: Message, mode: ReplyMode, slots: Message[], ctrl: AbortController) {
+  const groupId = d.group.id
+  const one = async (slot: Message, before: Message[]) => {
+    if (ctrl.signal.aborted) return update(groupId, slot, { status: 'stopped', finishedAt: iso(new Date()) })
+    const self = memberById[slot.authorId]
+    update(groupId, slot, { status: 'streaming', contextSeq: before.length ? before[before.length - 1].seq : user.seq })
+    // 演示：观澜的服务没配 Key，展示失败态
+    if (self.id === 'gl' && d.group.id === 'g1') {
+      await sleep(900)
+      return update(groupId, slot, { status: 'error', error: '401 Unauthorized：该模型服务的 API Key 无效', finishedAt: iso(new Date()) })
+    }
+    await streamInto(groupId, slot, draftReply(self, user.content, before, mode), ctrl.signal)
+    update(groupId, slot, { status: ctrl.signal.aborted ? 'stopped' : 'done', finishedAt: iso(new Date()) })
+  }
+  if (mode === 'parallel') {
+    await Promise.all(slots.map((s) => one(s, [])))
+  } else {
+    const done: Message[] = []
+    for (const s of slots) {
+      await one(s, done)
+      if (s.status === 'done') done.push(s)
+    }
+  }
+  running.delete(groupId)
+  d.busy = false
+  d.group.updatedAt = iso(new Date())
+  emit({ kind: 'turn.end', groupId, turnId: user.turnId })
+  emit({ kind: 'group', group: summary(d) })
+}
+
+export function createMockBackend(): Backend {
+  return {
+    async bootstrap(): Promise<Bootstrap> {
+      await sleep(120)
+      const ua = navigator.userAgent
+      const platform = /Mac/.test(ua) ? 'mac' : /Win/.test(ua) ? 'windows' : 'linux'
+      const forced = new URLSearchParams(location.search).get('platform') as Bootstrap['platform'] | null
+      return {
+        platform: forced ?? platform,
+        appearance: { ...DEFAULT_APPEARANCE, ...readJSON<Appearance>('agc.appearance') },
+        userSeal: { ...DEFAULT_USER_SEAL, ...readJSON<UserSeal>('agc.seal') },
+        members,
+        providers: structuredClone(providers),
+        groups: Object.values(db).map(summary).sort((a, b) => b.updatedAt.localeCompare(a.updatedAt)),
+        retiredMemberIds: [...retired],
+        memory: { ...memoryConfig },
+        version: '0.1.0-mock',
+      }
+    },
+
+    async openGroup(groupId) {
+      await sleep(60)
+      const d = db[groupId]
+      return structuredClone(d)
+    },
+
+    async createGroup(input: CreateGroupInput): Promise<Group> {
+      const id = nid('g')
+      const now = iso(new Date())
+      const names = input.memberIds.map((m) => memberById[m]?.name).join('、')
+      const group: Group = { id, title: input.title, topic: input.topic, memberIds: input.memberIds, memberAvatars: {}, archived: false, defaultMode: input.defaultMode, memoryCursor: 0, createdAt: now, updatedAt: now }
+      db[id] = {
+        group, memory: [], busy: false,
+        messages: [msg({ id: nid('m'), groupId: id, seq: 1, authorKind: 'system', authorId: '', content: `你创建了群聊，邀请了 ${names}`, createdAt: now })],
+      }
+      emit({ kind: 'group', group: summary(db[id]) })
+      return structuredClone(group)
+    },
+
+    async updateGroup(input: UpdateGroupInput): Promise<Group> {
+      const d = db[input.id]
+      if (!d) throw new Error('群不存在')
+      const sys = (content: string) => {
+        const m = msg({ id: nid('m'), groupId: input.id, seq: d.messages.length + 1, authorKind: 'system', authorId: '', content, createdAt: iso(new Date()) })
+        d.messages.push(m)
+        emit({ kind: 'message', groupId: input.id, message: { ...m } })
+      }
+      if (d.group.title !== input.title) sys(`你把群名改为「${input.title}」`)
+      if (d.group.topic !== input.topic) sys('你改了群主题')
+      if (d.group.defaultMode !== input.defaultMode) sys(`你把默认回复方式改为${input.defaultMode === 'parallel' ? '同时回复' : '依次回复'}`)
+      const added = input.memberIds.filter((x) => !d.group.memberIds.includes(x))
+      const removed = d.group.memberIds.filter((x) => !input.memberIds.includes(x))
+      for (const id of added) sys(`你邀请了 ${memberById[id]?.name ?? id}`)
+      for (const id of removed) sys(`你移出了 ${memberById[id]?.name ?? id}`)
+      if (!added.length && !removed.length && d.group.memberIds.join() !== input.memberIds.join()) sys('你调整了发言顺序')
+      Object.assign(d.group, { title: input.title, topic: input.topic, defaultMode: input.defaultMode, memberIds: input.memberIds })
+      emit({ kind: 'group', group: summary(d) })
+      return structuredClone(d.group)
+    },
+
+    async archiveGroup(groupId, archived) {
+      const d = db[groupId]
+      if (!d) throw new Error('群不存在')
+      d.group.archived = archived
+      emit({ kind: 'group', group: summary(d) })
+    },
+
+    async deleteGroup(groupId) {
+      delete db[groupId]
+      emit({ kind: 'group.remove', groupId })
+    },
+
+    async send(groupId, content, mode): Promise<SendResult> {
+      const d = db[groupId]
+      if (d.busy) throw new Error('该群有回复正在进行，请稍候或先停止')
+      const cands = d.group.memberIds.map((id) => memberById[id])
+      const parsed = parseMentions(content, cands)
+      const order = planTargets(d.group.memberIds, parsed)
+      const m: ReplyMode = mode ?? d.group.defaultMode
+      const turnId = nid('t')
+      const seq = () => d.messages.length + 1
+      const user = msg({ id: nid('m'), groupId, seq: seq(), authorKind: 'user', authorId: USER_ID, content, turnId,
+        mentions: parsed.ids, mentionAll: parsed.all, replyMode: m, createdAt: iso(new Date()) })
+      d.messages.push(user)
+      emit({ kind: 'message', groupId, message: { ...user } })
+      if (order.length === 0) {
+        emit({ kind: 'group', group: summary(d) })
+        return { userMessage: user, turnId, order }
+      }
+      d.busy = true
+      const slots = order.map((mid) => {
+        const s = msg({ id: nid('m'), groupId, seq: seq(), authorKind: 'member', authorId: mid, content: '', turnId,
+          replyToId: user.id, model: memberById[mid].model, status: 'pending', replyMode: m, createdAt: iso(new Date()) })
+        d.messages.push(s)
+        emit({ kind: 'message', groupId, message: { ...s } })
+        return s
+      })
+      emit({ kind: 'turn.start', groupId, turnId, order })
+      const ctrl = new AbortController()
+      running.set(groupId, ctrl)
+      void runTurn(d, user, m, slots, ctrl)
+      return { userMessage: { ...user }, turnId, order }
+    },
+
+    async stop(groupId) {
+      running.get(groupId)?.abort()
+    },
+
+    async retry(messageId) {
+      for (const d of Object.values(db)) {
+        const m = d.messages.find((x) => x.id === messageId)
+        if (!m || d.busy) continue
+        const user = d.messages.find((x) => x.id === m.replyToId)!
+        d.busy = true
+        const ctrl = new AbortController()
+        running.set(d.group.id, ctrl)
+        update(d.group.id, m, { content: '', error: '', status: 'pending' })
+        emit({ kind: 'turn.start', groupId: d.group.id, turnId: m.turnId, order: [m.authorId] })
+        const self = memberById[m.authorId]
+        void (async () => {
+          update(d.group.id, m, { status: 'streaming' })
+          await streamInto(d.group.id, m, draftReply(self, user.content, [], 'serial'), ctrl.signal)
+          update(d.group.id, m, { status: ctrl.signal.aborted ? 'stopped' : 'done', finishedAt: iso(new Date()) })
+          running.delete(d.group.id)
+          d.busy = false
+          emit({ kind: 'turn.end', groupId: d.group.id, turnId: m.turnId })
+        })()
+      }
+    },
+
+    memory: {
+      async confirm(id) {
+        return patchMemory(id, { status: 'confirmed', confirmedAt: iso(new Date()) })
+      },
+      async reject(id) {
+        return patchMemory(id, { status: 'rejected', confirmedAt: undefined })
+      },
+      async reopen(id) {
+        return patchMemory(id, { status: 'proposed', confirmedAt: undefined })
+      },
+      async edit(id, content) {
+        return patchMemory(id, { content: content.trim(), origin: 'user' })
+      },
+      async complete(id) {
+        return patchMemory(id, { status: 'done' })
+      },
+      async uncomplete(id) {
+        return patchMemory(id, { status: 'proposed' })
+      },
+      async summarize(groupId) {
+        const d = db[groupId]
+        emit({ kind: 'memory', groupId, items: structuredClone(d.memory), cursor: d.group.memoryCursor, summarizing: true })
+        await sleep(1400)
+        const fresh = d.messages.filter((m) => m.seq > d.group.memoryCursor && m.status === 'done' && m.authorKind === 'member')
+        const last = fresh[fresh.length - 1]
+        if (last) {
+          const ref = Math.max(0, ...d.memory.map((x) => x.ref)) + 1
+          const firstLine = last.content.split('\n').find((l) => l.replace(/[#*\-\d.\s|]/g, '').length > 6) ?? last.content
+          d.memory.push({
+            id: nid('k'), groupId, ref, kind: 'plan', content: firstLine.replace(/[*`#>]/g, '').replace(/^\s*[-\d.]+\s*/, '').slice(0, 60),
+            status: 'proposed', origin: 'member', proposedBy: last.authorId, sources: [{ messageId: last.id, seq: last.seq, role: 'proposed' }],
+            supersededBy: '', createdAt: iso(new Date()), updatedAt: iso(new Date()),
+          })
+        }
+        d.group.memoryCursor = d.messages[d.messages.length - 1].seq
+        emit({ kind: 'memory', groupId, items: structuredClone(d.memory), cursor: d.group.memoryCursor, summarizing: false })
+      },
+    },
+
+    async setAppearance(a) {
+      localStorage.setItem('agc.appearance', JSON.stringify(a))
+    },
+
+    async setUserSeal(seal) {
+      localStorage.setItem('agc.seal', JSON.stringify(seal))
+    },
+
+    async uploadAvatar(file) {
+      // mock：转成 data URL。真实实现由 Go 保存到应用数据目录并返回资源地址（TASK-013）
+      if (file.size > 8 * 1024 * 1024) throw new Error('图片不能超过 8MB')
+      return await new Promise<string>((resolve, reject) => {
+        const r = new FileReader()
+        r.onload = () => resolve(String(r.result))
+        r.onerror = () => reject(new Error('读取图片失败'))
+        r.readAsDataURL(file)
+      })
+    },
+
+    async setGroupAvatar(groupId, memberId, avatar: Avatar | null) {
+      const d = db[groupId]
+      if (avatar) d.group.memberAvatars[memberId] = avatar
+      else delete d.group.memberAvatars[memberId]
+      const s = summary(d)
+      emit({ kind: 'group', group: s })
+      return structuredClone(s)
+    },
+
+    async setMemberAvatar(memberId, avatar) {
+      const m = memberById[memberId]
+      m.avatar = avatar
+      return structuredClone(m)
+    },
+
+    async saveMember(input) {
+      const id = input.id || nid('mem')
+      const next: Member = {
+        id, name: input.name, avatar: input.avatar, brief: input.brief, rolePrompt: input.rolePrompt,
+        providerId: input.providerId, model: input.model, temperature: input.temperature, contextTokens: input.contextTokens,
+      }
+      const existing = members.find((m) => m.id === id)
+      if (existing) Object.assign(existing, next)
+      else { members.push(next); retired.delete(id) }
+      memberById[id] = existing ?? next
+      return structuredClone(memberById[id])
+    },
+
+    async deleteMember(memberId) {
+      const i = members.findIndex((m) => m.id === memberId)
+      if (i >= 0) members.splice(i, 1)
+      retired.add(memberId)
+      for (const d of Object.values(db)) {
+        d.group.memberIds = d.group.memberIds.filter((x) => x !== memberId)
+        delete d.group.memberAvatars[memberId]
+      }
+    },
+
+    async saveProvider(input: SaveProviderInput) {
+      const id = input.id || nid('p')
+      const next: ProviderConfig = { id, name: input.name, kind: input.kind, baseUrl: input.baseUrl, hasKey: !!input.key || providers.find((p) => p.id === id)?.hasKey || false }
+      const existing = providers.find((p) => p.id === id)
+      if (existing) Object.assign(existing, next)
+      else providers.push(next)
+      return structuredClone(next)
+    },
+
+    async deleteProvider(providerId) {
+      const used = members.filter((m) => m.providerId === providerId).map((m) => m.name)
+      if (used.length) throw new Error(`还有成员在用这个服务：${used.join('、')}。请先改掉他们的模型服务。`)
+      const i = providers.findIndex((p) => p.id === providerId)
+      if (i >= 0) providers.splice(i, 1)
+      if (memoryConfig.providerId === providerId) {
+        memoryConfig.providerId = ''
+        memoryConfig.model = ''
+      }
+    },
+
+    async testProvider() {
+      await sleep(160)
+      return 160
+    },
+
+    async setMemoryConfig(config) {
+      memoryConfig.providerId = config.providerId
+      memoryConfig.model = config.model
+    },
+
+    async dataDir() {
+      return '/tmp/ai-group-chat'
+    },
+
+    async openDataDir() {
+      console.info('[mock] openDataDir')
+    },
+
+    window: {
+      minimise: () => console.info('[mock] window.minimise'),
+      toggleMaximise: () => console.info('[mock] window.toggleMaximise'),
+      close: () => console.info('[mock] window.close'),
+    },
+
+    subscribe(h) {
+      handlers.add(h)
+      return () => handlers.delete(h)
+    },
+  }
+}
+
+function readJSON<T>(key: string): Partial<T> {
+  try {
+    return JSON.parse(localStorage.getItem(key) ?? '{}') as Partial<T>
+  } catch {
+    return {}
+  }
+}
+
+function patchMemory(id: string, patch: Partial<MemoryItem>): MemoryItem {
+  for (const d of Object.values(db)) {
+    const it = d.memory.find((x) => x.id === id)
+    if (it) {
+      Object.assign(it, patch, { updatedAt: iso(new Date()) })
+      return structuredClone(it)
+    }
+  }
+  throw new Error('记忆条目不存在')
+}

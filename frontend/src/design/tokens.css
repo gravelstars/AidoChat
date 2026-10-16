@@ -1,0 +1,358 @@
+/*
+ * 「案头」设计 token —— 受保护文件，执行者不得修改。需要新值时在任务单里写阻塞记录。
+ * 规范说明见 docs/DESIGN.md。组件里只能用这里的变量，禁止写裸色值、裸字号、裸时长。
+ *
+ * 概念：一张摊在案头的纸。用户用朱笔批示，AI 用铅笔写建议；盖了朱印的才是定论。
+ *
+ * 结构：
+ *   :root            —— 与纸无关的 token（字体、字号、间距、形状、动效、布局）
+ *   [data-paper=…]   —— 六种纸，每种是一整套校准过的颜色。可以挂在任意元素上
+ *                       （设置页的纸样预览就是这样渲染的），根元素上的决定全局。
+ *   [data-font=…] / [data-density=…] —— 阅读偏好
+ */
+
+:root {
+  /* ---- 字体（全部随应用打包，不依赖系统字体） ---- */
+  --font-sans: "Noto Sans SC Variable", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-serif: "Noto Serif SC Variable", "Songti SC", "SimSun", serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, "SF Mono", Consolas, monospace;
+
+  --text-2xs: 11px;
+  --text-xs: 12px;
+  --text-sm: 13px;
+  --text-md: 14px;
+  --text-body: 15px;   /* 聊天正文，随阅读偏好变化 */
+  --text-lg: 17px;
+  --text-xl: 20px;
+  --text-2xl: 26px;
+
+  --leading-tight: 1.35;
+  --leading-ui: 1.5;
+  --leading-body: 1.78; /* 中文正文需要更高的行距 */
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* ---- 间距：4px 栅格 ---- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  /* 消息条目的上下留白，随排版密度变化 */
+  --msg-pad: var(--space-3);
+
+  /* ---- 形状：纸是方正的，圆角克制 ---- */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --radius-pill: 999px;
+
+  /* ---- 动效：反馈要快，入场要稳，盖章要有分量 ---- */
+  --dur-press: 80ms;
+  --dur-quick: 140ms;
+  --dur-base: 220ms;
+  --dur-slow: 360ms;
+  --dur-stamp: 460ms;
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.6, 0, 0.3, 1);
+  --ease-stamp: cubic-bezier(0.3, 1.5, 0.5, 1);
+
+  /* ---- 布局 ---- */
+  --rail-width: 248px;
+  --memory-width: 340px;
+  --titlebar-height: 44px;
+  --reading-width: 720px;   /* 消息正文最大行宽 */
+
+  --focus-ring: 0 0 0 2px var(--paper), 0 0 0 3.5px var(--cinnabar-line);
+}
+
+/* ======================================================================
+ * 纸
+ * 每种纸必须完整定义下面这组变量，缺一不可：
+ *   纸面四级、线两级、墨四级、朱五个、颜料六种、荧光笔、错误两个、层次三级、纸纹、color-scheme
+ * 新增一种纸 = 复制一整块重新校准，并通过 DESIGN.md §2 的对比度要求。
+ * ==================================================================== */
+
+/* 宣纸：暖白，安静。默认 */
+:root,
+[data-paper="xuan"] {
+  --paper: #f4efe6;          /* 主纸面：消息区 */
+  --paper-raised: #faf7f1;   /* 浮起的纸：输入框、卡片、纪要面板 */
+  --paper-sunk: #ebe5d9;     /* 压下的纸：侧栏 */
+  --paper-deep: #e2dacb;     /* 侧栏悬停、选中底 */
+  --rule: #ddd4c5;           /* 发丝线 */
+  --rule-strong: #c7bca9;    /* 强调分隔、输入框边 */
+
+  --ink: #1f1d1a;
+  --ink-2: #4b463f;
+  --ink-3: #827c73;          /* 铅笔灰：AI 建议、元信息 */
+  --ink-4: #b5aea1;          /* 占位、禁用 */
+
+  /* 朱：只属于用户。用途仅限用户自己、确认、发送、焦点环，见 DESIGN.md §2 */
+  --cinnabar: #b83a2b;
+  --cinnabar-strong: #9e2f22;
+  --cinnabar-wash: rgb(184 58 43 / 0.08);
+  --cinnabar-line: rgb(184 58 43 / 0.32);
+  --on-cinnabar: #fbf6ef;
+
+  /* 矿物颜料：AI 成员的身份色 */
+  --pigment-shiqing: #2f5d7c;   /* 石青 */
+  --pigment-shilv: #3b7563;     /* 石绿 */
+  --pigment-zheshi: #9a5b34;    /* 赭石 */
+  --pigment-tenghuang: #a07d26; /* 藤黄 */
+  --pigment-dai: #3c4257;       /* 黛 */
+  --pigment-zise: #6b3f50;      /* 紫檀 */
+
+  --marker: rgb(214 176 64 / 0.28); /* 荧光笔：定位到某条消息时的高亮 */
+  --error: #8c3b2e;
+  --error-wash: rgb(140 59 46 / 0.07);
+
+  --lift-1: 0 1px 0 rgb(31 29 26 / 0.04), 0 1px 2px rgb(31 29 26 / 0.05);
+  --lift-2: 0 1px 0 rgb(31 29 26 / 0.04), 0 8px 24px -10px rgb(31 29 26 / 0.22);
+  --lift-3: 0 2px 0 rgb(31 29 26 / 0.04), 0 24px 48px -16px rgb(31 29 26 / 0.32);
+
+  /* 纸纹：极淡的噪点，让大面积纯色不发"塑料感" */
+  --grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.12  0 0 0 0 0.11  0 0 0 0 0.1  0 0 0 0.06 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+
+  color-scheme: light;
+}
+
+/* 素笺：近乎中性的白，冷暖都不偏。给不喜欢暖色的人 */
+[data-paper="su"] {
+  --paper: #f5f5f2;
+  --paper-raised: #fcfcfa;
+  --paper-sunk: #ebebe6;
+  --paper-deep: #e1e1db;
+  --rule: #deded7;
+  --rule-strong: #c8c8bf;
+
+  --ink: #1b1b1a;
+  --ink-2: #464643;
+  --ink-3: #80807a;
+  --ink-4: #b3b3ab;
+
+  --cinnabar: #b5382b;
+  --cinnabar-strong: #9a2d21;
+  --cinnabar-wash: rgb(181 56 43 / 0.075);
+  --cinnabar-line: rgb(181 56 43 / 0.3);
+  --on-cinnabar: #fcfcfa;
+
+  --pigment-shiqing: #2d5a7a;
+  --pigment-shilv: #377261;
+  --pigment-zheshi: #965832;
+  --pigment-tenghuang: #997722;
+  --pigment-dai: #393f54;
+  --pigment-zise: #683d4e;
+
+  --marker: rgb(214 180 64 / 0.26);
+  --error: #8a3a2d;
+  --error-wash: rgb(138 58 45 / 0.07);
+
+  --lift-1: 0 1px 0 rgb(27 27 26 / 0.04), 0 1px 2px rgb(27 27 26 / 0.05);
+  --lift-2: 0 1px 0 rgb(27 27 26 / 0.04), 0 8px 24px -10px rgb(27 27 26 / 0.2);
+  --lift-3: 0 2px 0 rgb(27 27 26 / 0.04), 0 24px 48px -16px rgb(27 27 26 / 0.3);
+
+  --grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.1  0 0 0 0 0.1  0 0 0 0 0.1  0 0 0 0.04 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+
+  color-scheme: light;
+}
+
+/* 麻纸：黄褐色的粗纸，纤维感重，低眩光。适合长时间阅读 */
+[data-paper="ma"] {
+  --paper: #e9dfcc;
+  --paper-raised: #f1e9da;
+  --paper-sunk: #dfd3bc;
+  --paper-deep: #d4c6ac;
+  --rule: #d3c5aa;
+  --rule-strong: #bba98a;
+
+  --ink: #261f17;
+  --ink-2: #53463a;
+  --ink-3: #80705a;
+  --ink-4: #ab9b81;
+
+  --cinnabar: #a83526;
+  --cinnabar-strong: #8e2a1d;
+  --cinnabar-wash: rgb(168 53 38 / 0.09);
+  --cinnabar-line: rgb(168 53 38 / 0.34);
+  --on-cinnabar: #f6eedf;
+
+  /* 底色变深，颜料整体压暗一档保持对比 */
+  --pigment-shiqing: #29506b;
+  --pigment-shilv: #325f4f;
+  --pigment-zheshi: #864b26;
+  --pigment-tenghuang: #81631b;
+  --pigment-dai: #323849;
+  --pigment-zise: #5b3343;
+
+  --marker: rgb(196 150 46 / 0.3);
+  --error: #7f3226;
+  --error-wash: rgb(127 50 38 / 0.08);
+
+  --lift-1: 0 1px 0 rgb(42 34 25 / 0.05), 0 1px 2px rgb(42 34 25 / 0.07);
+  --lift-2: 0 1px 0 rgb(42 34 25 / 0.05), 0 8px 24px -10px rgb(42 34 25 / 0.28);
+  --lift-3: 0 2px 0 rgb(42 34 25 / 0.05), 0 24px 48px -16px rgb(42 34 25 / 0.38);
+
+  /* 纤维更粗、更明显 */
+  --grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.55 .95' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.2  0 0 0 0 0.15  0 0 0 0 0.08  0 0 0 0.1 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+
+  color-scheme: light;
+}
+
+/* 青笺：冷灰带一点青，像雨天的窗。理性、克制 */
+[data-paper="qing"] {
+  --paper: #e9ecea;
+  --paper-raised: #f3f5f3;
+  --paper-sunk: #dfe3e1;
+  --paper-deep: #d4d9d7;
+  --rule: #d2d8d6;
+  --rule-strong: #b8c0be;
+
+  --ink: #1a2125;
+  --ink-2: #414b50;
+  --ink-3: #717c80;
+  --ink-4: #a6afb2;
+
+  /* 冷底上的朱更跳，略压饱和 */
+  --cinnabar: #b03a2f;
+  --cinnabar-strong: #952f25;
+  --cinnabar-wash: rgb(176 58 47 / 0.075);
+  --cinnabar-line: rgb(176 58 47 / 0.32);
+  --on-cinnabar: #f3f5f3;
+
+  --pigment-shiqing: #2b5779;
+  --pigment-shilv: #2e6d5b;
+  --pigment-zheshi: #92542e;
+  --pigment-tenghuang: #8f6f1f;
+  --pigment-dai: #353c54;
+  --pigment-zise: #62384a;
+
+  --marker: rgb(212 178 70 / 0.28);
+  --error: #873a2f;
+  --error-wash: rgb(135 58 47 / 0.07);
+
+  --lift-1: 0 1px 0 rgb(26 33 37 / 0.04), 0 1px 2px rgb(26 33 37 / 0.06);
+  --lift-2: 0 1px 0 rgb(26 33 37 / 0.04), 0 8px 24px -10px rgb(26 33 37 / 0.22);
+  --lift-3: 0 2px 0 rgb(26 33 37 / 0.04), 0 24px 48px -16px rgb(26 33 37 / 0.32);
+
+  --grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.08  0 0 0 0 0.12  0 0 0 0 0.13  0 0 0 0.05 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+
+  color-scheme: light;
+}
+
+/* 夜读：灯下的深色纸，暖黑底、米色字。不是反色 */
+[data-paper="ye"] {
+  --paper: #1c1a17;
+  --paper-raised: #24211d;
+  --paper-sunk: #161412;
+  --paper-deep: #2c2823;
+  --rule: #35312b;
+  --rule-strong: #4a443b;
+
+  --ink: #ebe4d6;
+  --ink-2: #c3baa9;
+  --ink-3: #8f8778;
+  --ink-4: #615a4f;
+
+  --cinnabar: #d9634d;
+  --cinnabar-strong: #e8765f;
+  --cinnabar-wash: rgb(217 99 77 / 0.12);
+  --cinnabar-line: rgb(217 99 77 / 0.45);
+  --on-cinnabar: #1c1a17;
+
+  --pigment-shiqing: #6f9cbc;
+  --pigment-shilv: #73ad98;
+  --pigment-zheshi: #c88a5f;
+  --pigment-tenghuang: #cfab55;
+  --pigment-dai: #8d94ad;
+  --pigment-zise: #b07f92;
+
+  --marker: rgb(207 171 85 / 0.2);
+  --error: #e08a78;
+  --error-wash: rgb(224 138 120 / 0.1);
+
+  --lift-1: 0 1px 0 rgb(0 0 0 / 0.2);
+  --lift-2: 0 10px 28px -10px rgb(0 0 0 / 0.6);
+  --lift-3: 0 28px 56px -16px rgb(0 0 0 / 0.7);
+
+  --grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 0.95  0 0 0 0 0.9  0 0 0 0.035 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+
+  color-scheme: dark;
+}
+
+/* 乌金：墨锭与砚台的冷黑，带一点青。夜读的冷色版本 */
+[data-paper="wujin"] {
+  --paper: #15181b;
+  --paper-raised: #1c2024;
+  --paper-sunk: #101315;
+  --paper-deep: #23282d;
+  --rule: #2a3035;
+  --rule-strong: #3c444b;
+
+  --ink: #e1e5e6;
+  --ink-2: #b4bbbe;
+  --ink-3: #81898d;
+  --ink-4: #545d62;
+
+  --cinnabar: #e0705b;
+  --cinnabar-strong: #ec8471;
+  --cinnabar-wash: rgb(224 112 91 / 0.13);
+  --cinnabar-line: rgb(224 112 91 / 0.46);
+  --on-cinnabar: #15181b;
+
+  --pigment-shiqing: #79a6c6;
+  --pigment-shilv: #7ab6a1;
+  --pigment-zheshi: #cf946a;
+  --pigment-tenghuang: #d5b35e;
+  --pigment-dai: #99a1bc;
+  --pigment-zise: #bb8b9f;
+
+  --marker: rgb(213 179 94 / 0.18);
+  --error: #e88f7d;
+  --error-wash: rgb(232 143 125 / 0.1);
+
+  --lift-1: 0 1px 0 rgb(0 0 0 / 0.25);
+  --lift-2: 0 10px 28px -10px rgb(0 0 0 / 0.65);
+  --lift-3: 0 28px 56px -16px rgb(0 0 0 / 0.75);
+
+  --grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.85  0 0 0 0 0.92  0 0 0 0 0.95  0 0 0 0.03 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+
+  color-scheme: dark;
+}
+
+/* ======================================================================
+ * 阅读偏好
+ * ==================================================================== */
+
+[data-font="s"] {
+  --text-body: 14px;
+}
+
+[data-font="l"] {
+  --text-body: 17px;
+  --reading-width: 760px;
+}
+
+[data-density="compact"] {
+  --msg-pad: var(--space-1);
+  --leading-body: 1.62;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-press: 0ms;
+    --dur-quick: 0ms;
+    --dur-base: 0ms;
+    --dur-slow: 0ms;
+    --dur-stamp: 0ms;
+  }
+}

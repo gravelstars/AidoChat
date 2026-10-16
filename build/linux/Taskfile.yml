@@ -1,0 +1,46 @@
+version: '3'
+tasks:
+  build:
+    deps: [':common:build:frontend']
+    preconditions:
+      - sh: pkg-config --exists gtk4 webkitgtk-6.0
+        msg: 需要 Linux GTK4/WebKitGTK 6.0 开发包；请在 Linux 原生环境构建。
+    cmds:
+      - go build {{if ne .DEV "true"}}-tags production -trimpath -ldflags="-s -w"{{end}} -o "{{.BIN_DIR}}/{{.APP_NAME}}" .
+    env:
+      GOOS: linux
+      CGO_ENABLED: '1'
+  # .deb 安装包（TASK-012）。需要 dpkg-deb（Ubuntu 自带）。
+  deb:
+    cmds:
+      - task: build
+      - mkdir -p "{{.BIN_DIR}}/deb/{{.APP_NAME}}/DEBIAN" "{{.BIN_DIR}}/deb/{{.APP_NAME}}/usr/bin" "{{.BIN_DIR}}/deb/{{.APP_NAME}}/usr/share/applications" "{{.BIN_DIR}}/deb/{{.APP_NAME}}/usr/share/icons/hicolor/512x512/apps"
+      - cp "{{.BIN_DIR}}/{{.APP_NAME}}" "{{.BIN_DIR}}/deb/{{.APP_NAME}}/usr/bin/{{.APP_NAME}}"
+      - cp "{{.ROOT_DIR}}/build/linux/control" "{{.BIN_DIR}}/deb/{{.APP_NAME}}/DEBIAN/control"
+      - cp "{{.ROOT_DIR}}/build/linux/ai-group-chat.desktop" "{{.BIN_DIR}}/deb/{{.APP_NAME}}/usr/share/applications/ai-group-chat.desktop"
+      - if [ -f "{{.ROOT_DIR}}/build/linux/icons/512x512.png" ]; then cp "{{.ROOT_DIR}}/build/linux/icons/512x512.png" "{{.BIN_DIR}}/deb/{{.APP_NAME}}/usr/share/icons/hicolor/512x512/apps/ai-group-chat.png"; fi
+      - dpkg-deb --build --root-owner-group "{{.BIN_DIR}}/deb/{{.APP_NAME}}" "{{.BIN_DIR}}/{{.APP_NAME}}.deb"
+  # AppImage（TASK-012）。需要 appimagetool。
+  appimage:
+    preconditions:
+      - sh: command -v appimagetool
+        msg: 需要 appimagetool；CI 安装固定的 1.9.1 版本并校验 SHA-256。
+      - sh: test -f "{{.ROOT_DIR}}/build/linux/icons/512x512.png"
+        msg: 缺少应用图标；母版经项目所有者确认后先运行 scripts/make-icons.sh。
+    cmds:
+      - task: build
+      - mkdir -p "{{.BIN_DIR}}/AppDir/usr/bin" "{{.BIN_DIR}}/AppDir/usr/share/applications" "{{.BIN_DIR}}/AppDir/usr/share/icons/hicolor/512x512/apps"
+      - cp "{{.BIN_DIR}}/{{.APP_NAME}}" "{{.BIN_DIR}}/AppDir/usr/bin/{{.APP_NAME}}"
+      - cp "{{.ROOT_DIR}}/build/linux/AppRun" "{{.BIN_DIR}}/AppDir/AppRun"
+      - chmod +x "{{.BIN_DIR}}/AppDir/AppRun"
+      - cp "{{.ROOT_DIR}}/build/linux/ai-group-chat.desktop" "{{.BIN_DIR}}/AppDir/ai-group-chat.desktop"
+      - cp "{{.ROOT_DIR}}/build/linux/ai-group-chat.desktop" "{{.BIN_DIR}}/AppDir/usr/share/applications/ai-group-chat.desktop"
+      - if [ -f "{{.ROOT_DIR}}/build/linux/icons/512x512.png" ]; then cp "{{.ROOT_DIR}}/build/linux/icons/512x512.png" "{{.BIN_DIR}}/AppDir/ai-group-chat.png" && cp "{{.ROOT_DIR}}/build/linux/icons/512x512.png" "{{.BIN_DIR}}/AppDir/usr/share/icons/hicolor/512x512/apps/ai-group-chat.png"; fi
+      - appimagetool --no-appstream "{{.BIN_DIR}}/AppDir" "{{.BIN_DIR}}/{{.APP_NAME}}.AppImage"
+  package:
+    cmds:
+      - task: build
+      - tar -czf "{{.BIN_DIR}}/{{.APP_NAME}}-linux.tar.gz" -C "{{.BIN_DIR}}" "{{.APP_NAME}}"
+  run:
+    cmds:
+      - '"{{.BIN_DIR}}/{{.APP_NAME}}"'

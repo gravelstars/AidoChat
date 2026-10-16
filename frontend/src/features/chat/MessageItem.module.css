@@ -1,0 +1,310 @@
+.item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: var(--space-3);
+  padding: var(--msg-pad) var(--space-3) var(--msg-pad) var(--space-2);
+  margin: 0 calc(var(--space-3) * -1);
+  border-radius: var(--radius-md);
+  transition: background-color var(--dur-base) var(--ease-out);
+}
+
+.fresh {
+  animation: enter-up var(--dur-slow) var(--ease-out) both;
+}
+
+/* 轮次连线：同一轮的用户消息与回复在印章之间用一根细线串起来 */
+.item::before {
+  content: "";
+  position: absolute;
+  left: calc(var(--space-2) + 22px);
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--rule-strong);
+}
+
+.first::before {
+  top: calc(var(--msg-pad) + 32px);
+}
+
+.last::before {
+  bottom: calc(100% - var(--msg-pad));
+}
+
+.first.last::before {
+  display: none;
+}
+
+.hover {
+  background: var(--marker);
+}
+
+/* 跳转定位时的荧光笔闪烁，由 MessageList 加上 data-flash */
+.item[data-flash] {
+  animation: marker-flash 1600ms var(--ease-out);
+}
+
+.gutter {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  padding-top: 2px;
+}
+
+.main {
+  min-width: 0;
+}
+
+.head {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  min-height: 22px;
+  margin-bottom: 2px;
+}
+
+.name {
+  white-space: nowrap;
+  font-family: var(--font-serif);
+  font-size: var(--text-md);
+  font-weight: var(--weight-semibold);
+  color: var(--ink);
+}
+
+.member .name {
+  color: var(--seal);
+}
+
+.time,
+.seq,
+.provenance {
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  color: var(--ink-4);
+  font-variant-numeric: tabular-nums;
+}
+
+.provenance {
+  opacity: 0;
+  transition: opacity var(--dur-quick) var(--ease-out);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 260px;
+}
+
+.item:hover .provenance {
+  opacity: 1;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.replyTo {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+  border-radius: var(--radius-xs);
+  transition: color var(--dur-quick) var(--ease-out);
+}
+
+.replyTo:hover {
+  color: var(--ink);
+}
+
+.userText {
+  margin: 0;
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* @ 提及：朱笔圈点 */
+.mention {
+  color: var(--cinnabar);
+  font-weight: var(--weight-medium);
+  background: linear-gradient(transparent 62%, var(--cinnabar-wash) 62%);
+}
+
+.ai {
+  max-width: var(--reading-width);
+}
+
+/* 流式输出时，末尾跟一支"笔尖"，颜色取自成员颜料。列表要跟在最后一个条目后面 */
+.streaming > :last-child:not(ul, ol)::after,
+.streaming > :is(ul, ol):last-child > li:last-child::after {
+  content: "";
+  display: inline-block;
+  width: 0.42em;
+  height: 1.05em;
+  margin-left: 2px;
+  vertical-align: -0.16em;
+  border-radius: 1px 1px 3px 3px;
+  background: var(--seal);
+  animation: brush-blink 900ms steps(1) infinite;
+}
+
+.streaming > pre:last-child::after,
+.streaming > table:last-child::after {
+  display: none;
+}
+
+.ref {
+  font-family: var(--font-mono);
+  font-size: 0.86em;
+  color: var(--ink-2) !important;
+  text-decoration: none !important;
+  padding: 0 3px;
+  border-radius: var(--radius-xs);
+  background: color-mix(in srgb, var(--ink) 6%, transparent);
+  transition: background-color var(--dur-quick) var(--ease-out);
+  cursor: pointer;
+}
+
+.ref:hover {
+  background: var(--marker);
+}
+
+.waiting,
+.thinking {
+  margin: 0;
+  font-size: var(--text-md);
+  color: var(--ink-3);
+}
+
+.dots {
+  display: inline-flex;
+  gap: 3px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.dots i {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--seal, var(--ink-3));
+  animation: dot 1.2s var(--ease-in-out) infinite;
+}
+
+.dots i:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.dots i:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes dot {
+  0%,
+  60%,
+  100% {
+    opacity: 0.25;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+}
+
+.note,
+.error {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--ink-3);
+}
+
+.error {
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  background: var(--error-wash);
+  color: var(--error);
+  max-width: var(--reading-width);
+}
+
+.errorText {
+  flex: 1;
+  min-width: 0;
+}
+
+.inlineAction {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 6px;
+  border-radius: var(--radius-xs);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--ink-2);
+  transition:
+    background-color var(--dur-quick) var(--ease-out),
+    transform var(--dur-press) var(--ease-out);
+}
+
+.inlineAction:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--ink) 7%, transparent);
+  color: var(--ink);
+}
+
+.inlineAction:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.inlineAction:disabled {
+  opacity: 0.4;
+}
+
+.system {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin: var(--space-4) 0;
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+.system::before,
+.system::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
+}
+
+/* 消息悬停时出现的"复制全文"（TASK-011） */
+.copyFull {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 1px 6px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  font-size: var(--text-2xs);
+  color: var(--ink-3);
+  opacity: 0;
+  cursor: pointer;
+  transition:
+    opacity var(--dur-quick) var(--ease-out),
+    color var(--dur-quick) var(--ease-out);
+}
+
+.item:hover .copyFull,
+.copyFull:focus-visible,
+.copyFull[data-copied="true"] {
+  opacity: 1;
+}
+
+.copyFull:hover {
+  color: var(--ink);
+}

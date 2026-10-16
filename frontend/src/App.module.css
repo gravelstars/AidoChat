@@ -1,0 +1,62 @@
+.app {
+  display: flex;
+  height: 100%;
+}
+
+/* Windows / Linux：最右侧标题栏给窗口按钮让位 */
+:global([data-platform="windows"]) .app,
+:global([data-platform="linux"]) .app {
+  --edge-right: 150px;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+}
+
+.boot {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  color: var(--ink-3);
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  background-color: var(--paper);
+  background-image: var(--grain);
+}
+
+.welcomeMark {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  margin-bottom: var(--space-6);
+  border-radius: 10px;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-serif);
+  font-weight: var(--weight-bold);
+  font-size: 36px;
+  transform: rotate(-4deg);
+}
+
+.welcomeTitle {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-semibold);
+}
+
+.welcomeText {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--ink-3);
+}

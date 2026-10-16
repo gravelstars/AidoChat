@@ -1,0 +1,23 @@
+version: '3'
+vars:
+  APP_NAME: ai-group-chat
+  BIN_DIR: '{{.ROOT_DIR}}/build/bin'
+  GOOS: '{{.GOOS | default OS}}'
+includes:
+  common: ./build/Taskfile.yml
+  darwin: ./build/darwin/Taskfile.yml
+  windows: ./build/windows/Taskfile.yml
+  linux: ./build/linux/Taskfile.yml
+tasks:
+  build:
+    cmds:
+      - task: '{{.GOOS}}:build'
+  package:
+    cmds:
+      - task: '{{.GOOS}}:package'
+  run:
+    cmds:
+      - task: '{{.GOOS}}:run'
+  dev:
+    cmds:
+      - wails3 dev -config ./build/config.yml -port 5173

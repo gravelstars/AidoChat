@@ -1,0 +1,63 @@
+.root {
+  position: relative;
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 2px;
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--ink) 6%, transparent);
+}
+
+.thumb {
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  left: 0;
+  width: var(--w);
+  transform: translateX(var(--x));
+  border-radius: 3px;
+  background: var(--paper-raised);
+  box-shadow: var(--lift-1);
+  transition:
+    transform var(--dur-base) var(--ease-out),
+    width var(--dur-base) var(--ease-out);
+}
+
+.option {
+  position: relative;
+  z-index: 1;
+  height: 26px;
+  padding: 0 var(--space-3);
+  border-radius: 3px;
+  color: var(--ink-3);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  transition: color var(--dur-quick) var(--ease-out);
+}
+
+.option:hover {
+  color: var(--ink-2);
+}
+
+.option[aria-checked="true"] {
+  color: var(--ink);
+}
+
+.option:active {
+  transform: translateY(1px);
+}
+
+.sm .option {
+  height: 22px;
+  padding: 0 10px;
+  font-size: var(--text-xs);
+}
+
+.mark {
+  position: absolute;
+  top: 4px;
+  right: 3px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--ink-4);
+}

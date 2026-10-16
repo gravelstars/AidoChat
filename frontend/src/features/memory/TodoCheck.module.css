@@ -1,0 +1,33 @@
+/* 待办方框的交互样式（TASK-010）。尺寸/边框/颜色沿用 MemoryPanel.module.css 里 .check 的数值。 */
+.check {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 14px;
+  height: 14px;
+  margin-top: 4px;
+  padding: 0;
+  border: 1.5px solid var(--ink-3);
+  border-radius: 3px;
+  color: var(--ink-2);
+  background: transparent;
+  cursor: pointer;
+  transition:
+    border-color var(--dur-quick) var(--ease-out),
+    background-color var(--dur-quick) var(--ease-out),
+    transform var(--dur-press) var(--ease-out);
+}
+
+.check:hover {
+  border-color: var(--ink);
+}
+
+.check:active {
+  transform: scale(0.88);
+  transition-duration: 0ms;
+}
+
+.check[aria-pressed="true"] {
+  border-color: var(--ink-2);
+  background: var(--paper-sunk);
+}

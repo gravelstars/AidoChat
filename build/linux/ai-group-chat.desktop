@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=ai-group-chat
+Name[zh_CN]=议
+Comment=本地运行的 AI 群聊
+Exec=ai-group-chat
+Icon=ai-group-chat
+Terminal=false
+Categories=Utility;Chat;
+StartupWMClass=ai-group-chat

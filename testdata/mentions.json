@@ -1,0 +1,26 @@
+{
+  "_comment": "@ 解析的共享用例。Go (internal/domain/mention_test.go) 与前端 (frontend/src/lib/mention.test.ts) 都必须全部通过。",
+  "members": [
+    { "id": "m1", "name": "墨白" },
+    { "id": "m2", "name": "墨白二号" },
+    { "id": "m3", "name": "青砚" },
+    { "id": "m4", "name": "bob" }
+  ],
+  "cases": [
+    { "text": "@墨白 帮我看看", "ids": ["m1"], "all": false },
+    { "text": "@墨白二号 你来", "ids": ["m2"], "all": false },
+    { "text": "@青砚 @墨白 都看下", "ids": ["m3", "m1"], "all": false },
+    { "text": "@墨白你好", "ids": ["m1"], "all": false },
+    { "text": "@墨白，@墨白 重复", "ids": ["m1"], "all": false },
+    { "text": "@所有人 开会", "ids": [], "all": true },
+    { "text": "@all please", "ids": [], "all": true },
+    { "text": "@allen hi", "ids": [], "all": false },
+    { "text": "@bob hi", "ids": ["m4"], "all": false },
+    { "text": "@bobby hi", "ids": [], "all": false },
+    { "text": "mail me at x@bob.example", "ids": [], "all": false },
+    { "text": "（@青砚）补充一下", "ids": ["m3"], "all": false },
+    { "text": "＠青砚 全角也行", "ids": ["m3"], "all": false },
+    { "text": "@陌生人 你好", "ids": [], "all": false },
+    { "text": "没有任何提及", "ids": [], "all": false }
+  ]
+}

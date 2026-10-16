@@ -1,0 +1,27 @@
+version: '3'
+tasks:
+  build:
+    deps: [':common:build:frontend']
+    cmds:
+      - defer: '{{if eq OS "windows"}}powershell -NoProfile -Command "Remove-Item -Force -ErrorAction SilentlyContinue ''{{.ROOT_DIR}}/wails_windows_{{.ARCH}}.syso''"{{else}}rm -f "{{.ROOT_DIR}}/wails_windows_{{.ARCH}}.syso"{{end}}'
+      - if [ -f "{{.ROOT_DIR}}/build/windows/icon.ico" ]; then wails3 generate syso -arch {{.ARCH}} -icon "{{.ROOT_DIR}}/build/windows/icon.ico" -manifest "{{.ROOT_DIR}}/build/windows/wails.exe.manifest" -out "{{.ROOT_DIR}}/wails_windows_{{.ARCH}}.syso"; fi
+      - go build {{if ne .DEV "true"}}-tags production -trimpath -ldflags="-H windowsgui -s -w"{{end}} -o "{{.BIN_DIR}}/{{.APP_NAME}}.exe" .
+    vars:
+      ARCH: '{{.GOARCH | default ARCH}}'
+    env:
+      GOOS: windows
+      GOARCH: '{{.ARCH}}'
+      CGO_ENABLED: '0'
+  # NSIS 安装包（TASK-012）。需要 makensis；CI 在 windows-2022 安装 NSIS 后调用本任务。
+  nsis:
+    cmds:
+      - task: build
+      - wails3 generate webview2bootstrapper -dir "{{.BIN_DIR}}/webview2"
+      - makensis -DSRC="{{.BIN_DIR}}" -DWEBVIEW2="{{.BIN_DIR}}/webview2/MicrosoftEdgeWebview2Setup.exe" -DOUT="{{.BIN_DIR}}/{{.APP_NAME}}-windows-setup.exe" "{{.ROOT_DIR}}/build/windows/installer.nsi"
+  package:
+    cmds:
+      - task: build
+      - powershell -NoProfile -Command "Compress-Archive -Force -Path '{{.BIN_DIR}}/{{.APP_NAME}}.exe' -DestinationPath '{{.BIN_DIR}}/{{.APP_NAME}}-windows.zip'"
+  run:
+    cmds:
+      - '"{{.BIN_DIR}}/{{.APP_NAME}}.exe"'
