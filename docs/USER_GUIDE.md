@@ -37,7 +37,7 @@
 需要 Go（版本以 `go.mod` 为准，当前为 1.26.4）、Node.js 24/npm，以及本机桌面构建工具。macOS 需要 Xcode Command Line Tools。首次准备：
 
 ```sh
-cd /Users/zoupengcheng/Desktop/group-chat-ai
+cd group-chat-ai  # 进入你本机的项目目录
 npm --prefix frontend ci
 go install github.com/wailsapp/wails/v3/cmd/wails3@v3.0.0-beta.29
 ```
@@ -61,7 +61,7 @@ wails3 dev
 ### 仅查看浏览器演示
 
 ```sh
-cd /Users/zoupengcheng/Desktop/group-chat-ai
+cd group-chat-ai  # 进入你本机的项目目录
 npm --prefix frontend ci
 npm --prefix frontend run dev
 ```
