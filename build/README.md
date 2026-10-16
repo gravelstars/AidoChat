@@ -25,9 +25,9 @@ wails3 task package
 当前为本地 ad-hoc 签名，未做 Developer ID 签名和公证，不是正式分发版本。最新本地包位置见 [归档索引](../docs/ARCHIVE.md)。
 
 ```sh
-codesign --verify --deep --strict build/bin/ai-group-chat.app
-file build/bin/ai-group-chat.app/Contents/MacOS/ai-group-chat
-hdiutil verify build/bin/ai-group-chat.dmg
+codesign --verify --deep --strict build/bin/AidoChat.app
+file build/bin/AidoChat.app/Contents/MacOS/AidoChat
+hdiutil verify build/bin/AidoChat.dmg
 ```
 
 ## Windows
@@ -39,7 +39,7 @@ wails3 task package
 wails3 task windows:nsis
 ```
 
-输出 GUI exe、zip 和 NSIS 安装程序。NSIS 包含官方 WebView2 在线引导安装器；缺少运行时时安装需要联网。安装器当前面向默认 amd64 构建，未承诺 ARM 安装支持。macOS 上仅可交叉编译 exe，不能执行 Windows 专用压缩/安装验收。
+输出 AidoChat.exe、zip 和 NSIS 安装程序。为覆盖旧安装，默认目录仍为 $LOCALAPPDATA\ai-group-chat；安装器清理旧 exe 和快捷方式，新快捷方式统一为 AidoChat。请先退出旧应用再升级。NSIS 包含官方 WebView2 在线引导安装器；缺少运行时时安装需要联网。安装器当前面向默认 amd64 构建，未承诺 ARM 安装支持。macOS 上仅可交叉编译 exe，不能执行 Windows 专用压缩/安装验收。
 
 ## Linux
 
@@ -50,10 +50,12 @@ sudo apt-get update
 sudo apt-get install -y build-essential pkg-config libgtk-4-dev libwebkitgtk-6.0-dev dpkg-dev
 wails3 task package
 wails3 task linux:deb
-sudo apt install ./build/bin/ai-group-chat.deb
+sudo apt install ./build/bin/AidoChat.deb
 ```
 
-AppImage 另需 appimagetool 与已生成的应用 PNG 图标：`wails3 task linux:appimage`。CI 固定 appimagetool 1.9.1 并校验 SHA-256。该配方没有捆绑全部 GTK/WebKit 系统库，不保证任意 Linux 发行版免依赖运行；优先使用 Ubuntu deb。现有图标母版已获所有者确认，生成方法见 scripts/make-icons.sh。CI 只在仓库变量 APP_ICON_APPROVED=true 时运行该脚本；未生成图标时跳过 AppImage，仍构建 deb 和 tar.gz。
+Linux 包 ID 为 aidochat；deb 使用 Conflicts/Replaces 替换旧 ai-group-chat 包，用户配置目录和钥匙串标识继续保留 ai-group-chat。
+
+AppImage 另需 appimagetool 与已生成的应用 PNG 图标：`wails3 task linux:appimage`。CI 固定 appimagetool 1.9.1 并校验 SHA-256。该配方没有捆绑全部 GTK/WebKit 系统库，不保证任意 Linux 发行版免依赖运行；优先使用 Ubuntu deb。现有图标母版已获所有者确认，生成方法见 scripts/make-icons.sh。CI 每次构建都会从已授权的官方 SVG 生成图标，并构建 AppImage。macOS 的 iconutil 若拒绝有效 PNG，脚本使用 Python 3 标准库封装 ICNS；没有 ImageMagick 时也可用 Python 3 封装 ICO。
 
 ## CI 与验收边界
 

@@ -1,6 +1,6 @@
 # 项目收尾状态
 
-日期：2026-10-16。功能代码基线：158b4e1；后续 TASK-016 修复首次原生 CI 发现的 Windows 文件 URI、检出换行、NSIS 路径/编码与 macOS 磁盘映像忙碌问题。
+更新：2026-10-17，AidoChat 0.1.1。功能代码基线：158b4e1；后续 TASK-016 修复首次原生 CI 发现的 Windows 文件 URI、检出换行、NSIS 路径/编码与 macOS 磁盘映像忙碌问题。
 
 ## 结论
 
@@ -10,7 +10,7 @@
 
 - `go vet ./...` 通过。
 - `go test -race ./... -count=1` 全部通过。
-- 前端 `npm test`：9 文件、52 测试通过。
+- 前端 `npm test`：9 文件、56 测试通过。
 - 前端生产构建通过；保留既有的部分 JS chunk 超过 500 kB 提示。
 - `wails3 task package` 通过，生成 macOS Intel/Apple Silicon 通用 .app、zip 与 dmg。
 - `codesign --verify --deep --strict` 通过；`file` 确认双架构；`hdiutil verify` 通过。
@@ -41,8 +41,16 @@
 
 ## GitHub 首次原生 CI
 
-干净源码已上传到 https://github.com/rickepicepic/group-chat-ai 。首次运行 38913777806：Ubuntu 自检及 tar/deb 构建通过；Windows 测试发现盘符 URI 问题；macOS 编译、签名和 zip 成功，但创建 dmg 返回 Resource busy。已逐项修复，最终源码提交为 `7a6ff5dcdc44edbd45af3407ba9ab561179e3bc4`。最终 [CI 38920611754](https://github.com/rickepicepic/group-chat-ai/actions/runs/38920611754) 的 macos-14、windows-2022、ubuntu-24.04 三个 job 全部 success。该运行的 Artifacts 提供各平台包；不是已经完成真机安装验收的正式发行版。
+干净源码已上传到 https://github.com/rickepicepic/AidoChat 。首次运行 38913777806：Ubuntu 自检及 tar/deb 构建通过；Windows 测试发现盘符 URI 问题；macOS 编译、签名和 zip 成功，但创建 dmg 返回 Resource busy。已逐项修复，最终源码提交为 `7a6ff5dcdc44edbd45af3407ba9ab561179e3bc4`。最终 [CI 38920611754](https://github.com/rickepicepic/AidoChat/actions/runs/38920611754) 的 macos-14、windows-2022、ubuntu-24.04 三个 job 全部 success。该运行的 Artifacts 提供各平台包；不是已经完成真机安装验收的正式发行版。
 
 本机最终 macOS 包已复制到外部归档 release/macos，含批准图标，双架构、签名完整性和 DMG 校验通过；前一版本单独留在 release/macos-before-platform-validation。本机 macOS 26 的 iconutil 拒绝该 iconset，采用同一已批准 SVG 的 PNG ICNS 块打包并经 sips 解码校验；macos-14 CI 使用原脚本生成成功。安装包下载网络较慢，Windows/Linux 包以成功 CI 的 Artifacts 为准，没有把不完整下载作为本地交付。
 
 全部历史及本次任务过程记录已归档到源码目录之外，当前 docs/tasks 仅保留未来任务指引。源码目录已清理 node_modules、dist、build/bin、任务缓存与临时归档；再次开发需 npm ci。用户数据、凭证和本机旧源码分支均保留。
+
+## AidoChat 0.1.1 验证
+
+官方 SVG 已原样替换并生成三平台图标。修复横向 Field 间距导致的输入框错位，服务/模型与预算/温度使用等宽列；纪要服务/模型顶部对齐。空服务与空成员入口均可继续完成配置并保留草稿。模型测试不再猜测其他厂商模型，钥匙串错误不会被吞掉；异步测试、保存和删除结果按对话框会话隔离。默认纪要服务明确继承成员模型。
+
+Go vet 与全量 race 测试、56 个前端测试和生产构建通过。独立空库原生 QA 的 result.json 为 ok=true、errors=[]，覆盖首次配置、自动选中、保留草稿、模型校验、服务编辑模型带入、宣纸/夜读、原生 960×640（WebView DOM 宽961）和纪要布局。Windows 参数布局预览也已目视检查。原生测试使用独立测试库与本地确定性模型，不访问用户聊天或真实云端 Key。
+
+macOS iconutil 在本机拒绝合法 iconset，已将同一 SVG 的 PNG ICNS 块打包回退纳入脚本，并使用 sips 验证解码；不再需要手工制作。Windows/Linux 仍须以原生 CI 和目标机器验收区分。

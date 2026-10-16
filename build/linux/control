@@ -1,9 +1,12 @@
-Package: ai-group-chat
-Version: 0.1.0
+Package: aidochat
+Version: 0.1.1
 Section: utils
 Priority: optional
 Architecture: amd64
-Maintainer: ai-group-chat <local@ai-group-chat>
+Maintainer: AidoChat <local@aidochat>
+Conflicts: ai-group-chat
+Replaces: ai-group-chat
+Homepage: https://github.com/rickepicepic/AidoChat
 Depends: libgtk-4-1, libwebkitgtk-6.0-4
 Description: 本地运行的 AI 群聊桌面应用
  一个在本地运行的 AI 群聊：你 @ 成员，他们回应，你盖章确认结论。

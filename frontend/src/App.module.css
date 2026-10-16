@@ -34,18 +34,15 @@
 }
 
 .welcomeMark {
-  display: grid;
-  place-items: center;
+  display: block;
   width: 72px;
   height: 72px;
   margin-bottom: var(--space-6);
-  border-radius: 10px;
-  background: var(--ink);
-  color: var(--paper);
-  font-family: var(--font-serif);
-  font-weight: var(--weight-bold);
-  font-size: 36px;
-  transform: rotate(-4deg);
+  border-radius: var(--radius-lg);
+}
+
+.welcomeAction {
+  margin-top: var(--space-5);
 }
 
 .welcomeTitle {

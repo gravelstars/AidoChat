@@ -6,7 +6,7 @@ out="$2"
 log=$(mktemp)
 trap 'rm -f "$log"' EXIT
 for attempt in 1 2 3; do
-  if hdiutil create -volname ai-group-chat -srcfolder "$app" -ov -fs HFS+ -format UDZO "$out" >"$log" 2>&1; then
+  if hdiutil create -volname AidoChat -srcfolder "$app" -ov -fs HFS+ -format UDZO "$out" >"$log" 2>&1; then
     cat "$log"
     exit 0
   else

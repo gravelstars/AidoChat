@@ -1,3 +1,4 @@
+import appIcon from '../../assets/aidochat.svg'
 import { useEffect, useState } from 'react'
 import type { GroupSummary } from '../../backend'
 import { Button } from '../../components/Button'
@@ -106,10 +107,8 @@ export function Rail() {
   return (
     <nav className={styles.rail} aria-label="群聊列表">
       <div className={`${styles.top} drag`}>
-        <span className={styles.mark} aria-hidden="true">
-          议
-        </span>
-        <span className={styles.wordmark}>ai-group-chat</span>
+        <img className={styles.mark} src={appIcon} alt="" aria-hidden="true" />
+        <span className={styles.wordmark}>AidoChat</span>
       </div>
 
       <div className={styles.sectionHead}>

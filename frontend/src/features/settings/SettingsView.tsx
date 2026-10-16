@@ -285,7 +285,7 @@ function ProvidersSection() {
               <p className={styles.rowName}>{p.name}</p>
               <p className={styles.rowMeta}>{p.baseUrl}</p>
             </div>
-            <span className={`${styles.badge} ${p.hasKey || p.kind === 'openai' ? styles.ok : styles.bad}`}>
+            <span className={`${styles.badge} ${p.hasKey ? styles.ok : p.kind === 'anthropic' ? styles.bad : ''}`}>
               {p.hasKey ? '已保存 Key' : p.kind === 'openai' ? '未设 Key' : '缺少 Key'}
             </span>
             <Button variant="quiet" size="sm" onClick={() => setEditing(p)}>
@@ -313,7 +313,7 @@ function MemorySection() {
   const memory = useChat((s) => s.memory)
   const setMemoryConfig = useChat((s) => s.setMemoryConfig)
   const [model, setModel] = useState(memory.model)
-  useEffect(() => setModel(memory.model), [memory.model])
+  useEffect(() => setModel(memory.model), [memory.model, memory.providerId])
   const commitModel = () => {
     if (model.trim() !== memory.model) void setMemoryConfig({ providerId: memory.providerId, model: model.trim() })
   }
@@ -322,7 +322,7 @@ function MemorySection() {
       <div className={styles.memoryRow}>
         <Field label="整理服务">
           {(id) => (
-            <Select id={id} value={memory.providerId} onChange={(e) => void setMemoryConfig({ providerId: e.target.value, model: memory.model })}>
+            <Select id={id} value={memory.providerId} onChange={(e) => void setMemoryConfig({ providerId: e.target.value, model: '' })}>
               <option value="">用群成员的服务</option>
               {providers.map((p) => (
                 <option key={p.id} value={p.id}>
@@ -332,8 +332,8 @@ function MemorySection() {
             </Select>
           )}
         </Field>
-        <Field label="整理模型" hint="留空则用成员使用的模型名。">
-          {(id) => <TextInput id={id} value={model} onChange={(e) => setModel(e.target.value)} onBlur={commitModel} placeholder="例如：deepseek-chat" />}
+        <Field label="整理模型" hint={memory.providerId ? '填写此服务实际可用的模型名；留空则沿用群成员的模型名。' : '当前沿用群成员的服务与模型；选择整理服务后可单独配置模型。'}>
+          {(id) => <TextInput id={id} value={memory.providerId ? model : ''} disabled={!memory.providerId} onChange={(e) => setModel(e.target.value)} onBlur={commitModel} placeholder="例如：deepseek-chat" />}
         </Field>
       </div>
     </Section>
@@ -372,7 +372,7 @@ function DataSection() {
 function AboutSection() {
   const version = useChat((s) => s.version)
   return (
-    <Section title="关于" note="本地运行的 AI 群聊桌面应用。">
+    <Section title="关于" note="AidoChat · 本地运行的 AI 群聊桌面应用。">
       <p className={styles.aboutText}>
         <span className={styles.version}>版本 {version || '—'}</span>
         <br />

@@ -7,11 +7,11 @@ $ErrorActionPreference = 'Stop'
 $nativeBin = [IO.Path]::GetFullPath($BinDir.Replace('/', '\'))
 $nativeScript = [IO.Path]::GetFullPath($InstallerScript.Replace('/', '\'))
 $bootstrapper = Join-Path $nativeBin 'webview2\MicrosoftEdgeWebview2Setup.exe'
-$installer = Join-Path $nativeBin 'ai-group-chat-windows-setup.exe'
+$installer = Join-Path $nativeBin 'AidoChat-windows-setup.exe'
 if (!(Test-Path -LiteralPath $bootstrapper -PathType Leaf)) {
     throw "缺少 WebView2 引导程序：$bootstrapper"
 }
-if (!(Test-Path -LiteralPath (Join-Path $nativeBin 'ai-group-chat.exe') -PathType Leaf)) {
+if (!(Test-Path -LiteralPath (Join-Path $nativeBin 'AidoChat.exe') -PathType Leaf)) {
     throw '缺少应用程序，请先完成 Windows 构建。'
 }
 & makensis "-DSRC=$nativeBin" "-DWEBVIEW2=$bootstrapper" "-DOUT=$installer" $nativeScript

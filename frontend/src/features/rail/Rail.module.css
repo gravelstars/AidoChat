@@ -22,16 +22,11 @@
 }
 
 .mark {
-  display: grid;
-  place-items: center;
+  flex: none;
+  display: block;
   width: 24px;
   height: 24px;
-  border-radius: 4px;
-  background: var(--ink);
-  color: var(--paper-sunk);
-  font-family: var(--font-serif);
-  font-weight: var(--weight-bold);
-  font-size: 13px;
+  border-radius: var(--radius-sm);
 }
 
 .wordmark {

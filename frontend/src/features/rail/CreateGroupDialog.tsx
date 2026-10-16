@@ -6,6 +6,7 @@ import { Field, TextArea, TextInput } from '../../components/Field'
 import { Seal } from '../../components/Seal'
 import { Segmented } from '../../components/Segmented'
 import { useChat } from '../../state/store'
+import { MemberEditor } from '../members/MemberEditor'
 import styles from './CreateGroupDialog.module.css'
 
 /**
@@ -16,16 +17,20 @@ import styles from './CreateGroupDialog.module.css'
  */
 export function CreateGroupDialog({ open, onClose }: { open: boolean; onClose(): void }) {
   const members = useChat((s) => s.members)
+  const retiredIds = useChat((s) => s.retiredIds)
+  const available = Object.values(members).filter((m) => !retiredIds.includes(m.id))
+  const [memberOpen, setMemberOpen] = useState(false)
   const createGroup = useChat((s) => s.createGroup)
   const [title, setTitle] = useState('')
   const [topic, setTopic] = useState('')
   const [picked, setPicked] = useState<string[]>([])
   const [mode, setMode] = useState<ReplyMode>('serial')
-  const [errors, setErrors] = useState<{ title?: string; members?: string }>({})
+  const [errors, setErrors] = useState<{ title?: string; members?: string; form?: string }>({})
   const [submitting, setSubmitting] = useState(false)
 
   useEffect(() => {
     if (open) {
+      setMemberOpen(false)
       setTitle('')
       setTopic('')
       setPicked([])
@@ -47,12 +52,15 @@ export function CreateGroupDialog({ open, onClose }: { open: boolean; onClose():
     try {
       await createGroup({ title: title.trim(), topic: topic.trim(), memberIds: picked, defaultMode: mode })
       onClose()
+    } catch (e) {
+      setErrors({ form: e instanceof Error ? e.message : String(e) })
     } finally {
       setSubmitting(false)
     }
   }
 
   return (
+    <>
     <Dialog
       open={open}
       onClose={onClose}
@@ -79,8 +87,11 @@ export function CreateGroupDialog({ open, onClose }: { open: boolean; onClose():
         </Field>
         <Field label="邀请成员" error={errors.members} hint="点选的先后就是 @所有人 时的回复顺序。" aside={<span className={styles.count}>{picked.length} 位</span>}>
           {() => (
+            <>
+            {available.length === 0 && <p className={styles.note}>还没有可邀请的成员。先新建成员并配置模型服务，再邀请进群。</p>}
+            <Button variant="quiet" size="sm" onClick={() => setMemberOpen(true)}>新建成员</Button>
             <div className={styles.grid} role="group">
-              {Object.values(members).map((m) => {
+              {available.map((m) => {
                 const order = picked.indexOf(m.id)
                 return (
                   <button key={m.id} type="button" className={styles.card} aria-pressed={order >= 0} onClick={() => toggle(m.id)}>
@@ -94,6 +105,7 @@ export function CreateGroupDialog({ open, onClose }: { open: boolean; onClose():
                 )
               })}
             </div>
+            </>
           )}
         </Field>
         <Field label="同时 @ 多位成员时" hint="发送时还可以临时切换。">
@@ -109,7 +121,10 @@ export function CreateGroupDialog({ open, onClose }: { open: boolean; onClose():
             />
           )}
         </Field>
+        {errors.form && <p className={styles.error} role="alert">{errors.form}</p>}
       </form>
     </Dialog>
+    <MemberEditor open={open && memberOpen} onClose={() => setMemberOpen(false)} onSaved={(m) => setPicked((ids) => [...ids, m.id])} />
+    </>
   )
 }

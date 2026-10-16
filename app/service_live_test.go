@@ -1,6 +1,8 @@
 package app
 
 import (
+	"ai-group-chat/internal/domain"
+	"ai-group-chat/internal/secret"
 	"context"
 	"os"
 	"testing"
@@ -13,7 +15,11 @@ func TestLiveTestProvider(t *testing.T) {
 	if os.Getenv("AGC_LIVE_SETTINGS") != "1" {
 		t.Skip("未配置真实服务验收")
 	}
-	s, _ := fixture(t, nil)
+	s, db := fixture(t, nil)
+	p := domain.Provider{ID: "deepseek", Name: "DeepSeek", Kind: "openai", BaseURL: "https://api.deepseek.com", KeyRef: secret.Entry("deepseek")}
+	if err := db.SaveProvider(context.Background(), &p); err != nil {
+		t.Fatal(err)
+	}
 	ctx, cancel := context.WithTimeout(context.Background(), 60*time.Second)
 	defer cancel()
 	ms, err := s.TestProvider(ctx, SaveProviderInput{ID: "deepseek", Kind: "openai", BaseURL: "https://api.deepseek.com", TestModel: "deepseek-flash"})

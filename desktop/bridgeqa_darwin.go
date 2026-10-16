@@ -34,6 +34,9 @@ func prepareBackendQA(db *store.Store, p turn.Providers) (turn.Providers, error)
 	if os.Getenv("AGC_QA_DB") == "" {
 		return nil, errors.New("桥接验收必须指定独立 AGC_QA_DB，避免写入用户数据库")
 	}
+	if os.Getenv("AGC_QA_ONBOARDING") == "1" {
+		return func(context.Context, domain.Provider) (llm.Provider, error) { return bridgeQAProvider{}, nil }, nil
+	}
 	ctx := context.Background()
 	provider := domain.Provider{ID: "bridge-qa", Name: "桥接验收本地测试流", Kind: "openai"}
 	if err := db.SaveProvider(ctx, &provider); err != nil {
@@ -67,6 +70,9 @@ func (bridgeQAProvider) Stream(ctx context.Context, _ llm.Request, delta func(st
 //go:embed bridgeqa.js
 var bridgeQAScript string
 
+//go:embed onboardingqa.js
+var onboardingQAScript string
+
 func installBridgeQA(app *application.App, w *application.WebviewWindow) {
 	dir := os.Getenv("AGC_QA_DIR")
 	if dir == "" {
@@ -87,6 +93,11 @@ func installBridgeQA(app *application.App, w *application.WebviewWindow) {
 		captureQA(w, dir, name)
 		w.ExecJS(`window.__bridgeCaptureDone = true`)
 	})
+	app.Event.On("bridge:qa-minimum", func(*application.CustomEvent) {
+		w.SetSize(960, 640)
+		width, height := w.Size()
+		slog.Info("QA 最小窗口", "width", width, "height", height)
+	})
 	app.Event.On("bridge:qa-result", func(e *application.CustomEvent) {
 		raw, err := json.MarshalIndent(e.Data, "", "  ")
 		if err == nil {
@@ -95,6 +106,14 @@ func installBridgeQA(app *application.App, w *application.WebviewWindow) {
 		time.AfterFunc(200*time.Millisecond, app.Quit)
 	})
 	w.OnWindowEvent(events.Common.WindowRuntimeReady, func(*application.WindowEvent) {
-		time.AfterFunc(time.Second, func() { app.Show(); w.Focus(); w.ExecJS(bridgeQAScript) })
+		time.AfterFunc(time.Second, func() {
+			app.Show()
+			w.Focus()
+			script := bridgeQAScript
+			if os.Getenv("AGC_QA_ONBOARDING") == "1" {
+				script = onboardingQAScript
+			}
+			w.ExecJS(script)
+		})
 	})
 }

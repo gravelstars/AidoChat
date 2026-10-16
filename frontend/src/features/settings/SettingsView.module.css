@@ -440,12 +440,14 @@
 /* ---- 纪要整理 ---- */
 .memoryRow {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: var(--space-4);
   margin-top: var(--space-5);
 }
 
 .memoryRow > * {
+  margin-top: 0;
+  min-width: 0;
   flex: 1;
 }
 
@@ -483,4 +485,19 @@
 .version {
   font-family: var(--font-mono);
   color: var(--ink-3);
+}
+
+.providerFields {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.providerFields .actionsRow {
+  margin-top: 0;
+}
+
+.providerFields .actionsRow > input {
+  min-width: 0;
 }

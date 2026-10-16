@@ -1,10 +1,10 @@
 version: '3'
 info:
-  companyName: ai-group-chat
-  productName: ai-group-chat
+  companyName: AidoChat
+  productName: AidoChat
   productIdentifier: local.ai-group-chat
   description: 本地 AI 群聊
-  version: 0.1.0
+  version: 0.1.1
 dev_mode:
   root_path: .
   log_level: warn

@@ -2,8 +2,8 @@
 # 由 build/icons/icon-master.svg 生成各平台图标（TASK-012）。
 # 仅在项目所有者确认造型后运行；需要本机具备：
 #   - 一个 SVG 光栅化工具：rsvg-convert 或 ImageMagick(magick/convert) 或 Inkscape
-#   - macOS：sips + iconutil（生成 .icns）
-#   - Windows/.ico：ImageMagick（生成 .ico）
+#   - macOS：iconutil（失败时使用 Python 3 标准库封装 PNG 图块）
+#   - Windows/.ico：ImageMagick 或 Python 3 标准库（生成 .ico）
 # 产物：
 #   build/darwin/icon.icns
 #   build/windows/icon.ico
@@ -41,7 +41,28 @@ if command -v iconutil >/dev/null; then
     rasterize "$((s * 2))" "$set/icon_${s}x${s}@2x.png"
   done
   mkdir -p build/darwin
-  iconutil -c icns "$set" -o build/darwin/icon.icns
+  if ! iconutil -c icns "$set" -o build/darwin/icon.icns; then
+    # 部分新版 macOS 的 iconutil 会拒绝有效 PNG；ICNS 本身允许直接使用 PNG 图块。
+    python3 - "$set" build/darwin/icon.icns <<'PYICNS'
+from pathlib import Path
+import struct
+import sys
+source = Path(sys.argv[1])
+blocks = []
+for kind, name in [
+    (b"icp4", "icon_16x16.png"), (b"icp5", "icon_32x32.png"),
+    (b"icp6", "icon_32x32@2x.png"), (b"ic07", "icon_128x128.png"),
+    (b"ic08", "icon_256x256.png"), (b"ic09", "icon_512x512.png"),
+    (b"ic10", "icon_512x512@2x.png"), (b"ic11", "icon_16x16@2x.png"),
+    (b"ic12", "icon_32x32@2x.png"), (b"ic13", "icon_128x128@2x.png"),
+    (b"ic14", "icon_256x256@2x.png"),
+]:
+    png = (source / name).read_bytes()
+    blocks.append(kind + struct.pack(">I", len(png) + 8) + png)
+body = b"".join(blocks)
+Path(sys.argv[2]).write_bytes(b"icns" + struct.pack(">I", len(body) + 8) + body)
+PYICNS
+  fi
   echo "生成 build/darwin/icon.icns"
 else
   echo "跳过 .icns（没有 iconutil，非 macOS）"
@@ -54,7 +75,25 @@ if command -v magick >/dev/null || command -v convert >/dev/null; then
   "$convert_src" -background none "$MASTER" -define icon:auto-resize=256,128,64,48,32,16 build/windows/icon.ico
   echo "生成 build/windows/icon.ico"
 else
-  echo "跳过 .ico（没有 ImageMagick）"
+  # ICO 接受 PNG 图块，避免只有 librsvg 的 macOS 开发环境遗漏 Windows 图标。
+  for s in 16 32 48 64 128 256; do
+    rasterize "$s" "$tmp/ico-$s.png"
+  done
+  mkdir -p build/windows
+  python3 - "$tmp" build/windows/icon.ico <<'PYICO'
+from pathlib import Path
+import struct
+import sys
+sizes = [16, 32, 48, 64, 128, 256]
+images = [(size, (Path(sys.argv[1]) / f"ico-{size}.png").read_bytes()) for size in sizes]
+offset = 6 + 16 * len(images)
+entries = []
+for size, png in images:
+    entries.append(struct.pack("<BBBBHHII", size % 256, size % 256, 0, 0, 1, 32, len(png), offset))
+    offset += len(png)
+Path(sys.argv[2]).write_bytes(struct.pack("<HHH", 0, 1, len(images)) + b"".join(entries) + b"".join(png for _, png in images))
+PYICO
+  echo "生成 build/windows/icon.ico（PNG 图块）"
 fi
 
 # Linux pngs

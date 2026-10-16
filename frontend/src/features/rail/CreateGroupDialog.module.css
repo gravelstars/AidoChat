@@ -89,3 +89,14 @@
     transform: scale(0.5);
   }
 }
+
+.note {
+  margin: 0 0 var(--space-2);
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+.error {
+  color: var(--error);
+  font-size: var(--text-xs);
+}

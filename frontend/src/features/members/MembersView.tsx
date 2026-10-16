@@ -51,7 +51,7 @@ export function MembersView() {
                   <dt>服务</dt>
                   <dd>
                     {p?.name ?? '未配置'}
-                    {p && !p.hasKey && <span className={styles.warn}> · 缺少 Key</span>}
+                    {p && !p.hasKey && (p.kind === 'anthropic' ? <span className={styles.warn}> · 缺少 Key</span> : ' · 未设 Key')}
                   </dd>
                 </dl>
               </div>

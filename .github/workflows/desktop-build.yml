@@ -54,9 +54,8 @@ jobs:
       - run: npm test
         working-directory: frontend
       - run: bash scripts/check-protected.sh
-      # 母版需所有者确认；仓库变量 APP_ICON_APPROVED=true 后生成，不吞掉生成失败。
+      # 官方 SVG 已获所有者授权；每次构建生成图标，不吞掉生成失败。
       - name: Generate app icons
-        if: vars.APP_ICON_APPROVED == 'true'
         run: bash scripts/make-icons.sh
       - run: wails3 task package
       - name: Build platform installers
@@ -65,15 +64,11 @@ jobs:
           if [ "${{ runner.os }}" = "Windows" ]; then wails3 task windows:nsis; fi
           if [ "${{ runner.os }}" = "Linux" ]; then
             wails3 task linux:deb
-            if [ -f build/linux/icons/512x512.png ]; then
-              wails3 task linux:appimage
-            else
-              echo "::notice::应用图标母版尚未确认，跳过需要图标的 AppImage；仍构建 deb 和 tar.gz。"
-            fi
+            wails3 task linux:appimage
           fi
       - uses: actions/upload-artifact@v4
         with:
-          name: ai-group-chat-${{ runner.os }}
+          name: AidoChat-${{ runner.os }}
           path: |
             build/bin/*.zip
             build/bin/*.tar.gz

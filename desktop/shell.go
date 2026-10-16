@@ -110,7 +110,7 @@ func (s *Shell) bind(app *application.App, w *application.WebviewWindow) {
 }
 func WindowOptions(state State, goos string) application.WebviewWindowOptions {
 	state = state.Normalized()
-	options := application.WebviewWindowOptions{Name: "main", Title: "ai-group-chat", Width: state.Width, Height: state.Height, MinWidth: 960, MinHeight: 640, Frameless: goos != "darwin", BackgroundColour: Colour(state.Paper), URL: "/", InitialPosition: application.WindowCentered}
+	options := application.WebviewWindowOptions{Name: "main", Title: "AidoChat", Width: state.Width, Height: state.Height, MinWidth: 960, MinHeight: 640, Frameless: goos != "darwin", BackgroundColour: Colour(state.Paper), URL: "/", InitialPosition: application.WindowCentered}
 	if state.HasPosition {
 		options.InitialPosition = application.WindowXY
 		options.X = state.X
@@ -162,7 +162,7 @@ func Run(assets fs.FS) error {
 		return err
 	}
 	app = application.New(application.Options{
-		Name: "ai-group-chat", Description: "本地 AI 群聊",
+		Name: "AidoChat", Description: "本地 AI 群聊",
 		Services: []application.Service{application.NewService(shell), application.NewService(service)},
 		Flags:    map[string]any{"app.platform": Platform(runtime.GOOS)},
 		// 头像资源走 /avatars/*（TASK-013），其余交给嵌入的前端资源。

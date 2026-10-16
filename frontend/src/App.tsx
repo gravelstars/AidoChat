@@ -1,3 +1,4 @@
+import appIcon from './assets/aidochat.svg'
 import { Dialog } from './components/Dialog'
 import { Button } from './components/Button'
 import { ChatView } from './features/chat/ChatView'
@@ -40,11 +41,13 @@ export function App() {
 }
 
 function Welcome() {
+  const setView = useChat((s) => s.setView)
   return (
     <div className={styles.welcome}>
-      <span className={styles.welcomeMark}>议</span>
+      <img className={styles.welcomeMark} src={appIcon} alt="AidoChat" />
       <p className={styles.welcomeTitle}>把 AI 拉进同一个群</p>
-      <p className={styles.welcomeText}>从左侧新建一个群，邀请几位成员，用 @ 点名开始讨论。</p>
+      <p className={styles.welcomeText}>先配置模型服务和成员，再从左侧新建群，用 @ 点名开始讨论。</p>
+      <div className={styles.welcomeAction}><Button variant="primary" onClick={() => setView('members')}>配置成员与模型服务</Button></div>
     </div>
   )
 }

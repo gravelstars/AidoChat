@@ -17,8 +17,8 @@ tasks:
       - mkdir -p "{{.BIN_DIR}}/deb/{{.APP_NAME}}/DEBIAN" "{{.BIN_DIR}}/deb/{{.APP_NAME}}/usr/bin" "{{.BIN_DIR}}/deb/{{.APP_NAME}}/usr/share/applications" "{{.BIN_DIR}}/deb/{{.APP_NAME}}/usr/share/icons/hicolor/512x512/apps"
       - cp "{{.BIN_DIR}}/{{.APP_NAME}}" "{{.BIN_DIR}}/deb/{{.APP_NAME}}/usr/bin/{{.APP_NAME}}"
       - cp "{{.ROOT_DIR}}/build/linux/control" "{{.BIN_DIR}}/deb/{{.APP_NAME}}/DEBIAN/control"
-      - cp "{{.ROOT_DIR}}/build/linux/ai-group-chat.desktop" "{{.BIN_DIR}}/deb/{{.APP_NAME}}/usr/share/applications/ai-group-chat.desktop"
-      - if [ -f "{{.ROOT_DIR}}/build/linux/icons/512x512.png" ]; then cp "{{.ROOT_DIR}}/build/linux/icons/512x512.png" "{{.BIN_DIR}}/deb/{{.APP_NAME}}/usr/share/icons/hicolor/512x512/apps/ai-group-chat.png"; fi
+      - cp "{{.ROOT_DIR}}/build/linux/aidochat.desktop" "{{.BIN_DIR}}/deb/{{.APP_NAME}}/usr/share/applications/aidochat.desktop"
+      - if [ -f "{{.ROOT_DIR}}/build/linux/icons/512x512.png" ]; then cp "{{.ROOT_DIR}}/build/linux/icons/512x512.png" "{{.BIN_DIR}}/deb/{{.APP_NAME}}/usr/share/icons/hicolor/512x512/apps/aidochat.png"; fi
       - dpkg-deb --build --root-owner-group "{{.BIN_DIR}}/deb/{{.APP_NAME}}" "{{.BIN_DIR}}/{{.APP_NAME}}.deb"
   # AppImage（TASK-012）。需要 appimagetool。
   appimage:
@@ -29,14 +29,14 @@ tasks:
         msg: 缺少应用图标；母版经项目所有者确认后先运行 scripts/make-icons.sh。
     cmds:
       - task: build
-      - mkdir -p "{{.BIN_DIR}}/AppDir/usr/bin" "{{.BIN_DIR}}/AppDir/usr/share/applications" "{{.BIN_DIR}}/AppDir/usr/share/icons/hicolor/512x512/apps"
-      - cp "{{.BIN_DIR}}/{{.APP_NAME}}" "{{.BIN_DIR}}/AppDir/usr/bin/{{.APP_NAME}}"
-      - cp "{{.ROOT_DIR}}/build/linux/AppRun" "{{.BIN_DIR}}/AppDir/AppRun"
-      - chmod +x "{{.BIN_DIR}}/AppDir/AppRun"
-      - cp "{{.ROOT_DIR}}/build/linux/ai-group-chat.desktop" "{{.BIN_DIR}}/AppDir/ai-group-chat.desktop"
-      - cp "{{.ROOT_DIR}}/build/linux/ai-group-chat.desktop" "{{.BIN_DIR}}/AppDir/usr/share/applications/ai-group-chat.desktop"
-      - if [ -f "{{.ROOT_DIR}}/build/linux/icons/512x512.png" ]; then cp "{{.ROOT_DIR}}/build/linux/icons/512x512.png" "{{.BIN_DIR}}/AppDir/ai-group-chat.png" && cp "{{.ROOT_DIR}}/build/linux/icons/512x512.png" "{{.BIN_DIR}}/AppDir/usr/share/icons/hicolor/512x512/apps/ai-group-chat.png"; fi
-      - appimagetool --no-appstream "{{.BIN_DIR}}/AppDir" "{{.BIN_DIR}}/{{.APP_NAME}}.AppImage"
+      - mkdir -p "{{.BIN_DIR}}/{{.APP_NAME}}.AppDir/usr/bin" "{{.BIN_DIR}}/{{.APP_NAME}}.AppDir/usr/share/applications" "{{.BIN_DIR}}/{{.APP_NAME}}.AppDir/usr/share/icons/hicolor/512x512/apps"
+      - cp "{{.BIN_DIR}}/{{.APP_NAME}}" "{{.BIN_DIR}}/{{.APP_NAME}}.AppDir/usr/bin/{{.APP_NAME}}"
+      - cp "{{.ROOT_DIR}}/build/linux/AppRun" "{{.BIN_DIR}}/{{.APP_NAME}}.AppDir/AppRun"
+      - chmod +x "{{.BIN_DIR}}/{{.APP_NAME}}.AppDir/AppRun"
+      - cp "{{.ROOT_DIR}}/build/linux/aidochat.desktop" "{{.BIN_DIR}}/{{.APP_NAME}}.AppDir/aidochat.desktop"
+      - cp "{{.ROOT_DIR}}/build/linux/aidochat.desktop" "{{.BIN_DIR}}/{{.APP_NAME}}.AppDir/usr/share/applications/aidochat.desktop"
+      - if [ -f "{{.ROOT_DIR}}/build/linux/icons/512x512.png" ]; then cp "{{.ROOT_DIR}}/build/linux/icons/512x512.png" "{{.BIN_DIR}}/{{.APP_NAME}}.AppDir/aidochat.png" && cp "{{.ROOT_DIR}}/build/linux/icons/512x512.png" "{{.BIN_DIR}}/{{.APP_NAME}}.AppDir/usr/share/icons/hicolor/512x512/apps/aidochat.png"; fi
+      - appimagetool --no-appstream "{{.BIN_DIR}}/{{.APP_NAME}}.AppDir" "{{.BIN_DIR}}/{{.APP_NAME}}.AppImage"
   package:
     cmds:
       - task: build

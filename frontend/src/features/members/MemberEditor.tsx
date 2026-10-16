@@ -7,22 +7,21 @@ import { Seal } from '../../components/Seal'
 import { PIGMENTS } from '../../lib/avatar'
 import { useChat } from '../../state/store'
 import { AvatarEditor } from './AvatarEditor'
+import { ProviderDialog } from '../settings/ProviderDialog'
 import styles from './MemberEditor.module.css'
 
-const COMMON_MODELS = ['gpt-4o', 'gpt-4o-mini', 'claude-sonnet-4-6', 'claude-opus-4-6', 'claude-haiku-4-5-20251001', 'deepseek-chat', 'deepseek-flash', 'qwen-max', 'kimi-k2', 'glm-4.6']
 const firstRune = (s: string) => Array.from(s.trim())[0] ?? '新'
 
 /**
  * 成员的新建与编辑（TASK-007）。表单结构照 CreateGroupDialog；
  * 头像编辑直接复用 AvatarEditor（编辑已有成员时可打开）。
  */
-export function MemberEditor({ open, onClose, member }: { open: boolean; onClose(): void; member?: Member }) {
+export function MemberEditor({ open, onClose, member, onSaved }: { open: boolean; onClose(): void; member?: Member; onSaved?(member: Member): void }) {
   const members = useChat((s) => s.members)
   const retiredIds = useChat((s) => s.retiredIds)
   const providers = useChat((s) => s.providers)
   const saveMember = useChat((s) => s.saveMember)
   const deleteMember = useChat((s) => s.deleteMember)
-  const setView = useChat((s) => s.setView)
 
   const isNew = !member
   const [name, setName] = useState('')
@@ -33,16 +32,19 @@ export function MemberEditor({ open, onClose, member }: { open: boolean; onClose
   const [model, setModel] = useState('')
   const [contextTokens, setContextTokens] = useState(16000)
   const [temperature, setTemperature] = useState('')
-  const [errors, setErrors] = useState<{ name?: string; provider?: string }>({})
+  const [errors, setErrors] = useState<{ name?: string; provider?: string; model?: string; form?: string }>({})
   const [submitting, setSubmitting] = useState(false)
   const [confirmDelete, setConfirmDelete] = useState(false)
   const [avatarOpen, setAvatarOpen] = useState(false)
+  const [providerOpen, setProviderOpen] = useState(false)
+  const [editingProvider, setEditingProvider] = useState<typeof providers[number] | undefined>()
 
   useEffect(() => {
     if (!open) return
     setErrors({})
     setConfirmDelete(false)
     setAvatarOpen(false)
+    setProviderOpen(false)
     if (member) {
       setName(member.name)
       setColor(member.avatar.color)
@@ -84,13 +86,14 @@ export function MemberEditor({ open, onClose, member }: { open: boolean; onClose
     else if (/\s|@/.test(name.trim())) errs.name = '名字里不能有空格或 @'
     const conflict = Object.values(members).some((m) => m.id !== member?.id && !retiredIds.includes(m.id) && m.name === name.trim())
     if (conflict) errs.name = '已经有叫这个名字的成员了'
-    if (!providerId) errs.provider = '先选择一个模型服务'
+    if (!provider) errs.provider = providers.length ? '先选择一个模型服务' : '先新建模型服务，再选择模型'
+    if (!model.trim()) errs.model = '填写这个服务实际可用的模型名'
     setErrors(errs)
     if (Object.keys(errs).length) return
     setSubmitting(true)
     try {
       const temp = temperature.trim() === '' ? undefined : Number(temperature)
-      await saveMember({
+      const saved = await saveMember({
         id: member?.id ?? '',
         name: name.trim(),
         avatar: currentMember?.avatar ?? { glyph: firstRune(name), color },
@@ -101,9 +104,10 @@ export function MemberEditor({ open, onClose, member }: { open: boolean; onClose
         temperature: temp != null && Number.isFinite(temp) ? temp : undefined,
         contextTokens: contextTokens || 16000,
       })
+      onSaved?.(saved)
       onClose()
     } catch (e) {
-      setErrors({ name: e instanceof Error ? e.message : String(e) })
+      setErrors({ form: e instanceof Error ? e.message : String(e) })
     } finally {
       setSubmitting(false)
     }
@@ -120,7 +124,7 @@ export function MemberEditor({ open, onClose, member }: { open: boolean; onClose
       await deleteMember(member.id)
       onClose()
     } catch (e) {
-      setErrors({ name: e instanceof Error ? e.message : String(e) })
+      setErrors({ form: e instanceof Error ? e.message : String(e) })
     } finally {
       setSubmitting(false)
     }
@@ -178,9 +182,9 @@ export function MemberEditor({ open, onClose, member }: { open: boolean; onClose
         </Field>
 
         <div className={styles.row}>
-          <Field label="模型服务" error={errors.provider}>
+          <Field label="模型服务" error={errors.provider} hint={providers.length ? undefined : '还没有模型服务。先填写服务地址，再为成员选择模型。'}>
             {(id) => (
-              <Select id={id} value={providerId} onChange={(e) => setProviderId(e.target.value)}>
+              <Select id={id} value={providerId} disabled={!providers.length} onChange={(e) => setProviderId(e.target.value)}>
                 <option value="">选择服务</option>
                 {providers.map((p) => (
                   <option key={p.id} value={p.id}>
@@ -190,25 +194,19 @@ export function MemberEditor({ open, onClose, member }: { open: boolean; onClose
               </Select>
             )}
           </Field>
-          <Field label="模型" hint="填服务商提供的模型名。">
+          <Field label="模型" error={errors.model} hint="填写此服务实际可用的模型名，以服务商后台为准。">
             {(id) => (
-              <>
-                <TextInput id={id} value={model} onChange={(e) => setModel(e.target.value)} list="agc-common-models" placeholder="例如：deepseek-chat" />
-                <datalist id="agc-common-models">
-                  {COMMON_MODELS.map((m) => (
-                    <option key={m} value={m} />
-                  ))}
-                </datalist>
-              </>
+              <TextInput id={id} value={model} onChange={(e) => setModel(e.target.value)} placeholder="例如：deepseek-chat" />
             )}
           </Field>
         </div>
+        <div className={styles.providerActions}>
+          <Button variant="quiet" size="sm" onClick={() => { setEditingProvider(undefined); setProviderOpen(true) }}>新建模型服务</Button>
+          {provider && <Button variant="quiet" size="sm" onClick={() => { setEditingProvider(provider); setProviderOpen(true) }}>编辑当前服务</Button>}
+        </div>
         {provider && !provider.hasKey && (
-          <p className={styles.warnRow}>
-            这个服务还没有保存 API Key。{' '}
-            <button className={styles.link} onClick={() => { onClose(); setView('settings') }}>
-              去设置
-            </button>
+          <p className={styles.noteRow}>
+            {provider.kind === 'anthropic' ? '此服务尚未保存 API Key，请编辑服务补充。' : '此服务未保存 Key。免 Key 的本地服务可直接使用；云端服务请编辑服务补充。'}
           </p>
         )}
 
@@ -220,8 +218,14 @@ export function MemberEditor({ open, onClose, member }: { open: boolean; onClose
             {(id) => <TextInput id={id} type="number" min={0} max={2} step={0.1} value={temperature} onChange={(e) => setTemperature(e.target.value)} placeholder="默认" />}
           </Field>
         </div>
+        {errors.form && <p className={styles.warnRow} role="alert">{errors.form}</p>}
       </Dialog>
 
+      <ProviderDialog open={open && providerOpen} provider={editingProvider} suggestedModel={editingProvider ? model : undefined} onClose={() => setProviderOpen(false)} onSaved={(saved, testedModel) => {
+        setProviderId(saved.id)
+        if (!model.trim() && testedModel) setModel(testedModel)
+        setErrors((e) => ({ ...e, provider: undefined }))
+      }} />
       {currentMember && <AvatarEditor open={avatarOpen} onClose={() => setAvatarOpen(false)} member={currentMember} scope={{ kind: 'default' }} />}
     </>
   )

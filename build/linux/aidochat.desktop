@@ -1,10 +1,10 @@
 [Desktop Entry]
 Type=Application
-Name=ai-group-chat
-Name[zh_CN]=议
+Name=AidoChat
+Name[zh_CN]=AidoChat
 Comment=本地运行的 AI 群聊
-Exec=ai-group-chat
-Icon=ai-group-chat
+Exec=AidoChat
+Icon=aidochat
 Terminal=false
 Categories=Utility;Chat;
-StartupWMClass=ai-group-chat
+StartupWMClass=AidoChat

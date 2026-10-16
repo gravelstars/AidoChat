@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import type { ProviderConfig } from '../../backend'
 import { backend } from '../../backend'
 import { Button } from '../../components/Button'
@@ -22,7 +22,10 @@ const PRESETS: { name: string; kind: 'openai' | 'anthropic'; url: string }[] = [
 /**
  * 模型服务的新建与编辑（TASK-008）。Key 只写入系统钥匙串，界面不回显。
  */
-export function ProviderDialog({ open, onClose, provider }: { open: boolean; onClose(): void; provider?: ProviderConfig }) {
+export function ProviderDialog({ open, onClose, provider, onSaved, suggestedModel }: { open: boolean; onClose(): void; provider?: ProviderConfig; onSaved?(provider: ProviderConfig, testModel: string): void; suggestedModel?: string }) {
+  const members = useChat((s) => s.members)
+  const retiredIds = useChat((s) => s.retiredIds)
+  const testRequest = useRef(0)
   const saveProvider = useChat((s) => s.saveProvider)
   const deleteProvider = useChat((s) => s.deleteProvider)
   const [name, setName] = useState('')
@@ -30,19 +33,22 @@ export function ProviderDialog({ open, onClose, provider }: { open: boolean; onC
   const [baseUrl, setBaseUrl] = useState('')
   const [key, setKey] = useState('')
   const [testModel, setTestModel] = useState('')
-  const [errors, setErrors] = useState<{ name?: string; baseUrl?: string }>({})
+  const [errors, setErrors] = useState<{ name?: string; baseUrl?: string; testModel?: string }>({})
   const [submitting, setSubmitting] = useState(false)
   const [testing, setTesting] = useState(false)
   const [test, setTest] = useState<{ ok: boolean; text: string } | null>(null)
   const [confirmDelete, setConfirmDelete] = useState(false)
 
   useEffect(() => {
+    testRequest.current += 1
+    setTesting(false)
+    setSubmitting(false)
     if (!open) return
     setErrors({})
     setTest(null)
     setConfirmDelete(false)
     setKey('')
-    setTestModel('')
+    setTestModel(suggestedModel?.trim() || Object.values(members).find((m) => provider && m.providerId === provider.id && !retiredIds.includes(m.id))?.model || '')
     setName(provider?.name ?? '')
     setKind(provider?.kind ?? 'openai')
     setBaseUrl(provider?.baseUrl ?? '')
@@ -55,18 +61,25 @@ export function ProviderDialog({ open, onClose, provider }: { open: boolean; onC
     return () => clearTimeout(t)
   }, [confirmDelete])
 
+  useEffect(() => { setTest(null) }, [kind, baseUrl, key, testModel])
+
+  const dismiss = () => { testRequest.current += 1; onClose() }
+
   const payload = () => ({ id: provider?.id ?? '', name: name.trim(), kind, baseUrl: baseUrl.trim(), key: key.trim(), testModel: testModel.trim() || undefined })
 
   const runTest = async () => {
     setTest(null)
+    if (!testModel.trim()) { setErrors((e) => ({ ...e, testModel: '填入这个服务实际可用的模型名，再测试连接' })); return }
+    setErrors((e) => ({ ...e, testModel: undefined }))
+    const request = ++testRequest.current
     setTesting(true)
     try {
       const ms = await backend.testProvider(payload())
-      setTest({ ok: true, text: `连接正常 · 用时 ${ms} ms` })
+      if (request === testRequest.current) setTest({ ok: true, text: `连接正常 · 用时 ${ms} ms` })
     } catch (e) {
-      setTest({ ok: false, text: e instanceof Error ? e.message : String(e) })
+      if (request === testRequest.current) setTest({ ok: false, text: e instanceof Error ? e.message : String(e) })
     } finally {
-      setTesting(false)
+      if (request === testRequest.current) setTesting(false)
     }
   }
 
@@ -76,14 +89,17 @@ export function ProviderDialog({ open, onClose, provider }: { open: boolean; onC
     if (!baseUrl.trim()) errs.baseUrl = '请填写服务地址'
     setErrors(errs)
     if (Object.keys(errs).length) return
+    const request = testRequest.current
     setSubmitting(true)
     try {
-      await saveProvider(payload())
-      onClose()
+      const saved = await saveProvider(payload())
+      if (request !== testRequest.current) return
+      onSaved?.(saved, testModel.trim())
+      dismiss()
     } catch (e) {
-      setErrors({ name: e instanceof Error ? e.message : String(e) })
+      if (request === testRequest.current) setErrors({ name: e instanceof Error ? e.message : String(e) })
     } finally {
-      setSubmitting(false)
+      if (request === testRequest.current) setSubmitting(false)
     }
   }
 
@@ -93,41 +109,43 @@ export function ProviderDialog({ open, onClose, provider }: { open: boolean; onC
       setConfirmDelete(true)
       return
     }
+    const request = testRequest.current
     setSubmitting(true)
     try {
       await deleteProvider(provider.id)
-      onClose()
+      if (request === testRequest.current) dismiss()
     } catch (e) {
-      setErrors({ name: e instanceof Error ? e.message : String(e) })
+      if (request === testRequest.current) setErrors({ name: e instanceof Error ? e.message : String(e) })
     } finally {
-      setSubmitting(false)
+      if (request === testRequest.current) setSubmitting(false)
     }
   }
 
   return (
     <Dialog
       open={open}
-      onClose={onClose}
+      onClose={dismiss}
       title={provider ? `编辑「${provider.name}」` : '新建模型服务'}
       description="成员通过这里配置的服务与模型说话。API Key 只保存在系统钥匙串，界面不会回显。"
       width={540}
       footer={
         <>
           {provider && (
-            <Button variant="quiet" className={confirmDelete ? styles.bad : undefined} onClick={() => void remove()} disabled={submitting}>
+            <Button variant="quiet" className={confirmDelete ? styles.bad : undefined} onClick={() => void remove()} disabled={submitting || testing}>
               {confirmDelete ? '再点一次确认删除' : '删除服务'}
             </Button>
           )}
           <span style={{ flex: 1 }} />
-          <Button variant="ghost" onClick={onClose}>
+          <Button variant="ghost" onClick={dismiss}>
             取消
           </Button>
-          <Button variant="primary" onClick={() => void submit()} disabled={submitting}>
+          <Button variant="primary" onClick={() => void submit()} disabled={submitting || testing}>
             {provider ? '保存' : '创建'}
           </Button>
         </>
       }
     >
+      <fieldset className={styles.providerFields} disabled={testing || submitting}>
       <Field label="名称" error={errors.name}>
         {(id) => <TextInput id={id} value={name} onChange={(e) => setName(e.target.value)} placeholder="例如：DeepSeek" autoFocus maxLength={24} />}
       </Field>
@@ -155,6 +173,7 @@ export function ProviderDialog({ open, onClose, provider }: { open: boolean; onC
                   variant="quiet"
                   size="sm"
                   onClick={() => {
+                    if (baseUrl !== p.url) setTestModel('')
                     setBaseUrl(p.url)
                     setKind(p.kind)
                     if (!name.trim()) setName(p.name)
@@ -170,11 +189,11 @@ export function ProviderDialog({ open, onClose, provider }: { open: boolean; onC
       <Field label="API Key" hint={provider?.hasKey ? '已保存，留空则不修改。' : '只写入系统钥匙串，不会进入数据库。'}>
         {(id) => <TextInput id={id} type="password" value={key} onChange={(e) => setKey(e.target.value)} placeholder={provider?.hasKey ? '已保存，留空则不修改' : '粘贴 API Key'} autoComplete="off" />}
       </Field>
-      <Field label="测试连接" hint="用一个极小请求验证服务可用。测试用的模型名可留空，按类型取默认。">
+      <Field label="测试连接" error={errors.testModel} hint="测试前填写此服务实际可用的模型名；测试会发送一个极小请求。">
         {(id) => (
           <>
             <div className={styles.actionsRow}>
-              <TextInput id={id} value={testModel} onChange={(e) => setTestModel(e.target.value)} placeholder="留空按类型默认" style={{ flex: 1 }} />
+              <TextInput id={id} value={testModel} onChange={(e) => setTestModel(e.target.value)} placeholder="例如：deepseek-chat" style={{ flex: 1 }} />
               <Button variant="ghost" onClick={() => void runTest()} disabled={testing}>
                 {testing ? '测试中…' : '测试连接'}
               </Button>
@@ -183,6 +202,7 @@ export function ProviderDialog({ open, onClose, provider }: { open: boolean; onC
           </>
         )}
       </Field>
+      </fieldset>
     </Dialog>
   )
 }

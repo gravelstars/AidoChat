@@ -545,7 +545,7 @@ func (s *Service) DeleteMember(ctx context.Context, id string) error {
 }
 
 // Version 是应用版本，显示在设置页「关于」。
-const Version = "0.1.0"
+const Version = "0.1.1"
 
 // SaveProvider 新建或更新一个模型服务（TASK-008）。Key 只在非空时写入系统钥匙串。
 func (s *Service) SaveProvider(ctx context.Context, in SaveProviderInput) (ProviderConfig, error) {
@@ -665,24 +665,44 @@ func (s *Service) TestProvider(ctx context.Context, in SaveProviderInput) (int, 
 	if strings.TrimSpace(in.BaseURL) == "" {
 		return 0, errors.New("请填写服务地址")
 	}
+	model := strings.TrimSpace(in.TestModel)
+	if model == "" {
+		return 0, errors.New("请填写这个服务实际可用的测试模型名称")
+	}
 	key := strings.TrimSpace(in.Key)
 	if key == "" && in.ID != "" {
-		if k, err := s.credentials.Get(in.ID); err == nil {
-			key = k
+		// 读取与服务保存共用边界；凭证读取失败不应被伪装成远端鉴权失败。
+		var err error
+		key, err = func() (string, error) {
+			s.providersMu.Lock()
+			defer s.providersMu.Unlock()
+			p, err := s.db.Provider(ctx, in.ID)
+			if err != nil {
+				return "", friendly(err, "读取模型服务")
+			}
+			if p.KeyRef == "" {
+				return "", nil
+			}
+			stored, err := s.credentials.Get(in.ID)
+			if err != nil {
+				return "", fmt.Errorf("读取已保存的 API Key 失败：%w", err)
+			}
+			if stored == "" {
+				return "", secret.ErrNotFound
+			}
+			return stored, nil
+		}()
+		if err != nil {
+			return 0, err
 		}
 	}
 	if key == "" && in.Kind == "anthropic" {
 		return 0, errors.New("请填写 API Key")
 	}
-	model := strings.TrimSpace(in.TestModel)
-	if model == "" {
-		if in.Kind == "anthropic" {
-			model = "claude-haiku-4-5-20251001"
-		} else {
-			model = "gpt-4o-mini"
-		}
+	probe := domain.Provider{ID: "probe", Kind: in.Kind, BaseURL: strings.TrimSpace(in.BaseURL)}
+	if key != "" {
+		probe.KeyRef = secret.Entry("probe")
 	}
-	probe := domain.Provider{ID: "probe", Kind: in.Kind, BaseURL: strings.TrimSpace(in.BaseURL), KeyRef: secret.Entry("probe")}
 	client, err := providers.New(func(string) (string, error) { return key, nil })(ctx, probe)
 	if err != nil {
 		return 0, err

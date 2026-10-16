@@ -1,6 +1,6 @@
 version: '3'
 vars:
-  APP_NAME: ai-group-chat
+  APP_NAME: AidoChat
   BIN_DIR: '{{.ROOT_DIR}}/build/bin'
   GOOS: '{{.GOOS | default OS}}'
 includes:
