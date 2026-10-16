@@ -17,7 +17,7 @@ tasks:
     cmds:
       - task: build
       - wails3 generate webview2bootstrapper -dir "{{.BIN_DIR}}/webview2"
-      - makensis -DSRC="{{.BIN_DIR}}" -DWEBVIEW2="{{.BIN_DIR}}/webview2/MicrosoftEdgeWebview2Setup.exe" -DOUT="{{.BIN_DIR}}/{{.APP_NAME}}-windows-setup.exe" "{{.ROOT_DIR}}/build/windows/installer.nsi"
+      - powershell -NoProfile -File "{{.ROOT_DIR}}/scripts/package-windows.ps1" -BinDir "{{.BIN_DIR}}" -InstallerScript "{{.ROOT_DIR}}/build/windows/installer.nsi"
   package:
     cmds:
       - task: build

@@ -24,3 +24,5 @@
 - macOS 显式使用 HFS+，对 Resource busy 最多尝试三次；其他失败立即退出。用独立假的 hdiutil 检查瞬时失败第三次成功、非忙碌错误一次即以原退出码失败。参考已有打包工具的同类忙碌处理：https://github.com/create-dmg/create-dmg/blob/master/create-dmg；不把 CI 环境原因写作已确认的系统故障。
 - 已按所有者批准设置仓库变量 APP_ICON_APPROVED=true，下一轮 CI 生成现有母版图标并构建 AppImage。
 - 第二轮 Windows 全部 Go 竞态测试通过，随后保护检查因 Windows checkout 自动 CRLF 使清单路径带回车而失败。新增 .gitattributes 固定文本 LF；不改保护脚本、文件或指纹。
+
+- 第三轮 Windows 已通过全部自检、保护检查、图标生成与 exe/zip；NSIS 对混合斜杠的 WebView2 路径报 no files found，而固定 Wails CLI 已成功生成该文件。打包入口改用 PowerShell 把路径统一为 Windows 绝对路径，并在调用 makensis 前检查应用和引导程序确实存在，保留失败退出码。
