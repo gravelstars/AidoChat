@@ -57,10 +57,7 @@ func Open(path string) (*Store, error) {
 	if err = os.MkdirAll(filepath.Dir(path), 0700); err != nil {
 		return nil, fmt.Errorf("创建数据库目录：%w", err)
 	}
-	u := url.URL{Scheme: "file", Path: filepath.ToSlash(path)}
-	q := url.Values{"_pragma": {"busy_timeout(5000)", "foreign_keys(1)", "journal_mode(WAL)"}, "_txlock": {"immediate"}}
-	u.RawQuery = q.Encode()
-	db, err := sql.Open("sqlite", u.String())
+	db, err := sql.Open("sqlite", databaseURI(filepath.ToSlash(path)))
 	if err != nil {
 		return nil, fmt.Errorf("打开数据库：%w", err)
 	}
@@ -77,6 +74,17 @@ func Open(path string) (*Store, error) {
 		return nil, fmt.Errorf("初始化数据库：%w", err)
 	}
 	return s, nil
+}
+
+func databaseURI(path string) string {
+	// Windows 盘符必须属于 URI 路径，否则 file://C:/ 会被当作远程主机。
+	if !strings.HasPrefix(path, "/") {
+		path = "/" + path
+	}
+	u := url.URL{Scheme: "file", Path: path}
+	q := url.Values{"_pragma": {"busy_timeout(5000)", "foreign_keys(1)", "journal_mode(WAL)"}, "_txlock": {"immediate"}}
+	u.RawQuery = q.Encode()
+	return u.String()
 }
 
 func (s *Store) migrate(ctx context.Context) error {

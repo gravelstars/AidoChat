@@ -1,6 +1,6 @@
 # 项目收尾状态
 
-日期：2026-10-16。功能代码基线：158b4e1；后续收尾仅整理文档、过程文件和发布验证。
+日期：2026-10-16。功能代码基线：158b4e1；后续 TASK-016 修复首次原生 CI 发现的 Windows 文件 URI 与 macOS 磁盘映像忙碌问题。
 
 ## 结论
 
@@ -26,7 +26,7 @@
 | --- | --- |
 | Windows | 交叉编译及资源/引导安装器检查已做，原生 CI 和安装、WebView2、凭证、对话验收待补 |
 | Linux | GTK4/WebKitGTK 6.0 的 tar/deb/AppImage 配方就绪，原生 CI 和安装/启动待补；AppImage 不捆绑全部系统库 |
-| 图标 | 已有 SVG 母版，尚待所有者确认；不自动生成正式图标。CI 用 APP_ICON_APPROVED=true 显式启用，未启用时跳过 AppImage |
+| 图标 | 所有者已于 2026-10-16 批准现有 SVG 母版；仓库变量 APP_ICON_APPROVED=true 已启用，正在验证生成及打包 |
 | 中文输入法与窗口 | macOS 真正输入法候选确认、Windows/Linux 拖拽缩放/重启恢复等仍需人工验收 |
 | 正式分发 | macOS 尚无 Developer ID/公证，Windows 尚无发布签名；当前 macOS 包使用 ad-hoc 签名 |
 | 系统版本 | macOS 12 为构建目标，旧版本尚未真机验证；Linux 优先 Ubuntu 24.04 |
@@ -38,3 +38,7 @@
 历史任务、计划、截图和旧包迁入项目外部归档，逐文件校验；用户数据和凭证不动。本次报告与截图也在外部归档。当前目录保留源码、测试、构建配方、可复用 QA 工具、产品/架构/设计/ADR、当前任务与使用说明。依赖、dist 和构建缓存可按构建说明再生成。
 
 归档位置见 [ARCHIVE.md](ARCHIVE.md)，使用方法见 [USER_GUIDE.md](USER_GUIDE.md)。GitHub 首次上传使用干净源码快照，保留本机原历史分支；不上传过程归档、安装包、依赖、数据库或凭证。
+
+## GitHub 首次原生 CI
+
+干净源码已上传到 https://github.com/rickepicepic/group-chat-ai 。首次运行 38913777806：Ubuntu 自检及 tar/deb 构建通过；Windows 测试发现盘符 URI 问题；macOS 编译、签名和 zip 成功，但创建 dmg 返回 Resource busy。已修复并准备下一轮验证，最终结果以 TASK-016 交付记录及 Actions 为准。

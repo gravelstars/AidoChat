@@ -53,7 +53,7 @@ wails3 task linux:deb
 sudo apt install ./build/bin/ai-group-chat.deb
 ```
 
-AppImage 另需 appimagetool 与已生成的应用 PNG 图标：`wails3 task linux:appimage`。CI 固定 appimagetool 1.9.1 并校验 SHA-256。该配方没有捆绑全部 GTK/WebKit 系统库，不保证任意 Linux 发行版免依赖运行；优先使用 Ubuntu deb。正式图标母版仍待所有者确认，生成方法见 scripts/make-icons.sh。CI 只在仓库变量 APP_ICON_APPROVED=true 时运行该脚本；未生成图标时跳过 AppImage，仍构建 deb 和 tar.gz。
+AppImage 另需 appimagetool 与已生成的应用 PNG 图标：`wails3 task linux:appimage`。CI 固定 appimagetool 1.9.1 并校验 SHA-256。该配方没有捆绑全部 GTK/WebKit 系统库，不保证任意 Linux 发行版免依赖运行；优先使用 Ubuntu deb。现有图标母版已获所有者确认，生成方法见 scripts/make-icons.sh。CI 只在仓库变量 APP_ICON_APPROVED=true 时运行该脚本；未生成图标时跳过 AppImage，仍构建 deb 和 tar.gz。
 
 ## CI 与验收边界
 

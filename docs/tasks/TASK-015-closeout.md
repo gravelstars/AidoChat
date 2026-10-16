@@ -18,4 +18,4 @@
 ## 交付记录 2026-10-16 · Codex
 - 做了什么：69 个历史文件、6 个旧构建文件归档后校验迁出；保留源码、测试、QA 工具、保护资料。补齐使用手册、当前交接、构建说明、归档索引和收尾状态。新增 GitHub origin；CI 图标生成改为显式母版审批开关，未确认时仍构建 Linux deb/tar，跳过 AppImage。
 - 怎么验证的：go vet、完整 go test -race -count=1 通过；前端 9 文件 52 测试和生产构建通过；macOS universal package、codesign、hdiutil 校验通过；原生桥接 QA ok=true，宣纸/夜读截图与报告存外部归档 verification/closeout-macos。保护检查、文档链接、差异空白检查通过；全部归档和最新交付包 SHA-256 通过后清理依赖、dist、build/bin、临时归档缓存。
-- 未验证 / 遗留：Windows/Linux 原生安装、真实中文输入法、正式签名/公证与旧系统兼容性未验收。现有图标母版审批待回复。GitHub 发布及 CI 结果另记最终状态。
+- 未验证 / 遗留：Windows/Linux 原生安装、真实中文输入法、正式签名/公证与旧系统兼容性未验收。现有图标母版已在后续获批。GitHub 发布完成；首次 CI 结果及平台修复在 TASK-016 跟进。
