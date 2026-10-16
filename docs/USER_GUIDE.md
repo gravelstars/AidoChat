@@ -52,7 +52,7 @@ wails3 dev
 
 ### Windows 与 Linux
 
-Windows NSIS、Linux deb/AppImage 已通过原生 CI 构建，但尚无完整真机安装验收。安装包可在 [三平台 CI 的 Artifacts](https://github.com/rickepicepic/AidoChat/actions) 下载；当前属于本地测试交付。
+Windows NSIS、Linux deb/AppImage 已通过原生 CI 构建，但尚无完整真机安装验收。安装包可在 [三平台 CI 的 Artifacts](https://github.com/rickepicepic/AidoChat/actions/runs/38945065573) 下载；当前属于本地测试交付。
 
 - Windows 需要 WebView2；NSIS 配方已包含缺失时的在线引导，安装时可能需要网络。
 - Linux 需要 GTK4/WebKitGTK 6.0；AppImage 当前不能据此承诺在任意发行版免依赖运行。

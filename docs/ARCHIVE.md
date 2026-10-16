@@ -1,32 +1,36 @@
-# 归档索引
+# 归档与交付索引
 
-本机外部归档：`/Users/zoupengcheng/Desktop/group-chat-ai-archive/2026-10-16-closeout/`。
+AidoChat 0.1.1 本机交付：
 
-这是本地交付路径，不随源码仓库上传。移动电脑时请单独备份此目录。
+| 路径 | 内容 |
+| --- | --- |
+| `/Applications/AidoChat.app` | 已安装并启动验证的新版应用 |
+| `/Users/zoupengcheng/Desktop/AidoChat-release/0.1.1/` | AidoChat.dmg、SHA256SUMS、使用说明书 |
+| `/Users/zoupengcheng/Desktop/group-chat-ai-archive/2026-10-17-aidochat/` | TASK-017 过程记录、测试日志、原生截图、安装/数据核对与旧包删除记录 |
+| 该归档下 `private-user-data-before-upgrade/` | 升级前的私密用户数据备份，权限0700；不上传仓库、不包含系统钥匙串 |
+
+本地归档与安装包不随源码上传，移动电脑时需单独备份。GitHub 三平台包见 [Actions](https://github.com/rickepicepic/AidoChat/actions)，选择与所需源码版本一致的成功运行和 AidoChat-* Artifacts。
+
+历史归档：`/Users/zoupengcheng/Desktop/group-chat-ai-archive/2026-10-16-closeout/`。
 
 | 文件 | 内容 |
 | --- | --- |
-| project-history.tar.gz | 旧交接、旧 README、TASK-001–014、过程计划及 QA 证据，共 69 文件 |
-| closeout-records.tar.gz / closeout-records-manifest.json | TASK-015/016 最终交付和调查记录 |
-| history-manifest.json | 原始相对路径、大小、逐文件 SHA-256，代码基线 158b4e1 |
-| legacy-builds.tar.gz | 历史 build/bin 内容，仅供追溯，不作为最新安装包 |
-| legacy-builds-manifest.json | 旧包逐文件校验表 |
-| archive-index.json / SHA256SUMS | 外层归档文件大小和校验值 |
-| verification/closeout-macos/ | 本轮原生桥接报告、截图和日志 |
-| verification/platform-validation/ | 最终三平台 CI 与本地最新包验证记录 |
-| release/macos-before-platform-validation/ | 本轮平台修复前的已验证 macOS 包 |
-| release/macos/ | 收尾时重新构建的本地安装包及校验表（已构建并校验） |
+| project-history.tar.gz / history-manifest.json | TASK-001–014、旧交接、过程计划和 QA，69 文件，基线158b4e1 |
+| closeout-records.tar.gz / closeout-records-manifest.json | TASK-015/016 交付和调查记录 |
+| legacy-builds-manifest.json | 已删除旧包的历史元数据 |
+| archive-index.json / SHA256SUMS | 当前保留的归档载荷与校验值 |
+| verification/ | 历史原生桥接、截图与平台构建证据 |
 
-历史源码提交和本地分支仍保留在 .git，未压缩或重写。GitHub 初次发布使用清理后的源码快照，避免上传历史截图和旧构建。
+旧 `legacy-builds.tar.gz`、`release/macos/` 和 `release/macos-before-platform-validation/` 中的旧应用、zip、dmg 已在新版验证后按所有者要求删除。原始校验元数据和删除清单保留，旧文件不再作为交付包。
 
-## 校验和恢复
+## 校验与恢复
 
-在归档目录运行 `shasum -a 256 -c SHA256SUMS`。每个归档创建后均按清单读取所有成员并比较 SHA-256，再清理原文件。不要直接解压覆盖当前工作区；在空目录中解压后按相对路径查阅：
+在对应归档或交付目录运行 `shasum -a 256 -c SHA256SUMS`。过程归档还提供逐文件 manifest；归档已核对全部成员内容后再清理源文件。不要直接解压覆盖工作区，在空目录解压查阅：
 
 ```sh
-mkdir -p /tmp/ai-group-chat-history
-cd /tmp/ai-group-chat-history
+mkdir -p /tmp/aidochat-history
+cd /tmp/aidochat-history
 tar -xzf /Users/zoupengcheng/Desktop/group-chat-ai-archive/2026-10-16-closeout/project-history.tar.gz
 ```
 
-归档没有 API Key、用户数据库、依赖目录或 Git 凭证。真实聊天数据的备份方法见使用说明书。
+历史源码提交和本地分支保留在 .git，未重写。过程归档没有 API Key 或 Git 凭证。用户数据备份与过程证据分开存放，其恢复方法见 [使用说明书](USER_GUIDE.md)。

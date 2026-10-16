@@ -42,3 +42,5 @@ macOS 本次原生桥接 QA 返回 ok=true，包含真实 Go 服务/SQLite/轮�
 远程仓库 https://github.com/rickepicepic/AidoChat。品牌已更新，Go 模块、绑定、数据目录、钥匙串服务与 bundle ID 保留兼容值。成员表单内可新建/编辑服务，空成员建群可继续创建成员，均保留草稿。连接测试必须提供实际模型名，凭证读取失败直接反馈；免 Key 本地服务不读取系统凭证。参数变更清除测试结果，关闭对话框后忽略过期异步结果。
 
 本轮 Go vet/race 与 56 个前端测试通过，空库原生 Wails 配置链路和宣纸/夜读及最小窗口布局已验证。最终安装、CI 与归档证据见 CLOSEOUT.md / ARCHIVE.md。
+
+AidoChat 0.1.1 最终源码22aa9ca，CI38945065573三平台全部成功。本机已安装至 /Applications/AidoChat.app，数据完整性和记录数量核对通过；旧安装包已按所有者要求删除。后续任务编号 TASK-018。
