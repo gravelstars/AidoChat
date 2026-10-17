@@ -2,7 +2,7 @@
 
 ## TASK-023 上传与最新验证
 
-2026-10-17 已将本地 0.1.2、双语仓库展示、演示构建与第三方声明上传至 [gravelstars/AidoChat](https://github.com/gravelstars/AidoChat)。源码 `b307939e8b90c9ba0dff8cf69b4560e40da38650` 的 [CI 39029099506](https://github.com/gravelstars/AidoChat/actions/runs/39029099506) 中 macOS、Windows、Ubuntu 三个任务均成功，包含自检和安装包构建；这不等于三平台安装交互已真机通过。
+2026-10-17 已将本地 0.1.2、双语仓库展示、演示构建与第三方声明上传至 [gravelstars/AidoChat](https://github.com/gravelstars/AidoChat)。源码 `f7a4384`（隐私重写后哈希） 的 [CI 39029099506](https://github.com/gravelstars/AidoChat/actions/runs/39029099506) 中 macOS、Windows、Ubuntu 三个任务均成功，包含自检和安装包构建；这不等于三平台安装交互已真机通过。
 
 演示本地 `/AidoChat/` 子路径与线上地址均验证通过：92 个前端测试、Go vet/race、生产与 demo 构建及保护检查通过；线上 Playwright 验收 `ok=true`，外部请求和 4xx/5xx 均为空。仓库已改为 **public**，Pages 已启用，**Browser demo Pages** [39034066836](https://github.com/gravelstars/AidoChat/actions/runs/39034066836) 部署成功，地址为 [gravelstars.github.io/AidoChat](https://gravelstars.github.io/AidoChat/)。没有发布 Release。所有者已审阅并接受当前源码+浏览器演示分发范围；机器扫描的第三方发现与原文继续保留，不能当成对全部依赖兼容或未来二进制分发的法律结论，见 THIRD_PARTY_NOTICES.md 与 TASK-023。
 
@@ -23,7 +23,7 @@
 
 本轮验证：`go vet ./...`、全量 `go test -race ./...` 通过；前端 80 项测试、类型检查和生产构建通过；保护文件检查通过。原生 QA 覆盖附件全链路、重启回读、分享图 6 页（长文、代码、表格跨页与单元格续写、附件、已退群成员），均 `ok=true`。分享图保存目录由 QA 注入，未自动点击系统目录选择器。
 
-macOS 0.1.2 包已生成并在 `/Users/zoupengcheng/Desktop/AidoChat-release/0.1.2/`（已用 TASK-022 修复重新打包覆盖，源码提交 `128b599`）：`codesign --verify --deep --strict`、`hdiutil verify` 通过，二进制为 x86_64 + arm64。同目录另有 Windows amd64 `AidoChat.exe` 与 `AidoChat-windows.zip`（交叉编译，PE32+ x86-64，manifest 0.1.2.0）；未生成 NSIS 安装器，也未在 Windows 真机运行。是否替换 `/Applications/AidoChat.app` 由所有者决定；三平台 CI 本次未运行，Linux 包与 Windows/Linux 真机验收仍需补做。
+macOS 0.1.2 包已生成并在 `/Users/zoupengcheng/Desktop/AidoChat-release/0.1.2/`（已用 TASK-022 修复重新打包覆盖，源码提交 `47297a1`（隐私重写后哈希））：`codesign --verify --deep --strict`、`hdiutil verify` 通过，二进制为 x86_64 + arm64。同目录另有 Windows amd64 `AidoChat.exe` 与 `AidoChat-windows.zip`（交叉编译，PE32+ x86-64，manifest 0.1.2.0）；未生成 NSIS 安装器，也未在 Windows 真机运行。是否替换 `/Applications/AidoChat.app` 由所有者决定；三平台 CI 本次未运行，Linux 包与 Windows/Linux 真机验收仍需补做。
 
 ## 0.1.1 历史交付
 

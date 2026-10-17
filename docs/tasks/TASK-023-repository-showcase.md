@@ -34,7 +34,7 @@
 - 所有者手动操作文本：About 中英简介、7 个 Topics、Pages 开启步骤/最终地址、社交图上传位置、版权所有者和个人邮箱说明全部见 [DEMO.md](../DEMO.md)。没有设置个人邮箱，没有修改这些仓库设置。
 
 ## 上传与最终复核
-- 所有者最新明确授权上传；已正常快进推送到 `gravelstars/AidoChat` 的 main，没有强推。主体代码与展示初版提交 `b307939e8b90c9ba0dff8cf69b4560e40da38650`，此前本地 0.1.2 任务提交一并保留。使用已登录 GitHub 账号的公开 noreply 身份作本任务提交，没有设置或猜测个人邮箱。
+- 所有者最新明确授权上传；已正常快进推送到 `gravelstars/AidoChat` 的 main，没有强推。主体代码与展示初版提交 `f7a4384`（隐私重写后哈希），此前本地 0.1.2 任务提交一并保留。为隐匿旧提交邮箱，main 已重写身份并使用带租约强推；旧 SHA 可能仍能被直接访问一段时间。使用已登录 GitHub 账号的公开 noreply 身份作本任务提交，没有设置或猜测个人邮箱。
 - 三平台 CI [39029099506](https://github.com/gravelstars/AidoChat/actions/runs/39029099506) 的 macOS14、Windows2022、Ubuntu24.04 各任务均 success，包括自检与安装包构建。未发布 Release，Artifacts 不是公开下载文件，README 仍诚实写安装包即将发布。
 - 仓库 API 确认为 private；未登录 GitHub 浏览器返回 404，不能声称已在实际已登录 GitHub 页面完成所有主题测试。已用 GitHub 官方 Markdown API 渲染中英原文，并在本地布局近似预览中测试 1440/390px、日间/夜间共8种组合：全部图片正常、主题源切换正确、无溢出、三个入口在首屏；桌面内容高中文2448px/英文2469px（1000px视口约2.5屏）。证据 [readme-preview.json](../qa/task-023/readme-preview.json)，截图 `/private/tmp/aidochat-023-readme-preview-*.png`。
 - Pages 工作流 [39029099516](https://github.com/gravelstars/AidoChat/actions/runs/39029099516) 在 `configure-pages` 失败，明确 `Get Pages site failed / Not Found`，与未开启 Pages 一致。没有启用参数或修改设置绕过，尚未得到线上演示地址可用的证据。
