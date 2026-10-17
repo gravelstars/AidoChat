@@ -6,7 +6,7 @@
 
 演示本地 `/AidoChat/` 子路径与线上地址均验证通过：92 个前端测试、Go vet/race、生产与 demo 构建及保护检查通过；线上 Playwright 验收 `ok=true`，外部请求和 4xx/5xx 均为空。仓库已改为 **public**，Pages 已启用，**Browser demo Pages** [39034066836](https://github.com/gravelstars/AidoChat/actions/runs/39034066836) 部署成功，地址为 [gravelstars.github.io/AidoChat](https://gravelstars.github.io/AidoChat/)。没有发布 Release。所有者已审阅并接受当前源码+浏览器演示分发范围；机器扫描的第三方发现与原文继续保留，不能当成对全部依赖兼容或未来二进制分发的法律结论，见 THIRD_PARTY_NOTICES.md 与 TASK-023。
 
-所有者已决定：只公开源码与浏览器演示，不发布二进制安装包或 Release；公开版权署名为 `gravelstars`，NOTICE 已更新；About、Topics、社交预览和提交邮箱由所有者手动设置。中英 README 的试玩入口已换成线上地址。仓库 About 已设为「一个有温度的有趣的多AI群聊本地应用，开源，免费。」，Topics 为 `ai-chat`、`desktop-app`、`local-first`、`react`、`golang`、`group-chat`。社交预览图与个人提交邮箱仍待所有者设置。
+所有者已决定：只公开源码与浏览器演示，不发布二进制安装包或 Release；公开版权署名为 `gravelstars`，NOTICE 已更新；中英 README 的试玩入口已换成线上地址。仓库 About 已设为「一个有温度的有趣的多AI群聊本地应用，开源，免费。」，Homepage 为演示地址，Topics 为 `ai-chat`、`desktop-app`、`local-first`、`react`、`golang`、`group-chat`。社交预览图与个人提交邮箱仍待所有者设置。
 
 更新：2026-10-17，AidoChat 0.1.2。源码仓库：[gravelstars/AidoChat](https://github.com/gravelstars/AidoChat)。
 

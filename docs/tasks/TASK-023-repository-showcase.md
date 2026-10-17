@@ -30,14 +30,14 @@
 - 素材：一键脚本完整成功，日夜主图 2880×1800（1440×900、2 倍像素），所有 PNG 小于 500KiB，所有 SVG 字形为路径；GIF 3 秒、13 个不同帧、低于 3MB。完整尺寸见 [manifest.json](../assets/manifest.json)，动画名与外部请求审计见 [request-audit.json](../assets/request-audit.json)。宣纸/夜读截图仅来自虚构演示数据。
 - 许可：官方 Apache 文件原字节核对通过，三个实际 Noto/JetBrains 字体完整 OFL 保留；224 个 npm 包与 172 个 Go 模块机器导出、2060 条原文来源 hash 验证通过。许可导出器误收集 .go 原文容器的问题已修为 .go.txt，原字节保留，Go ./... 检查通过。
 - **所有者复核结论：接受当前源码+浏览器演示分发范围。** 已报告实际打包 Liberation GPLv2+字体例外、原生生成源的 LGPL/APSL/BSD 四条款等，见 [许可记录](../qa/task-023/licenses.md)；所有者已审阅并接受当前范围，但这不是法律意见，也不能判定全部依赖兼容或覆盖未来二进制分发。NOTICE 已填 `gravelstars`，LICENSE 官方附录占位不改。
-- 未验证：真实 Windows/Linux 系统、真实系统目录选择器、真实云模型不属于本轮浏览器验收；GitHub Pages 未开启、未发布 Release，没有把本地包写成公开下载。README 首个试玩入口暂指说明页，待所有者开通后换为直达地址。
-- 所有者手动操作文本：About 中英简介、7 个 Topics、Pages 开启步骤/最终地址、社交图上传位置、版权所有者和个人邮箱说明全部见 [DEMO.md](../DEMO.md)。没有设置个人邮箱，没有修改这些仓库设置。
+- 未验证：真实 Windows/Linux 系统、真实系统目录选择器、真实云模型不属于本轮浏览器验收；未发布 Release，没有把本地包写成公开下载。Pages 已开启并完成线上验收，README 试玩入口已换为直达地址。
+- 所有者操作：About 中英简介、6 个 Topics、Pages 地址、社交图上传位置、版权署名和个人邮箱说明见 [DEMO.md](../DEMO.md)。About/Topics/Homepage 已由所有者授权、执行者通过 GitHub API 设置；社交预览图和个人邮箱仍待所有者处理。
 
 ## 上传与最终复核
-- 所有者最新明确授权上传；已正常快进推送到 `gravelstars/AidoChat` 的 main，没有强推。主体代码与展示初版提交 `f7a4384`（隐私重写后哈希），此前本地 0.1.2 任务提交一并保留。为隐匿旧提交邮箱，main 已重写身份并使用带租约强推；旧 SHA 可能仍能被直接访问一段时间。使用已登录 GitHub 账号的公开 noreply 身份作本任务提交，没有设置或猜测个人邮箱。
+- 所有者最新明确授权上传；首次上传为快进推送。随后为隐匿旧提交邮箱重写了 main 身份，并使用带租约强推；主体代码与展示初版提交重写后为 `f7a4384`，此前本地 0.1.2 任务提交一并保留。旧 SHA 可能仍能被直接访问一段时间。Codex 的展示提交使用公开 noreply 身份；执行者后续提交使用所有者提供的公开署名。
 - 三平台 CI [39029099506](https://github.com/gravelstars/AidoChat/actions/runs/39029099506) 的 macOS14、Windows2022、Ubuntu24.04 各任务均 success，包括自检与安装包构建。未发布 Release，Artifacts 不是公开下载文件，README 仍诚实写安装包即将发布。
-- 仓库 API 确认为 private；未登录 GitHub 浏览器返回 404，不能声称已在实际已登录 GitHub 页面完成所有主题测试。已用 GitHub 官方 Markdown API 渲染中英原文，并在本地布局近似预览中测试 1440/390px、日间/夜间共8种组合：全部图片正常、主题源切换正确、无溢出、三个入口在首屏；桌面内容高中文2448px/英文2469px（1000px视口约2.5屏）。证据 [readme-preview.json](../qa/task-023/readme-preview.json)，截图 `/private/tmp/aidochat-023-readme-preview-*.png`。
-- Pages 工作流 [39029099516](https://github.com/gravelstars/AidoChat/actions/runs/39029099516) 在 `configure-pages` 失败，明确 `Get Pages site failed / Not Found`，与未开启 Pages 一致。没有启用参数或修改设置绕过，尚未得到线上演示地址可用的证据。
+- 上传当时仓库为 private；所有者随后已改为 public，并完成登录页面检查。上传前已用 GitHub 官方 Markdown API 渲染中英原文，并在本地布局近似预览中测试 1440/390px、日间/夜间共8种组合：全部图片正常、主题源切换正确、无溢出、三个入口在首屏；桌面内容高中文2448px/英文2469px（1000px视口约2.5屏）。证据 [readme-preview.json](../qa/task-023/readme-preview.json)，截图 `/private/tmp/aidochat-023-readme-preview-*.png`。
+- 首次 Pages 工作流 [39029099516](https://github.com/gravelstars/AidoChat/actions/runs/39029099516) 在未开启 Pages 时按预期失败；所有者开启后，手动触发的 [39034066836](https://github.com/gravelstars/AidoChat/actions/runs/39034066836) 与后续 push 部署均成功，线上地址已验证。
 - Git 原文保全：`.gitattributes` 对 LICENSE 与许可证原文禁用换行转换；原始工具输出/许可原文的空白不修剪。已逐条验证 Git index 的 2060条来源/851文件与原字节 SHA256/SHA1一致，代码仍受正常空白检查。
 
 ### 所有者待办 / 未完成的外部验收
