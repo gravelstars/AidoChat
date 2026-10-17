@@ -30,7 +30,7 @@
     "feature-conversation.png": {
       "width": 1600,
       "height": 516,
-      "bytes": 83884
+      "bytes": 82846
     },
     "feature-memory-comparison.png": {
       "width": 1890,
@@ -60,7 +60,7 @@
     "feature-reply-order.png": {
       "width": 1704,
       "height": 1652,
-      "bytes": 409746
+      "bytes": 409765
     },
     "main-day.png": {
       "width": 2880,
@@ -75,19 +75,19 @@
     "social-day.png": {
       "width": 1280,
       "height": 640,
-      "bytes": 9259
+      "bytes": 8274
     },
     "social-day.svg": {
-      "bytes": 37859,
+      "bytes": 8069,
       "outlined": true
     },
     "social-night.png": {
       "width": 1280,
       "height": 640,
-      "bytes": 10004
+      "bytes": 8989
     },
     "social-night.svg": {
-      "bytes": 37859,
+      "bytes": 8069,
       "outlined": true
     },
     "stamp-first.png": {

@@ -46,22 +46,65 @@ func outline(_ text: String, _ x: CGFloat, _ baseline: CGFloat, _ size: CGFloat,
     }
     return paths
 }
+let iconRaw = try String(contentsOfFile: root + "/build/icons/icon-master.svg", encoding: .utf8)
+let iconContent: String = {
+    guard let start = iconRaw.firstIndex(of: ">"), let end = iconRaw.range(of: "</svg>", options: .backwards) else { return iconRaw }
+    return String(iconRaw[iconRaw.index(after: start)..<end.lowerBound])
+}()
+
+func measure(_ text: String, _ size: CGFloat) -> CGFloat {
+    var cursor: CGFloat = 0
+    for scalar in text.utf16 {
+        var ch = scalar
+        var found: (CTFont, CGGlyph)?
+        for descriptor in descriptors {
+            let f = CTFontCreateWithFontDescriptor(descriptor, size, nil)
+            var glyph: CGGlyph = 0
+            if CTFontGetGlyphsForCharacters(f, &ch, &glyph, 1) && glyph != 0 { found = (f, glyph); break }
+        }
+        guard let (font, glyph) = found else { continue }
+        var g = glyph
+        var advance = CGSize.zero
+        CTFontGetAdvancesForGlyphs(font, .horizontal, &g, &advance, 1)
+        cursor += advance.width
+    }
+    return cursor
+}
+
 for theme in ["day", "night"] {
     let colors = payload[theme] as! [String: String]
     for social in [false, true] {
         let height = social ? 640 : 320
         let base: CGFloat = social ? 300 : 145
         let paper = colors["paper"]!, ink = colors["ink"]!, secondary = colors["ink-2"]!, red = colors["cinnabar"]!
-        var svg = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1280\" height=\"\(height)\" viewBox=\"0 0 1280 \(height)\" role=\"img\" aria-label=\"AidoChat — 把 AI 拉进群，把决定留在案头\"><rect width=\"1280\" height=\"\(height)\" fill=\"\(paper)\"/>"
-        // 唯一朱印代表用户自己；不把朱色用作品牌装饰。
-        let sy = base - 66
-        svg += "<rect x=\"96\" y=\"\(n(sy))\" width=\"76\" height=\"76\" rx=\"4\" fill=\"\(paper)\" stroke=\"\(red)\" stroke-width=\"2\"/>"
-        svg += outline("我", 106, sy + 61, 56, red)
-        svg += outline("AidoChat", 208, base, 68, ink)
-        svg += outline("把 AI 拉进群，把决定留在案头。", 210, base + 63, 28, secondary)
-        svg += "</svg>"
-        let name = social ? "social-\(theme).svg" : "banner-\(theme).svg"
-        try svg.write(toFile: output + "/" + name, atomically: true, encoding: .utf8)
+        if social {
+            // 社交卡只保留官方图标与应用名：图标在上，AidoChat 居中在下，不加标语和装饰。
+            let iconSize: CGFloat = 240
+            let iconX = (1280 - iconSize) / 2
+            let iconY: CGFloat = 125
+            let fontSize: CGFloat = 84
+            let label = "AidoChat"
+            let textX = (1280 - measure(label, fontSize)) / 2
+            let baseline = iconY + iconSize + 92
+            let iconScale = String(format: "%.6f", Double(iconSize / 1254))
+            var svg = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1280\" height=\"640\" viewBox=\"0 0 1280 640\" role=\"img\" aria-label=\"AidoChat\">"
+            svg += "<defs><clipPath id=\"app-icon\"><rect x=\"\(n(iconX))\" y=\"\(n(iconY))\" width=\"\(n(iconSize))\" height=\"\(n(iconSize))\" rx=\"38\"/></clipPath></defs>"
+            svg += "<rect width=\"1280\" height=\"640\" fill=\"\(paper)\"/>"
+            svg += "<g clip-path=\"url(#app-icon)\"><g transform=\"translate(\(n(iconX)) \(n(iconY))) scale(\(iconScale))\">\(iconContent)</g></g>"
+            svg += outline(label, textX, baseline, fontSize, ink)
+            svg += "</svg>"
+            try svg.write(toFile: output + "/social-\(theme).svg", atomically: true, encoding: .utf8)
+        } else {
+            var svg = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1280\" height=\"\(height)\" viewBox=\"0 0 1280 \(height)\" role=\"img\" aria-label=\"AidoChat — 把 AI 拉进群，把决定留在案头\"><rect width=\"1280\" height=\"\(height)\" fill=\"\(paper)\"/>"
+            // 唯一朱印代表用户自己；不把朱色用作品牌装饰。
+            let sy = base - 66
+            svg += "<rect x=\"96\" y=\"\(n(sy))\" width=\"76\" height=\"76\" rx=\"4\" fill=\"\(paper)\" stroke=\"\(red)\" stroke-width=\"2\"/>"
+            svg += outline("我", 106, sy + 61, 56, red)
+            svg += outline("AidoChat", 208, base, 68, ink)
+            svg += outline("把 AI 拉进群，把决定留在案头。", 210, base + 63, 28, secondary)
+            svg += "</svg>"
+            try svg.write(toFile: output + "/banner-\(theme).svg", atomically: true, encoding: .utf8)
+        }
     }
 }
 // README 仅保留这三个本地徽章；文字同样转为轮廓，避免网络与字体依赖。
