@@ -53,7 +53,8 @@ Choose your platform and download **0.1.2**:
 | --- | --- | --- |
 | macOS 12+ (Intel / Apple Silicon) | [AidoChat.dmg](https://github.com/gravelstars/AidoChat/releases/download/v0.1.2/AidoChat.dmg) | Drag AidoChat.app into Applications |
 | Windows 10 / 11 (x64) | [AidoChat-windows-setup.exe](https://github.com/gravelstars/AidoChat/releases/download/v0.1.2/AidoChat-windows-setup.exe) | Run the installer; WebView2 is required (the installer guides you) |
-| Linux (Ubuntu 24.04 / AppImage) | Being added | Use CI Artifacts for now, or build from [source](build/README.md) |
+| Ubuntu 24.04 (amd64) | [AidoChat.deb](https://github.com/gravelstars/AidoChat/releases/download/v0.1.2/AidoChat.deb) | `sudo apt install ./AidoChat.deb` |
+| Other Linux | [AidoChat.AppImage](https://github.com/gravelstars/AidoChat/releases/download/v0.1.2/AidoChat.AppImage) | `chmod +x` and run; requires GTK4 / WebKitGTK 6.0 |
 
 [All releases and checksums](https://github.com/gravelstars/AidoChat/releases) · Not sure which one? Windows: setup.exe, macOS: dmg, Ubuntu: deb.
 
@@ -123,7 +124,7 @@ See [build/README.md](build/README.md) and [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Status
 
-0.1.2 runs on the desktop, and macOS and Windows installers are published on [Releases](https://github.com/gravelstars/AidoChat/releases/latest); Linux packages are being added. The browser demo uses fictional data and preset replies. Mobile, accounts, cloud sync, web tools, scanned-PDF OCR, Word/Excel, and video attachments are not supported. Windows/Linux installation still needs broader real-machine testing.
+0.1.2 runs on the desktop, and macOS, Windows, and Linux installers are published on [Releases](https://github.com/gravelstars/AidoChat/releases/latest). The browser demo uses fictional data and preset replies. Mobile, accounts, cloud sync, web tools, scanned-PDF OCR, Word/Excel, and video attachments are not supported. Windows/Linux installation still needs broader real-machine testing.
 
 ## Contributing
 

@@ -53,7 +53,8 @@
 | --- | --- | --- |
 | macOS 12+（Intel / Apple Silicon） | [AidoChat.dmg](https://github.com/gravelstars/AidoChat/releases/download/v0.1.2/AidoChat.dmg) | 打开后把 AidoChat.app 拖入「应用程序」 |
 | Windows 10 / 11（x64） | [AidoChat-windows-setup.exe](https://github.com/gravelstars/AidoChat/releases/download/v0.1.2/AidoChat-windows-setup.exe) | 运行安装程序；需要 WebView2（安装器会引导） |
-| Linux（Ubuntu 24.04 / AppImage） | 正在补充 | 临时可从 CI Artifacts 获取，或按 [构建说明](build/README.md) 从源码构建 |
+| Ubuntu 24.04（amd64） | [AidoChat.deb](https://github.com/gravelstars/AidoChat/releases/download/v0.1.2/AidoChat.deb) | `sudo apt install ./AidoChat.deb` |
+| 其他 Linux | [AidoChat.AppImage](https://github.com/gravelstars/AidoChat/releases/download/v0.1.2/AidoChat.AppImage) | `chmod +x` 后运行；需 GTK4 / WebKitGTK 6.0 |
 
 [全部版本与校验值](https://github.com/gravelstars/AidoChat/releases) · 不确定选哪个：Windows 选 setup.exe，macOS 选 dmg，Ubuntu 选 deb。
 
@@ -123,7 +124,7 @@ npm run dev
 
 ## 项目状态
 
-0.1.2 桌面主体可运行，macOS 和 Windows 安装包已发布到 [Releases](https://github.com/gravelstars/AidoChat/releases/latest)，Linux 包正在补充。浏览器演示使用虚构数据和预设回复。手机端暂不支持；尚无账号、云同步、联网工具、扫描 PDF OCR、Word/Excel 或视频附件。Windows/Linux 安装交互仍需更广泛的真机验收。
+0.1.2 桌面主体可运行，macOS、Windows 和 Linux 安装包已发布到 [Releases](https://github.com/gravelstars/AidoChat/releases/latest)。浏览器演示使用虚构数据和预设回复。手机端暂不支持；尚无账号、云同步、联网工具、扫描 PDF OCR、Word/Excel 或视频附件。Windows/Linux 安装交互仍需更广泛的真机验收。
 
 ## 参与贡献
 
