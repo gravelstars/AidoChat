@@ -188,14 +188,21 @@ export function MemberEditor({ open, onClose, member, onSaved }: { open: boolean
         <div className={styles.row}>
           <Field label="模型服务" error={errors.provider} hint={providers.length ? undefined : '还没有模型服务。先填写服务地址，再为成员选择模型。'}>
             {(id) => (
-              <Select id={id} value={providerId} disabled={!providers.length} onChange={(e) => setProviderId(e.target.value)}>
-                <option value="">选择服务</option>
-                {providers.map((p) => (
-                  <option key={p.id} value={p.id}>
-                    {p.name}
-                  </option>
-                ))}
-              </Select>
+              <>
+                <Select id={id} value={providerId} disabled={!providers.length} onChange={(e) => setProviderId(e.target.value)}>
+                  <option value="">选择服务</option>
+                  {providers.map((p) => (
+                    <option key={p.id} value={p.id}>
+                      {p.name}
+                    </option>
+                  ))}
+                </Select>
+                {/* 服务操作跟在选择框下方，与右侧模型字段的说明文字同一条基线。 */}
+                <div className={styles.providerActions}>
+                  <Button variant="quiet" size="sm" onClick={() => { setEditingProvider(undefined); setProviderOpen(true) }}>新建模型服务</Button>
+                  {provider && <Button variant="quiet" size="sm" onClick={() => { setEditingProvider(provider); setProviderOpen(true) }}>编辑当前服务</Button>}
+                </div>
+              </>
             )}
           </Field>
           <Field label="模型" error={errors.model} hint="可自由填写模型名，不限于示例；请以服务商后台实际可用的模型名为准。">
@@ -203,10 +210,6 @@ export function MemberEditor({ open, onClose, member, onSaved }: { open: boolean
               <TextInput id={id} value={model} onChange={(e) => setModel(e.target.value)} placeholder="例如：deepseek-chat" />
             )}
           </Field>
-        </div>
-        <div className={styles.providerActions}>
-          <Button variant="quiet" size="sm" onClick={() => { setEditingProvider(undefined); setProviderOpen(true) }}>新建模型服务</Button>
-          {provider && <Button variant="quiet" size="sm" onClick={() => { setEditingProvider(provider); setProviderOpen(true) }}>编辑当前服务</Button>}
         </div>
         {provider && !provider.hasKey && (
           <p className={styles.noteRow}>

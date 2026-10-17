@@ -11,7 +11,7 @@
 
 .pageHead {
   display: flex;
-  align-items: baseline;
+  align-items: flex-start;
   justify-content: space-between;
   gap: var(--space-6);
   padding-bottom: var(--space-4);
@@ -19,6 +19,9 @@
 }
 
 .title {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 100%;
   margin: 0;
   font-family: var(--font-serif);
   font-size: var(--text-2xl);
@@ -30,6 +33,7 @@
 
 .date {
   flex: none;
+  margin-left: auto;
   font-family: var(--font-mono);
   font-size: var(--text-xs);
   color: var(--ink-3);

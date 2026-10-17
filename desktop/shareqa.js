@@ -27,7 +27,7 @@
     await until(() => document.querySelector('nav'), '界面就绪')
     await call('SetUserProfile', { displayName: '子鹏 · Sam Altman', seal: { text: '子鹏之印', style: 'zhuwen' } })
     const boot = await call('Bootstrap')
-    const group = boot.groups.find(g => g.title === '分享验收')
+    const group = boot.groups.find(g => g.title === '测试-01')
     if (!group) throw new Error('QA 群未创建')
     await until(() => {
       const entry = [...document.querySelectorAll('nav button')].find(b => b.textContent.includes(group.title))
@@ -57,7 +57,7 @@
     button('分享图片').click()
     await until(() => top()?.textContent.includes('预览'), '夜读分享对话框')
     await until(() => pages() >= 2, '夜读自动分页', 40000)
-    report.checks.nightGroupTitle = top().textContent.includes('分享验收')
+    report.checks.nightGroupTitle = top().textContent.includes('测试-01')
     await capture('ye-share-preview')
     await api.Events.Emit('bridge:qa-minimum')
     await until(() => window.innerWidth <= 962, '分享最小窗口')

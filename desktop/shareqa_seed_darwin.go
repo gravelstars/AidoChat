@@ -37,7 +37,7 @@ func seedShareQA(db *store.Store) error {
 	}); err != nil {
 		return err
 	}
-	g := domain.Group{Title: "分享验收", Topic: "分享图片原生验收：长文、代码、表格、附件", DefaultMode: domain.ModeSerial, MemberIDs: []string{"share-a", "share-b"}}
+	g := domain.Group{Title: "测试-01", Topic: "分享图片原生验收：长文、代码、表格、附件", DefaultMode: domain.ModeSerial, MemberIDs: []string{"share-a", "share-b"}}
 	if err := db.CreateGroup(ctx, &g); err != nil {
 		return err
 	}
