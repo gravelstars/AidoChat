@@ -2,6 +2,8 @@
 
 在线试玩入口准备就绪，**GitHub Pages 尚待仓库所有者手动开启**。开启并部署成功后的地址：[AidoChat 在线试玩](https://gravelstars.github.io/AidoChat/)。在此之前，请使用下面的本地预览，避免将未部署页面误认为故障。
 
+当前仓库可见性为 **private**，未登录访客无法查看首页。是否公开仓库、私有仓库是否具备 Pages 使用资格，由所有者确认；本任务不会更改可见性。首次推送后的 Pages 工作流在 `configure-pages` 报 `Get Pages site failed / Not Found`，原因是尚未启用 Pages，不是本地演示构建失败。
+
 ```sh
 cd frontend
 npm ci

@@ -1,30 +1,29 @@
 English · [简体中文](README.md)
 
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/assets/banner-night.svg"><img src="docs/assets/banner-day.svg" alt="AidoChat — Bring AI into one group. Put decisions on record." width="800"></picture></p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/assets/banner-night.svg"><img src="docs/assets/banner-day.svg" alt="AidoChat — Bring AI into one group. Put decisions on record." width="720"></picture></p>
 
 <p align="center">Mention members. Trace shared notes. Stamp your decisions.</p>
 <p align="center"><img alt="Version 0.1.2" src="docs/assets/badge-version.svg"> <img alt="Apache-2.0" src="docs/assets/badge-license.svg"> <img alt="Windows · macOS · Linux" src="docs/assets/badge-platforms.svg"></p>
 <p align="center"><a href="docs/DEMO.md">Try the demo (setup pending)</a> · <a href="#download">Download</a> · <a href="docs/USER_GUIDE.md">Docs</a></p>
 
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/assets/main-night.png"><img src="docs/assets/main-day.png" alt="Groups, messages, and shared notes with both confirmed decisions and AI proposals" width="800"></picture></p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/assets/main-night.png"><img src="docs/assets/main-day.png" alt="Groups, messages, and shared notes with both confirmed decisions and AI proposals" width="720"></picture></p>
 
 ### Give the discussion an order
 
-<img src="docs/assets/feature-conversation.png" alt="Mention two members, choose sequential replies, and see who is speaking or waiting" width="480">
+<img src="docs/assets/feature-conversation.png" alt="Mention two members, choose sequential replies, and see who is speaking or waiting" width="400">
 
-Each member has a role and a model. Mention one, several, or everyone; choose sequential or parallel replies, stop a turn, or retry a reply in place.
+Give each member a role and a model. Mention one or many; choose sequential or parallel replies, stop, or retry in place.
 
 ### Keep proposals distinct from decisions
 
-<img src="docs/assets/feature-memory-comparison.png" alt="Dashed AI proposals, solid user proposals, and red stamped confirmations" width="640">
+<p><img src="docs/assets/feature-memory-comparison.png" alt="Dashed AI proposals, solid user proposals, and red stamped confirmations" width="600"> <a href="docs/assets/stamp.gif"><img src="docs/assets/stamp.gif" alt="Actual confirmation: the stamp lands and ink spreads" width="180"></a> <a href="docs/assets/stamp-first.png">Static frame</a></p>
 
-Each group keeps its own notes, with sources linking back to messages. AI proposals, your proposals, and your confirmed decisions stay distinct; AI cannot confirm on your behalf.
+Each group keeps separate notes linked to source messages. AI proposals, your proposals, and confirmed decisions stay distinct; only you can confirm.
 
-<a href="docs/assets/stamp.gif"><img src="docs/assets/stamp.gif" alt="An actual confirmation click: the stamp lands and ink spreads, three seconds" width="230"></a> [Static first frame](docs/assets/stamp-first.png)
 
 ### Local records, services you choose
 
-<img src="docs/assets/feature-privacy.png" alt="Demo service settings explicitly explain that no API Key is accepted and no real model is contacted" width="380">
+<img src="docs/assets/feature-privacy.png" alt="Demo service settings explicitly explain that no API Key is accepted and no real model is contacted" width="280">
 
 The desktop app stores data locally and Keys in your system credential store. Use OpenAI-compatible services, Anthropic, or Ollama; attach images and TXT/Markdown/text PDFs, and export a selected message range as paginated PNGs.
 
@@ -44,7 +43,7 @@ Linux: installers coming soon.<br>
 
 ### Pick your paper and personal seal
 
-<img src="docs/assets/feature-papers.png" alt="Six papers: Xuan, Su, Ma, Qing, Ye, and Wujin" width="800">
+<img src="docs/assets/feature-papers.png" alt="Six papers: Xuan, Su, Ma, Qing, Ye, and Wujin" width="720">
 
 Choose among six papers, reading sizes and density, a full display name, a separate short seal, and image avatars. Member avatars can vary by group.
 
@@ -53,6 +52,6 @@ Choose among six papers, reading sizes and density, a full display name, a separ
 
 ### Status and next steps
 
-The 0.1.2 desktop app runs locally; these screenshots use fictional browser-demo data and preset replies. Mobile is not supported; cloud sync, web tools, and scanned-PDF OCR are unavailable, and Windows/Linux installation still needs testing on real machines. Cross-platform validation comes next; see [current status](docs/CLOSEOUT.md).
+0.1.2 runs locally; screenshots use fictional demo data and preset replies. Mobile, cloud sync, web tools, and scanned-PDF OCR are unavailable. Windows/Linux installation needs real-machine testing; see [current status](docs/CLOSEOUT.md).
 
 [Contribute](CONTRIBUTING.md) · [Apache-2.0](LICENSE) (third-party content retains its own terms; [items requiring review](THIRD_PARTY_NOTICES.md))

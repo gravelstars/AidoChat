@@ -1,5 +1,11 @@
 # 项目收尾状态
 
+## TASK-023 上传与最新验证
+
+2026-10-17 已将本地 0.1.2、双语仓库展示、演示构建与第三方声明上传至 [gravelstars/AidoChat](https://github.com/gravelstars/AidoChat)。源码 `b307939e8b90c9ba0dff8cf69b4560e40da38650` 的 [CI 39029099506](https://github.com/gravelstars/AidoChat/actions/runs/39029099506) 中 macOS、Windows、Ubuntu 三个任务均成功，包含自检和安装包构建；这不等于三平台安装交互已真机通过。
+
+演示本地 `/AidoChat/` 子路径验证通过，92 个前端测试、Go vet/race、生产与 demo 构建及保护检查通过。仓库仍为私有，Pages 尚未启用，其工作流在配置步骤按预期报未找到站点；没有修改仓库设置、开启 Pages 或发布 Release。第三方许可兼容性仍有已报告的待确认项，不能把声明生成成功当成分发许可审查通过，见 THIRD_PARTY_NOTICES.md 与 TASK-023。
+
 更新：2026-10-17，AidoChat 0.1.2。源码仓库：[rickepicepic/AidoChat](https://github.com/rickepicepic/AidoChat)。
 
 ## AidoChat 0.1.2
