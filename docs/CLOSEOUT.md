@@ -11,10 +11,11 @@
 - 聊天附件：图片、TXT、Markdown、文本型 PDF 的本地导入、预览、事务绑定、重启回读和视觉能力预检；文档以带来源的文字进入上下文，记忆整理不发送原图。
 - 分享图片：起止消息、真实 DOM 分页、1080 宽逐页 PNG、原生目录保存，支持当前纸/宣纸与群名/时间/署名开关。
 - WKWebView 下补齐 PDF.js 所需的 `Map#getOrInsertComputed` 与 `ReadableStream` 异步迭代，PDF 可离线解析。
+- 分享图群名在 WKWebView 中保持横向排版；成员编辑的模型服务操作与模型说明对齐，不再挤压图片输入。
 
 本轮验证：`go vet ./...`、全量 `go test -race ./...` 通过；前端 80 项测试、类型检查和生产构建通过；保护文件检查通过。原生 QA 覆盖附件全链路、重启回读、分享图 6 页（长文、代码、表格跨页与单元格续写、附件、已退群成员），均 `ok=true`。分享图保存目录由 QA 注入，未自动点击系统目录选择器。
 
-macOS 0.1.2 包已生成并在 `/Users/zoupengcheng/Desktop/AidoChat-release/0.1.2/`：`codesign --verify --deep --strict`、`hdiutil verify` 通过，二进制为 x86_64 + arm64。是否替换 `/Applications/AidoChat.app` 由所有者决定；三平台 CI 本次未运行，Windows/Linux 安装包与真机验收仍需补做。
+macOS 0.1.2 包已生成并在 `/Users/zoupengcheng/Desktop/AidoChat-release/0.1.2/`（已用 TASK-022 修复重新打包覆盖，源码提交 `128b599`）：`codesign --verify --deep --strict`、`hdiutil verify` 通过，二进制为 x86_64 + arm64。是否替换 `/Applications/AidoChat.app` 由所有者决定；三平台 CI 本次未运行，Windows/Linux 安装包与真机验收仍需补做。
 
 ## 0.1.1 历史交付
 
