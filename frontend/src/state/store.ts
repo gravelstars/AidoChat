@@ -19,6 +19,7 @@ import type {
   SaveProviderInput,
   UpdateGroupInput,
   UserSeal,
+  UserProfile,
 } from '../backend'
 
 export type View = 'chat' | 'members' | 'settings'
@@ -43,6 +44,8 @@ interface ChatStore {
   appearance: Appearance
   /** 实际生效的是不是夜间纸（mode=system 时取决于系统） */
   night: boolean
+  profileSaving: boolean
+  userDisplayName: string
   userSeal: UserSeal
   view: View
   members: Record<string, Member>
@@ -78,6 +81,7 @@ interface ChatStore {
   jumpTo(seq: number): void
   setAppearance(patch: Partial<Appearance>): void
   toggleNight(): void
+  setUserProfile(profile: UserProfile): Promise<void>
   setUserSeal(seal: UserSeal): void
   setGroupAvatar(groupId: string, memberId: string, avatar: Avatar | null): Promise<void>
   setMemberAvatar(memberId: string, avatar: Avatar): Promise<void>
@@ -221,6 +225,8 @@ export const useChat = create<ChatStore>((set, get) => ({
   platform: 'mac',
   appearance: DEFAULT_APPEARANCE,
   night: false,
+  profileSaving: false,
+  userDisplayName: '你',
   userSeal: DEFAULT_USER_SEAL,
   view: 'chat',
   members: {},
@@ -248,6 +254,7 @@ export const useChat = create<ChatStore>((set, get) => ({
         platform: b.platform,
         appearance: b.appearance,
         night,
+        userDisplayName: b.userDisplayName || '你',
         userSeal: b.userSeal,
         providers: b.providers,
         memory: b.memory ?? { providerId: '', model: '' },
@@ -347,13 +354,23 @@ export const useChat = create<ChatStore>((set, get) => ({
     get().setAppearance({ mode: get().night ? 'day' : 'night' })
   },
 
+  async setUserProfile(profile) {
+    if (get().profileSaving) throw new Error('个人资料正在保存，请稍后再保存。')
+    set({ profileSaving: true })
+    try {
+      await backend.setUserProfile(profile)
+      set({ userDisplayName: profile.displayName.trim(), userSeal: profile.seal })
+    } finally { set({ profileSaving: false }) }
+  },
+
   setUserSeal(userSeal) {
+    if (get().profileSaving) { reportError(new Error('个人资料正在保存，请稍后再保存。')); return }
     const previous = get().userSeal
-    set({ userSeal })
+    set({ userSeal, profileSaving: true })
     void backend.setUserSeal(userSeal).catch((err) => {
       if (get().userSeal === userSeal) set({ userSeal: previous })
       reportError(err)
-    })
+    }).finally(() => set({ profileSaving: false }))
   },
 
   async setGroupAvatar(groupId, memberId, avatar) {

@@ -28,6 +28,7 @@ export const MessageItem = memo(function MessageItem({ message: m, members, grou
   const hover = useChat((s) => s.hoverSeq === m.seq)
   const jumpTo = useChat((s) => s.jumpTo)
   const userSeal = useChat((s) => s.userSeal)
+  const userDisplayName = useChat((s) => s.userDisplayName)
 
   if (m.authorKind === 'system') {
     return (
@@ -39,7 +40,7 @@ export const MessageItem = memo(function MessageItem({ message: m, members, grou
 
   const isUser = m.authorKind === 'user'
   const member = members[m.authorId]
-  const name = isUser ? '你' : member?.name ?? '已退群成员'
+  const name = isUser ? userDisplayName : member?.name ?? '已退群成员'
   const live = m.status === 'pending' || m.status === 'streaming'
 
   return (
@@ -52,14 +53,14 @@ export const MessageItem = memo(function MessageItem({ message: m, members, grou
     >
       <div className={styles.gutter}>
         {isUser ? (
-          <UserSeal seal={userSeal} size="md" title="你" />
+          <UserSeal seal={userSeal} size="md" title={userDisplayName} />
         ) : (
           <Seal avatar={avatarOf(member, group)} size="md" muted={m.status === 'pending'} active={m.status === 'streaming' && !m.content} title={name} />
         )}
       </div>
       <div className={styles.main}>
         <header className={styles.head}>
-          <span className={styles.name}>{name}</span>
+          <span className={styles.name} title={name}>{name}</span>
           {!isUser && replyToSeq ? (
             <button className={styles.replyTo} onClick={() => jumpTo(replyToSeq)} title="跳到被回复的消息">
               <Icon name="reply" size={12} />

@@ -146,6 +146,10 @@ func (s *Service) Bootstrap(ctx context.Context) (Bootstrap, error) {
 	if err != nil {
 		return b, friendly(err, "读取私印")
 	}
+	b.UserDisplayName, err = readSetting(ctx, s.db, "ui.user_display_name", "你")
+	if err != nil {
+		return b, friendly(err, "读取显示名")
+	}
 	members, err := s.db.ListMembers(ctx)
 	if err != nil {
 		return b, friendly(err, "读取成员")
@@ -394,10 +398,8 @@ func (s *Service) SetAppearance(ctx context.Context, a Appearance) error {
 	return friendly(s.db.SetSetting(ctx, "ui.appearance", string(raw)), "保存外观")
 }
 func (s *Service) SetUserSeal(ctx context.Context, seal UserSeal) error {
-	seal.Text = strings.TrimSpace(seal.Text)
-	n := utf8.RuneCountInString(seal.Text)
-	if n < 1 || n > 4 || (seal.Style != "baiwen" && seal.Style != "zhuwen") {
-		return errors.New("私印需要 1–4 个字，并选择白文或朱文")
+	if err := validateUserSeal(seal); err != nil {
+		return err
 	}
 	raw, err := json.Marshal(seal)
 	if err != nil {

@@ -17,6 +17,10 @@ type UserSeal struct {
 	Text  string `json:"text"`
 	Style string `json:"style"`
 }
+type UserProfile struct {
+	DisplayName string   `json:"displayName"`
+	Seal        UserSeal `json:"seal"`
+}
 type Avatar struct {
 	Glyph string `json:"glyph"`
 	Color string `json:"color"`
@@ -113,12 +117,13 @@ type MemoryItem struct {
 	UpdatedAt    string              `json:"updatedAt"`
 }
 type Bootstrap struct {
-	Platform   string           `json:"platform"`
-	Appearance Appearance       `json:"appearance"`
-	UserSeal   UserSeal         `json:"userSeal"`
-	Members    []Member         `json:"members"`
-	Providers  []ProviderConfig `json:"providers"`
-	Groups     []GroupSummary   `json:"groups"`
+	UserDisplayName string           `json:"userDisplayName"`
+	Platform        string           `json:"platform"`
+	Appearance      Appearance       `json:"appearance"`
+	UserSeal        UserSeal         `json:"userSeal"`
+	Members         []Member         `json:"members"`
+	Providers       []ProviderConfig `json:"providers"`
+	Groups          []GroupSummary   `json:"groups"`
 	// RetiredMemberIDs 是只作为历史发言者存在的已删除成员（仍用于渲染历史，但不在名册/邀请列表里）。
 	RetiredMemberIDs []string     `json:"retiredMemberIds"`
 	Memory           MemoryConfig `json:"memory"`

@@ -18,12 +18,13 @@ describe('Wails 真实桥接', () => {
   await b.createGroup(input);await b.openGroup('g');await b.send('g','@青砚');await b.stop('g');await b.retry('m')
   await b.memory.confirm('i');await b.memory.reject('i');await b.memory.reopen('i');await b.memory.edit('i','改写');await b.memory.summarize('g')
   await b.setUserSeal({text:'我',style:'baiwen'})
+  await b.setUserProfile({displayName:'Sam Altman',seal:{text:'SA',style:'baiwen'}})
   const avatar={glyph:'青',color:'shiqing' as const};await b.setGroupAvatar('g','a',null);await b.setMemberAvatar('a',avatar)
   expect(api.Call.ByName.mock.calls).toEqual([
    ['ai-group-chat/app.Service.CreateGroup',input],['ai-group-chat/app.Service.OpenGroup','g'],['ai-group-chat/app.Service.Send','g','@青砚',null],
    ['ai-group-chat/app.Service.Stop','g'],['ai-group-chat/app.Service.Retry','m'],['ai-group-chat/app.Service.ConfirmMemory','i'],['ai-group-chat/app.Service.RejectMemory','i'],
    ['ai-group-chat/app.Service.ReopenMemory','i'],['ai-group-chat/app.Service.EditMemory','i','改写'],['ai-group-chat/app.Service.Summarize','g'],
-   ['ai-group-chat/app.Service.SetUserSeal',{text:'我',style:'baiwen'}],['ai-group-chat/app.Service.SetGroupAvatar','g','a',null],['ai-group-chat/app.Service.SetMemberAvatar','a',avatar],
+   ['ai-group-chat/app.Service.SetUserSeal',{text:'我',style:'baiwen'}],['ai-group-chat/app.Service.SetUserProfile',{displayName:'Sam Altman',seal:{text:'SA',style:'baiwen'}}],['ai-group-chat/app.Service.SetGroupAvatar','g','a',null],['ai-group-chat/app.Service.SetMemberAvatar','a',avatar],
   ])
  })
  it('Bootstrap 等监听就绪，读取 Go 数据，释放订阅互不影响', async () => {

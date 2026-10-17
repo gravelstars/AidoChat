@@ -19,6 +19,7 @@ export function Rail() {
   const open = useChat((s) => s.open)
   const setView = useChat((s) => s.setView)
   const night = useChat((s) => s.night)
+  const displayName = useChat((s) => s.userDisplayName)
   const toggleNight = useChat((s) => s.toggleNight)
   const archiveGroup = useChat((s) => s.archiveGroup)
   const deleteGroup = useChat((s) => s.deleteGroup)
@@ -40,7 +41,7 @@ export function Rail() {
     const isActive = view === 'chat' && g.id === activeId
     const busy = detail[g.id]?.busy
     const last = g.lastMessage
-    const who = last ? (last.authorKind === 'user' ? '你' : last.authorKind === 'system' ? '' : members[last.authorId]?.name) : ''
+    const who = last ? (last.authorKind === 'user' ? displayName : last.authorKind === 'system' ? '' : members[last.authorId]?.name) : ''
     const confirming = confirmDelete === g.id
     return (
       <li key={g.id} className={styles.item}>

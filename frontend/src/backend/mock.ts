@@ -1,3 +1,4 @@
+import { validateUserProfile } from '../lib/userProfile'
 import type {
   Appearance,
   Avatar,
@@ -250,7 +251,8 @@ export function createMockBackend(): Backend {
       return {
         platform: forced ?? platform,
         appearance: { ...DEFAULT_APPEARANCE, ...readJSON<Appearance>('agc.appearance') },
-        userSeal: { ...DEFAULT_USER_SEAL, ...readJSON<UserSeal>('agc.seal') },
+        userDisplayName: readJSON<{displayName:string}>('agc.profile')?.displayName || '你',
+        userSeal: { ...DEFAULT_USER_SEAL, ...readJSON<UserSeal>('agc.seal'), ...readJSON<{seal:UserSeal}>('agc.profile')?.seal },
         members,
         providers: structuredClone(providers),
         groups: Object.values(db).map(summary).sort((a, b) => b.updatedAt.localeCompare(a.updatedAt)),
@@ -413,8 +415,17 @@ export function createMockBackend(): Backend {
       localStorage.setItem('agc.appearance', JSON.stringify(a))
     },
 
+    async setUserProfile(profile) {
+      const errors = validateUserProfile(profile)
+      if (errors.displayName || errors.seal) throw new Error(errors.displayName || errors.seal)
+      localStorage.setItem('agc.profile', JSON.stringify({...profile, displayName:profile.displayName.trim()}))
+    },
+
     async setUserSeal(seal) {
-      localStorage.setItem('agc.seal', JSON.stringify(seal))
+      const errors = validateUserProfile({displayName:'你',seal})
+      if(errors.seal) throw new Error(errors.seal)
+      const profile=readJSON<{displayName:string}>('agc.profile')
+      localStorage.setItem('agc.profile', JSON.stringify({displayName:profile?.displayName || '你',seal}))
     },
 
     async uploadAvatar(file) {

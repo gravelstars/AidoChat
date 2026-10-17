@@ -329,12 +329,17 @@
 
 .sampleMsg {
   display: grid;
-  grid-template-columns: 32px 1fr;
+  grid-template-columns: 32px minmax(0, 1fr);
   gap: var(--space-3);
   padding: var(--msg-pad) 0;
 }
 
+.sampleMsg > * { min-width: 0; }
+
 .sampleName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-family: var(--font-serif);
   font-size: var(--text-md);
   font-weight: var(--weight-semibold);
@@ -501,3 +506,6 @@
 .providerFields .actionsRow > input {
   min-width: 0;
 }
+
+.profileActions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); margin-top: var(--space-4); }
+.profileError { color: var(--error); font-size: var(--text-sm); margin-top: var(--space-3); }

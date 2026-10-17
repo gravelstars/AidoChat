@@ -1,11 +1,12 @@
-import { useEffect, useState, type ReactNode } from 'react'
-import type { Appearance, DarkPaper, LightPaper, PaperId, ProviderConfig, UserSeal as UserSealData } from '../../backend'
+import { useEffect, useRef, useState, type ReactNode } from 'react'
+import type { Appearance, DarkPaper, LightPaper, PaperId, ProviderConfig, UserSeal as UserSealData, UserProfile } from '../../backend'
 import { backend, DEFAULT_USER_SEAL } from '../../backend'
 import { Button } from '../../components/Button'
 import { Field, Select, TextInput } from '../../components/Field'
 import { Seal, UserSeal } from '../../components/Seal'
 import { Segmented } from '../../components/Segmented'
-import { isCustomSeal, sealChars } from '../../lib/avatar'
+import { isCustomSeal } from '../../lib/avatar'
+import { ProfileDraft, suggestSeal, validateUserProfile } from '../../lib/userProfile'
 import { useChat } from '../../state/store'
 import { ProviderDialog } from './ProviderDialog'
 import styles from './SettingsView.module.css'
@@ -141,68 +142,71 @@ function PaperSwatch({ id }: { id: PaperId }) {
 
 // ---- 私印 ----
 
-function SealSection() {
+export function SealSection() {
   const seal = useChat((s) => s.userSeal)
-  const setSeal = useChat((s) => s.setUserSeal)
-  const [text, setText] = useState(seal.text)
-
-  useEffect(() => setText(seal.text), [seal.text])
-
-  const chars = sealChars(text)
-  const draft: UserSealData = { text: chars.join('') || DEFAULT_USER_SEAL.text, style: seal.style }
-  const commit = (next: UserSealData) => setSeal(next)
-
+  const displayName = useChat((s) => s.userDisplayName)
+  const saveProfile = useChat((s) => s.setUserProfile)
+  const pending = useChat((s) => s.profileSaving)
+  const model = useRef(new ProfileDraft({ displayName, seal }))
+  const [profile, setProfile] = useState(model.current.value)
+  const name = profile.displayName
+  const { text, style } = profile.seal
+  const [saving, setSaving] = useState(false)
+  const [error, setError] = useState('')
+  const [saved, setSaved] = useState(false)
+  const [composing, setComposing] = useState(false)
+  const mounted = useRef(true)
+  useEffect(() => { mounted.current = true; return () => { mounted.current = false } }, [])
+  useEffect(() => {
+    model.current.sync({displayName, seal})
+    setProfile(model.current.value)
+  }, [displayName, seal])
+  const errors = validateUserProfile(profile)
+  const draft = errors.seal ? seal : profile.seal
+  const suggestion = suggestSeal(name)
+  const edit = (next: UserProfile) => {
+    model.current.edit(next); setProfile(model.current.value)
+    setError(''); setSaved(false)
+  }
+  const save = async () => {
+    if (saving || pending || composing || errors.displayName || errors.seal) return
+    setSaving(true); setError(''); setSaved(false)
+    try {
+      await saveProfile(profile)
+      if (!mounted.current) return
+      model.current.accept({...profile, displayName:profile.displayName.trim()})
+      setProfile(model.current.value); setSaved(true)
+    } catch (e) {
+      if (mounted.current) setError(e instanceof Error ? e.message : String(e))
+    } finally { if (mounted.current) setSaving(false) }
+  }
   return (
-    <Section title="私印" note="刻一枚自己的印。它是你在群里的头像，也是你确认纪要时盖下的印。">
+    <Section title="个人资料与私印" note="显示名用于聊天署名；短印文用于头像和确认纪要。两者独立保存，长姓名不会挤进印面。">
       <div className={styles.sealLayout}>
-        <div className={styles.sealStage}>
-          <UserSeal seal={draft} px={112} />
-        </div>
+        <div className={styles.sealStage}><UserSeal seal={draft} px={112} title={name.trim() || '你'} /></div>
         <div className={styles.sealForm}>
-          <Field label="印文" hint="1 到 4 个字，姓、名、字号都可以。从右往左、从上往下读。">
-            {(id) => (
-              <TextInput
-                id={id}
-                value={text}
-                className={styles.sealInput}
-                onChange={(e) => {
-                  setText(e.target.value)
-                  const c = sealChars(e.target.value)
-                  if (c.length) commit({ ...seal, text: c.join('') })
-                }}
-                onBlur={() => !chars.length && setText(seal.text)}
-                placeholder="我"
-              />
-            )}
+          <Field label="显示名" hint="1–40 个字符，支持中英文和词间空格。历史发言跟随当前显示名。" error={errors.displayName}>
+            {(id) => <TextInput id={id} value={name} disabled={saving} onChange={(e) => { edit({...profile, displayName:e.target.value}) }} onCompositionStart={() => setComposing(true)} onCompositionEnd={() => setComposing(false)} />}
           </Field>
+          <Field label="印文" hint="1–4 个非空白字符。英文建议使用姓名首字母，例如 Sam Altman → SA。" error={errors.seal}>
+            {(id) => <TextInput id={id} value={text} className={styles.sealInput} disabled={saving} onChange={(e) => { edit({...profile, seal:{...profile.seal,text:e.target.value}}) }} onCompositionStart={() => setComposing(true)} onCompositionEnd={() => setComposing(false)} placeholder="我" />}
+          </Field>
+          <Button variant="quiet" size="sm" disabled={saving || !suggestion} onClick={() => { edit({...profile, seal:{...profile.seal,text:suggestion}}) }}>使用建议印文{suggestion ? `「${suggestion}」` : ''}</Button>
           <Field label="印式">
-            {() => (
-              <Segmented
-                label="印式"
-                value={seal.style}
-                onChange={(style: UserSealData['style']) => commit({ ...seal, style })}
-                options={[
-                  { value: 'baiwen', label: '白文', hint: '朱底纸色字，厚重' },
-                  { value: 'zhuwen', label: '朱文', hint: '纸底朱色字，清秀' },
-                ]}
-              />
-            )}
+            {() => <Segmented label="印式" value={style} onChange={(next: UserSealData['style']) => { if (!saving) { edit({...profile, seal:{...profile.seal,style:next}}) } }} options={[{value:'baiwen',label:'白文',hint:'朱底纸色字，厚重'},{value:'zhuwen',label:'朱文',hint:'纸底朱色字，清秀'}]} />}
           </Field>
           <div className={styles.sealUses}>
-            <span className={styles.use}>
-              <UserSeal seal={draft} size="md" />
-              <span>群里的头像</span>
-            </span>
-            <span className={styles.use}>
-              <span className={styles.useStamp}>{isCustomSeal(draft) ? <UserSeal seal={draft} px={32} /> : <span className={styles.useDing}>定</span>}</span>
-              <span>确认纪要时{isCustomSeal(draft) ? '盖这枚印' : '盖「定」，刻了私印后改盖私印'}</span>
-            </span>
+            <span className={styles.use}><UserSeal seal={draft} px={32} title={name.trim() || '你'} /><span>聊天头像 · 32px</span></span>
+            <span className={styles.use}><UserSeal seal={draft} px={64} title={name.trim() || '你'} /><span>预览 · 64px</span></span>
+            <span className={styles.use}><span className={styles.useStamp}>{isCustomSeal(draft) ? <UserSeal seal={draft} px={32} /> : <span className={styles.useDing}>定</span>}</span><span>确认纪要时的印</span></span>
           </div>
-          {isCustomSeal(seal) && (
-            <Button variant="quiet" size="sm" icon="retry" onClick={() => commit(DEFAULT_USER_SEAL)}>
-              恢复默认
-            </Button>
-          )}
+          {errors.seal && <p className={styles.sectionNote}>印文无效，预览暂保留已保存的私印。</p>}
+          {error && <p role="alert" className={styles.profileError}>{error}</p>}
+          {saved && <p role="status" className={styles.sectionNote}>个人资料已保存。</p>}
+          <div className={styles.profileActions}>
+            <Button disabled={saving || pending || composing || Boolean(errors.displayName || errors.seal)} onClick={() => void save()}>{saving ? '正在保存…' : '保存个人资料'}</Button>
+            <Button variant="quiet" size="sm" disabled={saving} onClick={() => { edit({...profile, seal:{...DEFAULT_USER_SEAL}}) }}>恢复默认印文</Button>
+          </div>
         </div>
       </div>
     </Section>
@@ -212,6 +216,7 @@ function SealSection() {
 // ---- 阅读 ----
 
 function ReadingSection() {
+  const displayName = useChat((s) => s.userDisplayName)
   const appearance = useChat((s) => s.appearance)
   const setAppearance = useChat((s) => s.setAppearance)
   const seal = useChat((s) => s.userSeal)
@@ -248,9 +253,9 @@ function ReadingSection() {
       </div>
       <div className={styles.sample}>
         <div className={styles.sampleMsg}>
-          <UserSeal seal={seal} size="md" />
+          <UserSeal seal={seal} size="md" title={displayName} />
           <div>
-            <div className={styles.sampleName}>你</div>
+            <div className={styles.sampleName} title={displayName}>{displayName}</div>
             <p className={styles.sampleText}>
               <span className={styles.sampleAt}>@墨白</span> 正文行宽多少合适？
             </p>

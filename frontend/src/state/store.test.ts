@@ -1,6 +1,6 @@
 import { beforeAll, beforeEach, describe, expect, it, vi } from 'vitest'
 const fake = vi.hoisted(() => ({
- subscribe:vi.fn(),bootstrap:vi.fn(),retry:vi.fn(),setAppearance:vi.fn(),setUserSeal:vi.fn(),
+ subscribe:vi.fn(),bootstrap:vi.fn(),retry:vi.fn(),setAppearance:vi.fn(),setUserSeal:vi.fn(),setUserProfile:vi.fn(),
  memory:{confirm:vi.fn(),reject:vi.fn(),reopen:vi.fn(),edit:vi.fn()},openGroup:vi.fn(),stop:vi.fn(),
 }))
 vi.mock('../backend',()=>({backend:fake,DEFAULT_APPEARANCE:{mode:'day',paper:'xuan',nightPaper:'ye',fontSize:'m',density:'comfortable'},DEFAULT_USER_SEAL:{text:'我',style:'baiwen'}}))
@@ -60,4 +60,54 @@ it('首次打开群收到的同一段增量在快照合并和下一帧之间只�
  await opening
  for(const fn of frames)fn(performance.now())
  expect(useChat.getState().detail.g.messages[0].content).toBe('只出现一次')
+})
+
+it('个人资料失败不暴露未保存姓名和印文，成功后一起更新',async()=>{
+ useChat.setState({userDisplayName:'旧名字',userSeal:{text:'旧',style:'zhuwen'}})
+ const profile={displayName:' Sam Altman ',seal:{text:'SA',style:'baiwen' as const}}
+ fake.setUserProfile.mockRejectedValueOnce(new Error('磁盘已满'))
+ await expect(useChat.getState().setUserProfile(profile)).rejects.toThrow('磁盘已满')
+ expect(useChat.getState().userDisplayName).toBe('旧名字')
+ expect(useChat.getState().userSeal.text).toBe('旧')
+ fake.setUserProfile.mockResolvedValueOnce(undefined)
+ await useChat.getState().setUserProfile(profile)
+ expect(useChat.getState().userDisplayName).toBe('Sam Altman')
+ expect(useChat.getState().userSeal).toEqual(profile.seal)
+})
+it('跨页面资料保存串行，旧保存完成不覆盖新实例编辑的草稿',async()=>{
+ const {ProfileDraft}=await import('../lib/userProfile')
+ useChat.setState({userDisplayName:'旧名字',userSeal:{text:'旧',style:'baiwen'}})
+ let finish:()=>void=()=>{}
+ fake.setUserProfile.mockImplementationOnce(()=>new Promise<void>(resolve=>{finish=resolve}))
+ const pending=useChat.getState().setUserProfile({displayName:'请求一',seal:{text:'一',style:'baiwen'}})
+ expect(useChat.getState().profileSaving).toBe(true)
+ const remounted=new ProfileDraft({displayName:useChat.getState().userDisplayName,seal:useChat.getState().userSeal})
+ remounted.edit({displayName:'重新进入后的新草稿',seal:{text:'二',style:'zhuwen'}})
+ await expect(useChat.getState().setUserProfile(remounted.value)).rejects.toThrow('正在保存')
+ expect(fake.setUserProfile).toHaveBeenCalledTimes(1)
+ finish();await pending
+ remounted.sync({displayName:useChat.getState().userDisplayName,seal:useChat.getState().userSeal})
+ expect(remounted.value.displayName).toBe('重新进入后的新草稿')
+ expect(remounted.value.seal.text).toBe('二')
+ expect(useChat.getState().profileSaving).toBe(false)
+ fake.setUserProfile.mockRejectedValueOnce(new Error('磁盘失败'))
+ await expect(useChat.getState().setUserProfile(remounted.value)).rejects.toThrow('磁盘失败')
+ remounted.sync({displayName:useChat.getState().userDisplayName,seal:useChat.getState().userSeal})
+ expect(remounted.value.displayName).toBe('重新进入后的新草稿')
+ expect(useChat.getState().profileSaving).toBe(false)
+})
+it('旧私印API与个人资料API共用保存互斥，避免相互覆盖',async()=>{
+ let finish:()=>void=()=>{}
+ fake.setUserSeal.mockImplementationOnce(()=>new Promise<void>(resolve=>{finish=resolve}))
+ useChat.getState().setUserSeal({text:'旧',style:'baiwen'})
+ expect(useChat.getState().profileSaving).toBe(true)
+ await expect(useChat.getState().setUserProfile({displayName:'新名字',seal:{text:'新',style:'zhuwen'}})).rejects.toThrow('正在保存')
+ expect(fake.setUserProfile).not.toHaveBeenCalled()
+ finish();await vi.waitFor(()=>expect(useChat.getState().profileSaving).toBe(false))
+ fake.setUserProfile.mockImplementationOnce(()=>new Promise<void>(resolve=>{finish=resolve}))
+ const saving=useChat.getState().setUserProfile({displayName:'新名字',seal:{text:'新',style:'zhuwen'}})
+ useChat.getState().setUserSeal({text:'不能覆盖',style:'baiwen'})
+ expect(fake.setUserSeal).toHaveBeenCalledTimes(1)
+ finish();await saving
+ expect(useChat.getState().userSeal.text).toBe('新')
 })

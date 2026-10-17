@@ -119,6 +119,62 @@
     document.querySelector('[aria-label="切换昼夜"]').click()
     await until(() => document.documentElement.dataset.paper === 'xuan', '宣纸')
     await capture('xuan-memory-aligned')
+    // 资料与短印以显式保存为边界；这里仅操作独立验收库。
+    const profileName = () => field('显示名', document)
+    const sealText = () => field('印文', document)
+    profileName().scrollIntoView({ block: 'center' })
+    await fill(profileName(), 'Sam Altman')
+    assert(sealText().value === '我', '输入姓名自动覆盖了旧印文')
+    const suggestion = [...document.querySelectorAll('button')].find(b => b.textContent.includes('使用建议印文「SA」'))
+    assert(suggestion, '缺少英文首字母建议')
+    suggestion.click(); await until(() => sealText().value === 'SA', '显式应用短印')
+    await fill(sealText(), 'ABCDE')
+    assert(button('保存个人资料').disabled && sealText().value === 'ABCDE', '超长印文静默截断或仍可保存')
+    await fill(sealText(), 'SA')
+    profileName().dispatchEvent(new CompositionEvent('compositionstart', { bubbles: true }))
+    await sleep(70)
+    assert(button('保存个人资料').disabled, '组字时仍可保存')
+    profileName().dispatchEvent(new CompositionEvent('compositionend', { bubbles: true }))
+    await sleep(70)
+    button('保存个人资料').click()
+    await until(async () => (await call('Bootstrap')).userDisplayName === 'Sam Altman', '资料原子保存')
+    assert((await call('Bootstrap')).userSeal.text === 'SA', '短印未保存')
+    report.checks.explicitProfileAndSeal = true
+    for (const paper of ['xuan', 'su', 'ma', 'qing', 'ye', 'wujin']) {
+      const night = ['ye','wujin'].includes(paper)
+      const modeRoot = document.querySelector('[role="radiogroup"][aria-label="昼夜"]')
+      button(night ? '夜间' : '白昼', modeRoot).click()
+      const swatch = document.querySelector('button[role="radio"] [data-paper="' + paper + '"]')
+      swatch.closest('button').click()
+      await until(() => document.documentElement.dataset.paper === paper, '资料纸张 ' + paper)
+      profileName().scrollIntoView({ block: 'center' })
+      assert(document.documentElement.scrollWidth <= window.innerWidth + 1, '资料设置横向溢出 ' + paper)
+      await capture(paper + '-profile-minimum')
+    }
+    await fill(profileName(), 'W'.repeat(40))
+    button('保存个人资料').click()
+    await until(async () => (await call('Bootstrap')).userDisplayName === 'W'.repeat(40), '长显示名保存')
+    button('大', document.querySelector('[role="radiogroup"][aria-label="正文字号"]')).click()
+    button('紧凑', document.querySelector('[role="radiogroup"][aria-label="排版密度"]')).click()
+    const readingName = [...document.querySelectorAll('section')].find(x => x.querySelector('h2')?.textContent === '阅读')
+    readingName.scrollIntoView({ block: 'center' })
+    assert(readingName.scrollWidth <= readingName.clientWidth + 1, '长姓名撑宽阅读卡片')
+    await capture('wujin-long-name-reading')
+    await fill(profileName(), 'Jose\u0301 Wang')
+    await fill(sealText(), 'JW')
+    button('保存个人资料').click()
+    await until(async () => (await call('Bootstrap')).userDisplayName === 'Jose\u0301 Wang', '组合Unicode姓名')
+    document.querySelector('nav [aria-label="群聊列表"]')
+    ;[...document.querySelectorAll('nav button')].find(b => b.textContent.includes('首次使用验收')).click()
+    await until(() => document.querySelector('textarea[aria-label="消息"]'), '返回群验收显示名')
+    await fill(document.querySelector('textarea[aria-label="消息"]'), '资料验收：保留组合字符姓名')
+    button('发送').click()
+    await until(() => document.querySelector('article [title="Jose\u0301 Wang"]'), '用户消息显示完整姓名')
+    await capture('wujin-profile-chat')
+    report.checks.profilePapers = 6
+    report.checks.compositionEventGuard = true
+    report.checks.combiningUnicode = true
+    report.checks.longNameReadingWidth = true
     report.checks.minimumWidth = window.innerWidth
     report.ok = true
   } catch (e) { report.ok = false; report.errors.push(String(e) + '\n' + String(e?.stack || '')) }

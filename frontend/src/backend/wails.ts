@@ -162,6 +162,7 @@ export function createWailsBackend(load: () => Promise<ShellRuntime> = loadRunti
       cache(a)
       await syncPaper(await load(), a)
     },
+    setUserProfile: (profile) => call('SetUserProfile', profile),
     setUserSeal: (seal) => call('SetUserSeal', seal),
     async uploadAvatar(file) {
       const bytes = new Uint8Array(await file.arrayBuffer())

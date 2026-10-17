@@ -131,6 +131,7 @@ function Row({ item, members, group, onComplete }: { item: MemoryItem; members: 
   const setHover = useChat((s) => s.setHoverSeq)
   const jumpTo = useChat((s) => s.jumpTo)
   const userSeal = useChat((s) => s.userSeal)
+  const displayName = useChat((s) => s.userDisplayName)
   const [editing, setEditing] = useState(false)
   const [draft, setDraft] = useState(item.content)
   const [revealed, setRevealed] = useState(false)
@@ -194,7 +195,7 @@ function Row({ item, members, group, onComplete }: { item: MemoryItem; members: 
         </div>
         <div className={styles.meta}>
           <span className={styles.who}>
-            {proposer ? <Seal avatar={avatarOf(proposer, group)} size="xs" /> : <UserSeal seal={userSeal} size="xs" />}
+            {proposer ? <Seal avatar={avatarOf(proposer, group)} size="xs" /> : <UserSeal seal={userSeal} size="xs" title={displayName} />}
             {tone === 'ai' ? `${proposer?.name ?? '成员'} 建议` : tone === 'user' ? '你提出 · 待盖章' : `${proposer?.name ?? '你'}提出`}
           </span>
           {sources.map((seq) => (

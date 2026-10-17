@@ -26,6 +26,11 @@ export interface Appearance {
 }
 
 /** 用户的私印：既是用户头像，也是确认纪要时盖下的印。1–4 个字 */
+export interface UserProfile {
+  displayName: string
+  seal: UserSeal
+}
+
 export interface UserSeal {
   text: string
   style: 'baiwen' | 'zhuwen' // 白文（朱底纸色字）/ 朱文（纸底朱色字）
@@ -133,6 +138,7 @@ export interface MemoryItem {
 export interface Bootstrap {
   platform: Platform
   appearance: Appearance
+  userDisplayName: string
   userSeal: UserSeal
   members: Member[]
   providers: ProviderConfig[]
@@ -237,6 +243,7 @@ export interface Backend {
     summarize(groupId: string): Promise<void>
   }
   setAppearance(a: Appearance): Promise<void>
+  setUserProfile(profile: UserProfile): Promise<void>
   setUserSeal(seal: UserSeal): Promise<void>
   /** 保存一张头像图片（原样保存，动图保留动画），返回可用于 Avatar.image 的地址 */
   uploadAvatar(file: File): Promise<string>
