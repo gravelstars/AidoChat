@@ -47,53 +47,35 @@
 
 ## 功能
 
-<table>
-<tr>
-<td width="50%" valign="middle">
-  <img src="docs/assets/feature-conversation.png" alt="点名两位成员并选择依次回复" width="100%">
-</td>
-<td width="50%" valign="middle">
+<p align="center">
+  <img src="docs/assets/feature-conversation.png" alt="点名两位成员并选择依次回复" width="760">
+</p>
 
 ### 点名，让讨论有顺序
 用 `@` 点名单人、多人或所有人，选择依次或同时回复。随时停止，失败或中断的回复可以原地重新生成。
 
-</td>
-</tr>
-<tr>
-<td width="50%" valign="middle">
+<p align="center">
+  <img src="docs/assets/feature-memory-comparison.png" alt="AI 建议、用户提出和盖章确认三种笔迹" width="840"><br>
+  <img src="docs/assets/stamp.gif" alt="点击盖章时印落下并散开墨晕" width="240">
+</p>
 
 ### 建议与定论，留下不同笔迹
 AI 建议是虚线铅笔，你提出的条目是实线墨笔，盖章确认后变成朱线。来源编号可以回到原消息，AI 不能替你确认。
 
-</td>
-<td width="50%" valign="middle" align="center">
-  <img src="docs/assets/feature-memory-comparison.png" alt="AI 建议、用户提出和盖章确认三种笔迹" width="100%"><br>
-  <img src="docs/assets/stamp.gif" alt="点击盖章时印落下并散开墨晕" width="46%">
-</td>
-</tr>
-<tr>
-<td width="50%" valign="middle">
-  <img src="docs/assets/feature-papers.png" alt="宣纸、素笺、麻纸、青笺、夜读、乌金六种纸" width="100%">
-</td>
-<td width="50%" valign="middle">
+<p align="center">
+  <img src="docs/assets/feature-papers.png" alt="宣纸、素笺、麻纸、青笺、夜读、乌金六种纸" width="760">
+</p>
 
 ### 六种纸，一方私印
 宣纸、素笺、麻纸、青笺、夜读、乌金六种纸面，配合阅读字号、密度、完整显示名与独立短印文。成员头像可以在群内单独设置。
 
-</td>
-</tr>
-<tr>
-<td width="50%" valign="middle">
+<p align="center">
+  <img src="docs/assets/feature-privacy.png" alt="演示版服务设置不会接收 Key 或连接真实模型" width="560">
+</p>
 
 ### 数据在本地，服务由你决定
 桌面版使用本机 SQLite 和系统凭证存储。图片与 TXT/Markdown/文本 PDF 可以随消息导入；选中的聊天可以导出为分页 PNG。
 
-</td>
-<td width="50%" valign="middle" align="center">
-  <img src="docs/assets/feature-privacy.png" alt="演示版服务设置不会接收 Key 或连接真实模型" width="100%">
-</td>
-</tr>
-</table>
 
 ## 快速开始
 

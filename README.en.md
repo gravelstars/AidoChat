@@ -47,53 +47,35 @@ English · [简体中文](README.md)
 
 ## Features
 
-<table>
-<tr>
-<td width="50%" valign="middle">
-  <img src="docs/assets/feature-conversation.png" alt="Mention two members and choose sequential replies" width="100%">
-</td>
-<td width="50%" valign="middle">
+<p align="center">
+  <img src="docs/assets/feature-conversation.png" alt="Mention two members and choose sequential replies" width="760">
+</p>
 
 ### Give the discussion an order
 Mention one member, several, or everyone; choose sequential or parallel replies. Stop at any time, and retry a failed or interrupted reply in place.
 
-</td>
-</tr>
-<tr>
-<td width="50%" valign="middle">
+<p align="center">
+  <img src="docs/assets/feature-memory-comparison.png" alt="Dashed AI proposals, solid user proposals, and stamped decisions" width="840"><br>
+  <img src="docs/assets/stamp.gif" alt="Clicking to stamp: the seal lands and ink spreads" width="240">
+</p>
 
 ### Proposals and decisions look different
 AI proposals use a dashed pencil line, your proposals use a solid ink line, and stamped decisions turn cinnabar. Source links jump back to the original message; AI cannot confirm on your behalf.
 
-</td>
-<td width="50%" valign="middle" align="center">
-  <img src="docs/assets/feature-memory-comparison.png" alt="Dashed AI proposals, solid user proposals, and stamped decisions" width="100%"><br>
-  <img src="docs/assets/stamp.gif" alt="Clicking to stamp: the seal lands and ink spreads" width="46%">
-</td>
-</tr>
-<tr>
-<td width="50%" valign="middle">
-  <img src="docs/assets/feature-papers.png" alt="Six papers: Xuan, Su, Ma, Qing, Ye, and Wujin" width="100%">
-</td>
-<td width="50%" valign="middle">
+<p align="center">
+  <img src="docs/assets/feature-papers.png" alt="Six papers: Xuan, Su, Ma, Qing, Ye, and Wujin" width="760">
+</p>
 
 ### Six papers, one personal seal
 Choose among six paper themes, reading sizes and density, a full display name, and a separate short seal. Member avatars can differ per group.
 
-</td>
-</tr>
-<tr>
-<td width="50%" valign="middle">
+<p align="center">
+  <img src="docs/assets/feature-privacy.png" alt="Demo service settings never accept a Key or contact a real model" width="560">
+</p>
 
 ### Local records, services you choose
 The desktop app uses local SQLite and the system credential store. Attach images and TXT/Markdown/text PDFs, and export a selected message range as paginated PNGs.
 
-</td>
-<td width="50%" valign="middle" align="center">
-  <img src="docs/assets/feature-privacy.png" alt="Demo service settings never accept a Key or contact a real model" width="100%">
-</td>
-</tr>
-</table>
 
 ## Quick start
 
