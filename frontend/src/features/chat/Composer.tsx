@@ -1,3 +1,4 @@
+import { isDemo } from '../../demo/storage'
 import { forwardRef, useCallback, useEffect, useImperativeHandle, useMemo, useRef, useState, type KeyboardEvent } from 'react'
 import { backend, type Attachment, type Member, type ReplyMode } from '../../backend'
 import { Button } from '../../components/Button'
@@ -273,7 +274,7 @@ export const Composer = forwardRef<ComposerHandle, Props>(function Composer({ st
           <TargetStrip group={group} targets={targets} members={members} mode={effectiveMode} hasText={!!text.trim()} busy={busy} />
         )}
 
-        {!!attachments.length && <p className={styles.attachmentStatus}>最多 4 份；图片 ≤10 MiB，文档 ≤20 MiB。仅点名 AI 时发送给模型。</p>}
+        {!!attachments.length && <p className={styles.attachmentStatus}>{isDemo ? "最多 4 份；演示版每份附件 ≤512 KiB，总存储空间有限。附件只保存在当前浏览器，不会发送给模型。" : "最多 4 份；图片 ≤10 MiB，文档 ≤20 MiB。仅点名 AI 时发送给模型。"}</p>}
         {!!attachments.length && <div className={styles.attachments}><AttachmentList attachments={attachments} onRemove={(id)=>void removeAttachment(id)} disabled={sending} /></div>}
         {importing && <p className={styles.attachmentStatus} role="status">正在本地读取附件</p>}
         {attachmentError && <p className={styles.attachmentError} role="alert">{attachmentError}</p>}

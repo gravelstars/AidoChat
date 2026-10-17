@@ -1,0 +1,502 @@
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/AlekSi/pointer@v1.2.0/LICENSE
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/al.essio.dev/pkg/shellescape@v1.6.0/LICENSE
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/atomicgo.dev/keyboard@v0.2.9/LICENSE
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/dario.cat/mergo@v1.0.2/LICENSE
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/atomicgo.dev/cursor@v0.2.0/LICENSE
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/git.sr.ht/~jackmordaunt/go-toast/v2@v2.0.3/LICENSE
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/dario.cat/mergo@v1.0.2/testdata/license.json
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/atomicgo.dev/schedule@v0.1.0/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/dario.cat/mergo@v1.0.2/testdata/license.json": 3.388402ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/BurntSushi/toml@v1.6.0/COPYING
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/atomicgo.dev/cursor@v0.2.0/LICENSE": 4.523707ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/BurntSushi/toml@v1.6.0/cmd/toml-test-decoder/COPYING
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/AlekSi/pointer@v1.2.0/LICENSE": 4.926614ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/BurntSushi/toml@v1.6.0/cmd/toml-test-encoder/COPYING
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/atomicgo.dev/keyboard@v0.2.9/LICENSE": 5.002827ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/BurntSushi/toml@v1.6.0/cmd/tomlv/COPYING
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/git.sr.ht/~jackmordaunt/go-toast/v2@v2.0.3/LICENSE": 5.061211ms
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/al.essio.dev/pkg/shellescape@v1.6.0/LICENSE": 5.172237ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/Ladicle/tabwriter@v1.0.0/LICENSE
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/Masterminds/goutils@v1.1.1/LICENSE.txt
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/atomicgo.dev/schedule@v0.1.0/LICENSE": 4.62655ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/Masterminds/semver/v3@v3.4.0/LICENSE.txt
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/dario.cat/mergo@v1.0.2/LICENSE": 6.192389ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/Masterminds/sprig/v3@v3.3.0/LICENSE.txt
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/BurntSushi/toml@v1.6.0/cmd/toml-test-decoder/COPYING": 3.536638ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/Microsoft/go-winio@v0.6.2/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/BurntSushi/toml@v1.6.0/cmd/toml-test-encoder/COPYING": 3.598348ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/ProtonMail/go-crypto@v1.3.0/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/Masterminds/semver/v3@v3.4.0/LICENSE.txt": 3.643063ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/ProtonMail/go-crypto@v1.3.0/PATENTS
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/Ladicle/tabwriter@v1.0.0/LICENSE": 4.026174ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/adrg/xdg@v0.5.3/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/BurntSushi/toml@v1.6.0/COPYING": 5.731503ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/alecthomas/chroma/v2@v2.23.1/COPYING
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/BurntSushi/toml@v1.6.0/cmd/tomlv/COPYING": 5.915603ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/atotto/clipboard@v0.1.4/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/Masterminds/sprig/v3@v3.3.0/LICENSE.txt": 4.95385ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/atterpac/refresh@v1.1.4/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/Microsoft/go-winio@v0.6.2/LICENSE": 4.583784ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/aymanbagabas/go-osc52/v2@v2.0.1/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/alecthomas/chroma/v2@v2.23.1/COPYING": 3.687111ms
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/ProtonMail/go-crypto@v1.3.0/LICENSE": 4.593325ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/aymerick/douceur@v0.2.0/LICENSE
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/blakesmith/ar@v0.0.0-20190502131153-809d4375e1fb/COPYING
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/ProtonMail/go-crypto@v1.3.0/PATENTS": 5.036691ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/catppuccin/go@v0.3.0/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/adrg/xdg@v0.5.3/LICENSE": 4.944505ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/cavaliergopher/cpio@v1.0.1/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/atterpac/refresh@v1.1.4/LICENSE": 4.614718ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/chainguard-dev/git-urls@v1.0.2/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/aymerick/douceur@v0.2.0/LICENSE": 3.813328ms
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/blakesmith/ar@v0.0.0-20190502131153-809d4375e1fb/COPYING": 3.793008ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/charmbracelet/bubbles@v0.21.1-0.20250623103423-23b8fd6302d7/LICENSE
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/charmbracelet/bubbletea@v1.3.10/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/atotto/clipboard@v0.1.4/LICENSE": 6.503098ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/charmbracelet/colorprofile@v0.4.1/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/aymanbagabas/go-osc52/v2@v2.0.1/LICENSE": 4.87581ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/charmbracelet/glamour@v0.10.0/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/cavaliergopher/cpio@v1.0.1/LICENSE": 3.971229ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/charmbracelet/huh@v0.8.0/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/catppuccin/go@v0.3.0/LICENSE": 4.209817ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/charmbracelet/lipgloss@v1.1.1-0.20250404203927-76690c660834/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/Masterminds/goutils@v1.1.1/LICENSE.txt": 13.848303ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/charmbracelet/x/ansi@v0.11.4/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/chainguard-dev/git-urls@v1.0.2/LICENSE": 5.112512ms
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/charmbracelet/bubbletea@v1.3.10/LICENSE": 4.067059ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/charmbracelet/x/cellbuf@v0.0.14/LICENSE
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/charmbracelet/x/exp/slice@v0.0.0-20260122224438-b01af16209d9/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/charmbracelet/bubbles@v0.21.1-0.20250623103423-23b8fd6302d7/LICENSE": 4.530969ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/charmbracelet/x/exp/strings@v0.0.0-20260122224438-b01af16209d9/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/charmbracelet/huh@v0.8.0/LICENSE": 4.127852ms
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/charmbracelet/glamour@v0.10.0/LICENSE": 4.559916ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/charmbracelet/x/term@v0.2.2/LICENSE
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/clipperhouse/displaywidth@v0.7.0/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/charmbracelet/colorprofile@v0.4.1/LICENSE": 5.184979ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/clipperhouse/stringish@v0.1.1/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/charmbracelet/lipgloss@v1.1.1-0.20250404203927-76690c660834/LICENSE": 4.605335ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/clipperhouse/stringish@v0.1.1/utf8/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/charmbracelet/x/ansi@v0.11.4/LICENSE": 4.442867ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/clipperhouse/uax29/v2@v2.4.0/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/charmbracelet/x/exp/slice@v0.0.0-20260122224438-b01af16209d9/LICENSE": 4.397252ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/cloudflare/circl@v1.6.3/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/charmbracelet/x/exp/strings@v0.0.0-20260122224438-b01af16209d9/LICENSE": 4.227638ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/cloudflare/circl@v1.6.3/ecc/p384/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/charmbracelet/x/cellbuf@v0.0.14/LICENSE": 5.218936ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/coder/websocket@v1.8.14/LICENSE.txt
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/charmbracelet/x/term@v0.2.2/LICENSE": 4.022913ms
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/clipperhouse/displaywidth@v0.7.0/LICENSE": 4.062243ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/containerd/console@v1.0.5/LICENSE
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/cyphar/filepath-securejoin@v0.6.1/COPYING.md
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/clipperhouse/stringish@v0.1.1/LICENSE": 4.538449ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/cyphar/filepath-securejoin@v0.6.1/LICENSE.BSD
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/clipperhouse/uax29/v2@v2.4.0/LICENSE": 4.964453ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/cyphar/filepath-securejoin@v0.6.1/LICENSE.MPL-2.0
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/clipperhouse/stringish@v0.1.1/utf8/LICENSE": 6.534089ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/danieljoos/wincred@v1.2.3/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/coder/websocket@v1.8.14/LICENSE.txt": 4.40772ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/davecgh/go-spew@v1.1.1/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/cloudflare/circl@v1.6.3/ecc/p384/LICENSE": 5.035912ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/dlclark/regexp2@v1.11.5/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/cyphar/filepath-securejoin@v0.6.1/LICENSE.BSD": 5.621402ms
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/cloudflare/circl@v1.6.3/LICENSE": 7.50358ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/dominikbraun/graph@v0.23.0/LICENSE
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/dustin/go-humanize@v1.0.1/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/danieljoos/wincred@v1.2.3/LICENSE": 4.302442ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/emirpasic/gods@v1.18.1/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/dlclark/regexp2@v1.11.5/LICENSE": 4.086416ms
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/davecgh/go-spew@v1.1.1/LICENSE": 4.201675ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/fatih/color@v1.18.0/LICENSE.md
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/erikgeiser/coninput@v0.0.0-20211004153227-1c3628e74d0f/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/containerd/console@v1.0.5/LICENSE": 10.2175ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/go-git/gcfg@v1.5.1-0.20230307220236-3a3c6141e376/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/dustin/go-humanize@v1.0.1/LICENSE": 4.863004ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/go-git/go-billy/v5@v5.9.0/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/emirpasic/gods@v1.18.1/LICENSE": 4.313389ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/go-git/go-git/v5@v5.19.2/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/cyphar/filepath-securejoin@v0.6.1/LICENSE.MPL-2.0": 10.57337ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/go-json-experiment/json@v0.0.0-20251027170946-4849db3c2f7e/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/erikgeiser/coninput@v0.0.0-20211004153227-1c3628e74d0f/LICENSE": 4.104342ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/go-ole/go-ole@v1.3.0/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/fatih/color@v1.18.0/LICENSE.md": 4.55035ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/go-task/slim-sprig/v3@v3.0.0/LICENSE.txt
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/go-git/gcfg@v1.5.1-0.20230307220236-3a3c6141e376/LICENSE": 4.802094ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/go-task/template@v0.2.0/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/go-ole/go-ole@v1.3.0/LICENSE": 3.792406ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/gobwas/glob@v0.2.3/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/cyphar/filepath-securejoin@v0.6.1/COPYING.md": 18.192299ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/godbus/dbus/v5@v5.2.2/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/dominikbraun/graph@v0.23.0/LICENSE": 11.630856ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/golang/groupcache@v0.0.0-20241129210726-2c02b8208cf8/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/go-task/slim-sprig/v3@v3.0.0/LICENSE.txt": 5.537982ms
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/go-json-experiment/json@v0.0.0-20251027170946-4849db3c2f7e/LICENSE": 6.179918ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/google/go-cmp@v0.7.0/LICENSE
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/google/jsonschema-go@v0.4.3/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/go-task/template@v0.2.0/LICENSE": 5.502924ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/google/pprof@v0.0.0-20260802141513-ef3492d7dac3/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/gobwas/glob@v0.2.3/LICENSE": 4.379053ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/google/pprof@v0.0.0-20260802141513-ef3492d7dac3/third_party/svgpan/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/google/jsonschema-go@v0.4.3/LICENSE": 3.791248ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/google/rpmpack@v0.7.1/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/godbus/dbus/v5@v5.2.2/LICENSE": 5.66526ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/google/uuid@v1.6.0/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/google/go-cmp@v0.7.0/LICENSE": 5.486238ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/gookit/color@v1.6.0/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/go-git/go-billy/v5@v5.9.0/LICENSE": 14.123304ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/goreleaser/chglog@v0.7.4/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/go-git/go-git/v5@v5.19.2/LICENSE": 14.54785ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/goreleaser/fileglob@v1.4.0/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/google/pprof@v0.0.0-20260802141513-ef3492d7dac3/third_party/svgpan/LICENSE": 9.063027ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/goreleaser/nfpm/v2@v2.44.1/LICENSE.md
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/golang/groupcache@v0.0.0-20241129210726-2c02b8208cf8/LICENSE": 16.990678ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/goreleaser/nfpm/v2@v2.44.1/testdata/copyright
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/gookit/color@v1.6.0/LICENSE": 11.483362ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/gorilla/css@v1.0.1/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/goreleaser/chglog@v0.7.4/LICENSE": 10.700151ms
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/google/uuid@v1.6.0/LICENSE": 12.689018ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/gorilla/websocket@v1.5.3/LICENSE
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/hashicorp/golang-lru/v2@v2.0.7/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/goreleaser/fileglob@v1.4.0/LICENSE": 10.925214ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/hashicorp/golang-lru/v2@v2.0.7/simplelru/LICENSE_list
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/google/pprof@v0.0.0-20260802141513-ef3492d7dac3/LICENSE": 18.706039ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/huandu/xstrings@v1.5.0/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/goreleaser/nfpm/v2@v2.44.1/LICENSE.md": 10.040538ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/jackmordaunt/icns/v2@v2.2.7/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/goreleaser/nfpm/v2@v2.44.1/testdata/copyright": 7.470733ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/jaypipes/ghw@v0.21.3/COPYING
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/google/rpmpack@v0.7.1/LICENSE": 21.943965ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/jaypipes/pcidb@v1.1.1/COPYING
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/gorilla/websocket@v1.5.3/LICENSE": 8.416602ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/jaypipes/pcidb@v1.1.1/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/gorilla/css@v1.0.1/LICENSE": 9.25646ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/jbenet/go-context@v0.0.0-20150711004518-d14ea06fba99/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/huandu/xstrings@v1.5.0/LICENSE": 6.614057ms
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/jackmordaunt/icns/v2@v2.2.7/LICENSE": 5.487831ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/joho/godotenv@v1.5.1/LICENCE
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/kevinburke/ssh_config@v1.4.0/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/hashicorp/golang-lru/v2@v2.0.7/simplelru/LICENSE_list": 8.677537ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/compress@v1.18.3/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/jbenet/go-context@v0.0.0-20150711004518-d14ea06fba99/LICENSE": 3.138301ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/compress@v1.18.3/gzhttp/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/hashicorp/golang-lru/v2@v2.0.7/LICENSE": 12.542671ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/compress@v1.18.3/internal/lz4ref/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/joho/godotenv@v1.5.1/LICENCE": 3.37061ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/compress@v1.18.3/internal/snapref/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/jaypipes/ghw@v0.21.3/COPYING": 7.870145ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/compress@v1.18.3/s2/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/kevinburke/ssh_config@v1.4.0/LICENSE": 4.797083ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/compress@v1.18.3/s2/cmd/internal/filepathx/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/jaypipes/pcidb@v1.1.1/COPYING": 8.448091ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/compress@v1.18.3/s2/cmd/internal/readahead/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/compress@v1.18.3/internal/snapref/LICENSE": 4.183668ms
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/jaypipes/pcidb@v1.1.1/LICENSE": 8.65822ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/compress@v1.18.3/snappy/LICENSE
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/compress@v1.18.3/snappy/xerial/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/compress@v1.18.3/internal/lz4ref/LICENSE": 5.1925ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/compress@v1.18.3/zstd/internal/xxhash/LICENSE.txt
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/compress@v1.18.3/s2/cmd/internal/filepathx/LICENSE": 4.108116ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/cpuid/v2@v2.3.0/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/compress@v1.18.3/s2/LICENSE": 4.823624ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/pgzip@v1.2.6/GO_LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/compress@v1.18.3/s2/cmd/internal/readahead/LICENSE": 3.53383ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/pgzip@v1.2.6/LICENSE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/compress@v1.18.3/snappy/xerial/LICENSE": 3.560818ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/konoui/lipo@v0.10.0/LICENCE
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/compress@v1.18.3/snappy/LICENSE": 5.189431ms
+2026/10/17 18:25:09 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/compress@v1.18.3/zstd/internal/xxhash/LICENSE.txt": 4.434219ms
+2026/10/17 18:25:09 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/leaanthony/clir@v1.7.0/LICENSE
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/leaanthony/dmg@v0.0.0-20260731074841-5c28840cf819/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/compress@v1.18.3/gzhttp/LICENSE": 10.756905ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/leaanthony/winicon@v1.0.0/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/pgzip@v1.2.6/GO_LICENSE": 3.656227ms
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/cpuid/v2@v2.3.0/LICENSE": 4.361767ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/lithammer/fuzzysearch@v1.1.8/LICENSE
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/lmittmann/tint@v1.1.3/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/pgzip@v1.2.6/LICENSE": 3.198088ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/lucasb-eyer/go-colorful@v1.3.0/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/konoui/lipo@v0.10.0/LICENCE": 3.930753ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/matryer/is@v1.4.1/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/leaanthony/dmg@v0.0.0-20260731074841-5c28840cf819/LICENSE": 3.826429ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/mattn/go-colorable@v0.1.14/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/leaanthony/winicon@v1.0.0/LICENSE": 3.928107ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/mattn/go-isatty@v0.0.24/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/leaanthony/clir@v1.7.0/LICENSE": 4.452432ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/mattn/go-runewidth@v0.0.19/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/lithammer/fuzzysearch@v1.1.8/LICENSE": 4.204999ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/mattn/go-zglob@v0.0.6/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/compress@v1.18.3/LICENSE": 17.635512ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/microcosm-cc/bluemonday@v1.0.27/LICENSE.md
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/lmittmann/tint@v1.1.3/LICENSE": 4.612664ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/mitchellh/copystructure@v1.2.0/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/lucasb-eyer/go-colorful@v1.3.0/LICENSE": 4.044158ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/mitchellh/hashstructure/v2@v2.0.2/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/matryer/is@v1.4.1/LICENSE": 4.4159ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/mitchellh/reflectwalk@v1.0.2/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/mattn/go-runewidth@v0.0.19/LICENSE": 3.236914ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/modelcontextprotocol/go-sdk@v1.6.1/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/mattn/go-zglob@v0.0.6/LICENSE": 3.409858ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/modelcontextprotocol/go-sdk@v1.6.1/copyright_test.go.txt
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/mattn/go-colorable@v0.1.14/LICENSE": 4.327305ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/muesli/ansi@v0.0.0-20230316100256-276c6243b2f6/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/mattn/go-isatty@v0.0.24/LICENSE": 4.498795ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/muesli/cancelreader@v0.2.2/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/microcosm-cc/bluemonday@v1.0.27/LICENSE.md": 4.159733ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/muesli/reflow@v0.3.0/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/mitchellh/copystructure@v1.2.0/LICENSE": 4.427689ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/muesli/termenv@v0.16.0/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/mitchellh/reflectwalk@v1.0.2/LICENSE": 3.143015ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/ncruces/go-strftime@v1.0.0/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/mitchellh/hashstructure/v2@v2.0.2/LICENSE": 4.896527ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/nfnt/resize@v0.0.0-20180221191011-83c6a9932646/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/modelcontextprotocol/go-sdk@v1.6.1/copyright_test.go.txt": 3.480265ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/oklog/ulid/v2@v2.1.2/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/muesli/ansi@v0.0.0-20230316100256-276c6243b2f6/LICENSE": 4.120265ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/pborman/getopt@v0.0.0-20170112200414-7148bc3a4c30/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/muesli/cancelreader@v0.2.2/LICENSE": 3.80691ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/pjbgf/sha1cd@v0.6.0/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/muesli/reflow@v0.3.0/LICENSE": 3.772474ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/pkg/errors@v0.9.1/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/ncruces/go-strftime@v1.0.0/LICENSE": 3.511852ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/pmezard/go-difflib@v1.0.0/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/muesli/termenv@v0.16.0/LICENSE": 4.284487ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/pterm/pterm@v0.12.82/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/nfnt/resize@v0.0.0-20180221191011-83c6a9932646/LICENSE": 3.711281ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/radovskyb/watcher@v1.0.7/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/pmezard/go-difflib@v1.0.0/LICENSE": 3.127811ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/remyoudompheng/bigfft@v0.0.0-20230129092748-24d4a6f8daec/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/modelcontextprotocol/go-sdk@v1.6.1/LICENSE": 9.126514ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/rivo/uniseg@v0.4.7/LICENSE.txt
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/pterm/pterm@v0.12.82/LICENSE": 3.851883ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/rjeczalik/notify@v0.9.3/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/pkg/errors@v0.9.1/LICENSE": 5.311946ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/sajari/fuzzy@v1.0.0/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/pborman/getopt@v0.0.0-20170112200414-7148bc3a4c30/LICENSE": 5.720446ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/segmentio/asm@v1.1.3/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/radovskyb/watcher@v1.0.7/LICENSE": 5.655247ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/segmentio/encoding@v0.5.4/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/rivo/uniseg@v0.4.7/LICENSE.txt": 3.939526ms
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/oklog/ulid/v2@v2.1.2/LICENSE": 9.355886ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/segmentio/encoding@v0.5.4/json/fuzz/LICENSE
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/sergi/go-diff@v1.4.0/APACHE-LICENSE-2.0
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/remyoudompheng/bigfft@v0.0.0-20230129092748-24d4a6f8daec/LICENSE": 4.700941ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/sergi/go-diff@v1.4.0/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/rjeczalik/notify@v0.9.3/LICENSE": 4.219941ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/shopspring/decimal@v1.4.0/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/sajari/fuzzy@v1.0.0/LICENSE": 4.158953ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/skeema/knownhosts@v1.3.2/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/pjbgf/sha1cd@v0.6.0/LICENSE": 10.446111ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/skeema/knownhosts@v1.3.2/NOTICE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/segmentio/asm@v1.1.3/LICENSE": 4.837212ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/spf13/cast@v1.10.0/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/segmentio/encoding@v0.5.4/LICENSE": 4.135194ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/spf13/pflag@v1.0.10/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/sergi/go-diff@v1.4.0/LICENSE": 3.929249ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/stretchr/objx@v0.5.2/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/shopspring/decimal@v1.4.0/LICENSE": 3.923013ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/stretchr/testify@v1.11.1/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/skeema/knownhosts@v1.3.2/NOTICE": 4.399501ms
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/spf13/cast@v1.10.0/LICENSE": 4.328935ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/tc-hib/winres@v0.3.1/LICENSE
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/ulikunitz/xz@v0.5.15/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/sergi/go-diff@v1.4.0/APACHE-LICENSE-2.0": 7.352467ms
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/spf13/pflag@v1.0.10/LICENSE": 4.470452ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/ulikunitz/xz@v0.5.15/cmd/gxz/licenses.go.txt
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/ulikunitz/xz@v0.5.15/cmd/xb/copyright.go.txt
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/stretchr/testify@v1.11.1/LICENSE": 3.525166ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/wailsapp/task/v3@v3.40.1-patched3/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/stretchr/objx@v0.5.2/LICENSE": 4.423665ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/wailsapp/wails/v3@v3.0.0-beta.29/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/tc-hib/winres@v0.3.1/LICENSE": 2.504502ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/wailsapp/wails/v3@v3.0.0-beta.29/examples/badge/frontend/Inter Font License.txt
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/segmentio/encoding@v0.5.4/json/fuzz/LICENSE": 10.681379ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/wailsapp/wails/v3@v3.0.0-beta.29/examples/badge-custom/frontend/Inter Font License.txt
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/ulikunitz/xz@v0.5.15/LICENSE": 4.981382ms
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/ulikunitz/xz@v0.5.15/cmd/xb/copyright.go.txt": 4.209684ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/wailsapp/wails/v3@v3.0.0-beta.29/examples/dock/frontend/Inter Font License.txt
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/wailsapp/wails/v3@v3.0.0-beta.29/examples/file-association/Inter Font License.txt
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/skeema/knownhosts@v1.3.2/LICENSE": 10.608485ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/wailsapp/wails/v3@v3.0.0-beta.29/examples/notifications/frontend/Inter Font License.txt
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/wailsapp/task/v3@v3.40.1-patched3/LICENSE": 3.747317ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/wailsapp/wails/v3@v3.0.0-beta.29/internal/go-common-file-dialog/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/ulikunitz/xz@v0.5.15/cmd/gxz/licenses.go.txt": 5.501859ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/wailsapp/wails/v3@v3.0.0-beta.29/internal/templates/_common/frontend/Inter Font License.txt
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/wailsapp/wails/v3@v3.0.0-beta.29/LICENSE": 4.494472ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/wailsapp/wails/v3@v3.0.0-beta.29/internal/templates/ios/frontend/public/puppertino/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/wailsapp/wails/v3@v3.0.0-beta.29/examples/badge/frontend/Inter Font License.txt": 4.661429ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/wailsapp/wails/v3@v3.0.0-beta.29/internal/webview2/webviewloader/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/wailsapp/wails/v3@v3.0.0-beta.29/examples/badge-custom/frontend/Inter Font License.txt": 4.600353ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/xanzy/ssh-agent@v0.3.3/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/wailsapp/wails/v3@v3.0.0-beta.29/examples/dock/frontend/Inter Font License.txt": 3.970117ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/xo/terminfo@v0.0.0-20220910002029-abceb7e1c41e/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/wailsapp/wails/v3@v3.0.0-beta.29/examples/file-association/Inter Font License.txt": 4.119145ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/yosida95/uritemplate/v3@v3.0.2/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/wailsapp/wails/v3@v3.0.0-beta.29/internal/templates/_common/frontend/Inter Font License.txt": 4.133206ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/yuin/goldmark-emoji@v1.0.6/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/wailsapp/wails/v3@v3.0.0-beta.29/internal/webview2/webviewloader/LICENSE": 3.383114ms
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/wailsapp/wails/v3@v3.0.0-beta.29/internal/go-common-file-dialog/LICENSE": 4.811513ms
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/wailsapp/wails/v3@v3.0.0-beta.29/examples/notifications/frontend/Inter Font License.txt": 5.27715ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/yuin/goldmark@v1.7.16/LICENSE
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/zalando/go-keyring@v0.2.8/LICENSE
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/yusufpapurcu/wmi@v1.2.4/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/wailsapp/wails/v3@v3.0.0-beta.29/internal/templates/ios/frontend/public/puppertino/LICENSE": 3.923507ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/zalando/go-keyring@v0.2.8/internal/shellescape/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/yosida95/uritemplate/v3@v3.0.2/LICENSE": 3.828313ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/github.com/zeebo/xxh3@v1.1.0/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/xo/terminfo@v0.0.0-20220910002029-abceb7e1c41e/LICENSE": 4.527944ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/gitlab.com/digitalxero/go-conventional-commit@v1.0.7/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/zalando/go-keyring@v0.2.8/LICENSE": 2.963434ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/go.yaml.in/yaml/v3@v3.0.4/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/yuin/goldmark@v1.7.16/LICENSE": 3.954918ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/go.yaml.in/yaml/v3@v3.0.4/NOTICE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/yusufpapurcu/wmi@v1.2.4/LICENSE": 4.238315ms
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/yuin/goldmark-emoji@v1.0.6/LICENSE": 4.494394ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/crypto@v0.53.0/LICENSE
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/crypto@v0.53.0/PATENTS
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/zalando/go-keyring@v0.2.8/internal/shellescape/LICENSE": 4.812207ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/exp/typeparams@v0.0.0-20260112195511-716be5621a96/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/go.yaml.in/yaml/v3@v3.0.4/LICENSE": 3.512232ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/exp@v0.0.0-20260410095643-746e56fc9e2f/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/zeebo/xxh3@v1.1.0/LICENSE": 4.630659ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/exp@v0.0.0-20260410095643-746e56fc9e2f/PATENTS
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/xanzy/ssh-agent@v0.3.3/LICENSE": 9.858559ms
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/gitlab.com/digitalxero/go-conventional-commit@v1.0.7/LICENSE": 5.01034ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/image@v0.41.0/LICENSE
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/image@v0.41.0/PATENTS
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/crypto@v0.53.0/PATENTS": 4.377755ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/mod@v0.41.0/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/go.yaml.in/yaml/v3@v3.0.4/NOTICE": 5.315257ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/mod@v0.41.0/PATENTS
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/exp/typeparams@v0.0.0-20260112195511-716be5621a96/LICENSE": 4.719368ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/net@v0.56.0/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/crypto@v0.53.0/LICENSE": 5.786686ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/net@v0.56.0/PATENTS
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/exp@v0.0.0-20260410095643-746e56fc9e2f/LICENSE": 4.422322ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/oauth2@v0.35.0/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/image@v0.41.0/LICENSE": 4.622933ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/sync@v0.23.0/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/exp@v0.0.0-20260410095643-746e56fc9e2f/PATENTS": 5.638199ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/sync@v0.23.0/PATENTS
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/image@v0.41.0/PATENTS": 5.107058ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/sys@v0.48.0/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/mod@v0.41.0/LICENSE": 4.44945ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/sys@v0.48.0/PATENTS
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/mod@v0.41.0/PATENTS": 4.472149ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/term@v0.44.0/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/net@v0.56.0/PATENTS": 3.936315ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/term@v0.44.0/PATENTS
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/oauth2@v0.35.0/LICENSE": 4.208258ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/text@v0.39.0/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/net@v0.56.0/LICENSE": 5.774732ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/text@v0.39.0/PATENTS
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/sync@v0.23.0/LICENSE": 5.297428ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/tools@v0.50.0/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/sys@v0.48.0/LICENSE": 5.043585ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/tools@v0.50.0/PATENTS
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/term@v0.44.0/PATENTS": 4.175053ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/tools@v0.50.0/copyright/copyright.go.txt
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/sync@v0.23.0/PATENTS": 5.804244ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/tools@v0.50.0/copyright/copyright_test.go.txt
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/sys@v0.48.0/PATENTS": 5.360886ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/gopkg.in/warnings.v0@v0.1.2/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/term@v0.44.0/LICENSE": 4.948949ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/gopkg.in/yaml.v2@v2.4.0/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/text@v0.39.0/PATENTS": 4.787041ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/gopkg.in/yaml.v2@v2.4.0/LICENSE.libyaml
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/text@v0.39.0/LICENSE": 6.000899ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/gopkg.in/yaml.v2@v2.4.0/NOTICE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/tools@v0.50.0/copyright/copyright_test.go.txt": 3.807528ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/gopkg.in/yaml.v3@v3.0.1/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/tools@v0.50.0/LICENSE": 4.645723ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/gopkg.in/yaml.v3@v3.0.1/NOTICE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/gopkg.in/warnings.v0@v0.1.2/LICENSE": 4.023399ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/howett.net/plist@v1.0.2-0.20250314012144-ee69052608d9/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/tools@v0.50.0/copyright/copyright.go.txt": 4.467718ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/cc/v4@v4.29.7/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/tools@v0.50.0/PATENTS": 5.383058ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/cc/v4@v4.29.7/testdata/jhjourdan/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/gopkg.in/yaml.v3@v3.0.1/NOTICE": 3.12843ms
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/gopkg.in/yaml.v2@v2.4.0/LICENSE.libyaml": 5.167597ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/ccgo/v4@v4.36.1/LICENSE
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/fileutil@v1.4.0/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/gopkg.in/yaml.v3@v3.0.1/LICENSE": 3.62154ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/fileutil@v1.4.0/falloc/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/gopkg.in/yaml.v2@v2.4.0/NOTICE": 4.797493ms
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/cc/v4@v4.29.7/LICENSE": 4.982396ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/fileutil@v1.4.0/storage/LICENSE
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/fileutil@v1.4.0/hdb/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/howett.net/plist@v1.0.2-0.20250314012144-ee69052608d9/LICENSE": 8.105316ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/gc/v2@v2.6.5/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/cc/v4@v4.29.7/testdata/jhjourdan/LICENSE": 7.48846ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/gc/v3@v3.1.5/GO-LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/gopkg.in/yaml.v2@v2.4.0/LICENSE": 14.716317ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/gc/v3@v3.1.5/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/ccgo/v4@v4.36.1/LICENSE": 11.664491ms
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/fileutil@v1.4.0/LICENSE": 11.706858ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/goabi0@v0.2.0/LICENSE
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/libc@v1.77.1/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/fileutil@v1.4.0/falloc/LICENSE": 12.724624ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/libc@v1.77.1/LICENSE-3RD-PARTY.md
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/fileutil@v1.4.0/storage/LICENSE": 11.40568ms
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/fileutil@v1.4.0/hdb/LICENSE": 11.403747ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/libc@v1.77.1/testdata/nsz.repo.hu/libc-test/COPYRIGHT
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/libc@v1.77.1/testdata/nsz.repo.hu/libc-test/src/math/crlibm/COPYING
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/gc/v3@v3.1.5/GO-LICENSE": 12.277264ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/mathutil@v1.7.1/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/gc/v2@v2.6.5/LICENSE": 14.524369ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/mathutil@v1.7.1/mersenne/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/gc/v3@v3.1.5/LICENSE": 15.388464ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/memory@v1.12.1/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/goabi0@v0.2.0/LICENSE": 11.947743ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/memory@v1.12.1/LICENSE-GO
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/libc@v1.77.1/LICENSE": 12.13315ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/memory@v1.12.1/LICENSE-LOGO
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/libc@v1.77.1/testdata/nsz.repo.hu/libc-test/COPYRIGHT": 10.689034ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/memory@v1.12.1/LICENSE-MMAP-GO
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/mathutil@v1.7.1/LICENSE": 7.625207ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/opt@v0.2.0/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/memory@v1.12.1/LICENSE-LOGO": 2.835222ms
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/memory@v1.12.1/LICENSE": 3.562499ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/sortutil@v1.2.1/LICENSE
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/sqlite@v1.60.1/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/mathutil@v1.7.1/mersenne/LICENSE": 7.959766ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/sqlite@v1.60.1/LICENSE-3RD-PARTY.md
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/memory@v1.12.1/LICENSE-MMAP-GO": 4.22473ms
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/libc@v1.77.1/LICENSE-3RD-PARTY.md": 15.582331ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/sqlite@v1.60.1/LICENSE-SQLITE
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/sqlite@v1.60.1/LICENSE-SQLITE_VEC
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/opt@v0.2.0/LICENSE": 3.865741ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/strutil@v1.2.1/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/memory@v1.12.1/LICENSE-GO": 5.784748ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/token@v1.1.0/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/sqlite@v1.60.1/LICENSE": 4.91791ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/go-modules/mvdan.cc/sh/v3@v3.12.0/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/sortutil@v1.2.1/LICENSE": 6.179903ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/frontend/pdfjs-dist@6.4.299/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/sqlite@v1.60.1/LICENSE-SQLITE": 4.608084ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/frontend/pdfjs-dist@6.4.299/cmaps/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/sqlite@v1.60.1/LICENSE-SQLITE_VEC": 4.801242ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/frontend/pdfjs-dist@6.4.299/iccs/LICENSE
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/strutil@v1.2.1/LICENSE": 5.46902ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/frontend/pdfjs-dist@6.4.299/standard_fonts/LICENSE_FOXIT
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/token@v1.1.0/LICENSE": 5.854594ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/frontend/pdfjs-dist@6.4.299/standard_fonts/LICENSE_LIBERATION
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/mvdan.cc/sh/v3@v3.12.0/LICENSE": 4.708107ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/frontend/pdfjs-dist@6.4.299/wasm/LICENSE_JBIG2
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/frontend/pdfjs-dist@6.4.299/cmaps/LICENSE": 5.162145ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/frontend/pdfjs-dist@6.4.299/wasm/LICENSE_OPENJPEG
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/frontend/pdfjs-dist@6.4.299/iccs/LICENSE": 6.256489ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/frontend/pdfjs-dist@6.4.299/wasm/LICENSE_PDFJS_JBIG2
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/frontend/pdfjs-dist@6.4.299/standard_fonts/LICENSE_FOXIT": 5.557494ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/frontend/pdfjs-dist@6.4.299/wasm/LICENSE_PDFJS_OPENJPEG
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/frontend/pdfjs-dist@6.4.299/LICENSE": 8.320319ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/frontend/pdfjs-dist@6.4.299/wasm/LICENSE_PDFJS_QCMS
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/frontend/pdfjs-dist@6.4.299/wasm/LICENSE_OPENJPEG": 4.519088ms
+2026/10/17 18:25:10 Classifying license(s): <REPOSITORY>/docs/licenses/texts/frontend/pdfjs-dist@6.4.299/wasm/LICENSE_QCMS
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/frontend/pdfjs-dist@6.4.299/wasm/LICENSE_PDFJS_JBIG2": 4.221132ms
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/libc@v1.77.1/testdata/nsz.repo.hu/libc-test/src/math/crlibm/COPYING": 31.499586ms
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/frontend/pdfjs-dist@6.4.299/wasm/LICENSE_PDFJS_OPENJPEG": 4.460913ms
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/frontend/pdfjs-dist@6.4.299/wasm/LICENSE_PDFJS_QCMS": 3.906202ms
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/frontend/pdfjs-dist@6.4.299/wasm/LICENSE_QCMS": 3.624742ms
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/frontend/pdfjs-dist@6.4.299/wasm/LICENSE_JBIG2": 12.290742ms
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/frontend/pdfjs-dist@6.4.299/standard_fonts/LICENSE_LIBERATION": 23.51192ms
+2026/10/17 18:25:10 Finished Classifying License "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/sqlite@v1.60.1/LICENSE-3RD-PARTY.md": 67.613882ms

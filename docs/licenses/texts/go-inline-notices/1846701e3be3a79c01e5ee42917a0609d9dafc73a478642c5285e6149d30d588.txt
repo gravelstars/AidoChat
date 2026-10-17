@@ -1,0 +1,23 @@
+/* Opcode: RowSetTest P1 P2 P3 P4
+		 ** Synopsis: if r[P3] in rowset(P1) goto P2
+		 **
+		 ** Register P3 is assumed to hold a 64-bit integer value. If register P1
+		 ** contains a RowSet object and that RowSet object contains
+		 ** the value held in P3, jump to register P2. Otherwise, insert the
+		 ** integer in P3 into the RowSet and continue on to the
+		 ** next opcode.
+		 **
+		 ** The RowSet object is optimized for the case where sets of integers
+		 ** are inserted in distinct phases, which each set contains no duplicates.
+		 ** Each set is identified by a unique P4 value. The first set
+		 ** must have P4==0, the final set must have P4==-1, and for all other sets
+		 ** must have P4>0.
+		 **
+		 ** This allows optimizations: (a) when P4==0 there is no need to test
+		 ** the RowSet object for P3, as it is guaranteed not to contain it,
+		 ** (b) when P4==-1 there is no need to insert the value, as it will
+		 ** never be tested for, and (c) when a value that is part of set X is
+		 ** inserted, there is no need to search to see if the same value was
+		 ** previously inserted as part of set X (only if it was previously
+		 ** inserted as part of some other set).
+		 */

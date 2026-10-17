@@ -1,3 +1,4 @@
+import { isDemo } from '../../demo/storage'
 import { Children, isValidElement, memo, useEffect, useMemo, useState, type CSSProperties, type MouseEvent } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
@@ -175,6 +176,14 @@ const AiText = memo(function AiText({ content, streaming }: { content: string; s
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         components={{
+          img: ({ src, alt, title }) => {
+            if (isDemo && src) {
+              let local = /^(data:image\/|blob:)/i.test(src)
+              try { local ||= new URL(src, location.href).origin === location.origin } catch { /* 无效地址不渲染 */ }
+              if (!local) return <span>{alt ? `${alt}：` : ''}演示版不加载远程图片</span>
+            }
+            return <img src={src} alt={alt} title={title} />
+          },
           pre: ({ children }) => {
             // 块级语义来自 pre，而非语言标记；无语言围栏和缩进代码也需要保留排版。
             const child = Children.toArray(children)[0]

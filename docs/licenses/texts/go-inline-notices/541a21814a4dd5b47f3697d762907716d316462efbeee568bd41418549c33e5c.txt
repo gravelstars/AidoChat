@@ -1,0 +1,7 @@
+/* Check some assumptions:
+	 **   (a) the cursor is open for writing,
+	 **   (b) there is a read/write transaction open,
+	 **   (c) the connection holds a write-lock on the table (if required),
+	 **   (d) there are no conflicting read-locks, and
+	 **   (e) the cursor points at a valid row of an intKey table.
+	 */

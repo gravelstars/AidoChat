@@ -1,0 +1,1 @@
+/* hi + lo = r + log(c) + k*Ln2.  */

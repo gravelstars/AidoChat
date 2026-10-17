@@ -1,0 +1,5614 @@
+[
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/019436e226a19b799bf03ee31cbaad06da3ed1081f2b01604c2f1f5965b5b770.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 26
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 30,
+    "EndLine": 48
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/0210a0ce49f8e7a9871b9133a050d978ed056e4aab2ffc7644fdf28076c72b5d.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "BSD-2-Clause",
+    "Confidence": 0.9781420765027322,
+    "StartLine": 5,
+    "EndLine": 24
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/035c082c3a95a931a66f0b0e858300b33dd2e52060c20216efa235897d348b8a.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/0434a731e9f5b7f765cc25adb01f12bce8a31456d0ef1efbda3de0fcd11f2fba.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 7,
+    "EndLine": 25
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/047fda0c76f834c199a0d493b40ffdf63c69bcc6c41d9f27137364a6888e3f1d.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-1.1",
+    "Confidence": 0.8425196850393701,
+    "StartLine": 5,
+    "EndLine": 17
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/04dbe216d23cf454bd428badad244901b5a40477088da52d91afbd2820b651c3.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/07ebeff563620a48143ee2ea41ad800ede7a03752112e745a92fd2fa686ce3b8.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/09f01176e627f2d27b27bc007a5867ee6bbbfb19ef9f3facb5d0d4099c25d965.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/0b88c1cf0f4dda31784f2689ff6cd4b8150a7a0bfa49af9c1226af639fbea69c.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/0d9fcb7a93af5cbd892a263e23cafda2f0ab35785e4538fbabb94d1b4764d1dd.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 26
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 30,
+    "EndLine": 48
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 51,
+    "EndLine": 51
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 0.9147286821705426,
+    "StartLine": 55,
+    "EndLine": 68
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/0e1782205e4f2355d3dde273549a52cc93c592c1d30ce9f5de270392fda24635.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 26
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 28,
+    "EndLine": 28
+   },
+   {
+    "Name": "BSD-4-Clause-UC",
+    "Confidence": 1,
+    "StartLine": 31,
+    "EndLine": 57
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/0e79100174915b40ca819ad9c46d6558660e4c2d64263b17471b0c58e28575d2.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 5
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 9,
+    "EndLine": 27
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 30,
+    "EndLine": 30
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 34,
+    "EndLine": 52
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 55,
+    "EndLine": 55
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 59,
+    "EndLine": 77
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 80,
+    "EndLine": 80
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 84,
+    "EndLine": 102
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 105,
+    "EndLine": 105
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 109,
+    "EndLine": 127
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/0ef89a26a6d27705ef0fd43e77341415e6597f2e9f5959656af19d7bf66a6109.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 8
+   },
+   {
+    "Name": "BSD-4-Clause-UC",
+    "Confidence": 1,
+    "StartLine": 10,
+    "EndLine": 36
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/0f2179c55c172158f4b43f71f9f13d76633f19f02d1e176a3e77a49819dbbe94.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/11eace0d641b30261f95a348c7e80909fe7ae07c6f345101036eaf6d075e91df.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 26
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 30,
+    "EndLine": 48
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 51,
+    "EndLine": 51
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 55,
+    "EndLine": 73
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 76,
+    "EndLine": 76
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 80,
+    "EndLine": 98
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 101,
+    "EndLine": 101
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 105,
+    "EndLine": 123
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 126,
+    "EndLine": 126
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/128f4cca69db2fec959bdfb8f94d2821e5329764d58db1358b788a9c3efa3f45.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/139bc4f1aad03eaac236e94007d2450e60a4f7d54ba5597b92f3be0545be40da.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/13d2ff35c56fdc1b505c7db6b5a9a848e414787e1d4bc0911802b8f2ebadf60e.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "LGPL-2.1",
+    "Confidence": 0.9313725490196079,
+    "StartLine": 6,
+    "EndLine": 18
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/141714b38a1f57324f4b59671d29cf4c40f9a5d8e7ff5daa4a8439d88612541c.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/14ab4a947c78d72b39233a457d36bbf085738f4f7c614572d28fa9bdc91b91c4.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/151957e273be60ecdd6e81f6364e1a399a0404a689877d51d6fc048ed68cdfcd.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/16697f18081a60c71a7f61f387c7cb5fe2fd48de68b1b2ed9aee4da8a20882a8.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "LGPL-2.1",
+    "Confidence": 0.9313725490196079,
+    "StartLine": 5,
+    "EndLine": 17
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/1740bf251418958c8d647a64a05a79d749b46111339ec932676c6db7cd03983a.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 6,
+    "EndLine": 24
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/182b2cb0fd4109281441c9cb025f3546e7051d29de6c856412d82561bbc6fc17.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/18d61b0f0dd67acb3339937a9be7973656eb0170ad072603220eabd23eb2277e.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/1a6027e772d0b94eb44d8ce4f067e1c5c940869ff3a8aebd760f82b99ed891e5.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/1b34950b7630a445092471e0c418c1a0bfb1130a923525b23c2baebef73a4e6e.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "LGPL-2.1",
+    "Confidence": 0.9313725490196079,
+    "StartLine": 5,
+    "EndLine": 17
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/1ba40feea0032c07d05d85076ac1866ed30a12fa5b8d09dfb3d2ed606902a272.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/1bebf3fb35600873bee2e88689cc96a3941d600cd03bf9d75f517b72bb37ad64.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/1c13f06f6c465b9c14d8245fb841f11e79d6a5a06b44baf19d20df38508530eb.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/1d186265e5560a29cd60f3882042b12160738f94bd6d6b1deb894e00e2651af1.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 4
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 8,
+    "EndLine": 26
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/1dd06015cb03426c4e7d85379b899d8cd3d446fcc542f765cc9a547d734fd4c9.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/1e0731290fc214b6565ac8475d1705a375a069d474c21eef773a8bf842ba5820.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "LGPL-2.1",
+    "Confidence": 0.9313725490196079,
+    "StartLine": 6,
+    "EndLine": 18
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/1e3bdb3eb670d805882846e686fbf92336c201a40b8b8c8eea6af2b7ca1e0c49.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 6,
+    "EndLine": 24
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 27,
+    "EndLine": 27
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 31,
+    "EndLine": 49
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/1e4435dd8d7a7e8239638b30c639a03335f8585717657322893635bc7b7d6f66.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 4
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 8,
+    "EndLine": 26
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 29,
+    "EndLine": 29
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 31,
+    "EndLine": 31
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 1,
+    "StartLine": 32,
+    "EndLine": 37
+   },
+   {
+    "Name": "BSD-4-Clause-UC",
+    "Confidence": 1,
+    "StartLine": 39,
+    "EndLine": 65
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/1fd9af3cc4ff52baf102eea98052705cd85dd83879c4615281e1fd6ab3831a48.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/202be19c9b0ff53cc4e86e234b90f5a987c08288b8f55465ff76b643e5c1a103.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/20bc1c8832d6a3b2eabdc0c4abbd31214aed894fa5f756bc405b1e8155a2c1e1.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/21cbb21661c5110f24659f8d7dced5cd87de393b7257ad81c4ce463b0d0b2862.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/222ec99391aaae6c531887cd42888b42d59689a8434b1de7fb5fa18bbb90b7f7.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "LGPL-2.1",
+    "Confidence": 0.9313725490196079,
+    "StartLine": 5,
+    "EndLine": 17
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/250f7770c101d26506f559d8308d69767a27f952333558c51488e5238a7a8936.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "LGPL-2.1",
+    "Confidence": 0.9313725490196079,
+    "StartLine": 5,
+    "EndLine": 17
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/26d5d48ef8d0e5f016009676c5e49e798f01839e34f14d1c22d503a2173ed2fb.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 5
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 7,
+    "EndLine": 23
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/2a80c68726bd0e1fa2f43a3aef6b9ba90fab983e5cd2131991e96e4f2884b080.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/2b3eb6b88291d5a95a36c710bc3888cfc6fe71c5e8c64a1eb90d90a3338fb25c.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/2cbc4ec50be84164e285b94e82b9f8c38064523b283ec9f9a9da9622c3c47c77.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/2cd020f392d93f56981593783981b730b9f5cc72976509f50de86e7fecc61a16.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/2d16a2a2774485d73eb31e9f6688836a0006bc6a098798e874115297d47afd88.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 26
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 27,
+    "EndLine": 27
+   },
+   {
+    "Name": "BSD-4-Clause-UC",
+    "Confidence": 1,
+    "StartLine": 30,
+    "EndLine": 56
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/2e4aad6e3479be8428ec338935f7ed8b1ee2363bb81937b273eb28ab8b25b8fa.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 22,
+    "EndLine": 22
+   },
+   {
+    "Name": "BSD-4-Clause-UC",
+    "Confidence": 1,
+    "StartLine": 28,
+    "EndLine": 54
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 0.9147286821705426,
+    "StartLine": 5,
+    "EndLine": 18
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/2fba4033bb3d962373bddb306835f3e361a889f725f00a2c99e95fd6807fcd1e.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/2ff42ffc407ae954a5f20d8aa05add831ff5ff5ba4981e8ed05d4f87f4d45e9f.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 22,
+    "EndLine": 22
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 23,
+    "EndLine": 23
+   },
+   {
+    "Name": "BSD-4-Clause-UC",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 52
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 56,
+    "EndLine": 56
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 0.9147286821705426,
+    "StartLine": 5,
+    "EndLine": 18
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/302242f6342f5f5683aa786dd46875dd7e4c79ea2b55a56125435f659d5d4116.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "APSL-1.1",
+    "Confidence": 0.8425196850393701,
+    "StartLine": 6,
+    "EndLine": 18
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/307f0b789c99cb9cb987e1c83706fcc7fc3e8c801eb7f00ee56b30ea913e6869.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 4
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 8,
+    "EndLine": 26
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 29,
+    "EndLine": 29
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 33,
+    "EndLine": 51
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 54,
+    "EndLine": 54
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/3093050d0093eb38188b7b5a22080ca086887e546bb11b5179736c69032ec4b6.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 6,
+    "EndLine": 24
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/326e89bd7d56319b16fb2bd0483bc05e43876582ce3f0851bf1130d9e9ad700a.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "LGPL-2.1",
+    "Confidence": 0.9313725490196079,
+    "StartLine": 6,
+    "EndLine": 18
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/3300cbcd181b85a5fd3c489736dccccb8debbf8b120ea2cbc0c0ad8c957ed661.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/335e6f6e980d11474630e873246728bb0aa8d944615e989b3bc255293b99c815.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "LGPL-2.1",
+    "Confidence": 0.9313725490196079,
+    "StartLine": 4,
+    "EndLine": 16
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/350bdaab0339d19e50a47d5ea0934e5d93d9afd409a623bcd8cad6f10a0fb596.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 7,
+    "EndLine": 25
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 28,
+    "EndLine": 28
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 32,
+    "EndLine": 50
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 53,
+    "EndLine": 53
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 57,
+    "EndLine": 75
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 78,
+    "EndLine": 78
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 82,
+    "EndLine": 100
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 103,
+    "EndLine": 103
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 107,
+    "EndLine": 125
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/3708a50d8e61a6d8ac08c0c551cd1e538351c5b2e0a31e9cc9f4cd7419ef70b0.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9767441860465116,
+    "StartLine": 2,
+    "EndLine": 26
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/3864a832e915107db2c679dd2e4c142bcbc166106a505561b9247c69455206ce.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 6,
+    "EndLine": 24
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/388726b51cc40b7b765e981dc0b07d71c9cc7cb1365eb6b71f2d2904cf362a98.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/39c466bdf9787b8c1f40f8eaa1632b0cb0db1f5794b51562a3b0d43eedd677f6.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/3a06bc521ec3fd73225b6baa5a6e2c0f24341adc60817d340960074145e9da82.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 0.9147286821705426,
+    "StartLine": 5,
+    "EndLine": 18
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/3b41c2fb879afa4566ed41a848a40b5fc68dcb5d4887ce93e4128c8d34452993.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/3b5c0699dbf160bb0e02260bf779cbe665c6debcc58a5ef2b78b0240f38db23a.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/3c9b0865907fcc9aa74bac7670b4db0ec57ad1c0b7faa60acbbcd7f096dd07e5.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 26
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 27,
+    "EndLine": 27
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 31,
+    "EndLine": 49
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/3dfe885268925bb2aa6faf0a536540706e38b5f52236552709787ec81d193835.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/3f09528de40f18dfd6a5195b9d827f080b0beba26e86ece23f334b98af04f021.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/3f5fa558849cdc81e24fb05b578b6ba1b9e3800350ed9631e29159e5e1f52f09.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 21,
+    "EndLine": 21
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 25,
+    "EndLine": 43
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 46,
+    "EndLine": 46
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 47,
+    "EndLine": 47
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 1,
+    "StartLine": 48,
+    "EndLine": 53
+   },
+   {
+    "Name": "BSD-4-Clause-UC",
+    "Confidence": 1,
+    "StartLine": 55,
+    "EndLine": 81
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 0.9147286821705426,
+    "StartLine": 5,
+    "EndLine": 18
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/4045071a351315376a9c3c4a64ca901ed49664bde8d7207cdba5081f24908814.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 7,
+    "EndLine": 25
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/429b0504cfdb8bd874cb6db5f4d75dd23a8010c359eae88665eb39526b686c94.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 26
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 27,
+    "EndLine": 27
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 1,
+    "StartLine": 28,
+    "EndLine": 33
+   },
+   {
+    "Name": "BSD-4-Clause-UC",
+    "Confidence": 1,
+    "StartLine": 35,
+    "EndLine": 61
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/42bbf6b7fa6b495a942e0462c1bbbc4bbfaedba1ec4741855b6ef307617c527b.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/438de9fcb0653ea63d23bf4311f20486d630c1f9bf360734daddc6801e32b622.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/4566ee6eeb93e920a56c1d02cd9c01aa429e61c6f4130fa03b07adf7b19eb78a.txt",
+  "Classifications": [
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9813953488372094,
+    "StartLine": 10,
+    "EndLine": 34
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/45bce56f3c56841b9a8ddf4e3346e6be7d25deb98b602b6c9835a8895c21193d.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 7,
+    "EndLine": 25
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/46010d2b53bee608ca233854cf951eff82ee95dc2b0faa84d73c00ea7680a990.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 26
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 28,
+    "EndLine": 28
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 1,
+    "StartLine": 29,
+    "EndLine": 34
+   },
+   {
+    "Name": "BSD-4-Clause-UC",
+    "Confidence": 1,
+    "StartLine": 36,
+    "EndLine": 62
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/46c4bbf6ab8a8f86a6d79cdbbcd47bb0226d82ebf6b7fc29b01402df33ab05e6.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 6,
+    "EndLine": 24
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/47ffe802fbe456920bfce4e74fbc442e3c068ef187d018c7812c43ec009943e9.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-4-Clause-UC",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 30
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/4855fcbd7648afb633b9eadfecad1261f80fc00b68ab0b14cc8ceef2342d25ad.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/48994650984efa098a72ddd3ebc7cde809a4a6eea6d010227c5cdb58e30a2913.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/48b8a6529cf76e66e5698425a9c2559684ec90c297f43ff4bdc60c215c354870.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 20
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/4a216985d2694e95cde93282080ac4ea2b3b55018adc1a4bc124bfd0ddd72700.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 6,
+    "EndLine": 24
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 27,
+    "EndLine": 27
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 28,
+    "EndLine": 28
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 32,
+    "EndLine": 50
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/4ba042d2e84c6111f1352272617edf59b84c2335e004615761f56e2a097220a4.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "Apache-2.0",
+    "Confidence": 0.9285714285714286,
+    "StartLine": 2,
+    "EndLine": 12
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/4c2c555f4f0bc06859961bc6609e138feb8f549122fe239627cec0e6e40ecb0c.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/4cf5ab5b30543dc343fc9a1cdf90bb2f55edd3094bb14f18522847a53a678133.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/4db16c3cc31f506382c02c8a14f2301d292212ff464e316c8f3779f93c225ccd.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "LGPL-2.1",
+    "Confidence": 0.9313725490196079,
+    "StartLine": 5,
+    "EndLine": 17
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/4f711d421b9052106881f560e54aeac11e627e45fc0b00f8356ccf59c9e1b445.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/51bc16006d9e604fd33ddc0593677f7a8c9acc8b0347494597a303a383f5aed4.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/533ccb46739aa04823cd7c66fc0289e78e27211f8559dbfae8f7252594b5c377.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/54183b5bc3045529e8a9fc5a7ceae6231f0c5d966b1ab21fb111fdfc7fbbe607.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/542a00bbb82bd12a3b443d687b703c271f4434682ea9eb96c35f3690d7e870f6.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 6,
+    "EndLine": 24
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 27,
+    "EndLine": 27
+   },
+   {
+    "Name": "BSD-4-Clause-UC",
+    "Confidence": 1,
+    "StartLine": 30,
+    "EndLine": 56
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/55565cd43cd52dfb11b219492e45bebd68ee2fbe69e3e2391237b6f3cbb19474.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/555d55e47e4d308e853b89ac5c760fffd24dc0fe343bf79dd850e53130070017.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 26
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 30,
+    "EndLine": 48
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 51,
+    "EndLine": 51
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 55,
+    "EndLine": 73
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 76,
+    "EndLine": 76
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 80,
+    "EndLine": 98
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 101,
+    "EndLine": 101
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/55ff929a4bbb7b8cc0d4a379196d1740892b444438f168d0fe16d94ce47c66a0.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 5
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 7,
+    "EndLine": 23
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/56407510a59aa0ef701fb92d4677fffc958161bf67880a0a1501a7de1cc4cbb2.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/569a0d4157b10dd6a63521479a98a4654c21416d0ff1722bd30e5a01a3207707.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 4
+   },
+   {
+    "Name": "LGPL-2.1",
+    "Confidence": 0.9313725490196079,
+    "StartLine": 7,
+    "EndLine": 19
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/575b0089dc17f90e95f44d4344f4da8bb76e96a8da84c9d09bf524422bd94f25.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 21,
+    "EndLine": 21
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 25,
+    "EndLine": 43
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 46,
+    "EndLine": 46
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 48,
+    "EndLine": 48
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 1,
+    "StartLine": 49,
+    "EndLine": 54
+   },
+   {
+    "Name": "BSD-4-Clause-UC",
+    "Confidence": 1,
+    "StartLine": 56,
+    "EndLine": 82
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 0.9147286821705426,
+    "StartLine": 5,
+    "EndLine": 18
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/5856a0b9e48ecd66f76b6d1e618362a7b37f5ebdd685113c3a84cf4509b62fed.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/593e4484b876b4badd0669f02e6d16dc3a2bd6250ae9cca06f446ccca061233b.txt",
+  "Classifications": [
+   {
+    "Name": "BSD-2-Clause",
+    "Confidence": 0.9781420765027322,
+    "StartLine": 5,
+    "EndLine": 24
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/59a9c157cda8b69bfc5df5a421f1026ee7ded24a5fc2a062c47688e1188845cf.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/5a7b8dab24c729e4a11e03dc2285b25249a2c602bef848a03eac6de0fac9b964.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 26
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 27,
+    "EndLine": 27
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 28,
+    "EndLine": 28
+   },
+   {
+    "Name": "BSD-4-Clause-UC",
+    "Confidence": 1,
+    "StartLine": 31,
+    "EndLine": 57
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/5ae991cfe29f3c0fc6ac530a6101628b53e7d4d6089be6fb67e89fe372d39511.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/5c73ebb90c55d137b19276ff3ad79bd248a22d55aa77daa390005c51a0ccee2c.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/5c79f834e7af253c950a680c99d2fe983b965ce856133e7df58f9b1ac9737ec3.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/5c8ba79917130b85bda700e3ca965943c62639fd4b171c804909c4a57bd990f6.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/5ca46e2a8be7705dd2a4345db01dc24dd68952c41ebb89e0977e3755fa630692.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "LGPL-2.1",
+    "Confidence": 0.9215686274509804,
+    "StartLine": 6,
+    "EndLine": 18
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/5e1796b495457557769076a47e2b44690920475785e27f4a80b9e8bf34451781.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/6201c3b4f7909f718029ddb34f851ac696528a730e7ce05a7afe5cf8e6b09ab5.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 8
+   },
+   {
+    "Name": "BSD-4-Clause-UC",
+    "Confidence": 1,
+    "StartLine": 11,
+    "EndLine": 37
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/6233fe159363bd60a0bb24fd0a119ae2ec3b6449c087fb44da691cdf6225e826.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 26
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 27,
+    "EndLine": 27
+   },
+   {
+    "Name": "BSD-4-Clause-UC",
+    "Confidence": 1,
+    "StartLine": 30,
+    "EndLine": 56
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/62ff7d9e7434928e07f3f81eca822772c9c3921268c3aed45fd05b945f6096de.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 16,
+    "EndLine": 16
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 20,
+    "EndLine": 38
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 41,
+    "EndLine": 41
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 42,
+    "EndLine": 42
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 1,
+    "StartLine": 43,
+    "EndLine": 48
+   },
+   {
+    "Name": "BSD-4-Clause-UC",
+    "Confidence": 1,
+    "StartLine": 50,
+    "EndLine": 76
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/6321370746fa91426488d1dcfe586df509d339e6ec1a88f304ba47e2fad6b917.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/6516737cf283e8b363e101b5c90b5c9c0b8c393bf93ccea0ed2eac7e38e6a12a.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/655d6728e8350a9a7838b992cbbeca4bc5b3188fa302ff558ec339d5d843db8f.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/67befdec3946616032b6e6c572d657c534d32e184f5e1df030abf97b97417e53.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/69bf2ab591a3830aefbc34299911de37a8972c3292892c5d1a9f42ede53acb60.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/6a6eff51d089bce200324ec21beb2f6a0f16377e301c08d504db1a0ff52c020e.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/6bad1ba8f6f53251ff760b742cb416c7302ceecb5b08dcb5b5838f7e1df61ad5.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 4
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 8,
+    "EndLine": 26
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 29,
+    "EndLine": 29
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 33,
+    "EndLine": 51
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 54,
+    "EndLine": 54
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 58,
+    "EndLine": 76
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 79,
+    "EndLine": 79
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 83,
+    "EndLine": 101
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/6c322cd5e597f310fcc6ddf0cd17d2c4fd747072da2158d99c480f949a6dde07.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 26
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 30,
+    "EndLine": 48
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 51,
+    "EndLine": 51
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 55,
+    "EndLine": 73
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/6d7b2382d1222242c347048172abf0613f3280937d9d2bc4c717b3a5940109ff.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "LGPL-2.1",
+    "Confidence": 0.9313725490196079,
+    "StartLine": 4,
+    "EndLine": 16
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/6e6f854695f3f3709e9880c49c486ec178b9380d129f13591d3319124b513825.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/70eae7ad025b862a81bcd4584cfe493ee7965ef70f1e2b56318ece2968d6f074.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/72f1ab52c0523e71d54be85f3f41f3a04a1ec89eb2425ff603e7dbed03a1fc40.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 23,
+    "EndLine": 23
+   },
+   {
+    "Name": "BSD-4-Clause-UC",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 52
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 57,
+    "EndLine": 71
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 0.9147286821705426,
+    "StartLine": 5,
+    "EndLine": 18
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/73b7e81e4ca8fca1327732c6d7037297d3f5ae2cb54fb245e80440d3c3811496.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/74f25efb538ddd23a21cd68f7d1d94060d45e304b8aa48c27a8ff49644d5b210.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/7505630bea9e4edb4c1e11350697e2a61fa251dd52bab356ba6b9439715957f9.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 20
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/768e39e5404c993ff16c4622da0ae2fce2d00fa5571281746c0f48a849087df8.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/771202534343b000ad11ee477df4a1a5e96f993086378f7dfb8d32f1c9903752.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/77991885310f72d082afd78172ad7888666682960fd63e2f89a41c6f03b4ac2b.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/7a0dd6e65ceba64d8e8abb6d15481a00353243209770446dd0ddf74eb4855805.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/7afc1f1ff54bed5324785db444e083d6fbc37a858520b2d13e7bc832c4555bb2.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/7b1dc087619867be6c3fe0c028d53ea9b682b6acca676d5bfc02518e204adaa4.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/7b2120dd0dbcbb0743ed7fdf7496f12d847b47b742cd9c471a8ca2f20eb6b4ea.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/7c45663c6ae6c166312ecb5da929c1441ee63317198936b20ff6839cfb37f51d.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/7c6aca491e0ae241b69f69ae40aa5709c95090b94529a7249dde545d09821995.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/7dd08b48f308a6a9500a096d39a24027e17bcb2ab660f6d022e6ee9fecda2d04.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 6,
+    "EndLine": 24
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 27,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/7e3c3764e54ce4bee0d8a3e7597e8219549f0c44e359129ec875f41d4243e23f.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/82056fdd6632c65eca0775afc9f9ae898c8d838feae8dbe976772e84c77bd918.txt",
+  "Classifications": [
+   {
+    "Name": "BSD-2-Clause",
+    "Confidence": 0.9781420765027322,
+    "StartLine": 5,
+    "EndLine": 24
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/82760060cbc3a3477a8f441ce3b29ad39a3080986c3d5cfc3ecffaee94d35106.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 26
+   },
+   {
+    "Name": "BSD-4-Clause-UC",
+    "Confidence": 1,
+    "StartLine": 29,
+    "EndLine": 55
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/84360ab6ea2513b4ec777be05d2a731e954c11cb7a44f0dfcadc03d10459f4d5.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 0.9147286821705426,
+    "StartLine": 5,
+    "EndLine": 18
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/8455d9bcad8a4216bfc6292cde3f68072078dec0c9c040f8b9f3130af1c9153f.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 0.9147286821705426,
+    "StartLine": 5,
+    "EndLine": 18
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/848a6c27bcd35d8956a2e6a164ca7d204b53315b3c746f0e6295364487820ed0.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/860e59b9ea1a8524256e94a32958295f6d7dde020e6a154a4216c0c656af9ed9.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/86244137055b4d7d0c0e00e2c70875d13394756a64da6859a13761b83a082bf4.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/863e5c8835f15f3f703ff15bfd776f716a6434bab4191745a14befaf07cc8326.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "LGPL-2.1",
+    "Confidence": 0.9313725490196079,
+    "StartLine": 6,
+    "EndLine": 18
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/87902fa37dc67c17771baf33f36b8551a667256545cc6ba0507db641771f255e.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 26
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 27,
+    "EndLine": 27
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 31,
+    "EndLine": 49
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 52,
+    "EndLine": 52
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 56,
+    "EndLine": 74
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/8859055e7647c1fff58004306379c94676f05cfe899ef161eace49613379f756.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 22,
+    "EndLine": 22
+   },
+   {
+    "Name": "BSD-4-Clause-UC",
+    "Confidence": 1,
+    "StartLine": 25,
+    "EndLine": 51
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 0.9147286821705426,
+    "StartLine": 5,
+    "EndLine": 18
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/891b4e61d0807aaca8d3774327e77ff77dbee7079f1b36a4172b7b1d61a0d0fe.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/89517687cfaff1588a8a02c31bda2c842a19155c1cc494fef89f0da3662f98f5.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 4
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 8,
+    "EndLine": 26
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/8980b3a309901646f94e9908426340447d6d1233c3e7b822e671f438150d03d7.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/8a65c6ebb0691e42cf13060e9b6d238f194c046f953ede496823aa0477fb5e27.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 7,
+    "EndLine": 25
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/8add579d63816929b43ee3f9901e01294a3688275dae4c70e346821d5789ce6b.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/8b9d7f17ab61e86df1643045f853c5c2d76cfa9863bffdd9725742173cdbd326.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 7,
+    "EndLine": 25
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/8bb55c74a1ca47f0e0ef9bb072fa1dd976fafb35eaa2f8123eb2f2862e98d0a2.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "BSD-2-Clause",
+    "Confidence": 0.9781420765027322,
+    "StartLine": 5,
+    "EndLine": 24
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/8be869cf42bcfdb2625a3a0c20bd251bb7a34c8fcee207a3af8bdecaaee6fa09.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 26
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 28,
+    "EndLine": 28
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 1,
+    "StartLine": 29,
+    "EndLine": 34
+   },
+   {
+    "Name": "BSD-4-Clause-UC",
+    "Confidence": 1,
+    "StartLine": 36,
+    "EndLine": 62
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/8d8a075cdfba9d640d2edbfd7e5d4557678bbe2d212cb01ba5d70e43ac7366d0.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/8ef5d6b28fed4a0484d922a4de31c1e6462b07d27ecf838cbbf7af7dfa2b32f1.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 8
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/8f11862aa8a56e20ece4a91679f5d1594728203b7f77389bd3186a3050feb7d0.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/8f99987097cb3c2b9413aaaca5c002f6591111e95563d4e429727eeab8024307.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "LGPL-2.1",
+    "Confidence": 0.9313725490196079,
+    "StartLine": 5,
+    "EndLine": 17
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/91ccd36a70ab8630daffe9e9eb966aaa33273a5db032da8bd640c31ee3e77da8.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/92eb40f35ddd2d46c32ada8168c3b4ca7c8f412295f7ac6f2430d63783c28089.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 26
+   },
+   {
+    "Name": "BSD-4-Clause-UC",
+    "Confidence": 1,
+    "StartLine": 29,
+    "EndLine": 55
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/94f324094a1da039a19db0985cd55ce7b31f4dae2bc82d41b5b178aa5bc4eb11.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/95474d7edd396dffbd1b0295db896e1ce1dc49cc12af30a241e4db5aec82ac82.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/95c52a18d57ec75d921d7f61c08b1dd6b1411ca0a4cd71bbad7bee32b9437d05.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 4
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 6,
+    "EndLine": 22
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/95d2a416668ecd8f1b91a612290d9d5606f85920f5ae8cad0870f2745b042e19.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 26
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 30,
+    "EndLine": 48
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/95fdddc95c02f5496a853709697ef1d7628bb6b70552ef49eb9a7d44b52e4029.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/964c264e79ee0c920ca91b866a9d58eb99965cd8995d53fd0f17f220a2b5cc48.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/96cd9594dc2f76598ef0114fc5967f4668fd5d3a6af141ca5c74ec931a69f6fa.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 0.9147286821705426,
+    "StartLine": 6,
+    "EndLine": 19
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/97b3c4cd9864b1e3114ea49f8ac58f427f53e07e326765ec5f7e2a7aba75c5ac.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/97c20f17b253a0e00ceff8154aa9757057dcefb823cd8deaba63f28aa7691528.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 4
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 6,
+    "EndLine": 22
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/97fb999d301295e94d5b844272d0cd7170b59d739de12578d104ecde76db4d0f.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/9a33ab2847249e8db4dde5beaa1b458fba06943bebf28a832552eb964f761917.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "LGPL-2.1",
+    "Confidence": 0.9313725490196079,
+    "StartLine": 5,
+    "EndLine": 17
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/9a7c2317f463ca5c191816c5ed0ace4d20d6a3b4d77c4c4e62e706f6198373ef.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/9d6b38bc80cb720a8bff97eef60846cbb0ed649095b8130fa540daff14024073.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/9e12fa3b026d6301a1dacc3a9d3f826195bb362056ad5796554e4a26e921b063.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/9e73521c574f627b4b5879f1b0b3580e6c5ccc09e0213cccd7fc5597d9eff1c5.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 26
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/9edbb22a7a520a6fbc2d599aac46d8d64eaa54d647539672bbdfc5b0f9fe9b11.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/9f113c9b4b389fd5ec548f30b493185656ceab1565a72bf4c563014c5553397f.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/9f816aff8fba4af8ba3db0de82a13e5e596e5b4d1c25b117b2059bc8bf502caa.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 0.9147286821705426,
+    "StartLine": 5,
+    "EndLine": 18
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/a013bf61b7ac18f97bbd42bfe47a031b28fad3d0f130454b3b6709be3e19ddf5.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/a15789b9aea79d1d3f992a14ffb4725a4a487b509e44f492ae72d5416dd8c5f0.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/a1eddb67a88e1bb84815ed1c9641c3f85365d54e0c2eb6159a6d25810e66142e.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 26
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 30,
+    "EndLine": 48
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 51,
+    "EndLine": 51
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 55,
+    "EndLine": 73
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 76,
+    "EndLine": 76
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/a308a25fa2091b43aac811e60abb181bec34169a6a7a3f8bbf6ad0be4577151e.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/a3a14ed493361bb7fbce5e2ab86f3b899c0a16ec9dc61a3c5c158c93d8c040ae.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 26
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 27,
+    "EndLine": 27
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 31,
+    "EndLine": 49
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 52,
+    "EndLine": 52
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 56,
+    "EndLine": 74
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/a6d0c0641d14897864b1cd47a4c2f0a615eeaa290aafd88eaac373969e1b570e.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9130434782608696,
+    "StartLine": 6,
+    "EndLine": 30
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/a7c346d7fccf150285b3f83b8777ea22d3084aaddcad52522ee6777b75fc8bc4.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/a804ef657a0fa69dabd495f782b5d3f1fc0daa5d85258e2935457c61ce7f5c7a.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/a8db790160a25cde09460ec2296c3c58200cc909cf8850aa6a4365ee0f1d36d2.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 26
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 30,
+    "EndLine": 48
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/a9cfe59be72551d5e1ecb77f0b8f7d46aba8134389dbc8bd568252ece726a462.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 26
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 30,
+    "EndLine": 48
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 51,
+    "EndLine": 51
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 55,
+    "EndLine": 73
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/a9f8044f9171a2ccf6cf5b86691c8374b2c83da010d8c053870d6d926e4d39d3.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/abd57a19ce0167160d12741cac266a63f2a93023b7923b751698df35549e9cb0.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/ac4183bee862334384a24ff59d3cfa3dadf0b16a1f39316db134a9a8966df398.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "LGPL-2.1",
+    "Confidence": 0.9313725490196079,
+    "StartLine": 6,
+    "EndLine": 18
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/ae1de694008fc5c86a503453a50a9436b9eccd02a167a594001f814ccce6d429.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/ae418e9cbfbdf48d25162fc1e68ab51048c0be3b60546b54c6b6710b7001a9eb.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "LGPL-2.1",
+    "Confidence": 0.9313725490196079,
+    "StartLine": 6,
+    "EndLine": 18
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/ae622f067d2424bb3a13fb96ddc380a45818e71b4885c47c867716a910c3ed9e.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/ae728da8676b3a60cb1d6ed086658ec5acd8d8f6ba599fa8ba0474059bc62d84.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/af7359ca0a26a962a01bc55c16e714431da5b838fdeba57316223655664c8437.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 26
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 27,
+    "EndLine": 27
+   },
+   {
+    "Name": "BSD-4-Clause-UC",
+    "Confidence": 1,
+    "StartLine": 33,
+    "EndLine": 59
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/afb46f1e917499ca91a2d8d05623554d7f504e955de5b6e77bd94a0270775998.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/b021f840b60be6390bbce2f2753059c70e069c05b92f810e58ade18252ca9066.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/b19951f221a3ea14724d966798ec0ee981aee09e034e64909646f263c0e7d114.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/b2b14ea4480fd352a31548c101c795b91fc5971a4485ee300d73bc7b3a436173.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/b34b8812908ff442f16d396a1b5f70dbd68cdca02e2971a0c72f6f0ffba77519.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 22,
+    "EndLine": 22
+   },
+   {
+    "Name": "BSD-4-Clause-UC",
+    "Confidence": 1,
+    "StartLine": 25,
+    "EndLine": 51
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 0.9147286821705426,
+    "StartLine": 5,
+    "EndLine": 18
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/b4026621585701cdc96b2162db4c341aef970f80342a43b7021da8d22d747d2e.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 7,
+    "EndLine": 25
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/b59ca680bae1fac4515e7b85d0318f3cbfcbbee8ad7e1ab29cdb07abaaf8083e.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/b5cfa5e2bb99abcb9c005fccfa536faaf9de4fae51ce3db982380ccbe002db17.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 26
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 30,
+    "EndLine": 48
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 51,
+    "EndLine": 51
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 55,
+    "EndLine": 73
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 76,
+    "EndLine": 76
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 80,
+    "EndLine": 98
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 101,
+    "EndLine": 101
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 105,
+    "EndLine": 123
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 126,
+    "EndLine": 126
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 130,
+    "EndLine": 148
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/b62a52c8d149bcfc1a100ab4eca6ea94906e714b4363285de72ca6fbefad33ea.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 26
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 27,
+    "EndLine": 27
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 0.9147286821705426,
+    "StartLine": 31,
+    "EndLine": 44
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/b69dc114f9b855a308b8dc93db82635b50d219518521ad3a145a3567e9ae4332.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "Apache-2.0",
+    "Confidence": 0.9285714285714286,
+    "StartLine": 3,
+    "EndLine": 13
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/b746f7befea7b7d816bf1a6da61e15b8338d230af258fbbba5094e0477f3e15e.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/b801a57b2955888701c892a37beb308a706145e7856bbc60202389734edcb5e0.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "LGPL-2.1",
+    "Confidence": 0.9313725490196079,
+    "StartLine": 5,
+    "EndLine": 17
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/b8157458da4eb79ca97b00217216728728130e3f7edfb6974aa0a980fc0c8254.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 26
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 30,
+    "EndLine": 48
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/b87e5edb5973b0b33b89a6504c10225778973176bbeeb596fda3829595a98fab.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/ba087e876fd50a57590195e399b5aa0d1b1c51cdc5a09c99576922ffadf0ad92.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/bb02817b05b511234d4d0d4e074c59220f00531d8a76094590466867fce7e48b.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 4
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 8,
+    "EndLine": 26
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 29,
+    "EndLine": 29
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 33,
+    "EndLine": 51
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/bcfe4449183b0f54d7bc26f5d5067ff7995a7fdcf085810022c78cd7d2fee02f.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/bde342481f97f98ce39a34c62e0e8ac0e96c7c0717bfbd71bf7e69e924b9f009.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 21,
+    "EndLine": 21
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 0.9147286821705426,
+    "StartLine": 5,
+    "EndLine": 18
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/be1edd87ba6599e5335a103943ed8a2366a8c2d740d16f6633d32b3702c7ea0a.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/be77d56c3c01ced78a52149c71a36b644b857fcd596a78d6e996a835401212b0.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 22,
+    "EndLine": 22
+   },
+   {
+    "Name": "BSD-4-Clause-UC",
+    "Confidence": 1,
+    "StartLine": 25,
+    "EndLine": 51
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 0.9147286821705426,
+    "StartLine": 5,
+    "EndLine": 18
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/bf54618ceab86f4a346a142c5768ebebdae8d8c183b1c3900392da9f301863e3.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/bf9da72829bc62c971ebb437bde45b8915bcc6ebbec9a8e800e2f69f01f4cda1.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/c0291ad402191bc47f353b10bc8f661b98dbbea9e8349965312c7a0ce6db2dd8.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/c04d82f41f6b9aed4a546833b36d87ffd2cb1e5bccfce9651f581400c4d8eeb8.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/c06296b8cf3c2afd413889d3e180f90c3b383feb76c079fdf7a97d920cb6ef80.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "LGPL-2.1",
+    "Confidence": 0.9313725490196079,
+    "StartLine": 5,
+    "EndLine": 17
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/c0fa1c812ce9733faca82506b52ca3b80d3b0f05532fc95f261f39b7a23bbfb6.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/c11f58766906ba9b24a02dfed20d2895f020abfc7226f891f5384cf924bcd15c.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/c2757a05bd798a38dbef640492c8c7395e839615ed005c0a9cfe3fbe3f6a8a2a.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/c2ea79851660896857f257d7c1004cf1d1d3a4ff6103122a1d08493c4e2ce2b6.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/c39873d50979c91ecc0a6f17b5eb7d2ecc76b7fb2d7f694fb41f3a42aa3063b0.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/c3c3d6af2be9cd6235535133b0c10cee3e1ddb07f87f209cf73934e8852777d0.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/c4c0b005753fb70b28cb19b49aa953dc39a1e7c442d7e442dc69ce87b6691424.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 26
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 30,
+    "EndLine": 48
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 51,
+    "EndLine": 51
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 55,
+    "EndLine": 73
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 76,
+    "EndLine": 76
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 80,
+    "EndLine": 98
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/c4ca4132c67abe54366b09c1f71184e63d35396908f1e38ad34463d326f3cf6c.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/c62c893ade0812360f180da1bf55b02163a63fa2187d98d6fe53a406ab97b0a6.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/c698d1779e6a34c4ac04d14db650c33405a67b8505a83ac12150c1313c3fb470.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/c7694950fdabcbb3fe327159841def73a9bd70503b01096196859fe9be3b4d63.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/c8042de33fcac93b146a26f78d905c3f40d901a44281900b80085a3c44781828.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-2-Clause",
+    "Confidence": 0.9781420765027322,
+    "StartLine": 25,
+    "EndLine": 44
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 0.9147286821705426,
+    "StartLine": 5,
+    "EndLine": 18
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/c8613e1e7c9a4c4c6487e948825e4275dc3a8e771e8fca78c31852a123be0d79.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 0.9147286821705426,
+    "StartLine": 5,
+    "EndLine": 18
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/c89ca8672bc74a600fefe2dd45ffd39b4e3623c5ad120577a66afeb3d8e92986.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/c8ebac7c27b687e5aaf2a13adb2cf5d559996a6e4dd60e0e55c57f6cf763db54.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/c90d6aff6cd4c1b248d508f6da8bb50c8c4f572e407738d9b0de69ef3d4fe35d.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/c9787ad7c0abd34e8da51a83a42e72d7703376788c90b891ef898267a8691e05.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-4-Clause-UC",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 30
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/ca9fe9506f93a56d27140ba79cc2e38b71f6df313f6f5a8509c6672c55c773e1.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 26
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 30,
+    "EndLine": 48
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/cc52ec20d87b36ce4f56f965128fe1aab8faf79172eff0e7a6ab58db80f0188d.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/ccedbd2bd9d59bf11b6ee42a0ec8f9fdeb119907ce37869541e957a8d4ae7f37.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "LGPL-2.1",
+    "Confidence": 0.9313725490196079,
+    "StartLine": 6,
+    "EndLine": 18
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/cd0de106520f7af176c01ef79dbe1c91fc7b38ec4668b91c52722759c4eda382.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 26
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 27,
+    "EndLine": 27
+   },
+   {
+    "Name": "BSD-4-Clause-UC",
+    "Confidence": 1,
+    "StartLine": 30,
+    "EndLine": 56
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/cd5c8cf08239dcf88a24916cee1d7c00176e7d7d127718b76564eb2b1ede72d2.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 26
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 27,
+    "EndLine": 27
+   },
+   {
+    "Name": "BSD-4-Clause-UC",
+    "Confidence": 1,
+    "StartLine": 30,
+    "EndLine": 56
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/cfeb6fe3acb8b10dd451bd1bd3078d086bdc85161d2693c3ac5032def38b1bb4.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 8
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/d094fe5a6870c6f5e10d56bf03790f9cb35dd056134bd2560bc929655e880860.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 20
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/d09987ce0d8b304f1b3335d1f2cb689fd52b8df8d4616eb22aa25674eb28765b.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 7,
+    "EndLine": 25
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 28,
+    "EndLine": 28
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 32,
+    "EndLine": 50
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/d1d8c0a3e078a87d118210bf983926058e3be6ec033aabcb239c3d5a579eed16.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/d2d13a23e69b85a7011483ea9954bb25cc565beb61acfa12e8f1bea1be6a5e13.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 0.9147286821705426,
+    "StartLine": 5,
+    "EndLine": 18
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/d3414784220d589f2133c613395bcb0ccb5ddd70766aadaf4fd107d6c8b3aa8b.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/d38964603d92aff9fe4f8a1f3483bb466f27271428e39c19b20308ce9c07beae.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 21,
+    "EndLine": 21
+   },
+   {
+    "Name": "BSD-4-Clause-UC",
+    "Confidence": 1,
+    "StartLine": 24,
+    "EndLine": 50
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 0.9147286821705426,
+    "StartLine": 5,
+    "EndLine": 18
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/d4772857bc9bdc97e82839c96be13d8b3082a8f3e60990fef6778fc5d8858979.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/d53939afd441334c10a531df27876660a39e1f987155039a0d8793f11c16e6c7.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/d573585d7447872801fb65c0a4e54b7b845212494580c6168316512754d8406f.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 6,
+    "EndLine": 24
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/d579cf95a69392e255ea9e3f5af40bf1316cf1f68abeb53f76718d2459107081.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/d597a00b249ade915b9ae9fb76880835392cc0552c9a948b6cfdc6a0fcf151b1.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/d6196d01d555ebb89286df5b811b1f0f559ea7d9beb0a97713ff81e5ff038569.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/d7469a2cb25806c6a04e7fbe2b6bea8ec8d9e3dec79cba8f986516f7b9e55267.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/d7e411e60d2c5a858da5ea5167ccefee8846cc0bb64555d8b7def5ba3002789c.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/d7f0d51f90892e969b9d9790a96b2168aa2a188198a81a5beddf1f34adc1f1f3.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/d8d12981174fe32cd55c7da540917414393a8c12779992ee4456158e9dd076df.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 7,
+    "EndLine": 25
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/d904d9714bfe192dd880605c6d0cf0ab81025c091b0fa29641b9faf3bbe2d63c.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "LGPL-2.1",
+    "Confidence": 0.9313725490196079,
+    "StartLine": 6,
+    "EndLine": 18
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/d930229345111298051edf8ad3112756e0fb20f09960b9c57c2ef936bc99f019.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/d93fe9e52d31e945bdd36b98718f750bb5811e60992f73d3a8e810ffd6b83fa9.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 21,
+    "EndLine": 21
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 1,
+    "StartLine": 22,
+    "EndLine": 27
+   },
+   {
+    "Name": "BSD-4-Clause-UC",
+    "Confidence": 1,
+    "StartLine": 29,
+    "EndLine": 55
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 0.9147286821705426,
+    "StartLine": 5,
+    "EndLine": 18
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/d9a162759d7edf6b1e8c40b592853f2f6242b42533efae5d3cc3d9125fc582ca.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/da63b5790cb52fb1825f1bb25f321995381600094747b141271bb7a0e6be746b.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/dadacb6b2652c8190ce0fea99b52f3f7409ce5bef6062ca90036f68467f739ee.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 6,
+    "EndLine": 24
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/dbf96d32593261a6d4ce483096b1e7a57db48d5525e5f7008cfa31b4f6192759.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/dc9355fc160835604de46eab3b88591ed90f420831924959b94cd8e4082ef36e.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/dd89e21f967f9fde5b73e65a9da770a039ac1f35bad44333436d0bf3f61bcc95.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/deb7053ae61c43cc773fec015c75801244631df461069ba3bc07d77fc22919df.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 26
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 30,
+    "EndLine": 48
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 51,
+    "EndLine": 51
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 52,
+    "EndLine": 52
+   },
+   {
+    "Name": "BSD-4-Clause-UC",
+    "Confidence": 1,
+    "StartLine": 58,
+    "EndLine": 84
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/e1a70b7abe87c243ab37bf5cc06040025becbce5f829e21e7ac34b5c1da67ae8.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/e305e28d1811be15a1c391c047466de9a3d98aadc02e69cc73b772ec5ece9a77.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/e3b099b2749fcabfdfa0092131ca3e549dd637e2b10df7e22c70e60af412b7c8.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/e468bdf5469a2d58f99b8c53b8d8fc2c0db5a1ab5b935e42a76aa8460cb0b05a.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/e4abbfda2edc81235e004ce2f84c67f4811dd39baac1cde862cf873d10a9d45f.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 21,
+    "EndLine": 21
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 25,
+    "EndLine": 43
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 47,
+    "EndLine": 47
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9395348837209302,
+    "StartLine": 48,
+    "EndLine": 71
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 0.9147286821705426,
+    "StartLine": 5,
+    "EndLine": 18
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/e4c82b854ec22d96d4c41fabde629bd2bb08624ce44531dd47eb5c9243514595.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 4
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 6,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 121,
+    "EndLine": 121
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 122,
+    "EndLine": 122
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 123,
+    "EndLine": 123
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 124,
+    "EndLine": 124
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 125,
+    "EndLine": 125
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 126,
+    "EndLine": 126
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 135,
+    "EndLine": 135
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 138,
+    "EndLine": 138
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/e51956e2d1df628027eb2a2dbe3a13c89afabfe0733355f3b55704b0734871cc.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 5
+   },
+   {
+    "Name": "BSD-4-Clause-UC",
+    "Confidence": 1,
+    "StartLine": 8,
+    "EndLine": 34
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/e5241fe533c90b9531976bbfdc2defb6fa233178a53260b13042bb4cd4907150.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 26
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/e55ef6d6f245267e29d10107f58f118bc804b801f805778327ce2e0aac2ffd0f.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/e5d46c8360f8b402d98a2dcadf893231df667f6751739042f317a9f524c84e57.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/e793bd80a1a9469b106887af7ddd99d03ddd3f5ff11cac32d82cdf60f7b9ef03.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/e7c23973cb21891e53e8bbfb08beb434e9af35e16aadf43e21160cf3170af187.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/e8fd811243433c63a8f9cd81b4395999716048dfb11aebec2d44655864059a4f.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 26
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 27,
+    "EndLine": 27
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 1,
+    "StartLine": 28,
+    "EndLine": 33
+   },
+   {
+    "Name": "BSD-4-Clause-UC",
+    "Confidence": 1,
+    "StartLine": 35,
+    "EndLine": 61
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/e9f24f2ce8ab0dea1403c5386dfad17c1fc040251ed28d478fb01e66e32b84e2.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/ebd0d7d4c13018667dc9ce0720cfe9a651bab5da5b6c32800d7975be8ec5258f.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 26,
+    "EndLine": 26
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 30,
+    "EndLine": 48
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 51,
+    "EndLine": 51
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/ed41f03e91cdf0d43f783025060a98e5c56db5f3e1b3f98ff7ce8c8ca7cb1ac3.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/ef7d34b23814bd9dcb2b2b9ee9f0f8fcd3b56cb177e7074fb601d8d2fc1cffc3.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/f0681b3b76153a2965bc762765106cefb2ac4adb7510c49f3f055bcf6095f72b.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-4-Clause-UC",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 30
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/f28cbeeace15c1f05582f961e2a025e18d646bce08e01ba31f0c7c53f11676a9.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/f2a0d66c9061cbc9d10bfa36e064d02abf8a01e6c4be090d1c9f8ffc86ffc3bb.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/f35d604ab525b19183b022504fafa28ec7f313d9b96b4012c13e5b4f1df14b10.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/f3d0c73f67c19ed7b60b882495aa68ad4672290f6fbd6f48a245077aec4f55a5.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/f479d9e096ea837cdad41415969af3280425bd0d3443d669fffe7a2ebbb05381.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/f6cf8bf332ced4679c1c333974fb0c009a948e2f6905605f2f8dc5c831cff9a7.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/f8e70243eb86f4bea305511de3337b51e2cf334335d2125840125af5bd4894a7.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 6,
+    "EndLine": 24
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/f918948e563f1b02298d3af1bf9cfe37295e92321c86a33f163e81023fdc35ca.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/fa6714738b6fb2d6d5f0aee2544e5aa8d051ac4fbd823b3bc88a46261d4ffd66.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/fbdb8fdecaf11a4cdd2aeaca3584761479bec0c01c5d58541bb92da499ba7bb0.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/fcedda0dd602290bf163ae93745a09784c1b45cf27a92f6b1e423a47e1df9a39.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "LGPL-2.1",
+    "Confidence": 0.9313725490196079,
+    "StartLine": 6,
+    "EndLine": 18
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/fd6e19fea4dd838374062cc5e741a2a2926cf6e00eca3a42380825e334be68ed.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/fda9bf01e4bf16bf6d7c9e6991890e57bc80559b0a74bcc92426e8f0757619e6.txt",
+  "Classifications": [
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/febe1243d0f62b17dcb33cd95e97655a70fe558049ef249fb213b0dff5e4af24.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9767441860465116,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/fef977865ac0933fc1aca439b87f9710d07910691d3c623fa461c426f76e16e1.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "blessing",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/ffcf874e1787959480e7bc541ceedc15b96ee58ce73d9e47959e8bc941199073.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 4
+   },
+   {
+    "Name": "APSL-2.0",
+    "Confidence": 1,
+    "StartLine": 8,
+    "EndLine": 26
+   }
+  ]
+ }
+]

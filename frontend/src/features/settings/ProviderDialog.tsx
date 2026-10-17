@@ -1,3 +1,4 @@
+import { isDemo } from '../../demo/storage'
 import { useEffect, useRef, useState } from 'react'
 import type { ProviderConfig } from '../../backend'
 import { backend } from '../../backend'
@@ -126,7 +127,7 @@ export function ProviderDialog({ open, onClose, provider, onSaved, suggestedMode
       open={open}
       onClose={dismiss}
       title={provider ? `编辑「${provider.name}」` : '新建模型服务'}
-      description="成员通过这里配置的服务与模型说话。API Key 只保存在系统钥匙串，界面不会回显。"
+      description={isDemo ? "演示版只保存服务名称与模型配置，不接收 API Key，不连接任何模型服务。" : "成员通过这里配置的服务与模型说话。API Key 只保存在系统钥匙串，界面不会回显。"}
       width={540}
       footer={
         <>
@@ -149,7 +150,7 @@ export function ProviderDialog({ open, onClose, provider, onSaved, suggestedMode
       <Field label="名称" error={errors.name}>
         {(id) => <TextInput id={id} value={name} onChange={(e) => setName(e.target.value)} placeholder="例如：DeepSeek" autoFocus maxLength={24} />}
       </Field>
-      <Field label="类型" hint="按服务商的接口协议选择；其他兼容 OpenAI 的服务也可使用。Anthropic 选官方接口。">
+      <Field label="类型" hint={isDemo ? "演示配置不会建立真实连接，可自由切换体验表单。" : "按服务商的接口协议选择；其他兼容 OpenAI 的服务也可使用。Anthropic 选官方接口。"}>
         {() => (
           <Segmented
             label="服务类型"
@@ -162,7 +163,7 @@ export function ProviderDialog({ open, onClose, provider, onSaved, suggestedMode
           />
         )}
       </Field>
-      <Field label="服务地址" error={errors.baseUrl} hint="常用服务按钮仅供快捷填入。列表里没有的服务，也可手动填写名称和 API 地址，并选择对应的接口类型。">
+      <Field label="服务地址" error={errors.baseUrl} hint={isDemo ? "只保存地址文本，不发起网络请求。请勿输入 API Key。" : "常用服务按钮仅供快捷填入。列表里没有的服务，也可手动填写名称和 API 地址，并选择对应的接口类型。"}>
         {(id) => (
           <>
             <TextInput id={id} value={baseUrl} onChange={(e) => setBaseUrl(e.target.value)} placeholder="https://…" />
@@ -186,10 +187,10 @@ export function ProviderDialog({ open, onClose, provider, onSaved, suggestedMode
           </>
         )}
       </Field>
-      <Field label="API Key" hint={provider?.hasKey ? '已保存，留空则不修改。' : '只写入系统钥匙串，不会进入数据库。'}>
+      {!isDemo && <Field label="API Key" hint={provider?.hasKey ? '已保存，留空则不修改。' : '只写入系统钥匙串，不会进入数据库。'}>
         {(id) => <TextInput id={id} type="password" value={key} onChange={(e) => setKey(e.target.value)} placeholder={provider?.hasKey ? '已保存，留空则不修改' : '粘贴 API Key'} autoComplete="off" />}
-      </Field>
-      <Field label="测试连接" error={errors.testModel} hint="测试前填写此服务实际可用的模型名；测试会发送一个极小请求。">
+      </Field>}
+      {!isDemo && <Field label="测试连接" error={errors.testModel} hint="测试前填写此服务实际可用的模型名；测试会发送一个极小请求。">
         {(id) => (
           <>
             <div className={styles.actionsRow}>
@@ -201,7 +202,7 @@ export function ProviderDialog({ open, onClose, provider, onSaved, suggestedMode
             {test && <p className={`${styles.testLine} ${test.ok ? styles.ok : styles.bad}`} role="status" style={{ marginTop: 6 }}>{test.text}</p>}
           </>
         )}
-      </Field>
+      </Field>}
       </fieldset>
     </Dialog>
   )

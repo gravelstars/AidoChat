@@ -1,0 +1,4065 @@
+[
+  {
+    "name": "@fontsource-variable/jetbrains-mono",
+    "version": "5.3.0",
+    "installPath": "node_modules/@fontsource-variable/jetbrains-mono",
+    "dev": false,
+    "optional": false,
+    "license": "OFL-1.1",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/@fontsource-variable/jetbrains-mono/-/jetbrains-mono-5.3.0.tgz",
+    "integrity": "sha512-F32xpS2NsGYoQi2ADSkKTgpJj7ozajsGgDJ8woTnqjmIB+dxDIqImjl4pXZVEExu8UFZ2ndhmX18EBS/hdz3Lw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@fontsource-variable__jetbrains-mono@5.3.0/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "@fontsource-variable/noto-sans-sc",
+    "version": "5.3.1",
+    "installPath": "node_modules/@fontsource-variable/noto-sans-sc",
+    "dev": false,
+    "optional": false,
+    "license": "OFL-1.1",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/@fontsource-variable/noto-sans-sc/-/noto-sans-sc-5.3.1.tgz",
+    "integrity": "sha512-UB96JJ17HyD5ehEU7Em0hDdh7fvTMB4B4Hzmq5c4QaNwwSLqTrdM2S+coySeBqCkXwh0DxqXT0b0wMrmzorFpQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@fontsource-variable__noto-sans-sc@5.3.1/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "@fontsource-variable/noto-serif-sc",
+    "version": "5.3.1",
+    "installPath": "node_modules/@fontsource-variable/noto-serif-sc",
+    "dev": false,
+    "optional": false,
+    "license": "OFL-1.1",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/@fontsource-variable/noto-serif-sc/-/noto-serif-sc-5.3.1.tgz",
+    "integrity": "sha512-aIHcBaL13QctVaJFeT6wqfgO9Rq/cNtD5g2ob4ze59fYPYwacGthnIrHBe83kDpMEB/k6VGtGc6fS99RImcoSQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@fontsource-variable__noto-serif-sc@5.3.1/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "@jridgewell/resolve-uri",
+    "version": "3.1.2",
+    "installPath": "node_modules/@jridgewell/resolve-uri",
+    "dev": true,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@jridgewell/resolve-uri/-/resolve-uri-3.1.2.tgz",
+    "integrity": "sha512-bRISgCIjP20/tbWSPWMEi54QVPRZExkuD9lJL+UIxUKtwVJA8wW1Trb1jMs1RFXo1CBTNZ/5hpC9QvmKWdopKw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@jridgewell__resolve-uri@3.1.2/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "@jridgewell/sourcemap-codec",
+    "version": "1.6.0",
+    "installPath": "node_modules/@jridgewell/sourcemap-codec",
+    "dev": true,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.6.0.tgz",
+    "integrity": "sha512-T7jf+5zgsZHwNJ4lvQ7/aezbyk0nNX+zJVWpmHA7VYsEx7a7qr5Rg5IbtJFqkgze5Y2sruq1RUY8Q837Od7iFw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@jridgewell__sourcemap-codec@1.6.0/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "@jridgewell/trace-mapping",
+    "version": "0.3.31",
+    "installPath": "node_modules/@jridgewell/trace-mapping",
+    "dev": true,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@jridgewell/trace-mapping/-/trace-mapping-0.3.31.tgz",
+    "integrity": "sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@jridgewell__trace-mapping@0.3.31/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "@napi-rs/canvas",
+    "version": "1.0.11",
+    "installPath": "node_modules/@napi-rs/canvas",
+    "dev": false,
+    "optional": true,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/@napi-rs/canvas/-/canvas-1.0.11.tgz",
+    "integrity": "sha512-vt5tog1cr+QKadIddGe+3LrcX0EmjEd0izF717Uwf92mBmgYfq2XRmL2r4bZU40spB69exxhrBn9I91HYEr/7w==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@napi-rs__canvas@1.0.11/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "@napi-rs/canvas-android-arm64",
+    "version": "1.0.11",
+    "installPath": "node_modules/@napi-rs/canvas-android-arm64",
+    "dev": false,
+    "optional": true,
+    "os": [
+      "android"
+    ],
+    "cpu": [
+      "arm64"
+    ],
+    "license": "MIT",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@napi-rs/canvas-android-arm64/-/canvas-android-arm64-1.0.11.tgz",
+    "integrity": "sha512-dtJS4FQEfH9OwSYLtMrEnj7T8DzBbJc/97LI/OkiWOYpW/iW5t6R/gcxVrUXS8l45gCVpwMufgucRe/pe0ISqA==",
+    "licenseFiles": [],
+    "licenseSource": "package-lock.json metadata",
+    "relatedParentPackage": "@napi-rs/canvas",
+    "relatedLicenseFiles": [
+      "docs/licenses/texts/frontend/@napi-rs__canvas@1.0.11/LICENSE"
+    ],
+    "relatedLicenseBasis": "Same upstream repository parent package notices; this does not verify all native binary internals or cure the missing platform-package license file."
+  },
+  {
+    "name": "@napi-rs/canvas-darwin-arm64",
+    "version": "1.0.11",
+    "installPath": "node_modules/@napi-rs/canvas-darwin-arm64",
+    "dev": false,
+    "optional": true,
+    "os": [
+      "darwin"
+    ],
+    "cpu": [
+      "arm64"
+    ],
+    "license": "MIT",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@napi-rs/canvas-darwin-arm64/-/canvas-darwin-arm64-1.0.11.tgz",
+    "integrity": "sha512-J/JylWoJTG8OQqZaiqly4IODyAxNofUlZo0wtSBJtHk6AdymbdIkPynAM1JvQaZpPaG5h+msk9QuK8y4i1ooqw==",
+    "licenseFiles": [],
+    "licenseSource": "package-lock.json metadata",
+    "relatedParentPackage": "@napi-rs/canvas",
+    "relatedLicenseFiles": [
+      "docs/licenses/texts/frontend/@napi-rs__canvas@1.0.11/LICENSE"
+    ],
+    "relatedLicenseBasis": "Same upstream repository parent package notices; this does not verify all native binary internals or cure the missing platform-package license file."
+  },
+  {
+    "name": "@napi-rs/canvas-darwin-x64",
+    "version": "1.0.11",
+    "installPath": "node_modules/@napi-rs/canvas-darwin-x64",
+    "dev": false,
+    "optional": true,
+    "os": [
+      "darwin"
+    ],
+    "cpu": [
+      "x64"
+    ],
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/@napi-rs/canvas-darwin-x64/-/canvas-darwin-x64-1.0.11.tgz",
+    "integrity": "sha512-nlecCk3xy06eAGC7krZtzNDm9UNTHKuHQYK8ZYegdjzgSL8anGt/eLJZm86OWaNgZkwQwvDqfSmG8Nqe6MPZNQ==",
+    "licenseFiles": [],
+    "licenseSource": "installed-package scanner",
+    "relatedParentPackage": "@napi-rs/canvas",
+    "relatedLicenseFiles": [
+      "docs/licenses/texts/frontend/@napi-rs__canvas@1.0.11/LICENSE"
+    ],
+    "relatedLicenseBasis": "Same upstream repository parent package notices; this does not verify all native binary internals or cure the missing platform-package license file."
+  },
+  {
+    "name": "@napi-rs/canvas-linux-arm-gnueabihf",
+    "version": "1.0.11",
+    "installPath": "node_modules/@napi-rs/canvas-linux-arm-gnueabihf",
+    "dev": false,
+    "optional": true,
+    "os": [
+      "linux"
+    ],
+    "cpu": [
+      "arm"
+    ],
+    "license": "MIT",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@napi-rs/canvas-linux-arm-gnueabihf/-/canvas-linux-arm-gnueabihf-1.0.11.tgz",
+    "integrity": "sha512-DKImmG+sTPolE0kGPsYPBxTtOjb3INALp32O2lW2CfSr0bAzSEKKuu+GrQbtilClyoPOahUErS3OrznFDraoWA==",
+    "licenseFiles": [],
+    "licenseSource": "package-lock.json metadata",
+    "relatedParentPackage": "@napi-rs/canvas",
+    "relatedLicenseFiles": [
+      "docs/licenses/texts/frontend/@napi-rs__canvas@1.0.11/LICENSE"
+    ],
+    "relatedLicenseBasis": "Same upstream repository parent package notices; this does not verify all native binary internals or cure the missing platform-package license file."
+  },
+  {
+    "name": "@napi-rs/canvas-linux-arm64-gnu",
+    "version": "1.0.11",
+    "installPath": "node_modules/@napi-rs/canvas-linux-arm64-gnu",
+    "dev": false,
+    "optional": true,
+    "os": [
+      "linux"
+    ],
+    "cpu": [
+      "arm64"
+    ],
+    "license": "MIT",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@napi-rs/canvas-linux-arm64-gnu/-/canvas-linux-arm64-gnu-1.0.11.tgz",
+    "integrity": "sha512-55sykACGENj5j1rhj+81AO8JbR9HYgGjRZ7/H+pNr4VE1DvINKYNMTcutk8ZmWxk276jAQvUKJ3+Kdj9GXU3lQ==",
+    "licenseFiles": [],
+    "licenseSource": "package-lock.json metadata",
+    "relatedParentPackage": "@napi-rs/canvas",
+    "relatedLicenseFiles": [
+      "docs/licenses/texts/frontend/@napi-rs__canvas@1.0.11/LICENSE"
+    ],
+    "relatedLicenseBasis": "Same upstream repository parent package notices; this does not verify all native binary internals or cure the missing platform-package license file."
+  },
+  {
+    "name": "@napi-rs/canvas-linux-arm64-musl",
+    "version": "1.0.11",
+    "installPath": "node_modules/@napi-rs/canvas-linux-arm64-musl",
+    "dev": false,
+    "optional": true,
+    "os": [
+      "linux"
+    ],
+    "cpu": [
+      "arm64"
+    ],
+    "license": "MIT",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@napi-rs/canvas-linux-arm64-musl/-/canvas-linux-arm64-musl-1.0.11.tgz",
+    "integrity": "sha512-6Jz6jys17yXydO+WdJgu7JhoB4K7/w9sWHByzzTmLjQghUx3TDMWvLv+UcCdnWhg4oprET67EMymnrETdeGNAg==",
+    "licenseFiles": [],
+    "licenseSource": "package-lock.json metadata",
+    "relatedParentPackage": "@napi-rs/canvas",
+    "relatedLicenseFiles": [
+      "docs/licenses/texts/frontend/@napi-rs__canvas@1.0.11/LICENSE"
+    ],
+    "relatedLicenseBasis": "Same upstream repository parent package notices; this does not verify all native binary internals or cure the missing platform-package license file."
+  },
+  {
+    "name": "@napi-rs/canvas-linux-riscv64-gnu",
+    "version": "1.0.11",
+    "installPath": "node_modules/@napi-rs/canvas-linux-riscv64-gnu",
+    "dev": false,
+    "optional": true,
+    "os": [
+      "linux"
+    ],
+    "cpu": [
+      "riscv64"
+    ],
+    "license": "MIT",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@napi-rs/canvas-linux-riscv64-gnu/-/canvas-linux-riscv64-gnu-1.0.11.tgz",
+    "integrity": "sha512-lf2XeEebWiUYVOVEjLXxF7dfXrBBSEOBn9AqBh39VYXrPt5cDqI+1t58IFSjn8npqkg5jIOs8TQbjKABbFW1gQ==",
+    "licenseFiles": [],
+    "licenseSource": "package-lock.json metadata",
+    "relatedParentPackage": "@napi-rs/canvas",
+    "relatedLicenseFiles": [
+      "docs/licenses/texts/frontend/@napi-rs__canvas@1.0.11/LICENSE"
+    ],
+    "relatedLicenseBasis": "Same upstream repository parent package notices; this does not verify all native binary internals or cure the missing platform-package license file."
+  },
+  {
+    "name": "@napi-rs/canvas-linux-x64-gnu",
+    "version": "1.0.11",
+    "installPath": "node_modules/@napi-rs/canvas-linux-x64-gnu",
+    "dev": false,
+    "optional": true,
+    "os": [
+      "linux"
+    ],
+    "cpu": [
+      "x64"
+    ],
+    "license": "MIT",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@napi-rs/canvas-linux-x64-gnu/-/canvas-linux-x64-gnu-1.0.11.tgz",
+    "integrity": "sha512-iDapw7nFSE5tsmQxcH2+KotJhyfVPmHd6vUOQN/Em+8WNbkZJwJ/rDowlJMFnMl0SYSDSfgKCNUGi6Sn5++Smg==",
+    "licenseFiles": [],
+    "licenseSource": "package-lock.json metadata",
+    "relatedParentPackage": "@napi-rs/canvas",
+    "relatedLicenseFiles": [
+      "docs/licenses/texts/frontend/@napi-rs__canvas@1.0.11/LICENSE"
+    ],
+    "relatedLicenseBasis": "Same upstream repository parent package notices; this does not verify all native binary internals or cure the missing platform-package license file."
+  },
+  {
+    "name": "@napi-rs/canvas-linux-x64-musl",
+    "version": "1.0.11",
+    "installPath": "node_modules/@napi-rs/canvas-linux-x64-musl",
+    "dev": false,
+    "optional": true,
+    "os": [
+      "linux"
+    ],
+    "cpu": [
+      "x64"
+    ],
+    "license": "MIT",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@napi-rs/canvas-linux-x64-musl/-/canvas-linux-x64-musl-1.0.11.tgz",
+    "integrity": "sha512-26q26AyITo3CGZX4HWFIMgBMA1lu3YN07gxzBm4tW6Hglq/OVyTP50kDrmWuKybCX6dh3m8Ly+c7YhI+sqCgCQ==",
+    "licenseFiles": [],
+    "licenseSource": "package-lock.json metadata",
+    "relatedParentPackage": "@napi-rs/canvas",
+    "relatedLicenseFiles": [
+      "docs/licenses/texts/frontend/@napi-rs__canvas@1.0.11/LICENSE"
+    ],
+    "relatedLicenseBasis": "Same upstream repository parent package notices; this does not verify all native binary internals or cure the missing platform-package license file."
+  },
+  {
+    "name": "@napi-rs/canvas-win32-arm64-msvc",
+    "version": "1.0.11",
+    "installPath": "node_modules/@napi-rs/canvas-win32-arm64-msvc",
+    "dev": false,
+    "optional": true,
+    "os": [
+      "win32"
+    ],
+    "cpu": [
+      "arm64"
+    ],
+    "license": "MIT",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@napi-rs/canvas-win32-arm64-msvc/-/canvas-win32-arm64-msvc-1.0.11.tgz",
+    "integrity": "sha512-cUO96IdsfvIj2S+2PNcDSkTcLhjPj8pIOEWRV1Kj70MOP4wnE9zSk7N4C1EKHlFGRcgdR5AkbnBZj0dfHK9nbQ==",
+    "licenseFiles": [],
+    "licenseSource": "package-lock.json metadata",
+    "relatedParentPackage": "@napi-rs/canvas",
+    "relatedLicenseFiles": [
+      "docs/licenses/texts/frontend/@napi-rs__canvas@1.0.11/LICENSE"
+    ],
+    "relatedLicenseBasis": "Same upstream repository parent package notices; this does not verify all native binary internals or cure the missing platform-package license file."
+  },
+  {
+    "name": "@napi-rs/canvas-win32-x64-msvc",
+    "version": "1.0.11",
+    "installPath": "node_modules/@napi-rs/canvas-win32-x64-msvc",
+    "dev": false,
+    "optional": true,
+    "os": [
+      "win32"
+    ],
+    "cpu": [
+      "x64"
+    ],
+    "license": "MIT",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@napi-rs/canvas-win32-x64-msvc/-/canvas-win32-x64-msvc-1.0.11.tgz",
+    "integrity": "sha512-DFYp/ZQRdKunI/LPc0UkRXG1vlNjJKOJf8O8Ctb8+wm2Nt2ELg9Eamc31D2VoakkfGo8L+z0Iejz6WtFbQwyGw==",
+    "licenseFiles": [],
+    "licenseSource": "package-lock.json metadata",
+    "relatedParentPackage": "@napi-rs/canvas",
+    "relatedLicenseFiles": [
+      "docs/licenses/texts/frontend/@napi-rs__canvas@1.0.11/LICENSE"
+    ],
+    "relatedLicenseBasis": "Same upstream repository parent package notices; this does not verify all native binary internals or cure the missing platform-package license file."
+  },
+  {
+    "name": "@oxc-project/types",
+    "version": "0.154.0",
+    "installPath": "node_modules/@oxc-project/types",
+    "dev": true,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@oxc-project/types/-/types-0.154.0.tgz",
+    "integrity": "sha512-KYOUGQFlLWR+s4QMV2Q9ko38TZm7EdO87Qm7rvZLqk/webse/cDjtyxKhg/47l0byCbs/k46LT8qc4PKjAikzA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@oxc-project__types@0.154.0/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "@rolldown/binding-android-arm-eabi",
+    "version": "1.2.14",
+    "installPath": "node_modules/@rolldown/binding-android-arm-eabi",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "android"
+    ],
+    "cpu": [
+      "arm"
+    ],
+    "license": "MIT",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@rolldown/binding-android-arm-eabi/-/binding-android-arm-eabi-1.2.14.tgz",
+    "integrity": "sha512-aWR+XKH9+rW7m5fWq/5360J3mHycrx/o6xZM2DQFdJnTMdyP7/WzxPjhtLbVWdKo2y612/4U1bWqb3HQhiF7vg==",
+    "licenseFiles": [],
+    "licenseSource": "package-lock.json metadata",
+    "relatedParentPackage": "rolldown",
+    "relatedLicenseFiles": [
+      "docs/licenses/texts/frontend/rolldown@1.2.14/LICENSE",
+      "docs/licenses/texts/frontend/rolldown@1.2.14/THIRD-PARTY-LICENSE"
+    ],
+    "relatedLicenseBasis": "Same upstream repository parent package notices; this does not verify all native binary internals or cure the missing platform-package license file."
+  },
+  {
+    "name": "@rolldown/binding-android-arm64",
+    "version": "1.2.14",
+    "installPath": "node_modules/@rolldown/binding-android-arm64",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "android"
+    ],
+    "cpu": [
+      "arm64"
+    ],
+    "license": "MIT",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@rolldown/binding-android-arm64/-/binding-android-arm64-1.2.14.tgz",
+    "integrity": "sha512-QiVxHofl6A8lQU7WAtOUY4QMVZXohxwz7WJJoeh8NBEUyKfIkMRKhYyq8az/1RypNiIXzNTtiS6KwHz0erxYRQ==",
+    "licenseFiles": [],
+    "licenseSource": "package-lock.json metadata",
+    "relatedParentPackage": "rolldown",
+    "relatedLicenseFiles": [
+      "docs/licenses/texts/frontend/rolldown@1.2.14/LICENSE",
+      "docs/licenses/texts/frontend/rolldown@1.2.14/THIRD-PARTY-LICENSE"
+    ],
+    "relatedLicenseBasis": "Same upstream repository parent package notices; this does not verify all native binary internals or cure the missing platform-package license file."
+  },
+  {
+    "name": "@rolldown/binding-darwin-arm64",
+    "version": "1.2.14",
+    "installPath": "node_modules/@rolldown/binding-darwin-arm64",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "darwin"
+    ],
+    "cpu": [
+      "arm64"
+    ],
+    "license": "MIT",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@rolldown/binding-darwin-arm64/-/binding-darwin-arm64-1.2.14.tgz",
+    "integrity": "sha512-lTQOzHuBIooh3jIr5XINQkjPGEuGy+Dsy0meXDr6Sjty0b99kYgGh4uBC/8mJX1T0kC8d6S0aPP1Y+bHkh6aBw==",
+    "licenseFiles": [],
+    "licenseSource": "package-lock.json metadata",
+    "relatedParentPackage": "rolldown",
+    "relatedLicenseFiles": [
+      "docs/licenses/texts/frontend/rolldown@1.2.14/LICENSE",
+      "docs/licenses/texts/frontend/rolldown@1.2.14/THIRD-PARTY-LICENSE"
+    ],
+    "relatedLicenseBasis": "Same upstream repository parent package notices; this does not verify all native binary internals or cure the missing platform-package license file."
+  },
+  {
+    "name": "@rolldown/binding-darwin-x64",
+    "version": "1.2.14",
+    "installPath": "node_modules/@rolldown/binding-darwin-x64",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "darwin"
+    ],
+    "cpu": [
+      "x64"
+    ],
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@rolldown/binding-darwin-x64/-/binding-darwin-x64-1.2.14.tgz",
+    "integrity": "sha512-hyMKEGatjmBYCs/Q4sbIcL/GqpFEqsX3wc+HYVQ/85A4rxc1o7rPm4DUI4GV4k/h0ITddwFSGpqQunI14GXjTA==",
+    "licenseFiles": [],
+    "licenseSource": "installed-package scanner",
+    "relatedParentPackage": "rolldown",
+    "relatedLicenseFiles": [
+      "docs/licenses/texts/frontend/rolldown@1.2.14/LICENSE",
+      "docs/licenses/texts/frontend/rolldown@1.2.14/THIRD-PARTY-LICENSE"
+    ],
+    "relatedLicenseBasis": "Same upstream repository parent package notices; this does not verify all native binary internals or cure the missing platform-package license file."
+  },
+  {
+    "name": "@rolldown/binding-freebsd-x64",
+    "version": "1.2.14",
+    "installPath": "node_modules/@rolldown/binding-freebsd-x64",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "freebsd"
+    ],
+    "cpu": [
+      "x64"
+    ],
+    "license": "MIT",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@rolldown/binding-freebsd-x64/-/binding-freebsd-x64-1.2.14.tgz",
+    "integrity": "sha512-u371GbXoVXrEgP20PwzoGNOdAOqAMhzo19JzzY+V4YmmnC+DTOoqdbMu+O+54emM59Mik/UdrtWgcuEDKWRPKA==",
+    "licenseFiles": [],
+    "licenseSource": "package-lock.json metadata",
+    "relatedParentPackage": "rolldown",
+    "relatedLicenseFiles": [
+      "docs/licenses/texts/frontend/rolldown@1.2.14/LICENSE",
+      "docs/licenses/texts/frontend/rolldown@1.2.14/THIRD-PARTY-LICENSE"
+    ],
+    "relatedLicenseBasis": "Same upstream repository parent package notices; this does not verify all native binary internals or cure the missing platform-package license file."
+  },
+  {
+    "name": "@rolldown/binding-linux-arm-gnueabihf",
+    "version": "1.2.14",
+    "installPath": "node_modules/@rolldown/binding-linux-arm-gnueabihf",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "linux"
+    ],
+    "cpu": [
+      "arm"
+    ],
+    "license": "MIT",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@rolldown/binding-linux-arm-gnueabihf/-/binding-linux-arm-gnueabihf-1.2.14.tgz",
+    "integrity": "sha512-BqwKsdZQf6EqVWr8fv2MrDYzAvOZ7+NYFSJESRGs87fkseEhs0TU9TXgRJTkZoRRkxTizyEg1LKUXfU3/78uqg==",
+    "licenseFiles": [],
+    "licenseSource": "package-lock.json metadata",
+    "relatedParentPackage": "rolldown",
+    "relatedLicenseFiles": [
+      "docs/licenses/texts/frontend/rolldown@1.2.14/LICENSE",
+      "docs/licenses/texts/frontend/rolldown@1.2.14/THIRD-PARTY-LICENSE"
+    ],
+    "relatedLicenseBasis": "Same upstream repository parent package notices; this does not verify all native binary internals or cure the missing platform-package license file."
+  },
+  {
+    "name": "@rolldown/binding-linux-arm64-gnu",
+    "version": "1.2.14",
+    "installPath": "node_modules/@rolldown/binding-linux-arm64-gnu",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "linux"
+    ],
+    "cpu": [
+      "arm64"
+    ],
+    "license": "MIT",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@rolldown/binding-linux-arm64-gnu/-/binding-linux-arm64-gnu-1.2.14.tgz",
+    "integrity": "sha512-SD9kY8M009x/7s57Z1dgUVlP5+uYBgKQK0Tkr1WIWngrtUJmRCW1RJFMY7QDla2khXhmg2i5Io7MUjcmZNZ/KQ==",
+    "licenseFiles": [],
+    "licenseSource": "package-lock.json metadata",
+    "relatedParentPackage": "rolldown",
+    "relatedLicenseFiles": [
+      "docs/licenses/texts/frontend/rolldown@1.2.14/LICENSE",
+      "docs/licenses/texts/frontend/rolldown@1.2.14/THIRD-PARTY-LICENSE"
+    ],
+    "relatedLicenseBasis": "Same upstream repository parent package notices; this does not verify all native binary internals or cure the missing platform-package license file."
+  },
+  {
+    "name": "@rolldown/binding-linux-arm64-musl",
+    "version": "1.2.14",
+    "installPath": "node_modules/@rolldown/binding-linux-arm64-musl",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "linux"
+    ],
+    "cpu": [
+      "arm64"
+    ],
+    "license": "MIT",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@rolldown/binding-linux-arm64-musl/-/binding-linux-arm64-musl-1.2.14.tgz",
+    "integrity": "sha512-BJ2CL19M6uuWesMgnqJzgxoI+N+eV7b0A9O9vLV42y+gitC41fNa8KElau1tHVzuLWX5GzEuxMPhAO0tQXQMkg==",
+    "licenseFiles": [],
+    "licenseSource": "package-lock.json metadata",
+    "relatedParentPackage": "rolldown",
+    "relatedLicenseFiles": [
+      "docs/licenses/texts/frontend/rolldown@1.2.14/LICENSE",
+      "docs/licenses/texts/frontend/rolldown@1.2.14/THIRD-PARTY-LICENSE"
+    ],
+    "relatedLicenseBasis": "Same upstream repository parent package notices; this does not verify all native binary internals or cure the missing platform-package license file."
+  },
+  {
+    "name": "@rolldown/binding-linux-ppc64-gnu",
+    "version": "1.2.14",
+    "installPath": "node_modules/@rolldown/binding-linux-ppc64-gnu",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "linux"
+    ],
+    "cpu": [
+      "ppc64"
+    ],
+    "license": "MIT",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@rolldown/binding-linux-ppc64-gnu/-/binding-linux-ppc64-gnu-1.2.14.tgz",
+    "integrity": "sha512-4+Kl8daPV8NDHaD7mfCcc1pRM+Qg7ab8DyMm5FG5WoZgv4h2i3KFN1CybYBNbQqmuYm7ftJLvmMI1eHYJ22S/Q==",
+    "licenseFiles": [],
+    "licenseSource": "package-lock.json metadata",
+    "relatedParentPackage": "rolldown",
+    "relatedLicenseFiles": [
+      "docs/licenses/texts/frontend/rolldown@1.2.14/LICENSE",
+      "docs/licenses/texts/frontend/rolldown@1.2.14/THIRD-PARTY-LICENSE"
+    ],
+    "relatedLicenseBasis": "Same upstream repository parent package notices; this does not verify all native binary internals or cure the missing platform-package license file."
+  },
+  {
+    "name": "@rolldown/binding-linux-s390x-gnu",
+    "version": "1.2.14",
+    "installPath": "node_modules/@rolldown/binding-linux-s390x-gnu",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "linux"
+    ],
+    "cpu": [
+      "s390x"
+    ],
+    "license": "MIT",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@rolldown/binding-linux-s390x-gnu/-/binding-linux-s390x-gnu-1.2.14.tgz",
+    "integrity": "sha512-V/h8ePq1fKDrmtFMz6xcCN3DKvuvMRrwwD1q0PkBeeo4DpK64biaKvqWGVxqCeYKqeRk7gE7/iKPxLCn08O97A==",
+    "licenseFiles": [],
+    "licenseSource": "package-lock.json metadata",
+    "relatedParentPackage": "rolldown",
+    "relatedLicenseFiles": [
+      "docs/licenses/texts/frontend/rolldown@1.2.14/LICENSE",
+      "docs/licenses/texts/frontend/rolldown@1.2.14/THIRD-PARTY-LICENSE"
+    ],
+    "relatedLicenseBasis": "Same upstream repository parent package notices; this does not verify all native binary internals or cure the missing platform-package license file."
+  },
+  {
+    "name": "@rolldown/binding-linux-x64-gnu",
+    "version": "1.2.14",
+    "installPath": "node_modules/@rolldown/binding-linux-x64-gnu",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "linux"
+    ],
+    "cpu": [
+      "x64"
+    ],
+    "license": "MIT",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@rolldown/binding-linux-x64-gnu/-/binding-linux-x64-gnu-1.2.14.tgz",
+    "integrity": "sha512-WxalXzgrLVpKC93xfpaJ3gCXUWzeCr+FRCbDVD2mUAy4L6Vo3lNVz0epUEUpxPWJkLNYUwM4OSIikv36OJ9mLg==",
+    "licenseFiles": [],
+    "licenseSource": "package-lock.json metadata",
+    "relatedParentPackage": "rolldown",
+    "relatedLicenseFiles": [
+      "docs/licenses/texts/frontend/rolldown@1.2.14/LICENSE",
+      "docs/licenses/texts/frontend/rolldown@1.2.14/THIRD-PARTY-LICENSE"
+    ],
+    "relatedLicenseBasis": "Same upstream repository parent package notices; this does not verify all native binary internals or cure the missing platform-package license file."
+  },
+  {
+    "name": "@rolldown/binding-linux-x64-musl",
+    "version": "1.2.14",
+    "installPath": "node_modules/@rolldown/binding-linux-x64-musl",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "linux"
+    ],
+    "cpu": [
+      "x64"
+    ],
+    "license": "MIT",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@rolldown/binding-linux-x64-musl/-/binding-linux-x64-musl-1.2.14.tgz",
+    "integrity": "sha512-3G3tnAmTpdk9jO3GQtyHXqeFD2SlecfTws/Y3M2mmj9nMBwwuLT4kur8sZKeu7ENUHSpVO3cIsm5A52LEWWwlg==",
+    "licenseFiles": [],
+    "licenseSource": "package-lock.json metadata",
+    "relatedParentPackage": "rolldown",
+    "relatedLicenseFiles": [
+      "docs/licenses/texts/frontend/rolldown@1.2.14/LICENSE",
+      "docs/licenses/texts/frontend/rolldown@1.2.14/THIRD-PARTY-LICENSE"
+    ],
+    "relatedLicenseBasis": "Same upstream repository parent package notices; this does not verify all native binary internals or cure the missing platform-package license file."
+  },
+  {
+    "name": "@rolldown/binding-openharmony-arm64",
+    "version": "1.2.14",
+    "installPath": "node_modules/@rolldown/binding-openharmony-arm64",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "openharmony"
+    ],
+    "cpu": [
+      "arm64"
+    ],
+    "license": "MIT",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@rolldown/binding-openharmony-arm64/-/binding-openharmony-arm64-1.2.14.tgz",
+    "integrity": "sha512-qyr5XiNGxm2ytx17vvtcJ9nXn6v1gENETi503bJx3OGwZ1tSonj7BosxbMa/xeAfSl5iS9X6KjEWYXLu6v1L7Q==",
+    "licenseFiles": [],
+    "licenseSource": "package-lock.json metadata",
+    "relatedParentPackage": "rolldown",
+    "relatedLicenseFiles": [
+      "docs/licenses/texts/frontend/rolldown@1.2.14/LICENSE",
+      "docs/licenses/texts/frontend/rolldown@1.2.14/THIRD-PARTY-LICENSE"
+    ],
+    "relatedLicenseBasis": "Same upstream repository parent package notices; this does not verify all native binary internals or cure the missing platform-package license file."
+  },
+  {
+    "name": "@rolldown/binding-win32-arm64-msvc",
+    "version": "1.2.14",
+    "installPath": "node_modules/@rolldown/binding-win32-arm64-msvc",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "win32"
+    ],
+    "cpu": [
+      "arm64"
+    ],
+    "license": "MIT",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@rolldown/binding-win32-arm64-msvc/-/binding-win32-arm64-msvc-1.2.14.tgz",
+    "integrity": "sha512-oA4o5o0S2yB199YyYXDzKUv1Z56Rc+mgOjwm7Z/vJ9Z8igiDPYvoOuDyo6g7AK/ZaF09nPhDKVnGBcYHO11GXA==",
+    "licenseFiles": [],
+    "licenseSource": "package-lock.json metadata",
+    "relatedParentPackage": "rolldown",
+    "relatedLicenseFiles": [
+      "docs/licenses/texts/frontend/rolldown@1.2.14/LICENSE",
+      "docs/licenses/texts/frontend/rolldown@1.2.14/THIRD-PARTY-LICENSE"
+    ],
+    "relatedLicenseBasis": "Same upstream repository parent package notices; this does not verify all native binary internals or cure the missing platform-package license file."
+  },
+  {
+    "name": "@rolldown/binding-win32-x64-msvc",
+    "version": "1.2.14",
+    "installPath": "node_modules/@rolldown/binding-win32-x64-msvc",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "win32"
+    ],
+    "cpu": [
+      "x64"
+    ],
+    "license": "MIT",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@rolldown/binding-win32-x64-msvc/-/binding-win32-x64-msvc-1.2.14.tgz",
+    "integrity": "sha512-9mE94bf2GZUaR/fUSXCMpBoWkctu421Mi0ORpm4zqfbkjKep7RxzPFa5etcGs5h+2KApoWBOA/hAJa/7saGgEQ==",
+    "licenseFiles": [],
+    "licenseSource": "package-lock.json metadata",
+    "relatedParentPackage": "rolldown",
+    "relatedLicenseFiles": [
+      "docs/licenses/texts/frontend/rolldown@1.2.14/LICENSE",
+      "docs/licenses/texts/frontend/rolldown@1.2.14/THIRD-PARTY-LICENSE"
+    ],
+    "relatedLicenseBasis": "Same upstream repository parent package notices; this does not verify all native binary internals or cure the missing platform-package license file."
+  },
+  {
+    "name": "@rolldown/pluginutils",
+    "version": "1.0.1",
+    "installPath": "node_modules/@rolldown/pluginutils",
+    "dev": true,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@rolldown/pluginutils/-/pluginutils-1.0.1.tgz",
+    "integrity": "sha512-2j9bGt5Jh8hj+vPtgzPtl72j0yRxHAyumoo6TNfAjsLB04UtpSvPbPcDcBMxz7n+9CYB0c1GxQFxYRg2jimqGw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@rolldown__pluginutils@1.0.1/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "@shikijs/core",
+    "version": "4.5.0",
+    "installPath": "node_modules/@shikijs/core",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/@shikijs/core/-/core-4.5.0.tgz",
+    "integrity": "sha512-6CIgwq+bt2JZ3OSjb/nBkkwEf/CfpHcbam+Mg5Pllco7HAGRQ2/EFhZrrJtbyNTgKwknfVS+llsXGygiDGwJWw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@shikijs__core@4.5.0/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "@shikijs/engine-javascript",
+    "version": "4.5.0",
+    "installPath": "node_modules/@shikijs/engine-javascript",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/@shikijs/engine-javascript/-/engine-javascript-4.5.0.tgz",
+    "integrity": "sha512-Ed6UdEj84LyYkwnxM5CvSMWAD+id9ExTYri0/+x41U9zrgNifPSS9lZm0JqBP0VfYI8yr8tY5nbNq9+p9R0kFA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@shikijs__engine-javascript@4.5.0/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "@shikijs/engine-oniguruma",
+    "version": "4.5.0",
+    "installPath": "node_modules/@shikijs/engine-oniguruma",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/@shikijs/engine-oniguruma/-/engine-oniguruma-4.5.0.tgz",
+    "integrity": "sha512-dKVmbJecVdB9recl8a/CU4jdpNXyjJQrIcesIkpS70s5HS02ohpnCSpMUbotPnEUzbAcLQ+S4hwZYbkBBiTcJw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@shikijs__engine-oniguruma@4.5.0/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "@shikijs/langs",
+    "version": "4.5.0",
+    "installPath": "node_modules/@shikijs/langs",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/@shikijs/langs/-/langs-4.5.0.tgz",
+    "integrity": "sha512-wwBTqwduXSz0X4v9Qa2EWeFaYJEw1clCncWjoRNQRbVDu3SPRTRWucnouYapKj3b8Q+sk/41Vbc4B5c8nuYzLA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@shikijs__langs@4.5.0/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "@shikijs/primitive",
+    "version": "4.5.0",
+    "installPath": "node_modules/@shikijs/primitive",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/@shikijs/primitive/-/primitive-4.5.0.tgz",
+    "integrity": "sha512-UM7ShlA8oz0OWxLLO8BmO9Ip6fVqdkt8yF0EH7nOCqHfrx1eEAzF0ZUVK7L+I8NEgeu1PEWSRlxaiPPeCb4iDg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@shikijs__primitive@4.5.0/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "@shikijs/themes",
+    "version": "4.5.0",
+    "installPath": "node_modules/@shikijs/themes",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/@shikijs/themes/-/themes-4.5.0.tgz",
+    "integrity": "sha512-zGb87H3UBbpuI4yoh5UguB1XbU+2BDU3kflM7UfZ+Cy2hWo9lBtqjSVK20gmLY6ukYl040hAypGXMgud9vul8Q==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@shikijs__themes@4.5.0/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "@shikijs/types",
+    "version": "4.5.0",
+    "installPath": "node_modules/@shikijs/types",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/@shikijs/types/-/types-4.5.0.tgz",
+    "integrity": "sha512-drtPrtD8N0DENyD2cyt6Ajy+IWsiCLgMxODwLTpvH1UsN6a9jf90tNTPjqwHvA+0Lzu9e0txk8DjfqH1p9UJRw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@shikijs__types@4.5.0/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "@shikijs/vscode-textmate",
+    "version": "10.0.2",
+    "installPath": "node_modules/@shikijs/vscode-textmate",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/@shikijs/vscode-textmate/-/vscode-textmate-10.0.2.tgz",
+    "integrity": "sha512-83yeghZ2xxin3Nj8z1NMd/NCuca+gsYXswywDy5bHvwlWL8tpTQmzGeUuHd9FC3E/SBEMvzJRwWEOz5gGes9Qg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@shikijs__vscode-textmate@10.0.2/LICENSE.md"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "@types/chai",
+    "version": "5.2.3",
+    "installPath": "node_modules/@types/chai",
+    "dev": true,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@types/chai/-/chai-5.2.3.tgz",
+    "integrity": "sha512-Mw558oeA9fFbv65/y4mHtXDs9bPnFMZAL/jxdPFUpOHHIXX91mcgEHbS5Lahr+pwZFR8A7GQleRWeI6cGFC2UA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@types__chai@5.2.3/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "@types/debug",
+    "version": "4.1.13",
+    "installPath": "node_modules/@types/debug",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/@types/debug/-/debug-4.1.13.tgz",
+    "integrity": "sha512-KSVgmQmzMwPlmtljOomayoR89W4FynCAi3E8PPs7vmDVPe84hT+vGPKkJfThkmXs0x0jAaa9U8uW8bbfyS2fWw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@types__debug@4.1.13/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "@types/deep-eql",
+    "version": "4.0.2",
+    "installPath": "node_modules/@types/deep-eql",
+    "dev": true,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@types/deep-eql/-/deep-eql-4.0.2.tgz",
+    "integrity": "sha512-c9h9dVVMigMPc4bwTvC5dxqtqJZwQPePsWjPlpSOnojbor6pGqdk541lfA7AqFQr5pB1BRdq0juY9db81BwyFw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@types__deep-eql@4.0.2/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "@types/estree",
+    "version": "1.0.9",
+    "installPath": "node_modules/@types/estree",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/@types/estree/-/estree-1.0.9.tgz",
+    "integrity": "sha512-GhdPgy1el4/ImP05X05Uw4cw2/M93BCUmnEvWZNStlCzEKME4Fkk+YpoA5OiHNQmoS7Cafb8Xa3Pya8m1Qrzeg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@types__estree@1.0.9/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "@types/estree-jsx",
+    "version": "1.0.5",
+    "installPath": "node_modules/@types/estree-jsx",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/@types/estree-jsx/-/estree-jsx-1.0.5.tgz",
+    "integrity": "sha512-52CcUVNFyfb1A2ALocQw/Dd1BQFNmSdkuC3BkZ6iqhdMfQz7JWOFRuJFloOzjk+6WijU56m9oKXFAXc7o3Towg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@types__estree-jsx@1.0.5/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "@types/hast",
+    "version": "3.0.5",
+    "installPath": "node_modules/@types/hast",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/@types/hast/-/hast-3.0.5.tgz",
+    "integrity": "sha512-rp/ezSWaD1m44dPKICGhiskI13nVr7qTloFwDa/IYkhhf5nzwP+zIQcIJh3WIFSBOy/H1PzB40jPjMDksN4F+g==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@types__hast@3.0.5/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "@types/mdast",
+    "version": "4.0.4",
+    "installPath": "node_modules/@types/mdast",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/@types/mdast/-/mdast-4.0.4.tgz",
+    "integrity": "sha512-kGaNbPh1k7AFzgpud/gMdvIm5xuECykRR+JnWKQno9TAXVa6WIVCGTPvYGekIDL4uwCZQSYbUxNBSb1aUo79oA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@types__mdast@4.0.4/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "@types/ms",
+    "version": "2.1.0",
+    "installPath": "node_modules/@types/ms",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/@types/ms/-/ms-2.1.0.tgz",
+    "integrity": "sha512-GsCCIZDE/p3i96vtEqx+7dBUGXrc7zeSK3wwPHIaRThS+9OhWIXRqzs4d6k1SVU8g91DrNRWxWUGhp5KXQb2VA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@types__ms@2.1.0/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "@types/react",
+    "version": "19.3.0",
+    "installPath": "node_modules/@types/react",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/@types/react/-/react-19.3.0.tgz",
+    "integrity": "sha512-N0rFCuH9YoxG9/m61l9MfpJKfmLOVU0em7ipIz6TRgSSkvReLB9vL85GB+yr8Bs5leqpvg96JSwF4ZS1s4viQg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@types__react@19.3.0/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "@types/react-dom",
+    "version": "19.3.0",
+    "installPath": "node_modules/@types/react-dom",
+    "dev": true,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@types/react-dom/-/react-dom-19.3.0.tgz",
+    "integrity": "sha512-ZI7bU42mZXXKHn/qNLEw2IrbiINU7X5+vfgdixBHkCNpYWXjKgfQ/P+uyGb5CjOLB9UcnTeg3rylQtV2hym44Q==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@types__react-dom@19.3.0/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "@types/unist",
+    "version": "3.0.3",
+    "installPath": "node_modules/@types/unist",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/@types/unist/-/unist-3.0.3.tgz",
+    "integrity": "sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@types__unist@3.0.3/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "@typescript/typescript-aix-ppc64",
+    "version": "7.0.2",
+    "installPath": "node_modules/@typescript/typescript-aix-ppc64",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "aix"
+    ],
+    "cpu": [
+      "ppc64"
+    ],
+    "license": "Apache-2.0",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@typescript/typescript-aix-ppc64/-/typescript-aix-ppc64-7.0.2.tgz",
+    "integrity": "sha512-MTKKkWB7p/0E9xi1d1tHtZ5PiLkGEMIq88pK2CubZjOsLtYTLqhgIgi6zepFa+9GHZ6h05NMCkQxGKiPXMxXtQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@typescript__typescript-aix-ppc64@7.0.2/LICENSE",
+      "docs/licenses/texts/frontend/@typescript__typescript-aix-ppc64@7.0.2/NOTICE.txt"
+    ],
+    "licenseSource": "package-lock.json metadata"
+  },
+  {
+    "name": "@typescript/typescript-darwin-arm64",
+    "version": "7.0.2",
+    "installPath": "node_modules/@typescript/typescript-darwin-arm64",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "darwin"
+    ],
+    "cpu": [
+      "arm64"
+    ],
+    "license": "Apache-2.0",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@typescript/typescript-darwin-arm64/-/typescript-darwin-arm64-7.0.2.tgz",
+    "integrity": "sha512-gowzar9MwS/aRWp6f3a4KUqzRjAZjOsmGNCM6LcTgXum+dBfgsBVMN+AgvOCCbguXyick6LJhpBszxMebJ8syA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@typescript__typescript-darwin-arm64@7.0.2/LICENSE",
+      "docs/licenses/texts/frontend/@typescript__typescript-darwin-arm64@7.0.2/NOTICE.txt"
+    ],
+    "licenseSource": "package-lock.json metadata"
+  },
+  {
+    "name": "@typescript/typescript-darwin-x64",
+    "version": "7.0.2",
+    "installPath": "node_modules/@typescript/typescript-darwin-x64",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "darwin"
+    ],
+    "cpu": [
+      "x64"
+    ],
+    "license": "Apache-2.0",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@typescript/typescript-darwin-x64/-/typescript-darwin-x64-7.0.2.tgz",
+    "integrity": "sha512-SZ9xZInqApNlNGc9s0W1VSsktYSOe9cFqNOIqmN1Gs8SmkjKZYFt017G4VwPxASInODuAdbTW7sXiFUf893RgA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@typescript__typescript-darwin-x64@7.0.2/LICENSE",
+      "docs/licenses/texts/frontend/@typescript__typescript-darwin-x64@7.0.2/NOTICE.txt"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "@typescript/typescript-freebsd-arm64",
+    "version": "7.0.2",
+    "installPath": "node_modules/@typescript/typescript-freebsd-arm64",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "freebsd"
+    ],
+    "cpu": [
+      "arm64"
+    ],
+    "license": "Apache-2.0",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@typescript/typescript-freebsd-arm64/-/typescript-freebsd-arm64-7.0.2.tgz",
+    "integrity": "sha512-W5NH4y/J0plIIS5b2xvTEkU7JFxyqdMAOgf+Ilhl0vHQXKO5dZoxd+C/jEtq56c4F3wk71RB4BMRQ2XdI+bwYQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@typescript__typescript-freebsd-arm64@7.0.2/LICENSE",
+      "docs/licenses/texts/frontend/@typescript__typescript-freebsd-arm64@7.0.2/NOTICE.txt"
+    ],
+    "licenseSource": "package-lock.json metadata"
+  },
+  {
+    "name": "@typescript/typescript-freebsd-x64",
+    "version": "7.0.2",
+    "installPath": "node_modules/@typescript/typescript-freebsd-x64",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "freebsd"
+    ],
+    "cpu": [
+      "x64"
+    ],
+    "license": "Apache-2.0",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@typescript/typescript-freebsd-x64/-/typescript-freebsd-x64-7.0.2.tgz",
+    "integrity": "sha512-UMGDx5sTpzNw3WiPebH7l90IWfJggEd+egHt/q6p7/Cm3zqoV7VxkGXt+3DxPIw8CcmvAB0j3sVVfbhX+M4Tpw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@typescript__typescript-freebsd-x64@7.0.2/LICENSE",
+      "docs/licenses/texts/frontend/@typescript__typescript-freebsd-x64@7.0.2/NOTICE.txt"
+    ],
+    "licenseSource": "package-lock.json metadata"
+  },
+  {
+    "name": "@typescript/typescript-linux-arm",
+    "version": "7.0.2",
+    "installPath": "node_modules/@typescript/typescript-linux-arm",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "linux"
+    ],
+    "cpu": [
+      "arm"
+    ],
+    "license": "Apache-2.0",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@typescript/typescript-linux-arm/-/typescript-linux-arm-7.0.2.tgz",
+    "integrity": "sha512-gffT3xPz9sR7j/YJExkyPntrI0P2EP9XbOyWzth2/Gs0RstK+90RBcO0ncXoXy/beYll1SXw846Nf2zdnEz0QQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@typescript__typescript-linux-arm@7.0.2/LICENSE",
+      "docs/licenses/texts/frontend/@typescript__typescript-linux-arm@7.0.2/NOTICE.txt"
+    ],
+    "licenseSource": "package-lock.json metadata"
+  },
+  {
+    "name": "@typescript/typescript-linux-arm64",
+    "version": "7.0.2",
+    "installPath": "node_modules/@typescript/typescript-linux-arm64",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "linux"
+    ],
+    "cpu": [
+      "arm64"
+    ],
+    "license": "Apache-2.0",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@typescript/typescript-linux-arm64/-/typescript-linux-arm64-7.0.2.tgz",
+    "integrity": "sha512-Qh4eU4/y3yDjnfjjyPYihMj5/ODIlmt+Bzu17OI+fiSRDW57QmU5SiN63exPRNJPKUzcc1INa1NXdrJ+MqHjUQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@typescript__typescript-linux-arm64@7.0.2/LICENSE",
+      "docs/licenses/texts/frontend/@typescript__typescript-linux-arm64@7.0.2/NOTICE.txt"
+    ],
+    "licenseSource": "package-lock.json metadata"
+  },
+  {
+    "name": "@typescript/typescript-linux-loong64",
+    "version": "7.0.2",
+    "installPath": "node_modules/@typescript/typescript-linux-loong64",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "linux"
+    ],
+    "cpu": [
+      "loong64"
+    ],
+    "license": "Apache-2.0",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@typescript/typescript-linux-loong64/-/typescript-linux-loong64-7.0.2.tgz",
+    "integrity": "sha512-uEHck9i8hoAzXPiYRib1O7miOnz23SxIeVl6F4LXox+qov1K35jHcEW6VHKvZI+pyvl7fZEP4MCU5LYvIq1GuQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@typescript__typescript-linux-loong64@7.0.2/LICENSE",
+      "docs/licenses/texts/frontend/@typescript__typescript-linux-loong64@7.0.2/NOTICE.txt"
+    ],
+    "licenseSource": "package-lock.json metadata"
+  },
+  {
+    "name": "@typescript/typescript-linux-mips64el",
+    "version": "7.0.2",
+    "installPath": "node_modules/@typescript/typescript-linux-mips64el",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "linux"
+    ],
+    "cpu": [
+      "mips64el"
+    ],
+    "license": "Apache-2.0",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@typescript/typescript-linux-mips64el/-/typescript-linux-mips64el-7.0.2.tgz",
+    "integrity": "sha512-R4KvAMnE43W5Qeqb0Ly56O3mWMWIAgsMyz36DCaycd5nbg/9kzm0liw3JocfRqyJY0KPmzFjbswozXyW0DnIYA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@typescript__typescript-linux-mips64el@7.0.2/LICENSE",
+      "docs/licenses/texts/frontend/@typescript__typescript-linux-mips64el@7.0.2/NOTICE.txt"
+    ],
+    "licenseSource": "package-lock.json metadata"
+  },
+  {
+    "name": "@typescript/typescript-linux-ppc64",
+    "version": "7.0.2",
+    "installPath": "node_modules/@typescript/typescript-linux-ppc64",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "linux"
+    ],
+    "cpu": [
+      "ppc64"
+    ],
+    "license": "Apache-2.0",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@typescript/typescript-linux-ppc64/-/typescript-linux-ppc64-7.0.2.tgz",
+    "integrity": "sha512-DORx5b3sd/4S7eayxm4FQv+A7CrkUIGRaHiwI8oiHTAI1fAPWhF4J0vAlkC8biAlHSVVwxMQ3tjZ2/DVbnQiiA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@typescript__typescript-linux-ppc64@7.0.2/LICENSE",
+      "docs/licenses/texts/frontend/@typescript__typescript-linux-ppc64@7.0.2/NOTICE.txt"
+    ],
+    "licenseSource": "package-lock.json metadata"
+  },
+  {
+    "name": "@typescript/typescript-linux-riscv64",
+    "version": "7.0.2",
+    "installPath": "node_modules/@typescript/typescript-linux-riscv64",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "linux"
+    ],
+    "cpu": [
+      "riscv64"
+    ],
+    "license": "Apache-2.0",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@typescript/typescript-linux-riscv64/-/typescript-linux-riscv64-7.0.2.tgz",
+    "integrity": "sha512-wf0jqEDOjrPRnKwYRyyJDRo11KMbvMFrU+q4zqKyChODBzvlkbhNQfKvLxQCcwTpdDaXSHZTVuh0JoCrKCUMHQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@typescript__typescript-linux-riscv64@7.0.2/LICENSE",
+      "docs/licenses/texts/frontend/@typescript__typescript-linux-riscv64@7.0.2/NOTICE.txt"
+    ],
+    "licenseSource": "package-lock.json metadata"
+  },
+  {
+    "name": "@typescript/typescript-linux-s390x",
+    "version": "7.0.2",
+    "installPath": "node_modules/@typescript/typescript-linux-s390x",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "linux"
+    ],
+    "cpu": [
+      "s390x"
+    ],
+    "license": "Apache-2.0",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@typescript/typescript-linux-s390x/-/typescript-linux-s390x-7.0.2.tgz",
+    "integrity": "sha512-IkwJc3L7yhytWd/ewjyxNDfOmswCm9GWMJT/ue/dU4aZNbwZeYAetq42VyLmsmSjvoX7z74X6ZaYCtzAr0EuGw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@typescript__typescript-linux-s390x@7.0.2/LICENSE",
+      "docs/licenses/texts/frontend/@typescript__typescript-linux-s390x@7.0.2/NOTICE.txt"
+    ],
+    "licenseSource": "package-lock.json metadata"
+  },
+  {
+    "name": "@typescript/typescript-linux-x64",
+    "version": "7.0.2",
+    "installPath": "node_modules/@typescript/typescript-linux-x64",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "linux"
+    ],
+    "cpu": [
+      "x64"
+    ],
+    "license": "Apache-2.0",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@typescript/typescript-linux-x64/-/typescript-linux-x64-7.0.2.tgz",
+    "integrity": "sha512-EYdf2cNg7rgCWJnxCdJ+F3V39O8ihb37eHAu1LK8oAFizgTQbPOK7zHHXbPt8rX24COqODXeI3sIf0fCXG7H/A==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@typescript__typescript-linux-x64@7.0.2/LICENSE",
+      "docs/licenses/texts/frontend/@typescript__typescript-linux-x64@7.0.2/NOTICE.txt"
+    ],
+    "licenseSource": "package-lock.json metadata"
+  },
+  {
+    "name": "@typescript/typescript-netbsd-arm64",
+    "version": "7.0.2",
+    "installPath": "node_modules/@typescript/typescript-netbsd-arm64",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "netbsd"
+    ],
+    "cpu": [
+      "arm64"
+    ],
+    "license": "Apache-2.0",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@typescript/typescript-netbsd-arm64/-/typescript-netbsd-arm64-7.0.2.tgz",
+    "integrity": "sha512-+polYF4MF04aPpO5FTkHran9yUQDSXqy5GiSDKpsll5jy3l3+g9QLhpf39T+ePtefhXLOGrLl0QIjkQP6VnelA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@typescript__typescript-netbsd-arm64@7.0.2/LICENSE",
+      "docs/licenses/texts/frontend/@typescript__typescript-netbsd-arm64@7.0.2/NOTICE.txt"
+    ],
+    "licenseSource": "package-lock.json metadata"
+  },
+  {
+    "name": "@typescript/typescript-netbsd-x64",
+    "version": "7.0.2",
+    "installPath": "node_modules/@typescript/typescript-netbsd-x64",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "netbsd"
+    ],
+    "cpu": [
+      "x64"
+    ],
+    "license": "Apache-2.0",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@typescript/typescript-netbsd-x64/-/typescript-netbsd-x64-7.0.2.tgz",
+    "integrity": "sha512-8YIT0EHM/3dq10ZOVF/A7pc/YSMtbcecct4rWtexrnSCHOPcpC2KTLXfTCR6vDpnSiY12heNb1GiN/wu+T/FyA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@typescript__typescript-netbsd-x64@7.0.2/LICENSE",
+      "docs/licenses/texts/frontend/@typescript__typescript-netbsd-x64@7.0.2/NOTICE.txt"
+    ],
+    "licenseSource": "package-lock.json metadata"
+  },
+  {
+    "name": "@typescript/typescript-openbsd-arm64",
+    "version": "7.0.2",
+    "installPath": "node_modules/@typescript/typescript-openbsd-arm64",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "openbsd"
+    ],
+    "cpu": [
+      "arm64"
+    ],
+    "license": "Apache-2.0",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@typescript/typescript-openbsd-arm64/-/typescript-openbsd-arm64-7.0.2.tgz",
+    "integrity": "sha512-APT8+ClYnuYm1u9+kgGXoMj2VzWzcymwh2gNSQVySHfkRDGOTVkoWLjCmOQSaO+PoqQ57B0flRp9SA+7GnnkzQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@typescript__typescript-openbsd-arm64@7.0.2/LICENSE",
+      "docs/licenses/texts/frontend/@typescript__typescript-openbsd-arm64@7.0.2/NOTICE.txt"
+    ],
+    "licenseSource": "package-lock.json metadata"
+  },
+  {
+    "name": "@typescript/typescript-openbsd-x64",
+    "version": "7.0.2",
+    "installPath": "node_modules/@typescript/typescript-openbsd-x64",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "openbsd"
+    ],
+    "cpu": [
+      "x64"
+    ],
+    "license": "Apache-2.0",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@typescript/typescript-openbsd-x64/-/typescript-openbsd-x64-7.0.2.tgz",
+    "integrity": "sha512-yX7s+Q0Dln0Dt9tEzZsAjXXR/+ytBM7AlglaqyeMPxQszJ1JhlJdZ6jLA+IzldHtflX81em7lDao1xXu+aRRkg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@typescript__typescript-openbsd-x64@7.0.2/LICENSE",
+      "docs/licenses/texts/frontend/@typescript__typescript-openbsd-x64@7.0.2/NOTICE.txt"
+    ],
+    "licenseSource": "package-lock.json metadata"
+  },
+  {
+    "name": "@typescript/typescript-sunos-x64",
+    "version": "7.0.2",
+    "installPath": "node_modules/@typescript/typescript-sunos-x64",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "sunos"
+    ],
+    "cpu": [
+      "x64"
+    ],
+    "license": "Apache-2.0",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@typescript/typescript-sunos-x64/-/typescript-sunos-x64-7.0.2.tgz",
+    "integrity": "sha512-dLJDGaLZ1D4HPQn62u1n8mBDkJREwMsAkCdkwd4Ieqw+x3TUyTsqY0YiBCtE6H6OzzgGk3iuZ3vFWRS+E8/d1g==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@typescript__typescript-sunos-x64@7.0.2/LICENSE",
+      "docs/licenses/texts/frontend/@typescript__typescript-sunos-x64@7.0.2/NOTICE.txt"
+    ],
+    "licenseSource": "package-lock.json metadata"
+  },
+  {
+    "name": "@typescript/typescript-win32-arm64",
+    "version": "7.0.2",
+    "installPath": "node_modules/@typescript/typescript-win32-arm64",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "win32"
+    ],
+    "cpu": [
+      "arm64"
+    ],
+    "license": "Apache-2.0",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@typescript/typescript-win32-arm64/-/typescript-win32-arm64-7.0.2.tgz",
+    "integrity": "sha512-Gyl1Vy6OsWesLzmq+EP0Fb7b4Nid5232AvcA2SFcdYreldpNtYFFofPjnt62y9hQy7VTaZp65ICJjuAQRaVcIQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@typescript__typescript-win32-arm64@7.0.2/LICENSE",
+      "docs/licenses/texts/frontend/@typescript__typescript-win32-arm64@7.0.2/NOTICE.txt"
+    ],
+    "licenseSource": "package-lock.json metadata"
+  },
+  {
+    "name": "@typescript/typescript-win32-x64",
+    "version": "7.0.2",
+    "installPath": "node_modules/@typescript/typescript-win32-x64",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "win32"
+    ],
+    "cpu": [
+      "x64"
+    ],
+    "license": "Apache-2.0",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@typescript/typescript-win32-x64/-/typescript-win32-x64-7.0.2.tgz",
+    "integrity": "sha512-0BQ3HkAHHlKLSp1qRvf3SUhGpGsDuhB/jgFw75guyqbxJqEaS0Cw/VFO8i2nHglJUzQCRtMMR/IBAKE3ETMC4g==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@typescript__typescript-win32-x64@7.0.2/LICENSE",
+      "docs/licenses/texts/frontend/@typescript__typescript-win32-x64@7.0.2/NOTICE.txt"
+    ],
+    "licenseSource": "package-lock.json metadata"
+  },
+  {
+    "name": "@ungap/structured-clone",
+    "version": "1.4.0",
+    "installPath": "node_modules/@ungap/structured-clone",
+    "dev": false,
+    "optional": false,
+    "license": "ISC",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/@ungap/structured-clone/-/structured-clone-1.4.0.tgz",
+    "integrity": "sha512-1mEZtMKPM09vDmQt5y7YvmN2+DFTP7Tg0EWXdic8/C6VRnpb33e4ghisCIE3WZjsE2N8mf+QV1Zqh7ZFYLWInQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@ungap__structured-clone@1.4.0/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "@vitejs/plugin-react",
+    "version": "6.1.2",
+    "installPath": "node_modules/@vitejs/plugin-react",
+    "dev": true,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@vitejs/plugin-react/-/plugin-react-6.1.2.tgz",
+    "integrity": "sha512-fhJNGUdscQa4HkI0xFxwonWyhnVReCPDbXI7FH7jmzpnVCrFQI7PRrhWecO263610vOrs9tr2Y4xcf8uAdFxbw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@vitejs__plugin-react@6.1.2/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "@vitest/mocker",
+    "version": "5.0.4",
+    "installPath": "node_modules/@vitest/mocker",
+    "dev": true,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@vitest/mocker/-/mocker-5.0.4.tgz",
+    "integrity": "sha512-tqAlrYWce4iUxhr3ncNohejtCTOcHeE8XWrSNZY3OhPoDn01yeGv+gnaBy64ATp7o6pb03eIbBAjzmibpc9vIQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@vitest__mocker@5.0.4/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "@vitest/spy",
+    "version": "5.0.4",
+    "installPath": "node_modules/@vitest/spy",
+    "dev": true,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/@vitest/spy/-/spy-5.0.4.tgz",
+    "integrity": "sha512-MZKk/gSkm2q+ICobMxCpH1mA+cCAWm8WV7UhxlqGjq/sJ3AGc1BqFOs5CRVXxH78wQtme9q/NAAgBquj4AcyMw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@vitest__spy@5.0.4/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "assertion-error",
+    "version": "2.0.1",
+    "installPath": "node_modules/assertion-error",
+    "dev": true,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/assertion-error/-/assertion-error-2.0.1.tgz",
+    "integrity": "sha512-Izi8RQcffqCeNVgFigKli1ssklIbpHnCYc6AknXGYoB6grJqyeby7jv12JUQgmTAnIDnbck1uxksT4dzN3PWBA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/assertion-error@2.0.1/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "bail",
+    "version": "2.0.2",
+    "installPath": "node_modules/bail",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/bail/-/bail-2.0.2.tgz",
+    "integrity": "sha512-0xO6mYd7JB2YesxDKplafRpsiOzPt9V02ddPCLbY1xYGPOX24NTyN50qnUxgCPcSoYMhKpAuBTjQoRZCAkUDRw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/bail@2.0.2/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "ccount",
+    "version": "2.0.1",
+    "installPath": "node_modules/ccount",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/ccount/-/ccount-2.0.1.tgz",
+    "integrity": "sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/ccount@2.0.1/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "chai",
+    "version": "6.3.0",
+    "installPath": "node_modules/chai",
+    "dev": true,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/chai/-/chai-6.3.0.tgz",
+    "integrity": "sha512-XWAtwJ6OHO+tj0EKCs0Y2UamnyOxseZWltU4x2U2wh8g4AigdjwvtUjvLP2tqkA/avxHEtzxNaqGq/YGNwckKg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/chai@6.3.0/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "character-entities",
+    "version": "2.0.2",
+    "installPath": "node_modules/character-entities",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/character-entities/-/character-entities-2.0.2.tgz",
+    "integrity": "sha512-shx7oQ0Awen/BRIdkjkvz54PnEEI/EjwXDSIZp86/KKdbafHh1Df/RYGBhn4hbe2+uKC9FnT5UCEdyPz3ai9hQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/character-entities@2.0.2/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "character-entities-html4",
+    "version": "2.1.0",
+    "installPath": "node_modules/character-entities-html4",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/character-entities-html4/-/character-entities-html4-2.1.0.tgz",
+    "integrity": "sha512-1v7fgQRj6hnSwFpq1Eu0ynr/CDEw0rXo2B61qXrLNdHZmPKgb7fqS1a2JwF0rISo9q77jDI8VMEHoApn8qDoZA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/character-entities-html4@2.1.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "character-entities-legacy",
+    "version": "3.0.0",
+    "installPath": "node_modules/character-entities-legacy",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/character-entities-legacy/-/character-entities-legacy-3.0.0.tgz",
+    "integrity": "sha512-RpPp0asT/6ufRm//AJVwpViZbGM/MkjQFxJccQRHmISF/22NBtsHqAWmL+/pmkPWoIUJdWyeVleTl1wydHATVQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/character-entities-legacy@3.0.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "character-reference-invalid",
+    "version": "2.0.1",
+    "installPath": "node_modules/character-reference-invalid",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/character-reference-invalid/-/character-reference-invalid-2.0.1.tgz",
+    "integrity": "sha512-iBZ4F4wRbyORVsu0jPV7gXkOsGYjGHPmAyv+HiHG8gi5PtC9KI2j1+v8/tlibRvjoWX027ypmG/n0HtO5t7unw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/character-reference-invalid@2.0.1/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "comma-separated-tokens",
+    "version": "2.0.3",
+    "installPath": "node_modules/comma-separated-tokens",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/comma-separated-tokens/-/comma-separated-tokens-2.0.3.tgz",
+    "integrity": "sha512-Fu4hJdvzeylCfQPp9SGWidpzrMs7tTrlu6Vb8XGaRGck8QSNZJJp538Wrb60Lax4fPwR64ViY468OIUTbRlGZg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/comma-separated-tokens@2.0.3/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "csstype",
+    "version": "3.2.3",
+    "installPath": "node_modules/csstype",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/csstype/-/csstype-3.2.3.tgz",
+    "integrity": "sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/csstype@3.2.3/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "debug",
+    "version": "4.4.3",
+    "installPath": "node_modules/debug",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/debug/-/debug-4.4.3.tgz",
+    "integrity": "sha512-RGwwWnwQvkVfavKVt22FGLw+xYSdzARwm0ru6DhTVA3umU5hZc28V3kO4stgYryrTlLpuvgI9GiijltAjNbcqA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/debug@4.4.3/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "decode-named-character-reference",
+    "version": "1.3.0",
+    "installPath": "node_modules/decode-named-character-reference",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/decode-named-character-reference/-/decode-named-character-reference-1.3.0.tgz",
+    "integrity": "sha512-GtpQYB283KrPp6nRw50q3U9/VfOutZOe103qlN7BPP6Ad27xYnOIWv4lPzo8HCAL+mMZofJ9KEy30fq6MfaK6Q==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/decode-named-character-reference@1.3.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "dequal",
+    "version": "2.0.3",
+    "installPath": "node_modules/dequal",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/dequal/-/dequal-2.0.3.tgz",
+    "integrity": "sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/dequal@2.0.3/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "detect-libc",
+    "version": "2.1.2",
+    "installPath": "node_modules/detect-libc",
+    "dev": true,
+    "optional": false,
+    "license": "Apache-2.0",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/detect-libc/-/detect-libc-2.1.2.tgz",
+    "integrity": "sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/detect-libc@2.1.2/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "devlop",
+    "version": "1.1.0",
+    "installPath": "node_modules/devlop",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/devlop/-/devlop-1.1.0.tgz",
+    "integrity": "sha512-RWmIqhcFf1lRYBvNmr7qTNuyCt/7/ns2jbpp1+PalgE/rDQcBT0fioSMUpJ93irlUhC5hrg4cYqe6U+0ImW0rA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/devlop@1.1.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "es-module-lexer",
+    "version": "2.3.2",
+    "installPath": "node_modules/es-module-lexer",
+    "dev": true,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/es-module-lexer/-/es-module-lexer-2.3.2.tgz",
+    "integrity": "sha512-poHGpORABojJJucnV9KbOavETW8lBVnphkW77ER5/BQ5Fz7oXSoCNek7IH3vR5nRjdsEz926ibFYX8KtLQmdyw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/es-module-lexer@2.3.2/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "escape-string-regexp",
+    "version": "5.0.0",
+    "installPath": "node_modules/escape-string-regexp",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-5.0.0.tgz",
+    "integrity": "sha512-/veY75JbMK4j1yjvuUxuVsiS/hr/4iHs9FTT6cgTexxdE0Ly/glccBAkloH/DofkjRbZU3bnoj38mOmhkZ0lHw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/escape-string-regexp@5.0.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "estree-util-is-identifier-name",
+    "version": "3.0.0",
+    "installPath": "node_modules/estree-util-is-identifier-name",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/estree-util-is-identifier-name/-/estree-util-is-identifier-name-3.0.0.tgz",
+    "integrity": "sha512-hFtqIDZTIUZ9BXLb8y4pYGyk6+wekIivNVTcmvk8NoOh+VeRn5y6cEHzbURrWbfp1fIqdVipilzj+lfaadNZmg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/estree-util-is-identifier-name@3.0.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "estree-walker",
+    "version": "3.0.3",
+    "installPath": "node_modules/estree-walker",
+    "dev": true,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/estree-walker/-/estree-walker-3.0.3.tgz",
+    "integrity": "sha512-7RUKfXgSMMkzt6ZuXmqapOurLGPPfgj6l9uRZ7lRGolvk0y2yocc35LdcxKC5PQZdn2DMqioAQ2NoWcrTKmm6g==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/estree-walker@3.0.3/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "expect-type",
+    "version": "1.4.0",
+    "installPath": "node_modules/expect-type",
+    "dev": true,
+    "optional": false,
+    "license": "Apache-2.0",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/expect-type/-/expect-type-1.4.0.tgz",
+    "integrity": "sha512-KfYbmpRm0VbLjEvVa9yGwCi9GI34xvi7A/HXYWQO65CSD2u3MczUJSuwXKFIxlGsgBQizV9q5J9NHj4VG0n+pA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/expect-type@1.4.0/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "extend",
+    "version": "3.0.2",
+    "installPath": "node_modules/extend",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/extend/-/extend-3.0.2.tgz",
+    "integrity": "sha512-fjquC59cD7CyW6urNXK0FBufkZcoiGG80wTuPujX590cB5Ttln20E2UB4S/WARVqhXffZl2LNgS+gQdPIIim/g==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/extend@3.0.2/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "fdir",
+    "version": "6.5.0",
+    "installPath": "node_modules/fdir",
+    "dev": true,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/fdir/-/fdir-6.5.0.tgz",
+    "integrity": "sha512-tIbYtZbucOs0BRGqPJkshJUYdL+SDH7dVM8gjy+ERp3WAUjLEFJE+02kanyHtwjWOnwrKYBiwAmM0p4kLJAnXg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/fdir@6.5.0/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "fsevents",
+    "version": "2.3.3",
+    "installPath": "node_modules/fsevents",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "darwin"
+    ],
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/fsevents/-/fsevents-2.3.3.tgz",
+    "integrity": "sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/fsevents@2.3.3/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "hast-util-to-html",
+    "version": "9.0.5",
+    "installPath": "node_modules/hast-util-to-html",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/hast-util-to-html/-/hast-util-to-html-9.0.5.tgz",
+    "integrity": "sha512-OguPdidb+fbHQSU4Q4ZiLKnzWo8Wwsf5bZfbvu7//a9oTYoqD/fWpe96NuHkoS9h0ccGOTe0C4NGXdtS0iObOw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/hast-util-to-html@9.0.5/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "hast-util-to-jsx-runtime",
+    "version": "2.3.6",
+    "installPath": "node_modules/hast-util-to-jsx-runtime",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/hast-util-to-jsx-runtime/-/hast-util-to-jsx-runtime-2.3.6.tgz",
+    "integrity": "sha512-zl6s8LwNyo1P9uw+XJGvZtdFF1GdAkOg8ujOw+4Pyb76874fLps4ueHXDhXWdk6YHQ6OgUtinliG7RsYvCbbBg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/hast-util-to-jsx-runtime@2.3.6/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "hast-util-whitespace",
+    "version": "3.0.0",
+    "installPath": "node_modules/hast-util-whitespace",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/hast-util-whitespace/-/hast-util-whitespace-3.0.0.tgz",
+    "integrity": "sha512-88JUN06ipLwsnv+dVn+OIYOvAuvBMy/Qoi6O7mQHxdPXpjy+Cd6xRkWwux7DKO+4sYILtLBRIKgsdpS2gQc7qw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/hast-util-whitespace@3.0.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "html-to-image",
+    "version": "1.11.13",
+    "installPath": "node_modules/html-to-image",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/html-to-image/-/html-to-image-1.11.13.tgz",
+    "integrity": "sha512-cuOPoI7WApyhBElTTb9oqsawRvZ0rHhaHwghRLlTuffoD1B2aDemlCruLeZrUIIdvG7gs9xeELEPm6PhuASqrg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/html-to-image@1.11.13/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "html-url-attributes",
+    "version": "3.0.1",
+    "installPath": "node_modules/html-url-attributes",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/html-url-attributes/-/html-url-attributes-3.0.1.tgz",
+    "integrity": "sha512-ol6UPyBWqsrO6EJySPz2O7ZSr856WDrEzM5zMqp+FJJLGMW35cLYmmZnl0vztAZxRUoNZJFTCohfjuIJ8I4QBQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/html-url-attributes@3.0.1/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "html-void-elements",
+    "version": "3.0.0",
+    "installPath": "node_modules/html-void-elements",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/html-void-elements/-/html-void-elements-3.0.0.tgz",
+    "integrity": "sha512-bEqo66MRXsUGxWHV5IP0PUiAWwoEjba4VCzg0LjFJBpchPaTfyfCKTG6bc5F8ucKec3q5y6qOdGyYTSBEvhCrg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/html-void-elements@3.0.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "inline-style-parser",
+    "version": "0.2.7",
+    "installPath": "node_modules/inline-style-parser",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/inline-style-parser/-/inline-style-parser-0.2.7.tgz",
+    "integrity": "sha512-Nb2ctOyNR8DqQoR0OwRG95uNWIC0C1lCgf5Naz5H6Ji72KZ8OcFZLz2P5sNgwlyoJ8Yif11oMuYs5pBQa86csA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/inline-style-parser@0.2.7/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "is-alphabetical",
+    "version": "2.0.1",
+    "installPath": "node_modules/is-alphabetical",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/is-alphabetical/-/is-alphabetical-2.0.1.tgz",
+    "integrity": "sha512-FWyyY60MeTNyeSRpkM2Iry0G9hpr7/9kD40mD/cGQEuilcZYS4okz8SN2Q6rLCJ8gbCt6fN+rC+6tMGS99LaxQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/is-alphabetical@2.0.1/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "is-alphanumerical",
+    "version": "2.0.1",
+    "installPath": "node_modules/is-alphanumerical",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/is-alphanumerical/-/is-alphanumerical-2.0.1.tgz",
+    "integrity": "sha512-hmbYhX/9MUMF5uh7tOXyK/n0ZvWpad5caBA17GsC6vyuCqaWliRG5K1qS9inmUhEMaOBIW7/whAnSwveW/LtZw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/is-alphanumerical@2.0.1/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "is-decimal",
+    "version": "2.0.1",
+    "installPath": "node_modules/is-decimal",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/is-decimal/-/is-decimal-2.0.1.tgz",
+    "integrity": "sha512-AAB9hiomQs5DXWcRB1rqsxGUstbRroFOPPVAomNk/3XHR5JyEZChOyTWe2oayKnsSsr/kcGqF+z6yuH6HHpN0A==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/is-decimal@2.0.1/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "is-hexadecimal",
+    "version": "2.0.1",
+    "installPath": "node_modules/is-hexadecimal",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/is-hexadecimal/-/is-hexadecimal-2.0.1.tgz",
+    "integrity": "sha512-DgZQp241c8oO6cA1SbTEWiXeoxV42vlcJxgH+B3hi1AiqqKruZR3ZGF8In3fj4+/y/7rHvlOZLZtgJ/4ttYGZg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/is-hexadecimal@2.0.1/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "is-plain-obj",
+    "version": "4.1.0",
+    "installPath": "node_modules/is-plain-obj",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/is-plain-obj/-/is-plain-obj-4.1.0.tgz",
+    "integrity": "sha512-+Pgi+vMuUNkJyExiMBt5IlFoMyKnr5zhJ4Uspz58WOhBF5QoIZkFyNHIbBAtHwzVAgk5RtndVNsDRN61/mmDqg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/is-plain-obj@4.1.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "lightningcss",
+    "version": "1.33.0",
+    "installPath": "node_modules/lightningcss",
+    "dev": true,
+    "optional": false,
+    "license": "MPL-2.0",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/lightningcss/-/lightningcss-1.33.0.tgz",
+    "integrity": "sha512-WkUDrojuJs0xkgGf2udWxa3yGBRxPtxUkB79i6aCZLRgc7PM8fZe9TosfPDcvEpQZbuFASnHYmRLBLUbmLOIIA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/lightningcss@1.33.0/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "lightningcss-android-arm64",
+    "version": "1.33.0",
+    "installPath": "node_modules/lightningcss-android-arm64",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "android"
+    ],
+    "cpu": [
+      "arm64"
+    ],
+    "license": "MPL-2.0",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/lightningcss-android-arm64/-/lightningcss-android-arm64-1.33.0.tgz",
+    "integrity": "sha512-gEpRTalKdosp4Bb8qWtc2iOgE5SeIHlpS1up9bFq2wAyYhl1UdTObYiHe98zEM9SQvSoqQZ1IQD0JNpg3Ml5pg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/lightningcss-android-arm64@1.33.0/LICENSE"
+    ],
+    "licenseSource": "package-lock.json metadata"
+  },
+  {
+    "name": "lightningcss-darwin-arm64",
+    "version": "1.33.0",
+    "installPath": "node_modules/lightningcss-darwin-arm64",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "darwin"
+    ],
+    "cpu": [
+      "arm64"
+    ],
+    "license": "MPL-2.0",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/lightningcss-darwin-arm64/-/lightningcss-darwin-arm64-1.33.0.tgz",
+    "integrity": "sha512-Sciaz8eenNTKn9b3t7+xr0ipTp9YxKQY4npwQ3mrRuL0BAVHBLyZxofhaKBAVtzmtRZ/zTyo0/to4B1uWG/Djg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/lightningcss-darwin-arm64@1.33.0/LICENSE"
+    ],
+    "licenseSource": "package-lock.json metadata"
+  },
+  {
+    "name": "lightningcss-darwin-x64",
+    "version": "1.33.0",
+    "installPath": "node_modules/lightningcss-darwin-x64",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "darwin"
+    ],
+    "cpu": [
+      "x64"
+    ],
+    "license": "MPL-2.0",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/lightningcss-darwin-x64/-/lightningcss-darwin-x64-1.33.0.tgz",
+    "integrity": "sha512-Z5UPAxzrjlWNNyGy6i65cJzzvgJ5D3T6wMvs+gWpY9d7qRhANrxqAp6LhxIgZhWEw18RfJTGcRxjuLIBr+m8XQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/lightningcss-darwin-x64@1.33.0/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "lightningcss-freebsd-x64",
+    "version": "1.33.0",
+    "installPath": "node_modules/lightningcss-freebsd-x64",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "freebsd"
+    ],
+    "cpu": [
+      "x64"
+    ],
+    "license": "MPL-2.0",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/lightningcss-freebsd-x64/-/lightningcss-freebsd-x64-1.33.0.tgz",
+    "integrity": "sha512-QQM/Ti/hQajJwCY+RiWuCZ9sdtI/XQk7nDK5vC8kkdwixezOlDgvDx7+RT+QjK6FcFT4MpsuoBnHIo/O3StRRg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/lightningcss-freebsd-x64@1.33.0/LICENSE"
+    ],
+    "licenseSource": "package-lock.json metadata"
+  },
+  {
+    "name": "lightningcss-linux-arm-gnueabihf",
+    "version": "1.33.0",
+    "installPath": "node_modules/lightningcss-linux-arm-gnueabihf",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "linux"
+    ],
+    "cpu": [
+      "arm"
+    ],
+    "license": "MPL-2.0",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/lightningcss-linux-arm-gnueabihf/-/lightningcss-linux-arm-gnueabihf-1.33.0.tgz",
+    "integrity": "sha512-N7FVBe6iS24MlM6R/4RBTxGhQheZGs7tiQ9U32UtF75NzP5Q7xWPRqLBCKxlRQRk3rY1jCIPLzx7WzOhuUIRLQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/lightningcss-linux-arm-gnueabihf@1.33.0/LICENSE"
+    ],
+    "licenseSource": "package-lock.json metadata"
+  },
+  {
+    "name": "lightningcss-linux-arm64-gnu",
+    "version": "1.33.0",
+    "installPath": "node_modules/lightningcss-linux-arm64-gnu",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "linux"
+    ],
+    "cpu": [
+      "arm64"
+    ],
+    "license": "MPL-2.0",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/lightningcss-linux-arm64-gnu/-/lightningcss-linux-arm64-gnu-1.33.0.tgz",
+    "integrity": "sha512-j2v/itmy4HlNxlc6voKXYgBqNi0Ng2LShg4z7GufpEgs05P+2suBVyi9I6YHq5uoVFx9ETin3eCEhLVyXGQnKg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/lightningcss-linux-arm64-gnu@1.33.0/LICENSE"
+    ],
+    "licenseSource": "package-lock.json metadata"
+  },
+  {
+    "name": "lightningcss-linux-arm64-musl",
+    "version": "1.33.0",
+    "installPath": "node_modules/lightningcss-linux-arm64-musl",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "linux"
+    ],
+    "cpu": [
+      "arm64"
+    ],
+    "license": "MPL-2.0",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/lightningcss-linux-arm64-musl/-/lightningcss-linux-arm64-musl-1.33.0.tgz",
+    "integrity": "sha512-yiO5ROMuYQgXbC60yjZU5CYSFZGKXL0HFATXt9mHJn1+zW55oCtMI9NfcVhYLMFDL7gV7oBPon/EmMMGg2OvtQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/lightningcss-linux-arm64-musl@1.33.0/LICENSE"
+    ],
+    "licenseSource": "package-lock.json metadata"
+  },
+  {
+    "name": "lightningcss-linux-x64-gnu",
+    "version": "1.33.0",
+    "installPath": "node_modules/lightningcss-linux-x64-gnu",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "linux"
+    ],
+    "cpu": [
+      "x64"
+    ],
+    "license": "MPL-2.0",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/lightningcss-linux-x64-gnu/-/lightningcss-linux-x64-gnu-1.33.0.tgz",
+    "integrity": "sha512-ar+Ju7LmcN0Jo4FpL4hpFybwNG9/3A/Br5KW2n2jyODg3MEZXaDYADdemoNS+BDNfMgKvylJLj4S5tyRActuAg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/lightningcss-linux-x64-gnu@1.33.0/LICENSE"
+    ],
+    "licenseSource": "package-lock.json metadata"
+  },
+  {
+    "name": "lightningcss-linux-x64-musl",
+    "version": "1.33.0",
+    "installPath": "node_modules/lightningcss-linux-x64-musl",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "linux"
+    ],
+    "cpu": [
+      "x64"
+    ],
+    "license": "MPL-2.0",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/lightningcss-linux-x64-musl/-/lightningcss-linux-x64-musl-1.33.0.tgz",
+    "integrity": "sha512-RYiYbkokw0trfKqqzfF55lginwEPrD3OJDfTuJzFs1MK6iFnDenaz1fqLLtX4ITG3OktJQXOeTaw1awrBAlZPw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/lightningcss-linux-x64-musl@1.33.0/LICENSE"
+    ],
+    "licenseSource": "package-lock.json metadata"
+  },
+  {
+    "name": "lightningcss-win32-arm64-msvc",
+    "version": "1.33.0",
+    "installPath": "node_modules/lightningcss-win32-arm64-msvc",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "win32"
+    ],
+    "cpu": [
+      "arm64"
+    ],
+    "license": "MPL-2.0",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/lightningcss-win32-arm64-msvc/-/lightningcss-win32-arm64-msvc-1.33.0.tgz",
+    "integrity": "sha512-1K+MPfLSFVpphzpdbfkhlWk6wBrTObBzS2T6db10PNOZgR9GoVsAWzwNyuhUYYbTp23j+4RrncfujZ4uAzXvwA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/lightningcss-win32-arm64-msvc@1.33.0/LICENSE"
+    ],
+    "licenseSource": "package-lock.json metadata"
+  },
+  {
+    "name": "lightningcss-win32-x64-msvc",
+    "version": "1.33.0",
+    "installPath": "node_modules/lightningcss-win32-x64-msvc",
+    "dev": true,
+    "optional": true,
+    "os": [
+      "win32"
+    ],
+    "cpu": [
+      "x64"
+    ],
+    "license": "MPL-2.0",
+    "installed": false,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/lightningcss-win32-x64-msvc/-/lightningcss-win32-x64-msvc-1.33.0.tgz",
+    "integrity": "sha512-OlEICDx/Xl0FqSp4bry8zFnCvGpig3Gl4gCquvYwHuqJKEC1+n9NgDniFvqHGmMv1ZkqDJrDqKKSykTDX+ehuA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/lightningcss-win32-x64-msvc@1.33.0/LICENSE"
+    ],
+    "licenseSource": "package-lock.json metadata"
+  },
+  {
+    "name": "longest-streak",
+    "version": "3.1.0",
+    "installPath": "node_modules/longest-streak",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/longest-streak/-/longest-streak-3.1.0.tgz",
+    "integrity": "sha512-9Ri+o0JYgehTaVBBDoMqIl8GXtbWg711O3srftcHhZ0dqnETqLaoIK0x17fUw9rFSlK/0NlsKe0Ahhyl5pXE2g==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/longest-streak@3.1.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "magic-string",
+    "version": "1.4.3",
+    "installPath": "node_modules/magic-string",
+    "dev": true,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/magic-string/-/magic-string-1.4.3.tgz",
+    "integrity": "sha512-z12OxmaPGE0F4xlpGdjuAUckipLpQlTAuAmyGhNoD7ODpYUzvDfvtxUbjM/jwznyP178oju/KDdyi220wNJ0RQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/magic-string@1.4.3/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "markdown-table",
+    "version": "3.0.4",
+    "installPath": "node_modules/markdown-table",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/markdown-table/-/markdown-table-3.0.4.tgz",
+    "integrity": "sha512-wiYz4+JrLyb/DqW2hkFJxP7Vd7JuTDm77fvbM8VfEQdmSMqcImWeeRbHwZjBjIFki/VaMK2BhFi7oUUZeM5bqw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/markdown-table@3.0.4/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "mdast-util-find-and-replace",
+    "version": "3.0.3",
+    "installPath": "node_modules/mdast-util-find-and-replace",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/mdast-util-find-and-replace/-/mdast-util-find-and-replace-3.0.3.tgz",
+    "integrity": "sha512-xPgpDNl0/OXHsI7TlaIs22lWnH3KlpvZdXG1ET/m/YT2Hhdkx8lJV4kLphE6l9simyM4KPDFBwas08BgEob6Jw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/mdast-util-find-and-replace@3.0.3/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "mdast-util-from-markdown",
+    "version": "2.1.0",
+    "installPath": "node_modules/mdast-util-from-markdown",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/mdast-util-from-markdown/-/mdast-util-from-markdown-2.1.0.tgz",
+    "integrity": "sha512-KRLgmPaP2H1ul2bpoJkOS+9pAcDAAj9Nu1mqLnh8NLeJG5tlvj42TH80PIGBpROWlRXLk0lDrWNuZCFy/tsB4A==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/mdast-util-from-markdown@2.1.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "mdast-util-gfm",
+    "version": "3.1.0",
+    "installPath": "node_modules/mdast-util-gfm",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/mdast-util-gfm/-/mdast-util-gfm-3.1.0.tgz",
+    "integrity": "sha512-0ulfdQOM3ysHhCJ1p06l0b0VKlhU0wuQs3thxZQagjcjPrlFRqY215uZGHHJan9GEAXd9MbfPjFJz+qMkVR6zQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/mdast-util-gfm@3.1.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "mdast-util-gfm-autolink-literal",
+    "version": "2.0.1",
+    "installPath": "node_modules/mdast-util-gfm-autolink-literal",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/mdast-util-gfm-autolink-literal/-/mdast-util-gfm-autolink-literal-2.0.1.tgz",
+    "integrity": "sha512-5HVP2MKaP6L+G6YaxPNjuL0BPrq9orG3TsrZ9YXbA3vDw/ACI4MEsnoDpn6ZNm7GnZgtAcONJyPhOP8tNJQavQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/mdast-util-gfm-autolink-literal@2.0.1/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "mdast-util-gfm-footnote",
+    "version": "2.1.0",
+    "installPath": "node_modules/mdast-util-gfm-footnote",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/mdast-util-gfm-footnote/-/mdast-util-gfm-footnote-2.1.0.tgz",
+    "integrity": "sha512-sqpDWlsHn7Ac9GNZQMeUzPQSMzR6Wv0WKRNvQRg0KqHh02fpTz69Qc1QSseNX29bhz1ROIyNyxExfawVKTm1GQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/mdast-util-gfm-footnote@2.1.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "mdast-util-gfm-strikethrough",
+    "version": "2.0.1",
+    "installPath": "node_modules/mdast-util-gfm-strikethrough",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/mdast-util-gfm-strikethrough/-/mdast-util-gfm-strikethrough-2.0.1.tgz",
+    "integrity": "sha512-OuJHqvr455pwu2OaOrir7dbzqs4jlWKOtlu9L6GjcIjjQwNyw02VntQsr/Ek6/A13vgnXfUhBekWRUP1OkNivw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/mdast-util-gfm-strikethrough@2.0.1/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "mdast-util-gfm-table",
+    "version": "2.0.0",
+    "installPath": "node_modules/mdast-util-gfm-table",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/mdast-util-gfm-table/-/mdast-util-gfm-table-2.0.0.tgz",
+    "integrity": "sha512-78UEvebzz/rJIxLvE7ZtDd/vIQ0RHv+3Mh5DR96p7cS7HsBhYIICDBCu8csTNWNO6tBWfqXPWekRuj2FNOGOZg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/mdast-util-gfm-table@2.0.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "mdast-util-gfm-task-list-item",
+    "version": "2.0.0",
+    "installPath": "node_modules/mdast-util-gfm-task-list-item",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/mdast-util-gfm-task-list-item/-/mdast-util-gfm-task-list-item-2.0.0.tgz",
+    "integrity": "sha512-IrtvNvjxC1o06taBAVJznEnkiHxLFTzgonUdy8hzFVeDun0uTjxxrRGVaNFqkU1wJR3RBPEfsxmU6jDWPofrTQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/mdast-util-gfm-task-list-item@2.0.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "mdast-util-mdx-expression",
+    "version": "2.0.1",
+    "installPath": "node_modules/mdast-util-mdx-expression",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/mdast-util-mdx-expression/-/mdast-util-mdx-expression-2.0.1.tgz",
+    "integrity": "sha512-J6f+9hUp+ldTZqKRSg7Vw5V6MqjATc+3E4gf3CFNcuZNWD8XdyI6zQ8GqH7f8169MM6P7hMBRDVGnn7oHB9kXQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/mdast-util-mdx-expression@2.0.1/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "mdast-util-mdx-jsx",
+    "version": "3.2.0",
+    "installPath": "node_modules/mdast-util-mdx-jsx",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/mdast-util-mdx-jsx/-/mdast-util-mdx-jsx-3.2.0.tgz",
+    "integrity": "sha512-lj/z8v0r6ZtsN/cGNNtemmmfoLAFZnjMbNyLzBafjzikOM+glrjNHPlf6lQDOTccj9n5b0PPihEBbhneMyGs1Q==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/mdast-util-mdx-jsx@3.2.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "mdast-util-mdxjs-esm",
+    "version": "2.0.1",
+    "installPath": "node_modules/mdast-util-mdxjs-esm",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/mdast-util-mdxjs-esm/-/mdast-util-mdxjs-esm-2.0.1.tgz",
+    "integrity": "sha512-EcmOpxsZ96CvlP03NghtH1EsLtr0n9Tm4lPUJUBccV9RwUOneqSycg19n5HGzCf+10LozMRSObtVr3ee1WoHtg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/mdast-util-mdxjs-esm@2.0.1/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "mdast-util-phrasing",
+    "version": "4.1.0",
+    "installPath": "node_modules/mdast-util-phrasing",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/mdast-util-phrasing/-/mdast-util-phrasing-4.1.0.tgz",
+    "integrity": "sha512-TqICwyvJJpBwvGAMZjj4J2n0X8QWp21b9l0o7eXyVJ25YNWYbJDVIyD1bZXE6WtV6RmKJVYmQAKWa0zWOABz2w==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/mdast-util-phrasing@4.1.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "mdast-util-to-hast",
+    "version": "13.2.1",
+    "installPath": "node_modules/mdast-util-to-hast",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/mdast-util-to-hast/-/mdast-util-to-hast-13.2.1.tgz",
+    "integrity": "sha512-cctsq2wp5vTsLIcaymblUriiTcZd0CwWtCbLvrOzYCDZoWyMNV8sZ7krj09FSnsiJi3WVsHLM4k6Dq/yaPyCXA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/mdast-util-to-hast@13.2.1/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "mdast-util-to-markdown",
+    "version": "2.2.0",
+    "installPath": "node_modules/mdast-util-to-markdown",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/mdast-util-to-markdown/-/mdast-util-to-markdown-2.2.0.tgz",
+    "integrity": "sha512-2Jn/ADrHFFyyniBMi0bncTbJqU78K3/TEYvzvwrWWzD9MYPUa/Gm4r3nOeKFQg/PDM5BsbDYdc8ackW4NTY6NA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/mdast-util-to-markdown@2.2.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "mdast-util-to-string",
+    "version": "4.0.0",
+    "installPath": "node_modules/mdast-util-to-string",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/mdast-util-to-string/-/mdast-util-to-string-4.0.0.tgz",
+    "integrity": "sha512-0H44vDimn51F0YwvxSJSm0eCDOJTRlmN0R1yBh4HLj9wiV1Dn0QoXGbvFAWj2hSItVTlCmBF1hqKlIyUBVFLPg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/mdast-util-to-string@4.0.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "micromark",
+    "version": "4.0.3",
+    "installPath": "node_modules/micromark",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/micromark/-/micromark-4.0.3.tgz",
+    "integrity": "sha512-oGYfQzHSG5dOMovQcJ3fyTmZlWAWpi0XA0sJwJs+i6OT88o1+Jtw/8z0CmdowSLxGhhFK89rQ/oXph/wN02PNw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/micromark@4.0.3/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "micromark-core-commonmark",
+    "version": "2.0.4",
+    "installPath": "node_modules/micromark-core-commonmark",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/micromark-core-commonmark/-/micromark-core-commonmark-2.0.4.tgz",
+    "integrity": "sha512-wxEeE8v8XVvOrxn1TZj74qYhAtTQsSqufHVS3uNVyT1MupXxhyaHk8/9xDNPh9BmL77QNDgWTkZ3RsYHB2ry7w==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/micromark-core-commonmark@2.0.4/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "micromark-extension-gfm",
+    "version": "3.0.0",
+    "installPath": "node_modules/micromark-extension-gfm",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/micromark-extension-gfm/-/micromark-extension-gfm-3.0.0.tgz",
+    "integrity": "sha512-vsKArQsicm7t0z2GugkCKtZehqUm31oeGBV/KVSorWSy8ZlNAv7ytjFhvaryUiCUJYqs+NoE6AFhpQvBTM6Q4w==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/micromark-extension-gfm@3.0.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "micromark-extension-gfm-autolink-literal",
+    "version": "2.1.0",
+    "installPath": "node_modules/micromark-extension-gfm-autolink-literal",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/micromark-extension-gfm-autolink-literal/-/micromark-extension-gfm-autolink-literal-2.1.0.tgz",
+    "integrity": "sha512-oOg7knzhicgQ3t4QCjCWgTmfNhvQbDDnJeVu9v81r7NltNCVmhPy1fJRX27pISafdjL+SVc4d3l48Gb6pbRypw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/micromark-extension-gfm-autolink-literal@2.1.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "micromark-extension-gfm-footnote",
+    "version": "2.1.0",
+    "installPath": "node_modules/micromark-extension-gfm-footnote",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/micromark-extension-gfm-footnote/-/micromark-extension-gfm-footnote-2.1.0.tgz",
+    "integrity": "sha512-/yPhxI1ntnDNsiHtzLKYnE3vf9JZ6cAisqVDauhp4CEHxlb4uoOTxOCJ+9s51bIB8U1N1FJ1RXOKTIlD5B/gqw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/micromark-extension-gfm-footnote@2.1.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "micromark-extension-gfm-strikethrough",
+    "version": "2.1.0",
+    "installPath": "node_modules/micromark-extension-gfm-strikethrough",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/micromark-extension-gfm-strikethrough/-/micromark-extension-gfm-strikethrough-2.1.0.tgz",
+    "integrity": "sha512-ADVjpOOkjz1hhkZLlBiYA9cR2Anf8F4HqZUO6e5eDcPQd0Txw5fxLzzxnEkSkfnD0wziSGiv7sYhk/ktvbf1uw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/micromark-extension-gfm-strikethrough@2.1.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "micromark-extension-gfm-table",
+    "version": "2.1.2",
+    "installPath": "node_modules/micromark-extension-gfm-table",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/micromark-extension-gfm-table/-/micromark-extension-gfm-table-2.1.2.tgz",
+    "integrity": "sha512-pRzm4kDTu0MjlmBkxmS9yYhw60nncfcEwu9NNdPFSQEFXS95ZKyIIyTSHu/o3ReBUrLKYEq+7YaXCRn/bPB4MA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/micromark-extension-gfm-table@2.1.2/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "micromark-extension-gfm-tagfilter",
+    "version": "2.0.0",
+    "installPath": "node_modules/micromark-extension-gfm-tagfilter",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/micromark-extension-gfm-tagfilter/-/micromark-extension-gfm-tagfilter-2.0.0.tgz",
+    "integrity": "sha512-xHlTOmuCSotIA8TW1mDIM6X2O1SiX5P9IuDtqGonFhEK0qgRI4yeC6vMxEV2dgyr2TiD+2PQ10o+cOhdVAcwfg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/micromark-extension-gfm-tagfilter@2.0.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "micromark-extension-gfm-task-list-item",
+    "version": "2.1.0",
+    "installPath": "node_modules/micromark-extension-gfm-task-list-item",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/micromark-extension-gfm-task-list-item/-/micromark-extension-gfm-task-list-item-2.1.0.tgz",
+    "integrity": "sha512-qIBZhqxqI6fjLDYFTBIa4eivDMnP+OZqsNwmQ3xNLE4Cxwc+zfQEfbs6tzAo2Hjq+bh6q5F+Z8/cksrLFYWQQw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/micromark-extension-gfm-task-list-item@2.1.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "micromark-factory-destination",
+    "version": "2.0.1",
+    "installPath": "node_modules/micromark-factory-destination",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/micromark-factory-destination/-/micromark-factory-destination-2.0.1.tgz",
+    "integrity": "sha512-Xe6rDdJlkmbFRExpTOmRj9N3MaWmbAgdpSrBQvCFqhezUn4AHqJHbaEnfbVYYiexVSs//tqOdY/DxhjdCiJnIA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/micromark-factory-destination@2.0.1/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "micromark-factory-label",
+    "version": "2.0.1",
+    "installPath": "node_modules/micromark-factory-label",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/micromark-factory-label/-/micromark-factory-label-2.0.1.tgz",
+    "integrity": "sha512-VFMekyQExqIW7xIChcXn4ok29YE3rnuyveW3wZQWWqF4Nv9Wk5rgJ99KzPvHjkmPXF93FXIbBp6YdW3t71/7Vg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/micromark-factory-label@2.0.1/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "micromark-factory-space",
+    "version": "2.1.0",
+    "installPath": "node_modules/micromark-factory-space",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/micromark-factory-space/-/micromark-factory-space-2.1.0.tgz",
+    "integrity": "sha512-fS8hnLIjnjvdQIj39Geug8wWsR0HrYZ43KShKxNfwT7t2LOHo/LbWZEzEaSOjwtjdCsjoE6syHhonEzW0zv0+Q==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/micromark-factory-space@2.1.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "micromark-factory-title",
+    "version": "2.0.1",
+    "installPath": "node_modules/micromark-factory-title",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/micromark-factory-title/-/micromark-factory-title-2.0.1.tgz",
+    "integrity": "sha512-5bZ+3CjhAd9eChYTHsjy6TGxpOFSKgKKJPJxr293jTbfry2KDoWkhBb6TcPVB4NmzaPhMs1Frm9AZH7OD4Cjzw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/micromark-factory-title@2.0.1/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "micromark-factory-whitespace",
+    "version": "2.0.1",
+    "installPath": "node_modules/micromark-factory-whitespace",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/micromark-factory-whitespace/-/micromark-factory-whitespace-2.0.1.tgz",
+    "integrity": "sha512-Ob0nuZ3PKt/n0hORHyvoD9uZhr+Za8sFoP+OnMcnWK5lngSzALgQYKMr9RJVOWLqQYuyn6ulqGWSXdwf6F80lQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/micromark-factory-whitespace@2.0.1/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "micromark-util-character",
+    "version": "2.1.1",
+    "installPath": "node_modules/micromark-util-character",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/micromark-util-character/-/micromark-util-character-2.1.1.tgz",
+    "integrity": "sha512-wv8tdUTJ3thSFFFJKtpYKOYiGP2+v96Hvk4Tu8KpCAsTMs6yi+nVmGh1syvSCsaxz45J6Jbw+9DD6g97+NV67Q==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/micromark-util-character@2.1.1/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "micromark-util-chunked",
+    "version": "2.0.1",
+    "installPath": "node_modules/micromark-util-chunked",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/micromark-util-chunked/-/micromark-util-chunked-2.0.1.tgz",
+    "integrity": "sha512-QUNFEOPELfmvv+4xiNg2sRYeS/P84pTW0TCgP5zc9FpXetHY0ab7SxKyAQCNCc1eK0459uoLI1y5oO5Vc1dbhA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/micromark-util-chunked@2.0.1/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "micromark-util-classify-character",
+    "version": "2.0.1",
+    "installPath": "node_modules/micromark-util-classify-character",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/micromark-util-classify-character/-/micromark-util-classify-character-2.0.1.tgz",
+    "integrity": "sha512-K0kHzM6afW/MbeWYWLjoHQv1sgg2Q9EccHEDzSkxiP/EaagNzCm7T/WMKZ3rjMbvIpvBiZgwR3dKMygtA4mG1Q==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/micromark-util-classify-character@2.0.1/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "micromark-util-combine-extensions",
+    "version": "2.0.1",
+    "installPath": "node_modules/micromark-util-combine-extensions",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/micromark-util-combine-extensions/-/micromark-util-combine-extensions-2.0.1.tgz",
+    "integrity": "sha512-OnAnH8Ujmy59JcyZw8JSbK9cGpdVY44NKgSM7E9Eh7DiLS2E9RNQf0dONaGDzEG9yjEl5hcqeIsj4hfRkLH/Bg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/micromark-util-combine-extensions@2.0.1/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "micromark-util-decode-numeric-character-reference",
+    "version": "2.0.2",
+    "installPath": "node_modules/micromark-util-decode-numeric-character-reference",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/micromark-util-decode-numeric-character-reference/-/micromark-util-decode-numeric-character-reference-2.0.2.tgz",
+    "integrity": "sha512-ccUbYk6CwVdkmCQMyr64dXz42EfHGkPQlBj5p7YVGzq8I7CtjXZJrubAYezf7Rp+bjPseiROqe7G6foFd+lEuw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/micromark-util-decode-numeric-character-reference@2.0.2/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "micromark-util-decode-string",
+    "version": "2.0.1",
+    "installPath": "node_modules/micromark-util-decode-string",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/micromark-util-decode-string/-/micromark-util-decode-string-2.0.1.tgz",
+    "integrity": "sha512-nDV/77Fj6eH1ynwscYTOsbK7rR//Uj0bZXBwJZRfaLEJ1iGBR6kIfNmlNqaqJf649EP0F3NWNdeJi03elllNUQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/micromark-util-decode-string@2.0.1/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "micromark-util-edit-map",
+    "version": "1.0.0",
+    "installPath": "node_modules/micromark-util-edit-map",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/micromark-util-edit-map/-/micromark-util-edit-map-1.0.0.tgz",
+    "integrity": "sha512-Pa2ljlsEL6sVwFaYeyrOLSYbQt73JvGbPOYFq+9AElXiSnfI5Q4465RRZ1sHv7lDjDOnGRDDaqPXqClqWK/q1Q==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/micromark-util-edit-map@1.0.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "micromark-util-encode",
+    "version": "2.0.1",
+    "installPath": "node_modules/micromark-util-encode",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/micromark-util-encode/-/micromark-util-encode-2.0.1.tgz",
+    "integrity": "sha512-c3cVx2y4KqUnwopcO9b/SCdo2O67LwJJ/UyqGfbigahfegL9myoEFoDYZgkT7f36T0bLrM9hZTAaAyH+PCAXjw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/micromark-util-encode@2.0.1/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "micromark-util-html-tag-name",
+    "version": "2.0.1",
+    "installPath": "node_modules/micromark-util-html-tag-name",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/micromark-util-html-tag-name/-/micromark-util-html-tag-name-2.0.1.tgz",
+    "integrity": "sha512-2cNEiYDhCWKI+Gs9T0Tiysk136SnR13hhO8yW6BGNyhOC4qYFnwF1nKfD3HFAIXA5c45RrIG1ub11GiXeYd1xA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/micromark-util-html-tag-name@2.0.1/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "micromark-util-normalize-identifier",
+    "version": "2.0.1",
+    "installPath": "node_modules/micromark-util-normalize-identifier",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/micromark-util-normalize-identifier/-/micromark-util-normalize-identifier-2.0.1.tgz",
+    "integrity": "sha512-sxPqmo70LyARJs0w2UclACPUUEqltCkJ6PhKdMIDuJ3gSf/Q+/GIe3WKl0Ijb/GyH9lOpUkRAO2wp0GVkLvS9Q==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/micromark-util-normalize-identifier@2.0.1/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "micromark-util-resolve-all",
+    "version": "2.0.1",
+    "installPath": "node_modules/micromark-util-resolve-all",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/micromark-util-resolve-all/-/micromark-util-resolve-all-2.0.1.tgz",
+    "integrity": "sha512-VdQyxFWFT2/FGJgwQnJYbe1jjQoNTS4RjglmSjTUlpUMa95Htx9NHeYW4rGDJzbjvCsl9eLjMQwGeElsqmzcHg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/micromark-util-resolve-all@2.0.1/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "micromark-util-sanitize-uri",
+    "version": "2.0.1",
+    "installPath": "node_modules/micromark-util-sanitize-uri",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/micromark-util-sanitize-uri/-/micromark-util-sanitize-uri-2.0.1.tgz",
+    "integrity": "sha512-9N9IomZ/YuGGZZmQec1MbgxtlgougxTodVwDzzEouPKo3qFWvymFHWcnDi2vzV1ff6kas9ucW+o3yzJK9YB1AQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/micromark-util-sanitize-uri@2.0.1/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "micromark-util-subtokenize",
+    "version": "2.1.0",
+    "installPath": "node_modules/micromark-util-subtokenize",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/micromark-util-subtokenize/-/micromark-util-subtokenize-2.1.0.tgz",
+    "integrity": "sha512-XQLu552iSctvnEcgXw6+Sx75GflAPNED1qx7eBJ+wydBb2KCbRZe+NwvIEEMM83uml1+2WSXpBAcp9IUCgCYWA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/micromark-util-subtokenize@2.1.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "micromark-util-symbol",
+    "version": "2.0.1",
+    "installPath": "node_modules/micromark-util-symbol",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/micromark-util-symbol/-/micromark-util-symbol-2.0.1.tgz",
+    "integrity": "sha512-vs5t8Apaud9N28kgCrRUdEed4UJ+wWNvicHLPxCa9ENlYuAY31M0ETy5y1vA33YoNPDFTghEbnh6efaE8h4x0Q==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/micromark-util-symbol@2.0.1/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "micromark-util-types",
+    "version": "2.0.3",
+    "installPath": "node_modules/micromark-util-types",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/micromark-util-types/-/micromark-util-types-2.0.3.tgz",
+    "integrity": "sha512-oxB2Ik03hI0gv+VNn9tnh1t1YEe9MDPptViAEgfdf3YQHsn0pzGTgCdlSCJXcwhqm8phaEuM7zeEu3QQzVBrPg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/micromark-util-types@2.0.3/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "ms",
+    "version": "2.1.3",
+    "installPath": "node_modules/ms",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/ms/-/ms-2.1.3.tgz",
+    "integrity": "sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/ms@2.1.3/license.md"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "nanoid",
+    "version": "3.3.20",
+    "installPath": "node_modules/nanoid",
+    "dev": true,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/nanoid/-/nanoid-3.3.20.tgz",
+    "integrity": "sha512-uKdg2G3GNCKQn9byYOpxbGqrT2fGO5KRt5J/8b3pok8rT6qxGWF6hxMyJiEYtAf+FVyYuD9hRaDqX5uPFYJ4ZQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/nanoid@3.3.20/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "obug",
+    "version": "3.0.0",
+    "installPath": "node_modules/obug",
+    "dev": true,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/obug/-/obug-3.0.0.tgz",
+    "integrity": "sha512-5vvB5+W7ePv+p3uqxi+RcW1XAzLW0/hxt3/4X4Lc4qHudzOhmBiBwOY6DRob4WnanAEGvNcLjF+KNOufrUoEQw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/obug@3.0.0/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "oniguruma-parser",
+    "version": "0.12.2",
+    "installPath": "node_modules/oniguruma-parser",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/oniguruma-parser/-/oniguruma-parser-0.12.2.tgz",
+    "integrity": "sha512-6HVa5oIrgMC6aA6WF6XyyqbhRPJrKR02L20+2+zpDtO5QAzGHAUGw5TKQvwi5vctNnRHkJYmjAhRVQF2EKdTQw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/oniguruma-parser@0.12.2/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "oniguruma-to-es",
+    "version": "4.3.6",
+    "installPath": "node_modules/oniguruma-to-es",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/oniguruma-to-es/-/oniguruma-to-es-4.3.6.tgz",
+    "integrity": "sha512-csuQ9x3Yr0cEIs/Zgx/OEt9iBw9vqIunAPQkx19R/fiMq2oGVTgcMqO/V3Ybqefr1TBvosI6jU539ksaBULJyA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/oniguruma-to-es@4.3.6/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "parse-entities",
+    "version": "4.0.2",
+    "installPath": "node_modules/parse-entities",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/parse-entities/-/parse-entities-4.0.2.tgz",
+    "integrity": "sha512-GG2AQYWoLgL877gQIKeRPGO1xF9+eG1ujIb5soS5gPvLQ1y2o8FL90w2QWNdf9I361Mpp7726c+lj3U0qK1uGw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/parse-entities@4.0.2/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "@types/unist",
+    "version": "2.0.11",
+    "installPath": "node_modules/parse-entities/node_modules/@types/unist",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/@types/unist/-/unist-2.0.11.tgz",
+    "integrity": "sha512-CmBKiL6NNo/OqgmMn95Fk9Whlp2mtvIv+KNpQKN2F4SjvrEesubTRWGYSg+BnWZOnlCaSTU1sMpsBOzgbYhnsA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/@types__unist@2.0.11/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "pdfjs-dist",
+    "version": "6.4.299",
+    "installPath": "node_modules/pdfjs-dist",
+    "dev": false,
+    "optional": false,
+    "license": "Apache-2.0",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/pdfjs-dist/-/pdfjs-dist-6.4.299.tgz",
+    "integrity": "sha512-AVl138zALtfaAPvADulE0PZThbYzCBS79nL4pOSL/6Sm/4AH5A21BD9VHt97OlCuzJuCpmeZtAtkinisF4Vb1g==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/pdfjs-dist@6.4.299/LICENSE",
+      "docs/licenses/texts/frontend/pdfjs-dist@6.4.299/cmaps/LICENSE",
+      "docs/licenses/texts/frontend/pdfjs-dist@6.4.299/iccs/LICENSE",
+      "docs/licenses/texts/frontend/pdfjs-dist@6.4.299/standard_fonts/LICENSE_FOXIT",
+      "docs/licenses/texts/frontend/pdfjs-dist@6.4.299/standard_fonts/LICENSE_LIBERATION",
+      "docs/licenses/texts/frontend/pdfjs-dist@6.4.299/wasm/LICENSE_JBIG2",
+      "docs/licenses/texts/frontend/pdfjs-dist@6.4.299/wasm/LICENSE_OPENJPEG",
+      "docs/licenses/texts/frontend/pdfjs-dist@6.4.299/wasm/LICENSE_PDFJS_JBIG2",
+      "docs/licenses/texts/frontend/pdfjs-dist@6.4.299/wasm/LICENSE_PDFJS_OPENJPEG",
+      "docs/licenses/texts/frontend/pdfjs-dist@6.4.299/wasm/LICENSE_PDFJS_QCMS",
+      "docs/licenses/texts/frontend/pdfjs-dist@6.4.299/wasm/LICENSE_QCMS"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "picocolors",
+    "version": "1.1.1",
+    "installPath": "node_modules/picocolors",
+    "dev": true,
+    "optional": false,
+    "license": "ISC",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/picocolors/-/picocolors-1.1.1.tgz",
+    "integrity": "sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/picocolors@1.1.1/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "picomatch",
+    "version": "4.0.7",
+    "installPath": "node_modules/picomatch",
+    "dev": true,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/picomatch/-/picomatch-4.0.7.tgz",
+    "integrity": "sha512-qcJu88Q2IWqJsDD529JKMdwGm/dvInW4HvQnRwiH9JtihJvzGOscDtHE3x1pBKeUOTysQ8kVmLnJ2kJu7yhcGA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/picomatch@4.0.7/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "playwright",
+    "version": "1.64.1",
+    "installPath": "node_modules/playwright",
+    "dev": true,
+    "optional": false,
+    "license": "Apache-2.0",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/playwright/-/playwright-1.64.1.tgz",
+    "integrity": "sha512-HCrVhHr5QQuwYoswEUGTb7gGp522yflbv/ST8nF4sFWGuLjQCt17Q/EubpGGSNKYn1tsTCPZxqHhHCfVURu7UA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/playwright@1.64.1/LICENSE",
+      "docs/licenses/texts/frontend/playwright@1.64.1/NOTICE",
+      "docs/licenses/texts/frontend/playwright@1.64.1/lib/matchers/expect.js.LICENSE",
+      "docs/licenses/texts/frontend/playwright@1.64.1/lib/transform/babelBundle.js.LICENSE",
+      "docs/licenses/texts/frontend/playwright@1.64.1/lib/transform/esmLoader.js.LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "playwright-core",
+    "version": "1.64.1",
+    "installPath": "node_modules/playwright-core",
+    "dev": true,
+    "optional": false,
+    "license": "Apache-2.0",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/playwright-core/-/playwright-core-1.64.1.tgz",
+    "integrity": "sha512-BC4s8y6SEVA6Q1rSxZTto8hI1KUI3xXlHGZgvGqP4IqPdI/a6FX9H29IDNz7vKo9l21b6LfYosScPL6M3xxyDQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/playwright-core@1.64.1/LICENSE",
+      "docs/licenses/texts/frontend/playwright-core@1.64.1/NOTICE",
+      "docs/licenses/texts/frontend/playwright-core@1.64.1/lib/serverRegistry.js.LICENSE",
+      "docs/licenses/texts/frontend/playwright-core@1.64.1/lib/utilsBundle.js.LICENSE",
+      "docs/licenses/texts/frontend/playwright-core@1.64.1/lib/webp_codec.LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "postcss",
+    "version": "8.5.30",
+    "installPath": "node_modules/postcss",
+    "dev": true,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/postcss/-/postcss-8.5.30.tgz",
+    "integrity": "sha512-zkd+e9S1AQHhmaBKye9zlFHWjOwVgqXl1q3ECYy8561K7qxR2cREf/STLskulBFd78k6AOFeA+ff1TtEzk9bAA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/postcss@8.5.30/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "property-information",
+    "version": "7.2.0",
+    "installPath": "node_modules/property-information",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/property-information/-/property-information-7.2.0.tgz",
+    "integrity": "sha512-IAtzIB6sUiWaJYrX9smp3V46pBGbBeLFRGdh25kg1334VcBlD8HzhPeNIWQH9zhGmo2itIe25EHt9dQP7G5hmg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/property-information@7.2.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "react",
+    "version": "19.3.1",
+    "installPath": "node_modules/react",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/react/-/react-19.3.1.tgz",
+    "integrity": "sha512-QNhWdt7nrgVWWQG58QuGsAR3jv3Hbe4mb4vz7w2csnHavciZJgda1CPNaldF6eVxv90ud3jUXpKlHL69gO38yw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/react@19.3.1/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "react-dom",
+    "version": "19.3.1",
+    "installPath": "node_modules/react-dom",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/react-dom/-/react-dom-19.3.1.tgz",
+    "integrity": "sha512-Y0bARz53lhEC1NMCASs0/j+faB/zqt3R8hpvg1e8+61ZVJ4UL0UdC4cBbXfZMcIuhrfgeILTLe+ZeBCavQPtKQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/react-dom@19.3.1/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "react-markdown",
+    "version": "10.1.0",
+    "installPath": "node_modules/react-markdown",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/react-markdown/-/react-markdown-10.1.0.tgz",
+    "integrity": "sha512-qKxVopLT/TyA6BX3Ue5NwabOsAzm0Q7kAPwq6L+wWDwisYs7R8vZ0nRXqq6rkueboxpkjvLGU9fWifiX/ZZFxQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/react-markdown@10.1.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "regex",
+    "version": "6.1.0",
+    "installPath": "node_modules/regex",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/regex/-/regex-6.1.0.tgz",
+    "integrity": "sha512-6VwtthbV4o/7+OaAF9I5L5V3llLEsoPyq9P1JVXkedTP33c7MfCG0/5NOPcSJn0TzXcG9YUrR0gQSWioew3LDg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/regex@6.1.0/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "regex-recursion",
+    "version": "6.0.2",
+    "installPath": "node_modules/regex-recursion",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/regex-recursion/-/regex-recursion-6.0.2.tgz",
+    "integrity": "sha512-0YCaSCq2VRIebiaUviZNs0cBz1kg5kVS2UKUfNIx8YVs1cN3AV7NTctO5FOKBA+UT2BPJIWZauYHPqJODG50cg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/regex-recursion@6.0.2/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "regex-utilities",
+    "version": "2.3.0",
+    "installPath": "node_modules/regex-utilities",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/regex-utilities/-/regex-utilities-2.3.0.tgz",
+    "integrity": "sha512-8VhliFJAWRaUiVvREIiW2NXXTmHs4vMNnSzuJVhscgmGav3g9VDxLrQndI3dZZVVdp0ZO/5v0xmX516/7M9cng==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/regex-utilities@2.3.0/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "remark-gfm",
+    "version": "4.0.1",
+    "installPath": "node_modules/remark-gfm",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/remark-gfm/-/remark-gfm-4.0.1.tgz",
+    "integrity": "sha512-1quofZ2RQ9EWdeN34S79+KExV1764+wCUGop5CPL1WGdD0ocPpu91lzPGbwWMECpEpd42kJGQwzRfyov9j4yNg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/remark-gfm@4.0.1/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "remark-parse",
+    "version": "11.0.0",
+    "installPath": "node_modules/remark-parse",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/remark-parse/-/remark-parse-11.0.0.tgz",
+    "integrity": "sha512-FCxlKLNGknS5ba/1lmpYijMUzX2esxW5xQqjWxw2eHFfS2MSdaHVINFmhjo+qN1WhZhNimq0dZATN9pH0IDrpA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/remark-parse@11.0.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "remark-rehype",
+    "version": "11.1.2",
+    "installPath": "node_modules/remark-rehype",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/remark-rehype/-/remark-rehype-11.1.2.tgz",
+    "integrity": "sha512-Dh7l57ianaEoIpzbp0PC9UKAdCSVklD8E5Rpw7ETfbTl3FqcOOgq5q2LVDhgGCkaBv7p24JXikPdvhhmHvKMsw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/remark-rehype@11.1.2/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "remark-stringify",
+    "version": "11.0.0",
+    "installPath": "node_modules/remark-stringify",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/remark-stringify/-/remark-stringify-11.0.0.tgz",
+    "integrity": "sha512-1OSmLd3awB/t8qdoEOMazZkNsfVTeY4fTsgzcQFdXNq8ToTN4ZGwrMnlda4K6smTFKD+GRV6O48i6Z4iKgPPpw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/remark-stringify@11.0.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "rolldown",
+    "version": "1.2.14",
+    "installPath": "node_modules/rolldown",
+    "dev": true,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/rolldown/-/rolldown-1.2.14.tgz",
+    "integrity": "sha512-eTBTTqMR6uHKLgcUqpJP8ntzDI6V4LYA8negAMBEI7gkgVvOdrx6VsvS2Ym+83KhOPdLCHWJu0w7UQFJZhHKNw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/rolldown@1.2.14/LICENSE",
+      "docs/licenses/texts/frontend/rolldown@1.2.14/THIRD-PARTY-LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "scheduler",
+    "version": "0.28.0",
+    "installPath": "node_modules/scheduler",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/scheduler/-/scheduler-0.28.0.tgz",
+    "integrity": "sha512-juorfCmIkIw8tT+p5BXSm6PJjQF/ycEYmKyzURCIt/RaZIhL+PulbQ9Yu2z1HdOJDdqDTlxA1+xKBmHXJsczAw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/scheduler@0.28.0/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "shiki",
+    "version": "4.5.0",
+    "installPath": "node_modules/shiki",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/shiki/-/shiki-4.5.0.tgz",
+    "integrity": "sha512-OcRW72ngQvc+MSVWBRIovC/BTW589iUE/Vxav7VeM4RcY9MUjqB+IR6ILG1k9nuW6LiG/nct9uma4/MBtnZbmQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/shiki@4.5.0/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "source-map-js",
+    "version": "1.2.2",
+    "installPath": "node_modules/source-map-js",
+    "dev": true,
+    "optional": false,
+    "license": "BSD-3-Clause",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.2.tgz",
+    "integrity": "sha512-KGj/8Y43x35aZVDtt+J4mK1hoLGHULMYfSkODJNQjNDC3oW1PqPoxMwo0pLUsWM/UEGzON/NxeHywEfNXNP3Vw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/source-map-js@1.2.2/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "space-separated-tokens",
+    "version": "2.0.2",
+    "installPath": "node_modules/space-separated-tokens",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/space-separated-tokens/-/space-separated-tokens-2.0.2.tgz",
+    "integrity": "sha512-PEGlAwrG8yXGXRjW32fGbg66JAlOAwbObuqVoJpv/mRgoWDQfgH1wDPvtzWyUSNAXBGSk8h755YDbbcEy3SH2Q==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/space-separated-tokens@2.0.2/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "std-env",
+    "version": "4.3.0",
+    "installPath": "node_modules/std-env",
+    "dev": true,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/std-env/-/std-env-4.3.0.tgz",
+    "integrity": "sha512-OtU/EgQ1kIm5KwqQpBC6ZEMXrZRui11w8zgfTWp8cdO9B8OaPsbA8bTHO2P+HNo1VlUTGMVBwPhydu6poeXiag==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/std-env@4.3.0/LICENCE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "stringify-entities",
+    "version": "4.0.4",
+    "installPath": "node_modules/stringify-entities",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/stringify-entities/-/stringify-entities-4.0.4.tgz",
+    "integrity": "sha512-IwfBptatlO+QCJUo19AqvrPNqlVMpW9YEL2LIVY+Rpv2qsjCGxaDLNRgeGsQWJhfItebuJhsGSLjaBbNSQ+ieg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/stringify-entities@4.0.4/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "style-to-js",
+    "version": "1.1.21",
+    "installPath": "node_modules/style-to-js",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/style-to-js/-/style-to-js-1.1.21.tgz",
+    "integrity": "sha512-RjQetxJrrUJLQPHbLku6U/ocGtzyjbJMP9lCNK7Ag0CNh690nSH8woqWH9u16nMjYBAok+i7JO1NP2pOy8IsPQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/style-to-js@1.1.21/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "style-to-object",
+    "version": "1.0.14",
+    "installPath": "node_modules/style-to-object",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/style-to-object/-/style-to-object-1.0.14.tgz",
+    "integrity": "sha512-LIN7rULI0jBscWQYaSswptyderlarFkjQ+t79nzty8tcIAceVomEVlLzH5VP4Cmsv6MtKhs7qaAiwlcp+Mgaxw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/style-to-object@1.0.14/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "tinybench",
+    "version": "6.2.2",
+    "installPath": "node_modules/tinybench",
+    "dev": true,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/tinybench/-/tinybench-6.2.2.tgz",
+    "integrity": "sha512-nIZ2N2dFpjBsg2hgitKu7mA+FvsIJuGJOwysRngmVRRmWgR/UyPjwJj8c/fT/dhm8EkHnF5EOogRf+0Z2qrimA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/tinybench@6.2.2/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "tinyexec",
+    "version": "1.3.1",
+    "installPath": "node_modules/tinyexec",
+    "dev": true,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/tinyexec/-/tinyexec-1.3.1.tgz",
+    "integrity": "sha512-GCvB3aoys96IuDFBMcTB46JOR6mdMtAToqwiW8JlWhsoh1mhHi/xn9ss/Dg7N555GiJyEt2qzoG/NHCwM6h1EA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/tinyexec@1.3.1/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "tinyglobby",
+    "version": "0.2.17",
+    "installPath": "node_modules/tinyglobby",
+    "dev": true,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/tinyglobby/-/tinyglobby-0.2.17.tgz",
+    "integrity": "sha512-wXR/dYpcqKmfWpEdZjiKJOwCNFndD0DMnrW/cYjVGttEkBfVgcLFHoNrlj47mjOVic9yyNu65alsgF4NQyTa2g==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/tinyglobby@0.2.17/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "trim-lines",
+    "version": "3.0.1",
+    "installPath": "node_modules/trim-lines",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/trim-lines/-/trim-lines-3.0.1.tgz",
+    "integrity": "sha512-kRj8B+YHZCc9kQYdWfJB2/oUl9rA99qbowYYBtr4ui4mZyAQ2JpvVBd/6U2YloATfqBhBTSMhTpgBHtU0Mf3Rg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/trim-lines@3.0.1/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "trough",
+    "version": "2.2.0",
+    "installPath": "node_modules/trough",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/trough/-/trough-2.2.0.tgz",
+    "integrity": "sha512-tmMpK00BjZiUyVyvrBK7knerNgmgvcV/KLVyuma/SC+TQN167GrMRciANTz09+k3zW8L8t60jWO1GpfkZdjTaw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/trough@2.2.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "typescript",
+    "version": "7.0.2",
+    "installPath": "node_modules/typescript",
+    "dev": true,
+    "optional": false,
+    "license": "Apache-2.0",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/typescript/-/typescript-7.0.2.tgz",
+    "integrity": "sha512-8FYau96o3NKOhbjKi/qNvG/W5jhzxkbdm5sj9AbZ/5T5sWqn3hJgLfGx27sRKZWTvyzCP8dLRBTf5tBTSRVUNA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/typescript@7.0.2/LICENSE",
+      "docs/licenses/texts/frontend/typescript@7.0.2/NOTICE.txt",
+      "docs/licenses/texts/frontend/typescript@7.0.2/vendor/vscode-jsonrpc/License.txt"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "unified",
+    "version": "11.0.5",
+    "installPath": "node_modules/unified",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/unified/-/unified-11.0.5.tgz",
+    "integrity": "sha512-xKvGhPWw3k84Qjh8bI3ZeJjqnyadK+GEFtazSfZv/rKeTkTjOJho6mFqh2SM96iIcZokxiOpg78GazTSg8+KHA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/unified@11.0.5/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "unist-util-is",
+    "version": "6.0.1",
+    "installPath": "node_modules/unist-util-is",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/unist-util-is/-/unist-util-is-6.0.1.tgz",
+    "integrity": "sha512-LsiILbtBETkDz8I9p1dQ0uyRUWuaQzd/cuEeS1hoRSyW5E5XGmTzlwY1OrNzzakGowI9Dr/I8HVaw4hTtnxy8g==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/unist-util-is@6.0.1/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "unist-util-position",
+    "version": "5.0.0",
+    "installPath": "node_modules/unist-util-position",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/unist-util-position/-/unist-util-position-5.0.0.tgz",
+    "integrity": "sha512-fucsC7HjXvkB5R3kTCO7kUjRdrS0BJt3M/FPxmHMBOm8JQi2BsHAHFsy27E0EolP8rp0NzXsJ+jNPyDWvOJZPA==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/unist-util-position@5.0.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "unist-util-stringify-position",
+    "version": "4.0.0",
+    "installPath": "node_modules/unist-util-stringify-position",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/unist-util-stringify-position/-/unist-util-stringify-position-4.0.0.tgz",
+    "integrity": "sha512-0ASV06AAoKCDkS2+xw5RXJywruurpbC4JZSm7nr7MOt1ojAzvyyaO+UxZf18j8FCF6kmzCZKcAgN/yu2gm2XgQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/unist-util-stringify-position@4.0.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "unist-util-visit",
+    "version": "5.1.0",
+    "installPath": "node_modules/unist-util-visit",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/unist-util-visit/-/unist-util-visit-5.1.0.tgz",
+    "integrity": "sha512-m+vIdyeCOpdr/QeQCu2EzxX/ohgS8KbnPDgFni4dQsfSCtpz8UqDyY5GjRru8PDKuYn7Fq19j1CQ+nJSsGKOzg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/unist-util-visit@5.1.0/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "unist-util-visit-parents",
+    "version": "6.0.2",
+    "installPath": "node_modules/unist-util-visit-parents",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/unist-util-visit-parents/-/unist-util-visit-parents-6.0.2.tgz",
+    "integrity": "sha512-goh1s1TBrqSqukSc8wrjwWhL0hiJxgA8m4kFxGlQ+8FYQ3C/m11FcTs4YYem7V664AhHVvgoQLk890Ssdsr2IQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/unist-util-visit-parents@6.0.2/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "vfile",
+    "version": "6.0.3",
+    "installPath": "node_modules/vfile",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/vfile/-/vfile-6.0.3.tgz",
+    "integrity": "sha512-KzIbH/9tXat2u30jf+smMwFCsno4wHVdNmzFyL+T/L3UGqqk6JKfVqOFOZEpZSHADH1k40ab6NUIXZq422ov3Q==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/vfile@6.0.3/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "vfile-message",
+    "version": "4.0.3",
+    "installPath": "node_modules/vfile-message",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/vfile-message/-/vfile-message-4.0.3.tgz",
+    "integrity": "sha512-QTHzsGd1EhbZs4AsQ20JX1rC3cOlt/IWJruk893DfLRr57lcnOeMaWG4K0JrRta4mIJZKth2Au3mM3u03/JWKw==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/vfile-message@4.0.3/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "vite",
+    "version": "8.3.4",
+    "installPath": "node_modules/vite",
+    "dev": true,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/vite/-/vite-8.3.4.tgz",
+    "integrity": "sha512-IftLE8phJhdNRIGNEV4JCCvfNScoZQVfcXaN8TQropWGJtOHcu+iAB9pHcuGvmEb/kddw0LBe/jS8ztdC6xdiQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/vite@8.3.4/LICENSE.md"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "vitest",
+    "version": "5.0.4",
+    "installPath": "node_modules/vitest",
+    "dev": true,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/vitest/-/vitest-5.0.4.tgz",
+    "integrity": "sha512-z0WxZRV2Sg48wF0FSgMq3TFG8JS38/Qr96vZVZdX6+Em9raQTvnXQvdTFJe2m3rfyJnEHeHQ/snceIdi8D1pVg==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/vitest@5.0.4/LICENSE.md"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "why-is-node-running",
+    "version": "3.2.1",
+    "installPath": "node_modules/why-is-node-running",
+    "dev": true,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": false,
+    "resolved": "https://registry.npmjs.org/why-is-node-running/-/why-is-node-running-3.2.1.tgz",
+    "integrity": "sha512-Tb2FUhB4vUsGQlfSquQLYkApkuPAFQXGFzxWKHHumVz2dK+X1RUm/HnID4+TfIGYJ1kTcwOaCk/buYCEJr6YjQ==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/why-is-node-running@3.2.1/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "zustand",
+    "version": "5.0.15",
+    "installPath": "node_modules/zustand",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/zustand/-/zustand-5.0.15.tgz",
+    "integrity": "sha512-MpSEjRiBkA9crSYeOUH32rJC7SVqAbm0Fqcqge/bUi2PPoLcBWKOsG+C8mevmpr8TwXHBVkChbbJiyvkE+i/3A==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/zustand@5.0.15/LICENSE"
+    ],
+    "licenseSource": "installed-package scanner"
+  },
+  {
+    "name": "zwitch",
+    "version": "2.0.4",
+    "installPath": "node_modules/zwitch",
+    "dev": false,
+    "optional": false,
+    "license": "MIT",
+    "installed": true,
+    "productionGraph": true,
+    "resolved": "https://registry.npmjs.org/zwitch/-/zwitch-2.0.4.tgz",
+    "integrity": "sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/zwitch@2.0.4/license"
+    ],
+    "licenseSource": "installed-package scanner"
+  }
+]

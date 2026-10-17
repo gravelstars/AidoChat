@@ -1,0 +1,7 @@
+/* Check the following statements are true:
+	 **
+	 **   (a) Exactly one of the READWRITE and READONLY flags must be set, and
+	 **   (b) if CREATE is set, then READWRITE must also be set, and
+	 **   (c) if EXCLUSIVE is set, then CREATE must also be set.
+	 **   (d) if DELETEONCLOSE is set, then CREATE must also be set.
+	 */

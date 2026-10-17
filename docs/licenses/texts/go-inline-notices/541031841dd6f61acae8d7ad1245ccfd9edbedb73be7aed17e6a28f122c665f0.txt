@@ -1,0 +1,23 @@
+// C documentation
+//
+//	/*
+//	** Generate code for an UPDATE of a virtual table.
+//	**
+//	** There are two possible strategies - the default and the special
+//	** "onepass" strategy. Onepass is only used if the virtual table
+//	** implementation indicates that pWhere may match at most one row.
+//	**
+//	** The default strategy is to create an ephemeral table that contains
+//	** for each row to be changed:
+//	**
+//	**   (A)  The original rowid of that row.
+//	**   (B)  The revised rowid for the row.
+//	**   (C)  The content of every column in the row.
+//	**
+//	** Then loop through the contents of this ephemeral table executing a
+//	** VUpdate for each row. When finished, drop the ephemeral table.
+//	**
+//	** The "onepass" strategy does not use an ephemeral table. Instead, it
+//	** stores the same values (A, B and C above) in a register array and
+//	** makes a single invocation of VUpdate.
+//	*/

@@ -1,3 +1,4 @@
+import { isDemo } from '../../demo/storage'
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { backend, type Member } from '../../backend'
 import { Button } from '../../components/Button'
@@ -194,14 +195,14 @@ export function ShareExportDialog({ open, onClose, state, members }: Props) {
       open={open}
       onClose={close}
       title="分享图片"
-      description="选一段群聊，生成可保存到本机的长图；超过一页会自动分成多张。"
+      description={isDemo ? "演示版仅预览分享排版，不保存图片。请使用桌面版导出 PNG 到本机目录。" : "选一段群聊，生成可保存到本机的长图；超过一页会自动分成多张。"}
       width={820}
       footer={
         <>
           <Button variant="ghost" onClick={close} disabled={saving}>
             取消
           </Button>
-          <Button variant="primary" onClick={() => void save()} disabled={busy || !plans.length}>
+          <Button variant="primary" onClick={() => void save()} disabled={isDemo || busy || !plans.length}>
             {saving ? '正在保存' : '保存图片'}
           </Button>
         </>

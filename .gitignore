@@ -1,5 +1,7 @@
 frontend/node_modules/
 frontend/dist/
+frontend/dist-demo/
+docs/assets/_work/
 build/bin/
 *.db
 *.db-wal

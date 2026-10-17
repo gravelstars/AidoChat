@@ -1,0 +1,44 @@
+/* Do a binary search to find the first sample greater than or equal
+	 ** to pRec. If pRec contains a single field, the set of samples to search
+	 ** is simply the aSample[] array. If the samples in aSample[] contain more
+	 ** than one fields, all fields following the first are ignored.
+	 **
+	 ** If pRec contains N fields, where N is more than one, then as well as the
+	 ** samples in aSample[] (truncated to N fields), the search also has to
+	 ** consider prefixes of those samples. For example, if the set of samples
+	 ** in aSample is:
+	 **
+	 **     aSample[0] = (a, 5)
+	 **     aSample[1] = (a, 10)
+	 **     aSample[2] = (b, 5)
+	 **     aSample[3] = (c, 100)
+	 **     aSample[4] = (c, 105)
+	 **
+	 ** Then the search space should ideally be the samples above and the
+	 ** unique prefixes [a], [b] and [c]. But since that is hard to organize,
+	 ** the code actually searches this set:
+	 **
+	 **     0: (a)
+	 **     1: (a, 5)
+	 **     2: (a, 10)
+	 **     3: (a, 10)
+	 **     4: (b)
+	 **     5: (b, 5)
+	 **     6: (c)
+	 **     7: (c, 100)
+	 **     8: (c, 105)
+	 **     9: (c, 105)
+	 **
+	 ** For each sample in the aSample[] array, N samples are present in the
+	 ** effective sample array. In the above, samples 0 and 1 are based on
+	 ** sample aSample[0]. Samples 2 and 3 on aSample[1] etc.
+	 **
+	 ** Often, sample i of each block of N effective samples has (i+1) fields.
+	 ** Except, each sample may be extended to ensure that it is greater than or
+	 ** equal to the previous sample in the array. For example, in the above,
+	 ** sample 2 is the first sample of a block of N samples, so at first it
+	 ** appears that it should be 1 field in size. However, that would make it
+	 ** smaller than sample 1, so the binary search would not work. As a result,
+	 ** it is extended to two fields. The duplicates that this creates do not
+	 ** cause any problems.
+	 */

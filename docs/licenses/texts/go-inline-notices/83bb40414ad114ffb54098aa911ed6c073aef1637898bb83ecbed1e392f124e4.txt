@@ -1,0 +1,30 @@
+// C documentation
+//
+//	/*
+//	** Retry the changes accumulated in the pApply->constraints buffer. The
+//	** pApply->constraints buffer contains all changes to table zTab that
+//	** could not be applied due to SQLITE_CONSTRAINT errors. This function
+//	** attempts to apply them as follows:
+//	**
+//	**   1) It runs through the buffer and attempts to retry each change,
+//	**      removing any that are successfully applied from the buffer. This
+//	**      is repeated until no further progress can be made.
+//	**
+//	**   2) For each UPDATE change in the buffer, try the following in a
+//	**      savepoint transaction:
+//	**
+//	**      a) DELETE the affected row,
+//	**      b) Attempt step (1) with remaining changes,
+//	**      c) Attempt to INSERT a row equivalent to the one that would be
+//	**         created by applying this UPDATE change.
+//	**
+//	**      If the INSERT in (c) succeeds, the savepoint is committed and all
+//	**      successfully applied changes are removed from the buffer. Step (2)
+//	**      is then repeated.
+//	**
+//	**   3) Once step (2) has been attempted for each UPDATE in the change,
+//	**      a final attempt is made to apply each remaining change. This time,
+//	**      if an SQLITE_CONSTRAINT error is encountered, the conflict handler
+//	**      is invoked and the user has to decide whether to omit the change
+//	**      or rollback the entire _apply() operation.
+//	*/

@@ -1,0 +1,52 @@
+// NewConnector returns a driver.Connector that opens connections to dsn using
+// the driver this package registers as "sqlite" -- the one carrying every
+// function, collation, connection hook and virtual table module registered
+// through RegisterFunction, RegisterScalarFunction,
+// RegisterDeterministicScalarFunction, RegisterCollationUtf8,
+// RegisterConnectionHook and vtab.RegisterModule. The dsn syntax and the
+// supported query parameters are documented on Driver.Open.
+//
+// The returned value is intended for sql.OpenDB:
+//
+//	c, err := sqlite.NewConnector("file:app.db?_pragma=foreign_keys(1)")
+//	if err != nil {
+//		return err
+//	}
+//	db := sql.OpenDB(c)
+//	defer db.Close()
+//
+// For opening a database this is equivalent to sql.Open("sqlite", dsn). It
+// exists for callers that need to interpose on the physical connections
+// database/sql opens -- tracing, metrics, or connection-scoped setup. Such a
+// caller can embed the returned Connector, override Connect, and pass its own
+// wrapper to sql.OpenDB:
+//
+//	type tracer struct{ driver.Connector }
+//
+//	func (t tracer) Connect(ctx context.Context) (driver.Conn, error) {
+//		conn, err := t.Connector.Connect(ctx)
+//		// ... wrap conn ...
+//		return conn, err
+//	}
+//
+//	base, err := sqlite.NewConnector(dsn)
+//	if err != nil {
+//		return err
+//	}
+//	db := sql.OpenDB(tracer{base})
+//
+// Reaching the same driver through sql.Open requires sql.Register, which is
+// process-global, rejects a name it has already seen with a panic, and offers
+// no way to undo a registration; a library doing the above would have to
+// invent a unique name per configuration. sql.OpenDB registers nothing.
+//
+// The dsn is checked here only as far as it can be without opening a database:
+// a query string that does not parse, such as one carrying an invalid
+// percent-escape, and conflicting vfs parameters are reported immediately.
+// Everything else is validated when the connection is opened, so an unknown
+// parameter or an out-of-range value is reported by Connect, and hence by the
+// first use of the sql.DB, rather than by NewConnector.
+//
+// The returned Connector is safe for concurrent use; database/sql calls
+// Connect from multiple goroutines as it grows the pool. As with sql.Open, it
+// does not itself open a connection.

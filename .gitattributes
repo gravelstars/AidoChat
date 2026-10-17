@@ -1,2 +1,5 @@
 # 三个平台保持文本原始 LF，避免 Windows 自动 CRLF 破坏保护清单和脚本。
 * text=auto eol=lf
+LICENSE -text -whitespace
+docs/licenses/texts/** -text -whitespace
+docs/licenses/raw/** -whitespace

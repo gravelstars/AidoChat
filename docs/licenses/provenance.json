@@ -1,0 +1,618 @@
+{
+  "generatedAt": "2026-10-17T10:25:11.071Z",
+  "node": "v24.14.1",
+  "npm": "11.11.0",
+  "go": "go1.26.4",
+  "host": "darwin/amd64",
+  "officialLicense": {
+    "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "bytes": 11358,
+    "verifiedByteForByte": true
+  },
+  "tools": {
+    "license-checker-rseidelsohn": "4.4.2",
+    "go-licenses": "github.com/google/go-licenses/v2@v2.0.1",
+    "identify_license": "github.com/google/licenseclassifier/v2@v2.0.0"
+  },
+  "inputs": {
+    "frontend/package-lock.json": "ab7487307fd7f934223c10cd3e139ccbcb6e11213c832724d7462380c4a0219f",
+    "go.mod": "f7f09a1890f5b49570cd3b68349b9b64d8122d71dc8893ea2c4de0062521bcf0",
+    "go.sum": "e9fa5ed0072a9cae823380b4022bccd8101cdd9b5610dd9a53cf524fc2f403f0"
+  },
+  "goLicensesScan": "Temporary exact source copy, with temporary expanded go.sum, because x/tools go/packages queries Go version with GO111MODULE=off and cannot inherit -modfile. Original project go.mod/go.sum are never written.",
+  "goScanSources": [
+    {
+      "file": "app/attachments.go",
+      "sha256": "99d0bd6131e2b74d5783304aecf19f1635c123c3919404f78a335d222df452a4"
+    },
+    {
+      "file": "app/attachments_test.go",
+      "sha256": "e5f64dadb7c60b5026b48ab929c23b4cc1d24b9113de35f431e4a88ebe42249c"
+    },
+    {
+      "file": "app/avatar.go",
+      "sha256": "0dbd9596de151101cb70ce9f5cd4c9c12a781d3be45b2f038ccba6f948014f69"
+    },
+    {
+      "file": "app/avatar_test.go",
+      "sha256": "ae0c9820a275321d0cbf3f82dcde1eb43b322e99bf3737fac265a3de938d903a"
+    },
+    {
+      "file": "app/credentials.go",
+      "sha256": "28c4a20077cf7734e36d59715d1e2a905fd3473004b951ce6709739f765d6f4f"
+    },
+    {
+      "file": "app/dto.go",
+      "sha256": "5ab35de14f6120f3b186dbac6f37f9d507fec287478a744e7bc5a5aa879e7c8f"
+    },
+    {
+      "file": "app/events.go",
+      "sha256": "379f4a9644fd344e3a5d597b6985cfced170f3ff384b56dcdecf5e64e069e9a2"
+    },
+    {
+      "file": "app/events_test.go",
+      "sha256": "32db269f445a5b9b89a705427bb7388663f9d97cb21a73e832e3bb69d60237d6"
+    },
+    {
+      "file": "app/lifecycle_review_test.go",
+      "sha256": "61457b9ffff30f0f0c2646e6aa2c93f3cb5860e57f4391b560a9a95c33bc04aa"
+    },
+    {
+      "file": "app/live_test.go",
+      "sha256": "4202da17ee8045a14d6e31072268a9dac02d20921753c1328a549b16343d6a9e"
+    },
+    {
+      "file": "app/provider_atomic_test.go",
+      "sha256": "50c87a1ee9724a27b05675a7eadb758102a4ffbaa1818792dc2e553bc579d53b"
+    },
+    {
+      "file": "app/provider_probe_test.go",
+      "sha256": "092a03a61b8706a0d327c055dc9493bc5eff81ee5d327078750f4f9f6aec9742"
+    },
+    {
+      "file": "app/provider_retirement_test.go",
+      "sha256": "69d594b883b35e15c155d55f3c6bb6cd0a97f537d47dc16398fbeb6a5f0b7ab9"
+    },
+    {
+      "file": "app/provider_review_test.go",
+      "sha256": "3a5e6eba0f35a8d44651e6e412d1ce5a805ce3c7be4403b13f1d539e090a75f6"
+    },
+    {
+      "file": "app/service.go",
+      "sha256": "2effffd11429d391f7f89001c4b7a73124f18e88adf31b75ec44bc79ac7e0b9c"
+    },
+    {
+      "file": "app/service_live_test.go",
+      "sha256": "2d7e58d0f9a049a692b7cc980a1e3192f0f4f66cfec4c157aa945b74af981097"
+    },
+    {
+      "file": "app/service_test.go",
+      "sha256": "0042d3a9906db55f7b0bc08ea3d11af26a81deb3819857ecd40ca1d0b3f6beec"
+    },
+    {
+      "file": "app/share_export.go",
+      "sha256": "9071bda283f7c63ae0660c77e2eecad15508e828d6b77b8a62d29648291d587b"
+    },
+    {
+      "file": "app/share_export_test.go",
+      "sha256": "78a0845cd3edfb57e8056b0a598cf6ec655f700488c03f335b9473d184599011"
+    },
+    {
+      "file": "app/user_profile.go",
+      "sha256": "b8da0f0dc0501cd7dc44dbc5814253f49c69d2770c3927394a47a59f5566462a"
+    },
+    {
+      "file": "app/user_profile_test.go",
+      "sha256": "885b154adc7dfd0d6b57c65e93c379d66a5200871666f12c9b9cfa3f5a1b0a6b"
+    },
+    {
+      "file": "assets_development.go",
+      "sha256": "7b0a2ba83b84687e4d1c445ed6c0f226ca758dfde5c1e435f63098972a7e8f64"
+    },
+    {
+      "file": "assets_production.go",
+      "sha256": "54d9f6b5b9ca21a62d00c069b214820a0cd755fde8744c1d4eccd1b52e8d7b6a"
+    },
+    {
+      "file": "desktop/attachmentsqa.js",
+      "sha256": "b6688f98fd1619bd87e92b088633976c692a6395f692b5a917a26b8bd6fc43af"
+    },
+    {
+      "file": "desktop/attachmentsrestartqa.js",
+      "sha256": "7c8bdba9d6cb40fdf1352cb623a91f427df4ec96f0497ce82273cbfe1da0db7a"
+    },
+    {
+      "file": "desktop/bridgeqa.js",
+      "sha256": "7a5b915a7c88566c634f331751c7168431bd72e1a2326fd27366ed1863816d85"
+    },
+    {
+      "file": "desktop/bridgeqa_darwin.go",
+      "sha256": "214ec9f19403113e9071911a773126328398c4c242348113790fefb3212c1fb8"
+    },
+    {
+      "file": "desktop/onboardingqa.js",
+      "sha256": "0e888af9478b265701f424a329fe9631da0ee9b947a511448c2a68d0285dbbc0"
+    },
+    {
+      "file": "desktop/qa_darwin.go",
+      "sha256": "de20d40e1514cd35d6eb72548090951a3e8909d6d70f6b9f111d53ced1744ad0"
+    },
+    {
+      "file": "desktop/qa_disabled.go",
+      "sha256": "76213546a9a65f22b08a18f45bbfdd043eb5eedf9a5c43faf351fcae0704c2d5"
+    },
+    {
+      "file": "desktop/qa_other.go",
+      "sha256": "9a1f12a168fe0566cd63f91023d77d5643b0627ce6949aa06da5266084fd4d14"
+    },
+    {
+      "file": "desktop/share_qa.go",
+      "sha256": "8d88afdab2fb4e5454d62a8efea03885bb23ef0d602a5fd84a10d2ec6ae9a07b"
+    },
+    {
+      "file": "desktop/share_qa_disabled.go",
+      "sha256": "c391d5174d54df92fafaaf7585a3628197960c2913308c0ce0d369d518f0f12f"
+    },
+    {
+      "file": "desktop/shareqa.js",
+      "sha256": "2ab64a759ad84667307b8a110755cd7ece63e31690bb5d040533329406d95843"
+    },
+    {
+      "file": "desktop/shareqa_seed_darwin.go",
+      "sha256": "929a74672237086fdab977ebe09890b7786bc766271199b2b11ac0b34c844f92"
+    },
+    {
+      "file": "desktop/shell.go",
+      "sha256": "e71917c561b707e0bc6a4d9a731a4c3b3559079d4df6ee61d3ec11a94d0ea512"
+    },
+    {
+      "file": "desktop/state.go",
+      "sha256": "1e367ad6a9510109f38148c21a286dd8a18d31640c58ec1b60ff09bed2f70063"
+    },
+    {
+      "file": "desktop/state_test.go",
+      "sha256": "c4fdb37ca6502e474ebb6c76458df3cd90fa39e734c19450d93821f8b5bd4a43"
+    },
+    {
+      "file": "desktop/titlebar_darwin.go",
+      "sha256": "fb368955b1864a04fcc741892e4e51f530a1cc7b97e9cb235758f71b8bf95d1a"
+    },
+    {
+      "file": "desktop/titlebar_darwin.m",
+      "sha256": "b5d115b2842c20aefeafcd538332913274b9c2dfd35bff72afa36badfd6a17ed"
+    },
+    {
+      "file": "desktop/titlebar_other.go",
+      "sha256": "fa94dd8ac079ee450af7de03187698d1617a0fd7db938bd30ddcbfd25a171d74"
+    },
+    {
+      "file": "go.mod",
+      "sha256": "f7f09a1890f5b49570cd3b68349b9b64d8122d71dc8893ea2c4de0062521bcf0"
+    },
+    {
+      "file": "go.sum",
+      "sha256": "6e293790f1d9dc9f77037c6e4eb47896ea95678e3952b6e0844363f20a0775a1"
+    },
+    {
+      "file": "internal/contextbuilder/attachments.go",
+      "sha256": "911d5d15e82a4603d026912d4d47331006609455b979a5ae43b00f4cf0055546"
+    },
+    {
+      "file": "internal/contextbuilder/attachments_test.go",
+      "sha256": "f6f673d09abf31c41bd36a05897167911535bce87a8289057be9aeef049d56d6"
+    },
+    {
+      "file": "internal/contextbuilder/builder.go",
+      "sha256": "df8d236ea3eae49ee2349c6d6afe4adf5528c54d728b4905c162e9124c2ce0ff"
+    },
+    {
+      "file": "internal/contextbuilder/builder_test.go",
+      "sha256": "c4bfeb019383853e316a1e4920e7a67b5a2793bf79f4f759026e2d6854f2f3d5"
+    },
+    {
+      "file": "internal/domain/attachments.go",
+      "sha256": "38e9943de59f02baa446e30558675294e9d6c2afba1425f4e86a824c1cd6a8ab"
+    },
+    {
+      "file": "internal/domain/domain.go",
+      "sha256": "d53f89865b2499c460d9d6ed2649e5aec08edd4ef1bcb8cbed32819a15b9aa73"
+    },
+    {
+      "file": "internal/domain/mention.go",
+      "sha256": "f471de9ceb3172075f6fcdb8a9d3c0773d3f34e1ca3c33b31b563be715859273"
+    },
+    {
+      "file": "internal/domain/mention_test.go",
+      "sha256": "05c143ce3e19895ca25c6b643fb71987239f93a039659fc6f878a2d0c5604a64"
+    },
+    {
+      "file": "internal/llm/README.md",
+      "sha256": "f368763b5ec425ae305ee07e973babd523b9b8defcb4903970bd710878641526"
+    },
+    {
+      "file": "internal/llm/anthropic/anthropic.go",
+      "sha256": "c2dd5cc794a810deb2e5803682d0538bbc961feb44c8666472ef1b199da1f1ae"
+    },
+    {
+      "file": "internal/llm/anthropic/anthropic_test.go",
+      "sha256": "e6c211b9e7afbf717fd248a5afdd436acf0b2c66f9aad9d3a55935076d3781df"
+    },
+    {
+      "file": "internal/llm/anthropic/images_test.go",
+      "sha256": "fcf2a830b94be88b1eddc65b39e3fbdc92077c43a3343f382f416bfb81ac4135"
+    },
+    {
+      "file": "internal/llm/images.go",
+      "sha256": "e83d8cc71961856ca399e93c9cd9209140548d8d56e82f090d0282713ebca388"
+    },
+    {
+      "file": "internal/llm/internal/streamhttp/stream.go",
+      "sha256": "666212a8d8cba17c9663f45432196a66a4da9be5cbdf7066140befca43223a15"
+    },
+    {
+      "file": "internal/llm/internal/streamhttp/stream_test.go",
+      "sha256": "5990950dd33952d5bfb61d07b94c83dbbef66b0df4b9710f8ee8bb46a9f170c1"
+    },
+    {
+      "file": "internal/llm/llm.go",
+      "sha256": "e30d2a520059d9353c635a8301db1b500f0c78fb8be1041d143fa83885da7b1f"
+    },
+    {
+      "file": "internal/llm/openai/images_test.go",
+      "sha256": "9438c212b1431744c69edf6408e2d15dc2eaa9d11bc64b5b74ad87f4b4aab448"
+    },
+    {
+      "file": "internal/llm/openai/openai.go",
+      "sha256": "05c1eb9dc764bb1485396f4a4aa209ab640df3397977e7c995c2f6831db2b03c"
+    },
+    {
+      "file": "internal/llm/openai/openai_test.go",
+      "sha256": "25c8d6fdf29a0e58fb1c3dd26b0f2834c8707966d9ec5e8275ae25587c2353ad"
+    },
+    {
+      "file": "internal/llm/providers/live_test.go",
+      "sha256": "e717b8f5672e2f065a2be9decb0ea55bd2c1a31c3e687a7aeb3494b1d7c5d706"
+    },
+    {
+      "file": "internal/llm/providers/providers.go",
+      "sha256": "f0b0e7d076c42f6d0f8ecf2c872854a354a265ee0b65f4477ba35d50193a2dab"
+    },
+    {
+      "file": "internal/llm/providers/providers_test.go",
+      "sha256": "37cd8d0880059cada5e5c8357b2f0ad84354ee26a90956290e2f49f0849dfe5a"
+    },
+    {
+      "file": "internal/memory/attachments_test.go",
+      "sha256": "64bb3a988541951ba58795325df8e830a360b3ebf0e8108dce0d22b36383715f"
+    },
+    {
+      "file": "internal/memory/live_test.go",
+      "sha256": "ff7a6f5d04a2e0c6e439e266eddda9e4e01748bd910a478fe1712fa21f719c64"
+    },
+    {
+      "file": "internal/memory/memory.go",
+      "sha256": "58b0ef878b058db8e656bf9bf8c2c0e44250da200d5d940135bb0d61c3b602e3"
+    },
+    {
+      "file": "internal/memory/memory_test.go",
+      "sha256": "7e80e5b97979557c84c42d408da0e9c5b169bb5acd51e4cb8dd43c6ac1526c58"
+    },
+    {
+      "file": "internal/memory/runner.go",
+      "sha256": "c4c7d91e2d087dede25aece9672446b27f89565c26ebbc424f524fc1747cdb90"
+    },
+    {
+      "file": "internal/memory/runner_regression_test.go",
+      "sha256": "20379c34b63a912d55e6698ab8ebce7def19ea1cc2cca7ccc61784ff1c301792"
+    },
+    {
+      "file": "internal/memory/runner_test.go",
+      "sha256": "403956716dcbbbefb4bac20367e258ce069e960784140efd0ee057835bde9d60"
+    },
+    {
+      "file": "internal/memory/todo.go",
+      "sha256": "9e01faf085e64f4a6098bc7b174a2ee34feb7039f66087de831e81b409722978"
+    },
+    {
+      "file": "internal/memory/todo_test.go",
+      "sha256": "f36f156d2732df9f01c2a4e8abe61e9612a5d94eb33cbaeff82e322467ccbaae"
+    },
+    {
+      "file": "internal/secret/secret.go",
+      "sha256": "fd01577d97c909bee658acb3fb6fbf145bf47af802fceca6e31f2ba431a5985e"
+    },
+    {
+      "file": "internal/secret/secret_test.go",
+      "sha256": "b1d8953169842a3e1f8545616756f0c0ff712b9d18c9b9f632675591188ab299"
+    },
+    {
+      "file": "internal/store/README.md",
+      "sha256": "84026f25bec8e4ca644c12cd936fa88ac2e2ebc93033efa84e4011b725c6362e"
+    },
+    {
+      "file": "internal/store/attachments.go",
+      "sha256": "65c0a2ff02718184764758b4c46f76f5e497e10751289e6003070aad3c5d7afa"
+    },
+    {
+      "file": "internal/store/attachments_test.go",
+      "sha256": "89ac0be3034a34fbd62a00861f1c2681faae148e010dedef85f988420b97ae3d"
+    },
+    {
+      "file": "internal/store/catalog.go",
+      "sha256": "f4b94218d0c135d19dc7a5f664b2aad8f7edcf9853aed2ec6df100951aec304a"
+    },
+    {
+      "file": "internal/store/groups.go",
+      "sha256": "04ea51e958774d42ff392d1bcd094131cefe3f932ddfc3669e09e90b79ae128a"
+    },
+    {
+      "file": "internal/store/memory.go",
+      "sha256": "db1e77711733893df19f0bd3ad055610584e3acef873fd937b7d391c2ea94d09"
+    },
+    {
+      "file": "internal/store/messages.go",
+      "sha256": "e0c159b318908d9dc7c03a681553019f5b0e8f4fa02cd046ce6598889949ad8f"
+    },
+    {
+      "file": "internal/store/migrations/001_init.sql",
+      "sha256": "ae2540d475b71be009bce8a3e50af040bf222cfcb2fda546a180053076518cde"
+    },
+    {
+      "file": "internal/store/migrations/002_reply_mode.sql",
+      "sha256": "ece59bf518c50cfd61067cef1f72c6807d6b941c3fb5e3efd3ed53cb7a210533"
+    },
+    {
+      "file": "internal/store/migrations/003_provider_retirement.sql",
+      "sha256": "d9534529120fc41d8a13e0f198ab273590a5c2f7ea85fa82110b58e63ea03e8d"
+    },
+    {
+      "file": "internal/store/migrations/004_attachments.sql",
+      "sha256": "f6ec0caa101e7ca3ff9c8cc042a86eeaf713327fe713fd0989b5fe33ab4d1c8d"
+    },
+    {
+      "file": "internal/store/orchestrator_test.go",
+      "sha256": "8cf2d6c6175fc6c3d42ce655aed96004ca54b98789bc9aa61aa19e3ce4eab77d"
+    },
+    {
+      "file": "internal/store/path_uri_test.go",
+      "sha256": "33a24534323c574ddf0e7c807cef874ccda488be665c158b0152f7deef9a3dfb"
+    },
+    {
+      "file": "internal/store/provider_retirement_test.go",
+      "sha256": "489045c0622e4cb6daff280e1b8f6f852b6920071b4b66557b75d2c13f1aa765"
+    },
+    {
+      "file": "internal/store/schema.sql",
+      "sha256": "96665d3fb37e516e81b971f6ab208693c9193746e2cec5e9edf0bbd424537ed4"
+    },
+    {
+      "file": "internal/store/settings.go",
+      "sha256": "27ed9356bc8e49a7fb453bf287c9f9a5ee485880cefc59a63677ae0d754cd092"
+    },
+    {
+      "file": "internal/store/settings_atomic_test.go",
+      "sha256": "cf751b03d4013dfc9a95b7e1fcf57e44c5861c9495b6c25ab30fd7059792adf2"
+    },
+    {
+      "file": "internal/store/store.go",
+      "sha256": "f2fb748777e5971bf31554cbdeb4d8d93cfad54d9dda8a80b8d498e04d01818f"
+    },
+    {
+      "file": "internal/store/store_test.go",
+      "sha256": "baa251a070e39a1efeca79ca20c8afe8c7be43385ed1a4705b39264fb25b265f"
+    },
+    {
+      "file": "internal/turn/attachments_test.go",
+      "sha256": "2b4ca1bfc6d179ecaad532c01e33a9d05c9c00c0734b52e026e9f44270f63141"
+    },
+    {
+      "file": "internal/turn/orchestrator.go",
+      "sha256": "ae69b6ce10be2622cb3778f3e2011b1d38b07deb852151cee45fb175f1a65f79"
+    },
+    {
+      "file": "internal/turn/orchestrator_test.go",
+      "sha256": "3cb180d99a1f8f24f7c98839012560dc2676f0af1a9fc3c20e30a8c736d2d941"
+    },
+    {
+      "file": "internal/turn/retry_context_test.go",
+      "sha256": "45b3157a8e61e93470def507c0ddb29cfd3aaaf1adaa51527809891f8101b8ef"
+    },
+    {
+      "file": "main.go",
+      "sha256": "5e549d674e21ce948fab81391d75361c1ad8028c00979e52f18efcca62606bf1"
+    }
+  ],
+  "normalization": "Machine outputs only replace absolute repository/cache/home prefixes with placeholders; original license text bytes are unchanged. License-named Go source containers use .go.txt; file references in stored scanner outputs were remapped, while source paths and original content bytes are unchanged.",
+  "commands": [
+    {
+      "command": [
+        "<LICENSE_TOOLS_DIR>/node_modules/.bin/license-checker-rseidelsohn",
+        "--json",
+        "--relativeLicensePath",
+        "--relativeModulePath",
+        "--excludePrivatePackages"
+      ],
+      "cwd": "<REPOSITORY>/frontend"
+    },
+    {
+      "command": [
+        "<LICENSE_TOOLS_DIR>/node_modules/.bin/license-checker-rseidelsohn",
+        "--json",
+        "--relativeLicensePath",
+        "--relativeModulePath",
+        "--excludePrivatePackages",
+        "--production"
+      ],
+      "cwd": "<REPOSITORY>/frontend"
+    },
+    {
+      "command": [
+        "go",
+        "mod",
+        "download",
+        "all"
+      ],
+      "cwd": "<REPOSITORY>",
+      "env": {
+        "GOROOT": "<GOROOT>",
+        "GOFLAGS": " \"-modfile=<LICENSE_TOOLS_DIR>/export/go-export.mod\""
+      }
+    },
+    {
+      "command": [
+        "go",
+        "list",
+        "-m",
+        "-json",
+        "all"
+      ],
+      "cwd": "<REPOSITORY>",
+      "env": {
+        "GOROOT": "<GOROOT>",
+        "GOFLAGS": " \"-modfile=<LICENSE_TOOLS_DIR>/export/go-export.mod\""
+      }
+    },
+    {
+      "command": [
+        "go",
+        "list",
+        "-e",
+        "-deps",
+        "-json=ImportPath,Standard,Dir,GoFiles,CgoFiles,CFiles,CXXFiles,HFiles,MFiles,SFiles,EmbedFiles,Module,Error,DepsErrors",
+        "."
+      ],
+      "cwd": "<REPOSITORY>",
+      "env": {
+        "GOROOT": "<GOROOT>",
+        "GOOS": "darwin",
+        "GOARCH": "amd64",
+        "CGO_ENABLED": "1",
+        "GOFLAGS": " \"-modfile=<LICENSE_TOOLS_DIR>/export/go-export.mod\""
+      }
+    },
+    {
+      "command": [
+        "go",
+        "list",
+        "-e",
+        "-deps",
+        "-json=ImportPath,Standard,Dir,GoFiles,CgoFiles,CFiles,CXXFiles,HFiles,MFiles,SFiles,EmbedFiles,Module,Error,DepsErrors",
+        "."
+      ],
+      "cwd": "<REPOSITORY>",
+      "env": {
+        "GOROOT": "<GOROOT>",
+        "GOOS": "windows",
+        "GOARCH": "amd64",
+        "CGO_ENABLED": "1",
+        "GOFLAGS": " \"-modfile=<LICENSE_TOOLS_DIR>/export/go-export.mod\""
+      }
+    },
+    {
+      "command": [
+        "go",
+        "list",
+        "-e",
+        "-deps",
+        "-json=ImportPath,Standard,Dir,GoFiles,CgoFiles,CFiles,CXXFiles,HFiles,MFiles,SFiles,EmbedFiles,Module,Error,DepsErrors",
+        "."
+      ],
+      "cwd": "<REPOSITORY>",
+      "env": {
+        "GOROOT": "<GOROOT>",
+        "GOOS": "linux",
+        "GOARCH": "amd64",
+        "CGO_ENABLED": "1",
+        "GOFLAGS": " \"-modfile=<LICENSE_TOOLS_DIR>/export/go-export.mod\""
+      }
+    },
+    {
+      "command": [
+        "<LICENSE_TOOLS_DIR>/bin/go-licenses",
+        "report",
+        "./...",
+        "--ignore",
+        "ai-group-chat"
+      ],
+      "cwd": "<LICENSE_TOOLS_DIR>/export/go-scan-root",
+      "env": {
+        "GOROOT": "<GOROOT>",
+        "GOFLAGS": ""
+      }
+    },
+    {
+      "command": [
+        "<LICENSE_TOOLS_DIR>/bin/go-licenses",
+        "save",
+        "./...",
+        "--ignore",
+        "ai-group-chat",
+        "--save_path=<LICENSE_TOOLS_DIR>/export/go-save"
+      ],
+      "cwd": "<LICENSE_TOOLS_DIR>/export/go-scan-root",
+      "env": {
+        "GOROOT": "<GOROOT>",
+        "GOFLAGS": ""
+      }
+    },
+    {
+      "command": [
+        "<LICENSE_TOOLS_DIR>/bin/identify_license",
+        "-tasks",
+        "8",
+        "-json",
+        "<REPOSITORY>/docs/licenses/raw/license-classifier.json",
+        "<REPOSITORY>/docs/licenses/texts/go-modules",
+        "<REPOSITORY>/docs/licenses/texts/frontend/pdfjs-dist@6.4.299"
+      ],
+      "cwd": "<REPOSITORY>",
+      "env": {
+        "GOROOT": "<GOROOT>",
+        "GOFLAGS": " \"-modfile=<LICENSE_TOOLS_DIR>/export/go-export.mod\""
+      }
+    },
+    {
+      "command": [
+        "<LICENSE_TOOLS_DIR>/bin/identify_license",
+        "-headers",
+        "-tasks",
+        "8",
+        "-json",
+        "<REPOSITORY>/docs/licenses/raw/inline-license-classifier.json",
+        "<REPOSITORY>/docs/licenses/texts/go-inline-notices"
+      ],
+      "cwd": "<REPOSITORY>",
+      "env": {
+        "GOROOT": "<GOROOT>",
+        "GOFLAGS": " \"-modfile=<LICENSE_TOOLS_DIR>/export/go-export.mod\""
+      }
+    },
+    {
+      "command": [
+        "go",
+        "version",
+        "-m",
+        "<LICENSE_TOOLS_DIR>/bin/go-licenses"
+      ],
+      "cwd": "<REPOSITORY>",
+      "env": {
+        "GOROOT": "<GOROOT>",
+        "GOFLAGS": " \"-modfile=<LICENSE_TOOLS_DIR>/export/go-export.mod\""
+      }
+    },
+    {
+      "command": [
+        "go",
+        "version",
+        "-m",
+        "<LICENSE_TOOLS_DIR>/bin/identify_license"
+      ],
+      "cwd": "<REPOSITORY>",
+      "env": {
+        "GOROOT": "<GOROOT>",
+        "GOFLAGS": " \"-modfile=<LICENSE_TOOLS_DIR>/export/go-export.mod\""
+      }
+    }
+  ]
+}

@@ -1,0 +1,4411 @@
+{
+	"Dir": "<GOROOT>/src/internal/goarch",
+	"ImportPath": "internal/goarch",
+	"Standard": true,
+	"GoFiles": [
+		"goarch.go",
+		"goarch_amd64.go",
+		"zgoarch_amd64.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/unsafe",
+	"ImportPath": "unsafe",
+	"Standard": true,
+	"GoFiles": [
+		"unsafe.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/abi",
+	"ImportPath": "internal/abi",
+	"Standard": true,
+	"GoFiles": [
+		"abi.go",
+		"abi_amd64.go",
+		"bounds.go",
+		"compiletype.go",
+		"escape.go",
+		"funcpc.go",
+		"iface.go",
+		"map.go",
+		"rangefuncconsts.go",
+		"runtime.go",
+		"stack.go",
+		"switch.go",
+		"symtab.go",
+		"type.go"
+	],
+	"SFiles": [
+		"abi_test.s",
+		"stub.s"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/unsafeheader",
+	"ImportPath": "internal/unsafeheader",
+	"Standard": true,
+	"GoFiles": [
+		"unsafeheader.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/cpu",
+	"ImportPath": "internal/cpu",
+	"Standard": true,
+	"GoFiles": [
+		"cpu.go",
+		"cpu_x86.go",
+		"cpu_x86_other.go",
+		"datacache_x86.go"
+	],
+	"SFiles": [
+		"cpu.s",
+		"cpu_x86.s"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/bytealg",
+	"ImportPath": "internal/bytealg",
+	"Standard": true,
+	"GoFiles": [
+		"bytealg.go",
+		"compare_native.go",
+		"count_native.go",
+		"equal_generic.go",
+		"equal_native.go",
+		"index_amd64.go",
+		"index_native.go",
+		"indexbyte_native.go",
+		"lastindexbyte_generic.go"
+	],
+	"SFiles": [
+		"compare_amd64.s",
+		"count_amd64.s",
+		"equal_amd64.s",
+		"index_amd64.s",
+		"indexbyte_amd64.s"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/byteorder",
+	"ImportPath": "internal/byteorder",
+	"Standard": true,
+	"GoFiles": [
+		"byteorder.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/chacha8rand",
+	"ImportPath": "internal/chacha8rand",
+	"Standard": true,
+	"GoFiles": [
+		"chacha8.go",
+		"chacha8_generic.go"
+	],
+	"SFiles": [
+		"chacha8_amd64.s"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/coverage/rtcov",
+	"ImportPath": "internal/coverage/rtcov",
+	"Standard": true,
+	"GoFiles": [
+		"rtcov.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/godebugs",
+	"ImportPath": "internal/godebugs",
+	"Standard": true,
+	"GoFiles": [
+		"table.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/goexperiment",
+	"ImportPath": "internal/goexperiment",
+	"Standard": true,
+	"GoFiles": [
+		"exp_arenas_off.go",
+		"exp_boringcrypto_off.go",
+		"exp_cgocheck2_off.go",
+		"exp_dwarf5_on.go",
+		"exp_fieldtrack_off.go",
+		"exp_goroutineleakprofile_off.go",
+		"exp_greenteagc_on.go",
+		"exp_heapminimum512kib_off.go",
+		"exp_jsonv2_off.go",
+		"exp_loopvar_off.go",
+		"exp_newinliner_off.go",
+		"exp_preemptibleloops_off.go",
+		"exp_randomizedheapbase64_on.go",
+		"exp_regabiargs_on.go",
+		"exp_regabiwrappers_on.go",
+		"exp_runtimefreegc_off.go",
+		"exp_runtimesecret_off.go",
+		"exp_simd_off.go",
+		"exp_sizespecializedmalloc_off.go",
+		"exp_staticlockranking_off.go",
+		"flags.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/goos",
+	"ImportPath": "internal/goos",
+	"Standard": true,
+	"GoFiles": [
+		"goos.go",
+		"unix.go",
+		"zgoos_linux.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/profilerecord",
+	"ImportPath": "internal/profilerecord",
+	"Standard": true,
+	"GoFiles": [
+		"profilerecord.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/runtime/atomic",
+	"ImportPath": "internal/runtime/atomic",
+	"Standard": true,
+	"GoFiles": [
+		"atomic_amd64.go",
+		"doc.go",
+		"stubs.go",
+		"types.go",
+		"types_64bit.go",
+		"unaligned.go",
+		"xchg8.go"
+	],
+	"SFiles": [
+		"atomic_amd64.s"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/runtime/syscall/linux",
+	"ImportPath": "internal/runtime/syscall/linux",
+	"Standard": true,
+	"GoFiles": [
+		"defs_linux.go",
+		"defs_linux_amd64.go",
+		"syscall_linux.go"
+	],
+	"SFiles": [
+		"asm_linux_amd64.s"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/math/bits",
+	"ImportPath": "math/bits",
+	"Standard": true,
+	"GoFiles": [
+		"bits.go",
+		"bits_errors.go",
+		"bits_tables.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/strconv",
+	"ImportPath": "internal/strconv",
+	"Standard": true,
+	"GoFiles": [
+		"atob.go",
+		"atoc.go",
+		"atof.go",
+		"atofeisel.go",
+		"atoi.go",
+		"ctoa.go",
+		"decimal.go",
+		"deps.go",
+		"ftoa.go",
+		"ftoadbox.go",
+		"ftoafixed.go",
+		"itoa.go",
+		"math.go",
+		"pow10tab.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/runtime/cgroup",
+	"ImportPath": "internal/runtime/cgroup",
+	"Standard": true,
+	"GoFiles": [
+		"cgroup.go",
+		"cgroup_linux.go",
+		"line_reader.go",
+		"runtime.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/runtime/exithook",
+	"ImportPath": "internal/runtime/exithook",
+	"Standard": true,
+	"GoFiles": [
+		"hooks.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/runtime/gc",
+	"ImportPath": "internal/runtime/gc",
+	"Standard": true,
+	"GoFiles": [
+		"malloc.go",
+		"scan.go",
+		"sizeclasses.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/runtime/sys",
+	"ImportPath": "internal/runtime/sys",
+	"Standard": true,
+	"GoFiles": [
+		"consts.go",
+		"consts_norace.go",
+		"intrinsics.go",
+		"nih.go",
+		"no_dit.go",
+		"sys.go",
+		"zversion.go"
+	],
+	"SFiles": [
+		"empty.s"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/runtime/gc/scan",
+	"ImportPath": "internal/runtime/gc/scan",
+	"Standard": true,
+	"GoFiles": [
+		"expand_amd64.go",
+		"expand_reference.go",
+		"filter.go",
+		"filter_amd64.go",
+		"scan_amd64.go",
+		"scan_go.go",
+		"scan_reference.go"
+	],
+	"SFiles": [
+		"expand_amd64.s",
+		"filter_amd64.s",
+		"scan_amd64.s"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/asan",
+	"ImportPath": "internal/asan",
+	"Standard": true,
+	"GoFiles": [
+		"doc.go",
+		"noasan.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/msan",
+	"ImportPath": "internal/msan",
+	"Standard": true,
+	"GoFiles": [
+		"doc.go",
+		"nomsan.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/race",
+	"ImportPath": "internal/race",
+	"Standard": true,
+	"GoFiles": [
+		"doc.go",
+		"norace.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/runtime/math",
+	"ImportPath": "internal/runtime/math",
+	"Standard": true,
+	"GoFiles": [
+		"math.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/runtime/maps",
+	"ImportPath": "internal/runtime/maps",
+	"Standard": true,
+	"GoFiles": [
+		"group.go",
+		"map.go",
+		"runtime.go",
+		"runtime_fast32.go",
+		"runtime_fast64.go",
+		"runtime_faststr.go",
+		"table.go",
+		"table_debug.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/runtime/pprof/label",
+	"ImportPath": "internal/runtime/pprof/label",
+	"Standard": true,
+	"GoFiles": [
+		"labelset.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/stringslite",
+	"ImportPath": "internal/stringslite",
+	"Standard": true,
+	"GoFiles": [
+		"strings.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/trace/tracev2",
+	"ImportPath": "internal/trace/tracev2",
+	"Standard": true,
+	"GoFiles": [
+		"doc.go",
+		"events.go",
+		"spec.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/runtime",
+	"ImportPath": "runtime",
+	"Standard": true,
+	"GoFiles": [
+		"alg.go",
+		"arena.go",
+		"asan0.go",
+		"atomic_pointer.go",
+		"badlinkname.go",
+		"badlinkname_linux.go",
+		"cgo.go",
+		"cgo_mmap.go",
+		"cgo_sigaction.go",
+		"cgocall.go",
+		"cgocallback.go",
+		"cgocheck.go",
+		"cgroup_linux.go",
+		"chan.go",
+		"checkptr.go",
+		"compiler.go",
+		"complex.go",
+		"coro.go",
+		"covercounter.go",
+		"covermeta.go",
+		"cpuflags.go",
+		"cpuflags_amd64.go",
+		"cpuprof.go",
+		"cputicks.go",
+		"create_file_unix.go",
+		"debug.go",
+		"debugcall.go",
+		"debuglog.go",
+		"debuglog_off.go",
+		"defs_linux_amd64.go",
+		"dit.go",
+		"env_posix.go",
+		"error.go",
+		"extern.go",
+		"fastlog2.go",
+		"fastlog2table.go",
+		"fds_unix.go",
+		"fipsbypass.go",
+		"float.go",
+		"hash64.go",
+		"heapdump.go",
+		"hexdump.go",
+		"histogram.go",
+		"iface.go",
+		"lfstack.go",
+		"linkname.go",
+		"linkname_shim.go",
+		"linkname_unix.go",
+		"list.go",
+		"list_manual.go",
+		"lock_futex.go",
+		"lock_spinbit.go",
+		"lockrank.go",
+		"lockrank_off.go",
+		"malloc.go",
+		"malloc_generated.go",
+		"malloc_stubs.go",
+		"malloc_tables_generated.go",
+		"map.go",
+		"map_fast32.go",
+		"map_fast64.go",
+		"map_faststr.go",
+		"mbarrier.go",
+		"mbitmap.go",
+		"mcache.go",
+		"mcentral.go",
+		"mcheckmark.go",
+		"mcleanup.go",
+		"mem.go",
+		"mem_linux.go",
+		"mem_nonsbrk.go",
+		"metrics.go",
+		"mfinal.go",
+		"mfixalloc.go",
+		"mgc.go",
+		"mgclimit.go",
+		"mgcmark.go",
+		"mgcmark_greenteagc.go",
+		"mgcpacer.go",
+		"mgcscavenge.go",
+		"mgcstack.go",
+		"mgcsweep.go",
+		"mgcwork.go",
+		"mheap.go",
+		"minmax.go",
+		"mpagealloc.go",
+		"mpagealloc_64bit.go",
+		"mpagecache.go",
+		"mpallocbits.go",
+		"mprof.go",
+		"mranges.go",
+		"msan0.go",
+		"msize.go",
+		"mspanset.go",
+		"mstats.go",
+		"mwbbuf.go",
+		"nbpipe_pipe2.go",
+		"netpoll.go",
+		"netpoll_epoll.go",
+		"nonwindows_stub.go",
+		"note_other.go",
+		"os_linux.go",
+		"os_linux64.go",
+		"os_linux_generic.go",
+		"os_linux_noauxv.go",
+		"os_nonopenbsd.go",
+		"os_unix.go",
+		"panic.go",
+		"pinner.go",
+		"plugin.go",
+		"preempt.go",
+		"preempt_amd64.go",
+		"preempt_nonwindows.go",
+		"preempt_xreg.go",
+		"print.go",
+		"proc.go",
+		"profbuf.go",
+		"proflabel.go",
+		"race0.go",
+		"rand.go",
+		"rdebug.go",
+		"retry.go",
+		"runtime.go",
+		"runtime1.go",
+		"runtime2.go",
+		"runtime_boring.go",
+		"runtime_clearenv.go",
+		"rwmutex.go",
+		"secret.go",
+		"secret_asm.go",
+		"security_linux.go",
+		"security_unix.go",
+		"select.go",
+		"sema.go",
+		"set_vma_name_linux.go",
+		"signal_amd64.go",
+		"signal_linux_amd64.go",
+		"signal_unix.go",
+		"sigqueue.go",
+		"sigqueue_note.go",
+		"sigtab_linux_generic.go",
+		"slice.go",
+		"softfloat64.go",
+		"stack.go",
+		"stkframe.go",
+		"string.go",
+		"stubs.go",
+		"stubs2.go",
+		"stubs3.go",
+		"stubs_amd64.go",
+		"stubs_linux.go",
+		"stubs_nonwasm.go",
+		"symtab.go",
+		"symtabinl.go",
+		"synctest.go",
+		"sys_nonppc64x.go",
+		"sys_x86.go",
+		"tagptr.go",
+		"tagptr_64bit.go",
+		"test_amd64.go",
+		"time.go",
+		"time_nofake.go",
+		"timeasm.go",
+		"tls_stub.go",
+		"trace.go",
+		"traceallocfree.go",
+		"traceback.go",
+		"tracebuf.go",
+		"tracecpu.go",
+		"traceevent.go",
+		"tracemap.go",
+		"traceregion.go",
+		"traceruntime.go",
+		"tracestack.go",
+		"tracestatus.go",
+		"tracestring.go",
+		"tracetime.go",
+		"tracetype.go",
+		"type.go",
+		"unsafe.go",
+		"utf8.go",
+		"valgrind0.go",
+		"vdso_elf64.go",
+		"vdso_linux.go",
+		"vdso_linux_amd64.go",
+		"vgetrandom_linux.go",
+		"write_err.go"
+	],
+	"HFiles": [
+		"asm_amd64.h",
+		"asm_ppc64x.h",
+		"funcdata.h",
+		"go_tls.h",
+		"textflag.h"
+	],
+	"SFiles": [
+		"asm.s",
+		"asm_amd64.s",
+		"ints.s",
+		"memclr_amd64.s",
+		"memmove_amd64.s",
+		"preempt_amd64.s",
+		"rt0_linux_amd64.s",
+		"secret_amd64.s",
+		"sys_linux_amd64.s",
+		"test_amd64.s",
+		"time_linux_amd64.s"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/reflectlite",
+	"ImportPath": "internal/reflectlite",
+	"Standard": true,
+	"GoFiles": [
+		"swapper.go",
+		"type.go",
+		"value.go"
+	],
+	"SFiles": [
+		"asm.s"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/errors",
+	"ImportPath": "errors",
+	"Standard": true,
+	"GoFiles": [
+		"errors.go",
+		"join.go",
+		"wrap.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/cmp",
+	"ImportPath": "cmp",
+	"Standard": true,
+	"GoFiles": [
+		"cmp.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/iter",
+	"ImportPath": "iter",
+	"Standard": true,
+	"GoFiles": [
+		"iter.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/math",
+	"ImportPath": "math",
+	"Standard": true,
+	"GoFiles": [
+		"abs.go",
+		"acosh.go",
+		"asin.go",
+		"asinh.go",
+		"atan.go",
+		"atan2.go",
+		"atanh.go",
+		"bits.go",
+		"cbrt.go",
+		"const.go",
+		"copysign.go",
+		"dim.go",
+		"dim_asm.go",
+		"erf.go",
+		"erfinv.go",
+		"exp.go",
+		"exp2_noasm.go",
+		"exp_amd64.go",
+		"exp_asm.go",
+		"expm1.go",
+		"floor.go",
+		"floor_asm.go",
+		"fma.go",
+		"frexp.go",
+		"gamma.go",
+		"hypot.go",
+		"hypot_asm.go",
+		"j0.go",
+		"j1.go",
+		"jn.go",
+		"ldexp.go",
+		"lgamma.go",
+		"log.go",
+		"log10.go",
+		"log1p.go",
+		"log_asm.go",
+		"logb.go",
+		"mod.go",
+		"modf.go",
+		"nextafter.go",
+		"pow.go",
+		"pow10.go",
+		"remainder.go",
+		"signbit.go",
+		"sin.go",
+		"sincos.go",
+		"sinh.go",
+		"sqrt.go",
+		"stubs.go",
+		"tan.go",
+		"tanh.go",
+		"trig_reduce.go",
+		"unsafe.go"
+	],
+	"SFiles": [
+		"dim_amd64.s",
+		"exp_amd64.s",
+		"floor_amd64.s",
+		"hypot_amd64.s",
+		"log_amd64.s"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/unicode/utf8",
+	"ImportPath": "unicode/utf8",
+	"Standard": true,
+	"GoFiles": [
+		"utf8.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/strconv",
+	"ImportPath": "strconv",
+	"Standard": true,
+	"GoFiles": [
+		"bytealg.go",
+		"doc.go",
+		"isprint.go",
+		"number.go",
+		"quote.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/sync/atomic",
+	"ImportPath": "sync/atomic",
+	"Standard": true,
+	"GoFiles": [
+		"doc.go",
+		"doc_64.go",
+		"type.go",
+		"value.go"
+	],
+	"SFiles": [
+		"asm.s"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/sync",
+	"ImportPath": "internal/sync",
+	"Standard": true,
+	"GoFiles": [
+		"hashtriemap.go",
+		"mutex.go",
+		"runtime.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/synctest",
+	"ImportPath": "internal/synctest",
+	"Standard": true,
+	"GoFiles": [
+		"synctest.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/sync",
+	"ImportPath": "sync",
+	"Standard": true,
+	"GoFiles": [
+		"cond.go",
+		"map.go",
+		"mutex.go",
+		"once.go",
+		"oncefunc.go",
+		"pool.go",
+		"poolqueue.go",
+		"runtime.go",
+		"runtime2.go",
+		"rwmutex.go",
+		"waitgroup.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/unicode",
+	"ImportPath": "unicode",
+	"Standard": true,
+	"GoFiles": [
+		"casetables.go",
+		"digit.go",
+		"graphic.go",
+		"letter.go",
+		"tables.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/reflect",
+	"ImportPath": "reflect",
+	"Standard": true,
+	"GoFiles": [
+		"abi.go",
+		"badlinkname.go",
+		"deepequal.go",
+		"float32reg_generic.go",
+		"iter.go",
+		"makefunc.go",
+		"map.go",
+		"swapper.go",
+		"type.go",
+		"value.go",
+		"visiblefields.go"
+	],
+	"SFiles": [
+		"asm_amd64.s"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/slices",
+	"ImportPath": "slices",
+	"Standard": true,
+	"GoFiles": [
+		"iter.go",
+		"slices.go",
+		"sort.go",
+		"zsortanyfunc.go",
+		"zsortordered.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/fmtsort",
+	"ImportPath": "internal/fmtsort",
+	"Standard": true,
+	"GoFiles": [
+		"sort.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/io",
+	"ImportPath": "io",
+	"Standard": true,
+	"GoFiles": [
+		"io.go",
+		"multi.go",
+		"pipe.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/oserror",
+	"ImportPath": "internal/oserror",
+	"Standard": true,
+	"GoFiles": [
+		"errors.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/path",
+	"ImportPath": "path",
+	"Standard": true,
+	"GoFiles": [
+		"match.go",
+		"path.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/bisect",
+	"ImportPath": "internal/bisect",
+	"Standard": true,
+	"GoFiles": [
+		"bisect.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/godebug",
+	"ImportPath": "internal/godebug",
+	"Standard": true,
+	"GoFiles": [
+		"godebug.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/syscall",
+	"ImportPath": "syscall",
+	"Standard": true,
+	"GoFiles": [
+		"badlinkname_unix.go",
+		"dirent.go",
+		"env_unix.go",
+		"exec_linux.go",
+		"exec_unix.go",
+		"flock_linux.go",
+		"forkpipe2.go",
+		"linkname_unix.go",
+		"lsf_linux.go",
+		"net.go",
+		"netlink_linux.go",
+		"rlimit.go",
+		"rlimit_stub.go",
+		"setuidgid_linux.go",
+		"sockcmsg_linux.go",
+		"sockcmsg_unix.go",
+		"sockcmsg_unix_other.go",
+		"syscall.go",
+		"syscall_linux.go",
+		"syscall_linux_amd64.go",
+		"syscall_unix.go",
+		"time_nofake.go",
+		"timestruct.go",
+		"zerrors_linux_amd64.go",
+		"zsyscall_linux_amd64.go",
+		"zsysnum_linux_amd64.go",
+		"ztypes_linux_amd64.go"
+	],
+	"SFiles": [
+		"asm_linux_amd64.s"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/time",
+	"ImportPath": "time",
+	"Standard": true,
+	"GoFiles": [
+		"format.go",
+		"format_rfc3339.go",
+		"sleep.go",
+		"sys_unix.go",
+		"tick.go",
+		"time.go",
+		"zoneinfo.go",
+		"zoneinfo_goroot.go",
+		"zoneinfo_read.go",
+		"zoneinfo_unix.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/io/fs",
+	"ImportPath": "io/fs",
+	"Standard": true,
+	"GoFiles": [
+		"format.go",
+		"fs.go",
+		"glob.go",
+		"readdir.go",
+		"readfile.go",
+		"readlink.go",
+		"stat.go",
+		"sub.go",
+		"walk.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/filepathlite",
+	"ImportPath": "internal/filepathlite",
+	"Standard": true,
+	"GoFiles": [
+		"path.go",
+		"path_nonwindows.go",
+		"path_unix.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/syscall/unix",
+	"ImportPath": "internal/syscall/unix",
+	"Standard": true,
+	"GoFiles": [
+		"at.go",
+		"at_fstatat.go",
+		"at_sysnum_linux.go",
+		"at_sysnum_newfstatat_linux.go",
+		"constants.go",
+		"copy_file_range_unix.go",
+		"eaccess.go",
+		"faccessat_syscall.go",
+		"fchmodat_linux.go",
+		"fcntl_unix.go",
+		"getrandom.go",
+		"getrandom_linux.go",
+		"kernel_version_ge.go",
+		"kernel_version_linux.go",
+		"net.go",
+		"nofollow_posix.go",
+		"nonblocking_unix.go",
+		"pidfd_linux.go",
+		"renameat_sysnum_linux.go",
+		"siginfo_linux.go",
+		"siginfo_linux_other.go",
+		"syscall.go",
+		"sysnum_linux_amd64.go",
+		"tcsetpgrp_linux.go",
+		"utimes.go",
+		"waitid_linux.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/poll",
+	"ImportPath": "internal/poll",
+	"Standard": true,
+	"GoFiles": [
+		"copy_file_range_linux.go",
+		"copy_file_range_unix.go",
+		"errno_unix.go",
+		"fd.go",
+		"fd_fsync_posix.go",
+		"fd_mutex.go",
+		"fd_poll_runtime.go",
+		"fd_posix.go",
+		"fd_unix.go",
+		"fd_unixjs.go",
+		"fd_writev_unix.go",
+		"fstatat_unix.go",
+		"hook_cloexec.go",
+		"hook_unix.go",
+		"iovec_unix.go",
+		"sendfile.go",
+		"sendfile_unix.go",
+		"sock_cloexec.go",
+		"sockopt.go",
+		"sockopt_linux.go",
+		"sockopt_unix.go",
+		"sockoptip.go",
+		"splice_linux.go",
+		"writev.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/syscall/execenv",
+	"ImportPath": "internal/syscall/execenv",
+	"Standard": true,
+	"GoFiles": [
+		"execenv_default.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/testlog",
+	"ImportPath": "internal/testlog",
+	"Standard": true,
+	"GoFiles": [
+		"exit.go",
+		"log.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/os",
+	"ImportPath": "os",
+	"Standard": true,
+	"GoFiles": [
+		"dir.go",
+		"dir_unix.go",
+		"dirent_linux.go",
+		"eloop_other.go",
+		"env.go",
+		"error.go",
+		"error_errno.go",
+		"exec.go",
+		"exec_linux.go",
+		"exec_posix.go",
+		"exec_unix.go",
+		"executable.go",
+		"executable_procfs.go",
+		"file.go",
+		"file_open_unix.go",
+		"file_posix.go",
+		"file_unix.go",
+		"getwd.go",
+		"path.go",
+		"path_unix.go",
+		"pidfd_linux.go",
+		"pipe2_unix.go",
+		"proc.go",
+		"rawconn.go",
+		"removeall_at.go",
+		"removeall_unix.go",
+		"root.go",
+		"root_nonwindows.go",
+		"root_openat.go",
+		"root_unix.go",
+		"stat.go",
+		"stat_linux.go",
+		"stat_unix.go",
+		"statat.go",
+		"statat_unix.go",
+		"sticky_notbsd.go",
+		"sys.go",
+		"sys_linux.go",
+		"sys_unix.go",
+		"tempfile.go",
+		"types.go",
+		"types_unix.go",
+		"wait_waitid.go",
+		"zero_copy_linux.go",
+		"zero_copy_posix.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/fmt",
+	"ImportPath": "fmt",
+	"Standard": true,
+	"GoFiles": [
+		"doc.go",
+		"errors.go",
+		"format.go",
+		"print.go",
+		"scan.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/strings",
+	"ImportPath": "strings",
+	"Standard": true,
+	"GoFiles": [
+		"builder.go",
+		"clone.go",
+		"compare.go",
+		"iter.go",
+		"reader.go",
+		"replace.go",
+		"search.go",
+		"strings.go"
+	]
+}
+{
+	"Dir": "<REPOSITORY>/internal/domain",
+	"ImportPath": "ai-group-chat/internal/domain",
+	"Module": {
+		"Path": "ai-group-chat",
+		"Main": true,
+		"Dir": "<REPOSITORY>",
+		"GoMod": "<LICENSE_TOOLS_DIR>/export/go-export.mod",
+		"GoVersion": "1.26.4"
+	},
+	"GoFiles": [
+		"attachments.go",
+		"domain.go",
+		"mention.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/context",
+	"ImportPath": "context",
+	"Standard": true,
+	"GoFiles": [
+		"context.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/encoding/base64",
+	"ImportPath": "encoding/base64",
+	"Standard": true,
+	"GoFiles": [
+		"base64.go"
+	]
+}
+{
+	"Dir": "<REPOSITORY>/internal/llm",
+	"ImportPath": "ai-group-chat/internal/llm",
+	"Module": {
+		"Path": "ai-group-chat",
+		"Main": true,
+		"Dir": "<REPOSITORY>",
+		"GoMod": "<LICENSE_TOOLS_DIR>/export/go-export.mod",
+		"GoVersion": "1.26.4"
+	},
+	"GoFiles": [
+		"images.go",
+		"llm.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/bytes",
+	"ImportPath": "bytes",
+	"Standard": true,
+	"GoFiles": [
+		"buffer.go",
+		"bytes.go",
+		"iter.go",
+		"reader.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/bufio",
+	"ImportPath": "bufio",
+	"Standard": true,
+	"GoFiles": [
+		"bufio.go",
+		"scan.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/maps",
+	"ImportPath": "maps",
+	"Standard": true,
+	"GoFiles": [
+		"iter.go",
+		"maps.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/mime",
+	"ImportPath": "mime",
+	"Standard": true,
+	"GoFiles": [
+		"encodedword.go",
+		"grammar.go",
+		"mediatype.go",
+		"type.go",
+		"type_unix.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/vendor/golang.org/x/net/dns/dnsmessage",
+	"ImportPath": "vendor/golang.org/x/net/dns/dnsmessage",
+	"Standard": true,
+	"GoFiles": [
+		"message.go",
+		"svcb.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/nettrace",
+	"ImportPath": "internal/nettrace",
+	"Standard": true,
+	"GoFiles": [
+		"nettrace.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/singleflight",
+	"ImportPath": "internal/singleflight",
+	"Standard": true,
+	"GoFiles": [
+		"singleflight.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/weak",
+	"ImportPath": "weak",
+	"Standard": true,
+	"GoFiles": [
+		"doc.go",
+		"pointer.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/unique",
+	"ImportPath": "unique",
+	"Standard": true,
+	"GoFiles": [
+		"canonmap.go",
+		"clone.go",
+		"doc.go",
+		"handle.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/net/netip",
+	"ImportPath": "net/netip",
+	"Standard": true,
+	"GoFiles": [
+		"netip.go",
+		"uint128.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/runtime/cgo",
+	"ImportPath": "runtime/cgo",
+	"Standard": true,
+	"GoFiles": [
+		"callbacks.go",
+		"callbacks_traceback.go",
+		"clearenv.go",
+		"handle.go",
+		"iscgo.go",
+		"linux.go",
+		"mmap.go",
+		"setenv.go",
+		"sigaction.go"
+	],
+	"CgoFiles": [
+		"cgo.go"
+	],
+	"CFiles": [
+		"gcc_clearenv.c",
+		"gcc_context.c",
+		"gcc_fatalf.c",
+		"gcc_libinit.c",
+		"gcc_linux_amd64.c",
+		"gcc_mmap.c",
+		"gcc_setenv.c",
+		"gcc_sigaction.c",
+		"gcc_stack_unix.c",
+		"gcc_traceback.c",
+		"gcc_util.c",
+		"linux_syscall.c"
+	],
+	"HFiles": [
+		"abi_amd64.h",
+		"abi_ppc64x.h",
+		"libcgo.h",
+		"libcgo_unix.h"
+	],
+	"SFiles": [
+		"asm_amd64.s",
+		"gcc_amd64.S"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/net",
+	"ImportPath": "net",
+	"Standard": true,
+	"GoFiles": [
+		"addrselect.go",
+		"cgo_unix.go",
+		"conf.go",
+		"dial.go",
+		"dnsclient.go",
+		"dnsclient_unix.go",
+		"dnsconfig.go",
+		"dnsconfig_unix.go",
+		"error_posix.go",
+		"error_unix.go",
+		"fd_posix.go",
+		"fd_unix.go",
+		"file.go",
+		"file_posix.go",
+		"file_unix.go",
+		"hook.go",
+		"hook_unix.go",
+		"hosts.go",
+		"interface.go",
+		"interface_linux.go",
+		"ip.go",
+		"iprawsock.go",
+		"iprawsock_posix.go",
+		"ipsock.go",
+		"ipsock_posix.go",
+		"lookup.go",
+		"lookup_unix.go",
+		"mac.go",
+		"mptcpsock_linux.go",
+		"net.go",
+		"netcgo_off.go",
+		"netgo_off.go",
+		"nss.go",
+		"parse.go",
+		"pipe.go",
+		"port.go",
+		"port_unix.go",
+		"rawconn.go",
+		"rlimit_unix.go",
+		"sendfile.go",
+		"sendfile_nonwindows.go",
+		"sock_cloexec.go",
+		"sock_linux.go",
+		"sock_posix.go",
+		"sockaddr_posix.go",
+		"sockopt_linux.go",
+		"sockopt_posix.go",
+		"sockoptip4_linux.go",
+		"sockoptip6_posix.go",
+		"splice_linux.go",
+		"tcpsock.go",
+		"tcpsock_posix.go",
+		"tcpsock_unix.go",
+		"tcpsockopt_posix.go",
+		"tcpsockopt_unix.go",
+		"udpsock.go",
+		"udpsock_posix.go",
+		"unixsock.go",
+		"unixsock_posix.go",
+		"unixsock_readmsg_cmsg_cloexec.go",
+		"writev_unix.go"
+	],
+	"CgoFiles": [
+		"cgo_linux.go",
+		"cgo_resnew.go",
+		"cgo_socknew.go",
+		"cgo_unix_cgo.go",
+		"cgo_unix_cgo_res.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/sort",
+	"ImportPath": "sort",
+	"Standard": true,
+	"GoFiles": [
+		"search.go",
+		"slice.go",
+		"sort.go",
+		"zsortfunc.go",
+		"zsortinterface.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/compress/flate",
+	"ImportPath": "compress/flate",
+	"Standard": true,
+	"GoFiles": [
+		"deflate.go",
+		"deflatefast.go",
+		"dict_decoder.go",
+		"huffman_bit_writer.go",
+		"huffman_code.go",
+		"inflate.go",
+		"token.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/encoding/binary",
+	"ImportPath": "encoding/binary",
+	"Standard": true,
+	"GoFiles": [
+		"binary.go",
+		"native_endian_little.go",
+		"varint.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/hash",
+	"ImportPath": "hash",
+	"Standard": true,
+	"GoFiles": [
+		"hash.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/hash/crc32",
+	"ImportPath": "hash/crc32",
+	"Standard": true,
+	"GoFiles": [
+		"crc32.go",
+		"crc32_amd64.go",
+		"crc32_generic.go",
+		"gen.go"
+	],
+	"SFiles": [
+		"crc32_amd64.s"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/compress/gzip",
+	"ImportPath": "compress/gzip",
+	"Standard": true,
+	"GoFiles": [
+		"gunzip.go",
+		"gzip.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/container/list",
+	"ImportPath": "container/list",
+	"Standard": true,
+	"GoFiles": [
+		"list.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto",
+	"ImportPath": "crypto",
+	"Standard": true,
+	"GoFiles": [
+		"crypto.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/fips140deps/godebug",
+	"ImportPath": "crypto/internal/fips140deps/godebug",
+	"Standard": true,
+	"GoFiles": [
+		"godebug.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/fips140",
+	"ImportPath": "crypto/internal/fips140",
+	"Standard": true,
+	"GoFiles": [
+		"cast.go",
+		"fips140.go",
+		"indicator.go",
+		"notasan.go",
+		"notboring.go",
+		"notpurego.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/fips140/alias",
+	"ImportPath": "crypto/internal/fips140/alias",
+	"Standard": true,
+	"GoFiles": [
+		"alias.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/fips140deps/byteorder",
+	"ImportPath": "crypto/internal/fips140deps/byteorder",
+	"Standard": true,
+	"GoFiles": [
+		"byteorder.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/fips140deps/cpu",
+	"ImportPath": "crypto/internal/fips140deps/cpu",
+	"Standard": true,
+	"GoFiles": [
+		"cpu.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/impl",
+	"ImportPath": "crypto/internal/impl",
+	"Standard": true,
+	"GoFiles": [
+		"impl.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/fips140/sha256",
+	"ImportPath": "crypto/internal/fips140/sha256",
+	"Standard": true,
+	"GoFiles": [
+		"cast.go",
+		"sha256.go",
+		"sha256block.go",
+		"sha256block_amd64.go"
+	],
+	"SFiles": [
+		"sha256block_amd64.s"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/constanttime",
+	"ImportPath": "crypto/internal/constanttime",
+	"Standard": true,
+	"GoFiles": [
+		"constant_time.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/fips140/subtle",
+	"ImportPath": "crypto/internal/fips140/subtle",
+	"Standard": true,
+	"GoFiles": [
+		"constant_time.go",
+		"xor.go",
+		"xor_asm.go"
+	],
+	"SFiles": [
+		"xor_amd64.s"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/fips140/sha3",
+	"ImportPath": "crypto/internal/fips140/sha3",
+	"Standard": true,
+	"GoFiles": [
+		"cast.go",
+		"hashes.go",
+		"keccakf.go",
+		"sha3.go",
+		"sha3_amd64.go",
+		"shake.go"
+	],
+	"SFiles": [
+		"sha3_amd64.s"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/fips140/sha512",
+	"ImportPath": "crypto/internal/fips140/sha512",
+	"Standard": true,
+	"GoFiles": [
+		"cast.go",
+		"sha512.go",
+		"sha512block.go",
+		"sha512block_amd64.go"
+	],
+	"SFiles": [
+		"sha512block_amd64.s"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/fips140/hmac",
+	"ImportPath": "crypto/internal/fips140/hmac",
+	"Standard": true,
+	"GoFiles": [
+		"cast.go",
+		"hmac.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/fips140/check",
+	"ImportPath": "crypto/internal/fips140/check",
+	"Standard": true,
+	"GoFiles": [
+		"check.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/fips140/aes",
+	"ImportPath": "crypto/internal/fips140/aes",
+	"Standard": true,
+	"GoFiles": [
+		"aes.go",
+		"aes_asm.go",
+		"aes_generic.go",
+		"cast.go",
+		"cbc.go",
+		"cbc_noasm.go",
+		"const.go",
+		"ctr.go",
+		"ctr_asm.go"
+	],
+	"SFiles": [
+		"aes_amd64.s",
+		"ctr_amd64.s"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/fips140deps/time",
+	"ImportPath": "crypto/internal/fips140deps/time",
+	"Standard": true,
+	"GoFiles": [
+		"time.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/entropy/v1.0.0",
+	"ImportPath": "crypto/internal/entropy/v1.0.0",
+	"Standard": true,
+	"GoFiles": [
+		"entropy.go",
+		"sha384.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/sysrand",
+	"ImportPath": "crypto/internal/sysrand",
+	"Standard": true,
+	"GoFiles": [
+		"rand.go",
+		"rand_getrandom.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/fips140/drbg",
+	"ImportPath": "crypto/internal/fips140/drbg",
+	"Standard": true,
+	"GoFiles": [
+		"cast.go",
+		"ctrdrbg.go",
+		"entropy_fips140.go",
+		"rand.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/fips140/aes/gcm",
+	"ImportPath": "crypto/internal/fips140/aes/gcm",
+	"Standard": true,
+	"GoFiles": [
+		"cast.go",
+		"cmac.go",
+		"ctrkdf.go",
+		"gcm.go",
+		"gcm_asm.go",
+		"gcm_generic.go",
+		"gcm_nonces.go",
+		"ghash.go"
+	],
+	"SFiles": [
+		"gcm_amd64.s"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/fips140",
+	"ImportPath": "crypto/fips140",
+	"Standard": true,
+	"GoFiles": [
+		"enforcement.go",
+		"fips140.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/fips140only",
+	"ImportPath": "crypto/internal/fips140only",
+	"Standard": true,
+	"GoFiles": [
+		"fips140only.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/subtle",
+	"ImportPath": "crypto/subtle",
+	"Standard": true,
+	"GoFiles": [
+		"constant_time.go",
+		"dit.go",
+		"xor.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/cipher",
+	"ImportPath": "crypto/cipher",
+	"Standard": true,
+	"GoFiles": [
+		"cbc.go",
+		"cfb.go",
+		"cipher.go",
+		"ctr.go",
+		"gcm.go",
+		"io.go",
+		"ofb.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/boring/sig",
+	"ImportPath": "crypto/internal/boring/sig",
+	"Standard": true,
+	"GoFiles": [
+		"sig.go"
+	],
+	"SFiles": [
+		"sig_amd64.s"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/boring",
+	"ImportPath": "crypto/internal/boring",
+	"Standard": true,
+	"GoFiles": [
+		"doc.go",
+		"notboring.go"
+	],
+	"HFiles": [
+		"goboringcrypto.h"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/math/rand/v2",
+	"ImportPath": "math/rand/v2",
+	"Standard": true,
+	"GoFiles": [
+		"chacha8.go",
+		"exp.go",
+		"normal.go",
+		"pcg.go",
+		"rand.go",
+		"zipf.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/randutil",
+	"ImportPath": "crypto/internal/randutil",
+	"Standard": true,
+	"GoFiles": [
+		"randutil.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/rand",
+	"ImportPath": "crypto/internal/rand",
+	"Standard": true,
+	"GoFiles": [
+		"rand.go",
+		"rand_fips140v1.26.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/math/rand",
+	"ImportPath": "math/rand",
+	"Standard": true,
+	"GoFiles": [
+		"exp.go",
+		"normal.go",
+		"rand.go",
+		"rng.go",
+		"zipf.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/math/big",
+	"ImportPath": "math/big",
+	"Standard": true,
+	"GoFiles": [
+		"accuracy_string.go",
+		"arith.go",
+		"arith_amd64.go",
+		"arith_decl.go",
+		"decimal.go",
+		"doc.go",
+		"float.go",
+		"floatconv.go",
+		"floatmarsh.go",
+		"ftoa.go",
+		"int.go",
+		"intconv.go",
+		"intmarsh.go",
+		"nat.go",
+		"natconv.go",
+		"natdiv.go",
+		"natmul.go",
+		"prime.go",
+		"rat.go",
+		"ratconv.go",
+		"ratmarsh.go",
+		"roundingmode_string.go",
+		"sqrt.go"
+	],
+	"SFiles": [
+		"arith_amd64.s"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/rand",
+	"ImportPath": "crypto/rand",
+	"Standard": true,
+	"GoFiles": [
+		"rand.go",
+		"text.go",
+		"util.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/aes",
+	"ImportPath": "crypto/aes",
+	"Standard": true,
+	"GoFiles": [
+		"aes.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/des",
+	"ImportPath": "crypto/des",
+	"Standard": true,
+	"GoFiles": [
+		"block.go",
+		"cipher.go",
+		"const.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/fips140/nistec/fiat",
+	"ImportPath": "crypto/internal/fips140/nistec/fiat",
+	"Standard": true,
+	"GoFiles": [
+		"cast.go",
+		"p224.go",
+		"p224_fiat64.go",
+		"p224_invert.go",
+		"p256.go",
+		"p256_fiat64.go",
+		"p256_invert.go",
+		"p384.go",
+		"p384_fiat64.go",
+		"p384_invert.go",
+		"p521.go",
+		"p521_fiat64.go",
+		"p521_invert.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/fips140/nistec",
+	"ImportPath": "crypto/internal/fips140/nistec",
+	"Standard": true,
+	"GoFiles": [
+		"nistec.go",
+		"p224.go",
+		"p224_sqrt.go",
+		"p256_asm.go",
+		"p256_ordinv.go",
+		"p256_table.go",
+		"p384.go",
+		"p521.go"
+	],
+	"SFiles": [
+		"p256_asm_amd64.s"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/fips140/ecdh",
+	"ImportPath": "crypto/internal/fips140/ecdh",
+	"Standard": true,
+	"GoFiles": [
+		"cast.go",
+		"ecdh.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/fips140/edwards25519/field",
+	"ImportPath": "crypto/internal/fips140/edwards25519/field",
+	"Standard": true,
+	"GoFiles": [
+		"fe.go",
+		"fe_amd64.go",
+		"fe_generic.go"
+	],
+	"SFiles": [
+		"fe_amd64.s"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/ecdh",
+	"ImportPath": "crypto/ecdh",
+	"Standard": true,
+	"GoFiles": [
+		"ecdh.go",
+		"nist.go",
+		"x25519.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/elliptic",
+	"ImportPath": "crypto/elliptic",
+	"Standard": true,
+	"GoFiles": [
+		"elliptic.go",
+		"nistec.go",
+		"params.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/boring/bbig",
+	"ImportPath": "crypto/internal/boring/bbig",
+	"Standard": true,
+	"GoFiles": [
+		"big.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/fips140/bigmod",
+	"ImportPath": "crypto/internal/fips140/bigmod",
+	"Standard": true,
+	"GoFiles": [
+		"nat.go",
+		"nat_asm.go"
+	],
+	"SFiles": [
+		"nat_amd64.s"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/fips140/ecdsa",
+	"ImportPath": "crypto/internal/fips140/ecdsa",
+	"Standard": true,
+	"GoFiles": [
+		"cast.go",
+		"ecdsa.go",
+		"ecdsa_noasm.go",
+		"hmacdrbg.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/fips140cache",
+	"ImportPath": "crypto/internal/fips140cache",
+	"Standard": true,
+	"GoFiles": [
+		"cache.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/sha3",
+	"ImportPath": "crypto/sha3",
+	"Standard": true,
+	"GoFiles": [
+		"sha3.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/fips140hash",
+	"ImportPath": "crypto/internal/fips140hash",
+	"Standard": true,
+	"GoFiles": [
+		"hash.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/sha512",
+	"ImportPath": "crypto/sha512",
+	"Standard": true,
+	"GoFiles": [
+		"sha512.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/internal/saferio",
+	"ImportPath": "internal/saferio",
+	"Standard": true,
+	"GoFiles": [
+		"io.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/unicode/utf16",
+	"ImportPath": "unicode/utf16",
+	"Standard": true,
+	"GoFiles": [
+		"utf16.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/encoding/asn1",
+	"ImportPath": "encoding/asn1",
+	"Standard": true,
+	"GoFiles": [
+		"asn1.go",
+		"common.go",
+		"marshal.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/vendor/golang.org/x/crypto/cryptobyte/asn1",
+	"ImportPath": "vendor/golang.org/x/crypto/cryptobyte/asn1",
+	"Standard": true,
+	"GoFiles": [
+		"asn1.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/vendor/golang.org/x/crypto/cryptobyte",
+	"ImportPath": "vendor/golang.org/x/crypto/cryptobyte",
+	"Standard": true,
+	"GoFiles": [
+		"asn1.go",
+		"builder.go",
+		"string.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/ecdsa",
+	"ImportPath": "crypto/ecdsa",
+	"Standard": true,
+	"GoFiles": [
+		"ecdsa.go",
+		"ecdsa_legacy.go",
+		"notboring.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/fips140/edwards25519",
+	"ImportPath": "crypto/internal/fips140/edwards25519",
+	"Standard": true,
+	"GoFiles": [
+		"doc.go",
+		"edwards25519.go",
+		"scalar.go",
+		"scalar_fiat.go",
+		"scalarmult.go",
+		"tables.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/fips140/ed25519",
+	"ImportPath": "crypto/internal/fips140/ed25519",
+	"Standard": true,
+	"GoFiles": [
+		"cast.go",
+		"ed25519.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/ed25519",
+	"ImportPath": "crypto/ed25519",
+	"Standard": true,
+	"GoFiles": [
+		"ed25519.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/fips140/hkdf",
+	"ImportPath": "crypto/internal/fips140/hkdf",
+	"Standard": true,
+	"GoFiles": [
+		"cast.go",
+		"hkdf.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/hkdf",
+	"ImportPath": "crypto/hkdf",
+	"Standard": true,
+	"GoFiles": [
+		"hkdf.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/hmac",
+	"ImportPath": "crypto/hmac",
+	"Standard": true,
+	"GoFiles": [
+		"hmac.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/fips140/mlkem",
+	"ImportPath": "crypto/internal/fips140/mlkem",
+	"Standard": true,
+	"GoFiles": [
+		"cast.go",
+		"field.go",
+		"mlkem1024.go",
+		"mlkem768.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/mlkem",
+	"ImportPath": "crypto/mlkem",
+	"Standard": true,
+	"GoFiles": [
+		"mlkem.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/sha256",
+	"ImportPath": "crypto/sha256",
+	"Standard": true,
+	"GoFiles": [
+		"sha256.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/vendor/golang.org/x/crypto/internal/alias",
+	"ImportPath": "vendor/golang.org/x/crypto/internal/alias",
+	"Standard": true,
+	"GoFiles": [
+		"alias.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/vendor/golang.org/x/crypto/chacha20",
+	"ImportPath": "vendor/golang.org/x/crypto/chacha20",
+	"Standard": true,
+	"GoFiles": [
+		"chacha_generic.go",
+		"chacha_noasm.go",
+		"xor.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/vendor/golang.org/x/crypto/internal/poly1305",
+	"ImportPath": "vendor/golang.org/x/crypto/internal/poly1305",
+	"Standard": true,
+	"GoFiles": [
+		"poly1305.go",
+		"sum_asm.go",
+		"sum_generic.go"
+	],
+	"SFiles": [
+		"sum_amd64.s"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/vendor/golang.org/x/sys/cpu",
+	"ImportPath": "vendor/golang.org/x/sys/cpu",
+	"Standard": true,
+	"GoFiles": [
+		"byteorder.go",
+		"cpu.go",
+		"cpu_gc_x86.go",
+		"cpu_linux_noinit.go",
+		"cpu_other_x86.go",
+		"cpu_x86.go",
+		"endian_little.go",
+		"hwcap_linux.go",
+		"parse.go",
+		"runtime_auxv.go",
+		"runtime_auxv_go121.go"
+	],
+	"SFiles": [
+		"cpu_gc_x86.s"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/vendor/golang.org/x/crypto/chacha20poly1305",
+	"ImportPath": "vendor/golang.org/x/crypto/chacha20poly1305",
+	"Standard": true,
+	"GoFiles": [
+		"chacha20poly1305.go",
+		"chacha20poly1305_amd64.go",
+		"chacha20poly1305_generic.go",
+		"fips140only_go1.26.go",
+		"xchacha20poly1305.go"
+	],
+	"SFiles": [
+		"chacha20poly1305_amd64.s"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/hpke",
+	"ImportPath": "crypto/hpke",
+	"Standard": true,
+	"GoFiles": [
+		"aead.go",
+		"aead_fips140v1.26.go",
+		"hpke.go",
+		"kdf.go",
+		"kem.go",
+		"pq.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/fips140/tls12",
+	"ImportPath": "crypto/internal/fips140/tls12",
+	"Standard": true,
+	"GoFiles": [
+		"cast.go",
+		"tls12.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/fips140/tls13",
+	"ImportPath": "crypto/internal/fips140/tls13",
+	"Standard": true,
+	"GoFiles": [
+		"cast.go",
+		"tls13.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/md5",
+	"ImportPath": "crypto/md5",
+	"Standard": true,
+	"GoFiles": [
+		"md5.go",
+		"md5block.go",
+		"md5block_decl.go"
+	],
+	"SFiles": [
+		"md5block_amd64.s"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/rc4",
+	"ImportPath": "crypto/rc4",
+	"Standard": true,
+	"GoFiles": [
+		"rc4.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/internal/fips140/rsa",
+	"ImportPath": "crypto/internal/fips140/rsa",
+	"Standard": true,
+	"GoFiles": [
+		"cast.go",
+		"keygen.go",
+		"pkcs1v15.go",
+		"pkcs1v22.go",
+		"rsa.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/rsa",
+	"ImportPath": "crypto/rsa",
+	"Standard": true,
+	"GoFiles": [
+		"fips.go",
+		"notboring.go",
+		"pkcs1v15.go",
+		"rsa.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/sha1",
+	"ImportPath": "crypto/sha1",
+	"Standard": true,
+	"GoFiles": [
+		"sha1.go",
+		"sha1block.go",
+		"sha1block_amd64.go"
+	],
+	"SFiles": [
+		"sha1block_amd64.s"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/tls/internal/fips140tls",
+	"ImportPath": "crypto/tls/internal/fips140tls",
+	"Standard": true,
+	"GoFiles": [
+		"fipstls.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/dsa",
+	"ImportPath": "crypto/dsa",
+	"Standard": true,
+	"GoFiles": [
+		"dsa.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/encoding/hex",
+	"ImportPath": "encoding/hex",
+	"Standard": true,
+	"GoFiles": [
+		"hex.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/x509/pkix",
+	"ImportPath": "crypto/x509/pkix",
+	"Standard": true,
+	"GoFiles": [
+		"pkix.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/encoding/pem",
+	"ImportPath": "encoding/pem",
+	"Standard": true,
+	"GoFiles": [
+		"pem.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/net/url",
+	"ImportPath": "net/url",
+	"Standard": true,
+	"GoFiles": [
+		"encoding_table.go",
+		"url.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/path/filepath",
+	"ImportPath": "path/filepath",
+	"Standard": true,
+	"GoFiles": [
+		"match.go",
+		"path.go",
+		"path_unix.go",
+		"symlink.go",
+		"symlink_unix.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/x509",
+	"ImportPath": "crypto/x509",
+	"Standard": true,
+	"GoFiles": [
+		"cert_pool.go",
+		"constraints.go",
+		"oid.go",
+		"parser.go",
+		"pem_decrypt.go",
+		"pkcs1.go",
+		"pkcs8.go",
+		"root.go",
+		"root_linux.go",
+		"root_unix.go",
+		"sec1.go",
+		"verify.go",
+		"x509.go",
+		"x509_string.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/crypto/tls",
+	"ImportPath": "crypto/tls",
+	"Standard": true,
+	"GoFiles": [
+		"alert.go",
+		"auth.go",
+		"cache.go",
+		"cipher_suites.go",
+		"common.go",
+		"common_string.go",
+		"conn.go",
+		"defaults.go",
+		"defaults_fips140.go",
+		"ech.go",
+		"handshake_client.go",
+		"handshake_client_tls13.go",
+		"handshake_messages.go",
+		"handshake_server.go",
+		"handshake_server_tls13.go",
+		"key_agreement.go",
+		"key_schedule.go",
+		"prf.go",
+		"quic.go",
+		"ticket.go",
+		"tls.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/vendor/golang.org/x/text/transform",
+	"ImportPath": "vendor/golang.org/x/text/transform",
+	"Standard": true,
+	"GoFiles": [
+		"transform.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/log/internal",
+	"ImportPath": "log/internal",
+	"Standard": true,
+	"GoFiles": [
+		"internal.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/log",
+	"ImportPath": "log",
+	"Standard": true,
+	"GoFiles": [
+		"log.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/vendor/golang.org/x/text/unicode/bidi",
+	"ImportPath": "vendor/golang.org/x/text/unicode/bidi",
+	"Standard": true,
+	"GoFiles": [
+		"bidi.go",
+		"bracket.go",
+		"core.go",
+		"prop.go",
+		"tables15.0.0.go",
+		"trieval.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/vendor/golang.org/x/text/secure/bidirule",
+	"ImportPath": "vendor/golang.org/x/text/secure/bidirule",
+	"Standard": true,
+	"GoFiles": [
+		"bidirule.go",
+		"bidirule10.0.0.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/vendor/golang.org/x/text/unicode/norm",
+	"ImportPath": "vendor/golang.org/x/text/unicode/norm",
+	"Standard": true,
+	"GoFiles": [
+		"composition.go",
+		"forminfo.go",
+		"input.go",
+		"iter.go",
+		"normalize.go",
+		"readwriter.go",
+		"tables15.0.0.go",
+		"transform.go",
+		"trie.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/vendor/golang.org/x/net/idna",
+	"ImportPath": "vendor/golang.org/x/net/idna",
+	"Standard": true,
+	"GoFiles": [
+		"go118.go",
+		"idna10.0.0.go",
+		"punycode.go",
+		"tables15.0.0.go",
+		"trie.go",
+		"trie13.0.0.go",
+		"trieval.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/net/textproto",
+	"ImportPath": "net/textproto",
+	"Standard": true,
+	"GoFiles": [
+		"header.go",
+		"pipeline.go",
+		"reader.go",
+		"textproto.go",
+		"writer.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/vendor/golang.org/x/net/http/httpguts",
+	"ImportPath": "vendor/golang.org/x/net/http/httpguts",
+	"Standard": true,
+	"GoFiles": [
+		"guts.go",
+		"httplex.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/vendor/golang.org/x/net/http/httpproxy",
+	"ImportPath": "vendor/golang.org/x/net/http/httpproxy",
+	"Standard": true,
+	"GoFiles": [
+		"proxy.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/vendor/golang.org/x/net/http2/hpack",
+	"ImportPath": "vendor/golang.org/x/net/http2/hpack",
+	"Standard": true,
+	"GoFiles": [
+		"encode.go",
+		"hpack.go",
+		"huffman.go",
+		"static_table.go",
+		"tables.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/mime/quotedprintable",
+	"ImportPath": "mime/quotedprintable",
+	"Standard": true,
+	"GoFiles": [
+		"reader.go",
+		"writer.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/mime/multipart",
+	"ImportPath": "mime/multipart",
+	"Standard": true,
+	"GoFiles": [
+		"formdata.go",
+		"multipart.go",
+		"readmimeheader.go",
+		"writer.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/net/http/httptrace",
+	"ImportPath": "net/http/httptrace",
+	"Standard": true,
+	"GoFiles": [
+		"trace.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/net/http/internal",
+	"ImportPath": "net/http/internal",
+	"Standard": true,
+	"GoFiles": [
+		"chunked.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/net/http/internal/ascii",
+	"ImportPath": "net/http/internal/ascii",
+	"Standard": true,
+	"GoFiles": [
+		"print.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/net/http/internal/httpcommon",
+	"ImportPath": "net/http/internal/httpcommon",
+	"Standard": true,
+	"GoFiles": [
+		"httpcommon.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/net/http",
+	"ImportPath": "net/http",
+	"Standard": true,
+	"GoFiles": [
+		"client.go",
+		"clientconn.go",
+		"clone.go",
+		"cookie.go",
+		"csrf.go",
+		"doc.go",
+		"filetransport.go",
+		"fs.go",
+		"h2_bundle.go",
+		"h2_error.go",
+		"header.go",
+		"http.go",
+		"jar.go",
+		"mapping.go",
+		"method.go",
+		"pattern.go",
+		"request.go",
+		"response.go",
+		"responsecontroller.go",
+		"roundtrip.go",
+		"routing_index.go",
+		"routing_tree.go",
+		"servemux121.go",
+		"server.go",
+		"sniff.go",
+		"socks_bundle.go",
+		"status.go",
+		"transfer.go",
+		"transport.go",
+		"transport_default_other.go"
+	]
+}
+{
+	"Dir": "<REPOSITORY>/internal/llm/internal/streamhttp",
+	"ImportPath": "ai-group-chat/internal/llm/internal/streamhttp",
+	"Module": {
+		"Path": "ai-group-chat",
+		"Main": true,
+		"Dir": "<REPOSITORY>",
+		"GoMod": "<LICENSE_TOOLS_DIR>/export/go-export.mod",
+		"GoVersion": "1.26.4"
+	},
+	"GoFiles": [
+		"stream.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/encoding",
+	"ImportPath": "encoding",
+	"Standard": true,
+	"GoFiles": [
+		"encoding.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/encoding/json",
+	"ImportPath": "encoding/json",
+	"Standard": true,
+	"GoFiles": [
+		"decode.go",
+		"encode.go",
+		"fold.go",
+		"indent.go",
+		"scanner.go",
+		"stream.go",
+		"tables.go",
+		"tags.go"
+	]
+}
+{
+	"Dir": "<REPOSITORY>/internal/llm/anthropic",
+	"ImportPath": "ai-group-chat/internal/llm/anthropic",
+	"Module": {
+		"Path": "ai-group-chat",
+		"Main": true,
+		"Dir": "<REPOSITORY>",
+		"GoMod": "<LICENSE_TOOLS_DIR>/export/go-export.mod",
+		"GoVersion": "1.26.4"
+	},
+	"GoFiles": [
+		"anthropic.go"
+	]
+}
+{
+	"Dir": "<REPOSITORY>/internal/llm/openai",
+	"ImportPath": "ai-group-chat/internal/llm/openai",
+	"Module": {
+		"Path": "ai-group-chat",
+		"Main": true,
+		"Dir": "<REPOSITORY>",
+		"GoMod": "<LICENSE_TOOLS_DIR>/export/go-export.mod",
+		"GoVersion": "1.26.4"
+	},
+	"GoFiles": [
+		"openai.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/os/exec",
+	"ImportPath": "os/exec",
+	"Standard": true,
+	"GoFiles": [
+		"exec.go",
+		"exec_unix.go",
+		"lookpath.go",
+		"lp_unix.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/os/user",
+	"ImportPath": "os/user",
+	"Standard": true,
+	"GoFiles": [
+		"cgo_listgroups_unix.go",
+		"cgo_lookup_unix.go",
+		"lookup.go",
+		"user.go"
+	],
+	"CgoFiles": [
+		"cgo_lookup_cgo.go",
+		"getgrouplist_unix.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/godbus/dbus/v5@v5.2.2",
+	"ImportPath": "github.com/godbus/dbus/v5",
+	"Module": {
+		"Path": "github.com/godbus/dbus/v5",
+		"Version": "v5.2.2",
+		"Time": "2025-12-29T17:12:48Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/github.com/godbus/dbus/v5@v5.2.2",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/godbus/dbus/v5/@v/v5.2.2.mod",
+		"GoVersion": "1.20",
+		"Sum": "h1:TUR3TgtSVDmjiXOgAAyaZbYmIeP3DPkld3jgKGV8mXQ=",
+		"GoModSum": "h1:3AAv2+hPq5rdnr5txxxRwiGjPXamgoIHgz9FPBfOp3c="
+	},
+	"GoFiles": [
+		"auth.go",
+		"auth_anonymous.go",
+		"auth_default_other.go",
+		"auth_external.go",
+		"call.go",
+		"conn.go",
+		"conn_other.go",
+		"conn_unix.go",
+		"dbus.go",
+		"decoder.go",
+		"default_handler.go",
+		"doc.go",
+		"encoder.go",
+		"escape.go",
+		"export.go",
+		"match.go",
+		"message.go",
+		"object.go",
+		"sequence.go",
+		"sequential_handler.go",
+		"server_interfaces.go",
+		"sig.go",
+		"transport_generic.go",
+		"transport_nonce_tcp.go",
+		"transport_tcp.go",
+		"transport_unix.go",
+		"transport_unixcred_linux.go",
+		"variant.go",
+		"variant_lexer.go",
+		"variant_parser.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/zalando/go-keyring@v0.2.8/secret_service",
+	"ImportPath": "github.com/zalando/go-keyring/secret_service",
+	"Module": {
+		"Path": "github.com/zalando/go-keyring",
+		"Version": "v0.2.8",
+		"Time": "2026-03-23T12:00:09Z",
+		"Dir": "<GOMODCACHE>/github.com/zalando/go-keyring@v0.2.8",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/zalando/go-keyring/@v/v0.2.8.mod",
+		"GoVersion": "1.18",
+		"Sum": "h1:6sD/Ucpl7jNq10rM2pgqTs0sZ9V3qMrqfIIy5YPccHs=",
+		"GoModSum": "h1:tsMo+VpRq5NGyKfxoBVjCuMrG47yj8cmakZDO5QGii0="
+	},
+	"GoFiles": [
+		"secret_service.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/zalando/go-keyring@v0.2.8",
+	"ImportPath": "github.com/zalando/go-keyring",
+	"Module": {
+		"Path": "github.com/zalando/go-keyring",
+		"Version": "v0.2.8",
+		"Time": "2026-03-23T12:00:09Z",
+		"Dir": "<GOMODCACHE>/github.com/zalando/go-keyring@v0.2.8",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/zalando/go-keyring/@v/v0.2.8.mod",
+		"GoVersion": "1.18",
+		"Sum": "h1:6sD/Ucpl7jNq10rM2pgqTs0sZ9V3qMrqfIIy5YPccHs=",
+		"GoModSum": "h1:tsMo+VpRq5NGyKfxoBVjCuMrG47yj8cmakZDO5QGii0="
+	},
+	"GoFiles": [
+		"keyring.go",
+		"keyring_fallback.go",
+		"keyring_mock.go",
+		"keyring_unix.go"
+	]
+}
+{
+	"Dir": "<REPOSITORY>/internal/secret",
+	"ImportPath": "ai-group-chat/internal/secret",
+	"Module": {
+		"Path": "ai-group-chat",
+		"Main": true,
+		"Dir": "<REPOSITORY>",
+		"GoMod": "<LICENSE_TOOLS_DIR>/export/go-export.mod",
+		"GoVersion": "1.26.4"
+	},
+	"GoFiles": [
+		"secret.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/regexp/syntax",
+	"ImportPath": "regexp/syntax",
+	"Standard": true,
+	"GoFiles": [
+		"compile.go",
+		"doc.go",
+		"op_string.go",
+		"parse.go",
+		"perl_groups.go",
+		"prog.go",
+		"regexp.go",
+		"simplify.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/regexp",
+	"ImportPath": "regexp",
+	"Standard": true,
+	"GoFiles": [
+		"backtrack.go",
+		"exec.go",
+		"onepass.go",
+		"regexp.go"
+	]
+}
+{
+	"Dir": "<REPOSITORY>/internal/contextbuilder",
+	"ImportPath": "ai-group-chat/internal/contextbuilder",
+	"Module": {
+		"Path": "ai-group-chat",
+		"Main": true,
+		"Dir": "<REPOSITORY>",
+		"GoMod": "<LICENSE_TOOLS_DIR>/export/go-export.mod",
+		"GoVersion": "1.26.4"
+	},
+	"GoFiles": [
+		"attachments.go",
+		"builder.go"
+	]
+}
+{
+	"Dir": "<REPOSITORY>/internal/turn",
+	"ImportPath": "ai-group-chat/internal/turn",
+	"Module": {
+		"Path": "ai-group-chat",
+		"Main": true,
+		"Dir": "<REPOSITORY>",
+		"GoMod": "<LICENSE_TOOLS_DIR>/export/go-export.mod",
+		"GoVersion": "1.26.4"
+	},
+	"GoFiles": [
+		"orchestrator.go"
+	]
+}
+{
+	"Dir": "<REPOSITORY>/internal/llm/providers",
+	"ImportPath": "ai-group-chat/internal/llm/providers",
+	"Module": {
+		"Path": "ai-group-chat",
+		"Main": true,
+		"Dir": "<REPOSITORY>",
+		"GoMod": "<LICENSE_TOOLS_DIR>/export/go-export.mod",
+		"GoVersion": "1.26.4"
+	},
+	"GoFiles": [
+		"providers.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/log/slog/internal",
+	"ImportPath": "log/slog/internal",
+	"Standard": true,
+	"GoFiles": [
+		"ignorepc.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/log/slog/internal/buffer",
+	"ImportPath": "log/slog/internal/buffer",
+	"Standard": true,
+	"GoFiles": [
+		"buffer.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/log/slog",
+	"ImportPath": "log/slog",
+	"Standard": true,
+	"GoFiles": [
+		"attr.go",
+		"doc.go",
+		"handler.go",
+		"json_handler.go",
+		"level.go",
+		"logger.go",
+		"multi_handler.go",
+		"record.go",
+		"text_handler.go",
+		"value.go"
+	]
+}
+{
+	"Dir": "<REPOSITORY>/internal/memory",
+	"ImportPath": "ai-group-chat/internal/memory",
+	"Module": {
+		"Path": "ai-group-chat",
+		"Main": true,
+		"Dir": "<REPOSITORY>",
+		"GoMod": "<LICENSE_TOOLS_DIR>/export/go-export.mod",
+		"GoVersion": "1.26.4"
+	},
+	"GoFiles": [
+		"memory.go",
+		"runner.go",
+		"todo.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/database/sql/driver",
+	"ImportPath": "database/sql/driver",
+	"Standard": true,
+	"GoFiles": [
+		"driver.go",
+		"types.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/database/sql",
+	"ImportPath": "database/sql",
+	"Standard": true,
+	"GoFiles": [
+		"convert.go",
+		"ctxutil.go",
+		"sql.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/embed",
+	"ImportPath": "embed",
+	"Standard": true,
+	"GoFiles": [
+		"embed.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/oklog/ulid/v2@v2.1.2",
+	"ImportPath": "github.com/oklog/ulid/v2",
+	"Module": {
+		"Path": "github.com/oklog/ulid/v2",
+		"Version": "v2.1.2",
+		"Time": "2026-07-23T19:42:36Z",
+		"Dir": "<GOMODCACHE>/github.com/oklog/ulid/v2@v2.1.2",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/oklog/ulid/v2/@v/v2.1.2.mod",
+		"GoVersion": "1.15",
+		"Sum": "h1:IEclFb9JNvzYA6MW2SCxbLzcHTVsfqm3PrqGQJH5zec=",
+		"GoModSum": "h1:rcEKHmBBKfef9DhnvX7y1HZBYxjXb0cP5ExxNsTT1QQ="
+	},
+	"GoFiles": [
+		"ulid.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/golang.org/x/sys@v0.48.0/unix",
+	"ImportPath": "golang.org/x/sys/unix",
+	"Module": {
+		"Path": "golang.org/x/sys",
+		"Version": "v0.48.0",
+		"Time": "2026-08-31T19:43:43Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/golang.org/x/sys@v0.48.0",
+		"GoMod": "<GOMODCACHE>/cache/download/golang.org/x/sys/@v/v0.48.0.mod",
+		"GoVersion": "1.26.0",
+		"Sum": "h1:bbX/i/6MgT9BVLM9RT1thmxL04yeTAhbEz4SyadbXoo=",
+		"GoModSum": "h1:hNLxWAXmnKAxqDtdwIYC4bM9oQPEecfsnNMuSxOs3og="
+	},
+	"GoFiles": [
+		"affinity_linux.go",
+		"aliases.go",
+		"auxv.go",
+		"bluetooth_linux.go",
+		"constants.go",
+		"dev_linux.go",
+		"dirent.go",
+		"endian_little.go",
+		"env_unix.go",
+		"fcntl.go",
+		"fdset.go",
+		"ifreq_linux.go",
+		"ioctl_linux.go",
+		"ioctl_unsigned.go",
+		"mremap.go",
+		"pagesize_unix.go",
+		"race0.go",
+		"readdirent_getdents.go",
+		"readv_unix.go",
+		"sockcmsg_linux.go",
+		"sockcmsg_unix.go",
+		"sockcmsg_unix_other.go",
+		"syscall.go",
+		"syscall_linux.go",
+		"syscall_linux_alarm.go",
+		"syscall_linux_amd64.go",
+		"syscall_linux_amd64_gc.go",
+		"syscall_linux_gc.go",
+		"syscall_unix.go",
+		"syscall_unix_gc.go",
+		"sysvshm_linux.go",
+		"sysvshm_unix.go",
+		"timestruct.go",
+		"vgetrandom_linux.go",
+		"zerrors_linux.go",
+		"zerrors_linux_amd64.go",
+		"zptrace_x86_linux.go",
+		"zsyscall_linux.go",
+		"zsyscall_linux_amd64.go",
+		"zsysnum_linux_amd64.go",
+		"ztypes_linux.go",
+		"ztypes_linux_amd64.go"
+	],
+	"SFiles": [
+		"asm_linux_amd64.s"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/dustin/go-humanize@v1.0.1",
+	"ImportPath": "github.com/dustin/go-humanize",
+	"Module": {
+		"Path": "github.com/dustin/go-humanize",
+		"Version": "v1.0.1",
+		"Time": "2023-01-10T06:44:38Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/github.com/dustin/go-humanize@v1.0.1",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/dustin/go-humanize/@v/v1.0.1.mod",
+		"GoVersion": "1.16",
+		"Sum": "h1:GzkhY7T5VNhEkwH0PVJgjz+fX1rhBrR7pRT3mDkpeCY=",
+		"GoModSum": "h1:Mu1zIs6XwVuF/gI1OepvI0qD18qycQx+mFykh5fBlto="
+	},
+	"GoFiles": [
+		"big.go",
+		"bigbytes.go",
+		"bytes.go",
+		"comma.go",
+		"commaf.go",
+		"ftoa.go",
+		"humanize.go",
+		"number.go",
+		"ordinals.go",
+		"si.go",
+		"times.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/google/uuid@v1.6.0",
+	"ImportPath": "github.com/google/uuid",
+	"Module": {
+		"Path": "github.com/google/uuid",
+		"Version": "v1.6.0",
+		"Time": "2024-01-23T18:54:04Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/github.com/google/uuid@v1.6.0",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/google/uuid/@v/v1.6.0.mod",
+		"Sum": "h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0=",
+		"GoModSum": "h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo="
+	},
+	"GoFiles": [
+		"dce.go",
+		"doc.go",
+		"hash.go",
+		"marshal.go",
+		"node.go",
+		"node_net.go",
+		"null.go",
+		"sql.go",
+		"time.go",
+		"util.go",
+		"uuid.go",
+		"version1.go",
+		"version4.go",
+		"version6.go",
+		"version7.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/modernc.org/libc@v1.77.1/uuid/uuid",
+	"ImportPath": "modernc.org/libc/uuid/uuid",
+	"Module": {
+		"Path": "modernc.org/libc",
+		"Version": "v1.77.1",
+		"Time": "2026-09-21T23:07:06Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/modernc.org/libc@v1.77.1",
+		"GoMod": "<GOMODCACHE>/cache/download/modernc.org/libc/@v/v1.77.1.mod",
+		"GoVersion": "1.26.0",
+		"Sum": "h1:Ct8j47QtiZ1Enj2DtFXQtUqrPCAjdCmPjtCuvrYQ0Hs=",
+		"GoModSum": "h1:87/pZ4L6nD1zqW4nItuS12YO7hN1igAah34xjnQo/W0="
+	},
+	"GoFiles": [
+		"capi_linux_amd64.go",
+		"uuid_linux_amd64.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/remyoudompheng/bigfft@v0.0.0-20230129092748-24d4a6f8daec",
+	"ImportPath": "github.com/remyoudompheng/bigfft",
+	"Module": {
+		"Path": "github.com/remyoudompheng/bigfft",
+		"Version": "v0.0.0-20230129092748-24d4a6f8daec",
+		"Time": "2023-01-29T09:27:48Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/github.com/remyoudompheng/bigfft@v0.0.0-20230129092748-24d4a6f8daec",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/remyoudompheng/bigfft/@v/v0.0.0-20230129092748-24d4a6f8daec.mod",
+		"GoVersion": "1.12",
+		"Sum": "h1:W09IVJc94icq4NjY3clb7Lk8O1qJ8BdBEF8z0ibU0rE=",
+		"GoModSum": "h1:qqbHyh8v60DhA7CoWK5oRCqLrMHRGoxYCSS9EjAz6Eo="
+	},
+	"GoFiles": [
+		"arith_decl.go",
+		"fermat.go",
+		"fft.go",
+		"scan.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/modernc.org/mathutil@v1.7.1",
+	"ImportPath": "modernc.org/mathutil",
+	"Module": {
+		"Path": "modernc.org/mathutil",
+		"Version": "v1.7.1",
+		"Time": "2024-12-26T12:13:25Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/modernc.org/mathutil@v1.7.1",
+		"GoMod": "<GOMODCACHE>/cache/download/modernc.org/mathutil/@v/v1.7.1.mod",
+		"GoVersion": "1.21",
+		"Sum": "h1:GCZVGXdaN8gTqB1Mf/usp1Y/hSqgI2vAGGP4jZMCxOU=",
+		"GoModSum": "h1:4p5IwJITfppl0G4sUEDtCr4DthTaT47/N3aT6MhfgJg="
+	},
+	"GoFiles": [
+		"binarylog.go",
+		"bits.go",
+		"envelope.go",
+		"int.go",
+		"mathutil.go",
+		"permute.go",
+		"poly.go",
+		"primes.go",
+		"rat.go",
+		"rnd.go",
+		"sqr.go",
+		"tables.go",
+		"test_deps.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/modernc.org/memory@v1.12.1",
+	"ImportPath": "modernc.org/memory",
+	"Module": {
+		"Path": "modernc.org/memory",
+		"Version": "v1.12.1",
+		"Time": "2026-08-19T16:36:49Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/modernc.org/memory@v1.12.1",
+		"GoMod": "<GOMODCACHE>/cache/download/modernc.org/memory/@v/v1.12.1.mod",
+		"GoVersion": "1.23.0",
+		"Sum": "h1:nFMiWrpStgZczNl6XI9GnIk/rWhYIyHGUaR04pGbp9g=",
+		"GoModSum": "h1:/JP4VbVC+K5sU2wZi9bHoq2MAkCnrt2r98UGeSK7Mjw="
+	},
+	"GoFiles": [
+		"decommit_unix.go",
+		"memory.go",
+		"memory64.go",
+		"mmap_unix.go",
+		"nocounters.go",
+		"trace_disabled.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/os/signal",
+	"ImportPath": "os/signal",
+	"Standard": true,
+	"GoFiles": [
+		"doc.go",
+		"signal.go",
+		"signal_unix.go"
+	],
+	"SFiles": [
+		"sig.s"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/runtime/debug",
+	"ImportPath": "runtime/debug",
+	"Standard": true,
+	"GoFiles": [
+		"garbage.go",
+		"mod.go",
+		"stack.go",
+		"stubs.go"
+	],
+	"SFiles": [
+		"debug.s"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/modernc.org/libc@v1.77.1",
+	"ImportPath": "modernc.org/libc",
+	"Module": {
+		"Path": "modernc.org/libc",
+		"Version": "v1.77.1",
+		"Time": "2026-09-21T23:07:06Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/modernc.org/libc@v1.77.1",
+		"GoMod": "<GOMODCACHE>/cache/download/modernc.org/libc/@v/v1.77.1.mod",
+		"GoVersion": "1.26.0",
+		"Sum": "h1:Ct8j47QtiZ1Enj2DtFXQtUqrPCAjdCmPjtCuvrYQ0Hs=",
+		"GoModSum": "h1:87/pZ4L6nD1zqW4nItuS12YO7hN1igAah34xjnQo/W0="
+	},
+	"GoFiles": [
+		"abi0_linux_amd64.go",
+		"abort_linux.go",
+		"aliases.go",
+		"atomic.go",
+		"atomic64.go",
+		"builtin.go",
+		"builtin64.go",
+		"builtin_all.go",
+		"capi_linux_amd64.go",
+		"ccgo_linux_amd64.go",
+		"etc_musl.go",
+		"fsync.go",
+		"int128.go",
+		"libc_all.go",
+		"libc_linux.go",
+		"libc_linux_statfs.go",
+		"libc_musl.go",
+		"libc_musl_linux_amd64.go",
+		"mem_musl.go",
+		"native_musl.go",
+		"nodmesg.go",
+		"probes.go",
+		"pthread_musl.go",
+		"rtl.go",
+		"stdatomic.go",
+		"straceoff.go",
+		"strlen.go",
+		"strlen_simd.go",
+		"syscall_musl.go",
+		"syscall_musl_time64.go",
+		"tls_linux_amd64.go",
+		"watch.go"
+	],
+	"SFiles": [
+		"abi0_linux_amd64.s",
+		"tls_linux_amd64.s"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/modernc.org/libc@v1.77.1/sys/types",
+	"ImportPath": "modernc.org/libc/sys/types",
+	"Module": {
+		"Path": "modernc.org/libc",
+		"Version": "v1.77.1",
+		"Time": "2026-09-21T23:07:06Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/modernc.org/libc@v1.77.1",
+		"GoMod": "<GOMODCACHE>/cache/download/modernc.org/libc/@v/v1.77.1.mod",
+		"GoVersion": "1.26.0",
+		"Sum": "h1:Ct8j47QtiZ1Enj2DtFXQtUqrPCAjdCmPjtCuvrYQ0Hs=",
+		"GoModSum": "h1:87/pZ4L6nD1zqW4nItuS12YO7hN1igAah34xjnQo/W0="
+	},
+	"GoFiles": [
+		"capi_linux_amd64.go",
+		"types_linux_amd64.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/modernc.org/sqlite@v1.60.1/lib",
+	"ImportPath": "modernc.org/sqlite/lib",
+	"Module": {
+		"Path": "modernc.org/sqlite",
+		"Version": "v1.60.1",
+		"Time": "2026-09-29T08:41:38Z",
+		"Dir": "<GOMODCACHE>/modernc.org/sqlite@v1.60.1",
+		"GoMod": "<GOMODCACHE>/cache/download/modernc.org/sqlite/@v/v1.60.1.mod",
+		"GoVersion": "1.26.0",
+		"Sum": "h1:/blz53O951KWFOso4QQvEs/Fq6cDBKLtMVrYNSeJVKw=",
+		"GoModSum": "h1:1dIoEagfDE72QytD5scH1lxARtaUgKgHC/NuApA27r0="
+	},
+	"GoFiles": [
+		"defs.go",
+		"hooks.go",
+		"seh.go",
+		"sqlite.go",
+		"sqlite_g_00000000000000c0.go",
+		"sqlite_g_0000000000000280.go",
+		"sqlite_g_0000000000000480.go",
+		"sqlite_g_0000000000000488.go",
+		"sqlite_g_00000000000004c0.go",
+		"sqlite_g_0000000000001280.go",
+		"sqlite_g_00000000000016c0.go",
+		"sqlite_g_0000000000001e80.go",
+		"sqlite_g_0000000000001fc0.go",
+		"sqlite_g_00000000000023c0.go",
+		"sqlite_g_0000000000002880.go",
+		"sqlite_g_00000000000028bc.go",
+		"sqlite_g_00000000000028c0.go",
+		"sqlite_g_00000000000034c0.go",
+		"sqlite_g_00000000000037c0.go",
+		"sqlite_g_0000000000003e80.go",
+		"sqlite_g_0000000000003e83.go",
+		"sqlite_g_0000000000003ea8.go",
+		"sqlite_g_0000000000003eab.go",
+		"sqlite_g_0000000000003ec0.go",
+		"sqlite_g_0000000000003ec3.go",
+		"sqlite_g_0000000000003eec.go",
+		"sqlite_g_0000000000003f80.go",
+		"sqlite_g_0000000000003fc0.go",
+		"sqlite_g_0000000000003fc3.go",
+		"sqlite_g_0000000000003fd7.go",
+		"sqlite_g_0000000000003ffc.go",
+		"sqlite_g_0000000000003fff.go",
+		"sqlite_g_0000000000004080.go",
+		"sqlite_g_0000000000005ffc.go",
+		"sqlite_g_0000000000007cc0.go",
+		"sqlite_g_0000000000007f80.go",
+		"sqlite_g_0000000000007fc0.go",
+		"sqlite_g_0000000000007ffc.go",
+		"sqlite_g_0000000000007fff.go",
+		"sqlite_g_000000000000c089.go",
+		"sqlite_g_000000000000c08d.go",
+		"sqlite_g_000000000000c488.go",
+		"sqlite_g_000000000000c48b.go",
+		"sqlite_g_000000000000c4cf.go",
+		"sqlite_g_00000000000192bb.go",
+		"sqlite_g_000000000001bbff.go",
+		"sqlite_g_000000000001be80.go",
+		"sqlite_g_000000000001beab.go",
+		"sqlite_g_000000000001bfc0.go",
+		"sqlite_g_000000000001bfe8.go",
+		"sqlite_g_000000000001bff8.go",
+		"sqlite_g_000000000001bffc.go",
+		"sqlite_g_000000000001bfff.go",
+		"sqlite_g_000000000001dea8.go",
+		"sqlite_g_000000000001deab.go",
+		"sqlite_g_000000000001dfff.go",
+		"sqlite_g_000000000001f7ff.go",
+		"sqlite_g_000000000001fc8f.go",
+		"sqlite_g_000000000001fccf.go",
+		"sqlite_g_000000000001fe80.go",
+		"sqlite_g_000000000001fe88.go",
+		"sqlite_g_000000000001fe8b.go",
+		"sqlite_g_000000000001fea8.go",
+		"sqlite_g_000000000001feab.go",
+		"sqlite_g_000000000001feec.go",
+		"sqlite_g_000000000001feef.go",
+		"sqlite_g_000000000001ffbb.go",
+		"sqlite_g_000000000001ffc0.go",
+		"sqlite_g_000000000001ffc3.go",
+		"sqlite_g_000000000001ffcf.go",
+		"sqlite_g_000000000001ffdf.go",
+		"sqlite_g_000000000001fffc.go",
+		"sqlite_g_000000000001ffff.go",
+		"sqlite_g_0000000000023eab.go",
+		"sqlite_g_0000000000024080.go",
+		"sqlite_g_000000000002c088.go",
+		"sqlite_g_000000000002c089.go",
+		"sqlite_g_000000000002c488.go",
+		"sqlite_g_000000000002c48b.go",
+		"sqlite_g_000000000002c4cf.go",
+		"sqlite_g_000000000003dea8.go",
+		"sqlite_g_000000000003deab.go",
+		"sqlite_g_000000000003fe8b.go",
+		"sqlite_g_000000000003fea8.go",
+		"sqlite_g_000000000003feab.go",
+		"sqlite_g_000000000003feef.go",
+		"sqlite_g_000000000003ffbb.go",
+		"sqlite_g_000000000003fffb.go",
+		"sqlite_g_000000000005feff.go",
+		"sqlite_g_000000000005ffff.go",
+		"sqlite_g_00000000000600c0.go",
+		"sqlite_g_00000000000602c0.go",
+		"sqlite_g_00000000000623c0.go",
+		"sqlite_g_00000000000628c0.go",
+		"sqlite_g_0000000000063fc0.go",
+		"sqlite_g_0000000000063fc3.go",
+		"sqlite_g_0000000000063fff.go",
+		"sqlite_g_00000000000640c0.go",
+		"sqlite_g_00000000000648c0.go",
+		"sqlite_g_0000000000065ec0.go",
+		"sqlite_g_0000000000065fc0.go",
+		"sqlite_g_0000000000066fc0.go",
+		"sqlite_g_0000000000067fc0.go",
+		"sqlite_g_0000000000067fc3.go",
+		"sqlite_g_0000000000067fff.go",
+		"sqlite_g_000000000006c0cd.go",
+		"sqlite_g_000000000006c4cf.go",
+		"sqlite_g_000000000006c8cc.go",
+		"sqlite_g_000000000006e9df.go",
+		"sqlite_g_00000000000781fd.go",
+		"sqlite_g_00000000000783ff.go",
+		"sqlite_g_000000000007bfc0.go",
+		"sqlite_g_000000000007bfff.go",
+		"sqlite_g_000000000007c3ef.go",
+		"sqlite_g_000000000007deed.go",
+		"sqlite_g_000000000007dfff.go",
+		"sqlite_g_000000000007fbff.go",
+		"sqlite_g_000000000007feec.go",
+		"sqlite_g_000000000007feff.go",
+		"sqlite_g_000000000007ffbb.go",
+		"sqlite_g_000000000007ffc0.go",
+		"sqlite_g_000000000007ffc3.go",
+		"sqlite_g_000000000007ffd7.go",
+		"sqlite_g_000000000007ffdf.go",
+		"sqlite_g_000000000007fffc.go",
+		"sqlite_linux_amd64.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/modernc.org/sqlite@v1.60.1/vtab",
+	"ImportPath": "modernc.org/sqlite/vtab",
+	"Module": {
+		"Path": "modernc.org/sqlite",
+		"Version": "v1.60.1",
+		"Time": "2026-09-29T08:41:38Z",
+		"Dir": "<GOMODCACHE>/modernc.org/sqlite@v1.60.1",
+		"GoMod": "<GOMODCACHE>/cache/download/modernc.org/sqlite/@v/v1.60.1.mod",
+		"GoVersion": "1.26.0",
+		"Sum": "h1:/blz53O951KWFOso4QQvEs/Fq6cDBKLtMVrYNSeJVKw=",
+		"GoModSum": "h1:1dIoEagfDE72QytD5scH1lxARtaUgKgHC/NuApA27r0="
+	},
+	"GoFiles": [
+		"doc.go",
+		"vtab.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/modernc.org/sqlite@v1.60.1",
+	"ImportPath": "modernc.org/sqlite",
+	"Module": {
+		"Path": "modernc.org/sqlite",
+		"Version": "v1.60.1",
+		"Time": "2026-09-29T08:41:38Z",
+		"Dir": "<GOMODCACHE>/modernc.org/sqlite@v1.60.1",
+		"GoMod": "<GOMODCACHE>/cache/download/modernc.org/sqlite/@v/v1.60.1.mod",
+		"GoVersion": "1.26.0",
+		"Sum": "h1:/blz53O951KWFOso4QQvEs/Fq6cDBKLtMVrYNSeJVKw=",
+		"GoModSum": "h1:1dIoEagfDE72QytD5scH1lxARtaUgKgHC/NuApA27r0="
+	},
+	"GoFiles": [
+		"backup.go",
+		"conn.go",
+		"connector.go",
+		"convert.go",
+		"dbstatus.go",
+		"doc.go",
+		"driver.go",
+		"error.go",
+		"fcntl.go",
+		"mutex.go",
+		"nodmesg.go",
+		"ofd.go",
+		"ofd_unix.go",
+		"pagecache.go",
+		"pagecache_trampolines.go",
+		"pre_update_hook.go",
+		"result.go",
+		"rows.go",
+		"rulimit.go",
+		"sqlite.go",
+		"stmt.go",
+		"strictpragma.go",
+		"tx.go",
+		"vtab.go"
+	]
+}
+{
+	"Dir": "<REPOSITORY>/internal/store",
+	"ImportPath": "ai-group-chat/internal/store",
+	"Module": {
+		"Path": "ai-group-chat",
+		"Main": true,
+		"Dir": "<REPOSITORY>",
+		"GoMod": "<LICENSE_TOOLS_DIR>/export/go-export.mod",
+		"GoVersion": "1.26.4"
+	},
+	"GoFiles": [
+		"attachments.go",
+		"catalog.go",
+		"groups.go",
+		"memory.go",
+		"messages.go",
+		"settings.go",
+		"store.go"
+	],
+	"EmbedFiles": [
+		"migrations/001_init.sql",
+		"migrations/002_reply_mode.sql",
+		"migrations/003_provider_retirement.sql",
+		"migrations/004_attachments.sql"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/image/color",
+	"ImportPath": "image/color",
+	"Standard": true,
+	"GoFiles": [
+		"color.go",
+		"ycbcr.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/image",
+	"ImportPath": "image",
+	"Standard": true,
+	"GoFiles": [
+		"format.go",
+		"geom.go",
+		"image.go",
+		"names.go",
+		"ycbcr.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/image/internal/imageutil",
+	"ImportPath": "image/internal/imageutil",
+	"Standard": true,
+	"GoFiles": [
+		"imageutil.go",
+		"impl.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/image/jpeg",
+	"ImportPath": "image/jpeg",
+	"Standard": true,
+	"GoFiles": [
+		"dct.go",
+		"huffman.go",
+		"reader.go",
+		"scan.go",
+		"writer.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/hash/adler32",
+	"ImportPath": "hash/adler32",
+	"Standard": true,
+	"GoFiles": [
+		"adler32.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/compress/zlib",
+	"ImportPath": "compress/zlib",
+	"Standard": true,
+	"GoFiles": [
+		"reader.go",
+		"writer.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/image/png",
+	"ImportPath": "image/png",
+	"Standard": true,
+	"GoFiles": [
+		"paeth.go",
+		"reader.go",
+		"writer.go"
+	]
+}
+{
+	"Dir": "<REPOSITORY>/app",
+	"ImportPath": "ai-group-chat/app",
+	"Module": {
+		"Path": "ai-group-chat",
+		"Main": true,
+		"Dir": "<REPOSITORY>",
+		"GoMod": "<LICENSE_TOOLS_DIR>/export/go-export.mod",
+		"GoVersion": "1.26.4"
+	},
+	"GoFiles": [
+		"attachments.go",
+		"avatar.go",
+		"credentials.go",
+		"dto.go",
+		"events.go",
+		"service.go",
+		"share_export.go",
+		"user_profile.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/adrg/xdg@v0.5.3/internal/pathutil",
+	"ImportPath": "github.com/adrg/xdg/internal/pathutil",
+	"Module": {
+		"Path": "github.com/adrg/xdg",
+		"Version": "v0.5.3",
+		"Time": "2024-10-31T16:19:38Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/github.com/adrg/xdg@v0.5.3",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/adrg/xdg/@v/v0.5.3.mod",
+		"GoVersion": "1.19",
+		"Sum": "h1:xRnxJXne7+oWDatRhR1JLnvuccuIeCoBu2rtuLqQB78=",
+		"GoModSum": "h1:nlTsY+NNiCBGCK2tpm09vRqfVzrc2fLmXGpBLF0zlTQ="
+	},
+	"GoFiles": [
+		"pathutil.go",
+		"pathutil_unix.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/adrg/xdg@v0.5.3/internal/userdirs",
+	"ImportPath": "github.com/adrg/xdg/internal/userdirs",
+	"Module": {
+		"Path": "github.com/adrg/xdg",
+		"Version": "v0.5.3",
+		"Time": "2024-10-31T16:19:38Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/github.com/adrg/xdg@v0.5.3",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/adrg/xdg/@v/v0.5.3.mod",
+		"GoVersion": "1.19",
+		"Sum": "h1:xRnxJXne7+oWDatRhR1JLnvuccuIeCoBu2rtuLqQB78=",
+		"GoModSum": "h1:nlTsY+NNiCBGCK2tpm09vRqfVzrc2fLmXGpBLF0zlTQ="
+	},
+	"GoFiles": [
+		"config_unix.go",
+		"userdirs.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/adrg/xdg@v0.5.3",
+	"ImportPath": "github.com/adrg/xdg",
+	"Module": {
+		"Path": "github.com/adrg/xdg",
+		"Version": "v0.5.3",
+		"Time": "2024-10-31T16:19:38Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/github.com/adrg/xdg@v0.5.3",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/adrg/xdg/@v/v0.5.3.mod",
+		"GoVersion": "1.19",
+		"Sum": "h1:xRnxJXne7+oWDatRhR1JLnvuccuIeCoBu2rtuLqQB78=",
+		"GoModSum": "h1:nlTsY+NNiCBGCK2tpm09vRqfVzrc2fLmXGpBLF0zlTQ="
+	},
+	"GoFiles": [
+		"base_dirs.go",
+		"doc.go",
+		"paths_unix.go",
+		"xdg.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/encoding/xml",
+	"ImportPath": "encoding/xml",
+	"Standard": true,
+	"GoFiles": [
+		"marshal.go",
+		"read.go",
+		"typeinfo.go",
+		"xml.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/godbus/dbus/v5@v5.2.2/introspect",
+	"ImportPath": "github.com/godbus/dbus/v5/introspect",
+	"Module": {
+		"Path": "github.com/godbus/dbus/v5",
+		"Version": "v5.2.2",
+		"Time": "2025-12-29T17:12:48Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/github.com/godbus/dbus/v5@v5.2.2",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/godbus/dbus/v5/@v/v5.2.2.mod",
+		"GoVersion": "1.20",
+		"Sum": "h1:TUR3TgtSVDmjiXOgAAyaZbYmIeP3DPkld3jgKGV8mXQ=",
+		"GoModSum": "h1:3AAv2+hPq5rdnr5txxxRwiGjPXamgoIHgz9FPBfOp3c="
+	},
+	"GoFiles": [
+		"call.go",
+		"introspect.go",
+		"introspectable.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/godbus/dbus/v5@v5.2.2/prop",
+	"ImportPath": "github.com/godbus/dbus/v5/prop",
+	"Module": {
+		"Path": "github.com/godbus/dbus/v5",
+		"Version": "v5.2.2",
+		"Time": "2025-12-29T17:12:48Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/github.com/godbus/dbus/v5@v5.2.2",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/godbus/dbus/v5/@v/v5.2.2.mod",
+		"GoVersion": "1.20",
+		"Sum": "h1:TUR3TgtSVDmjiXOgAAyaZbYmIeP3DPkld3jgKGV8mXQ=",
+		"GoModSum": "h1:3AAv2+hPq5rdnr5txxxRwiGjPXamgoIHgz9FPBfOp3c="
+	},
+	"GoFiles": [
+		"prop.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/mattn/go-isatty@v0.0.24",
+	"ImportPath": "github.com/mattn/go-isatty",
+	"Module": {
+		"Path": "github.com/mattn/go-isatty",
+		"Version": "v0.0.24",
+		"Time": "2026-07-23T16:45:22Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/github.com/mattn/go-isatty@v0.0.24",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/mattn/go-isatty/@v/v0.0.24.mod",
+		"GoVersion": "1.20",
+		"Sum": "h1:tGZZoVgT/KiqK1c8ocVLeDS8BSWMRd47J3Lbz7vsReI=",
+		"GoModSum": "h1:nMCL3Zebbrt45jsMDgnfIwz6ydEQApk5oEI3HqDio6A="
+	},
+	"GoFiles": [
+		"doc.go",
+		"isatty_tiocgwinsz.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/internal/assetserver/bundledassets",
+	"ImportPath": "github.com/wailsapp/wails/v3/internal/assetserver/bundledassets",
+	"Module": {
+		"Path": "github.com/wailsapp/wails/v3",
+		"Version": "v3.0.0-beta.29",
+		"Time": "2026-10-13T15:15:28Z",
+		"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/wailsapp/wails/v3/@v/v3.0.0-beta.29.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:oJbXasfieQmMkYtqPlFSPnDe0RwpzA5BKiov8WPD5lo=",
+		"GoModSum": "h1:5DR/EG5FHU8+BNV7tQYQ/rJMjoFsVlYpM+0gp1+gcTI="
+	},
+	"GoFiles": [
+		"runtime_dev.go"
+	],
+	"EmbedFiles": [
+		"runtime.debug.js"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/internal/assetserver/webview",
+	"ImportPath": "github.com/wailsapp/wails/v3/internal/assetserver/webview",
+	"Module": {
+		"Path": "github.com/wailsapp/wails/v3",
+		"Version": "v3.0.0-beta.29",
+		"Time": "2026-10-13T15:15:28Z",
+		"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/wailsapp/wails/v3/@v/v3.0.0-beta.29.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:oJbXasfieQmMkYtqPlFSPnDe0RwpzA5BKiov8WPD5lo=",
+		"GoModSum": "h1:5DR/EG5FHU8+BNV7tQYQ/rJMjoFsVlYpM+0gp1+gcTI="
+	},
+	"GoFiles": [
+		"request.go",
+		"request_context.go",
+		"request_finalizer.go",
+		"request_tracker.go",
+		"responsewriter.go"
+	],
+	"CgoFiles": [
+		"mainthread_linux.go",
+		"mainthread_testsupport_linux.go",
+		"request_lifetime_linux.go",
+		"request_linux.go",
+		"responsewriter_linux.go",
+		"webkit_linux.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/net/http/httputil",
+	"ImportPath": "net/http/httputil",
+	"Standard": true,
+	"GoFiles": [
+		"dump.go",
+		"httputil.go",
+		"persist.go",
+		"reverseproxy.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/internal/assetserver",
+	"ImportPath": "github.com/wailsapp/wails/v3/internal/assetserver",
+	"Module": {
+		"Path": "github.com/wailsapp/wails/v3",
+		"Version": "v3.0.0-beta.29",
+		"Time": "2026-10-13T15:15:28Z",
+		"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/wailsapp/wails/v3/@v/v3.0.0-beta.29.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:oJbXasfieQmMkYtqPlFSPnDe0RwpzA5BKiov8WPD5lo=",
+		"GoModSum": "h1:5DR/EG5FHU8+BNV7tQYQ/rJMjoFsVlYpM+0gp1+gcTI="
+	},
+	"GoFiles": [
+		"asset_fileserver.go",
+		"assetserver.go",
+		"assetserver_dev.go",
+		"assetserver_linux.go",
+		"assetserver_webview.go",
+		"build_dev.go",
+		"bundled_assetserver.go",
+		"common.go",
+		"content_type_sniffer.go",
+		"fallback_response_writer.go",
+		"fs.go",
+		"middleware.go",
+		"mimecache.go",
+		"options.go",
+		"ringqueue.go"
+	],
+	"EmbedFiles": [
+		"defaults/index.en.html",
+		"defaults/index.zh.html"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/internal/browser",
+	"ImportPath": "github.com/wailsapp/wails/v3/internal/browser",
+	"Module": {
+		"Path": "github.com/wailsapp/wails/v3",
+		"Version": "v3.0.0-beta.29",
+		"Time": "2026-10-13T15:15:28Z",
+		"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/wailsapp/wails/v3/@v/v3.0.0-beta.29.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:oJbXasfieQmMkYtqPlFSPnDe0RwpzA5BKiov8WPD5lo=",
+		"GoModSum": "h1:5DR/EG5FHU8+BNV7tQYQ/rJMjoFsVlYpM+0gp1+gcTI="
+	},
+	"GoFiles": [
+		"browser.go",
+		"browser_other.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/internal/capabilities",
+	"ImportPath": "github.com/wailsapp/wails/v3/internal/capabilities",
+	"Module": {
+		"Path": "github.com/wailsapp/wails/v3",
+		"Version": "v3.0.0-beta.29",
+		"Time": "2026-10-13T15:15:28Z",
+		"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/wailsapp/wails/v3/@v/v3.0.0-beta.29.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:oJbXasfieQmMkYtqPlFSPnDe0RwpzA5BKiov8WPD5lo=",
+		"GoModSum": "h1:5DR/EG5FHU8+BNV7tQYQ/rJMjoFsVlYpM+0gp1+gcTI="
+	},
+	"GoFiles": [
+		"capabilities.go",
+		"capabilities_linux.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/internal/dbus/menu",
+	"ImportPath": "github.com/wailsapp/wails/v3/internal/dbus/menu",
+	"Module": {
+		"Path": "github.com/wailsapp/wails/v3",
+		"Version": "v3.0.0-beta.29",
+		"Time": "2026-10-13T15:15:28Z",
+		"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/wailsapp/wails/v3/@v/v3.0.0-beta.29.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:oJbXasfieQmMkYtqPlFSPnDe0RwpzA5BKiov8WPD5lo=",
+		"GoModSum": "h1:5DR/EG5FHU8+BNV7tQYQ/rJMjoFsVlYpM+0gp1+gcTI="
+	},
+	"GoFiles": [
+		"dbus_menu.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/internal/dbus/notifier",
+	"ImportPath": "github.com/wailsapp/wails/v3/internal/dbus/notifier",
+	"Module": {
+		"Path": "github.com/wailsapp/wails/v3",
+		"Version": "v3.0.0-beta.29",
+		"Time": "2026-10-13T15:15:28Z",
+		"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/wailsapp/wails/v3/@v/v3.0.0-beta.29.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:oJbXasfieQmMkYtqPlFSPnDe0RwpzA5BKiov8WPD5lo=",
+		"GoModSum": "h1:5DR/EG5FHU8+BNV7tQYQ/rJMjoFsVlYpM+0gp1+gcTI="
+	},
+	"GoFiles": [
+		"status_notifier_item.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/internal/debounce",
+	"ImportPath": "github.com/wailsapp/wails/v3/internal/debounce",
+	"Module": {
+		"Path": "github.com/wailsapp/wails/v3",
+		"Version": "v3.0.0-beta.29",
+		"Time": "2026-10-13T15:15:28Z",
+		"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/wailsapp/wails/v3/@v/v3.0.0-beta.29.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:oJbXasfieQmMkYtqPlFSPnDe0RwpzA5BKiov8WPD5lo=",
+		"GoModSum": "h1:5DR/EG5FHU8+BNV7tQYQ/rJMjoFsVlYpM+0gp1+gcTI="
+	},
+	"GoFiles": [
+		"debounce.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/internal/fileexplorer",
+	"ImportPath": "github.com/wailsapp/wails/v3/internal/fileexplorer",
+	"Module": {
+		"Path": "github.com/wailsapp/wails/v3",
+		"Version": "v3.0.0-beta.29",
+		"Time": "2026-10-13T15:15:28Z",
+		"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/wailsapp/wails/v3/@v/v3.0.0-beta.29.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:oJbXasfieQmMkYtqPlFSPnDe0RwpzA5BKiov8WPD5lo=",
+		"GoModSum": "h1:5DR/EG5FHU8+BNV7tQYQ/rJMjoFsVlYpM+0gp1+gcTI="
+	},
+	"GoFiles": [
+		"desktopfile.go",
+		"fileexplorer.go",
+		"fileexplorer_linux.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/internal/git",
+	"ImportPath": "github.com/wailsapp/wails/v3/internal/git",
+	"Module": {
+		"Path": "github.com/wailsapp/wails/v3",
+		"Version": "v3.0.0-beta.29",
+		"Time": "2026-10-13T15:15:28Z",
+		"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/wailsapp/wails/v3/@v/v3.0.0-beta.29.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:oJbXasfieQmMkYtqPlFSPnDe0RwpzA5BKiov8WPD5lo=",
+		"GoModSum": "h1:5DR/EG5FHU8+BNV7tQYQ/rJMjoFsVlYpM+0gp1+gcTI="
+	},
+	"GoFiles": [
+		"git.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/hash/fnv",
+	"ImportPath": "hash/fnv",
+	"Standard": true,
+	"GoFiles": [
+		"fnv.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/internal/hash",
+	"ImportPath": "github.com/wailsapp/wails/v3/internal/hash",
+	"Module": {
+		"Path": "github.com/wailsapp/wails/v3",
+		"Version": "v3.0.0-beta.29",
+		"Time": "2026-10-13T15:15:28Z",
+		"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/wailsapp/wails/v3/@v/v3.0.0-beta.29.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:oJbXasfieQmMkYtqPlFSPnDe0RwpzA5BKiov8WPD5lo=",
+		"GoModSum": "h1:5DR/EG5FHU8+BNV7tQYQ/rJMjoFsVlYpM+0gp1+gcTI="
+	},
+	"GoFiles": [
+		"fnv.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/internal/lo",
+	"ImportPath": "github.com/wailsapp/wails/v3/internal/lo",
+	"Module": {
+		"Path": "github.com/wailsapp/wails/v3",
+		"Version": "v3.0.0-beta.29",
+		"Time": "2026-10-13T15:15:28Z",
+		"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/wailsapp/wails/v3/@v/v3.0.0-beta.29.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:oJbXasfieQmMkYtqPlFSPnDe0RwpzA5BKiov8WPD5lo=",
+		"GoModSum": "h1:5DR/EG5FHU8+BNV7tQYQ/rJMjoFsVlYpM+0gp1+gcTI="
+	},
+	"GoFiles": [
+		"lo.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/internal/mailbox",
+	"ImportPath": "github.com/wailsapp/wails/v3/internal/mailbox",
+	"Module": {
+		"Path": "github.com/wailsapp/wails/v3",
+		"Version": "v3.0.0-beta.29",
+		"Time": "2026-10-13T15:15:28Z",
+		"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/wailsapp/wails/v3/@v/v3.0.0-beta.29.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:oJbXasfieQmMkYtqPlFSPnDe0RwpzA5BKiov8WPD5lo=",
+		"GoModSum": "h1:5DR/EG5FHU8+BNV7tQYQ/rJMjoFsVlYpM+0gp1+gcTI="
+	},
+	"GoFiles": [
+		"mailbox.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/internal/operatingsystem",
+	"ImportPath": "github.com/wailsapp/wails/v3/internal/operatingsystem",
+	"Module": {
+		"Path": "github.com/wailsapp/wails/v3",
+		"Version": "v3.0.0-beta.29",
+		"Time": "2026-10-13T15:15:28Z",
+		"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/wailsapp/wails/v3/@v/v3.0.0-beta.29.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:oJbXasfieQmMkYtqPlFSPnDe0RwpzA5BKiov8WPD5lo=",
+		"GoModSum": "h1:5DR/EG5FHU8+BNV7tQYQ/rJMjoFsVlYpM+0gp1+gcTI="
+	},
+	"GoFiles": [
+		"os.go",
+		"os_linux.go"
+	],
+	"CgoFiles": [
+		"webkit_linux.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/internal/optional",
+	"ImportPath": "github.com/wailsapp/wails/v3/internal/optional",
+	"Module": {
+		"Path": "github.com/wailsapp/wails/v3",
+		"Version": "v3.0.0-beta.29",
+		"Time": "2026-10-13T15:15:28Z",
+		"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/wailsapp/wails/v3/@v/v3.0.0-beta.29.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:oJbXasfieQmMkYtqPlFSPnDe0RwpzA5BKiov8WPD5lo=",
+		"GoModSum": "h1:5DR/EG5FHU8+BNV7tQYQ/rJMjoFsVlYpM+0gp1+gcTI="
+	},
+	"GoFiles": [
+		"optional.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/internal/runtime",
+	"ImportPath": "github.com/wailsapp/wails/v3/internal/runtime",
+	"Module": {
+		"Path": "github.com/wailsapp/wails/v3",
+		"Version": "v3.0.0-beta.29",
+		"Time": "2026-10-13T15:15:28Z",
+		"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/wailsapp/wails/v3/@v/v3.0.0-beta.29.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:oJbXasfieQmMkYtqPlFSPnDe0RwpzA5BKiov8WPD5lo=",
+		"GoModSum": "h1:5DR/EG5FHU8+BNV7tQYQ/rJMjoFsVlYpM+0gp1+gcTI="
+	},
+	"GoFiles": [
+		"runtime.go",
+		"runtime_dev.go",
+		"runtime_linux.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/internal/signal",
+	"ImportPath": "github.com/wailsapp/wails/v3/internal/signal",
+	"Module": {
+		"Path": "github.com/wailsapp/wails/v3",
+		"Version": "v3.0.0-beta.29",
+		"Time": "2026-10-13T15:15:28Z",
+		"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/wailsapp/wails/v3/@v/v3.0.0-beta.29.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:oJbXasfieQmMkYtqPlFSPnDe0RwpzA5BKiov8WPD5lo=",
+		"GoModSum": "h1:5DR/EG5FHU8+BNV7tQYQ/rJMjoFsVlYpM+0gp1+gcTI="
+	},
+	"GoFiles": [
+		"signal.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/internal/sliceutil",
+	"ImportPath": "github.com/wailsapp/wails/v3/internal/sliceutil",
+	"Module": {
+		"Path": "github.com/wailsapp/wails/v3",
+		"Version": "v3.0.0-beta.29",
+		"Time": "2026-10-13T15:15:28Z",
+		"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/wailsapp/wails/v3/@v/v3.0.0-beta.29.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:oJbXasfieQmMkYtqPlFSPnDe0RwpzA5BKiov8WPD5lo=",
+		"GoModSum": "h1:5DR/EG5FHU8+BNV7tQYQ/rJMjoFsVlYpM+0gp1+gcTI="
+	},
+	"GoFiles": [
+		"sliceutil.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/internal/tint",
+	"ImportPath": "github.com/wailsapp/wails/v3/internal/tint",
+	"Module": {
+		"Path": "github.com/wailsapp/wails/v3",
+		"Version": "v3.0.0-beta.29",
+		"Time": "2026-10-13T15:15:28Z",
+		"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/wailsapp/wails/v3/@v/v3.0.0-beta.29.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:oJbXasfieQmMkYtqPlFSPnDe0RwpzA5BKiov8WPD5lo=",
+		"GoModSum": "h1:5DR/EG5FHU8+BNV7tQYQ/rJMjoFsVlYpM+0gp1+gcTI="
+	},
+	"GoFiles": [
+		"tint.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/internal/debug",
+	"ImportPath": "github.com/wailsapp/wails/v3/internal/debug",
+	"Module": {
+		"Path": "github.com/wailsapp/wails/v3",
+		"Version": "v3.0.0-beta.29",
+		"Time": "2026-10-13T15:15:28Z",
+		"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/wailsapp/wails/v3/@v/v3.0.0-beta.29.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:oJbXasfieQmMkYtqPlFSPnDe0RwpzA5BKiov8WPD5lo=",
+		"GoModSum": "h1:5DR/EG5FHU8+BNV7tQYQ/rJMjoFsVlYpM+0gp1+gcTI="
+	},
+	"GoFiles": [
+		"debug.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/internal/version",
+	"ImportPath": "github.com/wailsapp/wails/v3/internal/version",
+	"Module": {
+		"Path": "github.com/wailsapp/wails/v3",
+		"Version": "v3.0.0-beta.29",
+		"Time": "2026-10-13T15:15:28Z",
+		"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/wailsapp/wails/v3/@v/v3.0.0-beta.29.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:oJbXasfieQmMkYtqPlFSPnDe0RwpzA5BKiov8WPD5lo=",
+		"GoModSum": "h1:5DR/EG5FHU8+BNV7tQYQ/rJMjoFsVlYpM+0gp1+gcTI="
+	},
+	"GoFiles": [
+		"version.go"
+	],
+	"EmbedFiles": [
+		"version.txt"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/pkg/errs",
+	"ImportPath": "github.com/wailsapp/wails/v3/pkg/errs",
+	"Module": {
+		"Path": "github.com/wailsapp/wails/v3",
+		"Version": "v3.0.0-beta.29",
+		"Time": "2026-10-13T15:15:28Z",
+		"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/wailsapp/wails/v3/@v/v3.0.0-beta.29.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:oJbXasfieQmMkYtqPlFSPnDe0RwpzA5BKiov8WPD5lo=",
+		"GoModSum": "h1:5DR/EG5FHU8+BNV7tQYQ/rJMjoFsVlYpM+0gp1+gcTI="
+	},
+	"GoFiles": [
+		"error_functions.gen.go",
+		"errors.go",
+		"utils.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/pkg/events",
+	"ImportPath": "github.com/wailsapp/wails/v3/pkg/events",
+	"Module": {
+		"Path": "github.com/wailsapp/wails/v3",
+		"Version": "v3.0.0-beta.29",
+		"Time": "2026-10-13T15:15:28Z",
+		"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/wailsapp/wails/v3/@v/v3.0.0-beta.29.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:oJbXasfieQmMkYtqPlFSPnDe0RwpzA5BKiov8WPD5lo=",
+		"GoModSum": "h1:5DR/EG5FHU8+BNV7tQYQ/rJMjoFsVlYpM+0gp1+gcTI="
+	},
+	"GoFiles": [
+		"defaults.go",
+		"events.go",
+		"known_events.go"
+	],
+	"CgoFiles": [
+		"events_linux.go"
+	],
+	"HFiles": [
+		"events_linux.h"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/pkg/icons",
+	"ImportPath": "github.com/wailsapp/wails/v3/pkg/icons",
+	"Module": {
+		"Path": "github.com/wailsapp/wails/v3",
+		"Version": "v3.0.0-beta.29",
+		"Time": "2026-10-13T15:15:28Z",
+		"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/wailsapp/wails/v3/@v/v3.0.0-beta.29.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:oJbXasfieQmMkYtqPlFSPnDe0RwpzA5BKiov8WPD5lo=",
+		"GoModSum": "h1:5DR/EG5FHU8+BNV7tQYQ/rJMjoFsVlYpM+0gp1+gcTI="
+	},
+	"GoFiles": [
+		"icons.go"
+	],
+	"EmbedFiles": [
+		"ApplicationDarkMode-256.png",
+		"ApplicationLightMode-256.png",
+		"DefaultMacTemplateIcon.png",
+		"WailsLogoBlack.png",
+		"WailsLogoBlackTransparent.png",
+		"WailsLogoWhite.png",
+		"WailsLogoWhiteTransparent.png",
+		"icon.ico",
+		"systray-dark.png",
+		"systray-light.png"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/archive/tar",
+	"ImportPath": "archive/tar",
+	"Standard": true,
+	"GoFiles": [
+		"common.go",
+		"format.go",
+		"reader.go",
+		"stat_actime1.go",
+		"stat_unix.go",
+		"strconv.go",
+		"writer.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/archive/zip",
+	"ImportPath": "archive/zip",
+	"Standard": true,
+	"GoFiles": [
+		"reader.go",
+		"register.go",
+		"struct.go",
+		"writer.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/pkg/updater",
+	"ImportPath": "github.com/wailsapp/wails/v3/pkg/updater",
+	"Module": {
+		"Path": "github.com/wailsapp/wails/v3",
+		"Version": "v3.0.0-beta.29",
+		"Time": "2026-10-13T15:15:28Z",
+		"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/wailsapp/wails/v3/@v/v3.0.0-beta.29.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:oJbXasfieQmMkYtqPlFSPnDe0RwpzA5BKiov8WPD5lo=",
+		"GoModSum": "h1:5DR/EG5FHU8+BNV7tQYQ/rJMjoFsVlYpM+0gp1+gcTI="
+	},
+	"GoFiles": [
+		"config.go",
+		"doc.go",
+		"download.go",
+		"events.go",
+		"extract.go",
+		"helper.go",
+		"helper_unix.go",
+		"spawn.go",
+		"spawn_unix.go",
+		"types.go",
+		"updater.go",
+		"updater_notdarwin.go",
+		"verify.go",
+		"window.go",
+		"window_lifecycle.go"
+	],
+	"EmbedFiles": [
+		"assets/window.html"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/image/draw",
+	"ImportPath": "image/draw",
+	"Standard": true,
+	"GoFiles": [
+		"draw.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/pkg/application",
+	"ImportPath": "github.com/wailsapp/wails/v3/pkg/application",
+	"Module": {
+		"Path": "github.com/wailsapp/wails/v3",
+		"Version": "v3.0.0-beta.29",
+		"Time": "2026-10-13T15:15:28Z",
+		"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/wailsapp/wails/v3/@v/v3.0.0-beta.29.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:oJbXasfieQmMkYtqPlFSPnDe0RwpzA5BKiov8WPD5lo=",
+		"GoModSum": "h1:5DR/EG5FHU8+BNV7tQYQ/rJMjoFsVlYpM+0gp1+gcTI="
+	},
+	"GoFiles": [
+		"application.go",
+		"application_debug.go",
+		"application_dev.go",
+		"application_linux_appid.go",
+		"application_linux_dbus.go",
+		"application_options.go",
+		"autostart.go",
+		"autostart_linux.go",
+		"autostart_manager.go",
+		"bindings.go",
+		"browser_manager.go",
+		"clipboard.go",
+		"clipboard_linux.go",
+		"clipboard_manager.go",
+		"context.go",
+		"context_application_event.go",
+		"context_menu_manager.go",
+		"context_window_event.go",
+		"dialog_manager.go",
+		"dialogs.go",
+		"dialogs_linux.go",
+		"environment.go",
+		"environment_linux.go",
+		"environment_manager.go",
+		"errors.go",
+		"event_manager.go",
+		"event_payload_store.go",
+		"events.go",
+		"events_common_linux.go",
+		"events_loose.go",
+		"global_shortcut_linux.go",
+		"global_shortcut_linux_portal.go",
+		"global_shortcut_manager.go",
+		"gtkdispatch_linux.go",
+		"image.go",
+		"init_desktop.go",
+		"inline_event_shim.go",
+		"ios_runtime_stub.go",
+		"key_binding_manager.go",
+		"keys.go",
+		"keys_linux.go",
+		"linux_blob_body_fetch_shim.go",
+		"logger_dev.go",
+		"mainthread.go",
+		"mainthread_linux.go",
+		"mcp_disabled.go",
+		"menu.go",
+		"menu_linux.go",
+		"menu_manager.go",
+		"menuitem.go",
+		"menuitem_dev.go",
+		"menuitem_linux.go",
+		"menuitem_roles.go",
+		"messageprocessor.go",
+		"messageprocessor_application.go",
+		"messageprocessor_args.go",
+		"messageprocessor_browser.go",
+		"messageprocessor_call.go",
+		"messageprocessor_clipboard.go",
+		"messageprocessor_contextmenu.go",
+		"messageprocessor_dialog.go",
+		"messageprocessor_events.go",
+		"messageprocessor_mobile_stub.go",
+		"messageprocessor_screens.go",
+		"messageprocessor_system.go",
+		"messageprocessor_window.go",
+		"mobile.go",
+		"mobile_stub.go",
+		"notch_window.go",
+		"notch_window_supported_other.go",
+		"panic_handler.go",
+		"path.go",
+		"permissions_linux.go",
+		"roles.go",
+		"roles_dev.go",
+		"screen_linux.go",
+		"screenmanager.go",
+		"services.go",
+		"signal_handler_desktop.go",
+		"signal_handler_types_desktop.go",
+		"single_instance.go",
+		"single_instance_launch_url_other.go",
+		"single_instance_linux.go",
+		"stream.go",
+		"stream_prelude_desktop.go",
+		"stream_session.go",
+		"stream_transport.go",
+		"system.go",
+		"system_notserver.go",
+		"system_tray_manager.go",
+		"systemtray.go",
+		"systemtray_linux.go",
+		"titlebar_doubleclick_action.go",
+		"transport.go",
+		"transport_event_ipc.go",
+		"transport_http.go",
+		"updater_host.go",
+		"urlvalidator.go",
+		"websocket_stub.go",
+		"webview_window.go",
+		"webview_window_linux.go",
+		"webview_window_linux_dev.go",
+		"webview_window_options.go",
+		"webview_window_titlebar_doubleclick.go",
+		"webview_window_titlebar_doubleclick_other.go",
+		"window.go",
+		"window_manager.go"
+	],
+	"CgoFiles": [
+		"application_linux.go",
+		"global_shortcut_linux_x11.go",
+		"linux_cgo.go"
+	],
+	"CFiles": [
+		"linux_cgo.c"
+	],
+	"HFiles": [
+		"linux_cgo.h",
+		"mobile_features_ios_internal.h"
+	],
+	"EmbedFiles": [
+		"assets/alpha/index.html",
+		"inline_event_shim.js",
+		"linux_blob_body_fetch_shim.js"
+	]
+}
+{
+	"Dir": "<REPOSITORY>/desktop",
+	"ImportPath": "ai-group-chat/desktop",
+	"Module": {
+		"Path": "ai-group-chat",
+		"Main": true,
+		"Dir": "<REPOSITORY>",
+		"GoMod": "<LICENSE_TOOLS_DIR>/export/go-export.mod",
+		"GoVersion": "1.26.4"
+	},
+	"GoFiles": [
+		"qa_disabled.go",
+		"share_qa_disabled.go",
+		"shell.go",
+		"state.go",
+		"titlebar_other.go"
+	]
+}
+{
+	"Dir": "<REPOSITORY>",
+	"ImportPath": "ai-group-chat",
+	"Module": {
+		"Path": "ai-group-chat",
+		"Main": true,
+		"Dir": "<REPOSITORY>",
+		"GoMod": "<LICENSE_TOOLS_DIR>/export/go-export.mod",
+		"GoVersion": "1.26.4"
+	},
+	"GoFiles": [
+		"assets_development.go",
+		"main.go"
+	]
+}

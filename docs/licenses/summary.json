@@ -1,0 +1,11 @@
+{
+  "frontendPackages": 224,
+  "frontendOptionalTarballs": 53,
+  "goModules": 172,
+  "runtimeGoModules": 18,
+  "uniqueOriginalTextFiles": 851,
+  "originalTextSourceRecords": 2060,
+  "inlineNoticeSources": 1561,
+  "uniqueInlineNotices": 352,
+  "compatibilityStatus": "REVIEW REQUIRED; not legal clearance"
+}

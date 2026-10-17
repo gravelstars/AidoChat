@@ -1,0 +1,106 @@
+{
+  "fixture": "mock:g1 首页改版评审",
+  "viewport": [
+    1440,
+    900
+  ],
+  "deviceScaleFactor": 2,
+  "clock": "2026-10-17T02:00:00.000Z",
+  "files": {
+    "badge-license.svg": {
+      "bytes": 7404,
+      "outlined": true
+    },
+    "badge-platforms.svg": {
+      "bytes": 15232,
+      "outlined": true
+    },
+    "badge-version.svg": {
+      "bytes": 2998,
+      "outlined": true
+    },
+    "banner-day.svg": {
+      "bytes": 37785,
+      "outlined": true
+    },
+    "banner-night.svg": {
+      "bytes": 37785,
+      "outlined": true
+    },
+    "feature-conversation.png": {
+      "width": 1600,
+      "height": 516,
+      "bytes": 83884
+    },
+    "feature-memory-comparison.png": {
+      "width": 1890,
+      "height": 124,
+      "bytes": 85892
+    },
+    "feature-memory.png": {
+      "width": 680,
+      "height": 1726,
+      "bytes": 353584
+    },
+    "feature-mentions.png": {
+      "width": 1576,
+      "height": 240,
+      "bytes": 16489
+    },
+    "feature-papers.png": {
+      "width": 2256,
+      "height": 352,
+      "bytes": 123348
+    },
+    "feature-privacy.png": {
+      "width": 1600,
+      "height": 762,
+      "bytes": 100605
+    },
+    "feature-reply-order.png": {
+      "width": 1704,
+      "height": 1652,
+      "bytes": 409746
+    },
+    "main-day.png": {
+      "width": 2880,
+      "height": 1800,
+      "bytes": 404081
+    },
+    "main-night.png": {
+      "width": 2880,
+      "height": 1800,
+      "bytes": 458916
+    },
+    "social-day.png": {
+      "width": 1280,
+      "height": 640,
+      "bytes": 9259
+    },
+    "social-day.svg": {
+      "bytes": 37859,
+      "outlined": true
+    },
+    "social-night.png": {
+      "width": 1280,
+      "height": 640,
+      "bytes": 10004
+    },
+    "social-night.svg": {
+      "bytes": 37859,
+      "outlined": true
+    },
+    "stamp-first.png": {
+      "width": 680,
+      "height": 440,
+      "bytes": 95032
+    },
+    "stamp.gif": {
+      "width": 680,
+      "height": 440,
+      "durationMs": 3000,
+      "frames": 13,
+      "bytes": 155274
+    }
+  }
+}

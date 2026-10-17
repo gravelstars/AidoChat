@@ -1,0 +1,4507 @@
+[
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/frontend/pdfjs-dist@6.4.299/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Apache-2.0",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 177
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/frontend/pdfjs-dist@6.4.299/iccs/LICENSE",
+  "Classifications": [
+   {
+    "Name": "CC0-1.0",
+    "Confidence": 0.9285033365109628,
+    "StartLine": 3,
+    "EndLine": 113
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/frontend/pdfjs-dist@6.4.299/standard_fonts/LICENSE_FOXIT",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/frontend/pdfjs-dist@6.4.299/standard_fonts/LICENSE_LIBERATION",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 19,
+    "EndLine": 19
+   },
+   {
+    "Name": "GPL-2.0",
+    "Confidence": 1,
+    "StartLine": 25,
+    "EndLine": 363
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/frontend/pdfjs-dist@6.4.299/wasm/LICENSE_JBIG2",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "Apache-2.0",
+    "Confidence": 1,
+    "StartLine": 28,
+    "EndLine": 196
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/frontend/pdfjs-dist@6.4.299/wasm/LICENSE_OPENJPEG",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 7,
+    "EndLine": 7
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 8,
+    "EndLine": 8
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 9,
+    "EndLine": 9
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 10,
+    "EndLine": 10
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 11,
+    "EndLine": 11
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 12,
+    "EndLine": 12
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 13,
+    "EndLine": 13
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 14,
+    "EndLine": 14
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 15,
+    "EndLine": 15
+   },
+   {
+    "Name": "BSD-2-Clause",
+    "Confidence": 0.994535519125683,
+    "StartLine": 19,
+    "EndLine": 38
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/frontend/pdfjs-dist@6.4.299/wasm/LICENSE_PDFJS_JBIG2",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/frontend/pdfjs-dist@6.4.299/wasm/LICENSE_PDFJS_OPENJPEG",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-2-Clause",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 22
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/frontend/pdfjs-dist@6.4.299/wasm/LICENSE_PDFJS_QCMS",
+  "Classifications": [
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 19
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/frontend/pdfjs-dist@6.4.299/wasm/LICENSE_QCMS",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/al.essio.dev/pkg/shellescape@v1.6.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/atomicgo.dev/cursor@v0.2.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/atomicgo.dev/keyboard@v0.2.9/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/atomicgo.dev/schedule@v0.1.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/dario.cat/mergo@v1.0.2/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 4,
+    "EndLine": 28
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/git.sr.ht/~jackmordaunt/go-toast/v2@v2.0.3/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 13,
+    "EndLine": 13
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 15,
+    "EndLine": 31
+   },
+   {
+    "Name": "Unlicense",
+    "Confidence": 1,
+    "StartLine": 37,
+    "EndLine": 60
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/AlekSi/pointer@v1.2.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/BurntSushi/toml@v1.6.0/COPYING",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/BurntSushi/toml@v1.6.0/cmd/toml-test-decoder/COPYING",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/BurntSushi/toml@v1.6.0/cmd/toml-test-encoder/COPYING",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/BurntSushi/toml@v1.6.0/cmd/tomlv/COPYING",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/Ladicle/tabwriter@v1.0.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/Masterminds/goutils@v1.1.1/LICENSE.txt",
+  "Classifications": [
+   {
+    "Name": "Apache-2.0",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 202
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/Masterminds/semver/v3@v3.4.0/LICENSE.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 19
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/Masterminds/sprig/v3@v3.3.0/LICENSE.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 19
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/Microsoft/go-winio@v0.6.2/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/ProtonMail/go-crypto@v1.3.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/adrg/xdg@v0.5.3/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/alecthomas/chroma/v2@v2.23.1/COPYING",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 19
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/atotto/clipboard@v0.1.4/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/atterpac/refresh@v1.1.4/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/aymanbagabas/go-osc52/v2@v2.0.1/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/aymerick/douceur@v0.2.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/blakesmith/ar@v0.0.0-20190502131153-809d4375e1fb/COPYING",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 19
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/catppuccin/go@v0.3.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/cavaliergopher/cpio@v1.0.1/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 26
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/chainguard-dev/git-urls@v1.0.2/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/charmbracelet/bubbles@v0.21.1-0.20250623103423-23b8fd6302d7/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/charmbracelet/bubbletea@v1.3.10/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/charmbracelet/colorprofile@v0.4.1/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/charmbracelet/glamour@v0.10.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/charmbracelet/huh@v0.8.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/charmbracelet/lipgloss@v1.1.1-0.20250404203927-76690c660834/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/charmbracelet/x/ansi@v0.11.4/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/charmbracelet/x/cellbuf@v0.0.14/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/charmbracelet/x/exp/slice@v0.0.0-20260122224438-b01af16209d9/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/charmbracelet/x/exp/strings@v0.0.0-20260122224438-b01af16209d9/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/charmbracelet/x/term@v0.2.2/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/clipperhouse/displaywidth@v0.7.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/clipperhouse/stringish@v0.1.1/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/clipperhouse/stringish@v0.1.1/utf8/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/clipperhouse/uax29/v2@v2.4.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/cloudflare/circl@v1.6.3/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 31,
+    "EndLine": 31
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 3,
+    "EndLine": 27
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 33,
+    "EndLine": 57
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/cloudflare/circl@v1.6.3/ecc/p384/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 26
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/coder/websocket@v1.8.14/LICENSE.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "ISC",
+    "Confidence": 0.9568965517241379,
+    "StartLine": 3,
+    "EndLine": 13
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/containerd/console@v1.0.5/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Apache-2.0",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 177
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/cyphar/filepath-securejoin@v0.6.1/COPYING.md",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 35,
+    "EndLine": 35
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 36,
+    "EndLine": 36
+   },
+   {
+    "Name": "MPL-2.0",
+    "Confidence": 1,
+    "StartLine": 74,
+    "EndLine": 446
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 38,
+    "EndLine": 62
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/cyphar/filepath-securejoin@v0.6.1/LICENSE.BSD",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 4,
+    "EndLine": 28
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/cyphar/filepath-securejoin@v0.6.1/LICENSE.MPL-2.0",
+  "Classifications": [
+   {
+    "Name": "MPL-2.0",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 373
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/danieljoos/wincred@v1.2.3/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/davecgh/go-spew@v1.1.1/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "ISC",
+    "Confidence": 0.963302752293578,
+    "StartLine": 5,
+    "EndLine": 15
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/dlclark/regexp2@v1.11.5/LICENSE",
+  "Classifications": [
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/dominikbraun/graph@v0.23.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Apache-2.0",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 201
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/dustin/go-humanize@v1.0.1/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 19
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/emirpasic/gods@v1.18.1/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-2-Clause",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 23
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 29,
+    "EndLine": 29
+   },
+   {
+    "Name": "ISC",
+    "Confidence": 0.9568965517241379,
+    "StartLine": 31,
+    "EndLine": 41
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/erikgeiser/coninput@v0.0.0-20211004153227-1c3628e74d0f/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/fatih/color@v1.18.0/LICENSE.md",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 20
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/go-git/gcfg@v1.5.1-0.20230307220236-3a3c6141e376/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9906976744186047,
+    "StartLine": 2,
+    "EndLine": 28
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/go-git/go-billy/v5@v5.9.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Apache-2.0",
+    "Confidence": 0.9961783439490446,
+    "StartLine": 1,
+    "EndLine": 201
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/go-git/go-git/v5@v5.19.2/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Apache-2.0",
+    "Confidence": 0.9961783439490446,
+    "StartLine": 1,
+    "EndLine": 201
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/go-json-experiment/json@v0.0.0-20251027170946-4849db3c2f7e/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/go-ole/go-ole@v1.3.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/go-task/slim-sprig/v3@v3.0.0/LICENSE.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 19
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/go-task/template@v0.2.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 4,
+    "EndLine": 28
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/gobwas/glob@v0.2.3/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/godbus/dbus/v5@v5.2.2/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-2-Clause",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 25
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/golang/groupcache@v0.0.0-20241129210726-2c02b8208cf8/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Apache-2.0",
+    "Confidence": 0.9974522292993631,
+    "StartLine": 1,
+    "EndLine": 191
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/google/go-cmp@v0.7.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/google/jsonschema-go@v0.4.3/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/google/pprof@v0.0.0-20260802141513-ef3492d7dac3/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Apache-2.0",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 202
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/google/pprof@v0.0.0-20260802141513-ef3492d7dac3/third_party/svgpan/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9859154929577465,
+    "StartLine": 3,
+    "EndLine": 23
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/google/rpmpack@v0.7.1/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Apache-2.0",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 202
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/google/uuid@v1.6.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/gookit/color@v1.6.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 20
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/goreleaser/chglog@v0.7.4/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/goreleaser/fileglob@v1.4.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/goreleaser/nfpm/v2@v2.44.1/LICENSE.md",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/gorilla/css@v1.0.1/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/gorilla/websocket@v1.5.3/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-2-Clause",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 22
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/hashicorp/golang-lru/v2@v2.0.7/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "MPL-2.0",
+    "Confidence": 0.9947826086956522,
+    "StartLine": 3,
+    "EndLine": 364
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/hashicorp/golang-lru/v2@v2.0.7/simplelru/LICENSE_list",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 5,
+    "EndLine": 29
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/huandu/xstrings@v1.5.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/jackmordaunt/icns/v2@v2.2.7/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/jaypipes/ghw@v0.21.3/COPYING",
+  "Classifications": [
+   {
+    "Name": "Apache-2.0",
+    "Confidence": 0.9964362081254454,
+    "StartLine": 2,
+    "EndLine": 175
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/jaypipes/pcidb@v1.1.1/COPYING",
+  "Classifications": [
+   {
+    "Name": "Apache-2.0",
+    "Confidence": 0.9964362081254454,
+    "StartLine": 2,
+    "EndLine": 175
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/jaypipes/pcidb@v1.1.1/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Apache-2.0",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 201
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/jbenet/go-context@v0.0.0-20150711004518-d14ea06fba99/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/joho/godotenv@v1.5.1/LICENCE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 22
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/kevinburke/ssh_config@v1.4.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 22
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 31,
+    "EndLine": 31
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 33,
+    "EndLine": 49
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/compress@v1.18.3/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 242,
+    "EndLine": 242
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 244,
+    "EndLine": 260
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 266,
+    "EndLine": 266
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 298,
+    "EndLine": 298
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 300,
+    "EndLine": 304
+   },
+   {
+    "Name": "Apache-2.0",
+    "Confidence": 0.9961783439490446,
+    "StartLine": 34,
+    "EndLine": 234
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 4,
+    "EndLine": 28
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 268,
+    "EndLine": 292
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/compress@v1.18.3/gzhttp/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Apache-2.0",
+    "Confidence": 0.9961783439490446,
+    "StartLine": 1,
+    "EndLine": 201
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/compress@v1.18.3/internal/lz4ref/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.986046511627907,
+    "StartLine": 2,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/compress@v1.18.3/internal/snapref/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/compress@v1.18.3/s2/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 4,
+    "EndLine": 28
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/compress@v1.18.3/s2/cmd/internal/filepathx/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 7
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/compress@v1.18.3/s2/cmd/internal/readahead/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/compress@v1.18.3/snappy/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/compress@v1.18.3/snappy/xerial/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 4
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 6,
+    "EndLine": 22
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/compress@v1.18.3/zstd/internal/xxhash/LICENSE.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 22
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/cpuid/v2@v2.3.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/pgzip@v1.2.6/GO_LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/klauspost/pgzip@v1.2.6/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/konoui/lipo@v0.10.0/LICENCE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/leaanthony/clir@v1.7.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/leaanthony/dmg@v0.0.0-20260731074841-5c28840cf819/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/leaanthony/winicon@v1.0.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/lithammer/fuzzysearch@v1.1.8/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/lmittmann/tint@v1.1.3/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/lucasb-eyer/go-colorful@v1.3.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 7
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/matryer/is@v1.4.1/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/mattn/go-colorable@v0.1.14/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/mattn/go-isatty@v0.0.24/LICENSE",
+  "Classifications": [
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/mattn/go-runewidth@v0.0.19/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/mattn/go-zglob@v0.0.6/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/microcosm-cc/bluemonday@v1.0.27/LICENSE.md",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9906976744186047,
+    "StartLine": 3,
+    "EndLine": 28
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/mitchellh/copystructure@v1.2.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/mitchellh/hashstructure/v2@v2.0.2/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/mitchellh/reflectwalk@v1.0.2/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/modelcontextprotocol/go-sdk@v1.6.1/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Apache-2.0",
+    "Confidence": 1,
+    "StartLine": 9,
+    "EndLine": 184
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 190,
+    "EndLine": 190
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 192,
+    "EndLine": 208
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/modelcontextprotocol/go-sdk@v1.6.1/copyright_test.go.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/muesli/ansi@v0.0.0-20230316100256-276c6243b2f6/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/muesli/cancelreader@v0.2.2/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/muesli/reflow@v0.3.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/muesli/termenv@v0.16.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/ncruces/go-strftime@v1.0.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/nfnt/resize@v0.0.0-20180221191011-83c6a9932646/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "ISC",
+    "Confidence": 0.963302752293578,
+    "StartLine": 3,
+    "EndLine": 13
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/oklog/ulid/v2@v2.1.2/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Apache-2.0",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 201
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/pborman/getopt@v0.0.0-20170112200414-7148bc3a4c30/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9765258215962441,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/pjbgf/sha1cd@v0.6.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Apache-2.0",
+    "Confidence": 0.9961783439490446,
+    "StartLine": 1,
+    "EndLine": 201
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/pkg/errors@v0.9.1/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-2-Clause",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 23
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/pmezard/go-difflib@v1.0.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.958139534883721,
+    "StartLine": 2,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/pterm/pterm@v0.12.82/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/radovskyb/watcher@v1.0.7/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.986046511627907,
+    "StartLine": 2,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/remyoudompheng/bigfft@v0.0.0-20230129092748-24d4a6f8daec/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/rivo/uniseg@v0.4.7/LICENSE.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/rjeczalik/notify@v0.9.3/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/sajari/fuzzy@v1.0.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/segmentio/asm@v1.1.3/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/segmentio/encoding@v0.5.4/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/segmentio/encoding@v0.5.4/json/fuzz/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Apache-2.0",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 201
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/sergi/go-diff@v1.4.0/APACHE-LICENSE-2.0",
+  "Classifications": [
+   {
+    "Name": "Apache-2.0",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 177
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/sergi/go-diff@v1.4.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 19
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/shopspring/decimal@v1.4.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 27,
+    "EndLine": 27
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 29,
+    "EndLine": 44
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/skeema/knownhosts@v1.3.2/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Apache-2.0",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 201
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/skeema/knownhosts@v1.3.2/NOTICE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/spf13/cast@v1.10.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/spf13/pflag@v1.0.10/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 4,
+    "EndLine": 28
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/stretchr/objx@v0.5.2/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 4
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 6,
+    "EndLine": 22
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/stretchr/testify@v1.11.1/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/tc-hib/winres@v0.3.1/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-0-Clause",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 12
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/ulikunitz/xz@v0.5.15/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9395348837209302,
+    "StartLine": 2,
+    "EndLine": 26
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/ulikunitz/xz@v0.5.15/cmd/gxz/licenses.go.txt",
+  "Classifications": [
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9906976744186047,
+    "StartLine": 3,
+    "EndLine": 29
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9395348837209302,
+    "StartLine": 32,
+    "EndLine": 56
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/ulikunitz/xz@v0.5.15/cmd/xb/copyright.go.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 31,
+    "EndLine": 31
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/wailsapp/task/v3@v3.40.1-patched3/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/wailsapp/wails/v3@v3.0.0-beta.29/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/wailsapp/wails/v3@v3.0.0-beta.29/examples/badge-custom/frontend/Inter Font License.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "OFL-1.1",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 93
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/wailsapp/wails/v3@v3.0.0-beta.29/examples/badge/frontend/Inter Font License.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "OFL-1.1",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 93
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/wailsapp/wails/v3@v3.0.0-beta.29/examples/dock/frontend/Inter Font License.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "OFL-1.1",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 93
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/wailsapp/wails/v3@v3.0.0-beta.29/examples/file-association/Inter Font License.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "OFL-1.1",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 93
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/wailsapp/wails/v3@v3.0.0-beta.29/examples/notifications/frontend/Inter Font License.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "OFL-1.1",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 93
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/wailsapp/wails/v3@v3.0.0-beta.29/internal/go-common-file-dialog/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/wailsapp/wails/v3@v3.0.0-beta.29/internal/templates/_common/frontend/Inter Font License.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "OFL-1.1",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 93
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/wailsapp/wails/v3@v3.0.0-beta.29/internal/templates/ios/frontend/public/puppertino/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/wailsapp/wails/v3@v3.0.0-beta.29/internal/webview2/webviewloader/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 4
+   },
+   {
+    "Name": "ISC",
+    "Confidence": 0.963302752293578,
+    "StartLine": 6,
+    "EndLine": 16
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/xanzy/ssh-agent@v0.3.3/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Apache-2.0",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 201
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/xo/terminfo@v0.0.0-20220910002029-abceb7e1c41e/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/yosida95/uritemplate/v3@v3.0.2/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 25
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/yuin/goldmark-emoji@v1.0.6/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/yuin/goldmark@v1.7.16/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/yusufpapurcu/wmi@v1.2.4/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 20
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/zalando/go-keyring@v0.2.8/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/zalando/go-keyring@v0.2.8/internal/shellescape/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/zeebo/xxh3@v1.1.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 4
+   },
+   {
+    "Name": "BSD-2-Clause",
+    "Confidence": 1,
+    "StartLine": 9,
+    "EndLine": 28
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/gitlab.com/digitalxero/go-conventional-commit@v1.0.7/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 13
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/go.yaml.in/yaml/v3@v3.0.4/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 13,
+    "EndLine": 13
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 14,
+    "EndLine": 14
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 16,
+    "EndLine": 32
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 38,
+    "EndLine": 38
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/go.yaml.in/yaml/v3@v3.0.4/NOTICE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/crypto@v0.53.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/exp/typeparams@v0.0.0-20260112195511-716be5621a96/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/exp@v0.0.0-20260410095643-746e56fc9e2f/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/image@v0.41.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/mod@v0.41.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/net@v0.56.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/oauth2@v0.35.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/sync@v0.23.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/sys@v0.48.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/term@v0.44.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/text@v0.39.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/tools@v0.50.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/tools@v0.50.0/copyright/copyright.go.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/golang.org/x/tools@v0.50.0/copyright/copyright_test.go.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/gopkg.in/warnings.v0@v0.1.2/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-2-Clause",
+    "Confidence": 0.994535519125683,
+    "StartLine": 3,
+    "EndLine": 24
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/gopkg.in/yaml.v2@v2.4.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Apache-2.0",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 201
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/gopkg.in/yaml.v2@v2.4.0/LICENSE.libyaml",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 13,
+    "EndLine": 13
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 15,
+    "EndLine": 31
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/gopkg.in/yaml.v2@v2.4.0/NOTICE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/gopkg.in/yaml.v3@v3.0.1/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 13,
+    "EndLine": 13
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 14,
+    "EndLine": 14
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 16,
+    "EndLine": 32
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 38,
+    "EndLine": 38
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/gopkg.in/yaml.v3@v3.0.1/NOTICE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/howett.net/plist@v1.0.2-0.20250314012144-ee69052608d9/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 32,
+    "EndLine": 32
+   },
+   {
+    "Name": "BSD-2-Clause",
+    "Confidence": 0.994535519125683,
+    "StartLine": 3,
+    "EndLine": 21
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 34,
+    "EndLine": 58
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/cc/v4@v4.29.7/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9765258215962441,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/cc/v4@v4.29.7/testdata/jhjourdan/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9674418604651163,
+    "StartLine": 2,
+    "EndLine": 24
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/ccgo/v4@v4.36.1/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9765258215962441,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/fileutil@v1.4.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9765258215962441,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/fileutil@v1.4.0/falloc/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/fileutil@v1.4.0/hdb/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/fileutil@v1.4.0/storage/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/gc/v2@v2.6.5/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 42,
+    "EndLine": 42
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 44,
+    "EndLine": 68
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9765258215962441,
+    "StartLine": 4,
+    "EndLine": 28
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/gc/v3@v3.1.5/GO-LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/gc/v3@v3.1.5/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 2
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 42,
+    "EndLine": 42
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 44,
+    "EndLine": 68
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9765258215962441,
+    "StartLine": 4,
+    "EndLine": 28
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/goabi0@v0.2.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 26
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/libc@v1.77.1/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9765258215962441,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/libc@v1.77.1/LICENSE-3RD-PARTY.md",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 19,
+    "EndLine": 19
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 58,
+    "EndLine": 58
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 60,
+    "EndLine": 77
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 175,
+    "EndLine": 175
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 176,
+    "EndLine": 176
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 177,
+    "EndLine": 177
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 178,
+    "EndLine": 178
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 179,
+    "EndLine": 179
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 180,
+    "EndLine": 180
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 189,
+    "EndLine": 189
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 192,
+    "EndLine": 192
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 257,
+    "EndLine": 257
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 259,
+    "EndLine": 276
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 286,
+    "EndLine": 286
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 288,
+    "EndLine": 305
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 21,
+    "EndLine": 45
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/libc@v1.77.1/testdata/nsz.repo.hu/libc-test/COPYRIGHT",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 22
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/libc@v1.77.1/testdata/nsz.repo.hu/libc-test/src/math/crlibm/COPYING",
+  "Classifications": [
+   {
+    "Name": "GPL-2.0",
+    "Confidence": 0.9945670628183362,
+    "StartLine": 1,
+    "EndLine": 340
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/mathutil@v1.7.1/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9765258215962441,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/mathutil@v1.7.1/mersenne/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9765258215962441,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/memory@v1.12.1/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9765258215962441,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/memory@v1.12.1/LICENSE-GO",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/memory@v1.12.1/LICENSE-MMAP-GO",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9720930232558139,
+    "StartLine": 2,
+    "EndLine": 24
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/opt@v0.2.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9765258215962441,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/sortutil@v1.2.1/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9765258215962441,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/sqlite@v1.60.1/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 26
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/sqlite@v1.60.1/LICENSE-3RD-PARTY.md",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 135,
+    "EndLine": 135
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 137,
+    "EndLine": 153
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 171,
+    "EndLine": 171
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 172,
+    "EndLine": 172
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 173,
+    "EndLine": 173
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 174,
+    "EndLine": 174
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 215,
+    "EndLine": 215
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 262,
+    "EndLine": 262
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 263,
+    "EndLine": 263
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 264,
+    "EndLine": 264
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 265,
+    "EndLine": 265
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 266,
+    "EndLine": 266
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 267,
+    "EndLine": 267
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 268,
+    "EndLine": 268
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 269,
+    "EndLine": 269
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 270,
+    "EndLine": 270
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 271,
+    "EndLine": 271
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 321,
+    "EndLine": 321
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 397,
+    "EndLine": 397
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 398,
+    "EndLine": 398
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 400,
+    "EndLine": 416
+   },
+   {
+    "Name": "Apache-2.0",
+    "Confidence": 1,
+    "StartLine": 428,
+    "EndLine": 628
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 640,
+    "EndLine": 640
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 680,
+    "EndLine": 680
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 720,
+    "EndLine": 720
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 722,
+    "EndLine": 738
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 750,
+    "EndLine": 750
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1127,
+    "EndLine": 1127
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 1169,
+    "EndLine": 1173
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1187,
+    "EndLine": 1187
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1227,
+    "EndLine": 1227
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1266,
+    "EndLine": 1266
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 1,
+    "StartLine": 1268,
+    "EndLine": 1291
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1326,
+    "EndLine": 1326
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1365,
+    "EndLine": 1365
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 1367,
+    "EndLine": 1384
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1482,
+    "EndLine": 1482
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1483,
+    "EndLine": 1483
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1484,
+    "EndLine": 1484
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1485,
+    "EndLine": 1485
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1486,
+    "EndLine": 1486
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1487,
+    "EndLine": 1487
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1496,
+    "EndLine": 1496
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1499,
+    "EndLine": 1499
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1564,
+    "EndLine": 1564
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 1566,
+    "EndLine": 1583
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1593,
+    "EndLine": 1593
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 1595,
+    "EndLine": 1612
+   },
+   {
+    "Name": "MPL-2.0",
+    "Confidence": 0.9947826086956522,
+    "StartLine": 752,
+    "EndLine": 1113
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9859154929577465,
+    "StartLine": 642,
+    "EndLine": 662
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 176,
+    "EndLine": 200
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 217,
+    "EndLine": 241
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 682,
+    "EndLine": 706
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 1129,
+    "EndLine": 1153
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 1229,
+    "EndLine": 1253
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 1328,
+    "EndLine": 1352
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9765258215962441,
+    "StartLine": 273,
+    "EndLine": 297
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9765258215962441,
+    "StartLine": 1189,
+    "EndLine": 1213
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9720930232558139,
+    "StartLine": 322,
+    "EndLine": 344
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/sqlite@v1.60.1/LICENSE-SQLITE_VEC",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/strutil@v1.2.1/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9765258215962441,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/token@v1.1.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/mvdan.cc/sh/v3@v3.12.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9953051643192489,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ }
+]

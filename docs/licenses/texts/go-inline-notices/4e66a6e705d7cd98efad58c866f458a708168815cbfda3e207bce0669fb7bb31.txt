@@ -1,0 +1,2 @@
+// Heavily inspired by the Chromium project (Copyright 2015 The Chromium Authors)
+// Chromium License: https://chromium.googlesource.com/chromium/src/+/HEAD/LICENSE

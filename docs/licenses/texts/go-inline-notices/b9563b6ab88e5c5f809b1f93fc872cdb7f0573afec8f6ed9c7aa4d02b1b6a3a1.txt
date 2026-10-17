@@ -1,0 +1,18 @@
+/* Check to see if pWLoop should be added to the set of
+				 ** mxChoice best-so-far paths.
+				 **
+				 ** First look for an existing path among best-so-far paths
+				 ** that:
+				 **     (1) covers the same set of loops, and
+				 **     (2) has a compatible isOrdered value.
+				 **
+				 ** "Compatible isOrdered value" means either
+				 **     (A) both have isOrdered==-1, or
+				 **     (B) both have isOrder>=0, or
+				 **     (C) ordering does not matter because this is the last round
+				 **         of the solver.
+				 **
+				 ** The term "((pTo->isOrdered^isOrdered)&0x80)==0" is equivalent
+				 ** to (pTo->isOrdered==(-1))==(isOrdered==(-1))" for the range
+				 ** of legal values for isOrdered, -1..64.
+				 */

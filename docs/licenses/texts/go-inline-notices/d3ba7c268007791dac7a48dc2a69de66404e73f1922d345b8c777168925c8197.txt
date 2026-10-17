@@ -1,0 +1,2 @@
+// Heavily inspired by Electron (c) 2013-2020 Github Inc.
+// Electron License: https://github.com/electron/electron/blob/master/LICENSE

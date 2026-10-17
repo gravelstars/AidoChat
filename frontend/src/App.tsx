@@ -1,3 +1,4 @@
+import { isDemo } from './demo/storage'
 import appIcon from './assets/aidochat.svg'
 import { Dialog } from './components/Dialog'
 import { Button } from './components/Button'
@@ -31,7 +32,7 @@ export function App() {
         {view === 'settings' && <SettingsView />}
       </main>
       {view === 'chat' && active && memoryOpen && <MemoryPanel state={active} members={members} />}
-      <WindowControls />
+      {!isDemo && <WindowControls />}
       <Dialog open={!!error} title="操作未完成" onClose={() => useChat.setState({ error: null })}
         footer={<Button onClick={() => useChat.setState({ error: null })}>知道了</Button>}>
         <p role="alert">{error}</p>

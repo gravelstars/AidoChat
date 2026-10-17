@@ -1,0 +1,436 @@
+{
+  "status": "NOT LEGAL CLEARANCE",
+  "copyleftDetections": [
+    {
+      "file": "<REPOSITORY>/docs/licenses/texts/frontend/pdfjs-dist@6.4.299/standard_fonts/LICENSE_LIBERATION",
+      "license": "GPL-2.0",
+      "confidence": 1,
+      "sources": [],
+      "context": "font resource included by frontend/src/lib/pdf.ts glob"
+    },
+    {
+      "file": "<REPOSITORY>/docs/licenses/texts/go-modules/modernc.org/libc@v1.77.1/testdata/nsz.repo.hu/libc-test/src/math/crlibm/COPYING",
+      "license": "GPL-2.0",
+      "confidence": 0.9945670628183362,
+      "sources": [],
+      "context": "upstream module test fixture; not evidence of linked runtime code license"
+    },
+    {
+      "file": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/13d2ff35c56fdc1b505c7db6b5a9a848e414787e1d4bc0911802b8f2ebadf60e.txt",
+      "license": "LGPL-2.1",
+      "confidence": 0.9313725490196079,
+      "sources": [
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/sys/types/types_linux_amd64.go"
+      ],
+      "context": "review scope in inventory"
+    },
+    {
+      "file": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/16697f18081a60c71a7f61f387c7cb5fe2fd48de68b1b2ed9aee4da8a20882a8.txt",
+      "license": "LGPL-2.1",
+      "confidence": 0.9313725490196079,
+      "sources": [
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/sys/types/types_linux_amd64.go"
+      ],
+      "context": "review scope in inventory"
+    },
+    {
+      "file": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/1b34950b7630a445092471e0c418c1a0bfb1130a923525b23c2baebef73a4e6e.txt",
+      "license": "LGPL-2.1",
+      "confidence": 0.9313725490196079,
+      "sources": [
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go"
+      ],
+      "context": "review scope in inventory"
+    },
+    {
+      "file": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/1e0731290fc214b6565ac8475d1705a375a069d474c21eef773a8bf842ba5820.txt",
+      "license": "LGPL-2.1",
+      "confidence": 0.9313725490196079,
+      "sources": [
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/sys/types/types_linux_amd64.go"
+      ],
+      "context": "review scope in inventory"
+    },
+    {
+      "file": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/222ec99391aaae6c531887cd42888b42d59689a8434b1de7fb5fa18bbb90b7f7.txt",
+      "license": "LGPL-2.1",
+      "confidence": 0.9313725490196079,
+      "sources": [
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/sys/types/types_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/sys/types/types_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/sys/types/types_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/sys/types/types_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/sys/types/types_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/sys/types/types_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/sys/types/types_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/sys/types/types_linux_amd64.go"
+      ],
+      "context": "review scope in inventory"
+    },
+    {
+      "file": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/250f7770c101d26506f559d8308d69767a27f952333558c51488e5238a7a8936.txt",
+      "license": "LGPL-2.1",
+      "confidence": 0.9313725490196079,
+      "sources": [
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/sys/types/types_linux_amd64.go"
+      ],
+      "context": "review scope in inventory"
+    },
+    {
+      "file": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/326e89bd7d56319b16fb2bd0483bc05e43876582ce3f0851bf1130d9e9ad700a.txt",
+      "license": "LGPL-2.1",
+      "confidence": 0.9313725490196079,
+      "sources": [
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/sys/types/types_linux_amd64.go"
+      ],
+      "context": "review scope in inventory"
+    },
+    {
+      "file": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/335e6f6e980d11474630e873246728bb0aa8d944615e989b3bc255293b99c815.txt",
+      "license": "LGPL-2.1",
+      "confidence": 0.9313725490196079,
+      "sources": [
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/sys/types/types_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/sys/types/types_linux_amd64.go"
+      ],
+      "context": "review scope in inventory"
+    },
+    {
+      "file": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/4db16c3cc31f506382c02c8a14f2301d292212ff464e316c8f3779f93c225ccd.txt",
+      "license": "LGPL-2.1",
+      "confidence": 0.9313725490196079,
+      "sources": [
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/sys/types/types_linux_amd64.go"
+      ],
+      "context": "review scope in inventory"
+    },
+    {
+      "file": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/569a0d4157b10dd6a63521479a98a4654c21416d0ff1722bd30e5a01a3207707.txt",
+      "license": "LGPL-2.1",
+      "confidence": 0.9313725490196079,
+      "sources": [
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go"
+      ],
+      "context": "review scope in inventory"
+    },
+    {
+      "file": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/5ca46e2a8be7705dd2a4345db01dc24dd68952c41ebb89e0977e3755fa630692.txt",
+      "license": "LGPL-2.1",
+      "confidence": 0.9215686274509804,
+      "sources": [
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/sys/types/types_linux_amd64.go"
+      ],
+      "context": "review scope in inventory"
+    },
+    {
+      "file": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/6d7b2382d1222242c347048172abf0613f3280937d9d2bc4c717b3a5940109ff.txt",
+      "license": "LGPL-2.1",
+      "confidence": 0.9313725490196079,
+      "sources": [
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/sys/types/types_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/sys/types/types_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/sys/types/types_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/sys/types/types_linux_amd64.go"
+      ],
+      "context": "review scope in inventory"
+    },
+    {
+      "file": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/863e5c8835f15f3f703ff15bfd776f716a6434bab4191745a14befaf07cc8326.txt",
+      "license": "LGPL-2.1",
+      "confidence": 0.9313725490196079,
+      "sources": [
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/sys/types/types_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/sys/types/types_linux_amd64.go"
+      ],
+      "context": "review scope in inventory"
+    },
+    {
+      "file": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/8f99987097cb3c2b9413aaaca5c002f6591111e95563d4e429727eeab8024307.txt",
+      "license": "LGPL-2.1",
+      "confidence": 0.9313725490196079,
+      "sources": [
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/sys/types/types_linux_amd64.go"
+      ],
+      "context": "review scope in inventory"
+    },
+    {
+      "file": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/9a33ab2847249e8db4dde5beaa1b458fba06943bebf28a832552eb964f761917.txt",
+      "license": "LGPL-2.1",
+      "confidence": 0.9313725490196079,
+      "sources": [
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go"
+      ],
+      "context": "review scope in inventory"
+    },
+    {
+      "file": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/ac4183bee862334384a24ff59d3cfa3dadf0b16a1f39316db134a9a8966df398.txt",
+      "license": "LGPL-2.1",
+      "confidence": 0.9313725490196079,
+      "sources": [
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go"
+      ],
+      "context": "review scope in inventory"
+    },
+    {
+      "file": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/ae418e9cbfbdf48d25162fc1e68ab51048c0be3b60546b54c6b6710b7001a9eb.txt",
+      "license": "LGPL-2.1",
+      "confidence": 0.9313725490196079,
+      "sources": [
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/sys/types/types_linux_amd64.go"
+      ],
+      "context": "review scope in inventory"
+    },
+    {
+      "file": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/b801a57b2955888701c892a37beb308a706145e7856bbc60202389734edcb5e0.txt",
+      "license": "LGPL-2.1",
+      "confidence": 0.9313725490196079,
+      "sources": [
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/sys/types/types_linux_amd64.go"
+      ],
+      "context": "review scope in inventory"
+    },
+    {
+      "file": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/c06296b8cf3c2afd413889d3e180f90c3b383feb76c079fdf7a97d920cb6ef80.txt",
+      "license": "LGPL-2.1",
+      "confidence": 0.9313725490196079,
+      "sources": [
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/sys/types/types_linux_amd64.go"
+      ],
+      "context": "review scope in inventory"
+    },
+    {
+      "file": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/ccedbd2bd9d59bf11b6ee42a0ec8f9fdeb119907ce37869541e957a8d4ae7f37.txt",
+      "license": "LGPL-2.1",
+      "confidence": 0.9313725490196079,
+      "sources": [
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/sys/types/types_linux_amd64.go"
+      ],
+      "context": "review scope in inventory"
+    },
+    {
+      "file": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/d904d9714bfe192dd880605c6d0cf0ab81025c091b0fa29641b9faf3bbe2d63c.txt",
+      "license": "LGPL-2.1",
+      "confidence": 0.9313725490196079,
+      "sources": [
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/sys/types/types_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/sys/types/types_linux_amd64.go"
+      ],
+      "context": "review scope in inventory"
+    },
+    {
+      "file": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/fcedda0dd602290bf163ae93745a09784c1b45cf27a92f6b1e423a47e1df9a39.txt",
+      "license": "LGPL-2.1",
+      "confidence": 0.9313725490196079,
+      "sources": [
+        "go:modernc.org/libc@v1.77.1/uuid/uuid/uuid_linux_amd64.go",
+        "go:modernc.org/libc@v1.77.1/sys/types/types_linux_amd64.go"
+      ],
+      "context": "review scope in inventory"
+    }
+  ],
+  "nativeHeaderReview": [
+    {
+      "module": "modernc.org/libc",
+      "platforms": [
+        "darwin",
+        "linux",
+        "windows"
+      ],
+      "rootAndNestedLicenseFiles": [
+        "BSD-3-Clause",
+        "Copyright",
+        "GPL-2.0",
+        "MIT"
+      ],
+      "inlineLicenses": [
+        "APSL-1.1",
+        "APSL-2.0",
+        "BSD-2-Clause",
+        "BSD-3-Clause",
+        "BSD-4-Clause-UC",
+        "LGPL-2.1",
+        "MIT"
+      ],
+      "noticeIndex": "docs/licenses/go-inline-notices.json"
+    },
+    {
+      "module": "modernc.org/sqlite",
+      "platforms": [
+        "darwin",
+        "linux",
+        "windows"
+      ],
+      "rootAndNestedLicenseFiles": [
+        "Apache-2.0",
+        "BSD-3-Clause",
+        "Copyright",
+        "MIT",
+        "MPL-2.0"
+      ],
+      "inlineLicenses": [
+        "APSL-1.1",
+        "blessing"
+      ],
+      "noticeIndex": "docs/licenses/go-inline-notices.json"
+    }
+  ],
+  "otherCopyleftMetadata": [
+    {
+      "package": "lightningcss@1.33.0",
+      "license": "MPL-2.0",
+      "dev": true,
+      "optional": false
+    },
+    {
+      "package": "lightningcss-android-arm64@1.33.0",
+      "license": "MPL-2.0",
+      "dev": true,
+      "optional": true
+    },
+    {
+      "package": "lightningcss-darwin-arm64@1.33.0",
+      "license": "MPL-2.0",
+      "dev": true,
+      "optional": true
+    },
+    {
+      "package": "lightningcss-darwin-x64@1.33.0",
+      "license": "MPL-2.0",
+      "dev": true,
+      "optional": true
+    },
+    {
+      "package": "lightningcss-freebsd-x64@1.33.0",
+      "license": "MPL-2.0",
+      "dev": true,
+      "optional": true
+    },
+    {
+      "package": "lightningcss-linux-arm-gnueabihf@1.33.0",
+      "license": "MPL-2.0",
+      "dev": true,
+      "optional": true
+    },
+    {
+      "package": "lightningcss-linux-arm64-gnu@1.33.0",
+      "license": "MPL-2.0",
+      "dev": true,
+      "optional": true
+    },
+    {
+      "package": "lightningcss-linux-arm64-musl@1.33.0",
+      "license": "MPL-2.0",
+      "dev": true,
+      "optional": true
+    },
+    {
+      "package": "lightningcss-linux-x64-gnu@1.33.0",
+      "license": "MPL-2.0",
+      "dev": true,
+      "optional": true
+    },
+    {
+      "package": "lightningcss-linux-x64-musl@1.33.0",
+      "license": "MPL-2.0",
+      "dev": true,
+      "optional": true
+    },
+    {
+      "package": "lightningcss-win32-arm64-msvc@1.33.0",
+      "license": "MPL-2.0",
+      "dev": true,
+      "optional": true
+    },
+    {
+      "package": "lightningcss-win32-x64-msvc@1.33.0",
+      "license": "MPL-2.0",
+      "dev": true,
+      "optional": true
+    }
+  ],
+  "unclassifiedGo": [
+    {
+      "module": "github.com/konoui/go-qsort",
+      "scope": "module-graph-only (build/tool/test/transitive; not proven shipped)"
+    },
+    {
+      "module": "github.com/mattn/go-localereader",
+      "scope": "module-graph-only (build/tool/test/transitive; not proven shipped)"
+    }
+  ],
+  "missingFrontendLicenseFiles": [
+    "@napi-rs/canvas-android-arm64@1.0.11",
+    "@napi-rs/canvas-darwin-arm64@1.0.11",
+    "@napi-rs/canvas-darwin-x64@1.0.11",
+    "@napi-rs/canvas-linux-arm-gnueabihf@1.0.11",
+    "@napi-rs/canvas-linux-arm64-gnu@1.0.11",
+    "@napi-rs/canvas-linux-arm64-musl@1.0.11",
+    "@napi-rs/canvas-linux-riscv64-gnu@1.0.11",
+    "@napi-rs/canvas-linux-x64-gnu@1.0.11",
+    "@napi-rs/canvas-linux-x64-musl@1.0.11",
+    "@napi-rs/canvas-win32-arm64-msvc@1.0.11",
+    "@napi-rs/canvas-win32-x64-msvc@1.0.11",
+    "@rolldown/binding-android-arm-eabi@1.2.14",
+    "@rolldown/binding-android-arm64@1.2.14",
+    "@rolldown/binding-darwin-arm64@1.2.14",
+    "@rolldown/binding-darwin-x64@1.2.14",
+    "@rolldown/binding-freebsd-x64@1.2.14",
+    "@rolldown/binding-linux-arm-gnueabihf@1.2.14",
+    "@rolldown/binding-linux-arm64-gnu@1.2.14",
+    "@rolldown/binding-linux-arm64-musl@1.2.14",
+    "@rolldown/binding-linux-ppc64-gnu@1.2.14",
+    "@rolldown/binding-linux-s390x-gnu@1.2.14",
+    "@rolldown/binding-linux-x64-gnu@1.2.14",
+    "@rolldown/binding-linux-x64-musl@1.2.14",
+    "@rolldown/binding-openharmony-arm64@1.2.14",
+    "@rolldown/binding-win32-arm64-msvc@1.2.14",
+    "@rolldown/binding-win32-x64-msvc@1.2.14"
+  ],
+  "missingGoLicenseFiles": [
+    "github.com/konoui/go-qsort",
+    "github.com/mattn/go-localereader"
+  ],
+  "notes": [
+    "pdfjs-dist standard_fonts/LICENSE_LIBERATION requires owner/legal review; no compatibility approval inferred from exceptions.",
+    "Go classifier also covers module-graph-only tool/test/template files; see go-inventory for runtime distinction.",
+    "Non-Go code warnings are preserved; package graph does not prove every bundled native dependency notice."
+  ]
+}

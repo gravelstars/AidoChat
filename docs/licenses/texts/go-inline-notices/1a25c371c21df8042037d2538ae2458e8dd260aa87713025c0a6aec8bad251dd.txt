@@ -1,0 +1,1 @@
+/* log(x) = log1p(z/c-1) + log(c) + k*Ln2 */

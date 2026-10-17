@@ -1,3 +1,4 @@
+import { isDemo } from '../../demo/storage'
 import { useEffect, useRef, useState, type ReactNode } from 'react'
 import type { Appearance, DarkPaper, LightPaper, PaperId, ProviderConfig, UserSeal as UserSealData, UserProfile } from '../../backend'
 import { backend, DEFAULT_USER_SEAL } from '../../backend'
@@ -282,7 +283,7 @@ function ProvidersSection() {
   const [editing, setEditing] = useState<ProviderConfig | null>(null)
   const [creating, setCreating] = useState(false)
   return (
-    <Section title="模型服务" note="成员通过这里配置的服务说话。API Key 只保存在系统钥匙串，界面不会回显。">
+    <Section title="模型服务" note={isDemo ? "演示配置可自由编辑；所有回复均为预设内容，不接收 API Key。" : "成员通过这里配置的服务说话。API Key 只保存在系统钥匙串，界面不会回显。"}>
       <div className={styles.list}>
         {providers.map((p) => (
           <div key={p.id} className={styles.row}>
@@ -290,8 +291,8 @@ function ProvidersSection() {
               <p className={styles.rowName}>{p.name}</p>
               <p className={styles.rowMeta}>{p.baseUrl}</p>
             </div>
-            <span className={`${styles.badge} ${p.hasKey ? styles.ok : p.kind === 'anthropic' ? styles.bad : ''}`}>
-              {p.hasKey ? '已保存 Key' : p.kind === 'openai' ? '未设 Key' : '缺少 Key'}
+            <span className={`${styles.badge} ${isDemo ? '' : p.hasKey ? styles.ok : p.kind === 'anthropic' ? styles.bad : ''}`}>
+              {isDemo ? '预设回复' : p.hasKey ? '已保存 Key' : p.kind === 'openai' ? '未设 Key' : '缺少 Key'}
             </span>
             <Button variant="quiet" size="sm" onClick={() => setEditing(p)}>
               编辑
@@ -323,7 +324,7 @@ function MemorySection() {
     if (model.trim() !== memory.model) void setMemoryConfig({ providerId: memory.providerId, model: model.trim() })
   }
   return (
-    <Section title="纪要整理" note="整理时，新的讨论会发送给这个服务。不选则用该群第一位成员的模型。">
+    <Section title="纪要整理" note={isDemo ? "演示版从预设回复提取建议，不会向服务发送讨论。" : "整理时，新的讨论会发送给这个服务。不选则用该群第一位成员的模型。"}>
       <div className={styles.memoryRow}>
         <Field label="整理服务">
           {(id) => (
@@ -357,6 +358,7 @@ function DataSection() {
     setError('')
     void backend.openDataDir().catch((e) => setError(e instanceof Error ? e.message : String(e)))
   }
+  if (isDemo) return <Section title="数据" note="演示数据只保存在当前浏览器的本地存储中。使用顶部「重置演示」恢复示例；浏览器清理站点数据也会删除这些记录。"><p>模型连接和文件目录功能请使用桌面版。</p></Section>
   return (
     <Section title="数据" note="所有群聊、纪要和设置都保存在本机这个目录里。">
       <div className={styles.pathRow}>
@@ -381,7 +383,7 @@ function AboutSection() {
       <p className={styles.aboutText}>
         <span className={styles.version}>版本 {version || '—'}</span>
         <br />
-        你的数据保存在本机。调用云端模型时，被 @ 成员的上下文（群规则、群纪要、近期聊天记录）会发送给该成员配置的模型服务；整理纪要时，新的讨论会发送给「整理模型」所在的服务。
+        {isDemo ? "这是浏览器演示版，使用预设回复，不会调用模型。真实模型连接、系统钥匙串和本机目录功能请使用桌面版。" : "你的数据保存在本机。调用云端模型时，被 @ 成员的上下文（群规则、群纪要、近期聊天记录）会发送给该成员配置的模型服务；整理纪要时，新的讨论会发送给「整理模型」所在的服务。"}
       </p>
     </Section>
   )

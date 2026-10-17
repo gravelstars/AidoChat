@@ -1,0 +1,50 @@
+{
+  "fonts": [
+    {
+      "name": "@fontsource-variable/jetbrains-mono",
+      "version": "5.3.0",
+      "license": "OFL-1.1",
+      "licenseFiles": [
+        "docs/licenses/texts/frontend/@fontsource-variable__jetbrains-mono@5.3.0/LICENSE"
+      ]
+    },
+    {
+      "name": "@fontsource-variable/noto-sans-sc",
+      "version": "5.3.1",
+      "license": "OFL-1.1",
+      "licenseFiles": [
+        "docs/licenses/texts/frontend/@fontsource-variable__noto-sans-sc@5.3.1/LICENSE"
+      ]
+    },
+    {
+      "name": "@fontsource-variable/noto-serif-sc",
+      "version": "5.3.1",
+      "license": "OFL-1.1",
+      "licenseFiles": [
+        "docs/licenses/texts/frontend/@fontsource-variable__noto-serif-sc@5.3.1/LICENSE"
+      ]
+    }
+  ],
+  "pdfjs": {
+    "version": "6.4.299",
+    "licenseFiles": [
+      "docs/licenses/texts/frontend/pdfjs-dist@6.4.299/LICENSE",
+      "docs/licenses/texts/frontend/pdfjs-dist@6.4.299/cmaps/LICENSE",
+      "docs/licenses/texts/frontend/pdfjs-dist@6.4.299/iccs/LICENSE",
+      "docs/licenses/texts/frontend/pdfjs-dist@6.4.299/standard_fonts/LICENSE_FOXIT",
+      "docs/licenses/texts/frontend/pdfjs-dist@6.4.299/standard_fonts/LICENSE_LIBERATION",
+      "docs/licenses/texts/frontend/pdfjs-dist@6.4.299/wasm/LICENSE_JBIG2",
+      "docs/licenses/texts/frontend/pdfjs-dist@6.4.299/wasm/LICENSE_OPENJPEG",
+      "docs/licenses/texts/frontend/pdfjs-dist@6.4.299/wasm/LICENSE_PDFJS_JBIG2",
+      "docs/licenses/texts/frontend/pdfjs-dist@6.4.299/wasm/LICENSE_PDFJS_OPENJPEG",
+      "docs/licenses/texts/frontend/pdfjs-dist@6.4.299/wasm/LICENSE_PDFJS_QCMS",
+      "docs/licenses/texts/frontend/pdfjs-dist@6.4.299/wasm/LICENSE_QCMS"
+    ],
+    "distributedResourcePatterns": [
+      "cmaps/*.bcmap",
+      "standard_fonts/*.{pfb,ttf,otf}"
+    ],
+    "usage": "frontend/src/lib/pdf.ts",
+    "reviewRequired": "standard_fonts/LICENSE_LIBERATION: GPL v2 with font exceptions; distribution compatibility NOT approved"
+  }
+}

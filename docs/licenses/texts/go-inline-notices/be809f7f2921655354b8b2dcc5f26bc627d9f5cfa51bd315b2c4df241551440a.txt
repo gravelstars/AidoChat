@@ -1,0 +1,3 @@
+/* assumes islower(c) and isupper(c) are exclusive
+		   and toupper(c)!=c if islower(c).
+		   multiple opposite case characters are not supported */

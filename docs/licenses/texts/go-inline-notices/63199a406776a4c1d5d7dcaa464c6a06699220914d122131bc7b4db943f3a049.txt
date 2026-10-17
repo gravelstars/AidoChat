@@ -1,0 +1,8 @@
+// C documentation
+//
+//	/*
+//	** This function is an optimized version of sqlite3VdbeRecordCompare()
+//	** that (a) the first field of pPKey2 is a string, that (b) the first field
+//	** uses the collation sequence BINARY and (c) that the size-of-header varint
+//	** at the start of (pKey1/nKey1) fits in a single byte.
+//	*/

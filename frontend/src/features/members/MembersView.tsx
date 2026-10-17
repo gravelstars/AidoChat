@@ -1,3 +1,4 @@
+import { isDemo } from '../../demo/storage'
 import { useState, type CSSProperties } from 'react'
 import type { Member } from '../../backend'
 import { Button } from '../../components/Button'
@@ -51,7 +52,8 @@ export function MembersView() {
                   <dt>服务</dt>
                   <dd>
                     {p?.name ?? '未配置'}
-                    {p && !p.hasKey && (p.kind === 'anthropic' ? <span className={styles.warn}> · 缺少 Key</span> : ' · 未设 Key')}
+                    {isDemo && p && <span> · 预设回复</span>}
+                    {!isDemo && p && !p.hasKey && (p.kind === 'anthropic' ? <span className={styles.warn}> · 缺少 Key</span> : ' · 未设 Key')}
                   </dd>
                 </dl>
               </div>

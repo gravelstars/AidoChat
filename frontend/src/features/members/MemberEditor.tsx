@@ -1,3 +1,4 @@
+import { isDemo } from '../../demo/storage'
 import { useEffect, useState } from 'react'
 import type { Avatar, Member, Pigment } from '../../backend'
 import { Button } from '../../components/Button'
@@ -177,16 +178,16 @@ export function MemberEditor({ open, onClose, member, onSaved }: { open: boolean
         </div>
         {isNew && <p className={styles.sealHint}>印面取名字首字，颜料自动分配；保存后可以换图片头像。</p>}
 
-        <Field label="一句话简介" hint="会告诉群里其他成员这人是干什么的。" aside={<span className={styles.sealHint}>{brief.length}/30</span>}>
+        <Field label="一句话简介" hint={isDemo ? "保存成员简介；演示版回复固定，不会读取简介。" : "会告诉群里其他成员这人是干什么的。"} aside={<span className={styles.sealHint}>{brief.length}/30</span>}>
           {(id) => <TextInput id={id} value={brief} onChange={(e) => setBrief(e.target.value)} placeholder="例如：代码审查，挑实现上的坑" maxLength={30} />}
         </Field>
 
-        <Field label="角色提示词" hint="只在与他对话时生效，写清楚他的专长与偏好。">
+        <Field label="角色提示词" hint={isDemo ? "可编辑并保存在浏览器中；演示版不会执行角色提示词。" : "只在与他对话时生效，写清楚他的专长与偏好。"}>
           {(id) => <TextArea id={id} value={rolePrompt} onChange={(e) => setRolePrompt(e.target.value)} rows={4} placeholder="例如：你是严格的代码审查者，优先指出实现上的风险与边界情况。" maxLength={4000} />}
         </Field>
 
         <div className={styles.row}>
-          <Field label="模型服务" error={errors.provider} hint={providers.length ? undefined : '还没有模型服务。先填写服务地址，再为成员选择模型。'}>
+          <Field label="模型服务" error={errors.provider} hint={isDemo ? '仅保存演示配置，不会连接服务。' : providers.length ? undefined : '还没有模型服务。先填写服务地址，再为成员选择模型。'}>
             {(id) => (
               <>
                 <Select id={id} value={providerId} disabled={!providers.length} onChange={(e) => setProviderId(e.target.value)}>
@@ -205,19 +206,19 @@ export function MemberEditor({ open, onClose, member, onSaved }: { open: boolean
               </>
             )}
           </Field>
-          <Field label="模型" error={errors.model} hint="可自由填写模型名，不限于示例；请以服务商后台实际可用的模型名为准。">
+          <Field label="模型" error={errors.model} hint={isDemo ? "填写演示模型名即可，回复始终为预设内容。" : "可自由填写模型名，不限于示例；请以服务商后台实际可用的模型名为准。"}>
             {(id) => (
               <TextInput id={id} value={model} onChange={(e) => setModel(e.target.value)} placeholder="例如：deepseek-chat" />
             )}
           </Field>
         </div>
-        {provider && !provider.hasKey && (
+        {!isDemo && provider && !provider.hasKey && (
           <p className={styles.noteRow}>
             {provider.kind === 'anthropic' ? '此服务尚未保存 API Key，请编辑服务补充。' : '此服务未保存 Key。免 Key 的本地服务可直接使用；云端服务请编辑服务补充。'}
           </p>
         )}
 
-        <Field label="图片输入" hint="仅在服务商确认该模型支持视觉输入时开启。勾选不会赋予纯文本模型看图能力；关闭时，点名此成员发送图片会提示更换模型。">
+        <Field label="图片输入" hint={isDemo ? "用于体验图片输入开关；演示版不会识别图片内容。" : "仅在服务商确认该模型支持视觉输入时开启。勾选不会赋予纯文本模型看图能力；关闭时，点名此成员发送图片会提示更换模型。"}>
           {(id) => <label className={styles.imageCapability} htmlFor={id}><input id={id} type="checkbox" checked={supportsImages} onChange={(e) => setSupportsImages(e.target.checked)} /> 该模型支持图片输入</label>}
         </Field>
         <div className={styles.fieldRow}>

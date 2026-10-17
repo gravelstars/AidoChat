@@ -1,0 +1,20 @@
+[
+  {
+    "file": "docs/licenses/texts/supplemental-reference/LGPL-2.1.txt",
+    "source": "github.com/google/licenseclassifier/v2@v2.0.0/assets/License/LGPL-2.1/license.txt",
+    "sha256": "88448f95de607e8c19e376920a1521d61af6a397384dd29b2a98e2eb7a80f94e",
+    "bytes": 24426
+  },
+  {
+    "file": "docs/licenses/texts/supplemental-reference/APSL-1.1.txt",
+    "source": "github.com/google/licenseclassifier/v2@v2.0.0/assets/License/APSL-1.1/license.txt",
+    "sha256": "ba6b4ff950de2f8f65b6f1d7747726c6962245764047accfe8ecb3edd5c6f355",
+    "bytes": 19950
+  },
+  {
+    "file": "docs/licenses/texts/supplemental-reference/APSL-2.0.txt",
+    "source": "github.com/google/licenseclassifier/v2@v2.0.0/assets/License/APSL-2.0/license.txt",
+    "sha256": "57b80974cd080e908de30d1352c4e1207974495275986dbcaf5644b7241ab1da",
+    "bytes": 20095
+  }
+]

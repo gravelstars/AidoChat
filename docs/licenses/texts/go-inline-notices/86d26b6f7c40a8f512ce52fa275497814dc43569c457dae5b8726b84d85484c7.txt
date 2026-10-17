@@ -1,0 +1,89 @@
+// C documentation
+//
+//	/*
+//	** Analyze a term that consists of two or more OR-connected
+//	** subterms.  So in:
+//	**
+//	**     ... WHERE  (a=5) AND (b=7 OR c=9 OR d=13) AND (d=13)
+//	**                          ^^^^^^^^^^^^^^^^^^^^
+//	**
+//	** This routine analyzes terms such as the middle term in the above example.
+//	** A WhereOrTerm object is computed and attached to the term under
+//	** analysis, regardless of the outcome of the analysis.  Hence:
+//	**
+//	**     WhereTerm.wtFlags   |=  TERM_ORINFO
+//	**     WhereTerm.u.pOrInfo  =  a dynamically allocated WhereOrTerm object
+//	**
+//	** The term being analyzed must have two or more of OR-connected subterms.
+//	** A single subterm might be a set of AND-connected sub-subterms.
+//	** Examples of terms under analysis:
+//	**
+//	**     (A)     t1.x=t2.y OR t1.x=t2.z OR t1.y=15 OR t1.z=t3.a+5
+//	**     (B)     x=expr1 OR expr2=x OR x=expr3
+//	**     (C)     t1.x=t2.y OR (t1.x=t2.z AND t1.y=15)
+//	**     (D)     x=expr1 OR (y>11 AND y<22 AND z LIKE '*hello*')
+//	**     (E)     (p.a=1 AND q.b=2 AND r.c=3) OR (p.x=4 AND q.y=5 AND r.z=6)
+//	**     (F)     x>A OR (x=A AND y>=B)
+//	**
+//	** CASE 1:
+//	**
+//	** If all subterms are of the form T.C=expr for some single column of C and
+//	** a single table T (as shown in example B above) then create a new virtual
+//	** term that is an equivalent IN expression.  In other words, if the term
+//	** being analyzed is:
+//	**
+//	**      x = expr1  OR  expr2 = x  OR  x = expr3
+//	**
+//	** then create a new virtual term like this:
+//	**
+//	**      x IN (expr1,expr2,expr3)
+//	**
+//	** CASE 2:
+//	**
+//	** If there are exactly two disjuncts and one side has x>A and the other side
+//	** has x=A (for the same x and A) then add a new virtual conjunct term to the
+//	** WHERE clause of the form "x>=A".  Example:
+//	**
+//	**      x>A OR (x=A AND y>B)    adds:    x>=A
+//	**
+//	** The added conjunct can sometimes be helpful in query planning.
+//	**
+//	** CASE 3:
+//	**
+//	** If all subterms are indexable by a single table T, then set
+//	**
+//	**     WhereTerm.eOperator              =  WO_OR
+//	**     WhereTerm.u.pOrInfo->indexable  |=  the cursor number for table T
+//	**
+//	** A subterm is "indexable" if it is of the form
+//	** "T.C <op> <expr>" where C is any column of table T and
+//	** <op> is one of "=", "<", "<=", ">", ">=", "IS NULL", or "IN".
+//	** A subterm is also indexable if it is an AND of two or more
+//	** subsubterms at least one of which is indexable.  Indexable AND
+//	** subterms have their eOperator set to WO_AND and they have
+//	** u.pAndInfo set to a dynamically allocated WhereAndTerm object.
+//	**
+//	** From another point of view, "indexable" means that the subterm could
+//	** potentially be used with an index if an appropriate index exists.
+//	** This analysis does not consider whether or not the index exists; that
+//	** is decided elsewhere.  This analysis only looks at whether subterms
+//	** appropriate for indexing exist.
+//	**
+//	** All examples A through E above satisfy case 3.  But if a term
+//	** also satisfies case 1 (such as B) we know that the optimizer will
+//	** always prefer case 1, so in that case we pretend that case 3 is not
+//	** satisfied.
+//	**
+//	** It might be the case that multiple tables are indexable.  For example,
+//	** (E) above is indexable on tables P, Q, and R.
+//	**
+//	** Terms that satisfy case 3 are candidates for lookup by using
+//	** separate indices to find rowids for each subterm and composing
+//	** the union of all rowids using a RowSet object.  This is similar
+//	** to "bitmap indices" in other database engines.
+//	**
+//	** OTHERWISE:
+//	**
+//	** If none of cases 1, 2, or 3 apply, then leave the eOperator set to
+//	** zero.  This term is not useful for search.
+//	*/

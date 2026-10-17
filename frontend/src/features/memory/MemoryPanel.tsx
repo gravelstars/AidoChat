@@ -1,3 +1,4 @@
+import { isDemo } from '../../demo/storage'
 import { useEffect, useMemo, useRef, useState, type KeyboardEvent } from 'react'
 import type { Group, MemoryItem, MemoryKind, Member, UserSeal as UserSealData } from '../../backend'
 import { USER_ID } from '../../backend'
@@ -107,7 +108,7 @@ export function MemoryPanel({ state, members }: { state: GroupState; members: Re
         )}
       </div>
 
-      <footer className={styles.foot}>纪要由整理模型生成，整理时相关讨论会发送给该模型服务。只有你盖章的条目才算定论。</footer>
+      <footer className={styles.foot}>{isDemo ? "演示纪要从预设回复提取，不调用模型。只有你盖章的条目才算定论。" : "纪要由整理模型生成，整理时相关讨论会发送给该模型服务。只有你盖章的条目才算定论。"}</footer>
     </aside>
   )
 }
@@ -231,8 +232,8 @@ function Row({ item, members, group, onComplete }: { item: MemoryItem; members: 
 function Stamp({ animate, seal }: { animate: boolean; seal: UserSealData | null }) {
   const cls = [styles.stamp, seal && styles.stampSeal, animate && styles.stampAnimate].filter(Boolean).join(' ')
   return (
-    <span className={cls} aria-label="已确认">
-      {animate && <span className={styles.bleed} />}
+    <span className={cls} aria-label="已确认" style={animate ? { animationName: 'stamp-in' } : undefined}>
+      {animate && <span className={styles.bleed} style={{ animationName: 'ink-bleed' }} />}
       {seal ? <UserSeal seal={seal} px={32} title="已确认" /> : <span className={styles.stampGlyph}>定</span>}
     </span>
   )

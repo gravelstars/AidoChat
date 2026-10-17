@@ -1,3 +1,4 @@
+import { DEMO_ATTACHMENT_LIMIT, DEMO_SNAPSHOT_LIMIT, DEMO_STORAGE_ERROR, DEMO_STATE_KEY, demoKey, isDemo, recoverDemoGroups, validateDemoAvatar } from '../demo/storage'
 import { validateAttachment, validateDocument } from '../lib/attachments'
 import { validateUserProfile } from '../lib/userProfile'
 import type {
@@ -139,7 +140,27 @@ const memoryConfig: MemoryConfig = { providerId: '', model: '' }
 
 type Handler = (e: BackendEvent) => void
 const handlers = new Set<Handler>()
-const emit = (e: BackendEvent) => handlers.forEach((h) => h(e))
+let persistDemo = () => {}
+let demoStorageFailed = false
+const failedStreams = new Set<string>()
+const emit = (e: BackendEvent) => {
+  try { persistDemo() } catch {
+    demoStorageFailed = true
+    // 容量错误不允许杀掉异步轮次；停止它并明确显示未保存状态。
+    for (const [groupId, controller] of running) {
+      controller.abort(); failedStreams.add(groupId)
+      const detail = db[groupId]
+      detail.busy = false
+      for (const message of detail.messages) if (message.status === 'pending' || message.status === 'streaming') {
+        message.status = 'error'; message.error = DEMO_STORAGE_ERROR
+        handlers.forEach(h => h({kind:'message',groupId,message:{...message}}))
+      }
+      handlers.forEach(h => h({kind:'turn.end',groupId,turnId:detail.messages.at(-1)?.turnId ?? ''}))
+    }
+    return
+  }
+  handlers.forEach((h) => h(e))
+}
 const running = new Map<string, AbortController>()
 
 function summary(d: GroupDetail) {
@@ -199,7 +220,7 @@ async function streamInto(groupId: string, m: Message, text: string, signal: Abo
   await sleep(500 + Math.random() * 700)
   let i = 0
   while (i < text.length) {
-    if (signal.aborted) return
+    if (signal.aborted || running.get(groupId)?.signal !== signal) return
     const n = 1 + Math.floor(Math.random() * 4)
     const delta = text.slice(i, i + n)
     i += n
@@ -209,7 +230,9 @@ async function streamInto(groupId: string, m: Message, text: string, signal: Abo
   }
 }
 
-function update(groupId: string, m: Message, patch: Partial<Message>) {
+function update(groupId: string, m: Message, patch: Partial<Message>, ctrl: AbortController) {
+  if (running.get(groupId) !== ctrl) return
+  if (isDemo && failedStreams.has(groupId)) return
   Object.assign(m, patch)
   emit({ kind: 'message', groupId, message: { ...m } })
 }
@@ -217,16 +240,17 @@ function update(groupId: string, m: Message, patch: Partial<Message>) {
 async function runTurn(d: GroupDetail, user: Message, mode: ReplyMode, slots: Message[], ctrl: AbortController) {
   const groupId = d.group.id
   const one = async (slot: Message, before: Message[]) => {
-    if (ctrl.signal.aborted) return update(groupId, slot, { status: 'stopped', finishedAt: iso(new Date()) })
+    if (running.get(groupId) !== ctrl) return
+    if (ctrl.signal.aborted) return update(groupId, slot, { status: 'stopped', finishedAt: iso(new Date()) }, ctrl)
     const self = memberById[slot.authorId]
-    update(groupId, slot, { status: 'streaming', contextSeq: before.length ? before[before.length - 1].seq : user.seq })
+    update(groupId, slot, { status: 'streaming', contextSeq: before.length ? before[before.length - 1].seq : user.seq }, ctrl)
     // 演示：观澜的服务没配 Key，展示失败态
-    if (self.id === 'gl' && d.group.id === 'g1') {
+    if (!isDemo && self.id === 'gl' && d.group.id === 'g1') {
       await sleep(900)
-      return update(groupId, slot, { status: 'error', error: '401 Unauthorized：该模型服务的 API Key 无效', finishedAt: iso(new Date()) })
+      return update(groupId, slot, { status: 'error', error: '401 Unauthorized：该模型服务的 API Key 无效', finishedAt: iso(new Date()) }, ctrl)
     }
     await streamInto(groupId, slot, draftReply(self, user.content, before, mode), ctrl.signal)
-    update(groupId, slot, { status: ctrl.signal.aborted ? 'stopped' : 'done', finishedAt: iso(new Date()) })
+    update(groupId, slot, { status: ctrl.signal.aborted ? 'stopped' : 'done', finishedAt: iso(new Date()) }, ctrl)
   }
   if (mode === 'parallel') {
     await Promise.all(slots.map((s) => one(s, [])))
@@ -237,7 +261,9 @@ async function runTurn(d: GroupDetail, user: Message, mode: ReplyMode, slots: Me
       if (s.status === 'done') done.push(s)
     }
   }
+  if (running.get(groupId) !== ctrl) return
   running.delete(groupId)
+  if (isDemo && db[groupId] !== d) return
   d.busy = false
   d.group.updatedAt = iso(new Date())
   emit({ kind: 'turn.end', groupId, turnId: user.turnId })
@@ -246,10 +272,40 @@ async function runTurn(d: GroupDetail, user: Message, mode: ReplyMode, slots: Me
 
 export function createMockBackend(): Backend {
   const attachments=new Map<string,{attachment:Attachment;groupId:string;bound:boolean}>()
+  const snapshot = () => JSON.stringify({db, members, historical:memberById, providers, retired:[...retired], memoryConfig, attachments:[...attachments], idSeq})
   const shares=new Map<string,{pages:number;written:Set<number>}>()
-  return {
+  if (isDemo) {
+    const saved = readJSON<{db: Record<string, GroupDetail>; members: Member[]; historical: Record<string, Member>; providers: ProviderConfig[]; retired: string[]; memoryConfig: MemoryConfig; attachments: [string, {attachment:Attachment;groupId:string;bound:boolean}][]; idSeq:number}>(DEMO_STATE_KEY)
+    if (saved.db && saved.members && saved.providers) {
+      for (const id of Object.keys(db)) delete db[id]
+      Object.assign(db, recoverDemoGroups(saved.db))
+      members.splice(0, members.length, ...saved.members)
+      for (const id of Object.keys(memberById)) delete memberById[id]
+      Object.assign(memberById, saved.historical ?? Object.fromEntries(members.map(m => [m.id,m])))
+      providers.splice(0, providers.length, ...saved.providers.map(p => ({...p, hasKey:false})))
+      retired.clear(); saved.retired?.forEach(id => retired.add(id))
+      Object.assign(memoryConfig, saved.memoryConfig)
+      saved.attachments?.forEach(([id,a]) => attachments.set(id,a))
+      idSeq = Math.max(idSeq, saved.idSeq ?? 1000)
+      // 历史数据同样不允许带入远程头像。
+      for (const member of Object.values(memberById)) {
+        try { validateDemoAvatar(member.avatar) } catch { delete member.avatar.image }
+      }
+      for (const d of Object.values(db)) for (const avatar of Object.values(d.group.memberAvatars)) {
+        try { validateDemoAvatar(avatar) } catch { delete avatar.image }
+      }
+    } else providers.forEach(p => { p.hasKey = false })
+    persistDemo = () => {
+      const serialized = snapshot()
+      if (serialized.length > DEMO_SNAPSHOT_LIMIT) throw new Error(DEMO_STORAGE_ERROR)
+      try { localStorage.setItem(DEMO_STATE_KEY, serialized) } catch { throw new Error(DEMO_STORAGE_ERROR) }
+    }
+    // 初次打开时无需重复写入；写满的浏览器仍可读取和重置演示。
+  }
+  const api: Backend = {
     async importAttachment(input) {
       if(!db[input.groupId]) throw new Error('群聊不存在')
+      if (isDemo && input.base64.length > Math.ceil(DEMO_ATTACHMENT_LIMIT / 3) * 4) throw new Error('演示版每份附件最多 512 KiB；较大文件请使用桌面版。')
       const binary=atob(input.base64)
       const format=validateAttachment({name:input.name,size:binary.length,type:input.mime},0)
       if(format.kind==='document') validateDocument(input.text,input.pageCount)
@@ -261,6 +317,7 @@ export function createMockBackend(): Backend {
     async readAttachment(id) {const a=attachments.get(id);if(!a) throw new Error('附件不存在');return structuredClone(a.attachment)},
     async removeDraftAttachment(id) {const a=attachments.get(id);if(a?.bound) throw new Error('已发送附件不能作为草稿移除');attachments.delete(id)},
     async beginShareExport(input) {
+      if (isDemo) throw new Error('浏览器演示版不保存分享图片。请下载桌面版，选择消息后导出 PNG 到本机目录。')
       if(input.pageCount<1||input.pageCount>20) throw new Error('分享图片需要 1–20 页')
       const sessionId=nid('share')
       shares.set(sessionId,{pages:input.pageCount,written:new Set()})
@@ -288,15 +345,15 @@ export function createMockBackend(): Backend {
       const forced = new URLSearchParams(location.search).get('platform') as Bootstrap['platform'] | null
       return {
         platform: forced ?? platform,
-        appearance: { ...DEFAULT_APPEARANCE, ...readJSON<Appearance>('agc.appearance') },
-        userDisplayName: readJSON<{displayName:string}>('agc.profile')?.displayName || '你',
-        userSeal: { ...DEFAULT_USER_SEAL, ...readJSON<UserSeal>('agc.seal'), ...readJSON<{seal:UserSeal}>('agc.profile')?.seal },
-        members,
+        appearance: { ...DEFAULT_APPEARANCE, ...readJSON<Appearance>(demoKey('agc.appearance')) },
+        userDisplayName: readJSON<{displayName:string}>(demoKey('agc.profile'))?.displayName || '你',
+        userSeal: { ...DEFAULT_USER_SEAL, ...readJSON<UserSeal>(demoKey('agc.seal')), ...readJSON<{seal:UserSeal}>(demoKey('agc.profile'))?.seal },
+        members: isDemo ? Object.values(memberById) : members,
         providers: structuredClone(providers),
         groups: Object.values(db).map(summary).sort((a, b) => b.updatedAt.localeCompare(a.updatedAt)),
         retiredMemberIds: [...retired],
         memory: { ...memoryConfig },
-        version: '0.1.0-mock',
+        version: isDemo ? '0.1.2-demo' : '0.1.0-mock',
       }
     },
 
@@ -355,6 +412,7 @@ export function createMockBackend(): Backend {
 
     async send(groupId, content, mode, attachmentIds=[]): Promise<SendResult> {
       const d = db[groupId]
+      failedStreams.delete(groupId)
       if (d.busy) throw new Error('该群有回复正在进行，请稍候或先停止')
       const cands = d.group.memberIds.map((id) => memberById[id])
       const parsed = parseMentions(content, cands)
@@ -401,17 +459,20 @@ export function createMockBackend(): Backend {
         const m = d.messages.find((x) => x.id === messageId)
         if (!m || d.busy) continue
         const user = d.messages.find((x) => x.id === m.replyToId)!
+        failedStreams.delete(d.group.id)
         d.busy = true
         const ctrl = new AbortController()
         running.set(d.group.id, ctrl)
-        update(d.group.id, m, { content: '', error: '', status: 'pending' })
+        update(d.group.id, m, { content: '', error: '', status: 'pending' }, ctrl)
         emit({ kind: 'turn.start', groupId: d.group.id, turnId: m.turnId, order: [m.authorId] })
         const self = memberById[m.authorId]
         void (async () => {
-          update(d.group.id, m, { status: 'streaming' })
+          update(d.group.id, m, { status: 'streaming' }, ctrl)
           await streamInto(d.group.id, m, draftReply(self, user.content, [], 'serial'), ctrl.signal)
-          update(d.group.id, m, { status: ctrl.signal.aborted ? 'stopped' : 'done', finishedAt: iso(new Date()) })
+          update(d.group.id, m, { status: ctrl.signal.aborted ? 'stopped' : 'done', finishedAt: iso(new Date()) }, ctrl)
+          if (running.get(d.group.id) !== ctrl) return
           running.delete(d.group.id)
+          if (isDemo && db[d.group.id] !== d) return
           d.busy = false
           emit({ kind: 'turn.end', groupId: d.group.id, turnId: m.turnId })
         })()
@@ -458,20 +519,20 @@ export function createMockBackend(): Backend {
     },
 
     async setAppearance(a) {
-      localStorage.setItem('agc.appearance', JSON.stringify(a))
+      localStorage.setItem(demoKey('agc.appearance'), JSON.stringify(a))
     },
 
     async setUserProfile(profile) {
       const errors = validateUserProfile(profile)
       if (errors.displayName || errors.seal) throw new Error(errors.displayName || errors.seal)
-      localStorage.setItem('agc.profile', JSON.stringify({...profile, displayName:profile.displayName.trim()}))
+      localStorage.setItem(demoKey('agc.profile'), JSON.stringify({...profile, displayName:profile.displayName.trim()}))
     },
 
     async setUserSeal(seal) {
       const errors = validateUserProfile({displayName:'你',seal})
       if(errors.seal) throw new Error(errors.seal)
-      const profile=readJSON<{displayName:string}>('agc.profile')
-      localStorage.setItem('agc.profile', JSON.stringify({displayName:profile?.displayName || '你',seal}))
+      const profile=readJSON<{displayName:string}>(demoKey('agc.profile'))
+      localStorage.setItem(demoKey('agc.profile'), JSON.stringify({displayName:profile?.displayName || '你',seal}))
     },
 
     async uploadAvatar(file) {
@@ -486,6 +547,7 @@ export function createMockBackend(): Backend {
     },
 
     async setGroupAvatar(groupId, memberId, avatar: Avatar | null) {
+      if (isDemo) validateDemoAvatar(avatar)
       const d = db[groupId]
       if (avatar) d.group.memberAvatars[memberId] = avatar
       else delete d.group.memberAvatars[memberId]
@@ -495,12 +557,14 @@ export function createMockBackend(): Backend {
     },
 
     async setMemberAvatar(memberId, avatar) {
+      if (isDemo) validateDemoAvatar(avatar)
       const m = memberById[memberId]
       m.avatar = avatar
       return structuredClone(m)
     },
 
     async saveMember(input) {
+      if (isDemo) validateDemoAvatar(input.avatar)
       const id = input.id || nid('mem')
       const next: Member = {
         id, name: input.name, avatar: input.avatar, brief: input.brief, rolePrompt: input.rolePrompt,
@@ -525,7 +589,7 @@ export function createMockBackend(): Backend {
 
     async saveProvider(input: SaveProviderInput) {
       const id = input.id || nid('p')
-      const next: ProviderConfig = { id, name: input.name, kind: input.kind, baseUrl: input.baseUrl, hasKey: !!input.key || providers.find((p) => p.id === id)?.hasKey || false }
+      const next: ProviderConfig = { id, name: input.name, kind: input.kind, baseUrl: input.baseUrl, hasKey: !isDemo && (!!input.key || providers.find((p) => p.id === id)?.hasKey || false) }
       const existing = providers.find((p) => p.id === id)
       if (existing) Object.assign(existing, next)
       else providers.push(next)
@@ -544,6 +608,7 @@ export function createMockBackend(): Backend {
     },
 
     async testProvider() {
+      if (isDemo) throw new Error('演示版不会连接模型服务，也不接收 API Key。请在桌面版测试真实连接。')
       await sleep(160)
       return 160
     },
@@ -554,10 +619,11 @@ export function createMockBackend(): Backend {
     },
 
     async dataDir() {
-      return '/tmp/ai-group-chat'
+      return isDemo ? '当前浏览器的本地存储' : '/tmp/ai-group-chat'
     },
 
     async openDataDir() {
+      if (isDemo) throw new Error('演示数据保存在浏览器中；打开数据目录请使用桌面版。')
       console.info('[mock] openDataDir')
     },
 
@@ -572,6 +638,73 @@ export function createMockBackend(): Backend {
       return () => handlers.delete(h)
     },
   }
+  if (!isDemo) return api
+  // 所有成功的写入（包括不发事件的成员、服务和纪要操作）都保存快照。
+  const persistent = <T extends object>(object: T): T => new Proxy(object, {
+    get(target, key, receiver) {
+      const value = Reflect.get(target, key, receiver)
+      if (typeof value !== 'function') return value
+      if (['subscribe','bootstrap','openGroup','readAttachment','dataDir'].includes(String(key))) return value
+      return async (...args: unknown[]) => {
+        const before = snapshot()
+        const groupReferences = { ...db }
+        demoStorageFailed = false
+        try {
+          const result = await value.apply(target, args)
+          if (demoStorageFailed) throw new Error(DEMO_STORAGE_ERROR)
+          persistDemo()
+          return result
+        } catch (error) {
+          // localStorage.setItem 是原子的；内存同样回滚，失败附件不能毒化下一次操作。
+          const saved = JSON.parse(before)
+          // 轮次持有 GroupDetail 和消息占位对象；回滚必须保留这些对象的身份。
+          for (const id of Object.keys(saved.db)) if (!db[id] && groupReferences[id]) db[id] = groupReferences[id]
+          restoreInPlace(db, saved.db)
+          for (const groupId of failedStreams) {
+            const detail = db[groupId]
+            if (!detail?.busy) continue
+            detail.busy = false
+            for (const message of detail.messages) if (message.status === 'pending' || message.status === 'streaming') {
+              message.status = 'error'; message.error = DEMO_STORAGE_ERROR
+            }
+          }
+          restoreInPlace(members, saved.members)
+          restoreInPlace(memberById, saved.historical)
+          restoreInPlace(providers, saved.providers)
+          retired.clear(); saved.retired.forEach((id:string) => retired.add(id))
+          Object.assign(memoryConfig,saved.memoryConfig)
+          attachments.clear(); saved.attachments.forEach(([id,a]: [string,{attachment:Attachment;groupId:string;bound:boolean}]) => attachments.set(id,a))
+          idSeq=saved.idSeq
+          throw error
+        }
+      }
+    },
+  })
+  api.memory = persistent(api.memory)
+  return persistent(api)
+}
+
+
+/** 按实体 id 恢复数组内容，让运行中的流仍然写入同一条消息。 */
+function restoreInPlace(target: unknown, saved: unknown): unknown {
+  if (Array.isArray(target) && Array.isArray(saved)) {
+    const previous = target.slice()
+    const next = saved.map((value, index) => {
+      const id = value && typeof value === 'object' ? (value as {id?:unknown}).id : undefined
+      const existing = id === undefined ? previous[index] : previous.find(item => item && typeof item === 'object' && (item as {id?:unknown}).id === id)
+      return restoreInPlace(existing, value)
+    })
+    target.splice(0, target.length, ...next)
+    return target
+  }
+  if (target && saved && typeof target === 'object' && typeof saved === 'object' && !Array.isArray(target) && !Array.isArray(saved)) {
+    const current = target as Record<string,unknown>
+    const original = saved as Record<string,unknown>
+    for (const key of Object.keys(current)) if (!(key in original)) delete current[key]
+    for (const [key,value] of Object.entries(original)) current[key] = restoreInPlace(current[key],value)
+    return target
+  }
+  return structuredClone(saved)
 }
 
 function readJSON<T>(key: string): Partial<T> {

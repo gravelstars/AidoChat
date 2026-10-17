@@ -1,0 +1,30 @@
+<LICENSE_TOOLS_DIR>/bin/go-licenses: go1.24.3
+	path	github.com/google/go-licenses/v2
+	mod	github.com/google/go-licenses/v2	v2.0.1	h1:ti+9bi5o7DKbeeg5eBb/uZTgsaPNoJaLCh93cRcXsW8=
+	dep	github.com/davecgh/go-spew	v1.1.1	h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
+	dep	github.com/go-logr/logr	v1.2.0	h1:QK40JKJyMdUDz+h+xvCsru/bJhvG0UxvePV0ufL/AcE=
+	dep	github.com/golang/groupcache	v0.0.0-20210331224755-41bb18bfe9da	h1:oI5xCqsCo564l8iNU+DwB5epxmsaqB+rhGL0m5jtYqE=
+	dep	github.com/google/licenseclassifier/v2	v2.0.0	h1:1Y57HHILNf4m0ABuMVb6xk4vAJYEUO0gDxNpog0pyeA=
+	dep	github.com/otiai10/copy	v1.10.0	h1:znyI7l134wNg/wDktoVQPxPkgvhDfGCYUasey+h0rDQ=
+	dep	github.com/sergi/go-diff	v1.2.0	h1:XU+rvMAioB0UC3q1MFrIQy4Vo5/4VsRDQQXHsEya6xQ=
+	dep	github.com/spf13/cobra	v1.7.0	h1:hyqWnYt1ZQShIddO5kBpj3vu05/++x6tJ6dg8EC572I=
+	dep	github.com/spf13/pflag	v1.0.5	h1:iy+VFUOCP1a+8yFto/drg2CJ5u0yRoB7fZw3DKv/JXA=
+	dep	go.opencensus.io	v0.24.0	h1:y73uSU6J157QMP2kn2r30vwW1A2W2WFwSCGnAVxeaD0=
+	dep	golang.org/x/mod	v0.27.0	h1:kb+q2PyFnEADO2IEF935ehFUXlWiNjJWtRNgBLSfbxQ=
+	dep	golang.org/x/net	v0.43.0	h1:lat02VYK2j4aLzMzecihNvTlJNQUq316m2Mr9rnM6YE=
+	dep	golang.org/x/sync	v0.16.0	h1:ycBJEhp9p4vXvUZNszeOq0kGTPghopOL8q0fq3vstxw=
+	dep	golang.org/x/sys	v0.35.0	h1:vz1N37gP5bs89s7He8XuIYXpyY0+QlsKmzipCbUtyxI=
+	dep	golang.org/x/text	v0.28.0	h1:rhazDwis8INMIwQ4tpjLDzUhx6RlXqZNPEM0huQojng=
+	dep	golang.org/x/tools	v0.36.0	h1:kWS0uv/zsvHEle1LbV5LE8QujrxB3wfQyxHfhOk0Qkg=
+	dep	k8s.io/klog/v2	v2.90.1	h1:m4bYOKall2MmOiRaR1J+We67Do7vm9KiQVlT96lnHUw=
+	build	-buildmode=exe
+	build	-compiler=gc
+	build	DefaultGODEBUG=gotestjsonbuildtext=1,multipathtcp=0,randseednop=0,rsa1024min=0,tlsmlkem=0,x509rsacrt=0,x509usepolicies=0
+	build	CGO_ENABLED=1
+	build	CGO_CFLAGS=
+	build	CGO_CPPFLAGS=
+	build	CGO_CXXFLAGS=
+	build	CGO_LDFLAGS=
+	build	GOARCH=amd64
+	build	GOOS=darwin
+	build	GOAMD64=v1

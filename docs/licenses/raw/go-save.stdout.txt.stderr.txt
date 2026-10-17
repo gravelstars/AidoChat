@@ -1,0 +1,26 @@
+W1017 18:25:08.030234   14219 library.go:141] "golang.org/x/sys/unix" contains non-Go code that can't be inspected for further dependencies:
+<GOMODCACHE>/golang.org/x/sys@v0.48.0/unix/asm_bsd_amd64.s
+<GOMODCACHE>/golang.org/x/sys@v0.48.0/unix/zsyscall_darwin_amd64.s
+W1017 18:25:08.030451   14219 library.go:141] "github.com/wailsapp/wails/v3/pkg/application" contains non-Go code that can't be inspected for further dependencies:
+<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/pkg/application/application_darwin_delegate.m
+<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/pkg/application/dialogs_darwin_delegate.m
+<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/pkg/application/menuitem_darwin.m
+<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/pkg/application/systemtray_darwin.m
+<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/pkg/application/webview_notch_window_darwin.m
+<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/pkg/application/webview_panel_darwin.m
+<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/pkg/application/webview_window_darwin.m
+<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/pkg/application/webview_window_darwin_drag.m
+<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/pkg/application/application_darwin.h
+<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/pkg/application/application_darwin_delegate.h
+<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/pkg/application/dialogs_darwin_delegate.h
+<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/pkg/application/mac_private_api_darwin.h
+<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/pkg/application/menuitem_darwin.h
+<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/pkg/application/mobile_features_ios_internal.h
+<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/pkg/application/systemtray_darwin.h
+<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/pkg/application/webview_notch_window_darwin.h
+<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/pkg/application/webview_panel_darwin.h
+<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/pkg/application/webview_window_darwin.h
+<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/pkg/application/webview_window_darwin_drag.h
+W1017 18:25:08.030514   14219 library.go:141] "github.com/wailsapp/wails/v3/pkg/events" contains non-Go code that can't be inspected for further dependencies:
+<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/pkg/events/events.h
+<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/pkg/events/events_darwin.h

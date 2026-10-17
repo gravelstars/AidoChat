@@ -1,0 +1,2 @@
+/* A negative cache-size value C indicates that the cache is abs(C)
+				 ** KiB in size.  */
