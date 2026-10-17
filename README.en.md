@@ -1,4 +1,4 @@
-English · [简体中文](README.md)
+<p align="center"><b>English</b> · <a href="README.md">简体中文</a></p>
 
 # AidoChat
 
