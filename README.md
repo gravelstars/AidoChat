@@ -5,15 +5,14 @@
 <p align="center">
   <a href="https://github.com/gravelstars/AidoChat">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="docs/assets/banner-night.svg">
-      <img src="docs/assets/banner-day.svg" alt="AidoChat" width="760">
+      <source media="(prefers-color-scheme: dark)" srcset="docs/assets/social-night.png">
+      <img src="docs/assets/social-day.png" alt="AidoChat" width="760">
     </picture>
   </a>
 </p>
 
 <p align="center">
-  <strong>本地运行的 AI 群聊桌面应用</strong><br>
-  把不同模型拉进同一个群，用 @ 点名讨论，用私印确认有来源的结论。
+  <strong>一个有温度的有趣的多AI群聊本地应用，开源，免费。</strong>
 </p>
 
 <p align="center">

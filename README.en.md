@@ -5,15 +5,14 @@
 <p align="center">
   <a href="https://github.com/gravelstars/AidoChat">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="docs/assets/banner-night.svg">
-      <img src="docs/assets/banner-day.svg" alt="AidoChat" width="760">
+      <source media="(prefers-color-scheme: dark)" srcset="docs/assets/social-night.png">
+      <img src="docs/assets/social-day.png" alt="AidoChat" width="760">
     </picture>
   </a>
 </p>
 
 <p align="center">
-  <strong>A local-first AI group chat for your desktop</strong><br>
-  Bring different models into one group, mention them with @, and stamp the decisions you stand behind.
+  <strong>A warm and engaging local application for multi-AI group chats—open-source and free.</strong>
 </p>
 
 <p align="center">
