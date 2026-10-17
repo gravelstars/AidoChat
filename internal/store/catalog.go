@@ -20,10 +20,10 @@ func scanProvider(row rowScanner) (domain.Provider, error) {
 	return p, err
 }
 func (s *Store) Provider(ctx context.Context, id string) (domain.Provider, error) {
-	return scanProvider(s.db.QueryRowContext(ctx, `SELECT `+providerColumns+` FROM providers WHERE id=?`, id))
+	return scanProvider(s.db.QueryRowContext(ctx, `SELECT `+providerColumns+` FROM providers WHERE id=? AND deleted_at IS NULL`, id))
 }
 func (s *Store) Providers(ctx context.Context) ([]domain.Provider, error) {
-	rows, err := s.db.QueryContext(ctx, `SELECT `+providerColumns+` FROM providers ORDER BY created_at,id`)
+	rows, err := s.db.QueryContext(ctx, `SELECT `+providerColumns+` FROM providers WHERE deleted_at IS NULL ORDER BY created_at,id`)
 	if err != nil {
 		return nil, err
 	}
@@ -43,16 +43,16 @@ func (s *Store) SaveProvider(ctx context.Context, p *domain.Provider) error {
 	if next.ID == "" {
 		next.ID = NewID()
 	}
-	_, err := s.db.ExecContext(ctx, `INSERT INTO providers(id,name,kind,base_url,key_ref,created_at) VALUES(?,?,?,?,?,?)
- ON CONFLICT(id) DO UPDATE SET name=excluded.name,kind=excluded.kind,base_url=excluded.base_url,key_ref=excluded.key_ref`, next.ID, next.Name, next.Kind, next.BaseURL, next.KeyRef, stamp(time.Now()))
-	if err != nil {
+	result, err := s.db.ExecContext(ctx, `INSERT INTO providers(id,name,kind,base_url,key_ref,created_at) VALUES(?,?,?,?,?,?)
+ ON CONFLICT(id) DO UPDATE SET name=excluded.name,kind=excluded.kind,base_url=excluded.base_url,key_ref=excluded.key_ref WHERE providers.deleted_at IS NULL`, next.ID, next.Name, next.Kind, next.BaseURL, next.KeyRef, stamp(time.Now()))
+	if err = affected(result, err); err != nil {
 		return fmt.Errorf("保存模型服务：%w", err)
 	}
 	*p = next
 	return nil
 }
 func (s *Store) DeleteProvider(ctx context.Context, id string) error {
-	return affected(s.db.ExecContext(ctx, `DELETE FROM providers WHERE id=?`, id))
+	return affected(s.db.ExecContext(ctx, `UPDATE providers SET deleted_at=?,key_ref='' WHERE id=? AND deleted_at IS NULL`, stamp(time.Now()), id))
 }
 
 const memberColumns = `id,name,avatar_glyph,avatar_color,avatar_image,brief,role_prompt,provider_id,model,temperature,context_tokens,created_at`
@@ -88,9 +88,10 @@ func (s *Store) Members(ctx context.Context, ids []string) (map[string]domain.Me
 	}
 	return out, nil
 }
-// MembersUsingProvider 返回使用该服务的成员名字（含已软删除的），用于阻止删除仍被引用的服务。
+
+// MembersUsingProvider 返回使用该服务的活跃成员名字；历史身份不再阻止服务下线。
 func (s *Store) MembersUsingProvider(ctx context.Context, providerID string) ([]string, error) {
-	rows, err := s.db.QueryContext(ctx, `SELECT name FROM members WHERE provider_id=? ORDER BY created_at,id`, providerID)
+	rows, err := s.db.QueryContext(ctx, `SELECT name FROM members WHERE provider_id=? AND deleted_at IS NULL ORDER BY created_at,id`, providerID)
 	if err != nil {
 		return nil, err
 	}

@@ -12,7 +12,8 @@ CREATE TABLE providers (
   kind        TEXT NOT NULL CHECK (kind IN ('openai', 'anthropic')),
   base_url    TEXT NOT NULL,
   key_ref     TEXT NOT NULL,          -- 系统钥匙串条目名；Key 明文绝不入库
-  created_at  TEXT NOT NULL
+  created_at  TEXT NOT NULL,
+  deleted_at  TEXT                   -- 下线后仅为历史成员保留外键，配置与调用不可见
 );
 
 CREATE TABLE members (
@@ -109,3 +110,5 @@ CREATE TABLE settings (
 
 -- 启动时修复：上次异常退出时残留的进行中消息一律标为 stopped。
 -- UPDATE messages SET status = 'stopped' WHERE status IN ('pending', 'streaming');
+
+-- 活跃成员必须引用未下线服务；约束触发器见 migrations/003_provider_retirement.sql。

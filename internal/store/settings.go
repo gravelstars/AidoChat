@@ -6,6 +6,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"time"
 )
 
 func (s *Store) Setting(ctx context.Context, key string) (string, error) {
@@ -38,7 +39,7 @@ func setSettings(ctx context.Context, tx *sql.Tx, values map[string]string) erro
 // DeleteProviderAndMemoryConfig 保证删除服务与解除对应纪要配置一起成功或一起回滚。
 func (s *Store) DeleteProviderAndMemoryConfig(ctx context.Context, id string) error {
 	return s.write(ctx, func(tx *sql.Tx) error {
-		if err := affected(tx.ExecContext(ctx, `DELETE FROM providers WHERE id=?`, id)); err != nil {
+		if err := affected(tx.ExecContext(ctx, `UPDATE providers SET deleted_at=?,key_ref='' WHERE id=? AND deleted_at IS NULL`, stamp(time.Now()), id)); err != nil {
 			return err
 		}
 		var raw string
