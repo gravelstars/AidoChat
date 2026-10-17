@@ -4,7 +4,7 @@
 
 这是一个在自己电脑上运行的 AI 群聊应用。你可以把使用不同模型、担任不同角色的 AI 成员放进同一个群，点名讨论，并把有用的结论整理成带来源的群纪要。
 
-浏览器演示与桌面真实使用是两种模式，数据不互通；浏览器的回复是预设文案，不会调用模型。当前版本不发布公开二进制安装包，桌面版请从源码构建。
+浏览器演示与桌面真实使用是两种模式，数据不互通；浏览器的回复是预设文案，不会调用模型。桌面版安装包发布在 [GitHub Releases](https://github.com/gravelstars/AidoChat/releases/latest)。
 
 ## 1. 第一次使用：按这个顺序
 
@@ -21,16 +21,23 @@
 
 ## 2. 安装和启动
 
-### macOS 本地包
+### 从 Releases 下载
 
-当前仓库不提供公开二进制安装包。如果你在本机构建了 `.dmg` 或 `.zip`：
+从 [Releases](https://github.com/gravelstars/AidoChat/releases/latest) 下载 **0.1.2**：
 
-- 从包中取出 `AidoChat.app`，复制到「应用程序」后打开。
-- 包含 Intel 与 Apple Silicon 的 universal 构建时，两类 Mac 使用同一个包。
-- 本地包使用 ad-hoc 签名，并未完成 Developer ID 签名或公证。系统可能要求你在确认来源后通过 Finder 的「打开」或系统的「隐私与安全性」入口授权；不要关闭系统整体安全检查。
-- 构建目标为 macOS 12；旧系统兼容性没有完整真机验收。
+| 系统 | 文件 | 安装 |
+| --- | --- | --- |
+| macOS 12+（Intel / Apple Silicon） | `AidoChat.dmg` | 打开 dmg，把 `AidoChat.app` 拖入「应用程序」 |
+| Windows 10 / 11（x64） | `AidoChat-windows-setup.exe` | 运行安装程序；需要 WebView2，安装器会引导 |
+| Ubuntu 24.04（amd64） | `AidoChat.deb` | `sudo apt install ./AidoChat.deb` |
+| 其他 Linux | `AidoChat.AppImage` | `chmod +x AidoChat.AppImage` 后运行；需要 GTK4 / WebKitGTK 6.0 |
 
-没有本地包时，按下面的源码方式启动。
+- macOS 包为 Intel 与 Apple Silicon 通用，使用 ad-hoc 签名，未做 Developer ID 签名或公证；首次打开可能需要在「隐私与安全性」中确认来源。
+- Windows 安装器会把程序安装到 `%LOCALAPPDATA%\ai-group-chat`，并创建 AidoChat 快捷方式；请先退出旧版再升级。
+- Linux 包在 Ubuntu 24.04 的 CI 环境构建；其他发行版需要自行确认 GTK4/WebKitGTK 6.0 依赖。
+- 第一次启动没有内置服务或成员，按下一节配置模型服务。数据保存在本机，Key 存入系统凭证存储。
+
+旧版本、校验值和平台说明见 [全部 Releases](https://github.com/gravelstars/AidoChat/releases)。
 
 ### 从源码启动真实桌面应用
 
@@ -49,14 +56,6 @@ wails3 dev
 ```
 
 开发模式会启动前端服务并打开真实桌面窗口。需要完整安装包时，在同一目录运行 `wails3 task package`。详细平台说明见 [构建说明](../build/README.md)。
-
-### Windows 与 Linux
-
-Windows NSIS、Linux deb/AppImage 已通过原生 CI 构建，但尚无完整真机安装验收。安装包可在 [三平台 CI 的 Artifacts](https://github.com/rickepicepic/AidoChat/actions/runs/38945065573) 下载；当前属于本地测试交付。
-
-- Windows 需要 WebView2；NSIS 配方已包含缺失时的在线引导，安装时可能需要网络。
-- Linux 需要 GTK4/WebKitGTK 6.0；AppImage 当前不能据此承诺在任意发行版免依赖运行。
-- 使用前应在目标机器完成安装、启动、对话、纪要和重启保存的验收。
 
 ### 仅查看浏览器演示
 

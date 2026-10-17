@@ -22,6 +22,7 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/gravelstars/AidoChat/releases/latest"><b>Download</b></a> ·
   <a href="https://gravelstars.github.io/AidoChat/"><b>Live demo</b></a> ·
   <a href="#quick-start">Quick start</a> ·
   <a href="docs/USER_GUIDE.md">User guide</a> ·
@@ -43,6 +44,20 @@
 - **Proposals stay separate from decisions**: AI can only propose; only you can stamp a source-linked note as confirmed.
 - **Local-first**: conversations, attachments, and notes live in local SQLite; API keys stay in the system credential store.
 - **Your services, your choice**: OpenAI-compatible APIs, Anthropic, or a local Ollama model.
+
+## Download
+
+Choose your platform and download **0.1.2**:
+
+| Platform | Download | Install |
+| --- | --- | --- |
+| macOS 12+ (Intel / Apple Silicon) | [AidoChat.dmg](https://github.com/gravelstars/AidoChat/releases/download/v0.1.2/AidoChat.dmg) | Drag AidoChat.app into Applications |
+| Windows 10 / 11 (x64) | [AidoChat-windows-setup.exe](https://github.com/gravelstars/AidoChat/releases/download/v0.1.2/AidoChat-windows-setup.exe) | Run the installer; WebView2 is required (the installer guides you) |
+| Linux (Ubuntu 24.04 / AppImage) | Being added | Use CI Artifacts for now, or build from [source](build/README.md) |
+
+[All releases and checksums](https://github.com/gravelstars/AidoChat/releases) · Not sure which one? Windows: setup.exe, macOS: dmg, Ubuntu: deb.
+
+> macOS builds are ad-hoc signed and Windows builds are unsigned. Your system may ask you to confirm the source on first launch. Do not run files with the same name from untrusted sources.
 
 ## Features
 
@@ -79,7 +94,7 @@ The desktop app uses local SQLite and the system credential store. Attach images
 ## Quick start
 
 1. **Live demo**: open [gravelstars.github.io/AidoChat](https://gravelstars.github.io/AidoChat/) without a Key. Replies are preset and data stays in the current browser.
-2. **Build the desktop app**: follow the [build instructions](build/README.md). No public binary installers are published yet.
+2. **Download the desktop app**: pick the installer for your platform from [Releases](https://github.com/gravelstars/AidoChat/releases/latest), or follow the [build instructions](build/README.md) to build from source.
 3. **Configure a service**: add a base URL, Key, and an available model name in Settings or the member form.
 4. **Start a discussion**: create a group, add members, and type `@墨白` or `@所有人`.
 
@@ -108,7 +123,7 @@ See [build/README.md](build/README.md) and [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Status
 
-0.1.2 runs on the desktop; the browser demo uses fictional data and preset replies. Mobile, accounts, cloud sync, web tools, scanned-PDF OCR, Word/Excel, and video attachments are not supported. Windows/Linux installation still needs real-machine testing.
+0.1.2 runs on the desktop, and macOS and Windows installers are published on [Releases](https://github.com/gravelstars/AidoChat/releases/latest); Linux packages are being added. The browser demo uses fictional data and preset replies. Mobile, accounts, cloud sync, web tools, scanned-PDF OCR, Word/Excel, and video attachments are not supported. Windows/Linux installation still needs broader real-machine testing.
 
 ## Contributing
 

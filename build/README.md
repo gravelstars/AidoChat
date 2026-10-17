@@ -59,7 +59,7 @@ AppImage 另需 appimagetool 与已生成的应用 PNG 图标：`wails3 task lin
 
 ## CI 与验收边界
 
-`.github/workflows/desktop-build.yml` 使用三个原生 runner，执行自检并产出各平台包。只有远程运行成功才算 CI 通过；安装后窗口、中文输入法、系统凭证和实际聊天仍需真机检查。结果以仓库 Actions 页面为准。构建产物、依赖和本地数据库不提交，当前也不发布公开二进制安装包。
+`.github/workflows/desktop-build.yml` 使用三个原生 runner，执行自检并产出各平台包。只有远程运行成功才算 CI 通过；安装后窗口、中文输入法、系统凭证和实际聊天仍需真机检查。结果以仓库 Actions 页面为准。构建产物、依赖和本地数据库不提交；面向用户的安装包发布在 [GitHub Releases](https://github.com/gravelstars/AidoChat/releases)。
 
 ## 可复用桌面 QA
 

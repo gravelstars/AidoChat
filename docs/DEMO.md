@@ -17,6 +17,6 @@ npm run preview -- --outDir dist-demo --base=/AidoChat/ --port 4173
 
 ## 下载 / Download
 
-本仓库只公开源码与浏览器演示，不发布二进制安装包。Windows、macOS、Linux 请按 [构建说明](../build/README.md) 从源码构建。
+安装包在 [GitHub Releases](https://github.com/gravelstars/AidoChat/releases/latest) 发布：macOS 下载 dmg，Windows 下载 setup.exe，Ubuntu 下载 deb。也可以按 [构建说明](../build/README.md) 从源码构建。
 
-This repository publishes source and the browser demo only; no binary installers are published. Build locally with [the build instructions](../build/README.md).
+Installers are published on [GitHub Releases](https://github.com/gravelstars/AidoChat/releases/latest): dmg for macOS, setup.exe for Windows, and deb for Ubuntu. You can also build from [source](../build/README.md).

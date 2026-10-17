@@ -22,6 +22,7 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/gravelstars/AidoChat/releases/latest"><b>下载安装</b></a> ·
   <a href="https://gravelstars.github.io/AidoChat/"><b>在线演示</b></a> ·
   <a href="#快速开始">快速开始</a> ·
   <a href="docs/USER_GUIDE.md">使用手册</a> ·
@@ -43,6 +44,20 @@
 - **建议与定论分开**：AI 只能提出建议；只有你盖章的条目才算确认，每条都有真实来源。
 - **本地优先**：聊天、附件和纪要保存在本机 SQLite；API Key 存在系统凭证存储。
 - **服务由你选择**：OpenAI 兼容接口、Anthropic，或本地 Ollama。
+
+## 下载安装
+
+选择你的系统，直接下载 **0.1.2** 安装包：
+
+| 系统 | 下载 | 安装 |
+| --- | --- | --- |
+| macOS 12+（Intel / Apple Silicon） | [AidoChat.dmg](https://github.com/gravelstars/AidoChat/releases/download/v0.1.2/AidoChat.dmg) | 打开后把 AidoChat.app 拖入「应用程序」 |
+| Windows 10 / 11（x64） | [AidoChat-windows-setup.exe](https://github.com/gravelstars/AidoChat/releases/download/v0.1.2/AidoChat-windows-setup.exe) | 运行安装程序；需要 WebView2（安装器会引导） |
+| Linux（Ubuntu 24.04 / AppImage） | 正在补充 | 临时可从 CI Artifacts 获取，或按 [构建说明](build/README.md) 从源码构建 |
+
+[全部版本与校验值](https://github.com/gravelstars/AidoChat/releases) · 不确定选哪个：Windows 选 setup.exe，macOS 选 dmg，Ubuntu 选 deb。
+
+> macOS 安装包为 ad-hoc 签名，Windows 未做发布签名。首次打开可能需要在系统安全设置中确认来源；不要在不明来源处下载同名文件。
 
 ## 功能
 
@@ -79,7 +94,7 @@ AI 建议是虚线铅笔，你提出的条目是实线墨笔，盖章确认后�
 ## 快速开始
 
 1. **在线演示**：打开 [gravelstars.github.io/AidoChat](https://gravelstars.github.io/AidoChat/)，无需 Key。回复是预设文案，数据只保存在当前浏览器。
-2. **构建桌面版**：按 [构建说明](build/README.md) 从源码构建。当前不发布公开二进制安装包。
+2. **下载桌面版**：从 [Releases](https://github.com/gravelstars/AidoChat/releases/latest) 选择对应系统的安装包；也可以按 [构建说明](build/README.md) 从源码构建。
 3. **配置服务**：在设置或新建成员表单里填写服务地址、Key 和实际可用的模型名。
 4. **开始讨论**：创建群、加入成员，输入 `@墨白` 或 `@所有人`。
 
@@ -108,7 +123,7 @@ npm run dev
 
 ## 项目状态
 
-0.1.2 桌面主体可运行；浏览器演示使用虚构数据和预设回复。手机端暂不支持；尚无账号、云同步、联网工具、扫描 PDF OCR、Word/Excel 或视频附件。Windows/Linux 安装交互仍需真机验收。
+0.1.2 桌面主体可运行，macOS 和 Windows 安装包已发布到 [Releases](https://github.com/gravelstars/AidoChat/releases/latest)，Linux 包正在补充。浏览器演示使用虚构数据和预设回复。手机端暂不支持；尚无账号、云同步、联网工具、扫描 PDF OCR、Word/Excel 或视频附件。Windows/Linux 安装交互仍需更广泛的真机验收。
 
 ## 参与贡献
 
