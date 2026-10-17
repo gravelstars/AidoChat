@@ -29,7 +29,7 @@
 - 浏览器：脚本 [verify-demo.mjs](../../scripts/verify-demo.mjs) 真实点击群/成员/设置/分享/盖章，验证刷新、重置、TXT 文件输入、@ 点名/停止及 899×640、390×640 窄屏；结果 [demo-verification.json](../qa/task-023/demo-verification.json) 为 ok=true，外部请求与资源错误均为空。日夜与窄屏验收截图留在 `/tmp/aidochat-023-demo-qa/`。
 - 素材：一键脚本完整成功，日夜主图 2880×1800（1440×900、2 倍像素），所有 PNG 小于 500KiB，所有 SVG 字形为路径；GIF 3 秒、13 个不同帧、低于 3MB。完整尺寸见 [manifest.json](../assets/manifest.json)，动画名与外部请求审计见 [request-audit.json](../assets/request-audit.json)。宣纸/夜读截图仅来自虚构演示数据。
 - 许可：官方 Apache 文件原字节核对通过，三个实际 Noto/JetBrains 字体完整 OFL 保留；224 个 npm 包与 172 个 Go 模块机器导出、2060 条原文来源 hash 验证通过。许可导出器误收集 .go 原文容器的问题已修为 .go.txt，原字节保留，Go ./... 检查通过。
-- **未通过的验收项：不能判定全部第三方许可兼容。** 已向所有者报告实际打包 Liberation GPLv2+字体例外、原生生成源的 LGPL/APSL/BSD 四条款等，见 [许可记录](../qa/task-023/licenses.md)；没有自行批准或替换这些依赖。保留 NOTICE `<版权所有者>` 供确认，LICENSE 官方附录占位不改。
+- **所有者复核结论：接受当前源码+浏览器演示分发范围。** 已报告实际打包 Liberation GPLv2+字体例外、原生生成源的 LGPL/APSL/BSD 四条款等，见 [许可记录](../qa/task-023/licenses.md)；所有者已审阅并接受当前范围，但这不是法律意见，也不能判定全部依赖兼容或覆盖未来二进制分发。NOTICE 已填 `gravelstars`，LICENSE 官方附录占位不改。
 - 未验证：真实 Windows/Linux 系统、真实系统目录选择器、真实云模型不属于本轮浏览器验收；GitHub Pages 未开启、未发布 Release，没有把本地包写成公开下载。README 首个试玩入口暂指说明页，待所有者开通后换为直达地址。
 - 所有者手动操作文本：About 中英简介、7 个 Topics、Pages 开启步骤/最终地址、社交图上传位置、版权所有者和个人邮箱说明全部见 [DEMO.md](../DEMO.md)。没有设置个人邮箱，没有修改这些仓库设置。
 
@@ -41,7 +41,7 @@
 - Git 原文保全：`.gitattributes` 对 LICENSE 与许可证原文禁用换行转换；原始工具输出/许可原文的空白不修剪。已逐条验证 Git index 的 2060条来源/851文件与原字节 SHA256/SHA1一致，代码仍受正常空白检查。
 
 ### 所有者待办 / 未完成的外部验收
-- [x] 版权署名确定为 `gravelstars`，NOTICE 已填写；第三方许可的兼容性审阅仍未关闭，没有自行判定全依赖 Apache 兼容。
+- [x] 版权署名确定为 `gravelstars`，NOTICE 已填写；所有者已审阅并接受当前源码+演示分发范围，但没有自行判定全依赖 Apache 兼容，未来二进制发布仍需复核。
 - [x] 发布范围确定为只公开源码与浏览器演示，不发布二进制安装包；本地 0.1.2 包保留但不作为公开下载。
 - [x] 所有者已将仓库改为 public，并开启 Pages（`Source: GitHub Actions`）。
 - [x] 执行者触发 **Browser demo Pages** [39034066836](https://github.com/gravelstars/AidoChat/actions/runs/39034066836) 成功；线上 Playwright 验收 `ok=true`，外部请求与 4xx/5xx 为空，地址 [gravelstars.github.io/AidoChat](https://gravelstars.github.io/AidoChat/)。

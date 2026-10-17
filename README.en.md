@@ -51,4 +51,4 @@ Choose among six papers, reading sizes and density, a full display name, a separ
 
 0.1.2 runs locally; screenshots use fictional demo data and preset replies. Mobile, cloud sync, web tools, and scanned-PDF OCR are unavailable. Windows/Linux installation needs real-machine testing; see [current status](docs/CLOSEOUT.md).
 
-[Contribute](CONTRIBUTING.md) · [Apache-2.0](LICENSE) (third-party content retains its own terms; [items requiring review](THIRD_PARTY_NOTICES.md))
+[Contribute](CONTRIBUTING.md) · [Apache-2.0](LICENSE) (third-party content retains its own terms; [third-party notices](THIRD_PARTY_NOTICES.md))

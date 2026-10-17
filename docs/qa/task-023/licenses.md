@@ -2,9 +2,13 @@
 
 日期：2026-10-17。执行者：Codex（许可子任务）。
 
-## 分发审查未关闭
+## 所有者复核结论（2026-10-17）
 
-**不能勾选「全部依赖已判定 Apache-2.0 兼容」。** 已立即向主执行者和项目所有者报告：`pdfjs-dist@6.4.299/standard_fonts/LICENSE_LIBERATION` 明文为 **GPL v2 + font exceptions**。原文未改写，完整保存于 [LICENSE_LIBERATION](../../licenses/texts/frontend/pdfjs-dist@6.4.299/standard_fonts/LICENSE_LIBERATION)。这项尚待所有者/合适的许可审阅者作出决定，本次不替换依赖或字体、不自行批准兼容。
+所有者已审阅下列发现，并接受**当前分发范围**：只公开源码与浏览器演示，不发布二进制安装包或 Release。该结论是所有者决定，不是法律意见，也不等于判定全部依赖 Apache-2.0 兼容；原始发现、原文与清单继续保留，未来发布二进制前仍需单独复核。
+
+## 审查发现
+
+**不能把机器扫描结果当作「全部依赖已判定 Apache-2.0 兼容」。** `pdfjs-dist@6.4.299/standard_fonts/LICENSE_LIBERATION` 明文为 **GPL v2 + font exceptions**。原文未改写，完整保存于 [LICENSE_LIBERATION](../../licenses/texts/frontend/pdfjs-dist@6.4.299/standard_fonts/LICENSE_LIBERATION)。本次不替换依赖或字体、不自行改变许可原文。
 
 具体使用链路：`frontend/src/lib/pdf.ts:4` 的 `import.meta.glob` 包括 `standard_fonts/*.{pfb,ttf,otf}`；包含 `LiberationSans-Regular.ttf`、`LiberationSans-Bold.ttf`、`LiberationSans-Italic.ttf`、`LiberationSans-BoldItalic.ttf`。其 §1(a) 谈文档嵌入，§1(b) 另谈 physical product 的 object code/source access；这里仅标出原文条件，不把字体例外解释成应用的无条件许可。[上游原文](https://github.com/mozilla/pdf.js/blob/master/external/standard_fonts/LICENSE_LIBERATION) 可供复核；**当前锁定 npm 包的完整原文**才是本次扫描依据。
 

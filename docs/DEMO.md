@@ -23,7 +23,7 @@ The browser demo uses preset replies and never calls a model. This repository cu
 
 ## 所有者设置
 
-1. 版权署名已确定为 `gravelstars`，NOTICE 已填写。仍须审阅 [第三方许可](../THIRD_PARTY_NOTICES.md) 中的待确认项；当前不能宣称“全部依赖兼容性已通过”。本仓库决定只公开源码与浏览器演示，不发布二进制安装包。
+1. 版权署名已确定为 `gravelstars`，NOTICE 已填写。所有者已审阅并接受当前分发范围（只公开源码与浏览器演示，不发布二进制安装包或 Release）；这不是法律意见，第三方发现与原文仍保留在 [第三方声明](../THIRD_PARTY_NOTICES.md)，未来发布二进制前需另行复核。
 2. 首次自行提交前，在此仓库设置个人邮箱：`git config user.email 你的个人邮箱`。执行者不替你猜测或设置个人邮箱。
 3. 仓库已改为 **public**。如未来改回私有，Pages 需要付费计划。
 4. Pages 已开启（`Source: GitHub Actions`），最近一次 **Browser demo Pages** 部署成功，地址为 `https://gravelstars.github.io/AidoChat/`。后续改动可推送 `main`，或手动触发该工作流；中英 README 已改为直达地址。

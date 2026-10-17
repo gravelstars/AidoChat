@@ -61,4 +61,4 @@ AidoChat 0.1.1 最终源码22aa9ca，CI38945065573三平台全部成功。本机
 
 演示仅用虚构数据和预设回复，有独立浏览器持久化与重置；不连接真实模型、不接收 Key，分享仅预览。宽度小于900px显示电脑访问说明。生产桌面不会进入演示模式。
 
-Apache 官方原文、NOTICE（版权署名为 `gravelstars`）和机器导出的第三方原文已保留，但 GPL 字体例外、LGPL/APSL 等许可待审阅项不能当作已批准分发；见 THIRD_PARTY_NOTICES.md。仓库已 public，Pages 已启用并部署成功：https://gravelstars.github.io/AidoChat/ ，线上 Playwright 验收 `ok=true`。决定只公开源码与演示，不发布二进制安装包或 Release。About 与 Topics 已按所有者文本通过 GitHub API 设置；社交预览图与个人提交邮箱仍待所有者处理。
+Apache 官方原文、NOTICE（版权署名为 `gravelstars`）和机器导出的第三方原文已保留。所有者已审阅并接受当前源码+演示分发范围；GPL 字体例外、LGPL/APSL 等发现仍保留，不能当作对全部依赖或未来二进制分发的法律结论；见 THIRD_PARTY_NOTICES.md。仓库已 public，Pages 已启用并部署成功：https://gravelstars.github.io/AidoChat/ ，线上 Playwright 验收 `ok=true`。决定只公开源码与演示，不发布二进制安装包或 Release。About 与 Topics 已按所有者文本通过 GitHub API 设置；社交预览图与个人提交邮箱仍待所有者处理。

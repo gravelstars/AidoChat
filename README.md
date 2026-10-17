@@ -52,4 +52,4 @@
 
 0.1.2 桌面主体已可运行；本页配图来自虚构数据的浏览器演示，回复均为预设文案。手机端暂不支持；尚无云同步、联网工具或扫描 PDF OCR，Windows/Linux 安装交互仍待真机验收。后续优先完善跨平台验证，详见 [当前状态](docs/CLOSEOUT.md)。
 
-[参与贡献](CONTRIBUTING.md) · [Apache-2.0](LICENSE)（第三方内容另循各自许可；[待审阅项](THIRD_PARTY_NOTICES.md)）
+[参与贡献](CONTRIBUTING.md) · [Apache-2.0](LICENSE)（第三方内容另循各自许可；[第三方声明](THIRD_PARTY_NOTICES.md)）
