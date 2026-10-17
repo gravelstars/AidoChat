@@ -4,7 +4,7 @@
 
 <p align="center">用 @ 点名讨论，用私印确认有来源的群纪要。</p>
 <p align="center"><img alt="版本 0.1.2" src="docs/assets/badge-version.svg"> <img alt="Apache-2.0" src="docs/assets/badge-license.svg"> <img alt="Windows · macOS · Linux" src="docs/assets/badge-platforms.svg"></p>
-<p align="center"><a href="docs/DEMO.md">在线试玩（待开启）</a> · <a href="#下载--download">下载</a> · <a href="docs/USER_GUIDE.md">文档</a></p>
+<p align="center"><a href="https://gravelstars.github.io/AidoChat/">在线试玩</a> · <a href="#下载--download">下载</a> · <a href="docs/USER_GUIDE.md">文档</a></p>
 
 <p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/assets/main-night.png"><img src="docs/assets/main-day.png" alt="AidoChat 三栏：群列表、聊天与有来源的群纪要；含已确认和 AI 建议" width="760"></picture></p>
 
@@ -29,7 +29,7 @@
 
 ### 三十秒上手
 
-1. [试玩演示](docs/DEMO.md)：体验预设回复与盖章，无需 Key（Pages 待开启）。
+1. [试玩演示](https://gravelstars.github.io/AidoChat/)：体验预设回复与盖章，无需 Key。
 2. 桌面版当前从源码构建；公开二进制安装包暂不发布。
 3. 在设置或新建成员表单里配置首个模型服务、Key 与实际模型名。
 4. 创建群、加入成员，输入 `@墨白` 开始讨论。

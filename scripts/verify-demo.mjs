@@ -83,7 +83,13 @@ try {
     await page.getByRole('heading',{name:'这个应用为电脑设计，请用电脑打开'}).waitFor()
     assert.equal(await page.getByRole('navigation',{name:'群聊列表'}).count(),0)
     const image = page.getByRole('img',{name:/AidoChat 宣纸主题/})
-    assert.equal(await image.evaluate(el=>el.complete&&el.naturalWidth>0),true)
+    await image.scrollIntoViewIfNeeded()
+    // Pages 首次冷加载比本地慢；等图片真正解码完成再断言，避免把加载中当成坏图。
+    assert.equal(await image.evaluate(async el=>{
+      if(!el.complete) await new Promise(resolve=>{el.addEventListener('load',resolve,{once:true});el.addEventListener('error',resolve,{once:true})})
+      if(el.decode) await el.decode().catch(()=>{})
+      return el.complete&&el.naturalWidth>0
+    }),true)
     const link = page.getByRole('link',{name:'查看桌面版下载说明'})
     await link.scrollIntoViewIfNeeded()
     const box=await link.boundingBox();assert(box.y>=0&&box.y+box.height<=640)

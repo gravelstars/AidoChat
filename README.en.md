@@ -4,7 +4,7 @@ English · [简体中文](README.md)
 
 <p align="center">Mention members. Trace shared notes. Stamp your decisions.</p>
 <p align="center"><img alt="Version 0.1.2" src="docs/assets/badge-version.svg"> <img alt="Apache-2.0" src="docs/assets/badge-license.svg"> <img alt="Windows · macOS · Linux" src="docs/assets/badge-platforms.svg"></p>
-<p align="center"><a href="docs/DEMO.md">Try the demo (setup pending)</a> · <a href="#download">Download</a> · <a href="docs/USER_GUIDE.md">Docs</a></p>
+<p align="center"><a href="https://gravelstars.github.io/AidoChat/">Try the demo</a> · <a href="#download">Download</a> · <a href="docs/USER_GUIDE.md">Docs</a></p>
 
 <p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/assets/main-night.png"><img src="docs/assets/main-day.png" alt="Groups, messages, and shared notes with both confirmed decisions and AI proposals" width="720"></picture></p>
 
@@ -29,7 +29,7 @@ The desktop app stores data locally and Keys in your system credential store. Us
 
 ### Get started in thirty seconds
 
-1. [Try preset replies and stamping](docs/DEMO.md), without a Key (Pages setup pending).
+1. [Try preset replies and stamping](https://gravelstars.github.io/AidoChat/), without a Key.
 2. Build the desktop app from source; no public binary installers are published yet.
 3. Add a model service, Key, and an available model name in Settings or the member form.
 4. Create a group, add members, and type `@墨白` to start.

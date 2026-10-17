@@ -43,9 +43,10 @@
 ### 所有者待办 / 未完成的外部验收
 - [x] 版权署名确定为 `gravelstars`，NOTICE 已填写；第三方许可的兼容性审阅仍未关闭，没有自行判定全依赖 Apache 兼容。
 - [x] 发布范围确定为只公开源码与浏览器演示，不发布二进制安装包；本地 0.1.2 包保留但不作为公开下载。
-- [ ] 所有者将仓库改为 public，并手动开启 Pages（`Source: GitHub Actions`）；随后由执行者触发部署并核对最终在线地址。
-- [ ] 在已登录 GitHub 实际站点复核 README 日夜与手机宽度（本轮完成官方 HTML 的本地近似预览，不能替代整站验收）。
-- [ ] 手动设置 About、Topics、社交图和个人提交邮箱；暂不发布 Release。
+- [x] 所有者已将仓库改为 public，并开启 Pages（`Source: GitHub Actions`）。
+- [x] 执行者触发 **Browser demo Pages** [39034066836](https://github.com/gravelstars/AidoChat/actions/runs/39034066836) 成功；线上 Playwright 验收 `ok=true`，外部请求与 4xx/5xx 为空，地址 [gravelstars.github.io/AidoChat](https://gravelstars.github.io/AidoChat/)。
+- [x] 所有者已在登录的 GitHub 实际页面检查 README 日夜与手机宽度。
+- [ ] About、Topics、社交图和个人提交邮箱：所有者称已修改 About/Topics，但 GitHub API 仍返回描述 `AidoChat` 且 topics 为空；需在仓库 About 面板复核保存。社交图与提交邮箱未确认；暂不发布 Release。
 
 ## 所有者决定 2026-10-17
 - 仓库：公开，并启用 GitHub Pages 展示浏览器演示。
@@ -53,4 +54,4 @@
 - 署名：公开版权署名为 `gravelstars`；`NOTICE` 已更新。
 - 许可：保留待审阅声明；本次决定不等于判定全部第三方许可兼容。
 - 仓库元数据：About、Topics、社交预览和个人提交邮箱由所有者手动设置。
-- 执行者后续：在所有者开启 Pages 后推送文档变更并触发 **Browser demo Pages**，验证在线地址后把中英 README 的“待开启”入口换成实际地址。
+- 执行者后续：在所有者开启 Pages 后推送文档变更并触发 **Browser demo Pages**，验证在线地址后把中英 README 的“待开启”入口换成实际地址。以上已于本日完成，线上验收结果取 `/private/tmp/aidochat-023-demo-live2/result.json`。

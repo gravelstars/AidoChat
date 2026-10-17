@@ -1,8 +1,8 @@
 # 浏览器演示与下载
 
-在线试玩入口准备就绪，**GitHub Pages 尚待仓库所有者手动开启**。开启并部署成功后的地址：[AidoChat 在线试玩](https://gravelstars.github.io/AidoChat/)。在此之前，请使用下面的本地预览，避免将未部署页面误认为故障。
+在线试玩已上线：[AidoChat 在线试玩](https://gravelstars.github.io/AidoChat/)。回复是预设文案，不调用模型，无需 Key；改动只保存在当前浏览器的演示命名空间。
 
-当前仓库可见性为 **private**，未登录访客无法查看首页。是否公开仓库、私有仓库是否具备 Pages 使用资格，由所有者确认；本任务不会更改可见性。首次推送后的 Pages 工作流在 `configure-pages` 报 `Get Pages site failed / Not Found`，原因是尚未启用 Pages，不是本地演示构建失败。
+仓库当前为 **public**，Pages 已启用（Source: GitHub Actions），最近部署成功。仍需本地预览时按下面步骤运行。
 
 ```sh
 cd frontend
@@ -25,8 +25,8 @@ The browser demo uses preset replies and never calls a model. This repository cu
 
 1. 版权署名已确定为 `gravelstars`，NOTICE 已填写。仍须审阅 [第三方许可](../THIRD_PARTY_NOTICES.md) 中的待确认项；当前不能宣称“全部依赖兼容性已通过”。本仓库决定只公开源码与浏览器演示，不发布二进制安装包。
 2. 首次自行提交前，在此仓库设置个人邮箱：`git config user.email 你的个人邮箱`。执行者不替你猜测或设置个人邮箱。
-3. 仓库可见性改为 **public**（`Settings → General → Danger Zone → Change visibility`）。私有仓库的 Pages 需要付费计划；当前所有者选择公开。
-4. 进入仓库 **Settings → Pages → Build and deployment → Source → GitHub Actions**。开启后可推送 `main`，或由执行者手动触发 **Browser demo Pages**。演示地址为 `https://gravelstars.github.io/AidoChat/`。确认可访问后，将中英 README 的“在线试玩（待开启）”入口改为该地址，移除待开启说明。
+3. 仓库已改为 **public**。如未来改回私有，Pages 需要付费计划。
+4. Pages 已开启（`Source: GitHub Actions`），最近一次 **Browser demo Pages** 部署成功，地址为 `https://gravelstars.github.io/AidoChat/`。后续改动可推送 `main`，或手动触发该工作流；中英 README 已改为直达地址。
 5. 社交分享图：**Settings → General → Social preview → Edit → Upload an image**，上传 `docs/assets/social-day.png`（1280×640）；夜间版本为 `social-night.png`。
 
 About 中文（可直接复制）：
