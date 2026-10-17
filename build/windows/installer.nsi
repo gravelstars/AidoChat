@@ -51,6 +51,14 @@ Section "安装"
     MessageBox MB_OK|MB_ICONSTOP "请先退出旧版 ai-group-chat，再重新安装 AidoChat。"
     Abort
   ${EndIf}
+  ; 覆盖运行时 Windows 会锁定 exe；若不先检查，NSIS 会弹出 Abort/Retry/Ignore，
+  ; 选择“忽略”会跳过主程序，留下一个看似安装完成但无法启动的目录。
+  ClearErrors
+  Delete "$INSTDIR\AidoChat.exe"
+  ${If} ${Errors}
+    MessageBox MB_OK|MB_ICONSTOP "AidoChat 正在运行。请先完全退出 AidoChat（包括后台进程），再重新安装。"
+    Abort
+  ${EndIf}
   Delete "$SMPROGRAMS\ai-group-chat.lnk"
   Delete "$DESKTOP\ai-group-chat.lnk"
   File "${SRC}\AidoChat.exe"

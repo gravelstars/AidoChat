@@ -58,7 +58,7 @@
 
 [全部版本与校验值](https://github.com/gravelstars/AidoChat/releases) · 不确定选哪个：Windows 选 setup.exe，macOS 选 dmg，Ubuntu 选 deb。
 
-> macOS 安装包为 ad-hoc 签名，Windows 未做发布签名。首次打开可能需要在系统安全设置中确认来源；不要在不明来源处下载同名文件。
+> macOS 安装包为 ad-hoc 签名，Windows 未做发布签名。首次打开可能需要在系统安全设置中确认来源；不要在不明来源处下载同名文件。安装或升级前请先完全退出正在运行的 AidoChat（Windows 安装器会检测并提示）。
 
 ## 功能
 

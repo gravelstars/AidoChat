@@ -33,7 +33,8 @@
 | 其他 Linux | `AidoChat.AppImage` | `chmod +x AidoChat.AppImage` 后运行；需要 GTK4 / WebKitGTK 6.0 |
 
 - macOS 包为 Intel 与 Apple Silicon 通用，使用 ad-hoc 签名，未做 Developer ID 签名或公证；首次打开可能需要在「隐私与安全性」中确认来源。
-- Windows 安装器会把程序安装到 `%LOCALAPPDATA%\ai-group-chat`，并创建 AidoChat 快捷方式；请先退出旧版再升级。
+- Windows 安装器会把程序安装到 `%LOCALAPPDATA%\ai-group-chat`，并创建 AidoChat 快捷方式；安装或升级前请先完全退出正在运行的 AidoChat/旧版程序。
+- 如果 Windows 安装时出现“写入文件出错 / 忽略”之类的提示，请关闭 AidoChat 后重新运行安装包；不要选择“忽略”，否则主程序可能没有被安装。
 - Linux 包在 Ubuntu 24.04 的 CI 环境构建；其他发行版需要自行确认 GTK4/WebKitGTK 6.0 依赖。
 - 第一次启动没有内置服务或成员，按下一节配置模型服务。数据保存在本机，Key 存入系统凭证存储。
 

@@ -58,7 +58,7 @@ Choose your platform and download **0.1.2**:
 
 [All releases and checksums](https://github.com/gravelstars/AidoChat/releases) · Not sure which one? Windows: setup.exe, macOS: dmg, Ubuntu: deb.
 
-> macOS builds are ad-hoc signed and Windows builds are unsigned. Your system may ask you to confirm the source on first launch. Do not run files with the same name from untrusted sources.
+> macOS builds are ad-hoc signed and Windows builds are unsigned. Your system may ask you to confirm the source on first launch. Do not run files with the same name from untrusted sources. Quit any running AidoChat instance before installing or upgrading; the Windows installer detects and reports it.
 
 ## Features
 
