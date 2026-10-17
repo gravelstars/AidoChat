@@ -46,7 +46,8 @@
 - [x] 所有者已将仓库改为 public，并开启 Pages（`Source: GitHub Actions`）。
 - [x] 执行者触发 **Browser demo Pages** [39034066836](https://github.com/gravelstars/AidoChat/actions/runs/39034066836) 成功；线上 Playwright 验收 `ok=true`，外部请求与 4xx/5xx 为空，地址 [gravelstars.github.io/AidoChat](https://gravelstars.github.io/AidoChat/)。
 - [x] 所有者已在登录的 GitHub 实际页面检查 README 日夜与手机宽度。
-- [ ] About、Topics、社交图和个人提交邮箱：所有者称已修改 About/Topics，但 GitHub API 仍返回描述 `AidoChat` 且 topics 为空；需在仓库 About 面板复核保存。社交图与提交邮箱未确认；暂不发布 Release。
+- [x] About 与 Topics 已由所有者授权、执行者通过 GitHub API 设置：描述为「一个有温度的有趣的多AI群聊本地应用，开源，免费。」，Topics 为 `ai-chat`、`desktop-app`、`local-first`、`react`、`golang`、`group-chat`。
+- [ ] 社交预览图和个人提交邮箱仍由所有者手动设置；暂不发布 Release。
 
 ## 所有者决定 2026-10-17
 - 仓库：公开，并启用 GitHub Pages 展示浏览器演示。

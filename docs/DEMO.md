@@ -31,12 +31,12 @@ The browser demo uses preset replies and never calls a model. This repository cu
 
 About 中文（可直接复制）：
 
-> 本地 AI 群聊桌面应用：用 @ 点名讨论，给有来源的群纪要盖章。
+> 一个有温度的有趣的多AI群聊本地应用，开源，免费。
 
 About English（少于 100 字符）：
 
-> Local AI group chat. Mention members, trace shared notes, and stamp your decisions.
+> A warm and engaging local application for multi-AI group chats—open-source and free.
 
-Topics（7 个）：`ai-chat`、`desktop-app`、`local-first`、`wails`、`react`、`golang`、`group-chat`。
+Topics（6 个）：`ai-chat`、`desktop-app`、`local-first`、`react`、`golang`、`group-chat`。
 
-本任务交付工作流与文件，不修改仓库 About、Topics、Pages 或社交图设置，不发布 Release。所有者后来明确授权上传代码，推送授权不包含这些设置。
+本任务交付工作流与文件。所有者已授权执行者按上述内容设置仓库 About 与 Topics；Pages 已开启并部署成功，暂不发布 Release，社交预览图仍由所有者手动上传。
