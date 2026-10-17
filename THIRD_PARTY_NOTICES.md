@@ -4,7 +4,7 @@ AidoChat's [Apache-2.0 license](LICENSE) applies to its own material. Third-part
 
 ## Owner decision — 2026-10-17
 
-The project owner reviewed the findings in this file and in the [license audit notes](docs/qa/task-023/licenses.md) and **accepts them for the current distribution scope**: source and the browser demo only, with no binary installers or Release. This records the owner's decision; it is not a legal opinion and does not claim that every dependency is Apache-2.0 compatible. The original findings remain disclosed below. Re-review is required before any binary distribution.
+The project owner reviewed the findings in this file and the machine-generated [review-required report](docs/licenses/review-required.json) and **accepts them for the current distribution scope**: source and the browser demo only, with no binary installers or Release. This records the owner's decision; it is not a legal opinion and does not claim that every dependency is Apache-2.0 compatible. The original findings remain disclosed below. Re-review is required before any binary distribution.
 
 The dependency lists below are **machine-generated**, rather than manually selected direct dependencies:
 
@@ -12,7 +12,7 @@ The dependency lists below are **machine-generated**, rather than manually selec
 - [Go inventory](docs/licenses/go-inventory.md): every module selected by `go list -m all`. Separate `go list -deps` results identify modules imported by the application on Darwin, Windows, and Linux. `module-graph-only` includes build, tool, test, or transitive modules; it does **not** assert those modules are linked into the shipped binary.
 - [Bundled assets](docs/licenses/bundled-assets.json): original OFL font licenses and nested pdf.js CMaps/font/wasm/ICC notices. The package-level pdf.js Apache-2.0 label is insufficient to describe all bundled assets.
 - [Original text provenance](docs/licenses/text-sources.json) and [inline source notice index](docs/licenses/go-inline-notices.json): upstream package/module source paths, original-byte SHA-256 hashes, and sizes. [Tool versions, input hashes and commands](docs/licenses/provenance.json), plus [raw scanner outputs](docs/licenses/raw/), make the export auditable.
-- [Review-required findings](docs/licenses/review-required.json) and [audit notes](docs/qa/task-023/licenses.md): limitations, missing files, and license findings requiring review.
+- [Review-required findings](docs/licenses/review-required.json): limitations, missing files, and license findings requiring review.
 
 Run `bash scripts/export-licenses.sh` from an environment with Node/npm, Go, tar, and network access after `npm ci` in `frontend`. It installs pinned audit tools into a temporary directory; it adds no application dependencies. Set `LICENSE_TOOLS_DIR` to reuse an existing temporary tools directory. The script copies original texts without rewriting them, then regenerates the inventories. License findings are reported, **not silently approved**. Refresh the export whenever either lockfile or the shipped assets change.
 

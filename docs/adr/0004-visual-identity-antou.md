@@ -13,4 +13,4 @@
 产品最独特的能力（区分 AI 建议与用户确认、标明来源）直接成为视觉语言，而不是贴在界面上的装饰。
 
 ## 保护
-`frontend/src/design/*`、`docs/DESIGN.md`、印章与盖章相关样式列入受保护文件（见 AGENTS.md）。
+`frontend/src/design/*`、`docs/DESIGN.md`、印章与盖章相关样式属于品牌视觉基线；修改前请先与维护者确认并重新检查六种纸的对比度。

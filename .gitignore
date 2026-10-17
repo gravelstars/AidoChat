@@ -11,3 +11,17 @@ build/bin/
 
 .task/
 .closeout/
+
+# 本地过程文件：执行手册、任务单、计划、QA 记录与内部保护门禁，不进入公开仓库。
+HANDOFF.md
+AGENTS.md
+CLAUDE.md
+.claude/
+docs/CLOSEOUT.md
+docs/ARCHIVE.md
+docs/tasks/
+docs/plans/
+docs/qa/
+scripts/check-protected.sh
+scripts/protected.txt
+scripts/protected.sha256

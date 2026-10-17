@@ -7,19 +7,19 @@
 │                                                                         │
 │  frontend/ (React + TS, 系统 WebView 渲染)                              │
 │    features/*  ──►  state/store.ts (zustand)  ──►  backend/contract.ts  │
-│                                                   ├─ mock.ts   (已完成) │
-│                                                   └─ wails.ts  (TASK-002)│
+│                                                   ├─ mock.ts              │
+│                                                   └─ wails.ts             │
 │                          ▲ 事件 (message / delta / turn / memory)        │
 │ ─────────────────────────┼──────────────── Wails 绑定 + 事件 ──────────  │
 │                          │                                              │
-│  app/ (Go, Wails 服务层, TASK-002)  薄薄一层：参数转换 + 事件转发        │
+│  app/ (Go, Wails 服务层)  薄薄一层：参数转换 + 事件转发                 │
 │    │                                                                    │
-│    ├─ internal/turn          轮次编排：串行/并行/停止/失败继续  (已完成) │
-│    ├─ internal/contextbuilder 群聊 → 单次模型请求                (已完成) │
-│    ├─ internal/memory        群记忆整理与校验                    (已完成) │
-│    ├─ internal/domain        实体、@ 解析、回复顺序               (已完成) │
-│    ├─ internal/llm           模型调用契约 + 适配器             (TASK-004) │
-│    └─ internal/store         SQLite 持久化                     (TASK-003) │
+│    ├─ internal/turn          轮次编排：串行/并行/停止/失败继续          │
+│    ├─ internal/contextbuilder 群聊 → 单次模型请求                       │
+│    ├─ internal/memory        群记忆整理与校验                           │
+│    ├─ internal/domain        实体、@ 解析、回复顺序                      │
+│    ├─ internal/llm           模型调用契约 + 适配器                      │
+│    └─ internal/store         SQLite 持久化                              │
 │                                                                         │
 └─────────────────────────────────────────────────────────────────────────┘
          │ HTTPS（只有调用模型时才出网，发送的是该成员的上下文）
@@ -40,16 +40,17 @@
   → Backend.send  ──►  Orchestrator.Send
                          1. 获取该群的"轮次锁"（同一群同时只有一个进行中的轮次，否则 ErrBusy）
                          2. ParseMentions → PlanTargets 决定回复者与顺序
-                         3. 写入用户消息，推送 message 事件
-                         4. 没有 @ 任何人 → 结束（只记录，不回复，见 ADR-0001）
-                         5. 为每个回复者写入 pending 占位消息并推送（前端立刻看到"谁在排队"）
+                         3. 校验附件与视觉/预算预检；把用户消息、附件绑定和全部回复占位放入同一事务
+                         4. 提交后推送用户名与全部 pending 占位（前端立刻看到"谁在排队"）
+                         5. 没有 @ 任何人 → 结束（只记录，不回复，见 ADR-0001）
                          6. 后台 goroutine：
                               串行：逐个 reply()，每个都重新读取历史，所以能看到前一位的回复
                               并行：同时 reply()，contextbuilder 会屏蔽本轮其他人的回答
                          7. 全部结束 → turn.end 事件 → AfterTurn 钩子（触发记忆整理）
   reply(成员):
-     读历史 + 群记忆 → contextbuilder.Build → provider.Stream
-     → 每个增量推送 delta 事件 → 结束后 SanitizeReply 去掉模型模仿的标注 → done / error / stopped
+     读历史 + 群记忆 + 附件来源文字 → contextbuilder.Build（只加载窗口内选中的图片）
+     → provider.Stream → 每个增量推送 delta 事件
+     → 结束后 SanitizeReply 去掉模型模仿的标注 → done / error / stopped
 ```
 
 停止：`Orchestrator.Stop(groupID)` 取消整个轮次。正在生成的保留已生成内容，标为 `stopped`；排队中的标为 `stopped` 且内容为空。
@@ -113,3 +114,9 @@ System prompt 的结构依次是：
 - Go：`go test -race ./...`。`contextbuilder`、`memory`、`turn` 的测试描述的就是产品行为，改代码前先读测试。
 - 前端：`cd frontend && npm test`。`testdata/mentions.json` 是 Go 与 TS 共享的 @ 解析用例，两边必须同时通过。
 - 界面：`cd frontend && npm run dev`，浏览器打开 `http://localhost:5173`（mock 后端，含演示数据）；`?platform=windows` 预览 Windows 布局。
+
+## 8. 附件与分享
+
+- 附件文件保存在数据库旁的 `attachments/`，数据库只存随机 ID 与元数据；消息落库时在同一事务里绑定草稿，失败可原样重试。
+- 图片只有在成员开启「图片输入」时才以结构化图像块发送；文档提取文字带 `[#消息号 文件名]` 来源进入上下文。扫描版 PDF 不做 OCR。
+- 分享图片先冻结起止消息的公开字段，再用真实 DOM 测量分页，逐页渲染 1080 宽 PNG。保存由桌面层选择目录，Go 侧在隐藏暂存目录写入并整体发布，不覆盖旧目录。

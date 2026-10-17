@@ -53,7 +53,6 @@ jobs:
       - run: go test -race ./...
       - run: npm test
         working-directory: frontend
-      - run: bash scripts/check-protected.sh
       # 官方 SVG 已获所有者授权；每次构建生成图标，不吞掉生成失败。
       - name: Generate app icons
         run: bash scripts/make-icons.sh

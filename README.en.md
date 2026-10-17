@@ -1,54 +1,136 @@
 English · [简体中文](README.md)
 
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/assets/banner-night.svg"><img src="docs/assets/banner-day.svg" alt="AidoChat — Bring AI into one group. Put decisions on record." width="720"></picture></p>
+# AidoChat
 
-<p align="center">Mention members. Trace shared notes. Stamp your decisions.</p>
-<p align="center"><img alt="Version 0.1.2" src="docs/assets/badge-version.svg"> <img alt="Apache-2.0" src="docs/assets/badge-license.svg"> <img alt="Windows · macOS · Linux" src="docs/assets/badge-platforms.svg"></p>
-<p align="center"><a href="https://gravelstars.github.io/AidoChat/">Try the demo</a> · <a href="#download">Download</a> · <a href="docs/USER_GUIDE.md">Docs</a></p>
+<p align="center">
+  <a href="https://github.com/gravelstars/AidoChat">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="docs/assets/banner-night.svg">
+      <img src="docs/assets/banner-day.svg" alt="AidoChat" width="760">
+    </picture>
+  </a>
+</p>
 
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/assets/main-night.png"><img src="docs/assets/main-day.png" alt="Groups, messages, and shared notes with both confirmed decisions and AI proposals" width="720"></picture></p>
+<p align="center">
+  <strong>A local-first AI group chat for your desktop</strong><br>
+  Bring different models into one group, mention them with @, and stamp the decisions you stand behind.
+</p>
+
+<p align="center">
+  <img alt="Version 0.1.2" src="docs/assets/badge-version.svg">
+  <img alt="Apache-2.0" src="docs/assets/badge-license.svg">
+  <img alt="Windows · macOS · Linux" src="docs/assets/badge-platforms.svg">
+</p>
+
+<p align="center">
+  <a href="https://gravelstars.github.io/AidoChat/"><b>Live demo</b></a> ·
+  <a href="#quick-start">Quick start</a> ·
+  <a href="docs/USER_GUIDE.md">User guide</a> ·
+  <a href="build/README.md">Build from source</a>
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/assets/main-night.png">
+    <img src="docs/assets/main-day.png" alt="AidoChat with group list, conversation, and source-linked shared notes" width="920">
+  </picture>
+</p>
+
+<p align="center"><sub>Screenshots use fictional data and preset replies from the browser demo.</sub></p>
+
+## Why AidoChat
+
+- **A group, not a single chat**: multiple AI members with their own roles and models share one timeline.
+- **Proposals stay separate from decisions**: AI can only propose; only you can stamp a source-linked note as confirmed.
+- **Local-first**: conversations, attachments, and notes live in local SQLite; API keys stay in the system credential store.
+- **Your services, your choice**: OpenAI-compatible APIs, Anthropic, or a local Ollama model.
+
+## Features
+
+<table>
+<tr>
+<td width="50%" valign="middle">
+  <img src="docs/assets/feature-conversation.png" alt="Mention two members and choose sequential replies" width="100%">
+</td>
+<td width="50%" valign="middle">
 
 ### Give the discussion an order
+Mention one member, several, or everyone; choose sequential or parallel replies. Stop at any time, and retry a failed or interrupted reply in place.
 
-<img src="docs/assets/feature-conversation.png" alt="Mention two members, choose sequential replies, and see who is speaking or waiting" width="400">
+</td>
+</tr>
+<tr>
+<td width="50%" valign="middle">
 
-Give each member a role and a model. Mention one or many; choose sequential or parallel replies, stop, or retry in place.
+### Proposals and decisions look different
+AI proposals use a dashed pencil line, your proposals use a solid ink line, and stamped decisions turn cinnabar. Source links jump back to the original message; AI cannot confirm on your behalf.
 
-### Keep proposals distinct from decisions
+</td>
+<td width="50%" valign="middle" align="center">
+  <img src="docs/assets/feature-memory-comparison.png" alt="Dashed AI proposals, solid user proposals, and stamped decisions" width="100%"><br>
+  <img src="docs/assets/stamp.gif" alt="Clicking to stamp: the seal lands and ink spreads" width="46%">
+</td>
+</tr>
+<tr>
+<td width="50%" valign="middle">
+  <img src="docs/assets/feature-papers.png" alt="Six papers: Xuan, Su, Ma, Qing, Ye, and Wujin" width="100%">
+</td>
+<td width="50%" valign="middle">
 
-<p><img src="docs/assets/feature-memory-comparison.png" alt="Dashed AI proposals, solid user proposals, and red stamped confirmations" width="600"> <a href="docs/assets/stamp.gif"><img src="docs/assets/stamp.gif" alt="Actual confirmation: the stamp lands and ink spreads" width="180"></a> <a href="docs/assets/stamp-first.png">Static frame</a></p>
+### Six papers, one personal seal
+Choose among six paper themes, reading sizes and density, a full display name, and a separate short seal. Member avatars can differ per group.
 
-Each group keeps separate notes linked to source messages. AI proposals, your proposals, and confirmed decisions stay distinct; only you can confirm.
-
+</td>
+</tr>
+<tr>
+<td width="50%" valign="middle">
 
 ### Local records, services you choose
+The desktop app uses local SQLite and the system credential store. Attach images and TXT/Markdown/text PDFs, and export a selected message range as paginated PNGs.
 
-<img src="docs/assets/feature-privacy.png" alt="Demo service settings explicitly explain that no API Key is accepted and no real model is contacted" width="280">
+</td>
+<td width="50%" valign="middle" align="center">
+  <img src="docs/assets/feature-privacy.png" alt="Demo service settings never accept a Key or contact a real model" width="100%">
+</td>
+</tr>
+</table>
 
-The desktop app stores data locally and Keys in your system credential store. Use OpenAI-compatible services, Anthropic, or Ollama; attach images and TXT/Markdown/text PDFs, and export a selected message range as paginated PNGs.
+## Quick start
 
-### Get started in thirty seconds
+1. **Live demo**: open [gravelstars.github.io/AidoChat](https://gravelstars.github.io/AidoChat/) without a Key. Replies are preset and data stays in the current browser.
+2. **Build the desktop app**: follow the [build instructions](build/README.md). No public binary installers are published yet.
+3. **Configure a service**: add a base URL, Key, and an available model name in Settings or the member form.
+4. **Start a discussion**: create a group, add members, and type `@墨白` or `@所有人`.
 
-1. [Try preset replies and stamping](https://gravelstars.github.io/AidoChat/), without a Key.
-2. Build the desktop app from source; no public binary installers are published yet.
-3. Add a model service, Key, and an available model name in Settings or the member form.
-4. Create a group, add members, and type `@墨白` to start.
+## Build from source
 
-### Download
+Requires Go (version in `go.mod`), Node.js 24, and the Wails build environment for your platform.
 
-This repository currently publishes source and the browser demo only; no Windows, macOS, or Linux binary installers are published. Third-party license review remains open, so build from [source instructions](build/README.md).
+```sh
+go install github.com/wailsapp/wails/v3/cmd/wails3@v3.0.0-beta.29
+cd frontend && npm ci && cd ..
+wails3 task package
+```
 
-### Pick your paper and personal seal
+Browser development preview:
 
-<img src="docs/assets/feature-papers.png" alt="Six papers: Xuan, Su, Ma, Qing, Ye, and Wujin" width="720">
+```sh
+cd frontend
+npm ci
+npm run dev
+```
 
-Choose among six papers, reading sizes and density, a full display name, a separate short seal, and image avatars. Member avatars can vary by group.
+See [build/README.md](build/README.md) and [CONTRIBUTING.md](CONTRIBUTING.md).
 
 > [!WARNING]
-> Data is stored locally. When you call a cloud model, the mentioned member's context—group rules, shared notes, recent messages, and required attachment content—is sent to the model service you configured. When notes are organized, new discussion is sent to the service configured for that task.
+> Data is stored locally. When you call a cloud model, the mentioned member's context—group rules, shared notes, recent messages, and required attachment content—is sent to that member's configured model service. When notes are organized, new discussion is sent to the service configured for that task.
 
-### Status and next steps
+## Status
 
-0.1.2 runs locally; screenshots use fictional demo data and preset replies. Mobile, cloud sync, web tools, and scanned-PDF OCR are unavailable. Windows/Linux installation needs real-machine testing; see [current status](docs/CLOSEOUT.md).
+0.1.2 runs on the desktop; the browser demo uses fictional data and preset replies. Mobile, accounts, cloud sync, web tools, scanned-PDF OCR, Word/Excel, and video attachments are not supported. Windows/Linux installation still needs real-machine testing.
+
+## Contributing
+
+Report bugs and ideas through [Issues](https://github.com/gravelstars/AidoChat/issues). Development conventions and checks are in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 [Contribute](CONTRIBUTING.md) · [Apache-2.0](LICENSE) (third-party content retains its own terms; [third-party notices](THIRD_PARTY_NOTICES.md))
