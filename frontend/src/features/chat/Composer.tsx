@@ -1,12 +1,17 @@
 import { forwardRef, useCallback, useEffect, useImperativeHandle, useMemo, useRef, useState, type KeyboardEvent } from 'react'
-import type { Member, ReplyMode } from '../../backend'
+import { backend, type Attachment, type Member, type ReplyMode } from '../../backend'
 import { Button } from '../../components/Button'
 import { Seal } from '../../components/Seal'
 import { Segmented } from '../../components/Segmented'
 import { avatarOf } from '../../lib/avatar'
 import { activeMentionQuery, parseMentions, planTargets } from '../../lib/mention'
 import { useChat, type GroupState } from '../../state/store'
+import { AttachmentList } from './AttachmentList'
+import { ATTACHMENT_ACCEPT, MAX_ATTACHMENTS, remainingDraft, toBase64, validateAttachment, validateDocument, validateImage } from '../../lib/attachments'
+import { extractPDF } from '../../lib/pdf'
 import styles from './Composer.module.css'
+
+const textDrafts = new Map<string, string>()
 
 export interface ComposerHandle {
   insertMention(name: string): void
@@ -34,7 +39,20 @@ export const Composer = forwardRef<ComposerHandle, Props>(function Composer({ st
   const send = useChat((s) => s.send)
   const stop = useChat((s) => s.stop)
   const area = useRef<HTMLTextAreaElement>(null)
-  const [text, setText] = useState('')
+  const [text, setTextState] = useState(textDrafts.get(group.id) ?? '')
+  const textRef = useRef(text)
+  const setText = (value: string) => { textRef.current = value; textDrafts.set(group.id, value); setTextState(value) }
+  const [attachments,setAttachments] = useState<Attachment[]>([])
+  const attachmentRef = useRef<Attachment[]>([])
+  const epoch = useRef(0)
+  const pendingImports = useRef(0)
+  const importControllers = useRef(new Set<AbortController>())
+  const [importing,setImporting] = useState(false)
+  const [sending,setSending] = useState(false)
+  const sendingRef = useRef(false)
+  const inFlightIds = useRef(new Set<string>())
+  const [attachmentError,setAttachmentError] = useState('')
+  const fileInput = useRef<HTMLInputElement>(null)
   const [caret, setCaret] = useState(0)
   const [mode, setMode] = useState<ReplyMode | null>(null) // null = 跟随群默认
   const [menuIndex, setMenuIndex] = useState(0)
@@ -42,11 +60,20 @@ export const Composer = forwardRef<ComposerHandle, Props>(function Composer({ st
   const [shaking, setShaking] = useState(false) // 忙碌时按 Enter 的抖动提示
   const composing = useRef(false)
 
-  // 切换群时清空本地状态
+  // 群间保留文本草稿；未发送附件只属于当前输入会话。
   useEffect(() => {
-    setText('')
+    const draft = textDrafts.get(group.id) ?? ''
+    textRef.current=draft;setTextState(draft)
+    setAttachments([]);attachmentRef.current=[];setAttachmentError('');setSending(false);sendingRef.current=false
     setMode(null)
     area.current?.focus()
+    return () => {
+      epoch.current++
+      for(const ctrl of importControllers.current) ctrl.abort()
+      importControllers.current.clear()
+      for(const a of attachmentRef.current) if(!inFlightIds.current.has(a.id)) void backend.removeDraftAttachment(a.id).catch(()=>{})
+      attachmentRef.current=[]
+    }
   }, [group.id])
 
   const groupMembers = useMemo(() => group.memberIds.map((id) => members[id]).filter(Boolean), [group.memberIds, members])
@@ -106,21 +133,62 @@ export const Composer = forwardRef<ComposerHandle, Props>(function Composer({ st
     },
   }))
 
+  const removeAttachment = async (id:string) => {
+    if(sendingRef.current) return
+    const session=epoch.current
+    try {
+      await backend.removeDraftAttachment(id)
+      if(session!==epoch.current) return
+      attachmentRef.current=remainingDraft(attachmentRef.current,[id]);setAttachments(attachmentRef.current)
+    } catch(e) {if(session===epoch.current)setAttachmentError(e instanceof Error?e.message:String(e))}
+  }
+
+  const addFiles = async (files:File[]) => {
+    if(sendingRef.current || !files.length) return
+    const session=epoch.current
+    const controller=new AbortController();importControllers.current.add(controller)
+    pendingImports.current++ ; setImporting(true);setAttachmentError('')
+    try {
+      for(const file of files) {
+        if(session!==epoch.current) break
+        const format=validateAttachment(file,attachmentRef.current.length)
+        const bytes=new Uint8Array(await file.arrayBuffer())
+        let text='', pageCount=0
+        if(format.kind==='image') {
+          const url=URL.createObjectURL(file)
+          try { await new Promise<void>((resolve,reject)=> { const image=new Image();image.onload=()=>{try{validateImage(image.naturalWidth,image.naturalHeight);resolve()}catch(e){reject(e)}};image.onerror=()=>reject(new Error('图片无法读取，请更换有效的 PNG、JPEG 或 WebP'));image.src=url }) }
+          finally {URL.revokeObjectURL(url)}
+        } else if(format.mime==='application/pdf') { ({text,pageCount}=await extractPDF(bytes,controller.signal)) }
+        else { try {text=new TextDecoder('utf-8',{fatal:true}).decode(bytes)} catch {throw new Error('文本必须使用 UTF-8 编码，请转换后添加')} validateDocument(text) }
+        if(session!==epoch.current) break
+        const attachment=await backend.importAttachment({groupId:group.id,name:file.name,mime:format.mime,base64:toBase64(bytes),text,pageCount})
+        if(session!==epoch.current || attachmentRef.current.length>=MAX_ATTACHMENTS) {await backend.removeDraftAttachment(attachment.id);if(session===epoch.current) throw new Error('每条消息最多添加 4 份附件');break}
+        attachmentRef.current=[...attachmentRef.current,attachment];setAttachments(attachmentRef.current)
+      }
+    } catch(e) {if(session===epoch.current) setAttachmentError(e instanceof Error?e.message:String(e))}
+    finally {importControllers.current.delete(controller);pendingImports.current--;if(pendingImports.current===0) setImporting(false)}
+  }
+
   const submit = async () => {
     const content = text.trim()
-    if (!content) return
-    if (busy) {
-      setShaking(false)
-      requestAnimationFrame(() => setShaking(true))
-      return
+    const sent = [...attachmentRef.current]
+    if ((!content && !sent.length) || sendingRef.current || pendingImports.current>0) return
+    if (busy) { setShaking(false);requestAnimationFrame(() => setShaking(true));return }
+    if(sent.some(a=>a.kind==='image')) {
+      const unsupported=targets.filter(id=>!members[id]?.supportsImages).map(id=>members[id]?.name ?? id)
+      if(unsupported.length) {setAttachmentError(`「${unsupported.join('、')}」尚未启用图片输入，请在成员设置中确认模型能力，或移除图片后发送`);return}
     }
-    setText('')
-    setMode(null)
+    const session=epoch.current
+    const original=textRef.current
+    sendingRef.current=true;inFlightIds.current=new Set(sent.map(a=>a.id));setSending(true);setAttachmentError('')
     try {
-      await send(content, mode ?? undefined)
-    } catch {
-      setText(content) // 发送失败：内容还给用户
-    }
+      await send(content, mode ?? undefined, sent.map(a=>a.id))
+      if(textDrafts.get(group.id)===original) textDrafts.set(group.id,'')
+      if(session!==epoch.current) return
+      attachmentRef.current=remainingDraft(attachmentRef.current,sent.map(a=>a.id));setAttachments(attachmentRef.current)
+      if(textRef.current===original) {setText('');setMode(null)}
+    } catch(e) { if(session===epoch.current) setAttachmentError(e instanceof Error?e.message:String(e));else for(const a of sent) void backend.removeDraftAttachment(a.id).catch(()=>{}) }
+    finally {for(const a of sent) inFlightIds.current.delete(a.id);if(session===epoch.current){sendingRef.current=false;setSending(false)}}
   }
 
   const onKeyDown = (e: KeyboardEvent<HTMLTextAreaElement>) => {
@@ -167,7 +235,7 @@ export const Composer = forwardRef<ComposerHandle, Props>(function Composer({ st
   }, [stop])
 
   return (
-    <div className={styles.dock}>
+    <div className={styles.dock} onDragOver={(e)=>{if(e.dataTransfer.types.includes('Files'))e.preventDefault()}} onDrop={(e)=>{if(e.dataTransfer.files.length){e.preventDefault();void addFiles(Array.from(e.dataTransfer.files))}}}>
       <div className={`${styles.composer} ${shaking ? styles.shake : ''}`} onAnimationEnd={() => setShaking(false)}>
         {menuOpen && (
           <ul className={styles.menu} role="listbox" aria-label="选择要 @ 的成员">
@@ -205,6 +273,10 @@ export const Composer = forwardRef<ComposerHandle, Props>(function Composer({ st
           <TargetStrip group={group} targets={targets} members={members} mode={effectiveMode} hasText={!!text.trim()} busy={busy} />
         )}
 
+        {!!attachments.length && <p className={styles.attachmentStatus}>最多 4 份；图片 ≤10 MiB，文档 ≤20 MiB。仅点名 AI 时发送给模型。</p>}
+        {!!attachments.length && <div className={styles.attachments}><AttachmentList attachments={attachments} onRemove={(id)=>void removeAttachment(id)} disabled={sending} /></div>}
+        {importing && <p className={styles.attachmentStatus} role="status">正在本地读取附件</p>}
+        {attachmentError && <p className={styles.attachmentError} role="alert">{attachmentError}</p>}
         <textarea
           ref={area}
           className={styles.input}
@@ -217,6 +289,7 @@ export const Composer = forwardRef<ComposerHandle, Props>(function Composer({ st
           }}
           onSelect={(e) => setCaret(e.currentTarget.selectionStart)}
           onKeyDown={onKeyDown}
+          onPaste={(e)=>{const images=Array.from(e.clipboardData.files).filter(f=>f.type.startsWith('image/'));if(images.length){e.preventDefault();void addFiles(images)}}}
           onCompositionStart={() => (composing.current = true)}
           onCompositionEnd={(e) => {
             composing.current = false
@@ -228,6 +301,8 @@ export const Composer = forwardRef<ComposerHandle, Props>(function Composer({ st
         />
 
         <div className={styles.bar}>
+          <input ref={fileInput} type="file" accept={ATTACHMENT_ACCEPT} multiple hidden onChange={(e)=>{void addFiles(Array.from(e.target.files??[]));e.target.value=''}} />
+          <Button variant="quiet" size="sm" disabled={importing||sending||attachments.length>=MAX_ATTACHMENTS} onClick={()=>fileInput.current?.click()} aria-label="添加附件" title="最多 4 份：图片 10 MiB，TXT/Markdown/PDF 文档 20 MiB；PDF 最多 100 页，文本最多 10 万字符">添加附件</Button>
           <Button variant="quiet" size="sm" className={styles.atBtn} onClick={insertAt} aria-label="插入 @">
             @
           </Button>
@@ -241,7 +316,7 @@ export const Composer = forwardRef<ComposerHandle, Props>(function Composer({ st
               停止
             </Button>
           ) : (
-            <Button variant="accent" size="sm" icon="send" onClick={() => void submit()} disabled={!text.trim()}>
+            <Button variant="accent" size="sm" icon="send" onClick={() => void submit()} disabled={(!text.trim() && !attachments.length) || importing || sending}>
               发送
             </Button>
           )}

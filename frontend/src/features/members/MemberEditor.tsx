@@ -30,6 +30,7 @@ export function MemberEditor({ open, onClose, member, onSaved }: { open: boolean
   const [rolePrompt, setRolePrompt] = useState('')
   const [providerId, setProviderId] = useState('')
   const [model, setModel] = useState('')
+  const [supportsImages, setSupportsImages] = useState(false)
   const [contextTokens, setContextTokens] = useState(16000)
   const [temperature, setTemperature] = useState('')
   const [errors, setErrors] = useState<{ name?: string; provider?: string; model?: string; form?: string }>({})
@@ -52,6 +53,7 @@ export function MemberEditor({ open, onClose, member, onSaved }: { open: boolean
       setRolePrompt(member.rolePrompt)
       setProviderId(member.providerId)
       setModel(member.model)
+      setSupportsImages(member.supportsImages ?? false)
       setContextTokens(member.contextTokens)
       setTemperature(member.temperature != null ? String(member.temperature) : '')
     } else {
@@ -62,6 +64,7 @@ export function MemberEditor({ open, onClose, member, onSaved }: { open: boolean
       setRolePrompt('')
       setProviderId(providers[0]?.id ?? '')
       setModel('')
+      setSupportsImages(false)
       setContextTokens(16000)
       setTemperature('')
     }
@@ -101,6 +104,7 @@ export function MemberEditor({ open, onClose, member, onSaved }: { open: boolean
         rolePrompt,
         providerId,
         model: model.trim(),
+        supportsImages,
         temperature: temp != null && Number.isFinite(temp) ? temp : undefined,
         contextTokens: contextTokens || 16000,
       })
@@ -194,7 +198,7 @@ export function MemberEditor({ open, onClose, member, onSaved }: { open: boolean
               </Select>
             )}
           </Field>
-          <Field label="模型" error={errors.model} hint="填写此服务实际可用的模型名，以服务商后台为准。">
+          <Field label="模型" error={errors.model} hint="可自由填写模型名，不限于示例；请以服务商后台实际可用的模型名为准。">
             {(id) => (
               <TextInput id={id} value={model} onChange={(e) => setModel(e.target.value)} placeholder="例如：deepseek-chat" />
             )}
@@ -210,6 +214,9 @@ export function MemberEditor({ open, onClose, member, onSaved }: { open: boolean
           </p>
         )}
 
+        <Field label="图片输入" hint="仅在服务商确认该模型支持视觉输入时开启。勾选不会赋予纯文本模型看图能力；关闭时，点名此成员发送图片会提示更换模型。">
+          {(id) => <label className={styles.imageCapability} htmlFor={id}><input id={id} type="checkbox" checked={supportsImages} onChange={(e) => setSupportsImages(e.target.checked)} /> 该模型支持图片输入</label>}
+        </Field>
         <div className={styles.fieldRow}>
           <Field label="上下文预算" hint="该模型可用的 token 上限。">
             {(id) => <TextInput id={id} type="number" min={1000} step={1000} value={contextTokens} onChange={(e) => setContextTokens(Number(e.target.value))} />}

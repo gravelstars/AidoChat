@@ -69,7 +69,7 @@ interface ChatStore {
   init(): Promise<void>
   open(groupId: string): Promise<void>
   setView(v: View): void
-  send(content: string, mode?: ReplyMode): Promise<void>
+  send(content: string, mode?: ReplyMode, attachmentIds?: string[]): Promise<void>
   stop(): void
   retry(messageId: string): void
   createGroup(input: CreateGroupInput): Promise<void>
@@ -178,6 +178,7 @@ function onEvent(e: BackendEvent) {
       set((s) => patchGroup(s, e.groupId, { busy: false }))
       return
     case 'memory':
+      if(e.error) reportError(new Error(e.error))
       set((s) => {
         const g = s.detail[e.groupId]
         if (!g) return {}
@@ -281,10 +282,10 @@ export const useChat = create<ChatStore>((set, get) => ({
     set({ view })
   },
 
-  async send(content, mode) {
+  async send(content, mode, attachmentIds) {
     const id = get().activeId
     if (!id) return
-    await backend.send(id, content, mode)
+    await backend.send(id, content, mode, attachmentIds)
   },
 
   stop() {

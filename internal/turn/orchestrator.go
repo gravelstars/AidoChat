@@ -10,6 +10,7 @@ package turn
 import (
 	"context"
 	"errors"
+	"fmt"
 	"strings"
 	"sync"
 	"time"
@@ -25,6 +26,17 @@ var (
 	ErrNotRetryable = errors.New("只能重试失败或已中断的成员回复")
 )
 
+// UserError 表示可以直接展示给用户的校验错误（附件能力、预算等）。
+// 服务层不能用“请检查本地数据”的通用文案覆盖它，否则用户无从知道该改哪里。
+type UserError struct{ err error }
+
+func (e *UserError) Error() string { return e.err.Error() }
+func (e *UserError) Unwrap() error { return e.err }
+
+func userErrorf(format string, args ...any) error {
+	return &UserError{err: fmt.Errorf(format, args...)}
+}
+
 // Store 是编排器需要的最小持久化接口，SQLite 实现见 TASK-003。
 type Store interface {
 	Group(ctx context.Context, id string) (domain.Group, error)
@@ -35,8 +47,9 @@ type Store interface {
 	// RecentMessages 返回该群最近 limit 条消息，按 Seq 升序。
 	RecentMessages(ctx context.Context, groupID string, limit int) ([]domain.Message, error)
 	MemoryItems(ctx context.Context, groupID string) ([]domain.MemoryItem, error)
-	// InsertMessage 在事务里分配 Seq（群内 max+1）并写入，回填 m.Seq。
-	InsertMessage(ctx context.Context, m *domain.Message) error
+	// InsertMessages 在同一事务里分配 Seq（群内 max+1）并写入，成功后回填 ID/Seq。
+	// 用户消息与其回复占位必须一次提交，避免只落库一半、草稿却已被绑定。
+	InsertMessages(ctx context.Context, messages []*domain.Message) error
 	UpdateMessage(ctx context.Context, m domain.Message) error
 }
 
@@ -74,6 +87,7 @@ type Orchestrator struct {
 	AfterTurn func(groupID string)
 	// HistoryLimit 是组装上下文时最多加载的历史条数，默认 200。
 	HistoryLimit int
+	LoadImage    func(context.Context, string) (llm.Image, error)
 
 	mu     sync.Mutex
 	active map[string]context.CancelFunc // groupID -> cancel
@@ -86,9 +100,13 @@ type SendResult struct {
 }
 
 // Send 同步完成落库与编排准备后立即返回，模型调用在后台进行，结果通过 Emit 推送。
-func (o *Orchestrator) Send(ctx context.Context, groupID, content string, mode *domain.ReplyMode) (SendResult, error) {
+func (o *Orchestrator) Send(ctx context.Context, groupID, content string, mode *domain.ReplyMode, attachmentLists ...[]domain.Attachment) (SendResult, error) {
 	content = strings.TrimSpace(content)
-	if content == "" {
+	var attachments []domain.Attachment
+	if len(attachmentLists) > 0 {
+		attachments = attachmentLists[0]
+	}
+	if content == "" && len(attachments) == 0 {
 		return SendResult{}, ErrEmpty
 	}
 	runCtx, cancel := context.WithCancel(context.Background())
@@ -128,36 +146,41 @@ func (o *Orchestrator) Send(ctx context.Context, groupID, content string, mode *
 	now := o.Now()
 	user := domain.Message{
 		ID: o.NewID(), GroupID: groupID, AuthorKind: domain.AuthorUser, AuthorID: domain.UserID,
-		Content: content, Mentions: ids, MentionAll: all, TurnID: turnID, ReplyMode: m,
+		Content: content, Attachments: attachments, Mentions: ids, MentionAll: all, TurnID: turnID, ReplyMode: m,
 		Status: domain.StatusDone, CreatedAt: now, FinishedAt: &now,
 	}
-	if err := o.Store.InsertMessage(ctx, &user); err != nil {
+	if err := o.preflightAttachments(ctx, g, members, user, order); err != nil {
+		release()
+		return SendResult{}, err
+	}
+	// 先为所有回复者建占位，用户消息、附件绑定和占位必须同一事务提交。
+	slots := make([]domain.Message, 0, len(order))
+	for _, id := range order {
+		mem := members[id]
+		slots = append(slots, domain.Message{
+			ID: o.NewID(), GroupID: groupID, AuthorKind: domain.AuthorMember, AuthorID: id,
+			ReplyToID: user.ID, TurnID: turnID, Model: mem.Model,
+			Status: domain.StatusPending, CreatedAt: o.Now(),
+		})
+	}
+	pending := make([]*domain.Message, 0, len(slots)+1)
+	pending = append(pending, &user)
+	for i := range slots {
+		pending = append(pending, &slots[i])
+	}
+	if err := o.Store.InsertMessages(ctx, pending); err != nil {
 		release()
 		return SendResult{}, err
 	}
 	o.emit(Event{Kind: EventMessage, GroupID: groupID, TurnID: turnID, Message: &user})
+	for i := range slots {
+		o.emit(Event{Kind: EventMessage, GroupID: groupID, TurnID: turnID, Message: &slots[i]})
+	}
 
 	res := SendResult{UserMessage: user, TurnID: turnID, Order: order}
 	if len(order) == 0 {
 		release()
 		return res, nil
-	}
-
-	// 先为所有回复者建占位，前端立刻能看到"谁在排队"。
-	slots := make([]domain.Message, 0, len(order))
-	for _, id := range order {
-		mem := members[id]
-		slot := domain.Message{
-			ID: o.NewID(), GroupID: groupID, AuthorKind: domain.AuthorMember, AuthorID: id,
-			ReplyToID: user.ID, TurnID: turnID, Model: mem.Model,
-			Status: domain.StatusPending, CreatedAt: o.Now(),
-		}
-		if err := o.Store.InsertMessage(ctx, &slot); err != nil {
-			release()
-			return res, err
-		}
-		slots = append(slots, slot)
-		o.emit(Event{Kind: EventMessage, GroupID: groupID, TurnID: turnID, Message: &slot})
 	}
 	o.emit(Event{Kind: EventTurnStart, GroupID: groupID, TurnID: turnID, Order: order})
 
@@ -245,6 +268,10 @@ func (o *Orchestrator) Retry(ctx context.Context, messageID string) error {
 		}
 	}
 
+	if err := o.preflightAttachments(ctx, g, members, user, []string{msg.AuthorID}); err != nil {
+		release()
+		return err
+	}
 	// 原地重置：保留编号与触发关系，先推送 pending 让界面回到"思考中"。
 	msg.Content, msg.Error, msg.FinishedAt, msg.Status = "", "", nil, domain.StatusPending
 	if err = o.Store.UpdateMessage(ctx, msg); err != nil {
@@ -381,6 +408,10 @@ func (o *Orchestrator) reply(ctx context.Context, g domain.Group, members map[st
 	out := contextbuilder.Build(contextbuilder.Input{
 		Group: g, Members: all, Self: self, History: history, Memory: mem, Turn: t,
 	})
+	if err := o.loadSelectedImages(ctx, &out.Request); err != nil {
+		finish(domain.StatusError, err.Error())
+		return
+	}
 	slot.Status, slot.Provider, slot.Model, slot.ContextSeq = domain.StatusStreaming, prov.Name, self.Model, out.ContextSeq
 	_ = o.Store.UpdateMessage(bg, slot)
 	o.emit(Event{Kind: EventMessage, GroupID: g.ID, TurnID: t.UserMessage.TurnID, Message: &slot})
@@ -416,4 +447,62 @@ func missingAuthors(history []domain.Message, members map[string]domain.Member) 
 		}
 	}
 	return out
+}
+
+// preflightAttachments 不落部分轮次：任一被点名成员不能读图或必选内容超预算，整个发送保持草稿。
+func (o *Orchestrator) preflightAttachments(ctx context.Context, g domain.Group, members map[string]domain.Member, user domain.Message, order []string) error {
+	if len(user.Attachments) == 0 {
+		return nil
+	}
+	if len(user.Attachments) > domain.MaxAttachments {
+		return userErrorf("每条消息最多 4 份附件")
+	}
+	if user.Seq == 0 {
+		last, err := o.Store.RecentMessages(ctx, g.ID, 1)
+		if err != nil {
+			return err
+		}
+		user.Seq = 1
+		if len(last) > 0 {
+			user.Seq = last[len(last)-1].Seq + 1
+		}
+	}
+	memory, err := o.Store.MemoryItems(ctx, g.ID)
+	if err != nil {
+		return err
+	}
+	hasImage := false
+	for _, a := range user.Attachments {
+		hasImage = hasImage || a.Kind == "image"
+	}
+	for _, id := range order {
+		self := members[id]
+		if hasImage && !self.SupportsImages {
+			return userErrorf("成员「%s」未启用图片输入，请在成员设置确认模型支持图片，或移除本次图片", self.Name)
+		}
+		budget := self.ContextTokens
+		if budget <= 0 {
+			budget = 16000
+		}
+		out := contextbuilder.Build(contextbuilder.Input{Group: g, Members: members, Self: self, History: []domain.Message{user}, Memory: memory, Turn: contextbuilder.Turn{UserMessage: user, Mode: user.ReplyMode, Order: order}})
+		if out.EstTokens > budget {
+			return userErrorf("成员「%s」的必选附件及请求约需 %d token，超过上下文预算 %d；图片成本为保守粗估，请缩小图片、拆分文档或提高模型预算", self.Name, out.EstTokens, budget)
+		}
+	}
+	return nil
+}
+func (o *Orchestrator) loadSelectedImages(ctx context.Context, req *llm.Request) error {
+	for mi := range req.Messages {
+		for ii, img := range req.Messages[mi].Images {
+			if o.LoadImage == nil {
+				return errors.New("未配置本地图片读取器")
+			}
+			loaded, err := o.LoadImage(ctx, img.ID)
+			if err != nil {
+				return err
+			}
+			req.Messages[mi].Images[ii] = loaded
+		}
+	}
+	return nil
 }

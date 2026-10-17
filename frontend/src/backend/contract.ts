@@ -57,6 +57,7 @@ export interface Member {
   providerId: string
   model: string
   temperature?: number
+  supportsImages?: boolean
   contextTokens: number
 }
 
@@ -87,7 +88,23 @@ export interface Group extends GroupSummary {
   createdAt: string
 }
 
+export interface Attachment {
+  id: string
+  name: string
+  mime: string
+  size: number
+  kind: 'image' | 'document'
+  url: string
+  text: string
+  pageCount: number
+  width: number
+  height: number
+}
+
+export interface ImportAttachmentInput { groupId: string; name: string; mime: string; base64: string; text: string; pageCount: number }
+
 export interface Message {
+  attachments?: Attachment[]
   id: string
   groupId: string
   seq: number
@@ -204,6 +221,7 @@ export interface SaveMemberInput {
   providerId: string
   model: string
   temperature?: number
+  supportsImages?: boolean
   contextTokens: number
 }
 
@@ -212,7 +230,7 @@ export type BackendEvent =
   | { kind: 'delta'; groupId: string; messageId: string; delta: string }
   | { kind: 'turn.start'; groupId: string; turnId: string; order: string[] }
   | { kind: 'turn.end'; groupId: string; turnId: string }
-  | { kind: 'memory'; groupId: string; items: MemoryItem[]; cursor: number; summarizing: boolean }
+  | { kind: 'memory'; error?: string; groupId: string; items: MemoryItem[]; cursor: number; summarizing: boolean }
   | { kind: 'group'; group: GroupSummary }
   | { kind: 'group.remove'; groupId: string }
 
@@ -226,7 +244,10 @@ export interface Backend {
   archiveGroup(groupId: string, archived: boolean): Promise<void>
   /** 删除群并级联删除消息与记忆（TASK-009） */
   deleteGroup(groupId: string): Promise<void>
-  send(groupId: string, content: string, mode?: ReplyMode): Promise<SendResult>
+  importAttachment(input: ImportAttachmentInput): Promise<Attachment>
+  readAttachment(id: string): Promise<Attachment>
+  removeDraftAttachment(id: string): Promise<void>
+  send(groupId: string, content: string, mode?: ReplyMode, attachmentIds?: string[]): Promise<SendResult>
   stop(groupId: string): Promise<void>
   /** 重新生成一条失败或中断的回复（TASK-005：Go 侧 Orchestrator.Retry） */
   retry(messageId: string): Promise<void>

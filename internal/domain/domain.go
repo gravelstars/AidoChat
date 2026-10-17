@@ -45,16 +45,17 @@ type Provider struct {
 
 // Member 是一个 AI 成员（数字员工）。AI 没有个人记忆，见 ADR-0001。
 type Member struct {
-	ID            string
-	Name          string // 全局唯一，不含空白与 '@'，用于 @ 匹配
-	Avatar        Avatar
-	Brief         string // 一句话简介，会告诉群里其他成员"这人是干什么的"
-	RolePrompt    string // 角色提示词，只进入自己的 system prompt
-	ProviderID    string
-	Model         string
-	Temperature   *float64
-	ContextTokens int // 该模型可用的上下文预算（不含回复预留）
-	CreatedAt     time.Time
+	ID             string
+	Name           string // 全局唯一，不含空白与 '@'，用于 @ 匹配
+	Avatar         Avatar
+	Brief          string // 一句话简介，会告诉群里其他成员"这人是干什么的"
+	RolePrompt     string // 角色提示词，只进入自己的 system prompt
+	ProviderID     string
+	Model          string
+	Temperature    *float64
+	SupportsImages bool
+	ContextTokens  int // 该模型可用的上下文预算（不含回复预留）
+	CreatedAt      time.Time
 }
 
 // Avatar 默认是一枚印章：一个字 + 一种矿物颜料色；也可以换成图片。
@@ -89,12 +90,13 @@ type Group struct {
 
 // Message 是群里的一条发言。"谁说的、谁处理的、回复谁、什么时候"都在这里。
 type Message struct {
-	ID         string
-	GroupID    string
-	Seq        int64 // 群内单调递增，从 1 开始；对人和对模型都用 #Seq 指代消息
-	AuthorKind AuthorKind
-	AuthorID   string // 成员 ID；用户为 UserID；系统消息为空
-	Content    string
+	ID          string
+	GroupID     string
+	Seq         int64 // 群内单调递增，从 1 开始；对人和对模型都用 #Seq 指代消息
+	AuthorKind  AuthorKind
+	AuthorID    string // 成员 ID；用户为 UserID；系统消息为空
+	Content     string
+	Attachments []Attachment
 
 	// 用户消息：解析出的 @ 对象（有序）。
 	Mentions   []string

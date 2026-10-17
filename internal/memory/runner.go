@@ -6,6 +6,7 @@ import (
 	"context"
 	"encoding/json"
 	"errors"
+	"fmt"
 	"log/slog"
 	"strings"
 	"sync"
@@ -40,6 +41,7 @@ type Event struct {
 	Items       []domain.MemoryItem
 	Cursor      int64
 	Summarizing bool
+	Error       string
 }
 
 // Runner 执行记忆整理，并串行化所有记忆写入（整理落地与用户盖章共用同一把锁）。
@@ -192,6 +194,7 @@ func (r *Runner) once(ctx context.Context, groupID string, force bool) {
 		slog.Warn("整理：读取历史失败", "group", groupID, "error", err)
 		return
 	}
+	history = attachmentHistory(history)
 	window, ready := r.policy().Pending(g.MemoryCursor, history, force)
 	if !ready {
 		return
@@ -222,6 +225,16 @@ func (r *Runner) once(ctx context.Context, groupID string, force bool) {
 		return
 	}
 
+	budget := firstMember(g, members).ContextTokens
+	if budget <= 0 {
+		budget = 16000
+	}
+	window, err = summaryWindow(model, g, members, items, window, budget)
+	if err != nil {
+		r.publishFailure(groupID)
+		r.emit(Event{GroupID: groupID, Items: items, Cursor: g.MemoryCursor, Error: err.Error()})
+		return
+	}
 	req := BuildRequest(model, g, members, items, window, time.Local)
 	raw, err := r.complete(ctx, client, req)
 	ops, parseErr := ParseOps(raw)
@@ -389,4 +402,29 @@ func head(s string, n int) string {
 		return string(r[:n])
 	}
 	return s
+}
+
+// 整理只读带来源的提取文字，原图不会自动发送给整理模型。
+func attachmentHistory(history []domain.Message) []domain.Message {
+	out := append([]domain.Message(nil), history...)
+	for i, m := range out {
+		out[i].Content = m.Content + domain.AttachmentText(m, false)
+	}
+	return out
+}
+func summaryWindow(model string, g domain.Group, members map[string]domain.Member, items []domain.MemoryItem, window []domain.Message, budget int) ([]domain.Message, error) {
+	for n := 1; n <= len(window); n++ {
+		req := BuildRequest(model, g, members, items, window[:n], time.Local)
+		cost := llm.EstimateTokens(req.System)
+		for _, m := range req.Messages {
+			cost += llm.EstimateTokens(m.Content) + 4
+		}
+		if cost > budget {
+			if n == 1 {
+				return nil, fmt.Errorf("纪要整理暂停：消息 #%d 及其附件超过整理上下文预算 %d，请配置更大预算的整理成员或拆分文档；该消息尚未整理", window[0].Seq, budget)
+			}
+			return window[:n-1], nil
+		}
+	}
+	return window, nil
 }

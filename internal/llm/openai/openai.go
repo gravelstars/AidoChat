@@ -6,6 +6,7 @@ import (
 	"context"
 	"encoding/json"
 	"errors"
+	"fmt"
 	"net/http"
 
 	"ai-group-chat/internal/llm"
@@ -32,7 +33,7 @@ func New(baseURL, key string) (*Provider, error) {
 
 type wireMessage struct {
 	Role    string `json:"role"`
-	Content string `json:"content"`
+	Content any    `json:"content"`
 }
 
 func (p *Provider) Stream(ctx context.Context, req llm.Request, onDelta func(string)) (llm.Usage, error) {
@@ -45,7 +46,18 @@ func (p *Provider) Stream(ctx context.Context, req llm.Request, onDelta func(str
 		messages = append(messages, wireMessage{"system", req.System})
 	}
 	for _, m := range req.Messages {
-		messages = append(messages, wireMessage{string(m.Role), m.Content})
+		var content any = m.Content
+		if len(m.Images) > 0 {
+			parts := []any{map[string]any{"type": "text", "text": m.Content}}
+			for _, img := range m.Images {
+				if err := img.Validate(); err != nil {
+					return usage, err
+				}
+				parts = append(parts, map[string]any{"type": "image_url", "image_url": map[string]string{"url": "data:" + img.MIME + ";base64," + img.Base64}})
+			}
+			content = parts
+		}
+		messages = append(messages, wireMessage{string(m.Role), content})
 	}
 	body := struct {
 		Model       string          `json:"model"`
@@ -102,5 +114,12 @@ func (p *Provider) Stream(ctx context.Context, req llm.Request, onDelta func(str
 		}
 		return false, nil
 	})
+	if err != nil {
+		for _, m := range req.Messages {
+			if len(m.Images) > 0 {
+				return usage, fmt.Errorf("%w；请检查所选模型是否支持图片输入及服务的图片限制", err)
+			}
+		}
+	}
 	return usage, err
 }

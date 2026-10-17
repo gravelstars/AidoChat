@@ -17,6 +17,7 @@ const (
 type Message struct {
 	Role    Role
 	Content string
+	Images  []Image
 }
 
 // Request 保证：Messages 非空、以 user 开头、user/assistant 严格交替、以 user 结尾。

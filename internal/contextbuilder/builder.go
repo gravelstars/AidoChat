@@ -81,11 +81,11 @@ func Build(in Input) Output {
 	required := visible[turnStart:]
 	used := llm.EstimateTokens(head) + llm.EstimateTokens(memoryText) + llm.EstimateTokens(turnText)
 	for _, m := range required {
-		used += llm.EstimateTokens(b.render(m)) + 4
+		used += llm.EstimateTokens(b.render(m)) + b.imageCost(m) + 4
 	}
 	start := turnStart
 	for start > 0 {
-		cost := llm.EstimateTokens(b.render(visible[start-1])) + 4
+		cost := llm.EstimateTokens(b.render(visible[start-1])) + b.imageCost(visible[start-1]) + 4
 		if used+cost > budget {
 			break
 		}
@@ -172,7 +172,7 @@ func (b builder) render(m domain.Message) string {
 		}
 		head += "]"
 	}
-	body := m.Content
+	body := m.Content + domain.AttachmentText(m, b.in.Self.SupportsImages)
 	if m.Status == domain.StatusStopped {
 		body += "\n（此回复被用户中断，未写完）"
 	}
@@ -194,12 +194,13 @@ func (b builder) seqOf(id string) int64 {
 // toMessages 映射角色并合并相邻同角色消息，保证 user 开头、交替、user 结尾。
 func (b builder) toMessages(window []domain.Message) []llm.Message {
 	var out []llm.Message
-	push := func(role llm.Role, text string) {
+	push := func(role llm.Role, text string, images ...llm.Image) {
 		if n := len(out); n > 0 && out[n-1].Role == role {
 			out[n-1].Content += "\n\n" + text
+			out[n-1].Images = append(out[n-1].Images, images...)
 			return
 		}
-		out = append(out, llm.Message{Role: role, Content: text})
+		out = append(out, llm.Message{Role: role, Content: text, Images: images})
 	}
 	for _, m := range window {
 		role := llm.RoleUser
@@ -209,7 +210,7 @@ func (b builder) toMessages(window []domain.Message) []llm.Message {
 		if len(out) == 0 && role == llm.RoleAssistant {
 			push(llm.RoleUser, "（以下是群聊记录节选，更早的内容见系统提示中的群记忆）")
 		}
-		push(role, b.render(m))
+		push(role, b.render(m), b.images(m)...)
 	}
 	if out[len(out)-1].Role != llm.RoleUser {
 		// 串行轮次中，若前一位回复者恰好是自己（不应发生）或历史以自己结尾，补一个用户侧提示。

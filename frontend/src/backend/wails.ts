@@ -144,7 +144,10 @@ export function createWailsBackend(load: () => Promise<ShellRuntime> = loadRunti
     updateGroup: (input) => call('UpdateGroup', input),
     archiveGroup: (id, archived) => call('ArchiveGroup', id, archived),
     deleteGroup: (id) => call('DeleteGroup', id),
-    send: (id, content, mode) => call('Send', id, content, mode ?? null),
+    importAttachment: (input) => call('ImportAttachment', input),
+    readAttachment: (id) => call('ReadAttachment', id),
+    removeDraftAttachment: (id) => call('RemoveDraftAttachment', id),
+    send: (id, content, mode, ids) => ids?.length ? call('SendWithAttachments', id, content, mode ?? null, ids) : call('Send', id, content, mode ?? null),
     stop: (id) => call('Stop', id),
     retry: (id) => call('Retry', id),
     memory: {

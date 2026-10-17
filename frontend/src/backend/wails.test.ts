@@ -82,3 +82,12 @@ it('打开群期间收到的完成事件并入快照，避免首次打开丢失�
  const detail=await opening
  expect(detail.messages[0].status).toBe('done');expect(detail.messages[0].content).toBe('最终正文');expect(detail.busy).toBe(false)
 })
+
+ it('附件通过专用稳定签名发送，读写草稿保持 ID 参数', async()=>{
+  const api=runtime();const b=createWailsBackend(async()=>api)
+  const input={groupId:'g',name:'a.txt',mime:'text/plain',base64:'YWJj',text:'abc',pageCount:0}
+  await b.importAttachment(input);await b.readAttachment('a');await b.removeDraftAttachment('a');await b.send('g','',undefined,['a'])
+  expect(api.Call.ByName.mock.calls).toEqual([
+   ['ai-group-chat/app.Service.ImportAttachment',input],['ai-group-chat/app.Service.ReadAttachment','a'],['ai-group-chat/app.Service.RemoveDraftAttachment','a'],['ai-group-chat/app.Service.SendWithAttachments','g','',null,['a']],
+  ])
+ })

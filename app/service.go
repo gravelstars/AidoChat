@@ -7,6 +7,7 @@ import (
 	"errors"
 	"fmt"
 	"log/slog"
+	"os"
 	"os/exec"
 	"path/filepath"
 	"runtime"
@@ -41,6 +42,7 @@ type Service struct {
 
 func NewService(db *store.Store, providers turn.Providers, platform string, emit func(Event)) *Service {
 	s := &Service{db: db, events: newEventBuffer(emit), platform: platform, credentials: systemCredentials{}}
+	s.cleanupDraftAttachments()
 	// 编排器可能已读取旧配置；在凭证变更同一边界内重读，才能保证地址与 Key 配对。
 	construct := func(ctx context.Context, requested domain.Provider) (llm.Provider, error) {
 		s.providersMu.Lock()
@@ -67,9 +69,10 @@ func NewService(db *store.Store, providers turn.Providers, platform string, emit
 	s.runner = &memory.Runner{
 		Store: db, Providers: memory.Providers(construct), NewID: store.NewID, Now: time.Now, Write: &s.memoryMu,
 		Emit: func(e memory.Event) {
-			s.events.send(Event{"kind": "memory", "groupId": e.GroupID, "items": memoriesDTO(e.Items), "cursor": e.Cursor, "summarizing": e.Summarizing})
+			s.events.send(Event{"kind": "memory", "groupId": e.GroupID, "items": memoriesDTO(e.Items), "cursor": e.Cursor, "summarizing": e.Summarizing, "error": e.Error})
 		},
 	}
+	s.turns.LoadImage = s.loadImage
 	s.turns.AfterTurn = func(groupID string) { s.runner.Trigger(groupID) }
 	return s
 }
@@ -96,6 +99,7 @@ func CloseService(s *Service) {
 	}
 	// 等待进行中的记忆整理退出，避免它在数据库关闭后仍在写。
 	s.runner.Close()
+	s.cleanupDraftAttachments()
 	s.events.close()
 }
 
@@ -107,6 +111,11 @@ func friendly(err error, action string) error {
 		return fmt.Errorf("%s：数据不存在，请重新打开群聊", action)
 	}
 	if errors.Is(err, turn.ErrBusy) || errors.Is(err, turn.ErrEmpty) || errors.Is(err, turn.ErrNotRetryable) {
+		return err
+	}
+	// 附件能力/预算校验的文案本身就是给用户的处理建议，保留原文。
+	var userErr *turn.UserError
+	if errors.As(err, &userErr) {
 		return err
 	}
 	slog.Warn(action, "error", err)
@@ -237,7 +246,11 @@ func (s *Service) summary(ctx context.Context, g domain.Group) (GroupSummary, er
 		if m.Status != domain.StatusDone && m.Status != domain.StatusStopped {
 			continue
 		}
-		r := []rune(m.Content)
+		preview := m.Content
+		if strings.TrimSpace(preview) == "" && len(m.Attachments) > 0 {
+			preview = fmt.Sprintf("[附件] %s（%d份）", m.Attachments[0].Name, len(m.Attachments))
+		}
+		r := []rune(preview)
 		if len(r) > 100 {
 			r = r[:100]
 		}
@@ -306,6 +319,9 @@ func (s *Service) CreateGroup(ctx context.Context, input CreateGroupInput) (Grou
 	return out, nil
 }
 func (s *Service) Send(ctx context.Context, id, content string, mode *domain.ReplyMode) (SendResult, error) {
+	return s.SendWithAttachments(ctx, id, content, mode, nil)
+}
+func (s *Service) SendWithAttachments(ctx context.Context, id, content string, mode *domain.ReplyMode, attachmentIDs []string) (SendResult, error) {
 	s.lifecycle.Lock()
 	defer s.lifecycle.Unlock()
 	if s.closed {
@@ -314,7 +330,11 @@ func (s *Service) Send(ctx context.Context, id, content string, mode *domain.Rep
 	if mode != nil && *mode != "serial" && *mode != "parallel" {
 		return SendResult{}, errors.New("请选择依次或同时回复")
 	}
-	r, err := s.turns.Send(ctx, id, content, mode)
+	attachments, err := s.db.DraftAttachments(ctx, id, attachmentIDs)
+	if err != nil {
+		return SendResult{}, err
+	}
+	r, err := s.turns.Send(ctx, id, content, mode, attachments)
 	return SendResult{messageDTO(r.UserMessage), r.TurnID, nonnil(r.Order)}, friendly(err, "发送消息")
 }
 func (s *Service) Stop(ctx context.Context, id string) error { s.turns.Stop(id); return nil }
@@ -333,7 +353,7 @@ func (s *Service) Summarize(ctx context.Context, id string) error {
 // UploadAvatar 原样保存一张头像图片，返回可直接放进 Avatar.image 的地址（TASK-013）。
 func (s *Service) UploadAvatar(ctx context.Context, name, mime string, data []byte) (string, error) {
 	_ = ctx
-	return SaveAvatar(name, mime, data)
+	return saveAvatarAt(filepath.Join(filepath.Dir(s.db.Path()), "avatars"), name, mime, data)
 }
 func (s *Service) mutateMemory(ctx context.Context, id string, change func(domain.MemoryItem, time.Time) (domain.MemoryItem, error)) (MemoryItem, error) {
 	// 用户操作使用同一把锁；TASK-006 整理应用结果时必须共用这条串行边界。
@@ -494,7 +514,7 @@ func (s *Service) SaveMember(ctx context.Context, in SaveMemberInput) (Member, e
 	if in.ContextTokens <= 0 {
 		in.ContextTokens = 16000
 	}
-	m := domain.Member{ID: in.ID, Name: in.Name, Avatar: in.Avatar.domain(), Brief: strings.TrimSpace(in.Brief), RolePrompt: in.RolePrompt, ProviderID: in.ProviderID, Model: strings.TrimSpace(in.Model), Temperature: in.Temperature, ContextTokens: in.ContextTokens}
+	m := domain.Member{ID: in.ID, Name: in.Name, Avatar: in.Avatar.domain(), Brief: strings.TrimSpace(in.Brief), RolePrompt: in.RolePrompt, ProviderID: in.ProviderID, Model: strings.TrimSpace(in.Model), Temperature: in.Temperature, ContextTokens: in.ContextTokens, SupportsImages: in.SupportsImages}
 	if err = s.db.SaveMember(ctx, &m); err != nil {
 		if strings.Contains(err.Error(), "UNIQUE") || strings.Contains(err.Error(), "constraint") {
 			return Member{}, errors.New("已经有叫这个名字的成员了")
@@ -924,8 +944,15 @@ func (s *Service) DeleteGroup(ctx context.Context, id string) error {
 	if s.turns.Busy(id) {
 		return errors.New("该群正在回复，请先停止再删除")
 	}
+	attachmentIDs, err := s.db.AttachmentIDs(ctx, id, false)
+	if err != nil {
+		return friendly(err, "读取群附件")
+	}
 	if err := s.db.DeleteGroup(ctx, id); err != nil {
 		return friendly(err, "删除群")
+	}
+	for _, attachmentID := range attachmentIDs {
+		_ = os.Remove(filepath.Join(s.attachmentDir(), attachmentID))
 	}
 	s.events.send(Event{"kind": "group.remove", "groupId": id})
 	return nil

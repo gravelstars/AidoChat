@@ -28,6 +28,7 @@ CREATE TABLE members (
   model           TEXT NOT NULL,
   temperature     REAL,
   context_tokens  INTEGER NOT NULL DEFAULT 16000,
+  supports_images INTEGER NOT NULL DEFAULT 0, -- 仅由用户确认模型能力后开启
   created_at      TEXT NOT NULL,
   deleted_at      TEXT                   -- 软删除：历史消息仍需显示其名字头像
 );
@@ -62,6 +63,7 @@ CREATE TABLE messages (
   author_kind  TEXT NOT NULL CHECK (author_kind IN ('user', 'member', 'system')),
   author_id    TEXT NOT NULL DEFAULT '',
   content      TEXT NOT NULL DEFAULT '',
+  attachments  TEXT NOT NULL DEFAULT '[]', -- 事务绑定后的附件元数据快照
   mentions     TEXT NOT NULL DEFAULT '[]',   -- JSON 数组，成员 ID 有序
   mention_all  INTEGER NOT NULL DEFAULT 0,
   reply_to_id  TEXT NOT NULL DEFAULT '',
@@ -112,3 +114,12 @@ CREATE TABLE settings (
 -- UPDATE messages SET status = 'stopped' WHERE status IN ('pending', 'streaming');
 
 -- 活跃成员必须引用未下线服务；约束触发器见 migrations/003_provider_retirement.sql。
+
+-- 附件草稿与消息的绑定身份，文件按id保存在数据库旁attachments目录。
+CREATE TABLE attachments (
+  id TEXT PRIMARY KEY,
+  group_id TEXT NOT NULL REFERENCES groups(id) ON DELETE CASCADE,
+  message_id TEXT REFERENCES messages(id) ON DELETE CASCADE,
+  metadata TEXT NOT NULL
+);
+CREATE INDEX attachments_group ON attachments(group_id);

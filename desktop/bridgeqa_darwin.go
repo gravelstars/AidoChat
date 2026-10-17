@@ -5,12 +5,15 @@ package desktop
 import (
 	"context"
 	_ "embed"
+	"encoding/base64"
 	"encoding/json"
 	"errors"
 	"log/slog"
 	"os"
 	"path/filepath"
+	"strconv"
 	"strings"
+	"sync"
 	"time"
 
 	"ai-group-chat/internal/domain"
@@ -52,7 +55,22 @@ func prepareBackendQA(db *store.Store, p turn.Providers) (turn.Providers, error)
 
 type bridgeQAProvider struct{}
 
-func (bridgeQAProvider) Stream(ctx context.Context, _ llm.Request, delta func(string)) (llm.Usage, error) {
+var bridgeQARequestMu sync.Mutex
+
+func (bridgeQAProvider) Stream(ctx context.Context, request llm.Request, delta func(string)) (llm.Usage, error) {
+	if os.Getenv("AGC_QA_ATTACHMENTS") == "1" && os.Getenv("AGC_QA_DB") != "" {
+		// 只在独立库的QA模型中记录合成请求，不读取凭证或真实用户聊天。
+		bridgeQARequestMu.Lock()
+		raw, err := json.Marshal(request)
+		if err == nil {
+			f, err := os.OpenFile(filepath.Join(os.Getenv("AGC_QA_DIR"), "requests.jsonl"), os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0600)
+			if err == nil {
+				_, _ = f.Write(append(raw, '\n'))
+				_ = f.Close()
+			}
+		}
+		bridgeQARequestMu.Unlock()
+	}
 	// 先给一小段带代码块的正文，用来验收 TASK-011 的高亮与复制。
 	delta("桥接验收记录：下面是一段示例代码，用于检查高亮配色。\n\n```ts\nconst answer = 42 // 注释走 --ink-3\nfunction greet(name: string) {\n  return `你好，${name}`\n}\n```\n\n")
 	chunk := "桥接验收记录：正文通过 Go 编排器与事件缓冲进入本机界面，保留来源编号。\n\n"
@@ -73,12 +91,34 @@ var bridgeQAScript string
 //go:embed onboardingqa.js
 var onboardingQAScript string
 
+//go:embed attachmentsqa.js
+var attachmentsQAScript string
+
+//go:embed attachmentsrestartqa.js
+var attachmentsRestartQAScript string
+
 func installBridgeQA(app *application.App, w *application.WebviewWindow) {
 	dir := os.Getenv("AGC_QA_DIR")
 	if dir == "" {
 		return
 	}
 	_ = os.MkdirAll(dir, 0700)
+	app.Event.On("bridge:qa-fixtures", func(*application.CustomEvent) {
+		if os.Getenv("AGC_QA_ATTACHMENTS") != "1" || os.Getenv("AGC_QA_DB") == "" {
+			return
+		}
+		root := "/private/tmp/aidochat-020-fixtures"
+		fixtures := map[string]string{}
+		for _, name := range []string{"sample.png", "sample.txt", "sample.md", "sample.pdf", "no-text.pdf", "invalid.pdf"} {
+			raw, err := os.ReadFile(filepath.Join(root, name))
+			if err == nil && len(raw) < 2<<20 {
+				fixtures[name] = base64.StdEncoding.EncodeToString(raw)
+			}
+		}
+		if raw, err := json.Marshal(fixtures); err == nil {
+			w.ExecJS("window.__attachmentQAFixtures = " + string(raw))
+		}
+	})
 	app.Event.On("bridge:qa-progress", func(e *application.CustomEvent) { slog.Info("QA 进度", "stage", e.Data) })
 	app.Event.On("bridge:qa-diagnostic", func(e *application.CustomEvent) { slog.Warn("QA 前端诊断", "error", e.Data) })
 	app.Event.On("bridge:qa-capture", func(e *application.CustomEvent) {
@@ -91,7 +131,8 @@ func installBridgeQA(app *application.App, w *application.WebviewWindow) {
 			return
 		}
 		captureQA(w, dir, name)
-		w.ExecJS(`window.__bridgeCaptureDone = true`)
+		// 用截图名而不是布尔值回执，避免上一张的迟到回执让下一张提前继续。
+		w.ExecJS("window.__bridgeCaptureDone = " + strconv.Quote(name))
 	})
 	app.Event.On("bridge:qa-minimum", func(*application.CustomEvent) {
 		w.SetSize(960, 640)
@@ -112,6 +153,12 @@ func installBridgeQA(app *application.App, w *application.WebviewWindow) {
 			script := bridgeQAScript
 			if os.Getenv("AGC_QA_ONBOARDING") == "1" {
 				script = onboardingQAScript
+			}
+			if os.Getenv("AGC_QA_ATTACHMENTS") == "1" {
+				script = attachmentsQAScript
+			}
+			if os.Getenv("AGC_QA_RESTART") == "1" {
+				script = attachmentsRestartQAScript
 			}
 			w.ExecJS(script)
 		})

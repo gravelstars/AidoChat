@@ -55,13 +55,13 @@ func (s *Store) DeleteProvider(ctx context.Context, id string) error {
 	return affected(s.db.ExecContext(ctx, `UPDATE providers SET deleted_at=?,key_ref='' WHERE id=? AND deleted_at IS NULL`, stamp(time.Now()), id))
 }
 
-const memberColumns = `id,name,avatar_glyph,avatar_color,avatar_image,brief,role_prompt,provider_id,model,temperature,context_tokens,created_at`
+const memberColumns = `id,name,avatar_glyph,avatar_color,avatar_image,brief,role_prompt,provider_id,model,temperature,context_tokens,created_at,supports_images`
 
 func scanMember(row rowScanner) (domain.Member, error) {
 	var m domain.Member
 	var when storedTime
 	var temperature sql.NullFloat64
-	err := row.Scan(&m.ID, &m.Name, &m.Avatar.Glyph, &m.Avatar.Color, &m.Avatar.Image, &m.Brief, &m.RolePrompt, &m.ProviderID, &m.Model, &temperature, &m.ContextTokens, &when)
+	err := row.Scan(&m.ID, &m.Name, &m.Avatar.Glyph, &m.Avatar.Color, &m.Avatar.Image, &m.Brief, &m.RolePrompt, &m.ProviderID, &m.Model, &temperature, &m.ContextTokens, &when, &m.SupportsImages)
 	m.CreatedAt = when.Time
 	if temperature.Valid {
 		m.Temperature = &temperature.Float64
@@ -132,9 +132,9 @@ func (s *Store) SaveMember(ctx context.Context, m *domain.Member) error {
 		next.ID = NewID()
 	}
 	next.CreatedAt = created(next.CreatedAt)
-	result, err := s.db.ExecContext(ctx, `INSERT INTO members(`+memberColumns+`) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)
- ON CONFLICT(id) DO UPDATE SET name=excluded.name,avatar_glyph=excluded.avatar_glyph,avatar_color=excluded.avatar_color,avatar_image=excluded.avatar_image,brief=excluded.brief,role_prompt=excluded.role_prompt,provider_id=excluded.provider_id,model=excluded.model,temperature=excluded.temperature,context_tokens=excluded.context_tokens WHERE members.deleted_at IS NULL`,
-		next.ID, next.Name, next.Avatar.Glyph, next.Avatar.Color, next.Avatar.Image, next.Brief, next.RolePrompt, next.ProviderID, next.Model, next.Temperature, next.ContextTokens, stamp(next.CreatedAt))
+	result, err := s.db.ExecContext(ctx, `INSERT INTO members(`+memberColumns+`) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)
+ ON CONFLICT(id) DO UPDATE SET name=excluded.name,avatar_glyph=excluded.avatar_glyph,avatar_color=excluded.avatar_color,avatar_image=excluded.avatar_image,brief=excluded.brief,role_prompt=excluded.role_prompt,provider_id=excluded.provider_id,model=excluded.model,temperature=excluded.temperature,context_tokens=excluded.context_tokens,supports_images=excluded.supports_images WHERE members.deleted_at IS NULL`,
+		next.ID, next.Name, next.Avatar.Glyph, next.Avatar.Color, next.Avatar.Image, next.Brief, next.RolePrompt, next.ProviderID, next.Model, next.Temperature, next.ContextTokens, stamp(next.CreatedAt), next.SupportsImages)
 	if err = affected(result, err); err != nil {
 		return fmt.Errorf("保存成员：%w", err)
 	}

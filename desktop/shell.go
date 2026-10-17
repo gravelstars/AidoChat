@@ -166,8 +166,8 @@ func Run(assets fs.FS) error {
 		Services: []application.Service{application.NewService(shell), application.NewService(service)},
 		Flags:    map[string]any{"app.platform": Platform(runtime.GOOS)},
 		// 头像资源走 /avatars/*（TASK-013），其余交给嵌入的前端资源。
-		Assets: application.AssetOptions{Handler: bridge.AvatarHandler(application.AssetFileServerFS(assets))},
-		Mac:      application.MacOptions{ApplicationShouldTerminateAfterLastWindowClosed: true},
+		Assets: application.AssetOptions{Handler: bridge.ResourceHandler(service, application.AssetFileServerFS(assets))},
+		Mac:    application.MacOptions{ApplicationShouldTerminateAfterLastWindowClosed: true},
 		OnShutdown: func() {
 			if err := shell.flush(); err != nil {
 				slog.Warn("窗口配置保存失败", "error", err)

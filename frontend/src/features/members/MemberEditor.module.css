@@ -104,3 +104,21 @@
 .link:active {
   transform: translateY(1px);
 }
+
+.imageCapability {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  cursor: pointer;
+  color: var(--ink);
+}
+
+.imageCapability input {
+  accent-color: var(--ink);
+  cursor: pointer;
+}
+
+.imageCapability:active {
+  transform: translateY(1px);
+  transition-duration: 0s;
+}

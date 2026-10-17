@@ -149,7 +149,7 @@ export function ProviderDialog({ open, onClose, provider, onSaved, suggestedMode
       <Field label="名称" error={errors.name}>
         {(id) => <TextInput id={id} value={name} onChange={(e) => setName(e.target.value)} placeholder="例如：DeepSeek" autoFocus maxLength={24} />}
       </Field>
-      <Field label="类型" hint="OpenAI 兼容覆盖绝大多数服务；Anthropic 用官方接口。">
+      <Field label="类型" hint="按服务商的接口协议选择；其他兼容 OpenAI 的服务也可使用。Anthropic 选官方接口。">
         {() => (
           <Segmented
             label="服务类型"
@@ -162,11 +162,11 @@ export function ProviderDialog({ open, onClose, provider, onSaved, suggestedMode
           />
         )}
       </Field>
-      <Field label="服务地址" error={errors.baseUrl}>
+      <Field label="服务地址" error={errors.baseUrl} hint="常用服务按钮仅供快捷填入。列表里没有的服务，也可手动填写名称和 API 地址，并选择对应的接口类型。">
         {(id) => (
           <>
             <TextInput id={id} value={baseUrl} onChange={(e) => setBaseUrl(e.target.value)} placeholder="https://…" />
-            <div className={styles.presets}>
+            <div className={styles.presets} role="group" aria-label="常用服务快捷填入">
               {PRESETS.map((p) => (
                 <Button
                   key={p.name}

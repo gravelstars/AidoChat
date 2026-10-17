@@ -1,5 +1,7 @@
+import { validateAttachment, validateDocument } from '../lib/attachments'
 import { validateUserProfile } from '../lib/userProfile'
 import type {
+  Attachment,
   Appearance,
   Avatar,
   Backend,
@@ -142,9 +144,10 @@ const running = new Map<string, AbortController>()
 
 function summary(d: GroupDetail) {
   const last = [...d.messages].reverse().find((m) => m.status === 'done' || m.status === 'stopped')
+  const preview = last?.content.trim() || (last?.attachments?.length ? `[附件] ${last.attachments[0].name}（${last.attachments.length}份）` : '')
   return {
     ...d.group,
-    lastMessage: last && { authorId: last.authorId, authorKind: last.authorKind, preview: last.content.replace(/[#*`>\n-]+/g, ' ').slice(0, 60), at: last.createdAt },
+    lastMessage: last && { authorId: last.authorId, authorKind: last.authorKind, preview: preview.replace(/[#*`>\n-]+/g, ' ').slice(0, 60), at: last.createdAt },
   }
 }
 
@@ -242,7 +245,20 @@ async function runTurn(d: GroupDetail, user: Message, mode: ReplyMode, slots: Me
 }
 
 export function createMockBackend(): Backend {
+  const attachments=new Map<string,{attachment:Attachment;groupId:string;bound:boolean}>()
   return {
+    async importAttachment(input) {
+      if(!db[input.groupId]) throw new Error('群聊不存在')
+      const binary=atob(input.base64)
+      const format=validateAttachment({name:input.name,size:binary.length,type:input.mime},0)
+      if(format.kind==='document') validateDocument(input.text,input.pageCount)
+      const id=nid('att')
+      const a:Attachment={id,name:input.name,mime:format.mime,size:binary.length,kind:format.kind,url:`data:${format.mime};base64,${input.base64}`,text:input.text,pageCount:input.pageCount,width:0,height:0}
+      attachments.set(id,{attachment:a,groupId:input.groupId,bound:false})
+      return structuredClone(a)
+    },
+    async readAttachment(id) {const a=attachments.get(id);if(!a) throw new Error('附件不存在');return structuredClone(a.attachment)},
+    async removeDraftAttachment(id) {const a=attachments.get(id);if(a?.bound) throw new Error('已发送附件不能作为草稿移除');attachments.delete(id)},
     async bootstrap(): Promise<Bootstrap> {
       await sleep(120)
       const ua = navigator.userAgent
@@ -310,21 +326,29 @@ export function createMockBackend(): Backend {
     },
 
     async deleteGroup(groupId) {
+      for(const [id,a] of attachments) if(a.groupId===groupId) attachments.delete(id)
       delete db[groupId]
       emit({ kind: 'group.remove', groupId })
     },
 
-    async send(groupId, content, mode): Promise<SendResult> {
+    async send(groupId, content, mode, attachmentIds=[]): Promise<SendResult> {
       const d = db[groupId]
       if (d.busy) throw new Error('该群有回复正在进行，请稍候或先停止')
       const cands = d.group.memberIds.map((id) => memberById[id])
       const parsed = parseMentions(content, cands)
       const order = planTargets(d.group.memberIds, parsed)
+      if(attachmentIds.length>4 || new Set(attachmentIds).size!==attachmentIds.length) throw new Error('每条消息最多 4 份不同附件')
+      const pending=attachmentIds.map(id=>attachments.get(id))
+      if(pending.some(a=>!a||a.groupId!==groupId||a.bound)) throw new Error('附件不属于本群，或已发送，请重新添加')
+      if(!content.trim()&&!pending.length) throw new Error('消息不能为空')
+      if(pending.some(a=>a!.attachment.kind==='image')&&order.some(id=>!memberById[id].supportsImages)) throw new Error('被点名成员尚未启用图片输入')
       const m: ReplyMode = mode ?? d.group.defaultMode
       const turnId = nid('t')
       const seq = () => d.messages.length + 1
       const user = msg({ id: nid('m'), groupId, seq: seq(), authorKind: 'user', authorId: USER_ID, content, turnId,
         mentions: parsed.ids, mentionAll: parsed.all, replyMode: m, createdAt: iso(new Date()) })
+      user.attachments=pending.map(a=>structuredClone(a!.attachment))
+      for(const a of pending) a!.bound=true
       d.messages.push(user)
       emit({ kind: 'message', groupId, message: { ...user } })
       if (order.length === 0) {
@@ -458,7 +482,7 @@ export function createMockBackend(): Backend {
       const id = input.id || nid('mem')
       const next: Member = {
         id, name: input.name, avatar: input.avatar, brief: input.brief, rolePrompt: input.rolePrompt,
-        providerId: input.providerId, model: input.model, temperature: input.temperature, contextTokens: input.contextTokens,
+        supportsImages: input.supportsImages ?? false, providerId: input.providerId, model: input.model, temperature: input.temperature, contextTokens: input.contextTokens,
       }
       const existing = members.find((m) => m.id === id)
       if (existing) Object.assign(existing, next)

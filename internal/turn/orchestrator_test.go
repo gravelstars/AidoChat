@@ -51,11 +51,13 @@ func (s *memStore) RecentMessages(context.Context, string, int) ([]domain.Messag
 	return slices.Clone(s.messages), nil
 }
 func (s *memStore) MemoryItems(context.Context, string) ([]domain.MemoryItem, error) { return nil, nil }
-func (s *memStore) InsertMessage(_ context.Context, m *domain.Message) error {
+func (s *memStore) InsertMessages(_ context.Context, messages []*domain.Message) error {
 	s.mu.Lock()
 	defer s.mu.Unlock()
-	m.Seq = int64(len(s.messages) + 1)
-	s.messages = append(s.messages, *m)
+	for _, m := range messages {
+		m.Seq = int64(len(s.messages) + 1)
+		s.messages = append(s.messages, *m)
+	}
 	return nil
 }
 func (s *memStore) UpdateMessage(_ context.Context, m domain.Message) error {

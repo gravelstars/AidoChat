@@ -61,6 +61,13 @@ func mimeByExt(name string) string {
 
 // SaveAvatar 校验并原样保存图片，按内容哈希去重，返回 /avatars/<文件名>。
 func SaveAvatar(name, mime string, data []byte) (string, error) {
+	dir, err := AvatarDir()
+	if err != nil {
+		return "", err
+	}
+	return saveAvatarAt(dir, name, mime, data)
+}
+func saveAvatarAt(dir, name, mime string, data []byte) (string, error) {
 	if len(data) == 0 {
 		return "", errors.New("图片为空")
 	}
@@ -77,11 +84,7 @@ func SaveAvatar(name, mime string, data []byte) (string, error) {
 	}
 	sum := sha256.Sum256(data)
 	file := hex.EncodeToString(sum[:8]) + ext // 内容 SHA-256 前 16 位 + 扩展名
-	dir, err := AvatarDir()
-	if err != nil {
-		return "", fmt.Errorf("定位头像目录失败：%w", err)
-	}
-	if err = os.MkdirAll(dir, 0700); err != nil {
+	if err := os.MkdirAll(dir, 0700); err != nil {
 		return "", fmt.Errorf("创建头像目录失败：%w", err)
 	}
 	path := filepath.Join(dir, file)

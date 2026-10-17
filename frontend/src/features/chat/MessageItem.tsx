@@ -8,6 +8,7 @@ import { Icon } from '../../components/Icon'
 import { clock, linkifyRefs } from '../../lib/format'
 import { parseMentions } from '../../lib/mention'
 import { useChat } from '../../state/store'
+import { AttachmentList } from './AttachmentList'
 import { CodeBlock } from './CodeBlock'
 import styles from './MessageItem.module.css'
 
@@ -88,7 +89,7 @@ function Body({ m, members, groupMemberIds, waitingFor }: { m: Message; members:
   const retry = useChat((s) => s.retry)
   const busy = useChat((s) => (s.activeId ? s.detail[s.activeId]?.busy : false))
 
-  if (m.authorKind === 'user') return <UserText text={m.content} members={members} groupMemberIds={groupMemberIds} />
+  if (m.authorKind === 'user') return <>{m.content && <UserText text={m.content} members={members} groupMemberIds={groupMemberIds} />}{!!m.attachments?.length && <AttachmentList attachments={m.attachments} />}</>
 
   if (m.status === 'pending') {
     return <p className={styles.waiting}>{waitingFor ? `排队中，等 ${waitingFor} 说完` : '准备中'}</p>

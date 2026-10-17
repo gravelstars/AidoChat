@@ -27,15 +27,16 @@ type Avatar struct {
 	Image string `json:"image,omitempty"`
 }
 type Member struct {
-	ID            string   `json:"id"`
-	Name          string   `json:"name"`
-	Avatar        Avatar   `json:"avatar"`
-	Brief         string   `json:"brief"`
-	RolePrompt    string   `json:"rolePrompt"`
-	ProviderID    string   `json:"providerId"`
-	Model         string   `json:"model"`
-	Temperature   *float64 `json:"temperature,omitempty"`
-	ContextTokens int      `json:"contextTokens"`
+	ID             string   `json:"id"`
+	Name           string   `json:"name"`
+	Avatar         Avatar   `json:"avatar"`
+	Brief          string   `json:"brief"`
+	RolePrompt     string   `json:"rolePrompt"`
+	ProviderID     string   `json:"providerId"`
+	Model          string   `json:"model"`
+	Temperature    *float64 `json:"temperature,omitempty"`
+	ContextTokens  int      `json:"contextTokens"`
+	SupportsImages bool     `json:"supportsImages"`
 }
 type ProviderConfig struct {
 	ID      string `json:"id"`
@@ -77,24 +78,25 @@ type Group struct {
 	CreatedAt    string           `json:"createdAt"`
 }
 type Message struct {
-	ID         string               `json:"id"`
-	GroupID    string               `json:"groupId"`
-	Seq        int64                `json:"seq"`
-	AuthorKind domain.AuthorKind    `json:"authorKind"`
-	AuthorID   string               `json:"authorId"`
-	Content    string               `json:"content"`
-	Mentions   []string             `json:"mentions"`
-	MentionAll bool                 `json:"mentionAll"`
-	ReplyToID  string               `json:"replyToId"`
-	TurnID     string               `json:"turnId"`
-	Provider   string               `json:"provider"`
-	Model      string               `json:"model"`
-	ContextSeq int64                `json:"contextSeq"`
-	Status     domain.MessageStatus `json:"status"`
-	Error      string               `json:"error"`
-	CreatedAt  string               `json:"createdAt"`
-	FinishedAt *string              `json:"finishedAt,omitempty"`
-	ReplyMode  domain.ReplyMode     `json:"replyMode"`
+	ID          string               `json:"id"`
+	GroupID     string               `json:"groupId"`
+	Seq         int64                `json:"seq"`
+	AuthorKind  domain.AuthorKind    `json:"authorKind"`
+	AuthorID    string               `json:"authorId"`
+	Content     string               `json:"content"`
+	Mentions    []string             `json:"mentions"`
+	MentionAll  bool                 `json:"mentionAll"`
+	ReplyToID   string               `json:"replyToId"`
+	TurnID      string               `json:"turnId"`
+	Provider    string               `json:"provider"`
+	Model       string               `json:"model"`
+	ContextSeq  int64                `json:"contextSeq"`
+	Status      domain.MessageStatus `json:"status"`
+	Error       string               `json:"error"`
+	CreatedAt   string               `json:"createdAt"`
+	FinishedAt  *string              `json:"finishedAt,omitempty"`
+	ReplyMode   domain.ReplyMode     `json:"replyMode"`
+	Attachments []domain.Attachment  `json:"attachments"`
 }
 type MemorySource struct {
 	MessageID string            `json:"messageId"`
@@ -162,15 +164,16 @@ type CreateGroupInput struct {
 	DefaultMode domain.ReplyMode `json:"defaultMode"`
 }
 type SaveMemberInput struct {
-	ID            string   `json:"id"` // 为空表示新建
-	Name          string   `json:"name"`
-	Avatar        Avatar   `json:"avatar"`
-	Brief         string   `json:"brief"`
-	RolePrompt    string   `json:"rolePrompt"`
-	ProviderID    string   `json:"providerId"`
-	Model         string   `json:"model"`
-	Temperature   *float64 `json:"temperature,omitempty"`
-	ContextTokens int      `json:"contextTokens"`
+	ID             string   `json:"id"` // 为空表示新建
+	Name           string   `json:"name"`
+	Avatar         Avatar   `json:"avatar"`
+	Brief          string   `json:"brief"`
+	RolePrompt     string   `json:"rolePrompt"`
+	ProviderID     string   `json:"providerId"`
+	Model          string   `json:"model"`
+	Temperature    *float64 `json:"temperature,omitempty"`
+	ContextTokens  int      `json:"contextTokens"`
+	SupportsImages bool     `json:"supportsImages"`
 }
 
 func stamp(t time.Time) string { return t.Format(time.RFC3339Nano) }
@@ -192,10 +195,10 @@ func (a Avatar) domain() domain.Avatar {
 	return domain.Avatar{Glyph: a.Glyph, Color: a.Color, Image: a.Image}
 }
 func memberDTO(m domain.Member) Member {
-	return Member{m.ID, m.Name, avatarDTO(m.Avatar), m.Brief, m.RolePrompt, m.ProviderID, m.Model, m.Temperature, m.ContextTokens}
+	return Member{m.ID, m.Name, avatarDTO(m.Avatar), m.Brief, m.RolePrompt, m.ProviderID, m.Model, m.Temperature, m.ContextTokens, m.SupportsImages}
 }
 func messageDTO(m domain.Message) Message {
-	return Message{m.ID, m.GroupID, m.Seq, m.AuthorKind, m.AuthorID, m.Content, nonnil(m.Mentions), m.MentionAll, m.ReplyToID, m.TurnID, m.Provider, m.Model, m.ContextSeq, m.Status, m.Error, stamp(m.CreatedAt), optionalStamp(m.FinishedAt), m.ReplyMode}
+	return Message{m.ID, m.GroupID, m.Seq, m.AuthorKind, m.AuthorID, m.Content, nonnil(m.Mentions), m.MentionAll, m.ReplyToID, m.TurnID, m.Provider, m.Model, m.ContextSeq, m.Status, m.Error, stamp(m.CreatedAt), optionalStamp(m.FinishedAt), m.ReplyMode, nonnil(m.Attachments)}
 }
 func memoryDTO(m domain.MemoryItem) MemoryItem {
 	sources := []MemorySource{}
