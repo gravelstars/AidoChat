@@ -1,11 +1,12 @@
 # 归档与交付索引
 
-AidoChat 0.1.1 本机交付：
+AidoChat 0.1.2 本机交付：
 
 | 路径 | 内容 |
 | --- | --- |
-| `/Applications/AidoChat.app` | 已安装并启动验证的新版应用 |
-| `/Users/zoupengcheng/Desktop/AidoChat-release/0.1.1/` | AidoChat.dmg、SHA256SUMS、使用说明书 |
+| `/Applications/AidoChat.app` | 当前安装版；0.1.2 包已生成，是否替换安装由所有者决定 |
+| `/Users/zoupengcheng/Desktop/AidoChat-release/0.1.2/` | AidoChat.dmg、SHA256SUMS、使用说明书、发布说明 |
+| `/Users/zoupengcheng/Desktop/AidoChat-release/0.1.1/` | 上一版 AidoChat.dmg、SHA256SUMS、使用说明书，保留作回退 |
 | `/Users/zoupengcheng/Desktop/group-chat-ai-archive/2026-10-17-aidochat/` | TASK-017 过程记录、测试日志、原生截图、安装/数据核对与旧包删除记录 |
 | 该归档下 `private-user-data-before-upgrade/` | 升级前的私密用户数据备份，权限0700；不上传仓库、不包含系统钥匙串 |
 

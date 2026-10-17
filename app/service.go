@@ -572,7 +572,7 @@ func (s *Service) DeleteMember(ctx context.Context, id string) error {
 }
 
 // Version 是应用版本，显示在设置页「关于」。
-const Version = "0.1.1"
+const Version = "0.1.2"
 
 // SaveProvider 新建或更新一个模型服务（TASK-008）。Key 只在非空时写入系统钥匙串。
 func (s *Service) SaveProvider(ctx context.Context, in SaveProviderInput) (ProviderConfig, error) {

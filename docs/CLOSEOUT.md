@@ -1,8 +1,22 @@
 # 项目收尾状态
 
-更新：2026-10-17，AidoChat 0.1.1。源码仓库：[rickepicepic/AidoChat](https://github.com/rickepicepic/AidoChat)。
+更新：2026-10-17，AidoChat 0.1.2。源码仓库：[rickepicepic/AidoChat](https://github.com/rickepicepic/AidoChat)。
 
-## 当前交付
+## AidoChat 0.1.2
+
+在 0.1.1 基础上交付 TASK-018–021：
+
+- 个人资料：完整显示名与独立短印文分离，中英文姓名不再挤在同一方印里。
+- 服务下线：只被已删除成员引用的服务可以下线，历史发言保留。
+- 聊天附件：图片、TXT、Markdown、文本型 PDF 的本地导入、预览、事务绑定、重启回读和视觉能力预检；文档以带来源的文字进入上下文，记忆整理不发送原图。
+- 分享图片：起止消息、真实 DOM 分页、1080 宽逐页 PNG、原生目录保存，支持当前纸/宣纸与群名/时间/署名开关。
+- WKWebView 下补齐 PDF.js 所需的 `Map#getOrInsertComputed` 与 `ReadableStream` 异步迭代，PDF 可离线解析。
+
+本轮验证：`go vet ./...`、全量 `go test -race ./...` 通过；前端 80 项测试、类型检查和生产构建通过；保护文件检查通过。原生 QA 覆盖附件全链路、重启回读、分享图 6 页（长文、代码、表格跨页与单元格续写、附件、已退群成员），均 `ok=true`。分享图保存目录由 QA 注入，未自动点击系统目录选择器。
+
+macOS 0.1.2 包已生成并在 `/Users/zoupengcheng/Desktop/AidoChat-release/0.1.2/`：`codesign --verify --deep --strict`、`hdiutil verify` 通过，二进制为 x86_64 + arm64。是否替换 `/Applications/AidoChat.app` 由所有者决定；三平台 CI 本次未运行，Windows/Linux 安装包与真机验收仍需补做。
+
+## 0.1.1 历史交付
 
 TASK-001–016 功能与整体审查已交付。TASK-017 完成正式命名、官方 SVG 与三平台图标、首次使用引导、表单对齐和模型连接测试修复。Go 模块、Wails 绑定、bundle ID、数据目录与钥匙串兼容标识保留，已有数据不迁移或重置。
 

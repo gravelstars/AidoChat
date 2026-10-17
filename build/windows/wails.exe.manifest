@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!-- 沿用固定 Wails 版本的清单设置，图标资源不能覆盖原生 DPI 与权限声明。 -->
 <assembly manifestVersion="1.0" xmlns="urn:schemas-microsoft-com:asm.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3">
-  <assemblyIdentity type="win32" name="local.ai-group-chat" version="0.1.1.0" processorArchitecture="*"/>
+  <assemblyIdentity type="win32" name="local.ai-group-chat" version="0.1.2.0" processorArchitecture="*"/>
   <dependency><dependentAssembly>
     <assemblyIdentity type="win32" name="Microsoft.Windows.Common-Controls" version="6.0.0.0" processorArchitecture="*" publicKeyToken="6595b64144ccf1df" language="*"/>
   </dependentAssembly></dependency>

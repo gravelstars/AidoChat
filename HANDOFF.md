@@ -1,6 +1,6 @@
 # HANDOFF —— 当前交接
 
-更新：2026-10-17。正式产品名 AidoChat，当前版本 0.1.1。
+更新：2026-10-17。正式产品名 AidoChat，当前版本 0.1.2。
 
 ## 当前状态
 
@@ -40,6 +40,12 @@ macOS 本次原生桥接 QA 返回 ok=true，包含真实 Go 服务/SQLite/轮�
 ## 工作区整理
 
 任务单、过程计划、截图和旧包已经校验归档。源码、测试、可复用 QA 工具、产品/架构/设计和 ADR 保留。用户数据库和系统凭证不属于仓库，不清理。未来任务继续在 docs/tasks 下认领并记录交付。
+
+## AidoChat 0.1.2
+
+在 0.1.1 基础上完成 TASK-018–021：服务下线修复、完整显示名与独立短印文、聊天附件（图片/TXT/Markdown/PDF）、分享图片（起止消息、真实 DOM 分页、原生目录保存）。附件与分享图的原生 QA、重启回读和证据见 `docs/tasks/TASK-020-chat-attachments.md`、`docs/tasks/TASK-021-share-images.md`。
+
+本轮 Go vet/race 与 80 项前端测试通过，macOS 0.1.2 通用包已生成至 `/Users/zoupengcheng/Desktop/AidoChat-release/0.1.2/`，codesign 与 dmg 校验通过。三平台 CI 本次未运行，Windows/Linux 包与真机验收仍待补做；是否替换 `/Applications/AidoChat.app` 由所有者决定。
 
 ## AidoChat 0.1.1
 
