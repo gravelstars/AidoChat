@@ -15,7 +15,7 @@
 
 本轮验证：`go vet ./...`、全量 `go test -race ./...` 通过；前端 80 项测试、类型检查和生产构建通过；保护文件检查通过。原生 QA 覆盖附件全链路、重启回读、分享图 6 页（长文、代码、表格跨页与单元格续写、附件、已退群成员），均 `ok=true`。分享图保存目录由 QA 注入，未自动点击系统目录选择器。
 
-macOS 0.1.2 包已生成并在 `/Users/zoupengcheng/Desktop/AidoChat-release/0.1.2/`（已用 TASK-022 修复重新打包覆盖，源码提交 `128b599`）：`codesign --verify --deep --strict`、`hdiutil verify` 通过，二进制为 x86_64 + arm64。是否替换 `/Applications/AidoChat.app` 由所有者决定；三平台 CI 本次未运行，Windows/Linux 安装包与真机验收仍需补做。
+macOS 0.1.2 包已生成并在 `/Users/zoupengcheng/Desktop/AidoChat-release/0.1.2/`（已用 TASK-022 修复重新打包覆盖，源码提交 `128b599`）：`codesign --verify --deep --strict`、`hdiutil verify` 通过，二进制为 x86_64 + arm64。同目录另有 Windows amd64 `AidoChat.exe` 与 `AidoChat-windows.zip`（交叉编译，PE32+ x86-64，manifest 0.1.2.0）；未生成 NSIS 安装器，也未在 Windows 真机运行。是否替换 `/Applications/AidoChat.app` 由所有者决定；三平台 CI 本次未运行，Linux 包与 Windows/Linux 真机验收仍需补做。
 
 ## 0.1.1 历史交付
 
