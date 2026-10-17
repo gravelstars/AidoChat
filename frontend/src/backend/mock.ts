@@ -246,6 +246,7 @@ async function runTurn(d: GroupDetail, user: Message, mode: ReplyMode, slots: Me
 
 export function createMockBackend(): Backend {
   const attachments=new Map<string,{attachment:Attachment;groupId:string;bound:boolean}>()
+  const shares=new Map<string,{pages:number;written:Set<number>}>()
   return {
     async importAttachment(input) {
       if(!db[input.groupId]) throw new Error('群聊不存在')
@@ -259,6 +260,27 @@ export function createMockBackend(): Backend {
     },
     async readAttachment(id) {const a=attachments.get(id);if(!a) throw new Error('附件不存在');return structuredClone(a.attachment)},
     async removeDraftAttachment(id) {const a=attachments.get(id);if(a?.bound) throw new Error('已发送附件不能作为草稿移除');attachments.delete(id)},
+    async beginShareExport(input) {
+      if(input.pageCount<1||input.pageCount>20) throw new Error('分享图片需要 1–20 页')
+      const sessionId=nid('share')
+      shares.set(sessionId,{pages:input.pageCount,written:new Set()})
+      return {sessionId,cancelled:false}
+    },
+    async writeShareExportPage(input) {
+      const s=shares.get(input.sessionId)
+      if(!s) throw new Error('分享任务不存在或已结束，请重新导出')
+      if(input.index<1||input.index>s.pages) throw new Error('分享页序号超出范围')
+      if(s.written.has(input.index)) throw new Error('该页已经写入')
+      if(!input.pngBase64.startsWith('iVBORw0KGgo')) throw new Error('分享页不是有效 PNG')
+      s.written.add(input.index)
+    },
+    async commitShareExport(sessionId) {
+      const s=shares.get(sessionId)
+      if(!s||s.written.size!==s.pages) throw new Error('分享图片尚未生成完整')
+      shares.delete(sessionId)
+      return {count:s.pages,folderName:`群聊-${new Date().toISOString().slice(0,10)}-mock`}
+    },
+    async cancelShareExport(sessionId) {shares.delete(sessionId)},
     async bootstrap(): Promise<Bootstrap> {
       await sleep(120)
       const ua = navigator.userAgent

@@ -7,6 +7,8 @@ import { AvatarEditor } from '../members/AvatarEditor'
 import { MemberCard } from './MemberCard'
 import { GroupSettingsDialog } from './GroupSettingsDialog'
 import { useChat, type GroupState } from '../../state/store'
+import { shareEligible } from '../../lib/share/snapshot'
+import { ShareExportDialog } from '../share/ShareExportDialog'
 import { Composer, type ComposerHandle } from './Composer'
 import { MessageList } from './MessageList'
 import styles from './ChatView.module.css'
@@ -20,6 +22,8 @@ export function ChatView({ state, members }: { state: GroupState; members: Recor
   const [cardFor, setCardFor] = useState<string | null>(null)
   const [editFor, setEditFor] = useState<string | null>(null)
   const [managing, setManaging] = useState(false)
+  const [sharing, setSharing] = useState(false)
+  const canShare = state.messages.some(shareEligible)
   const closeCard = useCallback(() => setCardFor(null), [])
 
   return (
@@ -63,6 +67,15 @@ export function ChatView({ state, members }: { state: GroupState; members: Recor
           })}
           <Button variant="quiet" size="sm" icon="members" aria-label="群管理" title="群管理" onClick={() => setManaging(true)} />
         </div>
+        <Button
+          variant="quiet"
+          size="sm"
+          onClick={() => setSharing(true)}
+          disabled={!canShare}
+          title={canShare ? '把选中的群聊保存为图片' : '还没有可分享的消息'}
+        >
+          分享图片
+        </Button>
         {!memoryOpen && (
           <Button variant="quiet" size="sm" icon="panel" onClick={() => toggleMemory(true)} title="展开纪要">
             纪要{pendingCount > 0 && <span className={styles.badge}>{pendingCount}</span>}
@@ -75,6 +88,7 @@ export function ChatView({ state, members }: { state: GroupState; members: Recor
         <AvatarEditor open member={members[editFor]} scope={{ kind: 'group', group }} onClose={() => setEditFor(null)} />
       )}
       <GroupSettingsDialog open={managing} onClose={() => setManaging(false)} group={group} />
+      <ShareExportDialog open={sharing} onClose={() => setSharing(false)} state={state} members={members} />
     </section>
   )
 }

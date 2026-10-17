@@ -45,9 +45,15 @@ func prepareBackendQA(db *store.Store, p turn.Providers) (turn.Providers, error)
 	if err := db.SaveProvider(ctx, &provider); err != nil {
 		return nil, err
 	}
-	for _, m := range []domain.Member{{ID: "qa-a", Name: "青砚", ProviderID: provider.ID, Model: "bridge-qa-stream", ContextTokens: 16000, Avatar: domain.Avatar{Glyph: "青", Color: "shiqing"}}, {ID: "qa-b", Name: "墨白", ProviderID: provider.ID, Model: "bridge-qa-stream", ContextTokens: 16000, Avatar: domain.Avatar{Glyph: "墨", Color: "dai"}}} {
-		if err := db.SaveMember(ctx, &m); err != nil {
+	if os.Getenv("AGC_QA_SHARE") == "1" {
+		if err := seedShareQA(db); err != nil {
 			return nil, err
+		}
+	} else {
+		for _, m := range []domain.Member{{ID: "qa-a", Name: "青砚", ProviderID: provider.ID, Model: "bridge-qa-stream", ContextTokens: 16000, Avatar: domain.Avatar{Glyph: "青", Color: "shiqing"}}, {ID: "qa-b", Name: "墨白", ProviderID: provider.ID, Model: "bridge-qa-stream", ContextTokens: 16000, Avatar: domain.Avatar{Glyph: "墨", Color: "dai"}}} {
+			if err := db.SaveMember(ctx, &m); err != nil {
+				return nil, err
+			}
 		}
 	}
 	return func(context.Context, domain.Provider) (llm.Provider, error) { return bridgeQAProvider{}, nil }, nil
@@ -96,6 +102,9 @@ var attachmentsQAScript string
 
 //go:embed attachmentsrestartqa.js
 var attachmentsRestartQAScript string
+
+//go:embed shareqa.js
+var shareQAScript string
 
 func installBridgeQA(app *application.App, w *application.WebviewWindow) {
 	dir := os.Getenv("AGC_QA_DIR")
@@ -159,6 +168,9 @@ func installBridgeQA(app *application.App, w *application.WebviewWindow) {
 			}
 			if os.Getenv("AGC_QA_RESTART") == "1" {
 				script = attachmentsRestartQAScript
+			}
+			if os.Getenv("AGC_QA_SHARE") == "1" {
+				script = shareQAScript
 			}
 			w.ExecJS(script)
 		})

@@ -1,0 +1,210 @@
+/* 分享图是冻结的纸面快照：只用 token，不复用生产消息里的交互元素。 */
+.page {
+  box-sizing: border-box;
+  width: 1080px;
+  padding: 64px 72px 48px;
+  background-color: var(--paper);
+  background-image: var(--grain);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+
+.pageHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-6);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--rule-strong);
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.08em;
+  line-height: var(--leading-tight);
+  overflow-wrap: anywhere;
+}
+
+.date {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+.body {
+  padding-top: var(--space-8);
+}
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-6);
+  padding-bottom: var(--space-10);
+}
+
+.seal {
+  flex: none;
+}
+
+.main {
+  min-width: 0;
+  flex: 1;
+}
+
+.author {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.name {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-semibold);
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+
+.continued {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--ink-3);
+}
+
+.time {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+.content {
+  overflow-wrap: anywhere;
+}
+
+.markdown {
+  font-size: var(--text-lg);
+  line-height: 1.8;
+}
+
+.markdown pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  overflow: visible;
+}
+
+.markdown table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.markdown th,
+.markdown td {
+  overflow-wrap: anywhere;
+  vertical-align: top;
+}
+
+.markdown img {
+  display: block;
+  max-width: 100%;
+  max-height: 1600px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-sm);
+}
+
+.attachments {
+  list-style: none;
+  margin: var(--space-4) 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.imageItem {
+  margin: 0;
+}
+
+.imageItem img {
+  display: block;
+  max-width: 100%;
+  max-height: 1400px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-sm);
+}
+
+.imageItem span {
+  display: block;
+  margin-top: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+  overflow-wrap: anywhere;
+}
+
+.documentItem {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-sm);
+  background: var(--paper-raised);
+  font-size: var(--text-md);
+  overflow-wrap: anywhere;
+}
+
+.docLabel {
+  flex: none;
+  font-family: var(--font-serif);
+  color: var(--ink-3);
+  letter-spacing: 0.12em;
+}
+
+.docMeta {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}
+
+.system {
+  margin: var(--space-4) 0 var(--space-8);
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--ink-3);
+  overflow-wrap: anywhere;
+}
+
+.pageFoot {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-6);
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--rule);
+}
+
+.signature {
+  font-family: var(--font-serif);
+  font-size: var(--text-sm);
+  letter-spacing: 0.24em;
+  color: var(--ink-3);
+}
+
+.pageNo {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+}

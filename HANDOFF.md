@@ -8,7 +8,9 @@ TASK-001–013 的功能已交付，TASK-014 完成全项目审查与修复，TA
 
 已验证的内容与未完成验收分别记录在 [CLOSEOUT.md](docs/CLOSEOUT.md)。不要把功能交付理解为三平台真机验收全部完成。
 
-TASK-020 聊天附件已交付：图片与 TXT/Markdown/PDF 的本地导入、草稿事务绑定、重启回读、视觉能力预检、结构化图片请求和预算裁剪均已实现并完成原生 QA；证据与遗留见 `docs/tasks/TASK-020-chat-attachments.md`。PDF 在 WKWebView 下需要项目内的兼容补丁（`Map#getOrInsertComputed`、`ReadableStream` 异步迭代），升级 pdf.js 时要在原生窗口复验。TASK-021 分享图仍只有设计计划，尚未认领。
+TASK-020 聊天附件已交付：图片与 TXT/Markdown/PDF 的本地导入、草稿事务绑定、重启回读、视觉能力预检、结构化图片请求和预算裁剪均已实现并完成原生 QA；证据与遗留见 `docs/tasks/TASK-020-chat-attachments.md`。PDF 在 WKWebView 下需要项目内的兼容补丁（`Map#getOrInsertComputed`、`ReadableStream` 异步迭代），升级 pdf.js 时要在原生窗口复验。
+
+TASK-021 分享图片已交付：按起止消息冻结快照、真实 DOM 分页、逐页 PNG、原生目录选择和暂存提交均已实现；长文/代码/表格（含跨页单元格）在 6 页原生 QA 中通过。证据与未真机部分见 `docs/tasks/TASK-021-share-images.md`。分享图升级时要重点复验 html-to-image 在目标 WebView 的字体与 SVG 外框渲染。
 
 ## 接手阅读顺序
 

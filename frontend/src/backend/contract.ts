@@ -234,6 +234,11 @@ export type BackendEvent =
   | { kind: 'group'; group: GroupSummary }
   | { kind: 'group.remove'; groupId: string }
 
+export interface BeginShareExportInput { title: string; pageCount: number }
+export interface ShareExportSession { sessionId: string; cancelled: boolean }
+export interface WriteShareExportPageInput { sessionId: string; index: number; pngBase64: string }
+export interface CommitShareExportResult { count: number; folderName: string }
+
 export interface Backend {
   bootstrap(): Promise<Bootstrap>
   openGroup(groupId: string): Promise<GroupDetail>
@@ -248,6 +253,11 @@ export interface Backend {
   readAttachment(id: string): Promise<Attachment>
   removeDraftAttachment(id: string): Promise<void>
   send(groupId: string, content: string, mode?: ReplyMode, attachmentIds?: string[]): Promise<SendResult>
+  /** 原生选择保存目录并开始一次分享导出；cancelled 表示用户取消 */
+  beginShareExport(input: BeginShareExportInput): Promise<ShareExportSession>
+  writeShareExportPage(input: WriteShareExportPageInput): Promise<void>
+  commitShareExport(sessionId: string): Promise<CommitShareExportResult>
+  cancelShareExport(sessionId: string): Promise<void>
   stop(groupId: string): Promise<void>
   /** 重新生成一条失败或中断的回复（TASK-005：Go 侧 Orchestrator.Retry） */
   retry(messageId: string): Promise<void>

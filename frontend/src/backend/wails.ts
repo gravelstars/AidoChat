@@ -148,6 +148,10 @@ export function createWailsBackend(load: () => Promise<ShellRuntime> = loadRunti
     readAttachment: (id) => call('ReadAttachment', id),
     removeDraftAttachment: (id) => call('RemoveDraftAttachment', id),
     send: (id, content, mode, ids) => ids?.length ? call('SendWithAttachments', id, content, mode ?? null, ids) : call('Send', id, content, mode ?? null),
+    beginShareExport: (input) => call('BeginShareExport', input),
+    writeShareExportPage: (input) => call('WriteShareExportPage', input),
+    commitShareExport: (sessionId) => call('CommitShareExport', sessionId),
+    cancelShareExport: (sessionId) => call('CancelShareExport', sessionId),
     stop: (id) => call('Stop', id),
     retry: (id) => call('Retry', id),
     memory: {

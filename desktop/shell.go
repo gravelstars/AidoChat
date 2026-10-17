@@ -180,6 +180,15 @@ func Run(assets fs.FS) error {
 	}
 
 	window := app.Window.NewWithOptions(WindowOptions(shell.stateSnapshot(), runtime.GOOS))
+	service.SelectExportDirectory = shareDirectoryQA(func() (string, error) {
+		return app.Dialog.OpenFile().
+			CanChooseFiles(false).
+			CanChooseDirectories(true).
+			CanCreateDirectories(true).
+			AttachToWindow(window).
+			SetTitle("选择分享图片保存位置").
+			PromptForSingleSelection()
+	})
 	shell.bind(app, window)
 	installQA(app, window)
 	return app.Run()

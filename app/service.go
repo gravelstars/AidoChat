@@ -38,6 +38,10 @@ type Service struct {
 	closed      bool
 	credentials credentialStore
 	providersMu sync.Mutex
+
+	// SelectExportDirectory 由桌面层注入原生目录选择；业务层不接受前端传入的本机路径。
+	SelectExportDirectory func() (string, error)
+	shares                map[string]*shareExport
 }
 
 func NewService(db *store.Store, providers turn.Providers, platform string, emit func(Event)) *Service {
@@ -100,6 +104,7 @@ func CloseService(s *Service) {
 	// 等待进行中的记忆整理退出，避免它在数据库关闭后仍在写。
 	s.runner.Close()
 	s.cleanupDraftAttachments()
+	s.cleanupSharesLocked()
 	s.events.close()
 }
 
