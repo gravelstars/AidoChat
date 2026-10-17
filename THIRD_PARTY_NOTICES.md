@@ -1,6 +1,6 @@
 # Third-party notices
 
-AidoChat's [Apache-2.0 license](LICENSE) applies to its own material. Third-party software, fonts, PDF resources, and native components retain their original licenses and copyright notices. The placeholder `Copyright 2026 <版权所有者>` in [NOTICE](NOTICE) must be completed by the owner before distribution.
+AidoChat's [Apache-2.0 license](LICENSE) applies to its own material. Third-party software, fonts, PDF resources, and native components retain their original licenses and copyright notices. [NOTICE](NOTICE) records `Copyright 2026 gravelstars` for the project's own material. This repository currently publishes source and the browser demo only; no binary installers are released, and the outstanding findings below remain open for review before any binary distribution.
 
 The dependency lists below are **machine-generated**, rather than manually selected direct dependencies:
 

@@ -17,16 +17,16 @@ npm run preview -- --outDir dist-demo --base=/AidoChat/ --port 4173
 
 ## 下载 / Download
 
-仓库当前没有公开 Release。Windows、macOS、Linux 安装包即将发布；本机已构建的包不等于公开下载。发布后将在 [Releases](https://github.com/gravelstars/AidoChat/releases) 提供对应文件，当前不提供未经核实的文件直链。
+本仓库当前只公开源码与浏览器演示，不发布二进制安装包。Windows、macOS、Linux 请按 [构建说明](../build/README.md) 从源码构建；本机已构建的包不等于公开下载，也不作为 Release 附件发布。第三方许可审阅未关闭，因此不提供安装包下载。
 
-The browser demo uses preset replies and never calls a model. GitHub Pages is awaiting owner setup. Desktop installers for Windows, macOS and Linux are coming soon; no public Release is available yet. See [the user guide](USER_GUIDE.md) and [build instructions](../build/README.md) for local use.
+The browser demo uses preset replies and never calls a model. This repository currently publishes source and the browser demo only; no binary installers are published. Build locally with [the build instructions](../build/README.md). Third-party license review remains open, so installers are not offered for download.
 
 ## 所有者设置
 
-1. 先审阅 [第三方许可](../THIRD_PARTY_NOTICES.md) 中待确认项；当前不能宣称“全部依赖兼容性已通过”。确认 NOTICE 中 `<版权所有者>` 的正式名称。LICENSE 必须保留 Apache 官方原文，附录中的 `[name of copyright owner]` 是官方示例，不直接替换。
+1. 版权署名已确定为 `gravelstars`，NOTICE 已填写。仍须审阅 [第三方许可](../THIRD_PARTY_NOTICES.md) 中的待确认项；当前不能宣称“全部依赖兼容性已通过”。本仓库决定只公开源码与浏览器演示，不发布二进制安装包。
 2. 首次自行提交前，在此仓库设置个人邮箱：`git config user.email 你的个人邮箱`。执行者不替你猜测或设置个人邮箱。
-3. 进入仓库 **Settings → Pages → Build and deployment → Source → GitHub Actions**。工作流 `.github/workflows/demo-pages.yml` 只在推送到 `main` 时运行，未手动开启 Pages 时可能部署失败；本次不会替你开启。
-4. 开启后推送到 `main`，等待 **Browser demo Pages** 成功。演示地址为 `https://gravelstars.github.io/AidoChat/`。确认可访问后，将中英 README 的“在线试玩（待开启）”入口改为该地址，移除待开启说明。
+3. 仓库可见性改为 **public**（`Settings → General → Danger Zone → Change visibility`）。私有仓库的 Pages 需要付费计划；当前所有者选择公开。
+4. 进入仓库 **Settings → Pages → Build and deployment → Source → GitHub Actions**。开启后可推送 `main`，或由执行者手动触发 **Browser demo Pages**。演示地址为 `https://gravelstars.github.io/AidoChat/`。确认可访问后，将中英 README 的“在线试玩（待开启）”入口改为该地址，移除待开启说明。
 5. 社交分享图：**Settings → General → Social preview → Edit → Upload an image**，上传 `docs/assets/social-day.png`（1280×640）；夜间版本为 `social-night.png`。
 
 About 中文（可直接复制）：

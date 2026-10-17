@@ -30,16 +30,13 @@ The desktop app stores data locally and Keys in your system credential store. Us
 ### Get started in thirty seconds
 
 1. [Try preset replies and stamping](docs/DEMO.md), without a Key (Pages setup pending).
-2. Install the desktop app when public installers are released.
+2. Build the desktop app from source; no public binary installers are published yet.
 3. Add a model service, Key, and an available model name in Settings or the member form.
 4. Create a group, add members, and type `@墨白` to start.
 
 ### Download
 
-Windows: installers coming soon.<br>
-macOS: installers coming soon.<br>
-Linux: installers coming soon.<br>
-[Download and demo status](docs/DEMO.md) · [Build from source](build/README.md)
+This repository currently publishes source and the browser demo only; no Windows, macOS, or Linux binary installers are published. Third-party license review remains open, so build from [source instructions](build/README.md).
 
 ### Pick your paper and personal seal
 
