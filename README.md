@@ -16,7 +16,7 @@
 </p>
 
 <p align="center">
-  <img alt="版本 0.1.2" src="docs/assets/badge-version.svg">
+  <img alt="版本 0.1.3" src="docs/assets/badge-version.svg">
   <img alt="Apache-2.0" src="docs/assets/badge-license.svg">
   <img alt="Windows · macOS · Linux" src="docs/assets/badge-platforms.svg">
 </p>
@@ -47,14 +47,14 @@
 
 ## 下载安装
 
-选择你的系统，直接下载 **0.1.2** 安装包：
+选择你的系统，直接下载 **0.1.3** 安装包：
 
 | 系统 | 下载 | 安装 |
 | --- | --- | --- |
-| macOS 12+（Intel / Apple Silicon） | [AidoChat.dmg](https://github.com/gravelstars/AidoChat/releases/download/v0.1.2/AidoChat.dmg) | 打开后把 AidoChat.app 拖入「应用程序」 |
-| Windows 10 / 11（x64） | [AidoChat-windows-setup.exe](https://github.com/gravelstars/AidoChat/releases/download/v0.1.2/AidoChat-windows-setup.exe) | 运行安装程序；需要 WebView2（安装器会引导） |
-| Ubuntu 24.04（amd64） | [AidoChat.deb](https://github.com/gravelstars/AidoChat/releases/download/v0.1.2/AidoChat.deb) | `sudo apt install ./AidoChat.deb` |
-| 其他 Linux | [AidoChat.AppImage](https://github.com/gravelstars/AidoChat/releases/download/v0.1.2/AidoChat.AppImage) | `chmod +x` 后运行；需 GTK4 / WebKitGTK 6.0 |
+| macOS 12+（Intel / Apple Silicon） | [AidoChat.dmg](https://github.com/gravelstars/AidoChat/releases/download/v0.1.3/AidoChat.dmg) | 打开后把 AidoChat.app 拖入「应用程序」 |
+| Windows 10 / 11（x64） | [AidoChat-windows-setup.exe](https://github.com/gravelstars/AidoChat/releases/download/v0.1.3/AidoChat-windows-setup.exe) | 运行安装程序；需要 WebView2（安装器会引导） |
+| Ubuntu 24.04（amd64） | [AidoChat.deb](https://github.com/gravelstars/AidoChat/releases/download/v0.1.3/AidoChat.deb) | `sudo apt install ./AidoChat.deb` |
+| 其他 Linux | [AidoChat.AppImage](https://github.com/gravelstars/AidoChat/releases/download/v0.1.3/AidoChat.AppImage) | `chmod +x` 后运行；需 GTK4 / WebKitGTK 6.0 |
 
 [全部版本与校验值](https://github.com/gravelstars/AidoChat/releases) · 不确定选哪个：Windows 选 setup.exe，macOS 选 dmg，Ubuntu 选 deb。
 
@@ -89,7 +89,7 @@ AI 建议是虚线铅笔，你提出的条目是实线墨笔，盖章确认后�
 </p>
 
 ### 数据在本地，服务由你决定
-桌面版使用本机 SQLite 和系统凭证存储。图片与 TXT/Markdown/文本 PDF 可以随消息导入；选中的聊天可以导出为分页 PNG。
+桌面版使用本机 SQLite 和系统凭证存储。图片、TXT/Markdown/PDF、Word/PowerPoint/Excel、CSV/JSON、代码和日志可以随消息导入；选中的聊天可以导出为分页 PNG。
 
 
 ## 快速开始
@@ -124,7 +124,7 @@ npm run dev
 
 ## 项目状态
 
-0.1.2 桌面主体可运行，macOS、Windows 和 Linux 安装包已发布到 [Releases](https://github.com/gravelstars/AidoChat/releases/latest)。浏览器演示使用虚构数据和预设回复。手机端暂不支持；尚无账号、云同步、联网工具、扫描 PDF OCR、Word/Excel 或视频附件。Windows/Linux 安装交互仍需更广泛的真机验收。
+0.1.3 桌面主体可运行，macOS、Windows 和 Linux 安装包已发布到 [Releases](https://github.com/gravelstars/AidoChat/releases/latest)。浏览器演示使用虚构数据和预设回复。手机端暂不支持；尚无账号、云同步、联网工具、扫描 PDF OCR 或视频附件。Windows/Linux 安装交互仍需更广泛的真机验收。
 
 ## 参与贡献
 

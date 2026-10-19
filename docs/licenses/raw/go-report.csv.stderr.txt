@@ -1,7 +1,7 @@
-W1017 18:24:27.224727   14195 library.go:141] "golang.org/x/sys/unix" contains non-Go code that can't be inspected for further dependencies:
+W1019 22:28:22.513743   37796 library.go:141] "golang.org/x/sys/unix" contains non-Go code that can't be inspected for further dependencies:
 <GOMODCACHE>/golang.org/x/sys@v0.48.0/unix/asm_bsd_amd64.s
 <GOMODCACHE>/golang.org/x/sys@v0.48.0/unix/zsyscall_darwin_amd64.s
-W1017 18:24:27.224941   14195 library.go:141] "github.com/wailsapp/wails/v3/pkg/application" contains non-Go code that can't be inspected for further dependencies:
+W1019 22:28:22.514113   37796 library.go:141] "github.com/wailsapp/wails/v3/pkg/application" contains non-Go code that can't be inspected for further dependencies:
 <GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/pkg/application/application_darwin_delegate.m
 <GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/pkg/application/dialogs_darwin_delegate.m
 <GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/pkg/application/menuitem_darwin.m
@@ -21,7 +21,10 @@ W1017 18:24:27.224941   14195 library.go:141] "github.com/wailsapp/wails/v3/pkg/
 <GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/pkg/application/webview_panel_darwin.h
 <GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/pkg/application/webview_window_darwin.h
 <GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/pkg/application/webview_window_darwin_drag.h
-W1017 18:24:27.225010   14195 library.go:141] "github.com/wailsapp/wails/v3/pkg/events" contains non-Go code that can't be inspected for further dependencies:
+W1019 22:28:22.514173   37796 library.go:141] "github.com/wailsapp/wails/v3/pkg/events" contains non-Go code that can't be inspected for further dependencies:
 <GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/pkg/events/events.h
 <GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/pkg/events/events_darwin.h
-W1017 18:25:07.327535   14195 report.go:128] Error discovering license URL: getting file URL in library golang.org/x/sys/unix: source.ModuleInfo(ctx, "golang.org/x/sys", "v0.48.0"): moduleInfoDynamic(ctx, client, "golang.org/x/sys", "v0.48.0"): fetchMeta(ctx, client, "golang.org/x/sys"): doURL(ctx, client, "GET", "http://golang.org/x/sys?go-get=1"): Get "http://golang.org/x/sys?go-get=1": context deadline exceeded
+W1019 22:29:02.653802   37796 report.go:128] Error discovering license URL: getting file URL in library golang.org/x/crypto: source.ModuleInfo(ctx, "golang.org/x/crypto", "v0.53.0"): moduleInfoDynamic(ctx, client, "golang.org/x/crypto", "v0.53.0"): fetchMeta(ctx, client, "golang.org/x/crypto"): doURL(ctx, client, "GET", "http://golang.org/x/crypto?go-get=1"): Get "http://golang.org/x/crypto?go-get=1": context deadline exceeded
+W1019 22:29:02.653802   37796 report.go:128] Error discovering license URL: getting file URL in library golang.org/x/net/html: source.ModuleInfo(ctx, "golang.org/x/net", "v0.56.0"): moduleInfoDynamic(ctx, client, "golang.org/x/net", "v0.56.0"): fetchMeta(ctx, client, "golang.org/x/net"): doURL(ctx, client, "GET", "http://golang.org/x/net?go-get=1"): Get "http://golang.org/x/net?go-get=1": context deadline exceeded
+W1019 22:29:02.653802   37796 report.go:128] Error discovering license URL: getting file URL in library golang.org/x/sys/unix: source.ModuleInfo(ctx, "golang.org/x/sys", "v0.48.0"): moduleInfoDynamic(ctx, client, "golang.org/x/sys", "v0.48.0"): fetchMeta(ctx, client, "golang.org/x/sys"): doURL(ctx, client, "GET", "http://golang.org/x/sys?go-get=1"): Get "http://golang.org/x/sys?go-get=1": net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+W1019 22:29:02.653915   37796 report.go:128] Error discovering license URL: getting file URL in library golang.org/x/text: source.ModuleInfo(ctx, "golang.org/x/text", "v0.39.0"): moduleInfoDynamic(ctx, client, "golang.org/x/text", "v0.39.0"): fetchMeta(ctx, client, "golang.org/x/text"): doURL(ctx, client, "GET", "http://golang.org/x/text?go-get=1"): Get "http://golang.org/x/text?go-get=1": net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)

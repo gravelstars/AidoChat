@@ -16,7 +16,7 @@
       "outlined": true
     },
     "badge-version.svg": {
-      "bytes": 2998,
+      "bytes": 3347,
       "outlined": true
     },
     "banner-day.svg": {
@@ -30,7 +30,7 @@
     "feature-conversation.png": {
       "width": 1600,
       "height": 516,
-      "bytes": 82846
+      "bytes": 83884
     },
     "feature-memory-comparison.png": {
       "width": 1890,
@@ -60,7 +60,7 @@
     "feature-reply-order.png": {
       "width": 1704,
       "height": 1652,
-      "bytes": 409765
+      "bytes": 409761
     },
     "main-day.png": {
       "width": 2880,
@@ -100,7 +100,7 @@
       "height": 440,
       "durationMs": 3000,
       "frames": 13,
-      "bytes": 155274
+      "bytes": 157900
     }
   }
 }

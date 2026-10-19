@@ -1,0 +1,7 @@
+	// VenturaUS is the MIB identifier with IANA name Ventura-US.
+	//
+	// Ventura US.  ASCII plus characters typically used in
+	// publishing, like pilcrow, copyright, registered, trade mark,
+	// section, dagger, and double dagger in the range A0 (hex)
+	// to FF (hex).
+	// PCL Symbol Set id: 14J

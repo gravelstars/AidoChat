@@ -2508,6 +2508,28 @@
   ]
  },
  {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/richardlehane/mscfb@v1.0.7/LICENSE.txt",
+  "Classifications": [
+   {
+    "Name": "Apache-2.0",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 202
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/richardlehane/msoleps@v1.0.6/LICENSE.txt",
+  "Classifications": [
+   {
+    "Name": "Apache-2.0",
+    "Confidence": 1,
+    "StartLine": 2,
+    "EndLine": 202
+   }
+  ]
+ },
+ {
   "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/rivo/uniseg@v0.4.7/LICENSE.txt",
   "Classifications": [
    {
@@ -2780,6 +2802,23 @@
   ]
  },
  {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/tiendc/go-deepcopy@v1.7.2/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "MIT",
+    "Confidence": 1,
+    "StartLine": 5,
+    "EndLine": 21
+   }
+  ]
+ },
+ {
   "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/ulikunitz/xz@v0.5.15/LICENSE",
   "Classifications": [
    {
@@ -3048,6 +3087,69 @@
     "Confidence": 1,
     "StartLine": 5,
     "EndLine": 21
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/xuri/efp@v0.0.1/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9859154929577465,
+    "StartLine": 5,
+    "EndLine": 28
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/xuri/excelize/v2@v2.11.0/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 4,
+    "EndLine": 4
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 1,
+    "StartLine": 7,
+    "EndLine": 30
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.986046511627907,
+    "StartLine": 5,
+    "EndLine": 30
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-modules/github.com/xuri/nfp@v0.0.2-0.20250530014748-2ddeb826f9a9/LICENSE",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 3,
+    "EndLine": 3
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9859154929577465,
+    "StartLine": 5,
+    "EndLine": 28
    }
   ]
  },

@@ -308,9 +308,10 @@ export function createMockBackend(): Backend {
       if (isDemo && input.base64.length > Math.ceil(DEMO_ATTACHMENT_LIMIT / 3) * 4) throw new Error('演示版每份附件最多 512 KiB；较大文件请使用桌面版。')
       const binary=atob(input.base64)
       const format=validateAttachment({name:input.name,size:binary.length,type:input.mime},0)
-      if(format.kind==='document') validateDocument(input.text,input.pageCount)
+      if(format.kind==='document' && format.extract!=='server') validateDocument(input.text,input.pageCount)
       const id=nid('att')
-      const a:Attachment={id,name:input.name,mime:format.mime,size:binary.length,kind:format.kind,url:`data:${format.mime};base64,${input.base64}`,text:input.text,pageCount:input.pageCount,width:0,height:0}
+      const text=input.text || (format.extract==='server' ? '演示版不解析 Office 文档正文；桌面版会在本地提取。' : '')
+      const a:Attachment={id,name:input.name,mime:format.mime,size:binary.length,kind:format.kind,url:`data:${format.mime};base64,${input.base64}`,text,pageCount:input.pageCount,width:0,height:0}
       attachments.set(id,{attachment:a,groupId:input.groupId,bound:false})
       return structuredClone(a)
     },
@@ -353,7 +354,7 @@ export function createMockBackend(): Backend {
         groups: Object.values(db).map(summary).sort((a, b) => b.updatedAt.localeCompare(a.updatedAt)),
         retiredMemberIds: [...retired],
         memory: { ...memoryConfig },
-        version: isDemo ? '0.1.2-demo' : '0.1.0-mock',
+        version: isDemo ? '0.1.3-demo' : '0.1.0-mock',
       }
     },
 

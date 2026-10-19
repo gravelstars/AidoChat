@@ -16,7 +16,7 @@
 </p>
 
 <p align="center">
-  <img alt="Version 0.1.2" src="docs/assets/badge-version.svg">
+  <img alt="Version 0.1.3" src="docs/assets/badge-version.svg">
   <img alt="Apache-2.0" src="docs/assets/badge-license.svg">
   <img alt="Windows · macOS · Linux" src="docs/assets/badge-platforms.svg">
 </p>
@@ -47,14 +47,14 @@
 
 ## Download
 
-Choose your platform and download **0.1.2**:
+Choose your platform and download **0.1.3**:
 
 | Platform | Download | Install |
 | --- | --- | --- |
-| macOS 12+ (Intel / Apple Silicon) | [AidoChat.dmg](https://github.com/gravelstars/AidoChat/releases/download/v0.1.2/AidoChat.dmg) | Drag AidoChat.app into Applications |
-| Windows 10 / 11 (x64) | [AidoChat-windows-setup.exe](https://github.com/gravelstars/AidoChat/releases/download/v0.1.2/AidoChat-windows-setup.exe) | Run the installer; WebView2 is required (the installer guides you) |
-| Ubuntu 24.04 (amd64) | [AidoChat.deb](https://github.com/gravelstars/AidoChat/releases/download/v0.1.2/AidoChat.deb) | `sudo apt install ./AidoChat.deb` |
-| Other Linux | [AidoChat.AppImage](https://github.com/gravelstars/AidoChat/releases/download/v0.1.2/AidoChat.AppImage) | `chmod +x` and run; requires GTK4 / WebKitGTK 6.0 |
+| macOS 12+ (Intel / Apple Silicon) | [AidoChat.dmg](https://github.com/gravelstars/AidoChat/releases/download/v0.1.3/AidoChat.dmg) | Drag AidoChat.app into Applications |
+| Windows 10 / 11 (x64) | [AidoChat-windows-setup.exe](https://github.com/gravelstars/AidoChat/releases/download/v0.1.3/AidoChat-windows-setup.exe) | Run the installer; WebView2 is required (the installer guides you) |
+| Ubuntu 24.04 (amd64) | [AidoChat.deb](https://github.com/gravelstars/AidoChat/releases/download/v0.1.3/AidoChat.deb) | `sudo apt install ./AidoChat.deb` |
+| Other Linux | [AidoChat.AppImage](https://github.com/gravelstars/AidoChat/releases/download/v0.1.3/AidoChat.AppImage) | `chmod +x` and run; requires GTK4 / WebKitGTK 6.0 |
 
 [All releases and checksums](https://github.com/gravelstars/AidoChat/releases) · Not sure which one? Windows: setup.exe, macOS: dmg, Ubuntu: deb.
 
@@ -89,7 +89,7 @@ Choose among six paper themes, reading sizes and density, a full display name, a
 </p>
 
 ### Local records, services you choose
-The desktop app uses local SQLite and the system credential store. Attach images and TXT/Markdown/text PDFs, and export a selected message range as paginated PNGs.
+The desktop app uses local SQLite and the system credential store. Attach images, TXT/Markdown/PDF, Word/PowerPoint/Excel, CSV/JSON, code, and log files, and export a selected message range as paginated PNGs.
 
 
 ## Quick start
@@ -124,7 +124,7 @@ See [build/README.md](build/README.md) and [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Status
 
-0.1.2 runs on the desktop, and macOS, Windows, and Linux installers are published on [Releases](https://github.com/gravelstars/AidoChat/releases/latest). The browser demo uses fictional data and preset replies. Mobile, accounts, cloud sync, web tools, scanned-PDF OCR, Word/Excel, and video attachments are not supported. Windows/Linux installation still needs broader real-machine testing.
+0.1.3 runs on the desktop, and macOS, Windows, and Linux installers are published on [Releases](https://github.com/gravelstars/AidoChat/releases/latest). The browser demo uses fictional data and preset replies. Mobile, accounts, cloud sync, web tools, scanned-PDF OCR, and video attachments are not supported. Windows/Linux installation still needs broader real-machine testing.
 
 ## Contributing
 

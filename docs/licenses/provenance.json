@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T10:25:11.071Z",
+  "generatedAt": "2026-10-19T14:29:09.259Z",
   "node": "v24.14.1",
   "npm": "11.11.0",
   "go": "go1.26.4",
@@ -17,14 +17,22 @@
   },
   "inputs": {
     "frontend/package-lock.json": "ab7487307fd7f934223c10cd3e139ccbcb6e11213c832724d7462380c4a0219f",
-    "go.mod": "f7f09a1890f5b49570cd3b68349b9b64d8122d71dc8893ea2c4de0062521bcf0",
-    "go.sum": "e9fa5ed0072a9cae823380b4022bccd8101cdd9b5610dd9a53cf524fc2f403f0"
+    "go.mod": "6e034ce636de4d2f5e30fcc35df84c60d4f71792d369f2b2f3e47f281a56df70",
+    "go.sum": "291b7108841d211073527f02f3848dd677cf182996a7fea92d32c00893b84149"
   },
   "goLicensesScan": "Temporary exact source copy, with temporary expanded go.sum, because x/tools go/packages queries Go version with GO111MODULE=off and cannot inherit -modfile. Original project go.mod/go.sum are never written.",
   "goScanSources": [
     {
       "file": "app/attachments.go",
-      "sha256": "99d0bd6131e2b74d5783304aecf19f1635c123c3919404f78a335d222df452a4"
+      "sha256": "8c3dda3beb9c4d2290c4c8c94d33f1f7ead99afa935ac412905906bfb76f43da"
+    },
+    {
+      "file": "app/attachments_office.go",
+      "sha256": "4925cbf67ae6892f0d1e89ab899f85c18ae58e46d4e4d8b912eee80af2600ebc"
+    },
+    {
+      "file": "app/attachments_office_test.go",
+      "sha256": "891acb1f6d20051af35f2af999cdec545e5ccc6d4c1d8a0d0140085760c43691"
     },
     {
       "file": "app/attachments_test.go",
@@ -188,11 +196,11 @@
     },
     {
       "file": "go.mod",
-      "sha256": "f7f09a1890f5b49570cd3b68349b9b64d8122d71dc8893ea2c4de0062521bcf0"
+      "sha256": "6e034ce636de4d2f5e30fcc35df84c60d4f71792d369f2b2f3e47f281a56df70"
     },
     {
       "file": "go.sum",
-      "sha256": "6e293790f1d9dc9f77037c6e4eb47896ea95678e3952b6e0844363f20a0775a1"
+      "sha256": "4a0a184fcf85e134f0d674e2cfbf17a1f7dddc3aba6f86a6ef707fc19225bc28"
     },
     {
       "file": "internal/contextbuilder/attachments.go",
@@ -423,11 +431,11 @@
       "sha256": "5e549d674e21ce948fab81391d75361c1ad8028c00979e52f18efcca62606bf1"
     }
   ],
-  "normalization": "Machine outputs only replace absolute repository/cache/home prefixes with placeholders; original license text bytes are unchanged. License-named Go source containers use .go.txt; file references in stored scanner outputs were remapped, while source paths and original content bytes are unchanged.",
+  "normalization": "Machine outputs only replace absolute repository/cache/home prefixes with placeholders; original license text bytes are unchanged. License-named Go source containers use .go.txt so go ./... cannot treat documentation as application packages.",
   "commands": [
     {
       "command": [
-        "<LICENSE_TOOLS_DIR>/node_modules/.bin/license-checker-rseidelsohn",
+        "/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/node_modules/.bin/license-checker-rseidelsohn",
         "--json",
         "--relativeLicensePath",
         "--relativeModulePath",
@@ -437,7 +445,7 @@
     },
     {
       "command": [
-        "<LICENSE_TOOLS_DIR>/node_modules/.bin/license-checker-rseidelsohn",
+        "/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/node_modules/.bin/license-checker-rseidelsohn",
         "--json",
         "--relativeLicensePath",
         "--relativeModulePath",
@@ -456,7 +464,7 @@
       "cwd": "<REPOSITORY>",
       "env": {
         "GOROOT": "<GOROOT>",
-        "GOFLAGS": " \"-modfile=<LICENSE_TOOLS_DIR>/export/go-export.mod\""
+        "GOFLAGS": " \"-modfile=/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/export/go-export.mod\""
       }
     },
     {
@@ -470,7 +478,7 @@
       "cwd": "<REPOSITORY>",
       "env": {
         "GOROOT": "<GOROOT>",
-        "GOFLAGS": " \"-modfile=<LICENSE_TOOLS_DIR>/export/go-export.mod\""
+        "GOFLAGS": " \"-modfile=/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/export/go-export.mod\""
       }
     },
     {
@@ -488,7 +496,7 @@
         "GOOS": "darwin",
         "GOARCH": "amd64",
         "CGO_ENABLED": "1",
-        "GOFLAGS": " \"-modfile=<LICENSE_TOOLS_DIR>/export/go-export.mod\""
+        "GOFLAGS": " \"-modfile=/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/export/go-export.mod\""
       }
     },
     {
@@ -506,7 +514,7 @@
         "GOOS": "windows",
         "GOARCH": "amd64",
         "CGO_ENABLED": "1",
-        "GOFLAGS": " \"-modfile=<LICENSE_TOOLS_DIR>/export/go-export.mod\""
+        "GOFLAGS": " \"-modfile=/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/export/go-export.mod\""
       }
     },
     {
@@ -524,18 +532,18 @@
         "GOOS": "linux",
         "GOARCH": "amd64",
         "CGO_ENABLED": "1",
-        "GOFLAGS": " \"-modfile=<LICENSE_TOOLS_DIR>/export/go-export.mod\""
+        "GOFLAGS": " \"-modfile=/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/export/go-export.mod\""
       }
     },
     {
       "command": [
-        "<LICENSE_TOOLS_DIR>/bin/go-licenses",
+        "/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/bin/go-licenses",
         "report",
         "./...",
         "--ignore",
         "ai-group-chat"
       ],
-      "cwd": "<LICENSE_TOOLS_DIR>/export/go-scan-root",
+      "cwd": "/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/export/go-scan-root",
       "env": {
         "GOROOT": "<GOROOT>",
         "GOFLAGS": ""
@@ -543,14 +551,14 @@
     },
     {
       "command": [
-        "<LICENSE_TOOLS_DIR>/bin/go-licenses",
+        "/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/bin/go-licenses",
         "save",
         "./...",
         "--ignore",
         "ai-group-chat",
-        "--save_path=<LICENSE_TOOLS_DIR>/export/go-save"
+        "--save_path=/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/export/go-save"
       ],
-      "cwd": "<LICENSE_TOOLS_DIR>/export/go-scan-root",
+      "cwd": "/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/export/go-scan-root",
       "env": {
         "GOROOT": "<GOROOT>",
         "GOFLAGS": ""
@@ -558,7 +566,7 @@
     },
     {
       "command": [
-        "<LICENSE_TOOLS_DIR>/bin/identify_license",
+        "/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/bin/identify_license",
         "-tasks",
         "8",
         "-json",
@@ -569,12 +577,12 @@
       "cwd": "<REPOSITORY>",
       "env": {
         "GOROOT": "<GOROOT>",
-        "GOFLAGS": " \"-modfile=<LICENSE_TOOLS_DIR>/export/go-export.mod\""
+        "GOFLAGS": " \"-modfile=/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/export/go-export.mod\""
       }
     },
     {
       "command": [
-        "<LICENSE_TOOLS_DIR>/bin/identify_license",
+        "/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/bin/identify_license",
         "-headers",
         "-tasks",
         "8",
@@ -585,7 +593,7 @@
       "cwd": "<REPOSITORY>",
       "env": {
         "GOROOT": "<GOROOT>",
-        "GOFLAGS": " \"-modfile=<LICENSE_TOOLS_DIR>/export/go-export.mod\""
+        "GOFLAGS": " \"-modfile=/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/export/go-export.mod\""
       }
     },
     {
@@ -593,12 +601,12 @@
         "go",
         "version",
         "-m",
-        "<LICENSE_TOOLS_DIR>/bin/go-licenses"
+        "/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/bin/go-licenses"
       ],
       "cwd": "<REPOSITORY>",
       "env": {
         "GOROOT": "<GOROOT>",
-        "GOFLAGS": " \"-modfile=<LICENSE_TOOLS_DIR>/export/go-export.mod\""
+        "GOFLAGS": " \"-modfile=/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/export/go-export.mod\""
       }
     },
     {
@@ -606,12 +614,12 @@
         "go",
         "version",
         "-m",
-        "<LICENSE_TOOLS_DIR>/bin/identify_license"
+        "/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/bin/identify_license"
       ],
       "cwd": "<REPOSITORY>",
       "env": {
         "GOROOT": "<GOROOT>",
-        "GOFLAGS": " \"-modfile=<LICENSE_TOOLS_DIR>/export/go-export.mod\""
+        "GOFLAGS": " \"-modfile=/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/export/go-export.mod\""
       }
     }
   ]

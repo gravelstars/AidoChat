@@ -1,4 +1,4 @@
-<LICENSE_TOOLS_DIR>/bin/go-licenses: go1.24.3
+/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/bin/go-licenses: go1.24.3
 	path	github.com/google/go-licenses/v2
 	mod	github.com/google/go-licenses/v2	v2.0.1	h1:ti+9bi5o7DKbeeg5eBb/uZTgsaPNoJaLCh93cRcXsW8=
 	dep	github.com/davecgh/go-spew	v1.1.1	h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=

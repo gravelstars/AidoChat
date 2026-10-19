@@ -1772,6 +1772,46 @@
     ]
   },
   {
+    "module": "github.com/richardlehane/mscfb",
+    "version": "v1.0.7",
+    "indirect": true,
+    "scope": "runtime-import-graph",
+    "runtimePlatforms": [
+      "darwin",
+      "linux",
+      "windows"
+    ],
+    "licenseFiles": [
+      "docs/licenses/texts/go-modules/github.com/richardlehane/mscfb@v1.0.7/LICENSE.txt"
+    ],
+    "inlineDetectedLicenses": [
+      "Apache-2.0"
+    ],
+    "detectedLicenses": [
+      "Apache-2.0"
+    ]
+  },
+  {
+    "module": "github.com/richardlehane/msoleps",
+    "version": "v1.0.6",
+    "indirect": true,
+    "scope": "runtime-import-graph",
+    "runtimePlatforms": [
+      "darwin",
+      "linux",
+      "windows"
+    ],
+    "licenseFiles": [
+      "docs/licenses/texts/go-modules/github.com/richardlehane/msoleps@v1.0.6/LICENSE.txt"
+    ],
+    "inlineDetectedLicenses": [
+      "Apache-2.0"
+    ],
+    "detectedLicenses": [
+      "Apache-2.0"
+    ]
+  },
+  {
     "module": "github.com/rivo/uniseg",
     "version": "v0.4.7",
     "indirect": true,
@@ -1972,6 +2012,25 @@
     ]
   },
   {
+    "module": "github.com/tiendc/go-deepcopy",
+    "version": "v1.7.2",
+    "indirect": true,
+    "scope": "runtime-import-graph",
+    "runtimePlatforms": [
+      "darwin",
+      "linux",
+      "windows"
+    ],
+    "licenseFiles": [
+      "docs/licenses/texts/go-modules/github.com/tiendc/go-deepcopy@v1.7.2/LICENSE"
+    ],
+    "inlineDetectedLicenses": [],
+    "detectedLicenses": [
+      "Copyright",
+      "MIT"
+    ]
+  },
+  {
     "module": "github.com/ulikunitz/xz",
     "version": "v0.5.15",
     "indirect": true,
@@ -2062,6 +2121,65 @@
     "detectedLicenses": [
       "Copyright",
       "MIT"
+    ]
+  },
+  {
+    "module": "github.com/xuri/efp",
+    "version": "v0.0.1",
+    "indirect": true,
+    "scope": "runtime-import-graph",
+    "runtimePlatforms": [
+      "darwin",
+      "linux",
+      "windows"
+    ],
+    "licenseFiles": [
+      "docs/licenses/texts/go-modules/github.com/xuri/efp@v0.0.1/LICENSE"
+    ],
+    "inlineDetectedLicenses": [],
+    "detectedLicenses": [
+      "BSD-3-Clause",
+      "Copyright"
+    ]
+  },
+  {
+    "module": "github.com/xuri/excelize/v2",
+    "version": "v2.11.0",
+    "indirect": false,
+    "scope": "runtime-import-graph",
+    "runtimePlatforms": [
+      "darwin",
+      "linux",
+      "windows"
+    ],
+    "licenseFiles": [
+      "docs/licenses/texts/go-modules/github.com/xuri/excelize/v2@v2.11.0/LICENSE"
+    ],
+    "inlineDetectedLicenses": [
+      "BSD-3-Clause"
+    ],
+    "detectedLicenses": [
+      "BSD-3-Clause",
+      "Copyright"
+    ]
+  },
+  {
+    "module": "github.com/xuri/nfp",
+    "version": "v0.0.2-0.20250530014748-2ddeb826f9a9",
+    "indirect": true,
+    "scope": "runtime-import-graph",
+    "runtimePlatforms": [
+      "darwin",
+      "linux",
+      "windows"
+    ],
+    "licenseFiles": [
+      "docs/licenses/texts/go-modules/github.com/xuri/nfp@v0.0.2-0.20250530014748-2ddeb826f9a9/LICENSE"
+    ],
+    "inlineDetectedLicenses": [],
+    "detectedLicenses": [
+      "BSD-3-Clause",
+      "Copyright"
     ]
   },
   {
@@ -2196,8 +2314,12 @@
     "module": "golang.org/x/crypto",
     "version": "v0.53.0",
     "indirect": true,
-    "scope": "module-graph-only (build/tool/test/transitive; not proven shipped)",
-    "runtimePlatforms": [],
+    "scope": "runtime-import-graph",
+    "runtimePlatforms": [
+      "darwin",
+      "linux",
+      "windows"
+    ],
     "licenseFiles": [
       "docs/licenses/texts/go-modules/golang.org/x/crypto@v0.53.0/LICENSE",
       "docs/licenses/texts/go-modules/golang.org/x/crypto@v0.53.0/PATENTS"
@@ -2275,8 +2397,12 @@
     "module": "golang.org/x/net",
     "version": "v0.56.0",
     "indirect": true,
-    "scope": "module-graph-only (build/tool/test/transitive; not proven shipped)",
-    "runtimePlatforms": [],
+    "scope": "runtime-import-graph",
+    "runtimePlatforms": [
+      "darwin",
+      "linux",
+      "windows"
+    ],
     "licenseFiles": [
       "docs/licenses/texts/go-modules/golang.org/x/net@v0.56.0/LICENSE",
       "docs/licenses/texts/go-modules/golang.org/x/net@v0.56.0/PATENTS"
@@ -2358,8 +2484,12 @@
     "module": "golang.org/x/text",
     "version": "v0.39.0",
     "indirect": true,
-    "scope": "module-graph-only (build/tool/test/transitive; not proven shipped)",
-    "runtimePlatforms": [],
+    "scope": "runtime-import-graph",
+    "runtimePlatforms": [
+      "darwin",
+      "linux",
+      "windows"
+    ],
     "licenseFiles": [
       "docs/licenses/texts/go-modules/golang.org/x/text@v0.39.0/LICENSE",
       "docs/licenses/texts/go-modules/golang.org/x/text@v0.39.0/PATENTS"

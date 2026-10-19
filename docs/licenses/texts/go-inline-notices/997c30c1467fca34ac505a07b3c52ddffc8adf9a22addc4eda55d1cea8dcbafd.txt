@@ -1,0 +1,12 @@
+// Copyright 2022 - 2025 The nfp Authors. All rights reserved. Use of this
+// source code is governed by a BSD-style license that can be found in the
+// LICENSE file.
+//
+// This package NFP (Number Format Parser) produce syntax trees for number
+// format expression. Excel Number format controls options such the number of
+// decimal digits, the currency sign, commas to separate thousands, and
+// display of negative numbers. The number format of an index applies wherever
+// that index is used, including row or column headers of a table, or graph
+// axis that uses that index.
+//
+// Implementation with Go language by Ri Xu: https://xuri.me

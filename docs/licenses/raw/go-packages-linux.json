@@ -1104,7 +1104,7 @@
 		"Path": "ai-group-chat",
 		"Main": true,
 		"Dir": "<REPOSITORY>",
-		"GoMod": "<LICENSE_TOOLS_DIR>/export/go-export.mod",
+		"GoMod": "/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/export/go-export.mod",
 		"GoVersion": "1.26.4"
 	},
 	"GoFiles": [
@@ -1136,7 +1136,7 @@
 		"Path": "ai-group-chat",
 		"Main": true,
 		"Dir": "<REPOSITORY>",
-		"GoMod": "<LICENSE_TOOLS_DIR>/export/go-export.mod",
+		"GoMod": "/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/export/go-export.mod",
 		"GoVersion": "1.26.4"
 	},
 	"GoFiles": [
@@ -2574,7 +2574,7 @@
 		"Path": "ai-group-chat",
 		"Main": true,
 		"Dir": "<REPOSITORY>",
-		"GoMod": "<LICENSE_TOOLS_DIR>/export/go-export.mod",
+		"GoMod": "/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/export/go-export.mod",
 		"GoVersion": "1.26.4"
 	},
 	"GoFiles": [
@@ -2611,7 +2611,7 @@
 		"Path": "ai-group-chat",
 		"Main": true,
 		"Dir": "<REPOSITORY>",
-		"GoMod": "<LICENSE_TOOLS_DIR>/export/go-export.mod",
+		"GoMod": "/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/export/go-export.mod",
 		"GoVersion": "1.26.4"
 	},
 	"GoFiles": [
@@ -2625,7 +2625,7 @@
 		"Path": "ai-group-chat",
 		"Main": true,
 		"Dir": "<REPOSITORY>",
-		"GoMod": "<LICENSE_TOOLS_DIR>/export/go-export.mod",
+		"GoMod": "/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/export/go-export.mod",
 		"GoVersion": "1.26.4"
 	},
 	"GoFiles": [
@@ -2749,7 +2749,7 @@
 		"Path": "ai-group-chat",
 		"Main": true,
 		"Dir": "<REPOSITORY>",
-		"GoMod": "<LICENSE_TOOLS_DIR>/export/go-export.mod",
+		"GoMod": "/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/export/go-export.mod",
 		"GoVersion": "1.26.4"
 	},
 	"GoFiles": [
@@ -2789,7 +2789,7 @@
 		"Path": "ai-group-chat",
 		"Main": true,
 		"Dir": "<REPOSITORY>",
-		"GoMod": "<LICENSE_TOOLS_DIR>/export/go-export.mod",
+		"GoMod": "/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/export/go-export.mod",
 		"GoVersion": "1.26.4"
 	},
 	"GoFiles": [
@@ -2804,7 +2804,7 @@
 		"Path": "ai-group-chat",
 		"Main": true,
 		"Dir": "<REPOSITORY>",
-		"GoMod": "<LICENSE_TOOLS_DIR>/export/go-export.mod",
+		"GoMod": "/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/export/go-export.mod",
 		"GoVersion": "1.26.4"
 	},
 	"GoFiles": [
@@ -2818,7 +2818,7 @@
 		"Path": "ai-group-chat",
 		"Main": true,
 		"Dir": "<REPOSITORY>",
-		"GoMod": "<LICENSE_TOOLS_DIR>/export/go-export.mod",
+		"GoMod": "/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/export/go-export.mod",
 		"GoVersion": "1.26.4"
 	},
 	"GoFiles": [
@@ -2865,7 +2865,7 @@
 		"Path": "ai-group-chat",
 		"Main": true,
 		"Dir": "<REPOSITORY>",
-		"GoMod": "<LICENSE_TOOLS_DIR>/export/go-export.mod",
+		"GoMod": "/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/export/go-export.mod",
 		"GoVersion": "1.26.4"
 	},
 	"GoFiles": [
@@ -3438,7 +3438,7 @@
 		"Path": "ai-group-chat",
 		"Main": true,
 		"Dir": "<REPOSITORY>",
-		"GoMod": "<LICENSE_TOOLS_DIR>/export/go-export.mod",
+		"GoMod": "/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/export/go-export.mod",
 		"GoVersion": "1.26.4"
 	},
 	"GoFiles": [
@@ -3455,6 +3455,815 @@
 		"migrations/002_reply_mode.sql",
 		"migrations/003_provider_retirement.sql",
 		"migrations/004_attachments.sql"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/archive/zip",
+	"ImportPath": "archive/zip",
+	"Standard": true,
+	"GoFiles": [
+		"reader.go",
+		"register.go",
+		"struct.go",
+		"writer.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/encoding/xml",
+	"ImportPath": "encoding/xml",
+	"Standard": true,
+	"GoFiles": [
+		"marshal.go",
+		"read.go",
+		"typeinfo.go",
+		"xml.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/richardlehane/msoleps@v1.0.6/types",
+	"ImportPath": "github.com/richardlehane/msoleps/types",
+	"Module": {
+		"Path": "github.com/richardlehane/msoleps",
+		"Version": "v1.0.6",
+		"Time": "2026-01-12T11:26:19Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/github.com/richardlehane/msoleps@v1.0.6",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/richardlehane/msoleps/@v/v1.0.6.mod",
+		"Sum": "h1:9BvkpjvD+iUBalUY4esMwv6uBkfOip/Lzvd93jvR9gg=",
+		"GoModSum": "h1:BWev5JBpU9Ko2WAgmZEuiz4/u3ZYTKbjLycmwiWUfWg="
+	},
+	"GoFiles": [
+		"currency.go",
+		"date.go",
+		"decimal.go",
+		"filetime.go",
+		"guid.go",
+		"numeric.go",
+		"strings.go",
+		"types.go",
+		"vectorArray.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/richardlehane/mscfb@v1.0.7",
+	"ImportPath": "github.com/richardlehane/mscfb",
+	"Module": {
+		"Path": "github.com/richardlehane/mscfb",
+		"Version": "v1.0.7",
+		"Time": "2026-06-06T04:26:53Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/github.com/richardlehane/mscfb@v1.0.7",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/richardlehane/mscfb/@v/v1.0.7.mod",
+		"GoVersion": "1.18",
+		"Sum": "h1:oeoiM0WE79vHwE8RpIYYvIAc8ajTH2mb6UZm55/+EB0=",
+		"GoModSum": "h1:pe0+IUIc0AHh0+teNzBlJCtSyZdFOGgV4ZK9bsoV+Jo="
+	},
+	"GoFiles": [
+		"file.go",
+		"mscfb.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/tiendc/go-deepcopy@v1.7.2",
+	"ImportPath": "github.com/tiendc/go-deepcopy",
+	"Module": {
+		"Path": "github.com/tiendc/go-deepcopy",
+		"Version": "v1.7.2",
+		"Time": "2025-11-28T19:06:59Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/github.com/tiendc/go-deepcopy@v1.7.2",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/tiendc/go-deepcopy/@v/v1.7.2.mod",
+		"GoVersion": "1.18",
+		"Sum": "h1:Ut2yYR7W9tWjTQitganoIue4UGxZwCcJy3orjrrIj44=",
+		"GoModSum": "h1:4bKjNC2r7boYOkD2IOuZpYjmlDdzjbpTRyCx+goBCJQ="
+	},
+	"GoFiles": [
+		"base_copier.go",
+		"build_copier.go",
+		"deepcopy.go",
+		"errors.go",
+		"iface_copier.go",
+		"map_copier.go",
+		"map_to_struct_copier.go",
+		"slice_copier.go",
+		"struct_copier.go",
+		"struct_tag.go",
+		"struct_to_map_copier.go",
+		"util.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/xuri/efp@v0.0.1",
+	"ImportPath": "github.com/xuri/efp",
+	"Module": {
+		"Path": "github.com/xuri/efp",
+		"Version": "v0.0.1",
+		"Time": "2025-02-27T11:00:27Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/github.com/xuri/efp@v0.0.1",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/xuri/efp/@v/v0.0.1.mod",
+		"GoVersion": "1.11",
+		"Sum": "h1:fws5Rv3myXyYni8uwj2qKjVaRP30PdjeYe2Y6FDsCL8=",
+		"GoModSum": "h1:ybY/Jr0T0GTCnYjKqmdwxyxn2BQf2RcQIIvex5QldPI="
+	},
+	"GoFiles": [
+		"efp.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/xuri/nfp@v0.0.2-0.20250530014748-2ddeb826f9a9",
+	"ImportPath": "github.com/xuri/nfp",
+	"Module": {
+		"Path": "github.com/xuri/nfp",
+		"Version": "v0.0.2-0.20250530014748-2ddeb826f9a9",
+		"Time": "2025-05-30T01:47:48Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/github.com/xuri/nfp@v0.0.2-0.20250530014748-2ddeb826f9a9",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/xuri/nfp/@v/v0.0.2-0.20250530014748-2ddeb826f9a9.mod",
+		"GoVersion": "1.15",
+		"Sum": "h1:+C0TIdyyYmzadGaL/HBLbf3WdLgC29pgyhTjAT/0nuE=",
+		"GoModSum": "h1:WwHg+CVyzlv/TX9xqBFXEZAuxOPxn2k1GNHwG41IIUQ="
+	},
+	"GoFiles": [
+		"nfp.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/golang.org/x/crypto@v0.53.0/md4",
+	"ImportPath": "golang.org/x/crypto/md4",
+	"Module": {
+		"Path": "golang.org/x/crypto",
+		"Version": "v0.53.0",
+		"Time": "2026-06-08T15:52:49Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/golang.org/x/crypto@v0.53.0",
+		"GoMod": "<GOMODCACHE>/cache/download/golang.org/x/crypto/@v/v0.53.0.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:QZ4Muo8THX6CizN2vPPd5fBGHyogrdK9fG4wLPFUsto=",
+		"GoModSum": "h1:DNLU434OwVakk9PzuwV8w62mAJpRJL3vsgcfp4Qnsio="
+	},
+	"GoFiles": [
+		"md4.go",
+		"md4block.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/golang.org/x/crypto@v0.53.0/ripemd160",
+	"ImportPath": "golang.org/x/crypto/ripemd160",
+	"Module": {
+		"Path": "golang.org/x/crypto",
+		"Version": "v0.53.0",
+		"Time": "2026-06-08T15:52:49Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/golang.org/x/crypto@v0.53.0",
+		"GoMod": "<GOMODCACHE>/cache/download/golang.org/x/crypto/@v/v0.53.0.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:QZ4Muo8THX6CizN2vPPd5fBGHyogrdK9fG4wLPFUsto=",
+		"GoModSum": "h1:DNLU434OwVakk9PzuwV8w62mAJpRJL3vsgcfp4Qnsio="
+	},
+	"GoFiles": [
+		"ripemd160.go",
+		"ripemd160block.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/golang.org/x/net@v0.56.0/html/atom",
+	"ImportPath": "golang.org/x/net/html/atom",
+	"Module": {
+		"Path": "golang.org/x/net",
+		"Version": "v0.56.0",
+		"Time": "2026-06-09T16:58:42Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/golang.org/x/net@v0.56.0",
+		"GoMod": "<GOMODCACHE>/cache/download/golang.org/x/net/@v/v0.56.0.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:Rw8j/hFzGvJUZwNBXnAtf5sVDVt+65SK2C7IxCxZt5o=",
+		"GoModSum": "h1:D3Ku6r+V6JROoZK144D2XfMHFcMq/0zSfLelVTCFKec="
+	},
+	"GoFiles": [
+		"atom.go",
+		"table.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/golang.org/x/net@v0.56.0/html",
+	"ImportPath": "golang.org/x/net/html",
+	"Module": {
+		"Path": "golang.org/x/net",
+		"Version": "v0.56.0",
+		"Time": "2026-06-09T16:58:42Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/golang.org/x/net@v0.56.0",
+		"GoMod": "<GOMODCACHE>/cache/download/golang.org/x/net/@v/v0.56.0.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:Rw8j/hFzGvJUZwNBXnAtf5sVDVt+65SK2C7IxCxZt5o=",
+		"GoModSum": "h1:D3Ku6r+V6JROoZK144D2XfMHFcMq/0zSfLelVTCFKec="
+	},
+	"GoFiles": [
+		"const.go",
+		"doc.go",
+		"doctype.go",
+		"entity.go",
+		"escape.go",
+		"foreign.go",
+		"iter.go",
+		"node.go",
+		"nodetype_string.go",
+		"parse.go",
+		"render.go",
+		"token.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0/encoding/internal/identifier",
+	"ImportPath": "golang.org/x/text/encoding/internal/identifier",
+	"Module": {
+		"Path": "golang.org/x/text",
+		"Version": "v0.39.0",
+		"Time": "2026-06-30T20:39:37Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0",
+		"GoMod": "<GOMODCACHE>/cache/download/golang.org/x/text/@v/v0.39.0.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:UbZz4pLOvn600D6Oh6GGEI6VAmndrEBLv8/6BEXzyus=",
+		"GoModSum": "h1:3UwRclnC2g0TU9x8PZiyfOajCd1zaUNHF9cvqcQZ+ZM="
+	},
+	"GoFiles": [
+		"identifier.go",
+		"mib.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0/transform",
+	"ImportPath": "golang.org/x/text/transform",
+	"Module": {
+		"Path": "golang.org/x/text",
+		"Version": "v0.39.0",
+		"Time": "2026-06-30T20:39:37Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0",
+		"GoMod": "<GOMODCACHE>/cache/download/golang.org/x/text/@v/v0.39.0.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:UbZz4pLOvn600D6Oh6GGEI6VAmndrEBLv8/6BEXzyus=",
+		"GoModSum": "h1:3UwRclnC2g0TU9x8PZiyfOajCd1zaUNHF9cvqcQZ+ZM="
+	},
+	"GoFiles": [
+		"transform.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0/encoding",
+	"ImportPath": "golang.org/x/text/encoding",
+	"Module": {
+		"Path": "golang.org/x/text",
+		"Version": "v0.39.0",
+		"Time": "2026-06-30T20:39:37Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0",
+		"GoMod": "<GOMODCACHE>/cache/download/golang.org/x/text/@v/v0.39.0.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:UbZz4pLOvn600D6Oh6GGEI6VAmndrEBLv8/6BEXzyus=",
+		"GoModSum": "h1:3UwRclnC2g0TU9x8PZiyfOajCd1zaUNHF9cvqcQZ+ZM="
+	},
+	"GoFiles": [
+		"encoding.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0/encoding/internal",
+	"ImportPath": "golang.org/x/text/encoding/internal",
+	"Module": {
+		"Path": "golang.org/x/text",
+		"Version": "v0.39.0",
+		"Time": "2026-06-30T20:39:37Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0",
+		"GoMod": "<GOMODCACHE>/cache/download/golang.org/x/text/@v/v0.39.0.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:UbZz4pLOvn600D6Oh6GGEI6VAmndrEBLv8/6BEXzyus=",
+		"GoModSum": "h1:3UwRclnC2g0TU9x8PZiyfOajCd1zaUNHF9cvqcQZ+ZM="
+	},
+	"GoFiles": [
+		"internal.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0/encoding/charmap",
+	"ImportPath": "golang.org/x/text/encoding/charmap",
+	"Module": {
+		"Path": "golang.org/x/text",
+		"Version": "v0.39.0",
+		"Time": "2026-06-30T20:39:37Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0",
+		"GoMod": "<GOMODCACHE>/cache/download/golang.org/x/text/@v/v0.39.0.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:UbZz4pLOvn600D6Oh6GGEI6VAmndrEBLv8/6BEXzyus=",
+		"GoModSum": "h1:3UwRclnC2g0TU9x8PZiyfOajCd1zaUNHF9cvqcQZ+ZM="
+	},
+	"GoFiles": [
+		"charmap.go",
+		"tables.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0/encoding/japanese",
+	"ImportPath": "golang.org/x/text/encoding/japanese",
+	"Module": {
+		"Path": "golang.org/x/text",
+		"Version": "v0.39.0",
+		"Time": "2026-06-30T20:39:37Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0",
+		"GoMod": "<GOMODCACHE>/cache/download/golang.org/x/text/@v/v0.39.0.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:UbZz4pLOvn600D6Oh6GGEI6VAmndrEBLv8/6BEXzyus=",
+		"GoModSum": "h1:3UwRclnC2g0TU9x8PZiyfOajCd1zaUNHF9cvqcQZ+ZM="
+	},
+	"GoFiles": [
+		"all.go",
+		"eucjp.go",
+		"iso2022jp.go",
+		"shiftjis.go",
+		"tables.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0/encoding/korean",
+	"ImportPath": "golang.org/x/text/encoding/korean",
+	"Module": {
+		"Path": "golang.org/x/text",
+		"Version": "v0.39.0",
+		"Time": "2026-06-30T20:39:37Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0",
+		"GoMod": "<GOMODCACHE>/cache/download/golang.org/x/text/@v/v0.39.0.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:UbZz4pLOvn600D6Oh6GGEI6VAmndrEBLv8/6BEXzyus=",
+		"GoModSum": "h1:3UwRclnC2g0TU9x8PZiyfOajCd1zaUNHF9cvqcQZ+ZM="
+	},
+	"GoFiles": [
+		"euckr.go",
+		"tables.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0/encoding/simplifiedchinese",
+	"ImportPath": "golang.org/x/text/encoding/simplifiedchinese",
+	"Module": {
+		"Path": "golang.org/x/text",
+		"Version": "v0.39.0",
+		"Time": "2026-06-30T20:39:37Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0",
+		"GoMod": "<GOMODCACHE>/cache/download/golang.org/x/text/@v/v0.39.0.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:UbZz4pLOvn600D6Oh6GGEI6VAmndrEBLv8/6BEXzyus=",
+		"GoModSum": "h1:3UwRclnC2g0TU9x8PZiyfOajCd1zaUNHF9cvqcQZ+ZM="
+	},
+	"GoFiles": [
+		"all.go",
+		"gbk.go",
+		"hzgb2312.go",
+		"tables.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0/encoding/traditionalchinese",
+	"ImportPath": "golang.org/x/text/encoding/traditionalchinese",
+	"Module": {
+		"Path": "golang.org/x/text",
+		"Version": "v0.39.0",
+		"Time": "2026-06-30T20:39:37Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0",
+		"GoMod": "<GOMODCACHE>/cache/download/golang.org/x/text/@v/v0.39.0.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:UbZz4pLOvn600D6Oh6GGEI6VAmndrEBLv8/6BEXzyus=",
+		"GoModSum": "h1:3UwRclnC2g0TU9x8PZiyfOajCd1zaUNHF9cvqcQZ+ZM="
+	},
+	"GoFiles": [
+		"big5.go",
+		"tables.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0/internal/utf8internal",
+	"ImportPath": "golang.org/x/text/internal/utf8internal",
+	"Module": {
+		"Path": "golang.org/x/text",
+		"Version": "v0.39.0",
+		"Time": "2026-06-30T20:39:37Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0",
+		"GoMod": "<GOMODCACHE>/cache/download/golang.org/x/text/@v/v0.39.0.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:UbZz4pLOvn600D6Oh6GGEI6VAmndrEBLv8/6BEXzyus=",
+		"GoModSum": "h1:3UwRclnC2g0TU9x8PZiyfOajCd1zaUNHF9cvqcQZ+ZM="
+	},
+	"GoFiles": [
+		"utf8internal.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0/runes",
+	"ImportPath": "golang.org/x/text/runes",
+	"Module": {
+		"Path": "golang.org/x/text",
+		"Version": "v0.39.0",
+		"Time": "2026-06-30T20:39:37Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0",
+		"GoMod": "<GOMODCACHE>/cache/download/golang.org/x/text/@v/v0.39.0.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:UbZz4pLOvn600D6Oh6GGEI6VAmndrEBLv8/6BEXzyus=",
+		"GoModSum": "h1:3UwRclnC2g0TU9x8PZiyfOajCd1zaUNHF9cvqcQZ+ZM="
+	},
+	"GoFiles": [
+		"cond.go",
+		"runes.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0/encoding/unicode",
+	"ImportPath": "golang.org/x/text/encoding/unicode",
+	"Module": {
+		"Path": "golang.org/x/text",
+		"Version": "v0.39.0",
+		"Time": "2026-06-30T20:39:37Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0",
+		"GoMod": "<GOMODCACHE>/cache/download/golang.org/x/text/@v/v0.39.0.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:UbZz4pLOvn600D6Oh6GGEI6VAmndrEBLv8/6BEXzyus=",
+		"GoModSum": "h1:3UwRclnC2g0TU9x8PZiyfOajCd1zaUNHF9cvqcQZ+ZM="
+	},
+	"GoFiles": [
+		"override.go",
+		"unicode.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0/internal/tag",
+	"ImportPath": "golang.org/x/text/internal/tag",
+	"Module": {
+		"Path": "golang.org/x/text",
+		"Version": "v0.39.0",
+		"Time": "2026-06-30T20:39:37Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0",
+		"GoMod": "<GOMODCACHE>/cache/download/golang.org/x/text/@v/v0.39.0.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:UbZz4pLOvn600D6Oh6GGEI6VAmndrEBLv8/6BEXzyus=",
+		"GoModSum": "h1:3UwRclnC2g0TU9x8PZiyfOajCd1zaUNHF9cvqcQZ+ZM="
+	},
+	"GoFiles": [
+		"tag.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0/internal/language",
+	"ImportPath": "golang.org/x/text/internal/language",
+	"Module": {
+		"Path": "golang.org/x/text",
+		"Version": "v0.39.0",
+		"Time": "2026-06-30T20:39:37Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0",
+		"GoMod": "<GOMODCACHE>/cache/download/golang.org/x/text/@v/v0.39.0.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:UbZz4pLOvn600D6Oh6GGEI6VAmndrEBLv8/6BEXzyus=",
+		"GoModSum": "h1:3UwRclnC2g0TU9x8PZiyfOajCd1zaUNHF9cvqcQZ+ZM="
+	},
+	"GoFiles": [
+		"common.go",
+		"compact.go",
+		"compose.go",
+		"coverage.go",
+		"language.go",
+		"lookup.go",
+		"match.go",
+		"parse.go",
+		"tables.go",
+		"tags.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0/internal/language/compact",
+	"ImportPath": "golang.org/x/text/internal/language/compact",
+	"Module": {
+		"Path": "golang.org/x/text",
+		"Version": "v0.39.0",
+		"Time": "2026-06-30T20:39:37Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0",
+		"GoMod": "<GOMODCACHE>/cache/download/golang.org/x/text/@v/v0.39.0.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:UbZz4pLOvn600D6Oh6GGEI6VAmndrEBLv8/6BEXzyus=",
+		"GoModSum": "h1:3UwRclnC2g0TU9x8PZiyfOajCd1zaUNHF9cvqcQZ+ZM="
+	},
+	"GoFiles": [
+		"compact.go",
+		"language.go",
+		"parents.go",
+		"tables.go",
+		"tags.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0/language",
+	"ImportPath": "golang.org/x/text/language",
+	"Module": {
+		"Path": "golang.org/x/text",
+		"Version": "v0.39.0",
+		"Time": "2026-06-30T20:39:37Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0",
+		"GoMod": "<GOMODCACHE>/cache/download/golang.org/x/text/@v/v0.39.0.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:UbZz4pLOvn600D6Oh6GGEI6VAmndrEBLv8/6BEXzyus=",
+		"GoModSum": "h1:3UwRclnC2g0TU9x8PZiyfOajCd1zaUNHF9cvqcQZ+ZM="
+	},
+	"GoFiles": [
+		"coverage.go",
+		"doc.go",
+		"language.go",
+		"match.go",
+		"parse.go",
+		"tables.go",
+		"tags.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0/encoding/htmlindex",
+	"ImportPath": "golang.org/x/text/encoding/htmlindex",
+	"Module": {
+		"Path": "golang.org/x/text",
+		"Version": "v0.39.0",
+		"Time": "2026-06-30T20:39:37Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0",
+		"GoMod": "<GOMODCACHE>/cache/download/golang.org/x/text/@v/v0.39.0.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:UbZz4pLOvn600D6Oh6GGEI6VAmndrEBLv8/6BEXzyus=",
+		"GoModSum": "h1:3UwRclnC2g0TU9x8PZiyfOajCd1zaUNHF9cvqcQZ+ZM="
+	},
+	"GoFiles": [
+		"htmlindex.go",
+		"map.go",
+		"tables.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/golang.org/x/net@v0.56.0/html/charset",
+	"ImportPath": "golang.org/x/net/html/charset",
+	"Module": {
+		"Path": "golang.org/x/net",
+		"Version": "v0.56.0",
+		"Time": "2026-06-09T16:58:42Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/golang.org/x/net@v0.56.0",
+		"GoMod": "<GOMODCACHE>/cache/download/golang.org/x/net/@v/v0.56.0.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:Rw8j/hFzGvJUZwNBXnAtf5sVDVt+65SK2C7IxCxZt5o=",
+		"GoModSum": "h1:D3Ku6r+V6JROoZK144D2XfMHFcMq/0zSfLelVTCFKec="
+	},
+	"GoFiles": [
+		"charset.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0/internal",
+	"ImportPath": "golang.org/x/text/internal",
+	"Module": {
+		"Path": "golang.org/x/text",
+		"Version": "v0.39.0",
+		"Time": "2026-06-30T20:39:37Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0",
+		"GoMod": "<GOMODCACHE>/cache/download/golang.org/x/text/@v/v0.39.0.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:UbZz4pLOvn600D6Oh6GGEI6VAmndrEBLv8/6BEXzyus=",
+		"GoModSum": "h1:3UwRclnC2g0TU9x8PZiyfOajCd1zaUNHF9cvqcQZ+ZM="
+	},
+	"GoFiles": [
+		"internal.go",
+		"match.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0/unicode/norm",
+	"ImportPath": "golang.org/x/text/unicode/norm",
+	"Module": {
+		"Path": "golang.org/x/text",
+		"Version": "v0.39.0",
+		"Time": "2026-06-30T20:39:37Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0",
+		"GoMod": "<GOMODCACHE>/cache/download/golang.org/x/text/@v/v0.39.0.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:UbZz4pLOvn600D6Oh6GGEI6VAmndrEBLv8/6BEXzyus=",
+		"GoModSum": "h1:3UwRclnC2g0TU9x8PZiyfOajCd1zaUNHF9cvqcQZ+ZM="
+	},
+	"GoFiles": [
+		"composition.go",
+		"forminfo.go",
+		"input.go",
+		"iter.go",
+		"normalize.go",
+		"readwriter.go",
+		"tables15.0.0.go",
+		"transform.go",
+		"trie.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0/cases",
+	"ImportPath": "golang.org/x/text/cases",
+	"Module": {
+		"Path": "golang.org/x/text",
+		"Version": "v0.39.0",
+		"Time": "2026-06-30T20:39:37Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0",
+		"GoMod": "<GOMODCACHE>/cache/download/golang.org/x/text/@v/v0.39.0.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:UbZz4pLOvn600D6Oh6GGEI6VAmndrEBLv8/6BEXzyus=",
+		"GoModSum": "h1:3UwRclnC2g0TU9x8PZiyfOajCd1zaUNHF9cvqcQZ+ZM="
+	},
+	"GoFiles": [
+		"cases.go",
+		"context.go",
+		"fold.go",
+		"info.go",
+		"map.go",
+		"tables15.0.0.go",
+		"trieval.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0/internal/catmsg",
+	"ImportPath": "golang.org/x/text/internal/catmsg",
+	"Module": {
+		"Path": "golang.org/x/text",
+		"Version": "v0.39.0",
+		"Time": "2026-06-30T20:39:37Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0",
+		"GoMod": "<GOMODCACHE>/cache/download/golang.org/x/text/@v/v0.39.0.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:UbZz4pLOvn600D6Oh6GGEI6VAmndrEBLv8/6BEXzyus=",
+		"GoModSum": "h1:3UwRclnC2g0TU9x8PZiyfOajCd1zaUNHF9cvqcQZ+ZM="
+	},
+	"GoFiles": [
+		"catmsg.go",
+		"codec.go",
+		"varint.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0/internal/stringset",
+	"ImportPath": "golang.org/x/text/internal/stringset",
+	"Module": {
+		"Path": "golang.org/x/text",
+		"Version": "v0.39.0",
+		"Time": "2026-06-30T20:39:37Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0",
+		"GoMod": "<GOMODCACHE>/cache/download/golang.org/x/text/@v/v0.39.0.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:UbZz4pLOvn600D6Oh6GGEI6VAmndrEBLv8/6BEXzyus=",
+		"GoModSum": "h1:3UwRclnC2g0TU9x8PZiyfOajCd1zaUNHF9cvqcQZ+ZM="
+	},
+	"GoFiles": [
+		"set.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0/internal/number",
+	"ImportPath": "golang.org/x/text/internal/number",
+	"Module": {
+		"Path": "golang.org/x/text",
+		"Version": "v0.39.0",
+		"Time": "2026-06-30T20:39:37Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0",
+		"GoMod": "<GOMODCACHE>/cache/download/golang.org/x/text/@v/v0.39.0.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:UbZz4pLOvn600D6Oh6GGEI6VAmndrEBLv8/6BEXzyus=",
+		"GoModSum": "h1:3UwRclnC2g0TU9x8PZiyfOajCd1zaUNHF9cvqcQZ+ZM="
+	},
+	"GoFiles": [
+		"common.go",
+		"decimal.go",
+		"format.go",
+		"number.go",
+		"pattern.go",
+		"roundingmode_string.go",
+		"tables.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0/message/catalog",
+	"ImportPath": "golang.org/x/text/message/catalog",
+	"Module": {
+		"Path": "golang.org/x/text",
+		"Version": "v0.39.0",
+		"Time": "2026-06-30T20:39:37Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0",
+		"GoMod": "<GOMODCACHE>/cache/download/golang.org/x/text/@v/v0.39.0.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:UbZz4pLOvn600D6Oh6GGEI6VAmndrEBLv8/6BEXzyus=",
+		"GoModSum": "h1:3UwRclnC2g0TU9x8PZiyfOajCd1zaUNHF9cvqcQZ+ZM="
+	},
+	"GoFiles": [
+		"catalog.go",
+		"dict.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0/feature/plural",
+	"ImportPath": "golang.org/x/text/feature/plural",
+	"Module": {
+		"Path": "golang.org/x/text",
+		"Version": "v0.39.0",
+		"Time": "2026-06-30T20:39:37Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0",
+		"GoMod": "<GOMODCACHE>/cache/download/golang.org/x/text/@v/v0.39.0.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:UbZz4pLOvn600D6Oh6GGEI6VAmndrEBLv8/6BEXzyus=",
+		"GoModSum": "h1:3UwRclnC2g0TU9x8PZiyfOajCd1zaUNHF9cvqcQZ+ZM="
+	},
+	"GoFiles": [
+		"common.go",
+		"message.go",
+		"plural.go",
+		"tables.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0/internal/format",
+	"ImportPath": "golang.org/x/text/internal/format",
+	"Module": {
+		"Path": "golang.org/x/text",
+		"Version": "v0.39.0",
+		"Time": "2026-06-30T20:39:37Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0",
+		"GoMod": "<GOMODCACHE>/cache/download/golang.org/x/text/@v/v0.39.0.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:UbZz4pLOvn600D6Oh6GGEI6VAmndrEBLv8/6BEXzyus=",
+		"GoModSum": "h1:3UwRclnC2g0TU9x8PZiyfOajCd1zaUNHF9cvqcQZ+ZM="
+	},
+	"GoFiles": [
+		"format.go",
+		"parser.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0/message",
+	"ImportPath": "golang.org/x/text/message",
+	"Module": {
+		"Path": "golang.org/x/text",
+		"Version": "v0.39.0",
+		"Time": "2026-06-30T20:39:37Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0",
+		"GoMod": "<GOMODCACHE>/cache/download/golang.org/x/text/@v/v0.39.0.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:UbZz4pLOvn600D6Oh6GGEI6VAmndrEBLv8/6BEXzyus=",
+		"GoModSum": "h1:3UwRclnC2g0TU9x8PZiyfOajCd1zaUNHF9cvqcQZ+ZM="
+	},
+	"GoFiles": [
+		"catalog.go",
+		"doc.go",
+		"format.go",
+		"message.go",
+		"print.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0/width",
+	"ImportPath": "golang.org/x/text/width",
+	"Module": {
+		"Path": "golang.org/x/text",
+		"Version": "v0.39.0",
+		"Time": "2026-06-30T20:39:37Z",
+		"Indirect": true,
+		"Dir": "<GOMODCACHE>/golang.org/x/text@v0.39.0",
+		"GoMod": "<GOMODCACHE>/cache/download/golang.org/x/text/@v/v0.39.0.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:UbZz4pLOvn600D6Oh6GGEI6VAmndrEBLv8/6BEXzyus=",
+		"GoModSum": "h1:3UwRclnC2g0TU9x8PZiyfOajCd1zaUNHF9cvqcQZ+ZM="
+	},
+	"GoFiles": [
+		"kind_string.go",
+		"tables15.0.0.go",
+		"transform.go",
+		"trieval.go",
+		"width.go"
 	]
 }
 {
@@ -3476,6 +4285,97 @@
 		"image.go",
 		"names.go",
 		"ycbcr.go"
+	]
+}
+{
+	"Dir": "<GOROOT>/src/math/cmplx",
+	"ImportPath": "math/cmplx",
+	"Standard": true,
+	"GoFiles": [
+		"abs.go",
+		"asin.go",
+		"conj.go",
+		"exp.go",
+		"isinf.go",
+		"isnan.go",
+		"log.go",
+		"phase.go",
+		"polar.go",
+		"pow.go",
+		"rect.go",
+		"sin.go",
+		"sqrt.go",
+		"tan.go"
+	]
+}
+{
+	"Dir": "<GOMODCACHE>/github.com/xuri/excelize/v2@v2.11.0",
+	"ImportPath": "github.com/xuri/excelize/v2",
+	"Module": {
+		"Path": "github.com/xuri/excelize/v2",
+		"Version": "v2.11.0",
+		"Time": "2026-07-06T16:07:47Z",
+		"Dir": "<GOMODCACHE>/github.com/xuri/excelize/v2@v2.11.0",
+		"GoMod": "<GOMODCACHE>/cache/download/github.com/xuri/excelize/v2/@v/v2.11.0.mod",
+		"GoVersion": "1.25.0",
+		"Sum": "h1:HxaEFl6sRN2+8J5a8HaKq+0M4FsjBGMnWWtjOCPSG88=",
+		"GoModSum": "h1:jxFLbzaIwGQ5ufFNvYfUOHqXhfPaNmP14KWfmNz2Uak="
+	},
+	"GoFiles": [
+		"adjust.go",
+		"calc.go",
+		"calcchain.go",
+		"cell.go",
+		"chart.go",
+		"col.go",
+		"crypt.go",
+		"datavalidation.go",
+		"date.go",
+		"docProps.go",
+		"drawing.go",
+		"errors.go",
+		"excelize.go",
+		"file.go",
+		"hsl.go",
+		"lib.go",
+		"merge.go",
+		"numfmt.go",
+		"picture.go",
+		"pivotTable.go",
+		"rows.go",
+		"shape.go",
+		"sheet.go",
+		"sheetpr.go",
+		"sheetview.go",
+		"slicer.go",
+		"sparkline.go",
+		"stream.go",
+		"styles.go",
+		"table.go",
+		"templates.go",
+		"vml.go",
+		"vmlDrawing.go",
+		"workbook.go",
+		"xmlApp.go",
+		"xmlCalcChain.go",
+		"xmlChart.go",
+		"xmlChartSheet.go",
+		"xmlComments.go",
+		"xmlContentTypes.go",
+		"xmlCore.go",
+		"xmlCustom.go",
+		"xmlDecodeDrawing.go",
+		"xmlDrawing.go",
+		"xmlMetaData.go",
+		"xmlPivotCache.go",
+		"xmlPivotTable.go",
+		"xmlSharedStrings.go",
+		"xmlSlicers.go",
+		"xmlStyles.go",
+		"xmlTable.go",
+		"xmlTheme.go",
+		"xmlWorkbook.go",
+		"xmlWorksheet.go"
 	]
 }
 {
@@ -3533,11 +4433,12 @@
 		"Path": "ai-group-chat",
 		"Main": true,
 		"Dir": "<REPOSITORY>",
-		"GoMod": "<LICENSE_TOOLS_DIR>/export/go-export.mod",
+		"GoMod": "/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/export/go-export.mod",
 		"GoVersion": "1.26.4"
 	},
 	"GoFiles": [
 		"attachments.go",
+		"attachments_office.go",
 		"avatar.go",
 		"credentials.go",
 		"dto.go",
@@ -3604,17 +4505,6 @@
 		"doc.go",
 		"paths_unix.go",
 		"xdg.go"
-	]
-}
-{
-	"Dir": "<GOROOT>/src/encoding/xml",
-	"ImportPath": "encoding/xml",
-	"Standard": true,
-	"GoFiles": [
-		"marshal.go",
-		"read.go",
-		"typeinfo.go",
-		"xml.go"
 	]
 }
 {
@@ -4184,17 +5074,6 @@
 	]
 }
 {
-	"Dir": "<GOROOT>/src/archive/zip",
-	"ImportPath": "archive/zip",
-	"Standard": true,
-	"GoFiles": [
-		"reader.go",
-		"register.go",
-		"struct.go",
-		"writer.go"
-	]
-}
-{
 	"Dir": "<GOMODCACHE>/github.com/wailsapp/wails/v3@v3.0.0-beta.29/pkg/updater",
 	"ImportPath": "github.com/wailsapp/wails/v3/pkg/updater",
 	"Module": {
@@ -4383,7 +5262,7 @@
 		"Path": "ai-group-chat",
 		"Main": true,
 		"Dir": "<REPOSITORY>",
-		"GoMod": "<LICENSE_TOOLS_DIR>/export/go-export.mod",
+		"GoMod": "/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/export/go-export.mod",
 		"GoVersion": "1.26.4"
 	},
 	"GoFiles": [
@@ -4401,7 +5280,7 @@
 		"Path": "ai-group-chat",
 		"Main": true,
 		"Dir": "<REPOSITORY>",
-		"GoMod": "<LICENSE_TOOLS_DIR>/export/go-export.mod",
+		"GoMod": "/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/export/go-export.mod",
 		"GoVersion": "1.26.4"
 	},
 	"GoFiles": [

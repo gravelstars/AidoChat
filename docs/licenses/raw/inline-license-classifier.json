@@ -310,6 +310,23 @@
   ]
  },
  {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/0f9e31c1b90c254533bd5efed572e45d292ce6d63904a13b666aa8772b7f734a.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "BSD-3-Clause",
+    "Confidence": 0.9812206572769953,
+    "StartLine": 3,
+    "EndLine": 27
+   }
+  ]
+ },
+ {
   "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/11eace0d641b30261f95a348c7e80909fe7ae07c6f345101036eaf6d075e91df.txt",
   "Classifications": [
    {
@@ -443,6 +460,17 @@
  },
  {
   "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/151957e273be60ecdd6e81f6364e1a399a0404a689877d51d6fc048ed68cdfcd.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba.txt",
   "Classifications": [
    {
     "Name": "Copyright",
@@ -1422,6 +1450,23 @@
   ]
  },
  {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/432d49887087be54295091774335d98dd368ed5d2904e63f2258055a569a7b35.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "Apache-2.0",
+    "Confidence": 0.9285714285714286,
+    "StartLine": 3,
+    "EndLine": 13
+   }
+  ]
+ },
+ {
   "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/438de9fcb0653ea63d23bf4311f20486d630c1f9bf360734daddc6801e32b622.txt",
   "Classifications": [
    {
@@ -2089,6 +2134,23 @@
   ]
  },
  {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/614d274b247abd1e5d114951ff71f4a6ea4575ded22de8dc74ae45f08079efe7.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "Apache-2.0",
+    "Confidence": 0.9285714285714286,
+    "StartLine": 3,
+    "EndLine": 13
+   }
+  ]
+ },
+ {
   "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/6201c3b4f7909f718029ddb34f851ac696528a730e7ce05a7afe5cf8e6b09ab5.txt",
   "Classifications": [
    {
@@ -2584,6 +2646,17 @@
   ]
  },
  {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
   "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/7dd08b48f308a6a9500a096d39a24027e17bcb2ab660f6d022e6ee9fecda2d04.txt",
   "Classifications": [
    {
@@ -2671,6 +2744,17 @@
     "Confidence": 0.9147286821705426,
     "StartLine": 5,
     "EndLine": 18
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/844ec134f634a0e31ea1b6ff50b99a0a00ab99b3a30bf53fd2839edeee51fddb.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
    }
   ]
  },
@@ -3214,6 +3298,17 @@
   ]
  },
  {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/997c30c1467fca34ac505a07b3c52ddffc8adf9a22addc4eda55d1cea8dcbafd.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
   "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/9a33ab2847249e8db4dde5beaa1b458fba06943bebf28a832552eb964f761917.txt",
   "Classifications": [
    {
@@ -3408,6 +3503,23 @@
     "Confidence": 1,
     "StartLine": 4,
     "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/a32a90854fecad7b9bfe33cd82493d4b1f580277ba9d21391aabc9c3cbbdbb75.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "Apache-2.0",
+    "Confidence": 0.9285714285714286,
+    "StartLine": 3,
+    "EndLine": 13
    }
   ]
  },
@@ -3728,6 +3840,23 @@
     "Confidence": 1,
     "StartLine": 1,
     "EndLine": 1
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/b1523a285e2dbc2cc107086c90bc3dc6dcc8508d06d5e1a5e62c2e61952455da.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "Apache-2.0",
+    "Confidence": 0.9285714285714286,
+    "StartLine": 3,
+    "EndLine": 13
    }
   ]
  },
@@ -4581,6 +4710,17 @@
   ]
  },
  {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/cfc7e82eef9ec74e383d790051ce49f3cc01cc48863f3a888202bbe5e9149998.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   }
+  ]
+ },
+ {
   "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/cfeb6fe3acb8b10dd451bd1bd3078d086bdc85161d2693c3ac5032def38b1bb4.txt",
   "Classifications": [
    {
@@ -4786,6 +4926,23 @@
     "Confidence": 1,
     "StartLine": 4,
     "EndLine": 9
+   }
+  ]
+ },
+ {
+  "Filepath": "<REPOSITORY>/docs/licenses/texts/go-inline-notices/d6bd0a04026e938bf98e486f6ac927b1bd15d94bcdc5a2831f3d5a6611906587.txt",
+  "Classifications": [
+   {
+    "Name": "Copyright",
+    "Confidence": 1,
+    "StartLine": 1,
+    "EndLine": 1
+   },
+   {
+    "Name": "Apache-2.0",
+    "Confidence": 0.9285714285714286,
+    "StartLine": 3,
+    "EndLine": 13
    }
   ]
  },

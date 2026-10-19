@@ -13145,6 +13145,1777 @@
     ]
   },
   {
+    "file": "docs/licenses/texts/go-inline-notices/a32a90854fecad7b9bfe33cd82493d4b1f580277ba9d21391aabc9c3cbbdbb75.txt",
+    "source": "go:github.com/richardlehane/msoleps@v1.0.6/types/currency.go",
+    "sha256": "a32a90854fecad7b9bfe33cd82493d4b1f580277ba9d21391aabc9c3cbbdbb75",
+    "bytes": 626,
+    "sourceFileSha256": "5204ce674f038efedbc5e1496dd64de4740ef6510957e2ee0d5637a2d847e9b6",
+    "sourceByteRange": [
+      0,
+      626
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/a32a90854fecad7b9bfe33cd82493d4b1f580277ba9d21391aabc9c3cbbdbb75.txt",
+    "source": "go:github.com/richardlehane/msoleps@v1.0.6/types/date.go",
+    "sha256": "a32a90854fecad7b9bfe33cd82493d4b1f580277ba9d21391aabc9c3cbbdbb75",
+    "bytes": 626,
+    "sourceFileSha256": "4dcc15ca7967b35eb3ad7f498c525c7aa6d9021e8ac8c4c4f071d16950a60fcb",
+    "sourceByteRange": [
+      0,
+      626
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/a32a90854fecad7b9bfe33cd82493d4b1f580277ba9d21391aabc9c3cbbdbb75.txt",
+    "source": "go:github.com/richardlehane/msoleps@v1.0.6/types/decimal.go",
+    "sha256": "a32a90854fecad7b9bfe33cd82493d4b1f580277ba9d21391aabc9c3cbbdbb75",
+    "bytes": 626,
+    "sourceFileSha256": "ba9ad9dbc738949366126f2208288c6bbde34e4fec5775546397d7f44b1d0aa4",
+    "sourceByteRange": [
+      0,
+      626
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/a32a90854fecad7b9bfe33cd82493d4b1f580277ba9d21391aabc9c3cbbdbb75.txt",
+    "source": "go:github.com/richardlehane/msoleps@v1.0.6/types/filetime.go",
+    "sha256": "a32a90854fecad7b9bfe33cd82493d4b1f580277ba9d21391aabc9c3cbbdbb75",
+    "bytes": 626,
+    "sourceFileSha256": "81bf9ad5995ac962ce99737d7ef447109833e2aab7f5297c9d86b1a1371f42eb",
+    "sourceByteRange": [
+      0,
+      626
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/a32a90854fecad7b9bfe33cd82493d4b1f580277ba9d21391aabc9c3cbbdbb75.txt",
+    "source": "go:github.com/richardlehane/msoleps@v1.0.6/types/guid.go",
+    "sha256": "a32a90854fecad7b9bfe33cd82493d4b1f580277ba9d21391aabc9c3cbbdbb75",
+    "bytes": 626,
+    "sourceFileSha256": "52f0c35878f4def2a5b03132c1f2737fb126b02e015b8c081e94c3122a3f8229",
+    "sourceByteRange": [
+      0,
+      626
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/614d274b247abd1e5d114951ff71f4a6ea4575ded22de8dc74ae45f08079efe7.txt",
+    "source": "go:github.com/richardlehane/msoleps@v1.0.6/types/numeric.go",
+    "sha256": "614d274b247abd1e5d114951ff71f4a6ea4575ded22de8dc74ae45f08079efe7",
+    "bytes": 613,
+    "sourceFileSha256": "b155f1181547772109999a087adefaa0be9294fc46c7a56c2e12ef079e12f83a",
+    "sourceByteRange": [
+      0,
+      613
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/a32a90854fecad7b9bfe33cd82493d4b1f580277ba9d21391aabc9c3cbbdbb75.txt",
+    "source": "go:github.com/richardlehane/msoleps@v1.0.6/types/strings.go",
+    "sha256": "a32a90854fecad7b9bfe33cd82493d4b1f580277ba9d21391aabc9c3cbbdbb75",
+    "bytes": 626,
+    "sourceFileSha256": "9910b5fb12ecd3687011e665b3f6da634a23619e9fab551d3040f02b42efc771",
+    "sourceByteRange": [
+      0,
+      626
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/a32a90854fecad7b9bfe33cd82493d4b1f580277ba9d21391aabc9c3cbbdbb75.txt",
+    "source": "go:github.com/richardlehane/msoleps@v1.0.6/types/types.go",
+    "sha256": "a32a90854fecad7b9bfe33cd82493d4b1f580277ba9d21391aabc9c3cbbdbb75",
+    "bytes": 626,
+    "sourceFileSha256": "85d8f41f5eadc8475e4c26ecfbfc38ba4a67da1063664fd7b4d95417b64616b2",
+    "sourceByteRange": [
+      0,
+      626
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/432d49887087be54295091774335d98dd368ed5d2904e63f2258055a569a7b35.txt",
+    "source": "go:github.com/richardlehane/msoleps@v1.0.6/types/vectorArray.go",
+    "sha256": "432d49887087be54295091774335d98dd368ed5d2904e63f2258055a569a7b35",
+    "bytes": 626,
+    "sourceFileSha256": "1b8664fdec39da750de07911a6c7f24435a583b0a73ee5497e3695d171232446",
+    "sourceByteRange": [
+      0,
+      626
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/b1523a285e2dbc2cc107086c90bc3dc6dcc8508d06d5e1a5e62c2e61952455da.txt",
+    "source": "go:github.com/richardlehane/mscfb@v1.0.7/file.go",
+    "sha256": "b1523a285e2dbc2cc107086c90bc3dc6dcc8508d06d5e1a5e62c2e61952455da",
+    "bytes": 613,
+    "sourceFileSha256": "1118d96f4e388dad86de8b71462a0b6729563b7f228dd6d122ebbd23c793f616",
+    "sourceByteRange": [
+      0,
+      613
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/d6bd0a04026e938bf98e486f6ac927b1bd15d94bcdc5a2831f3d5a6611906587.txt",
+    "source": "go:github.com/richardlehane/mscfb@v1.0.7/mscfb.go",
+    "sha256": "d6bd0a04026e938bf98e486f6ac927b1bd15d94bcdc5a2831f3d5a6611906587",
+    "bytes": 626,
+    "sourceFileSha256": "6e7f86f94d7282ea08ecb38fed8a12b85e384cb42f39e0409d041887351050d5",
+    "sourceByteRange": [
+      0,
+      626
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/997c30c1467fca34ac505a07b3c52ddffc8adf9a22addc4eda55d1cea8dcbafd.txt",
+    "source": "go:github.com/xuri/nfp@v0.0.2-0.20250530014748-2ddeb826f9a9/nfp.go",
+    "sha256": "997c30c1467fca34ac505a07b3c52ddffc8adf9a22addc4eda55d1cea8dcbafd",
+    "bytes": 644,
+    "sourceFileSha256": "eab15d8556c47bacff509ab99c2a5262e483b59e6760c7f50c1c8f14289e3514",
+    "sourceByteRange": [
+      0,
+      644
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/9f113c9b4b389fd5ec548f30b493185656ceab1565a72bf4c563014c5553397f.txt",
+    "source": "go:golang.org/x/crypto@v0.53.0/md4/md4.go",
+    "sha256": "9f113c9b4b389fd5ec548f30b493185656ceab1565a72bf4c563014c5553397f",
+    "bytes": 159,
+    "sourceFileSha256": "9be73f76d4488c7a216828e4caec1d2701955f2b03b77abd019725b0442e651e",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/9f113c9b4b389fd5ec548f30b493185656ceab1565a72bf4c563014c5553397f.txt",
+    "source": "go:golang.org/x/crypto@v0.53.0/md4/md4block.go",
+    "sha256": "9f113c9b4b389fd5ec548f30b493185656ceab1565a72bf4c563014c5553397f",
+    "bytes": 159,
+    "sourceFileSha256": "0303098d7fe87ad0ce4b8302dc984e14f1de47c53f071bbf97b808e7c81575f8",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/bf9da72829bc62c971ebb437bde45b8915bcc6ebbec9a8e800e2f69f01f4cda1.txt",
+    "source": "go:golang.org/x/crypto@v0.53.0/ripemd160/ripemd160.go",
+    "sha256": "bf9da72829bc62c971ebb437bde45b8915bcc6ebbec9a8e800e2f69f01f4cda1",
+    "bytes": 159,
+    "sourceFileSha256": "ed7b78c01b1c2c648f03fd949c841a728134077617c08532ee4b2568bf59610c",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/bf9da72829bc62c971ebb437bde45b8915bcc6ebbec9a8e800e2f69f01f4cda1.txt",
+    "source": "go:golang.org/x/crypto@v0.53.0/ripemd160/ripemd160block.go",
+    "sha256": "bf9da72829bc62c971ebb437bde45b8915bcc6ebbec9a8e800e2f69f01f4cda1",
+    "bytes": 159,
+    "sourceFileSha256": "e51afca234d155ac0521ea92012d5504b0be4a4e93abdf2219ba2b08f1b6b72d",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/77991885310f72d082afd78172ad7888666682960fd63e2f89a41c6f03b4ac2b.txt",
+    "source": "go:golang.org/x/net@v0.56.0/html/atom/atom.go",
+    "sha256": "77991885310f72d082afd78172ad7888666682960fd63e2f89a41c6f03b4ac2b",
+    "bytes": 159,
+    "sourceFileSha256": "86490b2027af4443dacfe96c313a6c632c03ea1acdf85f7f61c4fdde32bc2f3d",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/d9a162759d7edf6b1e8c40b592853f2f6242b42533efae5d3cc3d9125fc582ca.txt",
+    "source": "go:golang.org/x/net@v0.56.0/html/const.go",
+    "sha256": "d9a162759d7edf6b1e8c40b592853f2f6242b42533efae5d3cc3d9125fc582ca",
+    "bytes": 159,
+    "sourceFileSha256": "44c814afac4b0206a4f2af92607f93a72b93919ec2c3884d372edcdc24507584",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/bf9da72829bc62c971ebb437bde45b8915bcc6ebbec9a8e800e2f69f01f4cda1.txt",
+    "source": "go:golang.org/x/net@v0.56.0/html/doc.go",
+    "sha256": "bf9da72829bc62c971ebb437bde45b8915bcc6ebbec9a8e800e2f69f01f4cda1",
+    "bytes": 159,
+    "sourceFileSha256": "e5d486a3b703d17efdf30cc9b3af6649b262c89e74cd4de285e0f079797b3c6f",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/d9a162759d7edf6b1e8c40b592853f2f6242b42533efae5d3cc3d9125fc582ca.txt",
+    "source": "go:golang.org/x/net@v0.56.0/html/doctype.go",
+    "sha256": "d9a162759d7edf6b1e8c40b592853f2f6242b42533efae5d3cc3d9125fc582ca",
+    "bytes": 159,
+    "sourceFileSha256": "b629b17ed04bcab8d832d8caaee00f458c180fd31b6838e318a439a4bf87fffe",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/bf9da72829bc62c971ebb437bde45b8915bcc6ebbec9a8e800e2f69f01f4cda1.txt",
+    "source": "go:golang.org/x/net@v0.56.0/html/entity.go",
+    "sha256": "bf9da72829bc62c971ebb437bde45b8915bcc6ebbec9a8e800e2f69f01f4cda1",
+    "bytes": 159,
+    "sourceFileSha256": "680a9bb55e7eca9bc0cbee59755591ab9f97abf3fe39490211eb088cc2cd62c2",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/bf9da72829bc62c971ebb437bde45b8915bcc6ebbec9a8e800e2f69f01f4cda1.txt",
+    "source": "go:golang.org/x/net@v0.56.0/html/escape.go",
+    "sha256": "bf9da72829bc62c971ebb437bde45b8915bcc6ebbec9a8e800e2f69f01f4cda1",
+    "bytes": 159,
+    "sourceFileSha256": "a982866bfe8359184109e87d9fd8c5e4f06a98a71a391f4beae0e488529720f1",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/d9a162759d7edf6b1e8c40b592853f2f6242b42533efae5d3cc3d9125fc582ca.txt",
+    "source": "go:golang.org/x/net@v0.56.0/html/foreign.go",
+    "sha256": "d9a162759d7edf6b1e8c40b592853f2f6242b42533efae5d3cc3d9125fc582ca",
+    "bytes": 159,
+    "sourceFileSha256": "d227ce6839726bb85fc88ec95df265901da8a04d7e2f7261101bdc7b4d1af1ad",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/c90d6aff6cd4c1b248d508f6da8bb50c8c4f572e407738d9b0de69ef3d4fe35d.txt",
+    "source": "go:golang.org/x/net@v0.56.0/html/iter.go",
+    "sha256": "c90d6aff6cd4c1b248d508f6da8bb50c8c4f572e407738d9b0de69ef3d4fe35d",
+    "bytes": 159,
+    "sourceFileSha256": "54299c163639df83f3dd22ff31643b6b6cedbedb0c388b1f53020146a10d7504",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/d9a162759d7edf6b1e8c40b592853f2f6242b42533efae5d3cc3d9125fc582ca.txt",
+    "source": "go:golang.org/x/net@v0.56.0/html/node.go",
+    "sha256": "d9a162759d7edf6b1e8c40b592853f2f6242b42533efae5d3cc3d9125fc582ca",
+    "bytes": 159,
+    "sourceFileSha256": "3acf739c450f61abd0fc45ccb19e4ddde2982b798791037a6a03c78603b6176f",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/bf9da72829bc62c971ebb437bde45b8915bcc6ebbec9a8e800e2f69f01f4cda1.txt",
+    "source": "go:golang.org/x/net@v0.56.0/html/parse.go",
+    "sha256": "bf9da72829bc62c971ebb437bde45b8915bcc6ebbec9a8e800e2f69f01f4cda1",
+    "bytes": 159,
+    "sourceFileSha256": "ab68a3276498d29551d38faebd93a622c4d1d908f6f1dad00bce438e74110726",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/d9a162759d7edf6b1e8c40b592853f2f6242b42533efae5d3cc3d9125fc582ca.txt",
+    "source": "go:golang.org/x/net@v0.56.0/html/render.go",
+    "sha256": "d9a162759d7edf6b1e8c40b592853f2f6242b42533efae5d3cc3d9125fc582ca",
+    "bytes": 159,
+    "sourceFileSha256": "c53cd811db01490a88a3932ad97e0d0622fa87a8533662fb9810bc06814c4af8",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/bf9da72829bc62c971ebb437bde45b8915bcc6ebbec9a8e800e2f69f01f4cda1.txt",
+    "source": "go:golang.org/x/net@v0.56.0/html/token.go",
+    "sha256": "bf9da72829bc62c971ebb437bde45b8915bcc6ebbec9a8e800e2f69f01f4cda1",
+    "bytes": 159,
+    "sourceFileSha256": "28e4cab66406c656cd2ae007517bac998b3d68d18fce0e0717ed98bed44ed336",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd.txt",
+    "source": "go:golang.org/x/text@v0.39.0/encoding/internal/identifier/identifier.go",
+    "sha256": "1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd",
+    "bytes": 159,
+    "sourceFileSha256": "50c99f12c73517c9314d04fb7807e7fdc57e75436306d3b38036fb17bc0c41ca",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/4d06c39d86c772df8bad5596c9823c734c525276d99be1ffa34d35dbf30d6595.txt",
+    "source": "go:golang.org/x/text@v0.39.0/encoding/internal/identifier/mib.go",
+    "sha256": "4d06c39d86c772df8bad5596c9823c734c525276d99be1ffa34d35dbf30d6595",
+    "bytes": 294,
+    "sourceFileSha256": "7dac7c2f13c9a8f31f6f8228e71ea0ae6f470f3099a2ba8cebc4a1fbc876385a",
+    "sourceByteRange": [
+      31319,
+      31613
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba.txt",
+    "source": "go:golang.org/x/text@v0.39.0/transform/transform.go",
+    "sha256": "15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba",
+    "bytes": 159,
+    "sourceFileSha256": "7716301e210f42b764ec78f4adffb05075f1d5103446a40b8a38043f5a7abd88",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba.txt",
+    "source": "go:golang.org/x/text@v0.39.0/encoding/encoding.go",
+    "sha256": "15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba",
+    "bytes": 159,
+    "sourceFileSha256": "7a66d04774bf136fc1e655e0746eee54237e33ce21802d7e286c87b6e1307172",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd.txt",
+    "source": "go:golang.org/x/text@v0.39.0/encoding/internal/internal.go",
+    "sha256": "1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd",
+    "bytes": 159,
+    "sourceFileSha256": "d49433c5ac6f01c29013957898b7fd9d899832d2c7d09cc137ff52a4270aff87",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba.txt",
+    "source": "go:golang.org/x/text@v0.39.0/encoding/charmap/charmap.go",
+    "sha256": "15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba",
+    "bytes": 159,
+    "sourceFileSha256": "8f2418e924ccf719fcef0ec4ca1895657c1b98dcb7df4bfeba204970ebd98b33",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd.txt",
+    "source": "go:golang.org/x/text@v0.39.0/encoding/japanese/all.go",
+    "sha256": "1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd",
+    "bytes": 159,
+    "sourceFileSha256": "5728aaadf3e9b98632c5cbbedc60e29ec14779bc8f020bae135c97b1548e3944",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba.txt",
+    "source": "go:golang.org/x/text@v0.39.0/encoding/japanese/eucjp.go",
+    "sha256": "15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba",
+    "bytes": 159,
+    "sourceFileSha256": "aa30243e36cc4dfa7168c31c7cce228109491f57b93f843d3832727c474fd50d",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba.txt",
+    "source": "go:golang.org/x/text@v0.39.0/encoding/japanese/iso2022jp.go",
+    "sha256": "15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba",
+    "bytes": 159,
+    "sourceFileSha256": "24b0950dddb4ef950ec85e93a64090e8f4cc9beba12447840aac59d742eebbb4",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba.txt",
+    "source": "go:golang.org/x/text@v0.39.0/encoding/japanese/shiftjis.go",
+    "sha256": "15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba",
+    "bytes": 159,
+    "sourceFileSha256": "23bf15129f276542aceefa460b68bd9905e68c460691b06e09c1b57c961694c3",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba.txt",
+    "source": "go:golang.org/x/text@v0.39.0/encoding/korean/euckr.go",
+    "sha256": "15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba",
+    "bytes": 159,
+    "sourceFileSha256": "9fbe514d8004ae60b1fc96bdb5212bbe9d06beffe50a2b0c8c20a83779ceabf9",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd.txt",
+    "source": "go:golang.org/x/text@v0.39.0/encoding/simplifiedchinese/all.go",
+    "sha256": "1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd",
+    "bytes": 159,
+    "sourceFileSha256": "98b67e8457b51b3b94fb0a1276c3aa006ce4bebe91f4911787d44bf964ae7898",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba.txt",
+    "source": "go:golang.org/x/text@v0.39.0/encoding/simplifiedchinese/gbk.go",
+    "sha256": "15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba",
+    "bytes": 159,
+    "sourceFileSha256": "509db1e531aade77b939704b307331c213b566122cb58fd6772ff16b0d4c2117",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba.txt",
+    "source": "go:golang.org/x/text@v0.39.0/encoding/simplifiedchinese/hzgb2312.go",
+    "sha256": "15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba",
+    "bytes": 159,
+    "sourceFileSha256": "4a7d1abc4120298617768ee17a70e0641b2c7149a86cdbb44189386fd19bd713",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba.txt",
+    "source": "go:golang.org/x/text@v0.39.0/encoding/traditionalchinese/big5.go",
+    "sha256": "15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba",
+    "bytes": 159,
+    "sourceFileSha256": "70eb462895050cd097282354ed49c944567ac14fe1552325c8eb0ace9b4c938b",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd.txt",
+    "source": "go:golang.org/x/text@v0.39.0/internal/utf8internal/utf8internal.go",
+    "sha256": "1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd",
+    "bytes": 159,
+    "sourceFileSha256": "a2aa5c3b12a72996fcedd945dd7d1955f2e5ef76bde6f5277238d2b2d6506390",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd.txt",
+    "source": "go:golang.org/x/text@v0.39.0/runes/cond.go",
+    "sha256": "1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd",
+    "bytes": 159,
+    "sourceFileSha256": "a97ca46dc0d82c3f04b17efdb26244f9f779ef1cabcdd5875b17fa51dc24640e",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/09f01176e627f2d27b27bc007a5867ee6bbbfb19ef9f3facb5d0d4099c25d965.txt",
+    "source": "go:golang.org/x/text@v0.39.0/runes/runes.go",
+    "sha256": "09f01176e627f2d27b27bc007a5867ee6bbbfb19ef9f3facb5d0d4099c25d965",
+    "bytes": 159,
+    "sourceFileSha256": "30879876f51d507e1cce28de3aa6c63966d101f92df42e6e0be18fec9dd7592f",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd.txt",
+    "source": "go:golang.org/x/text@v0.39.0/encoding/unicode/override.go",
+    "sha256": "1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd",
+    "bytes": 159,
+    "sourceFileSha256": "56800213c1d96ac93e091ac0bdf084caf259fac616fcea62b49c5f5ecff24b8f",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba.txt",
+    "source": "go:golang.org/x/text@v0.39.0/encoding/unicode/unicode.go",
+    "sha256": "15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba",
+    "bytes": 159,
+    "sourceFileSha256": "277d0a491016a630f27ee7d5ee6eae73abe6a431e0b3a3962e69e7dfd4f151ef",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd.txt",
+    "source": "go:golang.org/x/text@v0.39.0/internal/tag/tag.go",
+    "sha256": "1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd",
+    "bytes": 159,
+    "sourceFileSha256": "97a27a6bfdd26d872e07d051fc27e622e1cd764943350e8bfa9cf0e2e13cc474",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/b021f840b60be6390bbce2f2753059c70e069c05b92f810e58ade18252ca9066.txt",
+    "source": "go:golang.org/x/text@v0.39.0/internal/language/compact.go",
+    "sha256": "b021f840b60be6390bbce2f2753059c70e069c05b92f810e58ade18252ca9066",
+    "bytes": 159,
+    "sourceFileSha256": "2d121c703729c5fbd5f3f13fd568af142ca8fde0f01a07e1874df22dbaadde98",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/b021f840b60be6390bbce2f2753059c70e069c05b92f810e58ade18252ca9066.txt",
+    "source": "go:golang.org/x/text@v0.39.0/internal/language/compose.go",
+    "sha256": "b021f840b60be6390bbce2f2753059c70e069c05b92f810e58ade18252ca9066",
+    "bytes": 159,
+    "sourceFileSha256": "7657b95eac8448d5d2273c048d316dde3ac0e49ac058487a69b2b990ebc7f8ef",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/09f01176e627f2d27b27bc007a5867ee6bbbfb19ef9f3facb5d0d4099c25d965.txt",
+    "source": "go:golang.org/x/text@v0.39.0/internal/language/coverage.go",
+    "sha256": "09f01176e627f2d27b27bc007a5867ee6bbbfb19ef9f3facb5d0d4099c25d965",
+    "bytes": 159,
+    "sourceFileSha256": "8c8238012deb1b3c42820c755343db1bc326dc5cbddfcc24f97abbb7e0c6cee1",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba.txt",
+    "source": "go:golang.org/x/text@v0.39.0/internal/language/language.go",
+    "sha256": "15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba",
+    "bytes": 159,
+    "sourceFileSha256": "19a0ccf7635fd3dbad3766d953996df5d1c24a367e44c49200ab6ec3023fc871",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba.txt",
+    "source": "go:golang.org/x/text@v0.39.0/internal/language/lookup.go",
+    "sha256": "15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba",
+    "bytes": 159,
+    "sourceFileSha256": "8f0ac8780f89d5c2b29b98fd599269b445d7bb612a7948c9e97d425424b5ea38",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba.txt",
+    "source": "go:golang.org/x/text@v0.39.0/internal/language/match.go",
+    "sha256": "15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba",
+    "bytes": 159,
+    "sourceFileSha256": "711e9c548516929762f0636a69788ba6eed6ed10bfb47634f3b5d5a1f26a1547",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba.txt",
+    "source": "go:golang.org/x/text@v0.39.0/internal/language/parse.go",
+    "sha256": "15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba",
+    "bytes": 159,
+    "sourceFileSha256": "0c884b51bb83d3633a51f16e90c7dbaf45c301a449e366df591eda11a3000972",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba.txt",
+    "source": "go:golang.org/x/text@v0.39.0/internal/language/tags.go",
+    "sha256": "15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba",
+    "bytes": 159,
+    "sourceFileSha256": "21041c1c1982b12db6f523a4feb58746dac3e2c71e8dcf9f76ac5807cd809099",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/b021f840b60be6390bbce2f2753059c70e069c05b92f810e58ade18252ca9066.txt",
+    "source": "go:golang.org/x/text@v0.39.0/internal/language/compact/compact.go",
+    "sha256": "b021f840b60be6390bbce2f2753059c70e069c05b92f810e58ade18252ca9066",
+    "bytes": 159,
+    "sourceFileSha256": "e154aa511d328fd47a9c9fc1115d9c92be2d385e885ae65c5e348ec1d5844ead",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba.txt",
+    "source": "go:golang.org/x/text@v0.39.0/internal/language/compact/language.go",
+    "sha256": "15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba",
+    "bytes": 159,
+    "sourceFileSha256": "1d49845ec8c93b000391718e3127c0979c054186570805fce27f7fe167ad2c5d",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba.txt",
+    "source": "go:golang.org/x/text@v0.39.0/internal/language/compact/tags.go",
+    "sha256": "15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba",
+    "bytes": 159,
+    "sourceFileSha256": "e6f98b11ee9c2d5d4d51a5d810d4ea2eff0872a8d11b962979744899e020e12c",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/09f01176e627f2d27b27bc007a5867ee6bbbfb19ef9f3facb5d0d4099c25d965.txt",
+    "source": "go:golang.org/x/text@v0.39.0/language/coverage.go",
+    "sha256": "09f01176e627f2d27b27bc007a5867ee6bbbfb19ef9f3facb5d0d4099c25d965",
+    "bytes": 159,
+    "sourceFileSha256": "d12716948854471a3536a04dc48736b0db0318ea6df61db236bc4ee0fe725375",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/07ebeff563620a48143ee2ea41ad800ede7a03752112e745a92fd2fa686ce3b8.txt",
+    "source": "go:golang.org/x/text@v0.39.0/language/doc.go",
+    "sha256": "07ebeff563620a48143ee2ea41ad800ede7a03752112e745a92fd2fa686ce3b8",
+    "bytes": 159,
+    "sourceFileSha256": "4b97559b103832f3c5f22e80f2df0dd7394a469d945f79afad1654eb179fa63b",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba.txt",
+    "source": "go:golang.org/x/text@v0.39.0/language/language.go",
+    "sha256": "15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba",
+    "bytes": 159,
+    "sourceFileSha256": "3f2032f0367d83fb14772384d47119d27c2c427b277aa0a02913db59abe32bb0",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba.txt",
+    "source": "go:golang.org/x/text@v0.39.0/language/match.go",
+    "sha256": "15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba",
+    "bytes": 159,
+    "sourceFileSha256": "b8a6b973391cba46899d079173cf0b1d3064f28bb79a11c3fdc65c089cbe23d3",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba.txt",
+    "source": "go:golang.org/x/text@v0.39.0/language/parse.go",
+    "sha256": "15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba",
+    "bytes": 159,
+    "sourceFileSha256": "3552f8fba45f310216182d167ba1da8e0c02212ad1896eeb66b194dd546b7bc2",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba.txt",
+    "source": "go:golang.org/x/text@v0.39.0/language/tags.go",
+    "sha256": "15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba",
+    "bytes": 159,
+    "sourceFileSha256": "247c5ce419821c135a2751029c078cc6e1472c9896dd581d67a277449e54d968",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd.txt",
+    "source": "go:golang.org/x/text@v0.39.0/encoding/htmlindex/htmlindex.go",
+    "sha256": "1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd",
+    "bytes": 159,
+    "sourceFileSha256": "f7de101bd433f74cc2d32a92d224c36cf04225b48323c4d66ab79805a59fb6c0",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd.txt",
+    "source": "go:golang.org/x/text@v0.39.0/encoding/htmlindex/map.go",
+    "sha256": "1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd",
+    "bytes": 159,
+    "sourceFileSha256": "8094e6c1a15cc74160ecd3ed326d38fdc55af9e7b1caef53f5370e31f1e94cd5",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba.txt",
+    "source": "go:golang.org/x/net@v0.56.0/html/charset/charset.go",
+    "sha256": "15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba",
+    "bytes": 159,
+    "sourceFileSha256": "7810cb77bad4b115611626e3d0415126419133c5d6bb9c7424b45d721a7afdc3",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd.txt",
+    "source": "go:golang.org/x/text@v0.39.0/internal/internal.go",
+    "sha256": "1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd",
+    "bytes": 159,
+    "sourceFileSha256": "cf0cafa0e1c996fedce38d955344a905cfd62711efa78e9d90d615d738e084fe",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd.txt",
+    "source": "go:golang.org/x/text@v0.39.0/internal/match.go",
+    "sha256": "1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd",
+    "bytes": 159,
+    "sourceFileSha256": "44fba33275128b0a885cb737eee4765567a35a1d2656de873680534bb37f7243",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/d9a162759d7edf6b1e8c40b592853f2f6242b42533efae5d3cc3d9125fc582ca.txt",
+    "source": "go:golang.org/x/text@v0.39.0/unicode/norm/composition.go",
+    "sha256": "d9a162759d7edf6b1e8c40b592853f2f6242b42533efae5d3cc3d9125fc582ca",
+    "bytes": 159,
+    "sourceFileSha256": "3d1be52960f2693926472819b747646e7d2371d2bb5f53097cf9d46c913052df",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/d9a162759d7edf6b1e8c40b592853f2f6242b42533efae5d3cc3d9125fc582ca.txt",
+    "source": "go:golang.org/x/text@v0.39.0/unicode/norm/forminfo.go",
+    "sha256": "d9a162759d7edf6b1e8c40b592853f2f6242b42533efae5d3cc3d9125fc582ca",
+    "bytes": 159,
+    "sourceFileSha256": "844dadc7a0dc991a4b87a195699476a90655292d302abe2d2f7ddff5968f74bc",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/d9a162759d7edf6b1e8c40b592853f2f6242b42533efae5d3cc3d9125fc582ca.txt",
+    "source": "go:golang.org/x/text@v0.39.0/unicode/norm/input.go",
+    "sha256": "d9a162759d7edf6b1e8c40b592853f2f6242b42533efae5d3cc3d9125fc582ca",
+    "bytes": 159,
+    "sourceFileSha256": "965b431790bb139543d71a9c497920ef7d9a15af417456a2bbd0cdb629330e8d",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/d9a162759d7edf6b1e8c40b592853f2f6242b42533efae5d3cc3d9125fc582ca.txt",
+    "source": "go:golang.org/x/text@v0.39.0/unicode/norm/iter.go",
+    "sha256": "d9a162759d7edf6b1e8c40b592853f2f6242b42533efae5d3cc3d9125fc582ca",
+    "bytes": 159,
+    "sourceFileSha256": "4d580123776d78ff862131bd8c99fa5758f3cb70530619edc80ed4ee173cd83a",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/d9a162759d7edf6b1e8c40b592853f2f6242b42533efae5d3cc3d9125fc582ca.txt",
+    "source": "go:golang.org/x/text@v0.39.0/unicode/norm/normalize.go",
+    "sha256": "d9a162759d7edf6b1e8c40b592853f2f6242b42533efae5d3cc3d9125fc582ca",
+    "bytes": 159,
+    "sourceFileSha256": "9e4fdc543d3b7aabf046ead80f2ef60746f579a7a4691c3c7d6bf69f4c4fa713",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/d9a162759d7edf6b1e8c40b592853f2f6242b42533efae5d3cc3d9125fc582ca.txt",
+    "source": "go:golang.org/x/text@v0.39.0/unicode/norm/readwriter.go",
+    "sha256": "d9a162759d7edf6b1e8c40b592853f2f6242b42533efae5d3cc3d9125fc582ca",
+    "bytes": 159,
+    "sourceFileSha256": "d600d1f6cff2536dbb49a0f6bb8c06f6fc05f2754dad2dc05f1d44f9e8e48a35",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba.txt",
+    "source": "go:golang.org/x/text@v0.39.0/unicode/norm/transform.go",
+    "sha256": "15cc66b91ac93a198569e45f1eaf637b0bed4f9af4072cdd41a62a3b846221ba",
+    "bytes": 159,
+    "sourceFileSha256": "6f8014595643e2acae76d47ed6abe8ace969a0c9070dbfa5a89c86bebcec812d",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/d9a162759d7edf6b1e8c40b592853f2f6242b42533efae5d3cc3d9125fc582ca.txt",
+    "source": "go:golang.org/x/text@v0.39.0/unicode/norm/trie.go",
+    "sha256": "d9a162759d7edf6b1e8c40b592853f2f6242b42533efae5d3cc3d9125fc582ca",
+    "bytes": 159,
+    "sourceFileSha256": "d87793d558251ee8824954f0b7bc5564803e4c9d59a8c4eebb4c3c5cfbd19492",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/09f01176e627f2d27b27bc007a5867ee6bbbfb19ef9f3facb5d0d4099c25d965.txt",
+    "source": "go:golang.org/x/text@v0.39.0/cases/cases.go",
+    "sha256": "09f01176e627f2d27b27bc007a5867ee6bbbfb19ef9f3facb5d0d4099c25d965",
+    "bytes": 159,
+    "sourceFileSha256": "052af64ba88e6e5275195a544c59d14de78cdc3a659e2f4be4c7070d929b376f",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/09f01176e627f2d27b27bc007a5867ee6bbbfb19ef9f3facb5d0d4099c25d965.txt",
+    "source": "go:golang.org/x/text@v0.39.0/cases/context.go",
+    "sha256": "09f01176e627f2d27b27bc007a5867ee6bbbfb19ef9f3facb5d0d4099c25d965",
+    "bytes": 159,
+    "sourceFileSha256": "dd93d0dfbbc4513731b6ba5f865d7e7022e237fcbdac405a38981df53fa77f4e",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/e1a70b7abe87c243ab37bf5cc06040025becbce5f829e21e7ac34b5c1da67ae8.txt",
+    "source": "go:golang.org/x/text@v0.39.0/cases/fold.go",
+    "sha256": "e1a70b7abe87c243ab37bf5cc06040025becbce5f829e21e7ac34b5c1da67ae8",
+    "bytes": 159,
+    "sourceFileSha256": "14ff03fda441587198ce6f3e59e6dde979fc21b2db9e248c15b43da497c594ac",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd.txt",
+    "source": "go:golang.org/x/text@v0.39.0/cases/info.go",
+    "sha256": "1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd",
+    "bytes": 159,
+    "sourceFileSha256": "282c97fc424f7cdbcc817d06b2ef34d53d8404a803087a08b9d7d31f65c9dabe",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/09f01176e627f2d27b27bc007a5867ee6bbbfb19ef9f3facb5d0d4099c25d965.txt",
+    "source": "go:golang.org/x/text@v0.39.0/cases/map.go",
+    "sha256": "09f01176e627f2d27b27bc007a5867ee6bbbfb19ef9f3facb5d0d4099c25d965",
+    "bytes": 159,
+    "sourceFileSha256": "2e7f128e208198348b041d4e32f5bad8884ea5246a0d24fdcb8c02f06391cbe6",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/93a2fa8639880c0a3a78fa04ab3e2bc27bba91c5f7008876652e50acda416edb.txt",
+    "source": "go:golang.org/x/text@v0.39.0/cases/map.go",
+    "sha256": "93a2fa8639880c0a3a78fa04ab3e2bc27bba91c5f7008876652e50acda416edb",
+    "bytes": 472,
+    "sourceFileSha256": "2e7f128e208198348b041d4e32f5bad8884ea5246a0d24fdcb8c02f06391cbe6",
+    "sourceByteRange": [
+      9062,
+      9534
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/4ffa8639e5bb577809cb2e5bfa5a13aa75a9e13bdbb08cbf69f598255d2db8e1.txt",
+    "source": "go:golang.org/x/text@v0.39.0/cases/map.go",
+    "sha256": "4ffa8639e5bb577809cb2e5bfa5a13aa75a9e13bdbb08cbf69f598255d2db8e1",
+    "bytes": 242,
+    "sourceFileSha256": "2e7f128e208198348b041d4e32f5bad8884ea5246a0d24fdcb8c02f06391cbe6",
+    "sourceByteRange": [
+      11965,
+      12207
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/07ebeff563620a48143ee2ea41ad800ede7a03752112e745a92fd2fa686ce3b8.txt",
+    "source": "go:golang.org/x/text@v0.39.0/internal/catmsg/catmsg.go",
+    "sha256": "07ebeff563620a48143ee2ea41ad800ede7a03752112e745a92fd2fa686ce3b8",
+    "bytes": 159,
+    "sourceFileSha256": "ddbdb3a883da9521a764567eee51f8be4b7b3fdda479891167c374019bac76be",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/07ebeff563620a48143ee2ea41ad800ede7a03752112e745a92fd2fa686ce3b8.txt",
+    "source": "go:golang.org/x/text@v0.39.0/internal/catmsg/codec.go",
+    "sha256": "07ebeff563620a48143ee2ea41ad800ede7a03752112e745a92fd2fa686ce3b8",
+    "bytes": 159,
+    "sourceFileSha256": "aaffb2a7865c54544417249c99d5e148d8685c91480846f0588e4cff4dfa3a8e",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/07ebeff563620a48143ee2ea41ad800ede7a03752112e745a92fd2fa686ce3b8.txt",
+    "source": "go:golang.org/x/text@v0.39.0/internal/catmsg/varint.go",
+    "sha256": "07ebeff563620a48143ee2ea41ad800ede7a03752112e745a92fd2fa686ce3b8",
+    "bytes": 159,
+    "sourceFileSha256": "38e2606b6d44edc7685e1bd7784c750d1ec3e38f9db336ed79e70de750b8ed2a",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/e1a70b7abe87c243ab37bf5cc06040025becbce5f829e21e7ac34b5c1da67ae8.txt",
+    "source": "go:golang.org/x/text@v0.39.0/internal/stringset/set.go",
+    "sha256": "e1a70b7abe87c243ab37bf5cc06040025becbce5f829e21e7ac34b5c1da67ae8",
+    "bytes": 159,
+    "sourceFileSha256": "b14cd183aa7f94f7c46a55eb110506efc0ee535ffedfc38d68a4c3d1e25277b3",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/07ebeff563620a48143ee2ea41ad800ede7a03752112e745a92fd2fa686ce3b8.txt",
+    "source": "go:golang.org/x/text@v0.39.0/internal/number/decimal.go",
+    "sha256": "07ebeff563620a48143ee2ea41ad800ede7a03752112e745a92fd2fa686ce3b8",
+    "bytes": 159,
+    "sourceFileSha256": "d6bf692abc29a75b74488afaa07885087871b8c85fdf1a7432a5e4d426bcd1d1",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/07ebeff563620a48143ee2ea41ad800ede7a03752112e745a92fd2fa686ce3b8.txt",
+    "source": "go:golang.org/x/text@v0.39.0/internal/number/format.go",
+    "sha256": "07ebeff563620a48143ee2ea41ad800ede7a03752112e745a92fd2fa686ce3b8",
+    "bytes": 159,
+    "sourceFileSha256": "979ee4759b63cf8a39710fb6c8df1c7fa63bf66053604d522013f268efe72cbe",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/e1a70b7abe87c243ab37bf5cc06040025becbce5f829e21e7ac34b5c1da67ae8.txt",
+    "source": "go:golang.org/x/text@v0.39.0/internal/number/number.go",
+    "sha256": "e1a70b7abe87c243ab37bf5cc06040025becbce5f829e21e7ac34b5c1da67ae8",
+    "bytes": 159,
+    "sourceFileSha256": "a9160873055c35ca027ade76d71708b195c7157ccb0cde579624e5eb22a757c0",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd.txt",
+    "source": "go:golang.org/x/text@v0.39.0/internal/number/pattern.go",
+    "sha256": "1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd",
+    "bytes": 159,
+    "sourceFileSha256": "82e3b1ba7949cb165b3849190921366bf99d5d70b9bf756d5ae89517d3717f69",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/07ebeff563620a48143ee2ea41ad800ede7a03752112e745a92fd2fa686ce3b8.txt",
+    "source": "go:golang.org/x/text@v0.39.0/message/catalog/catalog.go",
+    "sha256": "07ebeff563620a48143ee2ea41ad800ede7a03752112e745a92fd2fa686ce3b8",
+    "bytes": 159,
+    "sourceFileSha256": "65e12c23d1771b53c23d3d0458bf97df7f133b7392711219a681685f1612c8bc",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/07ebeff563620a48143ee2ea41ad800ede7a03752112e745a92fd2fa686ce3b8.txt",
+    "source": "go:golang.org/x/text@v0.39.0/message/catalog/dict.go",
+    "sha256": "07ebeff563620a48143ee2ea41ad800ede7a03752112e745a92fd2fa686ce3b8",
+    "bytes": 159,
+    "sourceFileSha256": "26df06f08bf848a926159a55b7f9860cc50f0e33b288c935d8cae2c49dd23fdd",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/07ebeff563620a48143ee2ea41ad800ede7a03752112e745a92fd2fa686ce3b8.txt",
+    "source": "go:golang.org/x/text@v0.39.0/feature/plural/message.go",
+    "sha256": "07ebeff563620a48143ee2ea41ad800ede7a03752112e745a92fd2fa686ce3b8",
+    "bytes": 159,
+    "sourceFileSha256": "3529fc66dc4316bef2e6312a882e2f38f49d4d2b8b4e0dff334b8ff146d64ea2",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/e1a70b7abe87c243ab37bf5cc06040025becbce5f829e21e7ac34b5c1da67ae8.txt",
+    "source": "go:golang.org/x/text@v0.39.0/feature/plural/plural.go",
+    "sha256": "e1a70b7abe87c243ab37bf5cc06040025becbce5f829e21e7ac34b5c1da67ae8",
+    "bytes": 159,
+    "sourceFileSha256": "ab4d2a38f105f3aded86e4512d27e04d5179fe3391cc2bd3af811d4fbb3f38c5",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd.txt",
+    "source": "go:golang.org/x/text@v0.39.0/internal/format/format.go",
+    "sha256": "1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd",
+    "bytes": 159,
+    "sourceFileSha256": "b4843ba734004c0db278995f9a58be5d36d51f000f0413f7420116e24ad55cbe",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/07ebeff563620a48143ee2ea41ad800ede7a03752112e745a92fd2fa686ce3b8.txt",
+    "source": "go:golang.org/x/text@v0.39.0/internal/format/parser.go",
+    "sha256": "07ebeff563620a48143ee2ea41ad800ede7a03752112e745a92fd2fa686ce3b8",
+    "bytes": 159,
+    "sourceFileSha256": "a793faa9666b27cb8bf92a703741c446b802d3ed7921622cf5050f26822f3479",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd.txt",
+    "source": "go:golang.org/x/text@v0.39.0/message/catalog.go",
+    "sha256": "1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd",
+    "bytes": 159,
+    "sourceFileSha256": "b5162478103e86e7f7b19e77e2cbb56d1ec4fd80687649e4cd811ce9138ad71a",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/07ebeff563620a48143ee2ea41ad800ede7a03752112e745a92fd2fa686ce3b8.txt",
+    "source": "go:golang.org/x/text@v0.39.0/message/doc.go",
+    "sha256": "07ebeff563620a48143ee2ea41ad800ede7a03752112e745a92fd2fa686ce3b8",
+    "bytes": 159,
+    "sourceFileSha256": "84cd131fb24ca905aa697e58f1f98d398b42efeda852e7f389cfefe65581ef91",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/07ebeff563620a48143ee2ea41ad800ede7a03752112e745a92fd2fa686ce3b8.txt",
+    "source": "go:golang.org/x/text@v0.39.0/message/format.go",
+    "sha256": "07ebeff563620a48143ee2ea41ad800ede7a03752112e745a92fd2fa686ce3b8",
+    "bytes": 159,
+    "sourceFileSha256": "b8c30f1692d4e33bdf6eec0b8f1b388c26bd14d5a950b0abb12673fab067ea07",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd.txt",
+    "source": "go:golang.org/x/text@v0.39.0/message/message.go",
+    "sha256": "1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd",
+    "bytes": 159,
+    "sourceFileSha256": "99fd36d4d97c06495c95484fc9c01c51c5260b058b685bda0b5423a73fc8c075",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/07ebeff563620a48143ee2ea41ad800ede7a03752112e745a92fd2fa686ce3b8.txt",
+    "source": "go:golang.org/x/text@v0.39.0/message/print.go",
+    "sha256": "07ebeff563620a48143ee2ea41ad800ede7a03752112e745a92fd2fa686ce3b8",
+    "bytes": 159,
+    "sourceFileSha256": "b77eddda2754c15c464855b6fb5cdd704586a5fbd7a3c372c8121aea582298d4",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd.txt",
+    "source": "go:golang.org/x/text@v0.39.0/width/transform.go",
+    "sha256": "1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd",
+    "bytes": 159,
+    "sourceFileSha256": "889bee56ec2b4ece137a2c6412f3a4147df12264daa628739771cc6a2e905ab0",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd.txt",
+    "source": "go:golang.org/x/text@v0.39.0/width/width.go",
+    "sha256": "1c830a763cea98ed686c451cfda55ae26a853c40ed2fba8719654b87cb96eddd",
+    "bytes": 159,
+    "sourceFileSha256": "62badf24785e146fc7a90f71d587fe29616b5d3038d99ba1f6ea02423c6a3533",
+    "sourceByteRange": [
+      0,
+      159
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/adjust.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "c459075320eedc5bca4b09eb30029233ed661a3450597e66ec19f457f2870f70",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/calc.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "1c29943ec76d2417838c8f9bc70fd18b6584854fb8c1b9a195f6b42c222d4c7b",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/calcchain.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "f50bd035c2fc27dcf43ca8d9bf288afbfef0eb68b0bf8c0d6825cfd0f3a62e9d",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/cell.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "52dca8b3104978c5a711351e28b5ea9351e5b403896e46cf82e219efb32aa1ac",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/chart.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "91076c311ff1221a246936377a8e717edd66331169e57ff8e3ca83b6aaa59133",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/col.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "a0f06073e2a3876b5f8756d584429c52d56dc90f848e76584849e0f8b32ef9f2",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/crypt.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "926fcfb26b994a9f776623209ec1ca9c98e39a3225c31858ec42b63a7ad20be3",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/datavalidation.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "49421ac15d7ec2f8ba0ea348c8d4c9097f5a6f4f20ff02906a8de5b73bd5c3fe",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/date.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "2d9794fdbd280721ced0e6cb6c06a87bfccc253316d6ca15bd1d6bd396386c85",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/docProps.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "7d85ef0fa79ce6177f522cbb74b5ac3e15ab0180789f24aeb6d15c658d5f37dd",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/drawing.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "a825953b1bb8561756be190852d7719a77a61cd0bb29536a895c2fac70d43948",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/errors.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "350d8a17c5ce8f00f552a04104abc4aaaa7533589b56cea0f7678a3716599540",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/e5e09de0209970b42e0b25039e6d86fd92db80237c049e37e6d161f1813c05b3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/excelize.go",
+    "sha256": "e5e09de0209970b42e0b25039e6d86fd92db80237c049e37e6d161f1813c05b3",
+    "bytes": 172,
+    "sourceFileSha256": "b1f6e39059fa0261d61acada06f83e9273055a5555679829262308c3784ce635",
+    "sourceByteRange": [
+      0,
+      172
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/file.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "6ec7fc6596196a0773c51414ceca5c23295c9cd2105ea7fa0e03ae3d6a454b89",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/0f9e31c1b90c254533bd5efed572e45d292ce6d63904a13b666aa8772b7f734a.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/hsl.go",
+    "sha256": "0f9e31c1b90c254533bd5efed572e45d292ce6d63904a13b666aa8772b7f734a",
+    "bytes": 1554,
+    "sourceFileSha256": "dd97307ad9bf9995cef7c02f3e01e1314c2b5c05544d944edffe9a80e93b1e47",
+    "sourceByteRange": [
+      0,
+      1554
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/lib.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "a99ef141c28f180b2c96d0b59154177cd51de7dbc7b4957dc6cfa895e834128f",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/merge.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "43565c2355fb83309209b3f3cc8638b0f42656c70e2082ca4a6fc22a473d1668",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/numfmt.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "e32e583db83a2ee567be598f7d0166208617efc2ef03b8ab620d43e7c7e92497",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/picture.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "d12c387a30daea8a224bf459c55c12395b0bedfb774bd15e29a9a5531037b8d7",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/pivotTable.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "0164ee4e5375be1b86c8a873eca758cc4a1e4e045301abcf6f8360878f7bcca8",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/rows.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "114918fc638bd0e28820c1c4c162274d12f7eac67f6a81ca4fee11e314a690b1",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/shape.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "bf01c192c6b97ed716401b3bcb733ba02b5cd262c4525c6f91b97d778e92a09b",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/sheet.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "796c0ccfbe0ac71738a714316c86613c19d570d2959d998886e501e410f2e8dc",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/sheetpr.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "ff5c37c7f30071211b0c8e48b8d962ef4bab032c01bd73b7bd4b0dddb71a3bbf",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/sheetview.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "8f7e49ac3f1bd26478d5ad10e0cb58df880ce77be7e82cf7c57c82ce3fa7b05f",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/slicer.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "8b95004f5ae1d49d2f80f8ac188c29336724c84b2cafd273bea59f326e3f0c8a",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/sparkline.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "2e774c5c2c1cd8f83e5af688c527871d1eade26dec37235b5e9cb469f3d74cf8",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/stream.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "ac030f33169f5e115fc3e5dd8ecdd309c5c52c4eb3eef260841e64efedf6c944",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/styles.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "a526d8fb5bef326958c63d2b43e3a7effa0987da0948d9b382bf8ab2c9aea117",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/table.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "641f8425cb1976b5b36d0c03b9f8b59bb4ebdbeaa42fcac397947834fe5613af",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/844ec134f634a0e31ea1b6ff50b99a0a00ab99b3a30bf53fd2839edeee51fddb.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/templates.go",
+    "sha256": "844ec134f634a0e31ea1b6ff50b99a0a00ab99b3a30bf53fd2839edeee51fddb",
+    "bytes": 720,
+    "sourceFileSha256": "1e7285c8932c8768dc2eaccf34d12ae29d6b7391e79b5904ee10aaf75f73bbaf",
+    "sourceByteRange": [
+      0,
+      720
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/vml.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "eee454f036e1a2b0bee2c32c91a40bb2cc1607b4360ab18eb97334adebbb9db2",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/vmlDrawing.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "db14a6a97acb6938ee7896a135c94d1d5a679190397bc0f9842af553d2284b04",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/workbook.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "b2ce22c235b58bd33d62e14517d67e61f37a975a4657ef35e9673e94deb622c9",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/xmlApp.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "f93756848d66fa536e5c04a4756413ae29270eafc2a3f1406ca305425e493d6c",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/xmlCalcChain.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "03972eafc6751a2c4356293e5ba76158fd771e17b21328ae7fa8e2a74eb0945d",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/xmlChart.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "71dabd943d1546ade9097df559612ec873d0d8223c737b3d0b4843fa54c766a6",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/cfc7e82eef9ec74e383d790051ce49f3cc01cc48863f3a888202bbe5e9149998.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/xmlChartSheet.go",
+    "sha256": "cfc7e82eef9ec74e383d790051ce49f3cc01cc48863f3a888202bbe5e9149998",
+    "bytes": 671,
+    "sourceFileSha256": "104fe6e00d7cb4902764d96964c1139a25ebf908e68b83b73467a7f36b3d3568",
+    "sourceByteRange": [
+      0,
+      671
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/xmlComments.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "5d06336cc3fa649201419a84f3c183f0048635161c3635e5466b53e7ac108466",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/xmlContentTypes.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "670d76e55e063d317c57deafa297390281ffe3a3d660c9a95bc5a90c4b02933e",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/xmlCore.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "24581a2a568a50b43ff41289cd344fe923b7fb2728b4ba072608626a5951c0cd",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/xmlCustom.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "0423471c89188036952506fa0d7a9886537915e8fb1967da795ff84acd9382d4",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/xmlDecodeDrawing.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "16abc55d6951e0b02803d47af7c55a41bfeb79951b6ea75d2b8b4d909f623406",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/xmlDrawing.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "7b1c9e6151bb06237afa9c0fed5bed9ac6bbb6dfe72a70d1a257c893605f41c2",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/xmlMetaData.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "4bb37a78f22fb024b12ec46f2cc71aba1a9277cefa68adc244e79e8fc4788005",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/xmlPivotCache.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "08e0a43e1bcbb2878bcf090c543830578c7ab74c4564291177b8972f754cf8a1",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/xmlPivotTable.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "817e682223fc1fddee5741db3803c263a04b2d59b5172e78d0ed96d177315872",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/xmlSharedStrings.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "bc2af2933759cd87246d7509f8e8e277f8f8da4f79685806c07e713d9f6a89a8",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/xmlSlicers.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "08bc3a1298f605d456bf6942043753277fe02fba832e4011ddebf9f6c1e1b065",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/xmlStyles.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "5c72d680680b67f8ca99b1e27397782fd16b04b7e2b84d5d89c2719956bd3f94",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/xmlTable.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "b27eef28cb00a2e8386551b6cd658d779e3342364a8e3ed39a2105fb6c0bbc54",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/xmlTheme.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "4018bf535171088414fe40dee70720eb81d32d8276bd63841bbb1036c69e78cd",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/xmlWorkbook.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "d78c20d5d880e155d50064f0ea2e9982384911eece408666eef10852b6470c13",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
+    "file": "docs/licenses/texts/go-inline-notices/7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3.txt",
+    "source": "go:github.com/xuri/excelize/v2@v2.11.0/xmlWorksheet.go",
+    "sha256": "7d80ace83e2b0d7f4450283df7f07470b98bf52ddfe7ac34c9f549182d6eded3",
+    "bytes": 619,
+    "sourceFileSha256": "f7151443350f4bcc3e029cde17991e886e7c972fe2c9afdcea6ddaf0e9027def",
+    "sourceByteRange": [
+      0,
+      619
+    ]
+  },
+  {
     "file": "docs/licenses/texts/go-inline-notices/97c20f17b253a0e00ceff8154aa9757057dcefb823cd8deaba63f28aa7691528.txt",
     "source": "go:github.com/wailsapp/wails/v3@v3.0.0-beta.29/internal/assetserver/ringqueue.go",
     "sha256": "97c20f17b253a0e00ceff8154aa9757057dcefb823cd8deaba63f28aa7691528",

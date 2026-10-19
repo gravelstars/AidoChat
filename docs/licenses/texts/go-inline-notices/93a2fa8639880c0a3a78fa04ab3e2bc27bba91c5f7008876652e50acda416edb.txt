@@ -1,0 +1,7 @@
+// Transform implements the standard Unicode title case algorithm as defined in
+// Chapter 3 of The Unicode Standard:
+// toTitlecase(X): Find the word boundaries in X according to Unicode Standard
+// Annex #29, "Unicode Text Segmentation." For each word boundary, find the
+// first cased character F following the word boundary. If F exists, map F to
+// Titlecase_Mapping(F); then map all characters C between F and the following
+// word boundary to Lowercase_Mapping(C).

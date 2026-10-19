@@ -155,12 +155,17 @@ export const Composer = forwardRef<ComposerHandle, Props>(function Composer({ st
         const format=validateAttachment(file,attachmentRef.current.length)
         const bytes=new Uint8Array(await file.arrayBuffer())
         let text='', pageCount=0
-        if(format.kind==='image') {
+        if(format.extract==='image') {
           const url=URL.createObjectURL(file)
           try { await new Promise<void>((resolve,reject)=> { const image=new Image();image.onload=()=>{try{validateImage(image.naturalWidth,image.naturalHeight);resolve()}catch(e){reject(e)}};image.onerror=()=>reject(new Error('图片无法读取，请更换有效的 PNG、JPEG 或 WebP'));image.src=url }) }
           finally {URL.revokeObjectURL(url)}
-        } else if(format.mime==='application/pdf') { ({text,pageCount}=await extractPDF(bytes,controller.signal)) }
-        else { try {text=new TextDecoder('utf-8',{fatal:true}).decode(bytes)} catch {throw new Error('文本必须使用 UTF-8 编码，请转换后添加')} validateDocument(text) }
+        } else if(format.extract==='pdf') { ({text,pageCount}=await extractPDF(bytes,controller.signal)) }
+        else if(format.extract==='text') {
+          try {text=new TextDecoder('utf-8',{fatal:true}).decode(bytes)} catch {throw new Error('文本必须使用 UTF-8 编码，请转换后添加')}
+          if(file.name.toLowerCase().endsWith('.json')) { try { JSON.parse(text) } catch { throw new Error('JSON 文件格式无效') } }
+          validateDocument(text)
+        }
+        // Office 文件不在这里解码：Go 服务会校验真实 ZIP 结构并提取正文。
         if(session!==epoch.current) break
         const attachment=await backend.importAttachment({groupId:group.id,name:file.name,mime:format.mime,base64:toBase64(bytes),text,pageCount})
         if(session!==epoch.current || attachmentRef.current.length>=MAX_ATTACHMENTS) {await backend.removeDraftAttachment(attachment.id);if(session===epoch.current) throw new Error('每条消息最多添加 4 份附件');break}
@@ -303,7 +308,7 @@ export const Composer = forwardRef<ComposerHandle, Props>(function Composer({ st
 
         <div className={styles.bar}>
           <input ref={fileInput} type="file" accept={ATTACHMENT_ACCEPT} multiple hidden onChange={(e)=>{void addFiles(Array.from(e.target.files??[]));e.target.value=''}} />
-          <Button variant="quiet" size="sm" disabled={importing||sending||attachments.length>=MAX_ATTACHMENTS} onClick={()=>fileInput.current?.click()} aria-label="添加附件" title="最多 4 份：图片 10 MiB，TXT/Markdown/PDF 文档 20 MiB；PDF 最多 100 页，文本最多 10 万字符">添加附件</Button>
+          <Button variant="quiet" size="sm" disabled={importing||sending||attachments.length>=MAX_ATTACHMENTS} onClick={()=>fileInput.current?.click()} aria-label="添加附件" title="最多 4 份：图片 10 MiB；PDF、Office、TXT/Markdown/CSV/JSON/代码/日志 20 MiB；文本最多 10 万字符">添加附件</Button>
           <Button variant="quiet" size="sm" className={styles.atBtn} onClick={insertAt} aria-label="插入 @">
             @
           </Button>

@@ -6,6 +6,7 @@ import (
 	"database/sql"
 	"encoding/base64"
 	"encoding/binary"
+	"encoding/json"
 	"errors"
 	"image"
 	_ "image/jpeg"
@@ -23,6 +24,61 @@ import (
 	"ai-group-chat/internal/store"
 	"github.com/oklog/ulid/v2"
 )
+
+const (
+	docxMIME = "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+	pptxMIME = "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+	xlsxMIME = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+)
+
+// 允许作为文本上下文发送的源码/日志扩展名。刻意排除 .env、.pem、.key 等可能含密钥的文件。
+var codeExtensions = map[string]bool{
+	".go": true, ".py": true, ".js": true, ".jsx": true, ".ts": true, ".tsx": true,
+	".mjs": true, ".cjs": true, ".java": true, ".c": true, ".h": true, ".cc": true,
+	".cpp": true, ".cxx": true, ".hpp": true, ".hh": true, ".cs": true, ".rs": true,
+	".rb": true, ".php": true, ".swift": true, ".kt": true, ".kts": true, ".scala": true,
+	".sh": true, ".bash": true, ".zsh": true, ".fish": true, ".ps1": true, ".bat": true,
+	".cmd": true, ".sql": true, ".yaml": true, ".yml": true, ".toml": true, ".ini": true,
+	".conf": true, ".cfg": true, ".xml": true, ".html": true, ".htm": true, ".css": true,
+	".scss": true, ".sass": true, ".less": true, ".vue": true, ".svelte": true, ".dart": true,
+	".lua": true, ".r": true, ".pl": true, ".pm": true, ".ex": true, ".exs": true,
+	".erl": true, ".hrl": true, ".clj": true, ".cljs": true, ".fs": true, ".fsx": true,
+	".vb": true, ".asm": true, ".s": true, ".gradle": true, ".properties": true,
+	".log": true, ".out": true, ".err": true, ".tex": true,
+}
+
+func codeFileName(name string) bool {
+	switch strings.ToLower(filepath.Base(name)) {
+	case "dockerfile", "makefile", "cmakelists.txt", "procfile", "jenkinsfile":
+		return true
+	}
+	return false
+}
+
+func textDocument(data []byte) (string, error) {
+	data = bytes.TrimPrefix(data, []byte{239, 187, 191})
+	if !utf8.Valid(data) || bytes.ContainsRune(data, 0) {
+		return "", errors.New("文本文件须为 UTF-8 编码，不能包含二进制内容")
+	}
+	return string(data), nil
+}
+
+func documentTextMIME(ext, name string) (string, bool) {
+	switch ext {
+	case ".txt", ".log", ".out", ".err":
+		return "text/plain", true
+	case ".md", ".markdown":
+		return "text/markdown", true
+	case ".csv":
+		return "text/csv", true
+	case ".json":
+		return "application/json", true
+	}
+	if codeExtensions[ext] || codeFileName(name) {
+		return "text/plain", true
+	}
+	return "", false
+}
 
 type ImportAttachmentInput struct {
 	GroupID   string `json:"groupId"`
@@ -85,16 +141,24 @@ func validateAttachment(in ImportAttachmentInput) (domain.Attachment, []byte, er
 			return a, nil, errors.New("文档不能超过 20 MiB")
 		}
 		switch ext {
-		case ".txt", ".md", ".markdown":
-			if !utf8.Valid(data) || bytes.ContainsRune(data, 0) {
-				return a, nil, errors.New("文本文件须为 UTF-8 编码，不能包含二进制内容")
+		case ".docx":
+			a.MIME = docxMIME
+			a.Text, a.PageCount, err = extractDOCX(data)
+			if err != nil {
+				return a, nil, err
 			}
-			a.MIME = "text/plain"
-			if ext == ".md" || ext == ".markdown" {
-				a.MIME = "text/markdown"
+		case ".pptx":
+			a.MIME = pptxMIME
+			a.Text, a.PageCount, err = extractPPTX(data)
+			if err != nil {
+				return a, nil, err
 			}
-			a.Text = string(bytes.TrimPrefix(data, []byte{239, 187, 191}))
-			a.PageCount = 0
+		case ".xlsx":
+			a.MIME = xlsxMIME
+			a.Text, a.PageCount, err = extractXLSX(data)
+			if err != nil {
+				return a, nil, err
+			}
 		case ".pdf":
 			if !bytes.HasPrefix(data, []byte("%PDF-")) || !bytes.Contains(data[max(0, len(data)-1024):], []byte("%%EOF")) {
 				return a, nil, errors.New("PDF 文件损坏或格式无效")
@@ -106,7 +170,20 @@ func validateAttachment(in ImportAttachmentInput) (domain.Attachment, []byte, er
 				return a, nil, errors.New("PDF 最多 100 页，请拆分后重新添加")
 			}
 		default:
-			return a, nil, errors.New("只支持 PNG、JPEG、WebP 图片及 TXT、Markdown、PDF 文档")
+			mimeType, ok := documentTextMIME(ext, in.Name)
+			if !ok {
+				return a, nil, errors.New("附件格式不支持；可添加图片、PDF、Word、PowerPoint、Excel、CSV、JSON、代码或日志文件")
+			}
+			text, textErr := textDocument(data)
+			if textErr != nil {
+				return a, nil, textErr
+			}
+			if ext == ".json" && !json.Valid(bytes.TrimSpace([]byte(text))) {
+				return a, nil, errors.New("JSON 文件格式无效")
+			}
+			a.MIME = mimeType
+			a.Text = text
+			a.PageCount = 0
 		}
 		if strings.TrimSpace(a.Text) == "" {
 			return a, nil, errors.New("文档未提取到文字；扫描版 PDF 暂不支持 OCR")

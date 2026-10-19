@@ -2,7 +2,7 @@
 	"Path": "ai-group-chat",
 	"Main": true,
 	"Dir": "<REPOSITORY>",
-	"GoMod": "<LICENSE_TOOLS_DIR>/export/go-export.mod",
+	"GoMod": "/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/export/go-export.mod",
 	"GoVersion": "1.26.4"
 }
 {
@@ -1254,6 +1254,27 @@
 	"GoModSum": "h1:qqbHyh8v60DhA7CoWK5oRCqLrMHRGoxYCSS9EjAz6Eo="
 }
 {
+	"Path": "github.com/richardlehane/mscfb",
+	"Version": "v1.0.7",
+	"Time": "2026-06-06T04:26:53Z",
+	"Indirect": true,
+	"Dir": "<GOMODCACHE>/github.com/richardlehane/mscfb@v1.0.7",
+	"GoMod": "<GOMODCACHE>/cache/download/github.com/richardlehane/mscfb/@v/v1.0.7.mod",
+	"GoVersion": "1.18",
+	"Sum": "h1:oeoiM0WE79vHwE8RpIYYvIAc8ajTH2mb6UZm55/+EB0=",
+	"GoModSum": "h1:pe0+IUIc0AHh0+teNzBlJCtSyZdFOGgV4ZK9bsoV+Jo="
+}
+{
+	"Path": "github.com/richardlehane/msoleps",
+	"Version": "v1.0.6",
+	"Time": "2026-01-12T11:26:19Z",
+	"Indirect": true,
+	"Dir": "<GOMODCACHE>/github.com/richardlehane/msoleps@v1.0.6",
+	"GoMod": "<GOMODCACHE>/cache/download/github.com/richardlehane/msoleps/@v/v1.0.6.mod",
+	"Sum": "h1:9BvkpjvD+iUBalUY4esMwv6uBkfOip/Lzvd93jvR9gg=",
+	"GoModSum": "h1:BWev5JBpU9Ko2WAgmZEuiz4/u3ZYTKbjLycmwiWUfWg="
+}
+{
 	"Path": "github.com/rivo/uniseg",
 	"Version": "v0.4.7",
 	"Time": "2024-02-08T13:16:15Z",
@@ -1396,6 +1417,17 @@
 	"GoModSum": "h1:C/JaNhH3KBvhNKVbvdlDWkbMDO9H4fKKDaN7/07SSuk="
 }
 {
+	"Path": "github.com/tiendc/go-deepcopy",
+	"Version": "v1.7.2",
+	"Time": "2025-11-28T19:06:59Z",
+	"Indirect": true,
+	"Dir": "<GOMODCACHE>/github.com/tiendc/go-deepcopy@v1.7.2",
+	"GoMod": "<GOMODCACHE>/cache/download/github.com/tiendc/go-deepcopy/@v/v1.7.2.mod",
+	"GoVersion": "1.18",
+	"Sum": "h1:Ut2yYR7W9tWjTQitganoIue4UGxZwCcJy3orjrrIj44=",
+	"GoModSum": "h1:4bKjNC2r7boYOkD2IOuZpYjmlDdzjbpTRyCx+goBCJQ="
+}
+{
 	"Path": "github.com/ulikunitz/xz",
 	"Version": "v0.5.15",
 	"Time": "2025-08-29T05:26:47Z",
@@ -1448,6 +1480,38 @@
 	"GoVersion": "1.19",
 	"Sum": "h1:JVG44RsyaB9T2KIHavMF/ppJZNG9ZpyihvCd0w101no=",
 	"GoModSum": "h1:RbqR21r5mrJuqunuUZ/Dhy/avygyECGrLceyNeo4LiM="
+}
+{
+	"Path": "github.com/xuri/efp",
+	"Version": "v0.0.1",
+	"Time": "2025-02-27T11:00:27Z",
+	"Indirect": true,
+	"Dir": "<GOMODCACHE>/github.com/xuri/efp@v0.0.1",
+	"GoMod": "<GOMODCACHE>/cache/download/github.com/xuri/efp/@v/v0.0.1.mod",
+	"GoVersion": "1.11",
+	"Sum": "h1:fws5Rv3myXyYni8uwj2qKjVaRP30PdjeYe2Y6FDsCL8=",
+	"GoModSum": "h1:ybY/Jr0T0GTCnYjKqmdwxyxn2BQf2RcQIIvex5QldPI="
+}
+{
+	"Path": "github.com/xuri/excelize/v2",
+	"Version": "v2.11.0",
+	"Time": "2026-07-06T16:07:47Z",
+	"Dir": "<GOMODCACHE>/github.com/xuri/excelize/v2@v2.11.0",
+	"GoMod": "<GOMODCACHE>/cache/download/github.com/xuri/excelize/v2/@v/v2.11.0.mod",
+	"GoVersion": "1.25.0",
+	"Sum": "h1:HxaEFl6sRN2+8J5a8HaKq+0M4FsjBGMnWWtjOCPSG88=",
+	"GoModSum": "h1:jxFLbzaIwGQ5ufFNvYfUOHqXhfPaNmP14KWfmNz2Uak="
+}
+{
+	"Path": "github.com/xuri/nfp",
+	"Version": "v0.0.2-0.20250530014748-2ddeb826f9a9",
+	"Time": "2025-05-30T01:47:48Z",
+	"Indirect": true,
+	"Dir": "<GOMODCACHE>/github.com/xuri/nfp@v0.0.2-0.20250530014748-2ddeb826f9a9",
+	"GoMod": "<GOMODCACHE>/cache/download/github.com/xuri/nfp/@v/v0.0.2-0.20250530014748-2ddeb826f9a9.mod",
+	"GoVersion": "1.15",
+	"Sum": "h1:+C0TIdyyYmzadGaL/HBLbf3WdLgC29pgyhTjAT/0nuE=",
+	"GoModSum": "h1:WwHg+CVyzlv/TX9xqBFXEZAuxOPxn2k1GNHwG41IIUQ="
 }
 {
 	"Path": "github.com/yosida95/uritemplate/v3",

@@ -1,0 +1,7 @@
+	// TODO: we should do this here, but right now this will never have an
+	// effect as this is called when the prefix is Sigma, whereas Dutch and
+	// Afrikaans only test for an apostrophe.
+	//
+	// if t.rewrite != nil {
+	// 	t.rewrite(c)
+	// }

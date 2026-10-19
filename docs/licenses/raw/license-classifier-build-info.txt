@@ -1,4 +1,4 @@
-<LICENSE_TOOLS_DIR>/bin/identify_license: go1.24.3
+/var/folders/91/gb7fz1n15ks9rl2h_my6lczm0000gn/T/aidochat-license-tools/bin/identify_license: go1.24.3
 	path	github.com/google/licenseclassifier/v2/tools/identify_license
 	mod	github.com/google/licenseclassifier/v2	v2.0.0	h1:1Y57HHILNf4m0ABuMVb6xk4vAJYEUO0gDxNpog0pyeA=
 	dep	github.com/davecgh/go-spew	v1.1.1	h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
