@@ -213,7 +213,7 @@ export function SealSection() {
           <Field label={t('显示名')} hint={t('1–40 个字符，支持中英文和词间空格。历史发言跟随当前显示名。')} error={errors.displayName ? translateError(errors.displayName) : undefined}>
             {(id) => <TextInput id={id} value={name} disabled={saving} onChange={(e) => { edit({...profile, displayName:e.target.value}) }} onCompositionStart={() => setComposing(true)} onCompositionEnd={() => setComposing(false)} />}
           </Field>
-          <Field label={t('印文')} hint={t('1–4 个非空白字符。英文建议使用姓名首字母，例如 Sam Altman → SA。')} error={errors.seal ? translateError(errors.seal) : undefined}>
+          <Field label={t('印文')} hint={t('1–4 个非空白字符。英文名可以取首字母，例如 Ada Lovelace → AL。')} error={errors.seal ? translateError(errors.seal) : undefined}>
             {(id) => <TextInput id={id} value={text} className={styles.sealInput} disabled={saving} onChange={(e) => { edit({...profile, seal:{...profile.seal,text:e.target.value}}) }} onCompositionStart={() => setComposing(true)} onCompositionEnd={() => setComposing(false)} placeholder={t('我')} />}
           </Field>
           <Button variant="quiet" size="sm" disabled={saving || !suggestion} onClick={() => { edit({...profile, seal:{...profile.seal,text:suggestion}}) }}>{t('使用建议印文')}{suggestion ? `「${suggestion}」` : ''}</Button>

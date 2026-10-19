@@ -39,20 +39,20 @@ const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms))
 
 const members: Member[] = [
   {
-    id: 'mo', name: '墨白', avatar: { glyph: '墨', color: 'shiqing' }, brief: '体验设计，交互与视觉',
-    rolePrompt: '你是资深体验设计师，偏好克制、可读性优先。', providerId: 'p1', model: 'claude-sonnet-5-5', contextTokens: 64000,
+    id: 'mo', name: '墨白', avatar: { glyph: '墨', color: 'shiqing' }, brief: '管好看和好用，偶尔为一行字较真',
+    rolePrompt: '你是一位对细节敏感的体验设计师，喜欢用具体的画面和例子说话，反对空洞的套话。', providerId: 'p1', model: 'claude-sonnet-5-5', contextTokens: 64000,
   },
   {
-    id: 'qy', name: '青砚', avatar: { glyph: '青', color: 'shilv' }, brief: '代码审查，挑实现上的坑',
-    rolePrompt: '你是严格的代码审查者。', providerId: 'p2', model: 'deepseek-chat', contextTokens: 32000,
+    id: 'qy', name: '青砚', avatar: { glyph: '青', color: 'shilv' }, brief: '读代码，也读言外之意',
+    rolePrompt: '你是一个爱较真的代码审查者，会指出风险，也会给出能落地的替代方案。说话直接，但不刻薄。', providerId: 'p2', model: 'deepseek-chat', contextTokens: 32000,
   },
   {
-    id: 'sy', name: '拾遗', avatar: { glyph: '拾', color: 'zheshi' }, brief: '产品经理，追问需求、补漏洞',
-    rolePrompt: '你是产品经理，擅长追问。', providerId: 'p1', model: 'claude-haiku-5-5', contextTokens: 32000,
+    id: 'sy', name: '拾遗', avatar: { glyph: '拾', color: 'zheshi' }, brief: '负责追问，直到问题变清楚',
+    rolePrompt: '你是一位善于追问的产品经理，喜欢把模糊的想法拆成具体的小问题，也会提醒大家别忘了最初的目的。', providerId: 'p1', model: 'claude-haiku-5-5', contextTokens: 32000,
   },
   {
-    id: 'gl', name: '观澜', avatar: { glyph: '澜', color: 'dai' }, brief: '数据分析，用数字说话',
-    rolePrompt: '你是数据分析师。', providerId: 'p3', model: 'qwen-max', contextTokens: 32000,
+    id: 'gl', name: '观澜', avatar: { glyph: '澜', color: 'dai' }, brief: '用数字讲故事，也承认数字讲不出的部分',
+    rolePrompt: '你是一位数据分析师，习惯用数字和对比说明问题，也会诚实地说出数据覆盖不到的地方。', providerId: 'p3', model: 'qwen-max', contextTokens: 32000,
   },
 ]
 const memberById: Record<string, Member> = Object.fromEntries(members.map((m) => [m.id, m]))
@@ -108,7 +108,7 @@ function seedHome(): GroupDetail {
       sources: [{ messageId: 'm-g1-4', seq: 4, role: 'proposed' }], supersededBy: '', createdAt: t(45), updatedAt: t(25) },
   ]
   return {
-    group: { id: g, title: '首页改版评审', topic: '官网首页从三栏改为单列，评估设计与实现影响', memberIds: ['mo', 'qy', 'sy'], memberAvatars: {}, archived: false,
+    group: { id: g, title: '首页要不要改单列', topic: '官网首页从三栏改成单列，已经聊到排版、实现和取舍', memberIds: ['mo', 'qy', 'sy'], memberAvatars: {}, archived: false,
       defaultMode: 'serial', memoryCursor: 7, createdAt: minutesAgo(180), updatedAt: minutesAgo(8) },
     messages, memory, busy: false,
   }
@@ -123,11 +123,11 @@ function seedSmall(id: string, title: string, topic: string, memberIds: string[]
 
 const db: Record<string, GroupDetail> = {
   g1: seedHome(),
-  g2: seedSmall('g2', 'Go 学习小组', '每周一个并发主题', ['qy', 'gl'], [
+  g2: seedSmall('g2', '一起读点 Go', '每周挑一个并发话题，慢慢读源码', ['qy', 'gl'], [
     [USER_ID, '@青砚 @观澜 这周想搞懂 context 取消是怎么传播的'],
     ['qy', '核心就一句话：**父 context 取消时，所有子 context 都会收到 Done 信号**。建议从 `context.WithCancel` 的源码读起，重点看 `propagateCancel`。'],
   ]),
-  g3: seedSmall('g3', '周报润色', '', ['sy'], [[USER_ID, '@拾遗 帮我把这周周报改得更有重点']]),
+  g3: seedSmall('g3', '把周报写得像人话', '', ['sy'], [[USER_ID, '@拾遗 帮我把这周周报改得更有重点']]),
 }
 
 // 可变的模型服务与纪要整理设置（TASK-008 设置页）

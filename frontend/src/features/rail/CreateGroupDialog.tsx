@@ -68,7 +68,7 @@ export function CreateGroupDialog({ open, onClose }: { open: boolean; onClose():
       open={open}
       onClose={onClose}
       title={t('新建群聊')}
-      description={t('一个群就是一个独立的话题，记录和纪要只属于这个群。')}
+      description={t('每个群都是新的一张桌子：聊过的话、定下的事，都只留在这里。')}
       width={520}
       footer={
         <>
@@ -83,10 +83,10 @@ export function CreateGroupDialog({ open, onClose }: { open: boolean; onClose():
     >
       <form onSubmit={submit}>
         <Field label={t('群名')} error={errors.title}>
-          {(id) => <TextInput id={id} value={title} onChange={(e) => setTitle(e.target.value)} placeholder={t('例如：首页改版评审')} autoFocus maxLength={40} />}
+          {(id) => <TextInput id={id} value={title} onChange={(e) => setTitle(e.target.value)} placeholder={t('例如：随便聊聊、不赶时间、想到什么说什么')} autoFocus maxLength={40} />}
         </Field>
-        <Field label={t('主题')} hint={t('会告诉每位成员这个群在讨论什么，可以不填。')}>
-          {(id) => <TextArea id={id} value={topic} onChange={(e) => setTopic(e.target.value)} rows={2} placeholder={t('例如：官网首页从三栏改为单列，评估设计与实现影响')} maxLength={200} />}
+        <Field label={t('主题')} hint={t('给成员一点背景；也可以留空，边聊边定。')}>
+          {(id) => <TextArea id={id} value={topic} onChange={(e) => setTopic(e.target.value)} rows={2} placeholder={t('比如：最近在想什么，或者什么都不想，也行。')} maxLength={200} />}
         </Field>
         <Field label={t('邀请成员')} error={errors.members} hint={t('点选的先后就是 @所有人 时的回复顺序。')} aside={<span className={styles.count}>{t('{n} 位', { n: picked.length })}</span>}>
           {() => (

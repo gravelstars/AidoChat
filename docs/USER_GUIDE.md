@@ -11,12 +11,12 @@ The browser demo and the desktop app are separate modes and do not share data. D
 ## 1. First run: follow this order
 
 1. Launch the desktop app.
-2. On the welcome screen, choose **Configure members and model services**, or open **Members → New member** at the bottom left. Enter a name and a role prompt.
+2. On the welcome screen, choose **Invite AI members**, or open **Members → New member** at the bottom left. Enter a name and a persona.
 3. If there is no service yet, choose **New model service** inside the member form. Select an endpoint, enter the API Key and the actual test model name, test the connection, and save. Local services without authentication may leave the Key empty.
 4. Saving the service returns to the member draft and selects the service automatically. Confirm the model name and save the member. Services can also be managed later in **Settings**.
 5. Create a second member with a different role.
 6. Choose **New group** in the sidebar, give it a name, invite both members, and select **Sequential** or **Parallel** replies.
-7. Type `@青砚 @墨白 Please review this plan from implementation and experience angles`, replacing the names with your own members, then send.
+7. Type `@青砚 @墨白 What should we make for dinner this weekend?`, replacing the names with your own members, then send.
 8. After the discussion, choose **Organize** in the notes panel and check the sources. **Stamp** the items you actually accept.
 
 A fresh install has no built-in real services or members. If you see a set of ready-made demo groups, first check whether you opened the browser mock preview.
@@ -95,8 +95,8 @@ Keys are stored in the system credential store. If the system asks for access, a
 Open **Members → New member**. If no service exists, create one directly in the member form; the member draft is preserved. When no members exist, the new-group dialog also offers a member-creation entry and selects the new member after saving.
 
 - A name is 1–12 characters, cannot contain whitespace or `@`, and must be unique. It is used for mentions.
-- The one-line brief describes the member's role so other members know what it is good at.
-- The role prompt only enters that member's own system prompt. For example: `You review code, point out edge cases first, and suggest the smallest safe change.`
+- The one-line note helps others remember the member: a quirk, a catchphrase, or what they are good at. There is no required job title.
+- The persona only enters that member's own system prompt. Describe personality, speaking style, or what they care about. For example: `You are a warm but stubborn friend. Ask before giving advice, and occasionally tell a terrible joke.`
 - The model service and model name must match.
 - The context budget controls how much history can fit into one request. It is not a promise that all messages are remembered forever.
 - Temperature may be left empty to use the service default. If set manually, it must be within the model's supported range.

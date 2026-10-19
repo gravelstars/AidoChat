@@ -33,8 +33,8 @@ interface Candidate {
 }
 
 const MODE_OPTIONS: { value: ReplyMode; label: string; hint: string }[] = [
-  { value: 'serial', label: '依次', hint: '按 @ 的顺序一个接一个回答，后面的能看到前面的' },
-  { value: 'parallel', label: '同时', hint: '同时回答，互相看不到本轮的回答' },
+  { value: 'serial', label: '依次', hint: '一个接一个说，后面的人能听见前面说了什么。' },
+  { value: 'parallel', label: '同时', hint: '同时开口，谁也听不见谁；适合听几种不同意见。' },
 ]
 
 export const Composer = forwardRef<ComposerHandle, Props>(function Composer({ state, members }, ref) {

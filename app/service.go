@@ -502,10 +502,10 @@ func (s *Service) SaveMember(ctx context.Context, in SaveMemberInput) (Member, e
 		return Member{}, err
 	}
 	if utf8.RuneCountInString(in.Brief) > 30 {
-		return Member{}, errors.New("一句话简介不能超过 30 字")
+		return Member{}, errors.New("一句话介绍不能超过 30 字")
 	}
 	if utf8.RuneCountInString(in.RolePrompt) > 4000 {
-		return Member{}, errors.New("角色提示词不能超过 4000 字")
+		return Member{}, errors.New("角色设定不能超过 4000 字")
 	}
 	if strings.TrimSpace(in.Model) == "" {
 		return Member{}, errors.New("请填写模型名称")

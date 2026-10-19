@@ -144,7 +144,7 @@ export function MemberEditor({ open, onClose, member, onSaved }: { open: boolean
         open={open}
         onClose={onClose}
         title={isNew ? t('新建成员') : t('编辑「{name}」', { name: member.name })}
-        description={t('成员是一个配置好的 AI。他没有个人记忆，进入哪个群，就只知道哪个群的事。')}
+        description={t('每位成员都是你请进群的一位 AI。他没有个人记忆，进入哪个群，就只知道哪个群的事。')}
         width={560}
         footer={
           <>
@@ -166,7 +166,7 @@ export function MemberEditor({ open, onClose, member, onSaved }: { open: boolean
         <div className={styles.head}>
           <div className={styles.headText}>
             <Field label={t('名字')} error={errors.name} hint={t('1–12 个字，不能有空格或 @，全局唯一。')}>
-              {(id) => <TextInput id={id} value={name} onChange={(e) => setName(e.target.value)} placeholder={t('例如：青砚')} autoFocus maxLength={12} />}
+              {(id) => <TextInput id={id} value={name} onChange={(e) => setName(e.target.value)} placeholder={t('例如：青砚、阿墨、小满')} autoFocus maxLength={12} />}
             </Field>
           </div>
           <button
@@ -181,12 +181,12 @@ export function MemberEditor({ open, onClose, member, onSaved }: { open: boolean
         </div>
         {isNew && <p className={styles.sealHint}>{t('印面取名字首字，颜料自动分配；保存后可以换图片头像。')}</p>}
 
-        <Field label={t('一句话简介')} hint={isDemo ? t('保存成员简介；演示版回复固定，不会读取简介。') : t('会告诉群里其他成员这人是干什么的。')} aside={<span className={styles.sealHint}>{brief.length}/30</span>}>
-          {(id) => <TextInput id={id} value={brief} onChange={(e) => setBrief(e.target.value)} placeholder={t('例如：代码审查，挑实现上的坑')} maxLength={30} />}
+        <Field label={t('一句话认识他')} hint={isDemo ? t('保存成员简介；演示版回复固定，不会读取简介。') : t('让其他人快速记住他：一个特点、一句口头禅，或者他擅长的事。')} aside={<span className={styles.sealHint}>{brief.length}/30</span>}>
+          {(id) => <TextInput id={id} value={brief} onChange={(e) => setBrief(e.target.value)} placeholder={t('例如：总在半夜冒出怪点子')} maxLength={30} />}
         </Field>
 
-        <Field label={t('角色提示词')} hint={isDemo ? t('可编辑并保存在浏览器中；演示版不会执行角色提示词。') : t('只在与他对话时生效，写清楚他的专长与偏好。')}>
-          {(id) => <TextArea id={id} value={rolePrompt} onChange={(e) => setRolePrompt(e.target.value)} rows={4} placeholder={t('例如：你是严格的代码审查者，优先指出实现上的风险与边界情况。')} maxLength={4000} />}
+        <Field label={t('角色设定')} hint={isDemo ? t('可编辑并保存在浏览器中；演示版不会执行角色设定。') : t('只影响他和你的对话。写性格、说话方式、在意的事，或者一句你喜欢的话都行。')}>
+          {(id) => <TextArea id={id} value={rolePrompt} onChange={(e) => setRolePrompt(e.target.value)} rows={4} placeholder={t('例如：你是一位温和但爱较真的朋友，喜欢先问清楚再给建议，偶尔讲个冷笑话。')} maxLength={4000} />}
         </Field>
 
         <div className={styles.row}>

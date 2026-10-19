@@ -50,8 +50,8 @@ function Welcome() {
     <div className={styles.welcome}>
       <img className={styles.welcomeMark} src={appIcon} alt="AidoChat" />
       <p className={styles.welcomeTitle}>{t('把 AI 拉进同一个群')}</p>
-      <p className={styles.welcomeText}>{t('先配置模型服务和成员，再从左侧新建群，用 @ 点名开始讨论。')}</p>
-      <div className={styles.welcomeAction}><Button variant="primary" onClick={() => setView('members')}>{t('配置成员与模型服务')}</Button></div>
+      <p className={styles.welcomeText}>{t('先请几位 AI 成员进来，再开一个群。用 @ 点名，他们就会开口。')}</p>
+      <div className={styles.welcomeAction}><Button variant="primary" onClick={() => setView('members')}>{t('请 AI 成员进来')}</Button></div>
     </div>
   )
 }

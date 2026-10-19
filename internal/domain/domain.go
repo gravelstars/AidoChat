@@ -48,8 +48,8 @@ type Member struct {
 	ID             string
 	Name           string // 全局唯一，不含空白与 '@'，用于 @ 匹配
 	Avatar         Avatar
-	Brief          string // 一句话简介，会告诉群里其他成员"这人是干什么的"
-	RolePrompt     string // 角色提示词，只进入自己的 system prompt
+	Brief          string // 一句话认识他：一个特点、口头禅或擅长的事
+	RolePrompt     string // 角色设定（persona），只进入自己的 system prompt
 	ProviderID     string
 	Model          string
 	Temperature    *float64

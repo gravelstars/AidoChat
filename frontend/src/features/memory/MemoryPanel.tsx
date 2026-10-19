@@ -22,10 +22,10 @@ import styles from './MemoryPanel.module.css'
  */
 
 const SECTIONS: { kind: MemoryKind; title: string; empty: string }[] = [
-  { kind: 'decision', title: '决定', empty: '还没有拍板的事' },
-  { kind: 'todo', title: '待办', empty: '没有待办' },
-  { kind: 'plan', title: '方案', empty: '还没有提出方案' },
-  { kind: 'background', title: '背景', empty: '没有记录背景信息' },
+  { kind: 'decision', title: '决定', empty: '还没有拍板的事，聊着聊着就有了' },
+  { kind: 'todo', title: '待办', empty: '暂时没有待办' },
+  { kind: 'plan', title: '方案', empty: '还没有方案，先聊聊看' },
+  { kind: 'background', title: '背景', empty: '背景还是一片空白' },
 ]
 
 type Filter = 'all' | 'pending' | 'confirmed'

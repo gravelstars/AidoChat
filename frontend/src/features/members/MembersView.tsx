@@ -26,7 +26,7 @@ export function MembersView() {
         <div className={styles.headRow}>
           <div>
             <h1 className={styles.title}>{t('成员')}</h1>
-            <p className={styles.sub}>{t('每位成员是一个配置好的 AI。他们没有个人记忆，进入哪个群，就只知道哪个群的事。')}</p>
+            <p className={styles.sub}>{t('每位成员都是你请来的一位 AI。他们不记得别的群，只知道你们在这里聊过什么。')}</p>
           </div>
           <Button variant="primary" icon="plus" onClick={() => setCreating(true)}>
             {t('新建成员')}
