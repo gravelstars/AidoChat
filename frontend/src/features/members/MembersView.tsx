@@ -3,6 +3,7 @@ import { useState, type CSSProperties } from 'react'
 import type { Member } from '../../backend'
 import { Button } from '../../components/Button'
 import { Seal } from '../../components/Seal'
+import { useT } from '../../i18n/react'
 import { useChat } from '../../state/store'
 import { MemberEditor } from './MemberEditor'
 import styles from './MembersView.module.css'
@@ -17,17 +18,18 @@ export function MembersView() {
   const [editing, setEditing] = useState<Member | null>(null)
   const [creating, setCreating] = useState(false)
   const list = Object.values(members).filter((m) => !retiredIds.includes(m.id))
+  const t = useT()
 
   return (
     <section className={styles.page}>
       <header className={`${styles.head} drag`} data-edge="right">
         <div className={styles.headRow}>
           <div>
-            <h1 className={styles.title}>成员</h1>
-            <p className={styles.sub}>每位成员是一个配置好的 AI。他们没有个人记忆，进入哪个群，就只知道哪个群的事。</p>
+            <h1 className={styles.title}>{t('成员')}</h1>
+            <p className={styles.sub}>{t('每位成员是一个配置好的 AI。他们没有个人记忆，进入哪个群，就只知道哪个群的事。')}</p>
           </div>
           <Button variant="primary" icon="plus" onClick={() => setCreating(true)}>
-            新建成员
+            {t('新建成员')}
           </Button>
         </div>
       </header>
@@ -47,13 +49,13 @@ export function MembersView() {
                 <h2 className={styles.name}>{m.name}</h2>
                 <p className={styles.brief}>{m.brief}</p>
                 <dl className={styles.facts}>
-                  <dt>模型</dt>
+                  <dt>{t('模型')}</dt>
                   <dd>{m.model}</dd>
-                  <dt>服务</dt>
+                  <dt>{t('服务')}</dt>
                   <dd>
-                    {p?.name ?? '未配置'}
-                    {isDemo && p && <span> · 预设回复</span>}
-                    {!isDemo && p && !p.hasKey && (p.kind === 'anthropic' ? <span className={styles.warn}> · 缺少 Key</span> : ' · 未设 Key')}
+                    {p?.name ?? t('未配置')}
+                    {isDemo && p && <span> · {t('预设回复')}</span>}
+                    {!isDemo && p && !p.hasKey && (p.kind === 'anthropic' ? <span className={styles.warn}> · {t('缺少 Key')}</span> : ` · ${t('未设 Key')}`)}
                   </dd>
                 </dl>
               </div>

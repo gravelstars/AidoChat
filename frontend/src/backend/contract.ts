@@ -164,6 +164,8 @@ export interface Bootstrap {
   retiredMemberIds: string[]
   /** 纪要整理使用的服务与模型（TASK-008） */
   memory: MemoryConfig
+  /** 界面语言代码；新增语言由 i18n/locales 自动发现 */
+  language: string
   version: string
 }
 
@@ -274,6 +276,8 @@ export interface Backend {
     summarize(groupId: string): Promise<void>
   }
   setAppearance(a: Appearance): Promise<void>
+  /** 保存界面语言；之后新建的系统消息按该语言写入 */
+  setLanguage(language: string): Promise<void>
   setUserProfile(profile: UserProfile): Promise<void>
   setUserSeal(seal: UserSeal): Promise<void>
   /** 保存一张头像图片（原样保存，动图保留动画），返回可用于 Avatar.image 的地址 */

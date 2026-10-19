@@ -38,6 +38,7 @@ type Service struct {
 	closed      bool
 	credentials credentialStore
 	providersMu sync.Mutex
+	language    string
 
 	// SelectExportDirectory 由桌面层注入原生目录选择；业务层不接受前端传入的本机路径。
 	SelectExportDirectory func() (string, error)
@@ -45,7 +46,7 @@ type Service struct {
 }
 
 func NewService(db *store.Store, providers turn.Providers, platform string, emit func(Event)) *Service {
-	s := &Service{db: db, events: newEventBuffer(emit), platform: platform, credentials: systemCredentials{}}
+	s := &Service{db: db, events: newEventBuffer(emit), platform: platform, credentials: systemCredentials{}, language: "zh"}
 	s.cleanupDraftAttachments()
 	// 编排器可能已读取旧配置；在凭证变更同一边界内重读，才能保证地址与 Key 配对。
 	construct := func(ctx context.Context, requested domain.Provider) (llm.Provider, error) {
@@ -156,6 +157,14 @@ func (s *Service) Bootstrap(ctx context.Context) (Bootstrap, error) {
 	if err != nil {
 		return b, friendly(err, "读取外观")
 	}
+	b.Language, err = readSetting(ctx, s.db, "ui.language", "zh")
+	if err != nil {
+		return b, friendly(err, "读取界面语言")
+	}
+	if !languageCode.MatchString(b.Language) {
+		b.Language = "zh"
+	}
+	s.language = b.Language
 	b.UserSeal, err = readSetting(ctx, s.db, "ui.user_seal", UserSeal{"我", "baiwen"})
 	if err != nil {
 		return b, friendly(err, "读取私印")
@@ -558,7 +567,11 @@ func (s *Service) DeleteMember(ctx context.Context, id string) error {
 		return friendly(err, "删除成员")
 	}
 	for _, gid := range affected {
-		note := domain.Message{ID: store.NewID(), GroupID: gid, AuthorKind: domain.AuthorSystem, Content: "你移出了 " + m.Name, Status: domain.StatusDone}
+		template := systemTemplates["group.remove"][0]
+		if s.language == "en" {
+			template = systemTemplates["group.remove"][1]
+		}
+		note := domain.Message{ID: store.NewID(), GroupID: gid, AuthorKind: domain.AuthorSystem, Content: strings.ReplaceAll(template, "{name}", m.Name), Status: domain.StatusDone}
 		if err = s.db.InsertMessage(ctx, &note); err != nil {
 			slog.Warn("写系统消息失败", "error", err)
 			continue
@@ -572,7 +585,7 @@ func (s *Service) DeleteMember(ctx context.Context, id string) error {
 }
 
 // Version 是应用版本，显示在设置页「关于」。
-const Version = "0.1.3"
+const Version = "0.1.4"
 
 // SaveProvider 新建或更新一个模型服务（TASK-008）。Key 只在非空时写入系统钥匙串。
 func (s *Service) SaveProvider(ctx context.Context, in SaveProviderInput) (ProviderConfig, error) {
@@ -813,7 +826,13 @@ func (s *Service) saveSetting(ctx context.Context, key, value string) error {
 	return s.db.SetSetting(ctx, key, string(raw))
 }
 
-func modeLabel(m domain.ReplyMode) string {
+func modeLabel(language string, m domain.ReplyMode) string {
+	if language == "en" {
+		if m == domain.ModeParallel {
+			return "parallel replies"
+		}
+		return "sequential replies"
+	}
 	if m == domain.ModeParallel {
 		return "同时回复"
 	}
@@ -871,15 +890,15 @@ func (s *Service) UpdateGroup(ctx context.Context, in UpdateGroupInput) (Group, 
 	if s.turns.Busy(in.ID) && !slices.Equal(g.MemberIDs, in.MemberIDs) {
 		return Group{}, errors.New("有成员正在回复，请先停止再调整成员")
 	}
-	var notes []string
+	var notes []systemNote
 	if g.Title != in.Title {
-		notes = append(notes, "你把群名改为「"+in.Title+"」")
+		notes = append(notes, systemNote{"group.rename", []string{"name", in.Title}})
 	}
 	if g.Topic != in.Topic {
-		notes = append(notes, "你改了群主题")
+		notes = append(notes, systemNote{"group.topic", nil})
 	}
 	if g.DefaultMode != in.DefaultMode {
-		notes = append(notes, "你把默认回复方式改为"+modeLabel(in.DefaultMode))
+		notes = append(notes, systemNote{"group.mode", []string{"mode", modeLabel(s.language, in.DefaultMode)}})
 	}
 	added := difference(in.MemberIDs, g.MemberIDs)
 	removed := difference(g.MemberIDs, in.MemberIDs)
@@ -894,20 +913,20 @@ func (s *Service) UpdateGroup(ctx context.Context, in UpdateGroupInput) (Group, 
 		return out
 	}
 	for _, n := range names(added) {
-		notes = append(notes, "你邀请了 "+n)
+		notes = append(notes, systemNote{"group.invite", []string{"name", n}})
 	}
 	for _, n := range names(removed) {
-		notes = append(notes, "你移出了 "+n)
+		notes = append(notes, systemNote{"group.remove", []string{"name", n}})
 	}
 	if len(added) == 0 && len(removed) == 0 && !slices.Equal(g.MemberIDs, in.MemberIDs) {
-		notes = append(notes, "你调整了发言顺序")
+		notes = append(notes, systemNote{"group.order", nil})
 	}
 	g.Title, g.Topic, g.DefaultMode, g.MemberIDs = in.Title, in.Topic, in.DefaultMode, in.MemberIDs
 	if err = s.db.UpdateGroup(ctx, g); err != nil {
 		return Group{}, friendly(err, "保存群设置")
 	}
 	for _, n := range notes {
-		s.systemMessage(ctx, g.ID, n)
+		s.systemMessageKey(ctx, g.ID, n.key, n.args...)
 	}
 	out, err := s.groupDTO(ctx, g)
 	if err != nil {

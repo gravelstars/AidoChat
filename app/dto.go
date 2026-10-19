@@ -121,6 +121,7 @@ type MemoryItem struct {
 type Bootstrap struct {
 	UserDisplayName string           `json:"userDisplayName"`
 	Platform        string           `json:"platform"`
+	Language        string           `json:"language"`
 	Appearance      Appearance       `json:"appearance"`
 	UserSeal        UserSeal         `json:"userSeal"`
 	Members         []Member         `json:"members"`

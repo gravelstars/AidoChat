@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Icon } from '../../components/Icon'
 import { highlight } from '../../lib/highlight'
+import { useT } from '../../i18n/react'
 import styles from './CodeBlock.module.css'
 
 /**
@@ -10,6 +11,7 @@ import styles from './CodeBlock.module.css'
 export function CodeBlock({ code, lang, streaming }: { code: string; lang: string; streaming: boolean }) {
   const html = useHighlighted(code, lang, !streaming)
   const [copied, setCopied] = useState(false)
+  const t = useT()
 
   useEffect(() => {
     if (!copied) return
@@ -25,9 +27,9 @@ export function CodeBlock({ code, lang, streaming }: { code: string; lang: strin
     <div className={styles.block} data-lang={lang}>
       <div className={styles.bar}>
         <span className={styles.lang}>{lang || 'text'}</span>
-        <button className={`${styles.copy} inlineAction`} data-copied={copied} onClick={copy} aria-label="复制代码">
+        <button className={`${styles.copy} inlineAction`} data-copied={copied} onClick={copy} aria-label={t('复制代码')}>
           <Icon name={copied ? 'check' : 'panel'} size={13} />
-          {copied ? '已复制' : '复制'}
+          {copied ? t('已复制') : t('复制')}
         </button>
       </div>
       {html ? (

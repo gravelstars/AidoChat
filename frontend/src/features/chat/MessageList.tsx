@@ -4,6 +4,8 @@ import { Icon } from '../../components/Icon'
 import { Seal } from '../../components/Seal'
 import { avatarOf } from '../../lib/avatar'
 import { dayLabel } from '../../lib/format'
+import { getLanguage } from '../../i18n'
+import { useT } from '../../i18n/react'
 import { useChat, type GroupState } from '../../state/store'
 import { MessageItem } from './MessageItem'
 import styles from './MessageList.module.css'
@@ -23,6 +25,7 @@ export function MessageList({ state, members, onInsertMention }: Props) {
   const stick = useRef(true)
   const [showJump, setShowJump] = useState(false)
   const jump = useChat((s) => s.jump)
+  const t = useT()
   // 打开群时已存在的最大 Seq；之后出现的才播放入场动画
   const baseline = useRef<{ id: string; seq: number }>({ id: '', seq: 0 })
   if (baseline.current.id !== group.id) {
@@ -120,17 +123,19 @@ export function MessageList({ state, members, onInsertMention }: Props) {
       </div>
       <button className={`${styles.jump} ${showJump ? styles.jumpShow : ''}`} onClick={toBottom} tabIndex={showJump ? 0 : -1}>
         <Icon name="arrowDown" size={14} />
-        回到最新
+        {t('回到最新')}
       </button>
     </div>
   )
 }
 
 function EmptyHint({ group, members, onPick }: { group: GroupState['group']; members: Record<string, Member>; onPick(name: string): void }) {
+  const t = useT()
+  const mentionAll = getLanguage() === 'en' ? 'all' : '所有人'
   return (
     <div className={styles.empty}>
-      <p className={styles.emptyTitle}>这张纸还是空的</p>
-      <p className={styles.emptyText}>用 @ 点名让成员回答。没有 @ 的消息只会记在群里，不会触发回复。</p>
+      <p className={styles.emptyTitle}>{t('这张纸还是空的')}</p>
+      <p className={styles.emptyText}>{t('用 @ 点名让成员回答。没有 @ 的消息只会记在群里，不会触发回复。')}</p>
       <div className={styles.emptyChips}>
         {group.memberIds.map((id) => {
           const m = members[id]
@@ -142,8 +147,8 @@ function EmptyHint({ group, members, onPick }: { group: GroupState['group']; mem
             </button>
           )
         })}
-        <button className={styles.chip} onClick={() => onPick('所有人')}>
-          @所有人
+        <button className={styles.chip} onClick={() => onPick(mentionAll)}>
+          @{mentionAll}
         </button>
       </div>
     </div>

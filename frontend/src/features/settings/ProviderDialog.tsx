@@ -6,6 +6,8 @@ import { Button } from '../../components/Button'
 import { Dialog } from '../../components/Dialog'
 import { Field, TextInput } from '../../components/Field'
 import { Segmented } from '../../components/Segmented'
+import { translateError } from '../../i18n'
+import { useT } from '../../i18n/react'
 import { useChat } from '../../state/store'
 import styles from './SettingsView.module.css'
 
@@ -39,6 +41,7 @@ export function ProviderDialog({ open, onClose, provider, onSaved, suggestedMode
   const [testing, setTesting] = useState(false)
   const [test, setTest] = useState<{ ok: boolean; text: string } | null>(null)
   const [confirmDelete, setConfirmDelete] = useState(false)
+  const t = useT()
 
   useEffect(() => {
     testRequest.current += 1
@@ -70,15 +73,15 @@ export function ProviderDialog({ open, onClose, provider, onSaved, suggestedMode
 
   const runTest = async () => {
     setTest(null)
-    if (!testModel.trim()) { setErrors((e) => ({ ...e, testModel: '填入这个服务实际可用的模型名，再测试连接' })); return }
+    if (!testModel.trim()) { setErrors((e) => ({ ...e, testModel: t('填入这个服务实际可用的模型名，再测试连接') })); return }
     setErrors((e) => ({ ...e, testModel: undefined }))
     const request = ++testRequest.current
     setTesting(true)
     try {
       const ms = await backend.testProvider(payload())
-      if (request === testRequest.current) setTest({ ok: true, text: `连接正常 · 用时 ${ms} ms` })
+      if (request === testRequest.current) setTest({ ok: true, text: t('连接正常 · 用时 {ms} ms', { ms }) })
     } catch (e) {
-      if (request === testRequest.current) setTest({ ok: false, text: e instanceof Error ? e.message : String(e) })
+      if (request === testRequest.current) setTest({ ok: false, text: translateError(e) })
     } finally {
       if (request === testRequest.current) setTesting(false)
     }
@@ -86,8 +89,8 @@ export function ProviderDialog({ open, onClose, provider, onSaved, suggestedMode
 
   const submit = async () => {
     const errs: typeof errors = {}
-    if (!name.trim()) errs.name = '给服务起个名字'
-    if (!baseUrl.trim()) errs.baseUrl = '请填写服务地址'
+    if (!name.trim()) errs.name = t('给服务起个名字')
+    if (!baseUrl.trim()) errs.baseUrl = t('请填写服务地址')
     setErrors(errs)
     if (Object.keys(errs).length) return
     const request = testRequest.current
@@ -98,7 +101,7 @@ export function ProviderDialog({ open, onClose, provider, onSaved, suggestedMode
       onSaved?.(saved, testModel.trim())
       dismiss()
     } catch (e) {
-      if (request === testRequest.current) setErrors({ name: e instanceof Error ? e.message : String(e) })
+      if (request === testRequest.current) setErrors({ name: translateError(e) })
     } finally {
       if (request === testRequest.current) setSubmitting(false)
     }
@@ -116,7 +119,7 @@ export function ProviderDialog({ open, onClose, provider, onSaved, suggestedMode
       await deleteProvider(provider.id)
       if (request === testRequest.current) dismiss()
     } catch (e) {
-      if (request === testRequest.current) setErrors({ name: e instanceof Error ? e.message : String(e) })
+      if (request === testRequest.current) setErrors({ name: translateError(e) })
     } finally {
       if (request === testRequest.current) setSubmitting(false)
     }
@@ -126,48 +129,48 @@ export function ProviderDialog({ open, onClose, provider, onSaved, suggestedMode
     <Dialog
       open={open}
       onClose={dismiss}
-      title={provider ? `编辑「${provider.name}」` : '新建模型服务'}
-      description={isDemo ? "演示版只保存服务名称与模型配置，不接收 API Key，不连接任何模型服务。" : "成员通过这里配置的服务与模型说话。API Key 只保存在系统钥匙串，界面不会回显。"}
+      title={provider ? t('编辑「{name}」', { name: provider.name }) : t('新建模型服务')}
+      description={isDemo ? t('演示版只保存服务名称与模型配置，不接收 API Key，不连接任何模型服务。') : t('成员通过这里配置的服务与模型说话。API Key 只保存在系统钥匙串，界面不会回显。')}
       width={540}
       footer={
         <>
           {provider && (
             <Button variant="quiet" className={confirmDelete ? styles.bad : undefined} onClick={() => void remove()} disabled={submitting || testing}>
-              {confirmDelete ? '再点一次确认删除' : '删除服务'}
+              {confirmDelete ? t('再点一次确认删除') : t('删除服务')}
             </Button>
           )}
           <span style={{ flex: 1 }} />
           <Button variant="ghost" onClick={dismiss}>
-            取消
+            {t('取消')}
           </Button>
           <Button variant="primary" onClick={() => void submit()} disabled={submitting || testing}>
-            {provider ? '保存' : '创建'}
+            {provider ? t('保存') : t('创建')}
           </Button>
         </>
       }
     >
       <fieldset className={styles.providerFields} disabled={testing || submitting}>
-      <Field label="名称" error={errors.name}>
-        {(id) => <TextInput id={id} value={name} onChange={(e) => setName(e.target.value)} placeholder="例如：DeepSeek" autoFocus maxLength={24} />}
+      <Field label={t('名称')} error={errors.name}>
+        {(id) => <TextInput id={id} value={name} onChange={(e) => setName(e.target.value)} placeholder={t('例如：DeepSeek')} autoFocus maxLength={24} />}
       </Field>
-      <Field label="类型" hint={isDemo ? "演示配置不会建立真实连接，可自由切换体验表单。" : "按服务商的接口协议选择；其他兼容 OpenAI 的服务也可使用。Anthropic 选官方接口。"}>
+      <Field label={t('类型')} hint={isDemo ? t('演示配置不会建立真实连接，可自由切换体验表单。') : t('按服务商的接口协议选择；其他兼容 OpenAI 的服务也可使用。Anthropic 选官方接口。')}>
         {() => (
           <Segmented
-            label="服务类型"
+            label={t('服务类型')}
             value={kind}
             onChange={(v: 'openai' | 'anthropic') => setKind(v)}
             options={[
-              { value: 'openai', label: 'OpenAI 兼容' },
+              { value: 'openai', label: t('OpenAI 兼容') },
               { value: 'anthropic', label: 'Anthropic' },
             ]}
           />
         )}
       </Field>
-      <Field label="服务地址" error={errors.baseUrl} hint={isDemo ? "只保存地址文本，不发起网络请求。请勿输入 API Key。" : "常用服务按钮仅供快捷填入。列表里没有的服务，也可手动填写名称和 API 地址，并选择对应的接口类型。"}>
+      <Field label={t('服务地址')} error={errors.baseUrl} hint={isDemo ? t('只保存地址文本，不发起网络请求。请勿输入 API Key。') : t('常用服务按钮仅供快捷填入。列表里没有的服务，也可手动填写名称和 API 地址，并选择对应的接口类型。')}>
         {(id) => (
           <>
             <TextInput id={id} value={baseUrl} onChange={(e) => setBaseUrl(e.target.value)} placeholder="https://…" />
-            <div className={styles.presets} role="group" aria-label="常用服务快捷填入">
+            <div className={styles.presets} role="group" aria-label={t('常用服务快捷填入')}>
               {PRESETS.map((p) => (
                 <Button
                   key={p.name}
@@ -180,23 +183,23 @@ export function ProviderDialog({ open, onClose, provider, onSaved, suggestedMode
                     if (!name.trim()) setName(p.name)
                   }}
                 >
-                  {p.name}
+                  {t(p.name)}
                 </Button>
               ))}
             </div>
           </>
         )}
       </Field>
-      {!isDemo && <Field label="API Key" hint={provider?.hasKey ? '已保存，留空则不修改。' : '只写入系统钥匙串，不会进入数据库。'}>
-        {(id) => <TextInput id={id} type="password" value={key} onChange={(e) => setKey(e.target.value)} placeholder={provider?.hasKey ? '已保存，留空则不修改' : '粘贴 API Key'} autoComplete="off" />}
+      {!isDemo && <Field label="API Key" hint={provider?.hasKey ? t('已保存，留空则不修改。') : t('只写入系统钥匙串，不会进入数据库。')}>
+        {(id) => <TextInput id={id} type="password" value={key} onChange={(e) => setKey(e.target.value)} placeholder={provider?.hasKey ? t('已保存，留空则不修改') : t('粘贴 API Key')} autoComplete="off" />}
       </Field>}
-      {!isDemo && <Field label="测试连接" error={errors.testModel} hint="测试前填写此服务实际可用的模型名；测试会发送一个极小请求。">
+      {!isDemo && <Field label={t('测试连接')} error={errors.testModel} hint={t('测试前填写此服务实际可用的模型名；测试会发送一个极小请求。')}>
         {(id) => (
           <>
             <div className={styles.actionsRow}>
-              <TextInput id={id} value={testModel} onChange={(e) => setTestModel(e.target.value)} placeholder="例如：deepseek-chat" style={{ flex: 1 }} />
+              <TextInput id={id} value={testModel} onChange={(e) => setTestModel(e.target.value)} placeholder="deepseek-chat" style={{ flex: 1 }} />
               <Button variant="ghost" onClick={() => void runTest()} disabled={testing}>
-                {testing ? '测试中…' : '测试连接'}
+                {testing ? t('测试中…') : t('测试连接')}
               </Button>
             </div>
             {test && <p className={`${styles.testLine} ${test.ok ? styles.ok : styles.bad}`} role="status" style={{ marginTop: 6 }}>{test.text}</p>}

@@ -8,6 +8,8 @@ import { avatarOf } from '../../lib/avatar'
 import { Icon } from '../../components/Icon'
 import { clock, linkifyRefs } from '../../lib/format'
 import { parseMentions } from '../../lib/mention'
+import { translateError } from '../../i18n'
+import { useT } from '../../i18n/react'
 import { useChat } from '../../state/store'
 import { AttachmentList } from './AttachmentList'
 import { CodeBlock } from './CodeBlock'
@@ -31,6 +33,7 @@ export const MessageItem = memo(function MessageItem({ message: m, members, grou
   const jumpTo = useChat((s) => s.jumpTo)
   const userSeal = useChat((s) => s.userSeal)
   const userDisplayName = useChat((s) => s.userDisplayName)
+  const t = useT()
 
   if (m.authorKind === 'system') {
     return (
@@ -42,7 +45,7 @@ export const MessageItem = memo(function MessageItem({ message: m, members, grou
 
   const isUser = m.authorKind === 'user'
   const member = members[m.authorId]
-  const name = isUser ? userDisplayName : member?.name ?? '已退群成员'
+  const name = isUser ? userDisplayName : member?.name ?? t('已退群成员')
   const live = m.status === 'pending' || m.status === 'streaming'
 
   return (
@@ -64,18 +67,18 @@ export const MessageItem = memo(function MessageItem({ message: m, members, grou
         <header className={styles.head}>
           <span className={styles.name} title={name}>{name}</span>
           {!isUser && replyToSeq ? (
-            <button className={styles.replyTo} onClick={() => jumpTo(replyToSeq)} title="跳到被回复的消息">
+            <button className={styles.replyTo} onClick={() => jumpTo(replyToSeq)} title={t('跳到被回复的消息')}>
               <Icon name="reply" size={12} />
-              回复 #{replyToSeq}
+              {t('回复 #{n}', { n: replyToSeq })}
             </button>
           ) : null}
           <span className={styles.time}>{clock(m.createdAt)}</span>
           <span className={styles.spacer} />
           {m.content && <CopyFull text={m.content} />}
           {!isUser && m.model && (
-            <span className={styles.provenance} title={`生成时看到了 #${m.contextSeq} 及之前的消息`}>
+            <span className={styles.provenance} title={t('生成时看到了 #{n} 及之前的消息', { n: m.contextSeq })}>
               {m.model}
-              {m.contextSeq ? ` · 读至 #${m.contextSeq}` : ''}
+              {m.contextSeq ? ` · ${t('读至 #{n}', { n: m.contextSeq })}` : ''}
             </span>
           )}
           <span className={styles.seq}>#{m.seq}</span>
@@ -89,16 +92,17 @@ export const MessageItem = memo(function MessageItem({ message: m, members, grou
 function Body({ m, members, groupMemberIds, waitingFor }: { m: Message; members: Record<string, Member>; groupMemberIds: string[]; waitingFor?: string }) {
   const retry = useChat((s) => s.retry)
   const busy = useChat((s) => (s.activeId ? s.detail[s.activeId]?.busy : false))
+  const t = useT()
 
   if (m.authorKind === 'user') return <>{m.content && <UserText text={m.content} members={members} groupMemberIds={groupMemberIds} />}{!!m.attachments?.length && <AttachmentList attachments={m.attachments} />}</>
 
   if (m.status === 'pending') {
-    return <p className={styles.waiting}>{waitingFor ? `排队中，等 ${waitingFor} 说完` : '准备中'}</p>
+    return <p className={styles.waiting}>{waitingFor ? t('排队中，等 {name} 说完', { name: waitingFor }) : t('准备中')}</p>
   }
   if (m.status === 'streaming' && !m.content) {
     return (
-      <p className={styles.thinking} aria-label="正在思考">
-        正在读群记录
+      <p className={styles.thinking} aria-label={t('正在思考')}>
+        {t('正在读群记录')}
         <span className={styles.dots}>
           <i />
           <i />
@@ -112,19 +116,19 @@ function Body({ m, members, groupMemberIds, waitingFor }: { m: Message; members:
       {m.content && <AiText content={m.content} streaming={m.status === 'streaming'} />}
       {m.status === 'stopped' && (
         <div className={styles.note}>
-          <span>已中断</span>
+          <span>{t('已中断')}</span>
           <button className={styles.inlineAction} disabled={busy} onClick={() => retry(m.id)}>
             <Icon name="retry" size={13} />
-            重新生成
+            {t('重新生成')}
           </button>
         </div>
       )}
       {m.status === 'error' && (
         <div className={styles.error} role="alert">
-          <span className={styles.errorText}>{m.error || '调用失败'}</span>
+          <span className={styles.errorText}>{m.error ? translateError(m.error) : t('调用失败')}</span>
           <button className={styles.inlineAction} disabled={busy} onClick={() => retry(m.id)}>
             <Icon name="retry" size={13} />
-            重试
+            {t('重试')}
           </button>
         </div>
       )}
@@ -155,6 +159,7 @@ function UserText({ text, members, groupMemberIds }: { text: string; members: Re
 
 const AiText = memo(function AiText({ content, streaming }: { content: string; streaming: boolean }) {
   const jumpTo = useChat((s) => s.jumpTo)
+  const t = useT()
   const md = useMemo(() => linkifyRefs(content), [content])
   const onClick = (e: MouseEvent) => {
     const a = (e.target as HTMLElement).closest('a')
@@ -180,7 +185,7 @@ const AiText = memo(function AiText({ content, streaming }: { content: string; s
             if (isDemo && src) {
               let local = /^(data:image\/|blob:)/i.test(src)
               try { local ||= new URL(src, location.href).origin === location.origin } catch { /* 无效地址不渲染 */ }
-              if (!local) return <span>{alt ? `${alt}：` : ''}演示版不加载远程图片</span>
+              if (!local) return <span>{alt ? `${alt}: ` : ''}{t('演示版不加载远程图片')}</span>
             }
             return <img src={src} alt={alt} title={title} />
           },
@@ -207,6 +212,7 @@ const AiText = memo(function AiText({ content, streaming }: { content: string; s
 /** 消息悬停时在名字行右侧出现的"复制全文"。 */
 function CopyFull({ text }: { text: string }) {
   const [copied, setCopied] = useState(false)
+  const t = useT()
   useEffect(() => {
     if (!copied) return
     const t = setTimeout(() => setCopied(false), 1500)
@@ -216,12 +222,12 @@ function CopyFull({ text }: { text: string }) {
     <button
       className={styles.copyFull}
       data-copied={copied}
-      aria-label="复制全文"
-      title="复制全文"
+      aria-label={t('复制全文')}
+      title={t('复制全文')}
       onClick={() => void navigator.clipboard?.writeText(text).then(() => setCopied(true)).catch(() => {})}
     >
       <Icon name={copied ? 'check' : 'panel'} size={13} />
-      {copied ? '已复制' : ''}
+      {copied ? t('已复制') : ''}
     </button>
   )
 }

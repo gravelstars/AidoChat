@@ -8,6 +8,8 @@ import { Seal, UserSeal } from '../../components/Seal'
 import { Segmented } from '../../components/Segmented'
 import { isCustomSeal } from '../../lib/avatar'
 import { ProfileDraft, suggestSeal, validateUserProfile } from '../../lib/userProfile'
+import { languages, translateError } from '../../i18n'
+import { useT } from '../../i18n/react'
 import { useChat } from '../../state/store'
 import { ProviderDialog } from './ProviderDialog'
 import styles from './SettingsView.module.css'
@@ -26,12 +28,14 @@ const PAPERS: { id: PaperId; name: string; note: string; dark?: boolean }[] = [
 ]
 
 export function SettingsView() {
+  const t = useT()
   return (
     <section className={styles.page}>
       <header className={`${styles.head} drag`} data-edge="right">
-        <h1 className={styles.title}>设置</h1>
+        <h1 className={styles.title}>{t('设置')}</h1>
       </header>
       <div className={styles.body}>
+        <LanguageSection />
         <PaperSection />
         <SealSection />
         <ReadingSection />
@@ -54,12 +58,31 @@ function Section({ title, note, children }: { title: string; note?: string; chil
   )
 }
 
+// ---- 界面语言 ----
+
+function LanguageSection() {
+  const language = useChat((s) => s.language)
+  const setLanguage = useChat((s) => s.setLanguage)
+  const t = useT()
+  return (
+    <Section title={t('界面语言')} note={t('界面文案与新建的系统消息使用该语言；历史消息保持创建时的语言。')}>
+      <Segmented
+        label={t('界面语言')}
+        value={language}
+        onChange={setLanguage}
+        options={languages.map((locale) => ({ value: locale.code, label: locale.label }))}
+      />
+    </Section>
+  )
+}
+
 // ---- 纸张 ----
 
 function PaperSection() {
   const appearance = useChat((s) => s.appearance)
   const night = useChat((s) => s.night)
   const setAppearance = useChat((s) => s.setAppearance)
+  const t = useT()
 
   const pick = (p: (typeof PAPERS)[number]) => {
     if (p.dark) setAppearance({ nightPaper: p.id as DarkPaper, mode: appearance.mode === 'day' ? 'night' : appearance.mode })
@@ -67,23 +90,23 @@ function PaperSection() {
   }
 
   return (
-    <Section title="纸张" note="换一张纸，整个界面的颜色随之校准。白昼和夜间各选一张，跟随系统时自动切换。">
+    <Section title={t('纸张')} note={t('换一张纸，整个界面的颜色随之校准。白昼和夜间各选一张，跟随系统时自动切换。')}>
       <div className={styles.modeRow}>
         <Segmented
-          label="昼夜"
+          label={t('昼夜')}
           value={appearance.mode}
           onChange={(mode: Appearance['mode']) => setAppearance({ mode })}
           options={[
-            { value: 'day', label: '白昼' },
-            { value: 'night', label: '夜间' },
-            { value: 'system', label: '跟随系统' },
+            { value: 'day', label: t('白昼') },
+            { value: 'night', label: t('夜间') },
+            { value: 'system', label: t('跟随系统') },
           ]}
         />
       </div>
       {(['白昼', '夜间'] as const).map((label) => (
         <div key={label} className={styles.paperGroup}>
-          <h3 className={styles.paperGroupTitle}>{label}</h3>
-          <div className={styles.papers} role="radiogroup" aria-label={`${label}纸张`}>
+          <h3 className={styles.paperGroupTitle}>{t(label)}</h3>
+          <div className={styles.papers} role="radiogroup" aria-label={t('{label}纸张', { label: t(label) })}>
             {PAPERS.filter((p) => !!p.dark === (label === '夜间')).map((p) => {
               const chosen = p.dark ? appearance.nightPaper === p.id : appearance.paper === p.id
               const inUse = chosen && night === !!p.dark
@@ -92,10 +115,10 @@ function PaperSection() {
                   <PaperSwatch id={p.id} />
                   <span className={styles.paperText}>
                     <span className={styles.paperName}>
-                      {p.name}
-                      {inUse && <span className={styles.inUse}>使用中</span>}
+                      {t(p.name)}
+                      {inUse && <span className={styles.inUse}>{t('使用中')}</span>}
                     </span>
-                    <span className={styles.paperNote}>{p.note}</span>
+                    <span className={styles.paperNote}>{t(p.note)}</span>
                   </span>
                 </button>
               )
@@ -156,6 +179,7 @@ export function SealSection() {
   const [error, setError] = useState('')
   const [saved, setSaved] = useState(false)
   const [composing, setComposing] = useState(false)
+  const t = useT()
   const mounted = useRef(true)
   useEffect(() => { mounted.current = true; return () => { mounted.current = false } }, [])
   useEffect(() => {
@@ -178,35 +202,35 @@ export function SealSection() {
       model.current.accept({...profile, displayName:profile.displayName.trim()})
       setProfile(model.current.value); setSaved(true)
     } catch (e) {
-      if (mounted.current) setError(e instanceof Error ? e.message : String(e))
+      if (mounted.current) setError(translateError(e))
     } finally { if (mounted.current) setSaving(false) }
   }
   return (
-    <Section title="个人资料与私印" note="显示名用于聊天署名；短印文用于头像和确认纪要。两者独立保存，长姓名不会挤进印面。">
+    <Section title={t('个人资料与私印')} note={t('显示名用于聊天署名；短印文用于头像和确认纪要。两者独立保存，长姓名不会挤进印面。')}>
       <div className={styles.sealLayout}>
-        <div className={styles.sealStage}><UserSeal seal={draft} px={112} title={name.trim() || '你'} /></div>
+        <div className={styles.sealStage}><UserSeal seal={draft} px={112} title={name.trim() || t('你')} /></div>
         <div className={styles.sealForm}>
-          <Field label="显示名" hint="1–40 个字符，支持中英文和词间空格。历史发言跟随当前显示名。" error={errors.displayName}>
+          <Field label={t('显示名')} hint={t('1–40 个字符，支持中英文和词间空格。历史发言跟随当前显示名。')} error={errors.displayName ? translateError(errors.displayName) : undefined}>
             {(id) => <TextInput id={id} value={name} disabled={saving} onChange={(e) => { edit({...profile, displayName:e.target.value}) }} onCompositionStart={() => setComposing(true)} onCompositionEnd={() => setComposing(false)} />}
           </Field>
-          <Field label="印文" hint="1–4 个非空白字符。英文建议使用姓名首字母，例如 Sam Altman → SA。" error={errors.seal}>
-            {(id) => <TextInput id={id} value={text} className={styles.sealInput} disabled={saving} onChange={(e) => { edit({...profile, seal:{...profile.seal,text:e.target.value}}) }} onCompositionStart={() => setComposing(true)} onCompositionEnd={() => setComposing(false)} placeholder="我" />}
+          <Field label={t('印文')} hint={t('1–4 个非空白字符。英文建议使用姓名首字母，例如 Sam Altman → SA。')} error={errors.seal ? translateError(errors.seal) : undefined}>
+            {(id) => <TextInput id={id} value={text} className={styles.sealInput} disabled={saving} onChange={(e) => { edit({...profile, seal:{...profile.seal,text:e.target.value}}) }} onCompositionStart={() => setComposing(true)} onCompositionEnd={() => setComposing(false)} placeholder={t('我')} />}
           </Field>
-          <Button variant="quiet" size="sm" disabled={saving || !suggestion} onClick={() => { edit({...profile, seal:{...profile.seal,text:suggestion}}) }}>使用建议印文{suggestion ? `「${suggestion}」` : ''}</Button>
-          <Field label="印式">
-            {() => <Segmented label="印式" value={style} onChange={(next: UserSealData['style']) => { if (!saving) { edit({...profile, seal:{...profile.seal,style:next}}) } }} options={[{value:'baiwen',label:'白文',hint:'朱底纸色字，厚重'},{value:'zhuwen',label:'朱文',hint:'纸底朱色字，清秀'}]} />}
+          <Button variant="quiet" size="sm" disabled={saving || !suggestion} onClick={() => { edit({...profile, seal:{...profile.seal,text:suggestion}}) }}>{t('使用建议印文')}{suggestion ? `「${suggestion}」` : ''}</Button>
+          <Field label={t('印式')}>
+            {() => <Segmented label={t('印式')} value={style} onChange={(next: UserSealData['style']) => { if (!saving) { edit({...profile, seal:{...profile.seal,style:next}}) } }} options={[{value:'baiwen',label:t('白文'),hint:t('朱底纸色字，厚重')},{value:'zhuwen',label:t('朱文'),hint:t('纸底朱色字，清秀')}]} />}
           </Field>
           <div className={styles.sealUses}>
-            <span className={styles.use}><UserSeal seal={draft} px={32} title={name.trim() || '你'} /><span>聊天头像 · 32px</span></span>
-            <span className={styles.use}><UserSeal seal={draft} px={64} title={name.trim() || '你'} /><span>预览 · 64px</span></span>
-            <span className={styles.use}><span className={styles.useStamp}>{isCustomSeal(draft) ? <UserSeal seal={draft} px={32} /> : <span className={styles.useDing}>定</span>}</span><span>确认纪要时的印</span></span>
+            <span className={styles.use}><UserSeal seal={draft} px={32} title={name.trim() || t('你')} /><span>{t('聊天头像 · 32px')}</span></span>
+            <span className={styles.use}><UserSeal seal={draft} px={64} title={name.trim() || t('你')} /><span>{t('预览 · 64px')}</span></span>
+            <span className={styles.use}><span className={styles.useStamp}>{isCustomSeal(draft) ? <UserSeal seal={draft} px={32} /> : <span className={styles.useDing}>{t('定')}</span>}</span><span>{t('确认纪要时的印')}</span></span>
           </div>
-          {errors.seal && <p className={styles.sectionNote}>印文无效，预览暂保留已保存的私印。</p>}
+          {errors.seal && <p className={styles.sectionNote}>{t('印文无效，预览暂保留已保存的私印。')}</p>}
           {error && <p role="alert" className={styles.profileError}>{error}</p>}
-          {saved && <p role="status" className={styles.sectionNote}>个人资料已保存。</p>}
+          {saved && <p role="status" className={styles.sectionNote}>{t('个人资料已保存。')}</p>}
           <div className={styles.profileActions}>
-            <Button disabled={saving || pending || composing || Boolean(errors.displayName || errors.seal)} onClick={() => void save()}>{saving ? '正在保存…' : '保存个人资料'}</Button>
-            <Button variant="quiet" size="sm" disabled={saving} onClick={() => { edit({...profile, seal:{...DEFAULT_USER_SEAL}}) }}>恢复默认印文</Button>
+            <Button disabled={saving || pending || composing || Boolean(errors.displayName || errors.seal)} onClick={() => void save()}>{saving ? t('正在保存…') : t('保存个人资料')}</Button>
+            <Button variant="quiet" size="sm" disabled={saving} onClick={() => { edit({...profile, seal:{...DEFAULT_USER_SEAL}}) }}>{t('恢复默认印文')}</Button>
           </div>
         </div>
       </div>
@@ -221,32 +245,33 @@ function ReadingSection() {
   const appearance = useChat((s) => s.appearance)
   const setAppearance = useChat((s) => s.setAppearance)
   const seal = useChat((s) => s.userSeal)
+  const t = useT()
   return (
-    <Section title="阅读">
+    <Section title={t('阅读')}>
       <div className={styles.readingRow}>
-        <Field label="正文字号">
+        <Field label={t('正文字号')}>
           {() => (
             <Segmented
-              label="正文字号"
+              label={t('正文字号')}
               value={appearance.fontSize}
               onChange={(fontSize: Appearance['fontSize']) => setAppearance({ fontSize })}
               options={[
-                { value: 's', label: '小' },
-                { value: 'm', label: '中' },
-                { value: 'l', label: '大' },
+                { value: 's', label: t('小') },
+                { value: 'm', label: t('中') },
+                { value: 'l', label: t('大') },
               ]}
             />
           )}
         </Field>
-        <Field label="排版密度">
+        <Field label={t('排版密度')}>
           {() => (
             <Segmented
-              label="排版密度"
+              label={t('排版密度')}
               value={appearance.density}
               onChange={(density: Appearance['density']) => setAppearance({ density })}
               options={[
-                { value: 'comfortable', label: '舒适' },
-                { value: 'compact', label: '紧凑' },
+                { value: 'comfortable', label: t('舒适') },
+                { value: 'compact', label: t('紧凑') },
               ]}
             />
           )}
@@ -258,7 +283,7 @@ function ReadingSection() {
           <div>
             <div className={styles.sampleName} title={displayName}>{displayName}</div>
             <p className={styles.sampleText}>
-              <span className={styles.sampleAt}>@墨白</span> 正文行宽多少合适？
+              <span className={styles.sampleAt}>@墨白</span> {t('正文行宽多少合适？')}
             </p>
           </div>
         </div>
@@ -268,7 +293,7 @@ function ReadingSection() {
             <div className={styles.sampleName} style={{ color: 'var(--pigment-shiqing)' }}>
               墨白
             </div>
-            <p className={styles.sampleText}>中文正文每行 36 到 40 个字读起来最舒服，大约 720px。行距不要低于字号的 1.6 倍，否则段落会显得拥挤。</p>
+            <p className={styles.sampleText}>{t('中文正文每行 36 到 40 个字读起来最舒服，大约 720px。行距不要低于字号的 1.6 倍，否则段落会显得拥挤。')}</p>
           </div>
         </div>
       </div>
@@ -282,8 +307,9 @@ function ProvidersSection() {
   const providers = useChat((s) => s.providers)
   const [editing, setEditing] = useState<ProviderConfig | null>(null)
   const [creating, setCreating] = useState(false)
+  const t = useT()
   return (
-    <Section title="模型服务" note={isDemo ? "演示配置可自由编辑；所有回复均为预设内容，不接收 API Key。" : "成员通过这里配置的服务说话。API Key 只保存在系统钥匙串，界面不会回显。"}>
+    <Section title={t('模型服务')} note={isDemo ? t('演示配置可自由编辑；所有回复均为预设内容，不接收 API Key。') : t('成员通过这里配置的服务说话。API Key 只保存在系统钥匙串，界面不会回显。')}>
       <div className={styles.list}>
         {providers.map((p) => (
           <div key={p.id} className={styles.row}>
@@ -292,18 +318,18 @@ function ProvidersSection() {
               <p className={styles.rowMeta}>{p.baseUrl}</p>
             </div>
             <span className={`${styles.badge} ${isDemo ? '' : p.hasKey ? styles.ok : p.kind === 'anthropic' ? styles.bad : ''}`}>
-              {isDemo ? '预设回复' : p.hasKey ? '已保存 Key' : p.kind === 'openai' ? '未设 Key' : '缺少 Key'}
+              {isDemo ? t('预设回复') : p.hasKey ? t('已保存 Key') : p.kind === 'openai' ? t('未设 Key') : t('缺少 Key')}
             </span>
             <Button variant="quiet" size="sm" onClick={() => setEditing(p)}>
-              编辑
+              {t('编辑')}
             </Button>
           </div>
         ))}
-        {providers.length === 0 && <p className={styles.empty}>还没有配置任何模型服务。先新建一个，成员才能说话。</p>}
+        {providers.length === 0 && <p className={styles.empty}>{t('还没有配置任何模型服务。先新建一个，成员才能说话。')}</p>}
       </div>
       <div className={styles.actionsRow}>
         <Button variant="primary" icon="plus" onClick={() => setCreating(true)}>
-          新建服务
+          {t('新建服务')}
         </Button>
       </div>
       <ProviderDialog open={creating} onClose={() => setCreating(false)} />
@@ -319,17 +345,18 @@ function MemorySection() {
   const memory = useChat((s) => s.memory)
   const setMemoryConfig = useChat((s) => s.setMemoryConfig)
   const [model, setModel] = useState(memory.model)
+  const t = useT()
   useEffect(() => setModel(memory.model), [memory.model, memory.providerId])
   const commitModel = () => {
     if (model.trim() !== memory.model) void setMemoryConfig({ providerId: memory.providerId, model: model.trim() })
   }
   return (
-    <Section title="纪要整理" note={isDemo ? "演示版从预设回复提取建议，不会向服务发送讨论。" : "整理时，新的讨论会发送给这个服务。不选则用该群第一位成员的模型。"}>
+    <Section title={t('纪要整理')} note={isDemo ? t('演示版从预设回复提取建议，不会向服务发送讨论。') : t('整理时，新的讨论会发送给这个服务。不选则用该群第一位成员的模型。')}>
       <div className={styles.memoryRow}>
-        <Field label="整理服务">
+        <Field label={t('整理服务')}>
           {(id) => (
             <Select id={id} value={memory.providerId} onChange={(e) => void setMemoryConfig({ providerId: e.target.value, model: '' })}>
-              <option value="">用群成员的服务</option>
+              <option value="">{t('用群成员的服务')}</option>
               {providers.map((p) => (
                 <option key={p.id} value={p.id}>
                   {p.name}
@@ -338,8 +365,8 @@ function MemorySection() {
             </Select>
           )}
         </Field>
-        <Field label="整理模型" hint={memory.providerId ? '填写此服务实际可用的模型名；留空则沿用群成员的模型名。' : '当前沿用群成员的服务与模型；选择整理服务后可单独配置模型。'}>
-          {(id) => <TextInput id={id} value={memory.providerId ? model : ''} disabled={!memory.providerId} onChange={(e) => setModel(e.target.value)} onBlur={commitModel} placeholder="例如：deepseek-chat" />}
+        <Field label={t('整理模型')} hint={memory.providerId ? t('填写此服务实际可用的模型名；留空则沿用群成员的模型名。') : t('当前沿用群成员的服务与模型；选择整理服务后可单独配置模型。')}>
+          {(id) => <TextInput id={id} value={memory.providerId ? model : ''} disabled={!memory.providerId} onChange={(e) => setModel(e.target.value)} onBlur={commitModel} placeholder="deepseek-chat" />}
         </Field>
       </div>
     </Section>
@@ -351,22 +378,23 @@ function MemorySection() {
 function DataSection() {
   const [dir, setDir] = useState('')
   const [error, setError] = useState('')
+  const t = useT()
   useEffect(() => {
     void backend.dataDir().then(setDir).catch(() => setDir(''))
   }, [])
   const openDir = () => {
     setError('')
-    void backend.openDataDir().catch((e) => setError(e instanceof Error ? e.message : String(e)))
+    void backend.openDataDir().catch((e) => setError(translateError(e)))
   }
-  if (isDemo) return <Section title="数据" note="演示数据只保存在当前浏览器的本地存储中。使用顶部「重置演示」恢复示例；浏览器清理站点数据也会删除这些记录。"><p>模型连接和文件目录功能请使用桌面版。</p></Section>
+  if (isDemo) return <Section title={t('数据')} note={t('演示数据只保存在当前浏览器的本地存储中。使用顶部「重置演示」恢复示例；浏览器清理站点数据也会删除这些记录。')}><p>{t('模型连接和文件目录功能请使用桌面版。')}</p></Section>
   return (
-    <Section title="数据" note="所有群聊、纪要和设置都保存在本机这个目录里。">
+    <Section title={t('数据')} note={t('所有群聊、纪要和设置都保存在本机这个目录里。')}>
       <div className={styles.pathRow}>
         <span className={styles.pathValue} title={dir}>
-          {dir || '读取中…'}
+          {dir || t('读取中…')}
         </span>
         <Button variant="ghost" onClick={openDir}>
-          在文件管理器中打开
+          {t('在文件管理器中打开')}
         </Button>
       </div>
       {error && <p className={`${styles.testLine} ${styles.bad}`}>{error}</p>}
@@ -378,12 +406,13 @@ function DataSection() {
 
 function AboutSection() {
   const version = useChat((s) => s.version)
+  const t = useT()
   return (
-    <Section title="关于" note="AidoChat · 本地运行的 AI 群聊桌面应用。">
+    <Section title={t('关于')} note={t('AidoChat · 本地运行的 AI 群聊桌面应用。')}>
       <p className={styles.aboutText}>
-        <span className={styles.version}>版本 {version || '—'}</span>
+        <span className={styles.version}>{t('版本 {version}', { version: version || '—' })}</span>
         <br />
-        {isDemo ? "这是浏览器演示版，使用预设回复，不会调用模型。真实模型连接、系统钥匙串和本机目录功能请使用桌面版。" : "你的数据保存在本机。调用云端模型时，被 @ 成员的上下文（群规则、群纪要、近期聊天记录）会发送给该成员配置的模型服务；整理纪要时，新的讨论会发送给「整理模型」所在的服务。"}
+        {isDemo ? t('这是浏览器演示版，使用预设回复，不会调用模型。真实模型连接、系统钥匙串和本机目录功能请使用桌面版。') : t('你的数据保存在本机。调用云端模型时，被 @ 成员的上下文（群规则、群纪要、近期聊天记录）会发送给该成员配置的模型服务；整理纪要时，新的讨论会发送给「整理模型」所在的服务。')}
       </p>
     </Section>
   )

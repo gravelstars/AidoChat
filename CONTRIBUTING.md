@@ -53,4 +53,4 @@ node scripts/verify-demo.mjs http://127.0.0.1:4173/AidoChat/
 
 保持提交聚焦：一个提交解决一个问题，说明为什么改，而不是逐行复述。界面类改动请附宣纸和夜读截图，并注明哪些平台/交互尚未真机验证。
 
-[在线演示](https://gravelstars.github.io/AidoChat/) · [使用手册](docs/USER_GUIDE.md) · [构建说明](build/README.md) · [第三方许可](THIRD_PARTY_NOTICES.md)
+[在线演示](https://gravelstars.github.io/AidoChat/) · [使用手册](docs/USER_GUIDE.zh.md) · [构建说明](build/README.md) · [第三方许可](THIRD_PARTY_NOTICES.md)

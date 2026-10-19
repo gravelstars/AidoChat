@@ -1,10 +1,10 @@
 # Third-party notices
 
-AidoChat's [Apache-2.0 license](LICENSE) applies to its own material. Third-party software, fonts, PDF resources, and native components retain their original licenses and copyright notices. [NOTICE](NOTICE) records `Copyright 2026 gravelstars` for the project's own material. AidoChat 0.1.3 binary installers are published alongside the source and browser demo on GitHub Releases.
+AidoChat's [Apache-2.0 license](LICENSE) applies to its own material. Third-party software, fonts, PDF resources, and native components retain their original licenses and copyright notices. [NOTICE](NOTICE) records `Copyright 2026 gravelstars` for the project's own material. AidoChat 0.1.4 binary installers are published alongside the source and browser demo on GitHub Releases.
 
 ## Owner decision — 2026-10-17
 
-The project owner reviewed the findings in this file and the machine-generated [review-required report](docs/licenses/review-required.json) and **accepts them for the current distribution scope**: source, the browser demo, and the binary installers published in GitHub Releases. This records the owner's decision for the 0.1.3 release; it is not a legal opinion and does not claim that every dependency is Apache-2.0 compatible. The original findings remain disclosed below.
+The project owner reviewed the findings in this file and the machine-generated [review-required report](docs/licenses/review-required.json) and **accepts them for the current distribution scope**: source, the browser demo, and the binary installers published in GitHub Releases. This records the owner's decision for the 0.1.4 release; it is not a legal opinion and does not claim that every dependency is Apache-2.0 compatible. The original findings remain disclosed below.
 
 The dependency lists below are **machine-generated**, rather than manually selected direct dependencies:
 

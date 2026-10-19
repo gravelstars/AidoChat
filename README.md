@@ -1,6 +1,6 @@
-# AidoChat
+<p align="center"><b>English</b> · <a href="README.zh.md">简体中文</a></p>
 
-<p align="center"><a href="README.en.md">English</a> · <b>简体中文</b></p>
+# AidoChat
 
 <p align="center">
   <a href="https://github.com/gravelstars/AidoChat">
@@ -12,96 +12,97 @@
 </p>
 
 <p align="center">
-  <strong>一个有温度的有趣的多AI群聊本地应用，开源，免费。</strong>
+  <strong>A warm and engaging local application for multi-AI group chats—open-source and free.</strong>
 </p>
 
 <p align="center">
-  <img alt="版本 0.1.3" src="docs/assets/badge-version.svg">
+  <img alt="Version 0.1.4" src="docs/assets/badge-version.svg">
   <img alt="Apache-2.0" src="docs/assets/badge-license.svg">
   <img alt="Windows · macOS · Linux" src="docs/assets/badge-platforms.svg">
 </p>
 
 <p align="center">
-  <a href="https://github.com/gravelstars/AidoChat/releases/latest"><b>下载安装</b></a> ·
-  <a href="https://gravelstars.github.io/AidoChat/"><b>在线演示</b></a> ·
-  <a href="#快速开始">快速开始</a> ·
-  <a href="docs/USER_GUIDE.md">使用手册</a> ·
-  <a href="build/README.md">从源码构建</a>
+  <a href="https://github.com/gravelstars/AidoChat/releases/latest"><b>Download</b></a> ·
+  <a href="https://gravelstars.github.io/AidoChat/"><b>Live demo</b></a> ·
+  <a href="#quick-start">Quick start</a> ·
+  <a href="docs/USER_GUIDE.md">User guide</a> ·
+  <a href="build/README.md">Build from source</a>
 </p>
 
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="docs/assets/main-night.png">
-    <img src="docs/assets/main-day.png" alt="AidoChat 三栏界面：群列表、聊天和有来源的群纪要" width="920">
+    <img src="docs/assets/main-day.png" alt="AidoChat with group list, conversation, and source-linked shared notes" width="920">
   </picture>
 </p>
 
-<p align="center"><sub>界面截图来自浏览器演示，使用虚构数据和预设回复。</sub></p>
+<p align="center"><sub>Screenshots use fictional data and preset replies from the browser demo.</sub></p>
 
-## 为什么是 AidoChat
+## Why AidoChat
 
-- **群聊，而不是单聊**：多位 AI 成员各有角色和模型，在同一条时间线上讨论。
-- **建议与定论分开**：AI 只能提出建议；只有你盖章的条目才算确认，每条都有真实来源。
-- **本地优先**：聊天、附件和纪要保存在本机 SQLite；API Key 存在系统凭证存储。
-- **服务由你选择**：OpenAI 兼容接口、Anthropic，或本地 Ollama。
+- **A group, not a single chat**: multiple AI members with their own roles and models share one timeline.
+- **Proposals stay separate from decisions**: AI can only propose; only you can stamp a source-linked note as confirmed.
+- **Local-first**: conversations, attachments, and notes live in local SQLite; API keys stay in the system credential store.
+- **Your services, your choice**: OpenAI-compatible APIs, Anthropic, or a local Ollama model.
+- **Bilingual interface**: Chinese by default, English optional. Switch anytime in **Settings → Interface language**.
 
-## 下载安装
+## Download
 
-选择你的系统，直接下载 **0.1.3** 安装包：
+Choose your platform and download **0.1.4**:
 
-| 系统 | 下载 | 安装 |
+| Platform | Download | Install |
 | --- | --- | --- |
-| macOS 12+（Intel / Apple Silicon） | [AidoChat.dmg](https://github.com/gravelstars/AidoChat/releases/download/v0.1.3/AidoChat.dmg) | 打开后把 AidoChat.app 拖入「应用程序」 |
-| Windows 10 / 11（x64） | [AidoChat-windows-setup.exe](https://github.com/gravelstars/AidoChat/releases/download/v0.1.3/AidoChat-windows-setup.exe) | 运行安装程序；需要 WebView2（安装器会引导） |
-| Ubuntu 24.04（amd64） | [AidoChat.deb](https://github.com/gravelstars/AidoChat/releases/download/v0.1.3/AidoChat.deb) | `sudo apt install ./AidoChat.deb` |
-| 其他 Linux | [AidoChat.AppImage](https://github.com/gravelstars/AidoChat/releases/download/v0.1.3/AidoChat.AppImage) | `chmod +x` 后运行；需 GTK4 / WebKitGTK 6.0 |
+| macOS 12+ (Intel / Apple Silicon) | [AidoChat.dmg](https://github.com/gravelstars/AidoChat/releases/download/v0.1.4/AidoChat.dmg) | Drag AidoChat.app into Applications |
+| Windows 10 / 11 (x64) | [AidoChat-windows-setup.exe](https://github.com/gravelstars/AidoChat/releases/download/v0.1.4/AidoChat-windows-setup.exe) | Run the installer; WebView2 is required (the installer guides you) |
+| Ubuntu 24.04 (amd64) | [AidoChat.deb](https://github.com/gravelstars/AidoChat/releases/download/v0.1.4/AidoChat.deb) | `sudo apt install ./AidoChat.deb` |
+| Other Linux | [AidoChat.AppImage](https://github.com/gravelstars/AidoChat/releases/download/v0.1.4/AidoChat.AppImage) | `chmod +x` and run; requires GTK4 / WebKitGTK 6.0 |
 
-[全部版本与校验值](https://github.com/gravelstars/AidoChat/releases) · 不确定选哪个：Windows 选 setup.exe，macOS 选 dmg，Ubuntu 选 deb。
+[All releases and checksums](https://github.com/gravelstars/AidoChat/releases) · Not sure which one? Windows: setup.exe, macOS: dmg, Ubuntu: deb.
 
-> macOS 安装包为 ad-hoc 签名，Windows 未做发布签名。首次打开可能需要在系统安全设置中确认来源；不要在不明来源处下载同名文件。安装或升级前请先完全退出正在运行的 AidoChat（Windows 安装器会检测并提示）。
+> macOS builds are ad-hoc signed and Windows builds are unsigned. Your system may ask you to confirm the source on first launch. Do not run files with the same name from untrusted sources. Quit any running AidoChat instance before installing or upgrading; the Windows installer detects and reports it.
 
-## 功能
-
-<p align="center">
-  <img src="docs/assets/feature-conversation.png" alt="点名两位成员并选择依次回复" width="760">
-</p>
-
-### 点名，让讨论有顺序
-用 `@` 点名单人、多人或所有人，选择依次或同时回复。随时停止，失败或中断的回复可以原地重新生成。
+## Features
 
 <p align="center">
-  <img src="docs/assets/feature-memory-comparison.png" alt="AI 建议、用户提出和盖章确认三种笔迹" width="840"><br>
-  <img src="docs/assets/stamp.gif" alt="点击盖章时印落下并散开墨晕" width="240">
+  <img src="docs/assets/feature-conversation.png" alt="Mention two members and choose sequential replies" width="760">
 </p>
 
-### 建议与定论，留下不同笔迹
-AI 建议是虚线铅笔，你提出的条目是实线墨笔，盖章确认后变成朱线。来源编号可以回到原消息，AI 不能替你确认。
+### Give the discussion an order
+Mention one member, several, or everyone; choose sequential or parallel replies. Stop at any time, and retry a failed or interrupted reply in place.
 
 <p align="center">
-  <img src="docs/assets/feature-papers.png" alt="宣纸、素笺、麻纸、青笺、夜读、乌金六种纸" width="760">
+  <img src="docs/assets/feature-memory-comparison.png" alt="Dashed AI proposals, solid user proposals, and stamped decisions" width="840"><br>
+  <img src="docs/assets/stamp.gif" alt="Clicking to stamp: the seal lands and ink spreads" width="240">
 </p>
 
-### 六种纸，一方私印
-宣纸、素笺、麻纸、青笺、夜读、乌金六种纸面，配合阅读字号、密度、完整显示名与独立短印文。成员头像可以在群内单独设置。
+### Proposals and decisions look different
+AI proposals use a dashed pencil line, your proposals use a solid ink line, and stamped decisions turn cinnabar. Source links jump back to the original message; AI cannot confirm on your behalf.
 
 <p align="center">
-  <img src="docs/assets/feature-privacy.png" alt="演示版服务设置不会接收 Key 或连接真实模型" width="560">
+  <img src="docs/assets/feature-papers.png" alt="Six papers: Xuan, Su, Ma, Qing, Ye, and Wujin" width="760">
 </p>
 
-### 数据在本地，服务由你决定
-桌面版使用本机 SQLite 和系统凭证存储。图片、TXT/Markdown/PDF、Word/PowerPoint/Excel、CSV/JSON、代码和日志可以随消息导入；选中的聊天可以导出为分页 PNG。
+### Six papers, one personal seal
+Choose among six paper themes, reading sizes and density, a full display name, and a separate short seal. Member avatars can differ per group.
+
+<p align="center">
+  <img src="docs/assets/feature-privacy.png" alt="Demo service settings never accept a Key or contact a real model" width="560">
+</p>
+
+### Local records, services you choose
+The desktop app uses local SQLite and the system credential store. Attach images, TXT/Markdown/PDF, Word/PowerPoint/Excel, CSV/JSON, code, and log files, and export a selected message range as paginated PNGs.
 
 
-## 快速开始
+## Quick start
 
-1. **在线演示**：打开 [gravelstars.github.io/AidoChat](https://gravelstars.github.io/AidoChat/)，无需 Key。回复是预设文案，数据只保存在当前浏览器。
-2. **下载桌面版**：从 [Releases](https://github.com/gravelstars/AidoChat/releases/latest) 选择对应系统的安装包；也可以按 [构建说明](build/README.md) 从源码构建。
-3. **配置服务**：在设置或新建成员表单里填写服务地址、Key 和实际可用的模型名。
-4. **开始讨论**：创建群、加入成员，输入 `@墨白` 或 `@所有人`。
+1. **Live demo**: open [gravelstars.github.io/AidoChat](https://gravelstars.github.io/AidoChat/) without a Key. Replies are preset and data stays in the current browser.
+2. **Download the desktop app**: pick the installer for your platform from [Releases](https://github.com/gravelstars/AidoChat/releases/latest), or follow the [build instructions](build/README.md) to build from source.
+3. **Configure a service**: add a base URL, Key, and an available model name in Settings or the member form.
+4. **Start a discussion**: create a group, add members, and type `@墨白` or `@所有人`.
 
-## 从源码构建
+## Build from source
 
-需要 Go（版本见 `go.mod`）、Node.js 24 和对应平台的 Wails 构建环境。
+Requires Go (version in `go.mod`), Node.js 24, and the Wails build environment for your platform.
 
 ```sh
 go install github.com/wailsapp/wails/v3/cmd/wails3@v3.0.0-beta.29
@@ -109,7 +110,7 @@ cd frontend && npm ci && cd ..
 wails3 task package
 ```
 
-浏览器开发预览：
+Browser development preview:
 
 ```sh
 cd frontend
@@ -117,17 +118,17 @@ npm ci
 npm run dev
 ```
 
-更多说明见 [build/README.md](build/README.md) 和 [贡献指南](CONTRIBUTING.md)。
+See [build/README.md](build/README.md) and [CONTRIBUTING.md](CONTRIBUTING.md).
 
 > [!WARNING]
-> 数据保存在本机。调用云端模型时，被 @ 成员的上下文（群规则、群纪要、近期聊天记录和所需附件内容）会发送给该成员配置的模型服务。整理纪要时，新的讨论会发送给“整理模型”所在的服务。
+> Data is stored locally. When you call a cloud model, the mentioned member's context—group rules, shared notes, recent messages, and required attachment content—is sent to that member's configured model service. When notes are organized, new discussion is sent to the service configured for that task.
 
-## 项目状态
+## Status
 
-0.1.3 桌面主体可运行，macOS、Windows 和 Linux 安装包已发布到 [Releases](https://github.com/gravelstars/AidoChat/releases/latest)。浏览器演示使用虚构数据和预设回复。手机端暂不支持；尚无账号、云同步、联网工具、扫描 PDF OCR 或视频附件。Windows/Linux 安装交互仍需更广泛的真机验收。
+0.1.4 runs on the desktop, and macOS, Windows, and Linux installers are published on [Releases](https://github.com/gravelstars/AidoChat/releases/latest). The browser demo uses fictional data and preset replies. Mobile, accounts, cloud sync, web tools, scanned-PDF OCR, and video attachments are not supported. Windows/Linux installation still needs broader real-machine testing.
 
-## 参与贡献
+## Contributing
 
-问题反馈和建议请通过 [Issues](https://github.com/gravelstars/AidoChat/issues) 提交。开发约定与自检命令见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+Report bugs and ideas through [Issues](https://github.com/gravelstars/AidoChat/issues). Development conventions and checks are in [CONTRIBUTING.md](CONTRIBUTING.md).
 
-[参与贡献](CONTRIBUTING.md) · [Apache-2.0](LICENSE)（第三方内容另循各自许可；[第三方声明](THIRD_PARTY_NOTICES.md)）
+[Contribute](CONTRIBUTING.md) · [Apache-2.0](LICENSE) (third-party content retains its own terms; [third-party notices](THIRD_PARTY_NOTICES.md))

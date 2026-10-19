@@ -1,5 +1,6 @@
 import { backend } from '../../backend'
 import { Icon } from '../../components/Icon'
+import { useT } from '../../i18n/react'
 import { useChat } from '../../state/store'
 import styles from './WindowControls.module.css'
 
@@ -9,16 +10,17 @@ import styles from './WindowControls.module.css'
  */
 export function WindowControls() {
   const platform = useChat((s) => s.platform)
+  const t = useT()
   if (platform === 'mac') return null
   return (
     <div className={styles.controls}>
-      <button className={styles.btn} onClick={backend.window.minimise} aria-label="最小化">
+      <button className={styles.btn} onClick={backend.window.minimise} aria-label={t('最小化')}>
         <Icon name="minimise" size={14} />
       </button>
-      <button className={styles.btn} onClick={backend.window.toggleMaximise} aria-label="最大化">
+      <button className={styles.btn} onClick={backend.window.toggleMaximise} aria-label={t('最大化')}>
         <Icon name="maximise" size={13} />
       </button>
-      <button className={`${styles.btn} ${styles.close}`} onClick={backend.window.close} aria-label="关闭">
+      <button className={`${styles.btn} ${styles.close}`} onClick={backend.window.close} aria-label={t('关闭')}>
         <Icon name="close" size={14} />
       </button>
     </div>

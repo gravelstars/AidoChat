@@ -9,6 +9,7 @@ import { GroupSettingsDialog } from './GroupSettingsDialog'
 import { useChat, type GroupState } from '../../state/store'
 import { shareEligible } from '../../lib/share/snapshot'
 import { ShareExportDialog } from '../share/ShareExportDialog'
+import { useT } from '../../i18n/react'
 import { Composer, type ComposerHandle } from './Composer'
 import { MessageList } from './MessageList'
 import styles from './ChatView.module.css'
@@ -25,6 +26,7 @@ export function ChatView({ state, members }: { state: GroupState; members: Recor
   const [sharing, setSharing] = useState(false)
   const canShare = state.messages.some(shareEligible)
   const closeCard = useCallback(() => setCardFor(null), [])
+  const t = useT()
 
   return (
     <section className={styles.chat} aria-label={group.title}>
@@ -65,20 +67,20 @@ export function ChatView({ state, members }: { state: GroupState; members: Recor
               </span>
             )
           })}
-          <Button variant="quiet" size="sm" icon="members" aria-label="群管理" title="群管理" onClick={() => setManaging(true)} />
+          <Button variant="quiet" size="sm" icon="members" aria-label={t('群管理')} title={t('群管理')} onClick={() => setManaging(true)} />
         </div>
         <Button
           variant="quiet"
           size="sm"
           onClick={() => setSharing(true)}
           disabled={!canShare}
-          title={canShare ? '把选中的群聊保存为图片' : '还没有可分享的消息'}
+          title={canShare ? t('把选中的群聊保存为图片') : t('还没有可分享的消息')}
         >
-          分享图片
+          {t('分享图片')}
         </Button>
         {!memoryOpen && (
-          <Button variant="quiet" size="sm" icon="panel" onClick={() => toggleMemory(true)} title="展开纪要">
-            纪要{pendingCount > 0 && <span className={styles.badge}>{pendingCount}</span>}
+          <Button variant="quiet" size="sm" icon="panel" onClick={() => toggleMemory(true)} title={t('展开纪要')}>
+            {t('纪要')}{pendingCount > 0 && <span className={styles.badge}>{pendingCount}</span>}
           </Button>
         )}
       </header>

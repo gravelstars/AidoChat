@@ -6,6 +6,8 @@ import { Field, TextArea, TextInput } from '../../components/Field'
 import { Seal } from '../../components/Seal'
 import { Segmented } from '../../components/Segmented'
 import { avatarOf } from '../../lib/avatar'
+import { translateError } from '../../i18n'
+import { useT } from '../../i18n/react'
 import { useChat } from '../../state/store'
 import styles from './GroupSettingsDialog.module.css'
 
@@ -25,6 +27,7 @@ export function GroupSettingsDialog({ open, onClose, group }: { open: boolean; o
   const [ids, setIds] = useState<string[]>(group.memberIds)
   const [error, setError] = useState('')
   const [submitting, setSubmitting] = useState(false)
+  const t = useT()
 
   useEffect(() => {
     if (!open) return
@@ -47,11 +50,11 @@ export function GroupSettingsDialog({ open, onClose, group }: { open: boolean; o
 
   const submit = async () => {
     if (!title.trim()) {
-      setError('群名不能为空')
+      setError(t('群名不能为空'))
       return
     }
     if (ids.length === 0) {
-      setError('群里至少要有一位成员')
+      setError(t('群里至少要有一位成员'))
       return
     }
     setSubmitting(true)
@@ -59,7 +62,7 @@ export function GroupSettingsDialog({ open, onClose, group }: { open: boolean; o
       await updateGroup({ id: group.id, title: title.trim(), topic: topic.trim(), defaultMode: mode, memberIds: ids })
       onClose()
     } catch (e) {
-      setError(e instanceof Error ? e.message : String(e))
+      setError(translateError(e))
     } finally {
       setSubmitting(false)
     }
@@ -69,41 +72,41 @@ export function GroupSettingsDialog({ open, onClose, group }: { open: boolean; o
     <Dialog
       open={open}
       onClose={onClose}
-      title="群设置"
-      description="改动会在群里留下一条系统通知，成员也会看到。"
+      title={t('群设置')}
+      description={t('改动会在群里留下一条系统通知，成员也会看到。')}
       width={560}
       footer={
         <>
           <Button variant="ghost" onClick={onClose}>
-            取消
+            {t('取消')}
           </Button>
           <Button variant="primary" onClick={() => void submit()} disabled={submitting || busy}>
-            保存
+            {t('保存')}
           </Button>
         </>
       }
     >
-      {busy && <p className={styles.note}>有成员正在回复，暂时不能调整成员；可以先停止本轮。</p>}
-      <Field label="群名">
+      {busy && <p className={styles.note}>{t('有成员正在回复，暂时不能调整成员；可以先停止本轮。')}</p>}
+      <Field label={t('群名')}>
         {(id) => <TextInput id={id} value={title} onChange={(e) => setTitle(e.target.value)} maxLength={40} />}
       </Field>
-      <Field label="主题" hint="会写进每位成员的 system prompt。">
+      <Field label={t('主题')} hint={t('会写进每位成员的 system prompt。')}>
         {(id) => <TextArea id={id} value={topic} onChange={(e) => setTopic(e.target.value)} rows={2} maxLength={200} />}
       </Field>
-      <Field label="默认回复方式" hint="发送时仍可临时切换。">
+      <Field label={t('默认回复方式')} hint={t('发送时仍可临时切换。')}>
         {() => (
           <Segmented
-            label="默认回复方式"
+            label={t('默认回复方式')}
             value={mode}
             onChange={setMode}
             options={[
-              { value: 'serial', label: '依次回复' },
-              { value: 'parallel', label: '同时回复' },
+              { value: 'serial', label: t('依次回复') },
+              { value: 'parallel', label: t('同时回复') },
             ]}
           />
         )}
       </Field>
-      <Field label="成员" error={error} hint="顺序就是 @所有人 时的回复顺序。">
+      <Field label={t('成员')} error={error} hint={t('顺序就是 @所有人 时的回复顺序。')}>
         {() => (
           <>
             <div className={styles.roster}>
@@ -116,15 +119,15 @@ export function GroupSettingsDialog({ open, onClose, group }: { open: boolean; o
                     <Seal avatar={avatarOf(m, group)} size="sm" />
                     <span className={styles.memberName}>{m.name}</span>
                     <span className={styles.move}>
-                      <Button variant="quiet" size="sm" aria-label="上移" disabled={busy || i === 0} onClick={() => move(i, -1)}>
+                      <Button variant="quiet" size="sm" aria-label={t('上移')} disabled={busy || i === 0} onClick={() => move(i, -1)}>
                         ↑
                       </Button>
-                      <Button variant="quiet" size="sm" aria-label="下移" disabled={busy || i === ids.length - 1} onClick={() => move(i, 1)}>
+                      <Button variant="quiet" size="sm" aria-label={t('下移')} disabled={busy || i === ids.length - 1} onClick={() => move(i, 1)}>
                         ↓
                       </Button>
                     </span>
                     <Button variant="quiet" size="sm" disabled={busy} onClick={() => setIds(ids.filter((x) => x !== mid))}>
-                      移出
+                      {t('移出')}
                     </Button>
                   </div>
                 )

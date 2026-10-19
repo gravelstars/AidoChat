@@ -6,6 +6,7 @@ import { Icon, type IconName } from '../../components/Icon'
 import { Seal } from '../../components/Seal'
 import { avatarOf } from '../../lib/avatar'
 import { relativeDay } from '../../lib/format'
+import { useT } from '../../i18n/react'
 import { useChat } from '../../state/store'
 import { CreateGroupDialog } from './CreateGroupDialog'
 import styles from './Rail.module.css'
@@ -27,6 +28,7 @@ export function Rail() {
   const [menuFor, setMenuFor] = useState<string | null>(null)
   const [confirmDelete, setConfirmDelete] = useState<string | null>(null)
   const [archivedOpen, setArchivedOpen] = useState(false)
+  const t = useT()
 
   const active = groups.filter((g) => !g.archived)
   const archived = groups.filter((g) => g.archived)
@@ -54,16 +56,16 @@ export function Rail() {
           <span className={styles.groupText}>
             <span className={styles.groupRow}>
               <span className={styles.groupTitle}>{g.title}</span>
-              <span className={styles.groupTime}>{busy ? <span className={styles.live} aria-label="回复中" /> : relativeDay(g.updatedAt)}</span>
+              <span className={styles.groupTime}>{busy ? <span className={styles.live} aria-label={t('回复中')} /> : relativeDay(g.updatedAt)}</span>
             </span>
-            <span className={styles.preview}>{last ? `${who ? who + '：' : ''}${last.preview}` : '还没有消息'}</span>
+            <span className={styles.preview}>{last ? `${who ? who + '：' : ''}${last.preview}` : t('还没有消息')}</span>
           </span>
         </button>
         <Button
           variant="quiet"
           size="sm"
           className={styles.menuBtn}
-          aria-label={`管理「${g.title}」`}
+          aria-label={t('管理「{title}」', { title: g.title })}
           aria-expanded={menuFor === g.id}
           onClick={() => setMenuFor((c) => (c === g.id ? null : g.id))}
         >
@@ -81,7 +83,7 @@ export function Rail() {
                   void archiveGroup(g.id, !isArchived).catch(() => {})
                 }}
               >
-                {isArchived ? '取消归档' : '归档'}
+                {isArchived ? t('取消归档') : t('归档')}
               </button>
               <button
                 className={`${styles.menuItem} ${confirming ? styles.danger : ''}`}
@@ -96,7 +98,7 @@ export function Rail() {
                   void deleteGroup(g.id).catch(() => {})
                 }}
               >
-                {confirming ? '再点一次确认删除' : '删除群聊'}
+                {confirming ? t('再点一次确认删除') : t('删除群聊')}
               </button>
             </div>
           </>
@@ -106,15 +108,15 @@ export function Rail() {
   }
 
   return (
-    <nav className={styles.rail} aria-label="群聊列表">
+    <nav className={styles.rail} aria-label={t('群聊列表')}>
       <div className={`${styles.top} drag`}>
         <img className={styles.mark} src={appIcon} alt="" aria-hidden="true" />
         <span className={styles.wordmark}>AidoChat</span>
       </div>
 
       <div className={styles.sectionHead}>
-        <span>群聊</span>
-        <Button variant="quiet" size="sm" icon="plus" aria-label="新建群聊" title="新建群聊" onClick={() => setCreating(true)} />
+        <span>{t('群聊')}</span>
+        <Button variant="quiet" size="sm" icon="plus" aria-label={t('新建群聊')} title={t('新建群聊')} onClick={() => setCreating(true)} />
       </div>
 
       <ul className={styles.list}>
@@ -125,22 +127,22 @@ export function Rail() {
         <div className={styles.archive}>
           <button className={styles.archiveHead} aria-expanded={archivedOpen} onClick={() => setArchivedOpen((o) => !o)}>
             <Icon name="arrowDown" size={14} style={{ transform: archivedOpen ? undefined : 'rotate(-90deg)' }} />
-            已归档 {archived.length}
+            {t('已归档 {n}', { n: archived.length })}
           </button>
           {archivedOpen && <ul className={styles.list}>{archived.map((g) => row(g, true))}</ul>}
         </div>
       )}
 
       <div className={styles.bottom}>
-        <NavItem icon="members" label="成员" active={view === 'members'} onClick={() => setView('members')} />
-        <NavItem icon="settings" label="设置" active={view === 'settings'} onClick={() => setView('settings')} />
+        <NavItem icon="members" label={t('成员')} active={view === 'members'} onClick={() => setView('members')} />
+        <NavItem icon="settings" label={t('设置')} active={view === 'settings'} onClick={() => setView('settings')} />
         <span className={styles.spacer} />
         <Button
           variant="quiet"
           size="sm"
           icon={night ? 'sun' : 'moon'}
-          aria-label="切换昼夜"
-          title={night ? '切换到白昼' : '切换到夜间'}
+          aria-label={t('切换昼夜')}
+          title={night ? t('切换到白昼') : t('切换到夜间')}
           onClick={toggleNight}
         />
       </div>

@@ -6,6 +6,8 @@ import { Field, TextInput } from '../../components/Field'
 import { Seal } from '../../components/Seal'
 import { Segmented } from '../../components/Segmented'
 import { PIGMENTS, avatarOf } from '../../lib/avatar'
+import { translateError } from '../../i18n'
+import { useT } from '../../i18n/react'
 import { useChat } from '../../state/store'
 import styles from './AvatarEditor.module.css'
 
@@ -33,6 +35,7 @@ export function AvatarEditor({ open, onClose, member, scope }: { open: boolean; 
   const [busy, setBusy] = useState(false)
   const [dragging, setDragging] = useState(false)
   const input = useRef<HTMLInputElement>(null)
+  const t = useT()
 
   useEffect(() => {
     if (!open) return
@@ -48,7 +51,7 @@ export function AvatarEditor({ open, onClose, member, scope }: { open: boolean; 
   const upload = async (file: File | undefined) => {
     if (!file) return
     if (!ACCEPT.split(',').includes(file.type)) {
-      setError('只支持 PNG、JPG、GIF、WebP')
+      setError(t('只支持 PNG、JPG、GIF、WebP'))
       return
     }
     setError('')
@@ -57,7 +60,7 @@ export function AvatarEditor({ open, onClose, member, scope }: { open: boolean; 
       setImage(await backend.uploadAvatar(file))
       setMode('image')
     } catch (e) {
-      setError(e instanceof Error ? e.message : String(e))
+      setError(translateError(e))
     } finally {
       setBusy(false)
     }
@@ -71,7 +74,7 @@ export function AvatarEditor({ open, onClose, member, scope }: { open: boolean; 
 
   const save = async () => {
     if (mode === 'image' && !image) {
-      setError('先选一张图片')
+      setError(t('先选一张图片'))
       return
     }
     setBusy(true)
@@ -80,7 +83,7 @@ export function AvatarEditor({ open, onClose, member, scope }: { open: boolean; 
       else await setMemberAvatar(member.id, draft)
       onClose()
     } catch (e) {
-      setError(e instanceof Error ? e.message : String(e))
+      setError(translateError(e))
     } finally {
       setBusy(false)
     }
@@ -93,7 +96,7 @@ export function AvatarEditor({ open, onClose, member, scope }: { open: boolean; 
       await setGroupAvatar(scope.group.id, member.id, null)
       onClose()
     } catch (e) {
-      setError(e instanceof Error ? e.message : String(e))
+      setError(translateError(e))
     } finally {
       setBusy(false)
     }
@@ -103,21 +106,21 @@ export function AvatarEditor({ open, onClose, member, scope }: { open: boolean; 
     <Dialog
       open={open}
       onClose={onClose}
-      title={scope.kind === 'group' ? `${member.name}在本群的样子` : `${member.name}的默认头像`}
-      description={scope.kind === 'group' ? `只影响「${scope.group.title}」，在其他群里仍是默认头像。` : '没有单独设置过的群都会使用这个头像。'}
+      title={scope.kind === 'group' ? t('{name}在本群的样子', { name: member.name }) : t('{name}的默认头像', { name: member.name })}
+      description={scope.kind === 'group' ? t('只影响「{group}」，在其他群里仍是默认头像。', { group: scope.group.title }) : t('没有单独设置过的群都会使用这个头像。')}
       width={500}
       footer={
         <>
           {overridden && (
             <Button variant="quiet" className={styles.reset} onClick={() => void reset()} disabled={busy}>
-              恢复默认
+              {t('恢复默认')}
             </Button>
           )}
           <Button variant="ghost" onClick={onClose}>
-            取消
+            {t('取消')}
           </Button>
           <Button variant="primary" onClick={() => void save()} disabled={busy}>
-            保存
+            {t('保存')}
           </Button>
         </>
       }
@@ -128,34 +131,34 @@ export function AvatarEditor({ open, onClose, member, scope }: { open: boolean; 
           <Seal avatar={draft} size="md" />
           <Seal avatar={draft} size="sm" />
           <Seal avatar={draft} size="xs" />
-          <span className={styles.sizesNote}>消息 · 菜单 · 列表</span>
+          <span className={styles.sizesNote}>{t('消息 · 菜单 · 列表')}</span>
         </div>
       </div>
 
       <div className={styles.modeRow}>
         <Segmented
-          label="头像类型"
+          label={t('头像类型')}
           value={mode}
           onChange={setMode}
           options={[
-            { value: 'seal', label: '印章' },
-            { value: 'image', label: '图片' },
+            { value: 'seal', label: t('印章') },
+            { value: 'image', label: t('图片') },
           ]}
         />
       </div>
 
       {mode === 'seal' ? (
         <>
-          <Field label="印面" hint="一个字，默认取名字的第一个字。">
+          <Field label={t('印面')} hint={t('一个字，默认取名字的第一个字。')}>
             {(id) => <TextInput id={id} value={glyph} onChange={(e) => setGlyph(e.target.value)} maxLength={2} className={styles.glyphInput} />}
           </Field>
-          <Field label="颜料">
+          <Field label={t('颜料')}>
             {() => (
-              <div className={styles.pigments} role="radiogroup" aria-label="颜料">
+              <div className={styles.pigments} role="radiogroup" aria-label={t('颜料')}>
                 {PIGMENTS.map((p) => (
-                  <button key={p.id} role="radio" aria-checked={color === p.id} className={styles.pigment} onClick={() => setColor(p.id)} title={p.name}>
+                  <button key={p.id} role="radio" aria-checked={color === p.id} className={styles.pigment} onClick={() => setColor(p.id)} title={t(p.name)}>
                     <Seal avatar={{ glyph: draft.glyph, color: p.id }} size="md" />
-                    <span>{p.name}</span>
+                    <span>{t(p.name)}</span>
                   </button>
                 ))}
               </div>
@@ -163,7 +166,7 @@ export function AvatarEditor({ open, onClose, member, scope }: { open: boolean; 
           </Field>
         </>
       ) : (
-        <Field label="图片" error={error} hint="支持 PNG、JPG、GIF、WebP，动图会一直播放。图片会裁成方形显示。">
+        <Field label={t('图片')} error={error} hint={t('支持 PNG、JPG、GIF、WebP，动图会一直播放。图片会裁成方形显示。')}>
           {() => (
             <div
               className={styles.drop}
@@ -175,9 +178,9 @@ export function AvatarEditor({ open, onClose, member, scope }: { open: boolean; 
               onDragLeave={() => setDragging(false)}
               onDrop={onDrop}
             >
-              {image ? <img src={image} alt="" className={styles.dropImg} /> : <span className={styles.dropEmpty}>把图片拖到这里</span>}
+              {image ? <img src={image} alt="" className={styles.dropImg} /> : <span className={styles.dropEmpty}>{t('把图片拖到这里')}</span>}
               <Button variant="ghost" size="sm" onClick={() => input.current?.click()} disabled={busy}>
-                {image ? '换一张' : '选择图片'}
+                {image ? t('换一张') : t('选择图片')}
               </Button>
               <input ref={input} type="file" accept={ACCEPT} hidden onChange={(e) => void upload(e.target.files?.[0])} />
             </div>

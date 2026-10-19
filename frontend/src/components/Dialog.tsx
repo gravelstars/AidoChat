@@ -1,6 +1,7 @@
 import { useEffect, useRef, type ReactNode } from 'react'
 import { createPortal } from 'react-dom'
 import { Button } from './Button'
+import { useT } from '../i18n/react'
 import styles from './Dialog.module.css'
 
 /**
@@ -19,6 +20,7 @@ interface Props {
 
 export function Dialog({ open, title, description, onClose, children, footer, width = 480 }: Props) {
   const ref = useRef<HTMLDialogElement>(null)
+  const t = useT()
 
   useEffect(() => {
     const el = ref.current
@@ -47,7 +49,7 @@ export function Dialog({ open, title, description, onClose, children, footer, wi
               <h2 className={styles.title}>{title}</h2>
               {description && <p className={styles.desc}>{description}</p>}
             </div>
-            <Button variant="quiet" size="sm" icon="close" aria-label="关闭" onClick={onClose} />
+            <Button variant="quiet" size="sm" icon="close" aria-label={t('关闭')} onClick={onClose} />
           </header>
           <div className={styles.body}>{children}</div>
           {footer && <footer className={styles.foot}>{footer}</footer>}

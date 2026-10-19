@@ -1,4 +1,5 @@
 import { useLayoutEffect, useRef, useState, type CSSProperties } from 'react'
+import { useT } from '../i18n/react'
 import styles from './Segmented.module.css'
 
 /** 分段切换。选中块会滑动过去，而不是瞬间跳变。 */
@@ -21,6 +22,7 @@ interface Props<T extends string> {
 export function Segmented<T extends string>({ value, options, onChange, size = 'md', label, marked }: Props<T>) {
   const ref = useRef<HTMLDivElement>(null)
   const [thumb, setThumb] = useState<{ x: number; w: number } | null>(null)
+  const t = useT()
 
   useLayoutEffect(() => {
     const el = ref.current?.querySelector<HTMLElement>(`[data-value="${value}"]`)
@@ -41,7 +43,7 @@ export function Segmented<T extends string>({ value, options, onChange, size = '
           onClick={() => onChange(o.value)}
         >
           {o.label}
-          {marked === o.value && <span className={styles.mark} aria-label="默认" />}
+          {marked === o.value && <span className={styles.mark} aria-label={t('默认')} />}
         </button>
       ))}
     </div>

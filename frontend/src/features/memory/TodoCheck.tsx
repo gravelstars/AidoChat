@@ -1,5 +1,6 @@
 import type { MemoryItem } from '../../backend'
 import { Icon } from '../../components/Icon'
+import { useT } from '../../i18n/react'
 import { useChat } from '../../state/store'
 import styles from './TodoCheck.module.css'
 
@@ -8,13 +9,14 @@ export function TodoCheck({ item, onComplete }: { item: MemoryItem; onComplete?(
   const complete = useChat((s) => s.completeMemory)
   const uncomplete = useChat((s) => s.uncompleteMemory)
   const done = item.status === 'done'
+  const t = useT()
   return (
     <button
       type="button"
       className={styles.check}
       aria-pressed={done}
-      aria-label={done ? '撤销完成' : '标记完成'}
-      title={done ? '撤销完成' : '标记完成'}
+      aria-label={done ? t('撤销完成') : t('标记完成')}
+      title={done ? t('撤销完成') : t('标记完成')}
       onClick={() => {
         if (done) {
           void uncomplete(item.id)

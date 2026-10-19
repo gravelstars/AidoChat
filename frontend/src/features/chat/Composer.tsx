@@ -6,6 +6,8 @@ import { Seal } from '../../components/Seal'
 import { Segmented } from '../../components/Segmented'
 import { avatarOf } from '../../lib/avatar'
 import { activeMentionQuery, parseMentions, planTargets } from '../../lib/mention'
+import { getLanguage, translateError } from '../../i18n'
+import { useT } from '../../i18n/react'
 import { useChat, type GroupState } from '../../state/store'
 import { AttachmentList } from './AttachmentList'
 import { ATTACHMENT_ACCEPT, MAX_ATTACHMENTS, remainingDraft, toBase64, validateAttachment, validateDocument, validateImage } from '../../lib/attachments'
@@ -60,6 +62,8 @@ export const Composer = forwardRef<ComposerHandle, Props>(function Composer({ st
   const [menuClosed, setMenuClosed] = useState(false)
   const [shaking, setShaking] = useState(false) // 忙碌时按 Enter 的抖动提示
   const composing = useRef(false)
+  const t = useT()
+  const mentionAll = getLanguage() === 'en' ? 'all' : '所有人'
 
   // 群间保留文本草稿；未发送附件只属于当前输入会话。
   useEffect(() => {
@@ -87,9 +91,9 @@ export const Composer = forwardRef<ComposerHandle, Props>(function Composer({ st
   const candidates: Candidate[] = useMemo(() => {
     if (!query) return []
     const q = query.query.toLowerCase()
-    const list: Candidate[] = [{ key: '__all', name: '所有人' }, ...groupMembers.map((m) => ({ key: m.id, name: m.name, member: m }))]
+    const list: Candidate[] = [{ key: '__all', name: mentionAll }, ...groupMembers.map((m) => ({ key: m.id, name: m.name, member: m }))]
     return list.filter((c) => !q || c.name.toLowerCase().includes(q) || (c.key === '__all' && 'all'.startsWith(q)))
-  }, [query?.query, query?.start, groupMembers])
+  }, [query?.query, query?.start, groupMembers, mentionAll])
   const menuOpen = !!query && candidates.length > 0 && !menuClosed
 
   useEffect(() => {
@@ -182,7 +186,7 @@ export const Composer = forwardRef<ComposerHandle, Props>(function Composer({ st
     if (busy) { setShaking(false);requestAnimationFrame(() => setShaking(true));return }
     if(sent.some(a=>a.kind==='image')) {
       const unsupported=targets.filter(id=>!members[id]?.supportsImages).map(id=>members[id]?.name ?? id)
-      if(unsupported.length) {setAttachmentError(`「${unsupported.join('、')}」尚未启用图片输入，请在成员设置中确认模型能力，或移除图片后发送`);return}
+      if(unsupported.length) {setAttachmentError(t('「{names}」尚未启用图片输入，请在成员设置中确认模型能力，或移除图片后发送', { names: unsupported.join(getLanguage() === 'en' ? ', ' : '、') }));return}
     }
     const session=epoch.current
     const original=textRef.current
@@ -244,7 +248,7 @@ export const Composer = forwardRef<ComposerHandle, Props>(function Composer({ st
     <div className={styles.dock} onDragOver={(e)=>{if(e.dataTransfer.types.includes('Files'))e.preventDefault()}} onDrop={(e)=>{if(e.dataTransfer.files.length){e.preventDefault();void addFiles(Array.from(e.dataTransfer.files))}}}>
       <div className={`${styles.composer} ${shaking ? styles.shake : ''}`} onAnimationEnd={() => setShaking(false)}>
         {menuOpen && (
-          <ul className={styles.menu} role="listbox" aria-label="选择要 @ 的成员">
+          <ul className={styles.menu} role="listbox" aria-label={t('选择要 @ 的成员')}>
             {candidates.map((c, i) => (
               <li
                 key={c.key}
@@ -267,28 +271,28 @@ export const Composer = forwardRef<ComposerHandle, Props>(function Composer({ st
                   </span>
                 )}
                 <span className={styles.optName}>{c.name}</span>
-                <span className={styles.optBrief}>{c.member ? c.member.brief : `按群成员顺序，${groupMembers.length} 位都回复`}</span>
+                <span className={styles.optBrief}>{c.member ? c.member.brief : t('按群成员顺序，{n} 位都回复', { n: groupMembers.length })}</span>
               </li>
             ))}
           </ul>
         )}
 
         {menuOpen ? (
-          <div className={styles.strip}>↑ ↓ 选择，Enter 或 Tab 确认，Esc 取消</div>
+          <div className={styles.strip}>{t('↑ ↓ 选择，Enter 或 Tab 确认，Esc 取消')}</div>
         ) : (
           <TargetStrip group={group} targets={targets} members={members} mode={effectiveMode} hasText={!!text.trim()} busy={busy} />
         )}
 
-        {!!attachments.length && <p className={styles.attachmentStatus}>{isDemo ? "最多 4 份；演示版每份附件 ≤512 KiB，总存储空间有限。附件只保存在当前浏览器，不会发送给模型。" : "最多 4 份；图片 ≤10 MiB，文档 ≤20 MiB。仅点名 AI 时发送给模型。"}</p>}
+        {!!attachments.length && <p className={styles.attachmentStatus}>{isDemo ? t('最多 4 份；演示版每份附件 ≤512 KiB，总存储空间有限。附件只保存在当前浏览器，不会发送给模型。') : t('最多 4 份；图片 ≤10 MiB，文档 ≤20 MiB。仅点名 AI 时发送给模型。')}</p>}
         {!!attachments.length && <div className={styles.attachments}><AttachmentList attachments={attachments} onRemove={(id)=>void removeAttachment(id)} disabled={sending} /></div>}
-        {importing && <p className={styles.attachmentStatus} role="status">正在本地读取附件</p>}
-        {attachmentError && <p className={styles.attachmentError} role="alert">{attachmentError}</p>}
+        {importing && <p className={styles.attachmentStatus} role="status">{t('正在本地读取附件')}</p>}
+        {attachmentError && <p className={styles.attachmentError} role="alert">{translateError(attachmentError)}</p>}
         <textarea
           ref={area}
           className={styles.input}
           value={text}
           rows={1}
-          placeholder={`在「${group.title}」里说点什么`}
+          placeholder={t('在「{title}」里说点什么', { title: group.title })}
           onChange={(e) => {
             setText(e.target.value)
             setCaret(e.target.selectionStart)
@@ -303,27 +307,27 @@ export const Composer = forwardRef<ComposerHandle, Props>(function Composer({ st
           }}
           onBlur={() => setMenuClosed(true)}
           onFocus={() => setMenuClosed(false)}
-          aria-label="消息"
+          aria-label={t('消息')}
         />
 
         <div className={styles.bar}>
           <input ref={fileInput} type="file" accept={ATTACHMENT_ACCEPT} multiple hidden onChange={(e)=>{void addFiles(Array.from(e.target.files??[]));e.target.value=''}} />
-          <Button variant="quiet" size="sm" disabled={importing||sending||attachments.length>=MAX_ATTACHMENTS} onClick={()=>fileInput.current?.click()} aria-label="添加附件" title="最多 4 份：图片 10 MiB；PDF、Office、TXT/Markdown/CSV/JSON/代码/日志 20 MiB；文本最多 10 万字符">添加附件</Button>
-          <Button variant="quiet" size="sm" className={styles.atBtn} onClick={insertAt} aria-label="插入 @">
+          <Button variant="quiet" size="sm" disabled={importing||sending||attachments.length>=MAX_ATTACHMENTS} onClick={()=>fileInput.current?.click()} aria-label={t('添加附件')} title={t('最多 4 份：图片 10 MiB；PDF、Office、TXT/Markdown/CSV/JSON/代码/日志 20 MiB；文本最多 10 万字符')}>{t('添加附件')}</Button>
+          <Button variant="quiet" size="sm" className={styles.atBtn} onClick={insertAt} aria-label={t('插入 @')}>
             @
           </Button>
           <span className={styles.keys}>
-            <kbd>Enter</kbd> 发送 <kbd>Shift</kbd>+<kbd>Enter</kbd> 换行
+            <kbd>Enter</kbd> {t('发送')} <kbd>Shift</kbd>+<kbd>Enter</kbd> {t('换行')}
           </span>
           <span className={styles.spacer} />
-          <Segmented size="sm" label="多人回复方式" value={effectiveMode} options={MODE_OPTIONS} onChange={setMode} marked={group.defaultMode} />
+          <Segmented size="sm" label={t('多人回复方式')} value={effectiveMode} options={MODE_OPTIONS.map((o) => ({ ...o, label: t(o.label), hint: t(o.hint) }))} onChange={setMode} marked={group.defaultMode} />
           {busy ? (
-            <Button variant="ghost" size="sm" icon="stop" onClick={stop} title="停止（Ctrl/⌘ + .）">
-              停止
+            <Button variant="ghost" size="sm" icon="stop" onClick={stop} title={t('停止（Ctrl/⌘ + .）')}>
+              {t('停止')}
             </Button>
           ) : (
             <Button variant="accent" size="sm" icon="send" onClick={() => void submit()} disabled={(!text.trim() && !attachments.length) || importing || sending}>
-              发送
+              {t('发送')}
             </Button>
           )}
         </div>
@@ -341,15 +345,16 @@ export const Composer = forwardRef<ComposerHandle, Props>(function Composer({ st
 })
 
 function TargetStrip({ group, targets, members, mode, hasText, busy }: { group: GroupState['group']; targets: string[]; members: Record<string, Member>; mode: ReplyMode; hasText: boolean; busy: boolean }) {
+  const t = useT()
   if (busy) {
-    return <div className={styles.strip}>本轮回复结束后才能发送下一条，<span className={styles.stripKey}>Ctrl/⌘ + .</span> 可以停止</div>
+    return <div className={styles.strip}>{t('本轮回复结束后才能发送下一条，')}<span className={styles.stripKey}>Ctrl/⌘ + .</span> {t('可以停止')}</div>
   }
   if (targets.length === 0) {
-    return <div className={styles.strip}>{hasText ? '没有 @ 任何成员：这条只会记在群里，不会触发回复' : '用 @ 点名成员回答，@所有人 让全员发言'}</div>
+    return <div className={styles.strip}>{hasText ? t('没有 @ 任何成员：这条只会记在群里，不会触发回复') : t('用 @ 点名成员回答，@所有人 让全员发言')}</div>
   }
   return (
     <div className={`${styles.strip} ${styles.stripActive}`}>
-      <span className={styles.stripLabel}>{targets.length > 1 ? (mode === 'serial' ? '依次回复' : '同时回复') : '回复'}</span>
+      <span className={styles.stripLabel}>{targets.length > 1 ? (mode === 'serial' ? t('依次回复') : t('同时回复')) : t('回复')}</span>
       {targets.map((id, i) => {
         const m = members[id]
         return (

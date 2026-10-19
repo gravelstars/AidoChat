@@ -137,6 +137,9 @@ const providers: ProviderConfig[] = [
   { id: 'p3', name: '通义千问', kind: 'openai', baseUrl: 'https://dashscope.aliyuncs.com/compatible-mode/v1', hasKey: false },
 ]
 const memoryConfig: MemoryConfig = { providerId: '', model: '' }
+const storedLanguage = readJSON<string>(demoKey('agc.language'))
+let language = typeof storedLanguage === 'string' && /^[a-z]{2,3}(-[A-Za-z0-9]{2,8})*$/.test(storedLanguage) ? storedLanguage : 'zh'
+const localized = (zh: string, en: string) => (language === 'zh' ? zh : en)
 
 type Handler = (e: BackendEvent) => void
 const handlers = new Set<Handler>()
@@ -354,7 +357,8 @@ export function createMockBackend(): Backend {
         groups: Object.values(db).map(summary).sort((a, b) => b.updatedAt.localeCompare(a.updatedAt)),
         retiredMemberIds: [...retired],
         memory: { ...memoryConfig },
-        version: isDemo ? '0.1.3-demo' : '0.1.0-mock',
+        language,
+        version: isDemo ? '0.1.4-demo' : '0.1.0-mock',
       }
     },
 
@@ -371,7 +375,7 @@ export function createMockBackend(): Backend {
       const group: Group = { id, title: input.title, topic: input.topic, memberIds: input.memberIds, memberAvatars: {}, archived: false, defaultMode: input.defaultMode, memoryCursor: 0, createdAt: now, updatedAt: now }
       db[id] = {
         group, memory: [], busy: false,
-        messages: [msg({ id: nid('m'), groupId: id, seq: 1, authorKind: 'system', authorId: '', content: `你创建了群聊，邀请了 ${names}`, createdAt: now })],
+        messages: [msg({ id: nid('m'), groupId: id, seq: 1, authorKind: 'system', authorId: '', content: localized(`你创建了群聊，邀请了 ${names}`, `You created the group and invited ${names}`), createdAt: now })],
       }
       emit({ kind: 'group', group: summary(db[id]) })
       return structuredClone(group)
@@ -385,14 +389,17 @@ export function createMockBackend(): Backend {
         d.messages.push(m)
         emit({ kind: 'message', groupId: input.id, message: { ...m } })
       }
-      if (d.group.title !== input.title) sys(`你把群名改为「${input.title}」`)
-      if (d.group.topic !== input.topic) sys('你改了群主题')
-      if (d.group.defaultMode !== input.defaultMode) sys(`你把默认回复方式改为${input.defaultMode === 'parallel' ? '同时回复' : '依次回复'}`)
+      if (d.group.title !== input.title) sys(localized(`你把群名改为「${input.title}」`, `You renamed the group to “${input.title}”`))
+      if (d.group.topic !== input.topic) sys(localized('你改了群主题', 'You changed the group topic'))
+      if (d.group.defaultMode !== input.defaultMode) sys(localized(
+        `你把默认回复方式改为${input.defaultMode === 'parallel' ? '同时回复' : '依次回复'}`,
+        `You changed the default reply mode to ${input.defaultMode === 'parallel' ? 'Parallel' : 'Sequential'}`,
+      ))
       const added = input.memberIds.filter((x) => !d.group.memberIds.includes(x))
       const removed = d.group.memberIds.filter((x) => !input.memberIds.includes(x))
-      for (const id of added) sys(`你邀请了 ${memberById[id]?.name ?? id}`)
-      for (const id of removed) sys(`你移出了 ${memberById[id]?.name ?? id}`)
-      if (!added.length && !removed.length && d.group.memberIds.join() !== input.memberIds.join()) sys('你调整了发言顺序')
+      for (const id of added) sys(localized(`你邀请了 ${memberById[id]?.name ?? id}`, `You invited ${memberById[id]?.name ?? id}`))
+      for (const id of removed) sys(localized(`你移出了 ${memberById[id]?.name ?? id}`, `You removed ${memberById[id]?.name ?? id}`))
+      if (!added.length && !removed.length && d.group.memberIds.join() !== input.memberIds.join()) sys(localized('你调整了发言顺序', 'You changed the speaker order'))
       Object.assign(d.group, { title: input.title, topic: input.topic, defaultMode: input.defaultMode, memberIds: input.memberIds })
       emit({ kind: 'group', group: summary(d) })
       return structuredClone(d.group)
@@ -521,6 +528,12 @@ export function createMockBackend(): Backend {
 
     async setAppearance(a) {
       localStorage.setItem(demoKey('agc.appearance'), JSON.stringify(a))
+    },
+
+    async setLanguage(next) {
+      if (!/^[a-z]{2,3}(-[A-Za-z0-9]{2,8})*$/.test(next)) throw new Error('界面语言无效')
+      language = next
+      localStorage.setItem(demoKey('agc.language'), JSON.stringify(next))
     },
 
     async setUserProfile(profile) {

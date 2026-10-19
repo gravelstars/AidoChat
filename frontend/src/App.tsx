@@ -8,6 +8,7 @@ import { MembersView } from './features/members/MembersView'
 import { Rail } from './features/rail/Rail'
 import { SettingsView } from './features/settings/SettingsView'
 import { WindowControls } from './features/shell/WindowControls'
+import { useT } from './i18n/react'
 import { useActive, useChat } from './state/store'
 import styles from './App.module.css'
 
@@ -18,8 +19,9 @@ export function App() {
   const members = useChat((s) => s.members)
   const memoryOpen = useChat((s) => s.memoryOpen)
   const active = useActive()
+  const t = useT()
 
-  if (error && !ready) return <div className={styles.boot}>启动失败：{error}</div>
+  if (error && !ready) return <div className={styles.boot}>{t('启动失败：{error}', { error })}</div>
   if (!ready) return <div className={styles.boot} aria-busy="true" />
 
   return (
@@ -33,8 +35,8 @@ export function App() {
       </main>
       {view === 'chat' && active && memoryOpen && <MemoryPanel state={active} members={members} />}
       {!isDemo && <WindowControls />}
-      <Dialog open={!!error} title="操作未完成" onClose={() => useChat.setState({ error: null })}
-        footer={<Button onClick={() => useChat.setState({ error: null })}>知道了</Button>}>
+      <Dialog open={!!error} title={t('操作未完成')} onClose={() => useChat.setState({ error: null })}
+        footer={<Button onClick={() => useChat.setState({ error: null })}>{t('知道了')}</Button>}>
         <p role="alert">{error}</p>
       </Dialog>
     </div>
@@ -43,12 +45,13 @@ export function App() {
 
 function Welcome() {
   const setView = useChat((s) => s.setView)
+  const t = useT()
   return (
     <div className={styles.welcome}>
       <img className={styles.welcomeMark} src={appIcon} alt="AidoChat" />
-      <p className={styles.welcomeTitle}>把 AI 拉进同一个群</p>
-      <p className={styles.welcomeText}>先配置模型服务和成员，再从左侧新建群，用 @ 点名开始讨论。</p>
-      <div className={styles.welcomeAction}><Button variant="primary" onClick={() => setView('members')}>配置成员与模型服务</Button></div>
+      <p className={styles.welcomeTitle}>{t('把 AI 拉进同一个群')}</p>
+      <p className={styles.welcomeText}>{t('先配置模型服务和成员，再从左侧新建群，用 @ 点名开始讨论。')}</p>
+      <div className={styles.welcomeAction}><Button variant="primary" onClick={() => setView('members')}>{t('配置成员与模型服务')}</Button></div>
     </div>
   )
 }

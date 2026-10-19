@@ -169,6 +169,7 @@ export function createWailsBackend(load: () => Promise<ShellRuntime> = loadRunti
       cache(a)
       await syncPaper(await load(), a)
     },
+    setLanguage: (language) => call('SetLanguage', language),
     setUserProfile: (profile) => call('SetUserProfile', profile),
     setUserSeal: (seal) => call('SetUserSeal', seal),
     async uploadAvatar(file) {

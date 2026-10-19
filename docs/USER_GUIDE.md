@@ -1,244 +1,248 @@
-# AidoChat 使用说明书
+# AidoChat User Guide
 
-版本：0.1.3 · 文档日期：2026-10-17
+Version 0.1.4 · Last updated 2026-10-19
 
-这是一个在自己电脑上运行的 AI 群聊应用。你可以把使用不同模型、担任不同角色的 AI 成员放进同一个群，点名讨论，并把有用的结论整理成带来源的群纪要。
+English · [简体中文](USER_GUIDE.zh.md)
 
-浏览器演示与桌面真实使用是两种模式，数据不互通；浏览器的回复是预设文案，不会调用模型。桌面版安装包发布在 [GitHub Releases](https://github.com/gravelstars/AidoChat/releases/latest)。
+AidoChat is a local AI group chat application. Put AI members with different models and roles into the same group, mention them with `@`, discuss, and turn useful conclusions into source-linked shared notes.
 
-## 1. 第一次使用：按这个顺序
+The browser demo and the desktop app are separate modes and do not share data. Demo replies are preset and never call a model. Desktop installers are published on [GitHub Releases](https://github.com/gravelstars/AidoChat/releases/latest).
 
-1. 启动桌面应用。
-2. 点欢迎页「配置成员与模型服务」或左下角「成员」→「新建成员」，填写名字和角色提示词。
-3. 没有服务时点表单内「新建模型服务」，选择服务地址、填入 API Key 和实际可用的测试模型名，测试后保存。本地免 Key 服务可留空 Key。
-4. 保存服务后会回到原成员草稿并自动选中服务；确认模型名称后保存成员。也可随时从「设置」管理服务。
-5. 再建一位不同分工的成员。
-6. 在侧栏点「新建群聊」，起名、邀请这两位成员，选择「依次回复」或「同时回复」。
-7. 输入 `@青砚 @墨白 请分别从实现和体验角度分析这个方案`，把名字换成你创建的成员名，然后发送。
-8. 讨论后点纪要里的「整理」，检查来源；确实认可的条目，再由你「盖章」。
+## 1. First run: follow this order
 
-首次启动没有内置的真实服务或成员。若看到一组现成演示群，请先确认自己打开的是不是浏览器 mock 预览。
+1. Launch the desktop app.
+2. On the welcome screen, choose **Configure members and model services**, or open **Members → New member** at the bottom left. Enter a name and a role prompt.
+3. If there is no service yet, choose **New model service** inside the member form. Select an endpoint, enter the API Key and the actual test model name, test the connection, and save. Local services without authentication may leave the Key empty.
+4. Saving the service returns to the member draft and selects the service automatically. Confirm the model name and save the member. Services can also be managed later in **Settings**.
+5. Create a second member with a different role.
+6. Choose **New group** in the sidebar, give it a name, invite both members, and select **Sequential** or **Parallel** replies.
+7. Type `@青砚 @墨白 Please review this plan from implementation and experience angles`, replacing the names with your own members, then send.
+8. After the discussion, choose **Organize** in the notes panel and check the sources. **Stamp** the items you actually accept.
 
-## 2. 安装和启动
+A fresh install has no built-in real services or members. If you see a set of ready-made demo groups, first check whether you opened the browser mock preview.
 
-### 从 Releases 下载
+## 2. Install and launch
 
-从 [Releases](https://github.com/gravelstars/AidoChat/releases/latest) 下载 **0.1.3**：
+### Download from Releases
 
-| 系统 | 文件 | 安装 |
+Download **0.1.4** from [Releases](https://github.com/gravelstars/AidoChat/releases/latest):
+
+| Platform | File | Install |
 | --- | --- | --- |
-| macOS 12+（Intel / Apple Silicon） | `AidoChat.dmg` | 打开 dmg，把 `AidoChat.app` 拖入「应用程序」 |
-| Windows 10 / 11（x64） | `AidoChat-windows-setup.exe` | 运行安装程序；需要 WebView2，安装器会引导 |
-| Ubuntu 24.04（amd64） | `AidoChat.deb` | `sudo apt install ./AidoChat.deb` |
-| 其他 Linux | `AidoChat.AppImage` | `chmod +x AidoChat.AppImage` 后运行；需要 GTK4 / WebKitGTK 6.0 |
+| macOS 12+ (Intel / Apple Silicon) | `AidoChat.dmg` | Open the dmg and drag `AidoChat.app` into Applications |
+| Windows 10 / 11 (x64) | `AidoChat-windows-setup.exe` | Run the installer; WebView2 is required and the installer guides you |
+| Ubuntu 24.04 (amd64) | `AidoChat.deb` | `sudo apt install ./AidoChat.deb` |
+| Other Linux | `AidoChat.AppImage` | `chmod +x AidoChat.AppImage` and run; requires GTK4 / WebKitGTK 6.0 |
 
-- macOS 包为 Intel 与 Apple Silicon 通用，使用 ad-hoc 签名，未做 Developer ID 签名或公证；首次打开可能需要在「隐私与安全性」中确认来源。
-- Windows 安装器会把程序安装到 `%LOCALAPPDATA%\ai-group-chat`，并创建 AidoChat 快捷方式；安装或升级前请先完全退出正在运行的 AidoChat/旧版程序。
-- 如果 Windows 安装时出现“写入文件出错 / 忽略”之类的提示，请关闭 AidoChat 后重新运行安装包；不要选择“忽略”，否则主程序可能没有被安装。
-- Linux 包在 Ubuntu 24.04 的 CI 环境构建；其他发行版需要自行确认 GTK4/WebKitGTK 6.0 依赖。
-- 第一次启动没有内置服务或成员，按下一节配置模型服务。数据保存在本机，Key 存入系统凭证存储。
+- The macOS package is universal for Intel and Apple Silicon. It is ad-hoc signed, not Developer ID signed or notarized; on first launch you may need to confirm the source under **Privacy & Security**.
+- The Windows installer installs to `%LOCALAPPDATA%\ai-group-chat` and creates an AidoChat shortcut. Quit any running AidoChat or older version before installing or upgrading.
+- If Windows reports a file-write error or offers **Ignore**, close AidoChat and run the installer again. Do not choose **Ignore**; the main executable may not be installed.
+- Linux packages are built on Ubuntu 24.04 in CI. Other distributions must provide GTK4 / WebKitGTK 6.0.
+- A fresh install has no service or member. Configure a model service as described below. Data stays local; API Keys use the system credential store.
 
-旧版本、校验值和平台说明见 [全部 Releases](https://github.com/gravelstars/AidoChat/releases)。
+Older versions, checksums, and platform notes are listed under [All releases](https://github.com/gravelstars/AidoChat/releases).
 
-### 从源码启动真实桌面应用
+### Run the desktop app from source
 
-需要 Go（版本以 `go.mod` 为准，当前为 1.26.4）、Node.js 24/npm，以及本机桌面构建工具。macOS 需要 Xcode Command Line Tools。首次准备：
+You need Go (version in `go.mod`, currently 1.26.4), Node.js 24 / npm, and the native desktop build tools. macOS requires Xcode Command Line Tools. First-time setup:
 
 ```sh
-cd AidoChat  # 进入你本机的项目目录，旧本地文件夹可能仍叫 group-chat-ai
+cd AidoChat  # your local checkout; older folders may still be named group-chat-ai
 npm --prefix frontend ci
 go install github.com/wailsapp/wails/v3/cmd/wails3@v3.0.0-beta.29
 ```
 
-确认 Go 的 bin 目录在 PATH 中，然后在项目根目录运行：
+Make sure Go's bin directory is on `PATH`, then run from the project root:
 
 ```sh
 wails3 dev
 ```
 
-开发模式会启动前端服务并打开真实桌面窗口。需要完整安装包时，在同一目录运行 `wails3 task package`。详细平台说明见 [构建说明](../build/README.md)。
+Development mode starts the frontend and opens the real desktop window. To build a full installer, run `wails3 task package` in the same directory. See [build/README.md](../build/README.md) for platform details.
 
-### 仅查看浏览器演示
+### Browser demo only
 
 ```sh
-cd AidoChat  # 进入你本机的项目目录，旧本地文件夹可能仍叫 group-chat-ai
+cd AidoChat  # your local checkout; older folders may still be named group-chat-ai
 npm --prefix frontend ci
 npm --prefix frontend run dev
 ```
 
-打开 `http://localhost:5173`。这是带演示数据的 mock 后端，不能用来确认真实 API、SQLite 或系统钥匙串是否可用。`?platform=windows` 仅切换布局预览。
+Open `http://localhost:5173`. This runs the mock backend with demo data; it cannot verify real APIs, SQLite, or the system credential store. `?platform=windows` only changes the layout preview.
 
-## 3. 配置模型服务
+## 3. Configure model services
 
-打开「设置」→「模型服务」→新建。
+Open **Settings → Model services → New service**.
 
-| 字段 | 怎么填 |
-|---|---|
-| 名称 | 方便识别即可，例如自己的云服务或本地模型 |
-| 类型 | 大多数兼容 Chat Completions 的服务选「OpenAI 兼容」；Anthropic 接口选对应类型 |
-| 服务地址 | 使用服务商的 API 地址，可先选界面预设；不是服务商官网首页 |
-| API Key | 在密码框中输入；保存后只显示是否已配置，不回显正文 |
-| 测试模型 | 使用你账户已开通、这个接口支持的模型名；不要照抄其他厂商的名字 |
+| Field | What to enter |
+| --- | --- |
+| Name | Anything recognizable, such as your cloud service or local model |
+| Type | Choose **OpenAI-compatible** for most Chat Completions services; use the Anthropic type for the Anthropic API |
+| Endpoint | The provider's API endpoint, not its marketing homepage. Presets are shortcuts only |
+| API Key | Enter it in the password field. After saving, only whether it is configured is shown; the value is never displayed |
+| Test model | A model name enabled on your account and supported by this endpoint. Do not copy another provider's model name |
 
-测试连接成功说明当次服务与模型请求完成，不保证所有模型或日后的额度、网络都正常。不同服务的模型名不同；测试模型必须填写，不再按接口类型猜测默认模型。编辑时优先带入现有成员所用模型；修改连接参数会清除旧测试结果，测试期间暂时锁定参数。
+A successful connection test means that one service and model request succeeded. It does not guarantee every model, future quota, or network condition. Model names differ between providers. A test model is required; AidoChat no longer guesses a default model from the service type. When editing, the model used by an existing member is filled in first. Changing connection parameters clears old test results, and the fields are locked while testing.
 
-编辑服务时，API Key 留空表示保留原来的 Key。切换服务商或账户时，地址、类型、Key 和模型都需要对应。仍被成员引用的服务不能直接删除；先调整相关成员的服务配置。
+When editing a service, leave the API Key empty to keep the existing Key. If you switch provider or account, update the endpoint, type, Key, and model together. A service still referenced by members cannot be deleted; update those members first.
 
-本地 Ollama 等无鉴权服务可以留空 Key，但必须先自行启动服务并安装模型。请填写本机实际监听的兼容 API 地址和已安装模型名称。「没有保存 API Key」的提示不代表本地服务一定不能使用。
+Local Ollama and other unauthenticated services may leave the Key empty, but you must start the service and install the model first. Enter the actual local compatible API endpoint and an installed model name. A "no API Key saved" note does not mean a local service is unusable.
 
-Key 保存在系统凭证服务中；如果系统弹出访问授权，需要允许当前应用访问。没有授权、钥匙串锁定或凭证不存在时，真实调用会失败。创建一个新服务不会自动绑定之前手工保存到其他 provider ID 的凭证；可在新服务的密码框重新输入并保存。
+Keys are stored in the system credential store. If the system asks for access, allow the current app. Without permission, a locked keychain, or a missing credential, real calls will fail. A new service does not automatically inherit credentials manually stored under another provider ID; re-enter and save the Key in the new service.
 
-## 4. 创建和管理成员
+## 4. Create and manage members
 
-打开「成员」→「新建成员」。没有服务时可直接在表单中创建，已有草稿会保留；无成员时新建群聊也提供创建成员入口，保存后自动勾选。
+Open **Members → New member**. If no service exists, create one directly in the member form; the member draft is preserved. When no members exist, the new-group dialog also offers a member-creation entry and selects the new member after saving.
 
-- 名字为 1–12 个字，不能含空白或 `@`，用于点名；名字必须唯一。
-- 一句话简介写分工，让群里其他成员知道它擅长什么。
-- 角色提示词只进入这位成员自己的系统提示。例如：`你负责代码审查，优先指出边界条件，并给出最小修改建议。`
-- 模型服务与模型名称要匹配。
-- 上下文预算控制一次请求可放入多少历史信息；不是永久记住所有消息的承诺。
-- 温度可以留空，使用服务默认值；手动设置时需符合模型支持范围。
+- A name is 1–12 characters, cannot contain whitespace or `@`, and must be unique. It is used for mentions.
+- The one-line brief describes the member's role so other members know what it is good at.
+- The role prompt only enters that member's own system prompt. For example: `You review code, point out edge cases first, and suggest the smallest safe change.`
+- The model service and model name must match.
+- The context budget controls how much history can fit into one request. It is not a promise that all messages are remembered forever.
+- Temperature may be left empty to use the service default. If set manually, it must be within the model's supported range.
 
-成员保存后，点击编辑器里的头像可以更换默认头像。默认头像会用于所有没有单独覆盖的群；在群头部点击成员头像并编辑「本群头像」，只影响当前群。恢复默认会去掉本群覆盖。
+After saving a member, click the avatar in the editor to change its default avatar. The default applies to every group without a per-group override. Click a member's avatar in the group header and edit **Group avatar** to change only that group. Restore the default to remove the override.
 
-支持 PNG/JPEG/GIF/WebP，单张最多 8MiB。图片复制进应用自己的头像目录，原样保存。真实 GIF 多处播放效果仍待交互验收。
+PNG/JPEG/GIF/WebP are supported, up to 8 MiB each. Images are copied into the app's avatar directory unchanged. GIF playback in multiple places still needs interactive verification.
 
-改名后，后续点名用新名字，历史发言也显示更新后的名字。删除成员会把它从各群移出，但历史发言仍保留身份信息。有回复进行时，相关删除或成员调整会被拒绝，需要先停止并等待收尾。
+Renaming a member affects future mentions and the displayed name in history. Deleting a member removes it from every group, while historical messages keep their identity. Deletion or member changes are refused while a reply is running; stop the turn first.
 
-## 5. 群聊、点名与回复模式
+## 5. Group chat, mentions, and reply modes
 
-新建群时邀请成员的先后顺序，就是 `@所有人` 的回复顺序。群头部的「管理」可修改群名、主题、默认模式和成员顺序。
+The order in which members are invited to a new group is also the order used for `@everyone` replies. **Manage** in the group header changes the group name, topic, default mode, and member order.
 
-| 输入/动作 | 实际行为 |
-|---|---|
-| 普通文字，没有 `@` | 只写入群记录，不调用 AI |
-| `@成员名` | 只让点名成员回复 |
-| 点名多人 | 按所选「依次」或「同时」生成 |
-| `@所有人` | 按群成员名单点名全部成员 |
-| AI 正文中出现 `@` | 不触发其他 AI，不会自动循环讨论 |
+| Input / action | Behavior |
+| --- | --- |
+| Plain text without `@` | Only recorded in the group; no AI is called |
+| `@Member` | Only the mentioned member replies |
+| Multiple mentions | Generated in the selected sequential or parallel mode |
+| `@everyone` | Mentions every current group member in group order |
+| `@` inside AI text | Does not trigger other AIs and never causes an automatic loop |
 
-**依次回复**：后一位能看到本轮前面已经完成的回复，适合评审、补充和交叉检查。
+**Sequential**: each later member sees the completed replies earlier in the same turn. Good for review, additions, and cross-checking.
 
-**同时回复**：各位独立作答，看不到本轮其他成员的回复，适合收集独立观点。输入框里临时选择模式只影响本次发送，不修改群默认模式。
+**Parallel**: members answer independently and cannot see each other's replies from the same turn. Good for collecting independent opinions. Choosing a mode in the composer only affects the current send and does not change the group default.
 
-同一群一次只能有一个进行中的轮次；不同群可以独立运行。生成时可继续编辑输入框，但当前群需要等本轮结束才能再发。
+A group can have only one active turn at a time; different groups can run independently. You can keep editing the composer while a turn runs, but that group must wait until the turn ends before sending again.
 
-### 停止与重试
+### Stop and retry
 
-- 点「停止」，或用 `Ctrl/⌘ + .` 停止当前群本轮回复。
-- 已生成内容会保留，排队占位也会标为中断。
-- 对失败回复点「重试」，对中断回复点「重新生成」：在原位置清空旧正文后重新生成，消息编号与数量保持不变。
-- 同群正在回复时不能重试；已完成的正常回复没有这个重试入口。
-- 正常退出会等待回复收尾。异常退出时，未落库的流式片段可能丢失；重启后残留进行中消息会标为中断。
+- Choose **Stop** or press `Ctrl/⌘ + .` to stop the current group's turn.
+- Generated content is preserved, and queued placeholders are marked as stopped.
+- For a failed reply choose **Retry**; for an interrupted reply choose **Regenerate**. The old content is cleared in place, and message IDs and counts stay unchanged.
+- Retry is unavailable while the same group is replying. Completed normal replies do not show the retry action.
+- A normal exit waits for replies to settle. On an abnormal exit, stream fragments not yet persisted may be lost; after restart, leftover in-progress messages are marked as stopped.
 
-### 来源编号
+### Source numbers
 
-消息用 `#1`、`#2` 等群内编号。AI 消息里的「读至 #N」表示生成时上下文的最后消息编号；历史仍可能因预算被裁剪，不代表逐条完整读取了此前所有正文。
+Messages use per-group numbers such as `#1`, `#2`. "Read through #N" on an AI message means the last message included in the context when it was generated; history may still be trimmed by the budget, so it does not mean every earlier message was read in full.
 
-### 聊天附件
+### Chat attachments
 
-输入框的「添加附件」可选择文件，也可以把图片粘贴或拖进输入框。每条消息最多 4 份：
+Choose **Add attachment** in the composer, or paste or drop images into it. Each message supports up to 4 attachments:
 
-| 类型 | 限制 | 发送给模型的内容 |
-|---|---|---|
-| PNG / JPEG / WebP | 单张 ≤10 MiB，≤4000 万像素 | 原图（仅当被点名的成员开启了「图片输入」） |
-| TXT / Markdown / CSV / JSON / 代码 / 日志 | ≤20 MiB，UTF-8，≤10 万字符 | 本地读取的文字，带消息编号和文件名；JSON 必须是合法格式 |
-| PDF | ≤20 MiB，≤100 页，≤10 万字符 | 本地提取的逐页文字；扫描版暂不做 OCR |
-| Word（.docx） | ≤20 MiB，≤10 万字符 | 本地提取的段落文字 |
-| PowerPoint（.pptx） | ≤20 MiB，≤10 万字符 | 本地提取的逐页幻灯片文字 |
-| Excel（.xlsx） | ≤20 MiB，≤10 万字符 | 本地提取的所有工作表文字 |
+| Type | Limit | What is sent to the model |
+| --- | --- | --- |
+| PNG / JPEG / WebP | ≤10 MiB each, ≤40 million pixels | The original image, only when the mentioned member has **Image input** enabled |
+| TXT / Markdown / CSV / JSON / code / logs | ≤20 MiB, UTF-8, ≤100,000 characters | Locally read text with message number and file name; JSON must be valid |
+| PDF | ≤20 MiB, ≤100 pages, ≤100,000 characters | Locally extracted page text; scanned PDFs are not OCRed |
+| Word (`.docx`) | ≤20 MiB, ≤100,000 characters | Locally extracted paragraph text |
+| PowerPoint (`.pptx`) | ≤20 MiB, ≤100,000 characters | Locally extracted text from each slide |
+| Excel (`.xlsx`) | ≤20 MiB, ≤100,000 characters | Locally extracted text from every worksheet |
 
-附件只保存在本机数据目录，不会上传到第三方；只有被 `@` 的成员才会收到本轮附件内容。图片是否随请求发送取决于成员设置里的「图片输入」开关：未开启时，点名发送图片会被拒绝并保留草稿，不会悄悄把图片说成已看过。上述文档的文字会作为有来源的上下文进入真实请求；群纪要整理只读取这些文字，不会发送原图。
+Attachments stay in the local data directory and are never uploaded to a third party. Only mentioned members receive the attachment content for that turn. Whether images are sent depends on **Image input** in member settings. If it is off, sending images to that member is rejected and the draft is kept; AidoChat will not pretend the model saw an image. Text from the documents above enters the real request with source information. Note organization reads only that text and never sends original images.
 
-发送失败时会保留本次草稿，可直接重试；成功发送后草稿才会清空。切换群聊或关闭应用时，未发送的草稿会被清理。预览可以查看图片和本地提取的文档文字。
+A failed send keeps the draft so you can retry; the draft is cleared only after a successful send. Unsent drafts are removed when you switch groups or close the app. **Preview** shows images and locally extracted document text.
 
-## 6. 群纪要与盖章
+## 6. Shared notes and stamping
 
-右侧纪要包含背景、方案、决定、待办，每条用 `M1`、`M2` 等编号，并关联真实消息来源。
+The notes panel contains background, plans, decisions, and tasks. Each item has an `M1`, `M2`, etc. number and links to real message sources.
 
-| 状态 | 含义 |
-|---|---|
-| AI 建议 | 模型提出，尚未经你确认 |
-| 你提出 · 待盖章 | 内容来自用户讨论，但还没有在纪要中确认 |
-| 已确认 | 由你在界面上盖章形成；AI 不能确认、改写或取代它 |
-| 已否决/已完成 | 保留记录，收进相应区域 |
+| State | Meaning |
+| --- | --- |
+| AI proposal | Suggested by a model and not yet confirmed by you |
+| Your proposal · awaiting stamp | Comes from the user discussion but is not yet confirmed in the notes |
+| Confirmed | Created by your stamp in the interface; AI cannot confirm, rewrite, or replace it |
+| Rejected / done | Kept for the record and moved to its section |
 
-自动整理会在一轮结束后检查新增可见消息是否达到阈值（当前为至少 8 条或约 2500 token）。你也可以直接点「整理」。一次有较多积压时会分窗口处理，不是一次必然整理完全部历史。
+Automatic organization checks after each turn whether enough new visible messages exist (currently at least 8 messages or about 2,500 tokens). You can also choose **Organize** directly. A large backlog is processed in windows; one run does not necessarily organize all history.
 
-在「设置」→「纪要整理」可指定服务和模型；选择「用群成员的服务」时，模型也跟随群里首位可用成员，此时不单独填写整理模型。选择指定服务后可填写该服务实际可用的模型，切换服务会清空旧模型名。整理时，新的讨论会发送给该模型服务。
+In **Settings → Note organization** you can choose the service and model. **Use a group member's service** follows the first available member and does not set a separate model. With a specific service, enter a model actually available on it; changing services clears the old model name. New discussion is sent to that model service during organization.
 
-推荐操作：先看内容，再点来源编号核对原文，最后决定是否盖章。悬停来源会高亮对应聊天消息，点击可跳转。
+Recommended flow: read the item, click its source number to check the original, then decide whether to stamp it. Hovering a source highlights the corresponding chat message; clicking jumps to it.
 
-- 「盖章」：确认一条结论。
-- 「否决」：保留被否决记录，减少重复建议。
-- 「改写」：由你修改正文；用户改写视为用户提出。
-- 撤销确认/否决：回到待确认。
-- 待办方框：标记完成或撤销完成。撤销完成后回到待确认，需要时重新盖章。
+- **Stamp**: confirm a conclusion.
+- **Reject**: keep a rejected record and reduce repeated suggestions.
+- **Edit**: you rewrite the text; a user edit counts as a user proposal.
+- Undo confirmation/rejection: return to pending.
+- Task checkbox: mark done or undo completion. Undoing returns it to pending, ready to stamp again.
 
-如果整理没有新增条目，不一定是故障：可能没有新讨论，或模型判断没有值得记录的内容；模型请求或 JSON 解析失败时也不会推进游标。不能把“整理结束”理解为“全部内容已可靠入库”。
+No new items after organizing is not necessarily a failure: there may be no new discussion, or the model may judge nothing worth recording. A model request or JSON parse failure does not advance the cursor. "Organization finished" does not mean every piece of content has been reliably stored.
 
-## 7. 群管理、外观与复制
+## 7. Group management, appearance, and copying
 
-群设置里可调整主题、默认模式、成员和发言顺序；变更会写成系统消息。移出成员后其历史发言仍保留。
+Group settings change the topic, default mode, members, and speaking order; changes are written as system messages. Removed members keep their historical messages.
 
-侧栏群菜单可归档或删除。归档只是收起，仍能从「已归档」打开；删除会连同聊天和纪要一起删除，没有应用内撤销入口。
+The group menu in the sidebar can archive or delete. Archiving only hides the group; it can still be opened from **Archived**. Deleting removes the chat and notes with no in-app undo.
 
-设置中可选宣纸、素笺、麻纸、青笺、夜读、乌金，设置日夜/跟随系统、字号和排版密度。私印支持 1–4 字、白文或朱文，也用于纪要确认的印章表现。
+Appearance settings offer Xuan, Su, Ma, Qing, Ye, and Wujin papers, day/night/follow-system mode, text size, and layout density. The personal seal supports 1–4 characters in white-on-red or red-on-paper style and is also used for confirmed note items.
 
-代码块支持高亮和「复制」，未标语言的代码也保留代码块格式。消息可复制全文。实际剪贴板操作取决于系统 WebView 的权限，本轮尚未进行完整真机剪贴板验收。
+**Settings → Interface language** switches between Chinese (default) and English. The interface, common backend errors, and newly created system messages follow the selected language; existing messages keep the language they were written in. Group names, member names, prompts, and model output are your content and are never translated automatically.
 
-### 分享图片
+Code blocks support highlighting and **Copy**; code without a language tag keeps its block formatting. Message text can be copied in full. Actual clipboard behavior depends on the system WebView permissions; full native clipboard verification is still pending.
 
-群聊头部有「分享图片」入口。选择起止消息（闭区间）、纸面（当前纸或宣纸）和是否显示群名、时间、AidoChat 署名，然后预览并保存。
+### Share image
 
-- 内容超过一页时会按真实版心自动分页，最多 20 张；每张 PNG 固定 1080 宽，代码长行自动换行，表格跨页会重复表头并在续页显示「（续）」。
-- 保存时会弹出系统目录选择，图片写入一个新的子文件夹「群名-日期-短编号」，不会覆盖旧文件。保存完成后界面显示文件夹名。
-- 分享图只包含群名、日期、发言者名字与印章、可选时间、正文、附件名称/图片和页码；不会包含模型名、服务名、本机路径或附件提取全文。
-- 已退群成员的历史发言显示为「已退群成员」；正在生成的消息不能选择。
-- 分享图不会自动上传到任何服务，生成和保存都在本机完成。
+The group header has a **Share image** entry. Choose the start and end messages (inclusive), the paper (current or Xuan), and whether to show the group name, time, and AidoChat signature. Then preview and save.
 
-## 8. 数据位置、备份与恢复
+- Content longer than one page is paginated to the real page body, up to 20 images. Each PNG is exactly 1080 wide. Long code lines wrap, and tables repeat their header with a **continued** marker on later pages.
+- Saving opens the system directory picker. Images go into a new subfolder named `group-date-short-id`; existing files are never overwritten. The folder name is shown when saving finishes.
+- A share image contains the group name, date, speaker names and seals, optional time, message text, attachment names/images, and page numbers. It never includes model names, service names, local paths, or extracted attachment text.
+- Historical messages from removed members show **Removed member**. In-progress messages cannot be selected.
+- Share images are never uploaded automatically; generation and saving happen locally.
 
-在「设置」→「数据」查看真实数据库目录，也可打开文件管理器。
+## 8. Data location, backup, and restore
 
-| 系统 | 默认数据目录 |
-|---|---|
+Open **Settings → Data** to see the real database directory and open the file manager.
+
+| System | Default data directory |
+| --- | --- |
 | macOS | `~/Library/Application Support/ai-group-chat/` |
 | Windows | `%APPDATA%\ai-group-chat\` |
-| Linux | `~/.config/ai-group-chat/`；设置了 `XDG_CONFIG_HOME` 时跟随该目录 |
+| Linux | `~/.config/ai-group-chat/`; follows `XDG_CONFIG_HOME` when set |
 
-更名后继续使用上述 `ai-group-chat` 数据目录和同名系统凭证服务，已有聊天与 Key 不迁移、不重置。Windows 为兼容升级也保留旧安装目录名；界面和程序名称为 AidoChat。
+After the rename, AidoChat continues to use the `ai-group-chat` data directory and credential service so existing chats and Keys are neither migrated nor reset. Windows keeps the old install directory name for upgrade compatibility; the interface and program name are AidoChat.
 
-主要文件是 `data.db`（SQLite）、`avatars/`（头像）和 `window.json`（窗口状态）。API Key 另存于系统钥匙串，不在数据库里。
+The main files are `data.db` (SQLite), `avatars/` (avatars), and `window.json` (window state). API Keys live in the system keychain, not in the database.
 
-**备份**：先停止生成和整理，正常退出应用并等它结束，然后复制整个数据目录。应用运行时直接复制单独的 `data.db` 可能遗漏 WAL 中的修改。
+**Backup**: stop generation and organization, exit normally, wait for the app to finish, then copy the entire data directory. Copying only `data.db` while the app is running may miss changes in the WAL.
 
-**恢复**：先退出应用，备份当前数据目录，再把之前备份的整份数据放回原位置。换电脑或系统时，需要在已恢复的模型服务条目中重新保存 Key；只复制数据库不会迁移系统钥匙串。
+**Restore**: exit the app, back up the current data directory, then put the previous backup back in place. On a new computer or system, re-enter the Keys in the restored model services; copying only the database does not migrate the system keychain.
 
-项目源码、项目过程归档和这些用户数据是三类不同文件。清理 `node_modules`、`dist` 或历史截图不会删除聊天；反过来，备份源码也不等于备份聊天。
+Source code, process archives, and user data are three different things. Cleaning `node_modules`, `dist`, or historical screenshots does not delete chats; backing up source code does not back up chats either.
 
-## 9. 常见问题
+## 9. FAQ
 
-| 现象 | 先检查什么 |
-|---|---|
-| 看到了演示群，但配置不生效 | 是否只启动了浏览器 mock；真实使用应打开桌面窗口 |
-| 发送后没有 AI 回答 | 是否正确 `@` 了当前群成员，名字是否已改变 |
-| 401/403 | Key、账户权限、服务地址和模型是否对应；系统凭证授权是否允许 |
-| 404/参数不支持 | 是否误填官网地址、错误接口路径、其他厂商的模型名或不支持的参数 |
-| 429 | 服务商额度或频率限制 |
-| 连接/流式超时 | 服务是否运行、网络是否正常；本地模型是否已安装并就绪 |
-| 本地服务没 Key 也出现提示 | 确认它确实不需要鉴权；可以留空，尝试真实连接 |
-| 不能删除模型服务 | 仍有未删除成员使用它；先修改这些成员的服务或删除成员。已删除成员的历史资料不再阻止下线 |
-| 纪要盖章后又想修改 | 使用用户改写或撤销确认；AI 本身不能变更已确认条目 |
-| 重启后配置不见 | 是否换了系统用户、运行模式或数据目录；浏览器演示数据不等于桌面数据 |
-| `wails3` 找不到 | 检查固定版本 CLI 是否安装、Go bin 是否在 PATH |
-| 开发端口 5173 被占用 | 结束占用该端口的旧开发服务，再启动；项目使用严格端口 |
+| Symptom | Check first |
+| --- | --- |
+| Demo groups appear but settings do nothing | Did you start only the browser mock? Real use requires the desktop window |
+| No AI reply after sending | Did you correctly `@` a current group member, and has the name changed? |
+| 401/403 | Whether the Key, account permission, endpoint, and model match; whether system credential access was allowed |
+| 404 / unsupported parameter | A homepage instead of an API endpoint, wrong path, another provider's model name, or an unsupported parameter |
+| 429 | Provider quota or rate limit |
+| Connection / stream timeout | Whether the service is running and the network is healthy; whether a local model is installed and ready |
+| A local service without a Key still warns | Confirm it truly needs no authentication; leave the Key empty and try a real connection |
+| Cannot delete a model service | Members still use it. Update those members or delete them. Historical data from deleted members no longer blocks retirement |
+| Want to change a stamped note | Use user edit or undo confirmation; AI itself cannot change confirmed items |
+| Settings disappear after restart | Different system user, run mode, or data directory; browser demo data is not desktop data |
+| `wails3` not found | Check that the pinned CLI is installed and Go's bin directory is on `PATH` |
+| Port 5173 is in use | Stop the old dev server using that port; the project uses a strict port |
 
-## 10. 快捷键与当前边界
+## 10. Shortcuts and current limits
 
-- `Enter` 发送，`Shift + Enter` 换行。
-- `Ctrl/⌘ + .` 停止当前轮次。
-- 点名菜单中使用上下键选择，`Enter/Tab` 确认，`Esc` 关闭。
-- 输入法组字时 Enter 的代码保护已实现；真实输入法验收仍待完成。
+- `Enter` sends; `Shift + Enter` inserts a newline.
+- `Ctrl/⌘ + .` stops the current turn.
+- In the mention menu, use the arrow keys to move, `Enter`/`Tab` to confirm, and `Esc` to close.
+- Input-method composition protection for Enter is implemented; real IME verification is still pending.
 
-应用不提供账号/云同步、跨群个人记忆、AI 自动互相唤起、联网搜索或执行代码。聊天附件目前支持图片、TXT/Markdown/PDF、Word/PowerPoint/Excel、CSV/JSON、代码和日志；扫描版 PDF 的 OCR 和视频暂不支持，附件是否会被模型看到取决于成员是否被点名及其「图片输入」设置。
+AidoChat does not provide accounts, cloud sync, cross-group personal memory, AI-triggered AI conversations, web search, or code execution. Attachments currently support images, TXT/Markdown/PDF, Word/PowerPoint/Excel, CSV/JSON, code, and logs; scanned-PDF OCR and video are not supported. Whether an attachment is visible to a model depends on whether the member is mentioned and on its **Image input** setting.

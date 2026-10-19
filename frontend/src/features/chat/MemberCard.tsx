@@ -3,6 +3,7 @@ import type { GroupSummary, Member } from '../../backend'
 import { Button } from '../../components/Button'
 import { Seal } from '../../components/Seal'
 import { avatarOf } from '../../lib/avatar'
+import { useT } from '../../i18n/react'
 import styles from './MemberCard.module.css'
 
 /** 点群头部的成员印章弹出的小名片：点名，或者改他在本群的样子。 */
@@ -21,6 +22,7 @@ export function MemberCard({
 }) {
   const ref = useRef<HTMLDivElement>(null)
   const custom = !!group.memberAvatars[member.id]
+  const t = useT()
 
   useEffect(() => {
     const onDown = (e: MouseEvent) => {
@@ -45,17 +47,17 @@ export function MemberCard({
           <span className={styles.name} style={{ color: `var(--pigment-${avatarOf(member, group)!.color})` }}>
             {member.name}
           </span>
-          <span className={styles.brief}>{member.brief || '没有简介'}</span>
+          <span className={styles.brief}>{member.brief || t('没有简介')}</span>
           <span className={styles.model}>{member.model}</span>
         </div>
       </div>
-      {custom && <p className={styles.note}>在本群用了单独的头像</p>}
+      {custom && <p className={styles.note}>{t('在本群用了单独的头像')}</p>}
       <div className={styles.actions}>
         <Button variant="ghost" size="sm" onClick={onMention}>
-          @ 点名
+          {t('@ 点名')}
         </Button>
         <Button variant="quiet" size="sm" icon="edit" onClick={onEditAvatar}>
-          本群头像
+          {t('本群头像')}
         </Button>
       </div>
     </div>

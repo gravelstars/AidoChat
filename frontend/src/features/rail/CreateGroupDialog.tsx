@@ -5,6 +5,8 @@ import { Dialog } from '../../components/Dialog'
 import { Field, TextArea, TextInput } from '../../components/Field'
 import { Seal } from '../../components/Seal'
 import { Segmented } from '../../components/Segmented'
+import { translateError } from '../../i18n'
+import { useT } from '../../i18n/react'
 import { useChat } from '../../state/store'
 import { MemberEditor } from '../members/MemberEditor'
 import styles from './CreateGroupDialog.module.css'
@@ -27,6 +29,7 @@ export function CreateGroupDialog({ open, onClose }: { open: boolean; onClose():
   const [mode, setMode] = useState<ReplyMode>('serial')
   const [errors, setErrors] = useState<{ title?: string; members?: string; form?: string }>({})
   const [submitting, setSubmitting] = useState(false)
+  const t = useT()
 
   useEffect(() => {
     if (open) {
@@ -44,8 +47,8 @@ export function CreateGroupDialog({ open, onClose }: { open: boolean; onClose():
   const submit = async (e?: FormEvent) => {
     e?.preventDefault()
     const errs: typeof errors = {}
-    if (!title.trim()) errs.title = '给群起个名字'
-    if (picked.length === 0) errs.members = '至少邀请一位成员'
+    if (!title.trim()) errs.title = t('给群起个名字')
+    if (picked.length === 0) errs.members = t('至少邀请一位成员')
     setErrors(errs)
     if (Object.keys(errs).length) return
     setSubmitting(true)
@@ -53,7 +56,7 @@ export function CreateGroupDialog({ open, onClose }: { open: boolean; onClose():
       await createGroup({ title: title.trim(), topic: topic.trim(), memberIds: picked, defaultMode: mode })
       onClose()
     } catch (e) {
-      setErrors({ form: e instanceof Error ? e.message : String(e) })
+      setErrors({ form: translateError(e) })
     } finally {
       setSubmitting(false)
     }
@@ -64,32 +67,32 @@ export function CreateGroupDialog({ open, onClose }: { open: boolean; onClose():
     <Dialog
       open={open}
       onClose={onClose}
-      title="新建群聊"
-      description="一个群就是一个独立的话题，记录和纪要只属于这个群。"
+      title={t('新建群聊')}
+      description={t('一个群就是一个独立的话题，记录和纪要只属于这个群。')}
       width={520}
       footer={
         <>
           <Button variant="ghost" onClick={onClose}>
-            取消
+            {t('取消')}
           </Button>
           <Button variant="primary" onClick={() => void submit()} disabled={submitting}>
-            创建
+            {t('创建')}
           </Button>
         </>
       }
     >
       <form onSubmit={submit}>
-        <Field label="群名" error={errors.title}>
-          {(id) => <TextInput id={id} value={title} onChange={(e) => setTitle(e.target.value)} placeholder="例如：首页改版评审" autoFocus maxLength={40} />}
+        <Field label={t('群名')} error={errors.title}>
+          {(id) => <TextInput id={id} value={title} onChange={(e) => setTitle(e.target.value)} placeholder={t('例如：首页改版评审')} autoFocus maxLength={40} />}
         </Field>
-        <Field label="主题" hint="会告诉每位成员这个群在讨论什么，可以不填。">
-          {(id) => <TextArea id={id} value={topic} onChange={(e) => setTopic(e.target.value)} rows={2} placeholder="例如：官网首页从三栏改为单列，评估设计与实现影响" maxLength={200} />}
+        <Field label={t('主题')} hint={t('会告诉每位成员这个群在讨论什么，可以不填。')}>
+          {(id) => <TextArea id={id} value={topic} onChange={(e) => setTopic(e.target.value)} rows={2} placeholder={t('例如：官网首页从三栏改为单列，评估设计与实现影响')} maxLength={200} />}
         </Field>
-        <Field label="邀请成员" error={errors.members} hint="点选的先后就是 @所有人 时的回复顺序。" aside={<span className={styles.count}>{picked.length} 位</span>}>
+        <Field label={t('邀请成员')} error={errors.members} hint={t('点选的先后就是 @所有人 时的回复顺序。')} aside={<span className={styles.count}>{t('{n} 位', { n: picked.length })}</span>}>
           {() => (
             <>
-            {available.length === 0 && <p className={styles.note}>还没有可邀请的成员。先新建成员并配置模型服务，再邀请进群。</p>}
-            <Button variant="quiet" size="sm" onClick={() => setMemberOpen(true)}>新建成员</Button>
+            {available.length === 0 && <p className={styles.note}>{t('还没有可邀请的成员。先新建成员并配置模型服务，再邀请进群。')}</p>}
+            <Button variant="quiet" size="sm" onClick={() => setMemberOpen(true)}>{t('新建成员')}</Button>
             <div className={styles.grid} role="group">
               {available.map((m) => {
                 const order = picked.indexOf(m.id)
@@ -108,15 +111,15 @@ export function CreateGroupDialog({ open, onClose }: { open: boolean; onClose():
             </>
           )}
         </Field>
-        <Field label="同时 @ 多位成员时" hint="发送时还可以临时切换。">
+        <Field label={t('同时 @ 多位成员时')} hint={t('发送时还可以临时切换。')}>
           {() => (
             <Segmented
-              label="默认回复方式"
+              label={t('默认回复方式')}
               value={mode}
               onChange={setMode}
               options={[
-                { value: 'serial', label: '依次回复' },
-                { value: 'parallel', label: '同时回复' },
+                { value: 'serial', label: t('依次回复') },
+                { value: 'parallel', label: t('同时回复') },
               ]}
             />
           )}

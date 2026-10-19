@@ -1,6 +1,8 @@
 import { create } from 'zustand'
 import { backend } from '../backend'
 import { DEFAULT_APPEARANCE, DEFAULT_USER_SEAL } from '../backend'
+import { DEFAULT_LANGUAGE, initLanguage, isLanguage, setLanguage as applyLanguage, translateError } from '../i18n'
+import type { Language } from '../i18n/types'
 import type {
   Appearance,
   Avatar,
@@ -54,6 +56,8 @@ interface ChatStore {
   providers: ProviderConfig[]
   /** 纪要整理使用的服务与模型（TASK-008） */
   memory: MemoryConfig
+  /** 界面语言；可执行程序默认中文 */
+  language: Language
   version: string
   groups: GroupSummary[]
   activeId: string | null
@@ -81,6 +85,7 @@ interface ChatStore {
   jumpTo(seq: number): void
   setAppearance(patch: Partial<Appearance>): void
   toggleNight(): void
+  setLanguage(language: Language): void
   setUserProfile(profile: UserProfile): Promise<void>
   setUserSeal(seal: UserSeal): void
   setGroupAvatar(groupId: string, memberId: string, avatar: Avatar | null): Promise<void>
@@ -234,6 +239,7 @@ export const useChat = create<ChatStore>((set, get) => ({
   retiredIds: [],
   providers: [],
   memory: { providerId: '', model: '' },
+  language: DEFAULT_LANGUAGE,
   version: '',
   groups: [],
   activeId: null,
@@ -248,6 +254,7 @@ export const useChat = create<ChatStore>((set, get) => ({
     try {
       const b = await backend.bootstrap()
       const night = applyAppearance(b.appearance)
+      const language = initLanguage(isLanguage(b.language) ? b.language : DEFAULT_LANGUAGE)
       darkQuery.addEventListener('change', () => set({ night: applyAppearance(get().appearance) }))
       document.documentElement.dataset.platform = b.platform
       set({
@@ -259,6 +266,7 @@ export const useChat = create<ChatStore>((set, get) => ({
         userSeal: b.userSeal,
         providers: b.providers,
         memory: b.memory ?? { providerId: '', model: '' },
+        language,
         version: b.version ?? '',
         members: Object.fromEntries(b.members.map((m) => [m.id, m])),
         retiredIds: b.retiredMemberIds ?? [],
@@ -267,7 +275,7 @@ export const useChat = create<ChatStore>((set, get) => ({
       const first = b.groups.find((g) => !g.archived) ?? b.groups[0]
       if (first) await get().open(first.id)
     } catch (err) {
-      set({ error: String(err) })
+      set({ error: translateError(err instanceof Error ? err.message : String(err)) })
     }
   },
 
@@ -353,6 +361,20 @@ export const useChat = create<ChatStore>((set, get) => ({
 
   toggleNight() {
     get().setAppearance({ mode: get().night ? 'day' : 'night' })
+  },
+
+  setLanguage(language) {
+    const previous = get().language
+    if (language === previous) return
+    set({ language })
+    applyLanguage(language)
+    void backend.setLanguage(language).catch((err) => {
+      if (get().language === language) {
+        set({ language: previous })
+        applyLanguage(previous)
+      }
+      reportError(err)
+    })
   },
 
   async setUserProfile(profile) {
@@ -465,7 +487,10 @@ function optimistic(id: string, patch: Partial<MemoryItem>) {
 
 export const useActive = () => useChat((s) => (s.activeId ? s.detail[s.activeId] : undefined))
 
-function reportError(err: unknown) { useChat.setState({ error: err instanceof Error ? err.message : String(err) }) }
+function reportError(err: unknown) {
+  useChat.setState({ error: translateError(err instanceof Error ? err.message : String(err)) })
+}
+
 
 async function updateMemory(id: string, patch: Partial<MemoryItem>, operation: () => Promise<MemoryItem>) {
   const previous = Object.values(useChat.getState().detail).flatMap((g) => g.memory).find((item) => item.id === id)

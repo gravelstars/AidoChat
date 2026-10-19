@@ -8,6 +8,7 @@ import { Seal, UserSeal } from '../../components/Seal'
 import { avatarOf, isCustomSeal } from '../../lib/avatar'
 import { Segmented } from '../../components/Segmented'
 import { clock } from '../../lib/format'
+import { useT } from '../../i18n/react'
 import { useChat, type GroupState } from '../../state/store'
 import { TodoCheck } from './TodoCheck'
 import styles from './MemoryPanel.module.css'
@@ -34,6 +35,7 @@ export function MemoryPanel({ state, members }: { state: GroupState; members: Re
   const toggle = useChat((s) => s.toggleMemory)
   const summarize = useChat((s) => s.summarize)
   const [filter, setFilter] = useState<Filter>('all')
+  const t = useT()
   const [showArchive, setShowArchive] = useState(false)
   // 刚勾选的待办先在原位停留 0.6 秒（看到勾与删除线）再收进「已完成与已否决」。
   const [held, setHeld] = useState<string[]>([])
@@ -49,30 +51,30 @@ export function MemoryPanel({ state, members }: { state: GroupState; members: Re
   const visible = live.filter((m) => filter === 'all' || (filter === 'pending' ? m.status === 'proposed' : m.status === 'confirmed'))
 
   return (
-    <aside className={styles.panel} aria-label="群纪要">
+    <aside className={styles.panel} aria-label={t('群纪要')}>
       <header className={`${styles.head} drag`}>
         <div className={styles.headTitle}>
-          <h2 className={styles.title}>纪要</h2>
-          <span className={styles.cursor}>{summarizing ? <Pencil /> : group.memoryCursor ? `整理至 #${group.memoryCursor}` : '尚未整理'}</span>
+          <h2 className={styles.title}>{t('纪要')}</h2>
+          <span className={styles.cursor}>{summarizing ? <Pencil /> : group.memoryCursor ? t('整理至 #{n}', { n: group.memoryCursor }) : t('尚未整理')}</span>
         </div>
         <span className={styles.tools}>
-          <Button variant="quiet" size="sm" icon="sparkle" onClick={() => void summarize()} disabled={summarizing} title="把新的讨论整理进纪要">
-            整理
+          <Button variant="quiet" size="sm" icon="sparkle" onClick={() => void summarize()} disabled={summarizing} title={t('把新的讨论整理进纪要')}>
+            {t('整理')}
           </Button>
-          <Button variant="quiet" size="sm" icon="panel" onClick={() => toggle(false)} aria-label="收起纪要" title="收起纪要" />
+          <Button variant="quiet" size="sm" icon="panel" onClick={() => toggle(false)} aria-label={t('收起纪要')} title={t('收起纪要')} />
         </span>
       </header>
 
       <div className={styles.filters}>
         <Segmented
           size="sm"
-          label="筛选"
+          label={t('筛选')}
           value={filter}
           onChange={setFilter}
           options={[
-            { value: 'all', label: `全部 ${live.length}` },
-            { value: 'pending', label: `待确认 ${pending}` },
-            { value: 'confirmed', label: `已确认 ${live.length - pending}` },
+            { value: 'all', label: `${t('全部')} ${live.length}` },
+            { value: 'pending', label: `${t('待确认')} ${pending}` },
+            { value: 'confirmed', label: `${t('已确认')} ${live.length - pending}` },
           ]}
         />
       </div>
@@ -84,23 +86,23 @@ export function MemoryPanel({ state, members }: { state: GroupState; members: Re
           return (
             <section key={sec.kind} className={styles.section}>
               <h3 className={styles.sectionTitle}>
-                {sec.title}
+                {t(sec.title)}
                 <span className={styles.count}>{items.length || ''}</span>
               </h3>
               {items.length === 0 ? (
-                <p className={styles.empty}>{sec.empty}</p>
+                <p className={styles.empty}>{t(sec.empty)}</p>
               ) : (
                 items.map((it) => <Row key={it.id} item={it} members={members} group={group} onComplete={hold} />)
               )}
             </section>
           )
         })}
-        {visible.length === 0 && filter !== 'all' && <p className={styles.empty}>{filter === 'pending' ? '都处理完了' : '还没有盖过章'}</p>}
+        {visible.length === 0 && filter !== 'all' && <p className={styles.empty}>{filter === 'pending' ? t('都处理完了') : t('还没有盖过章')}</p>}
 
         {archived.length > 0 && (
           <section className={styles.archive}>
             <button className={styles.archiveToggle} onClick={() => setShowArchive((v) => !v)} aria-expanded={showArchive}>
-              已完成与已否决 · {archived.length}
+              {t('已完成与已否决')} · {archived.length}
               <Icon name="arrowDown" size={12} style={{ transform: showArchive ? 'rotate(180deg)' : undefined }} />
             </button>
             {showArchive && archived.map((it) => <Row key={it.id} item={it} members={members} group={group} />)}
@@ -108,15 +110,16 @@ export function MemoryPanel({ state, members }: { state: GroupState; members: Re
         )}
       </div>
 
-      <footer className={styles.foot}>{isDemo ? "演示纪要从预设回复提取，不调用模型。只有你盖章的条目才算定论。" : "纪要由整理模型生成，整理时相关讨论会发送给该模型服务。只有你盖章的条目才算定论。"}</footer>
+      <footer className={styles.foot}>{isDemo ? t('从预设回复中提取。只有你盖章的条目才算定论。') : t('纪要由整理模型生成，整理时相关讨论会发送给该模型服务。只有你盖章的条目才算定论。')}</footer>
     </aside>
   )
 }
 
 function Pencil() {
+  const t = useT()
   return (
     <span className={styles.pencil}>
-      整理中<i />
+      {t('整理中')}<i />
       <i />
       <i />
     </span>
@@ -137,6 +140,7 @@ function Row({ item, members, group, onComplete }: { item: MemoryItem; members: 
   const [draft, setDraft] = useState(item.content)
   const [revealed, setRevealed] = useState(false)
   const ref = useRef<HTMLElement>(null)
+  const t = useT()
 
   // 正文里点击 "M3" 时定位到这里
   useEffect(() => {
@@ -197,14 +201,14 @@ function Row({ item, members, group, onComplete }: { item: MemoryItem; members: 
         <div className={styles.meta}>
           <span className={styles.who}>
             {proposer ? <Seal avatar={avatarOf(proposer, group)} size="xs" /> : <UserSeal seal={userSeal} size="xs" title={displayName} />}
-            {tone === 'ai' ? `${proposer?.name ?? '成员'} 建议` : tone === 'user' ? '你提出 · 待盖章' : `${proposer?.name ?? '你'}提出`}
+            {tone === 'ai' ? t('{name} 建议', { name: proposer?.name ?? t('成员') }) : tone === 'user' ? t('你提出 · 待盖章') : t('{name}提出', { name: proposer?.name ?? t('你') })}
           </span>
           {sources.map((seq) => (
-            <button key={seq} className={styles.source} onMouseEnter={() => setHover(seq)} onMouseLeave={() => setHover(null)} onClick={() => jumpTo(seq)} title="定位到原话">
+            <button key={seq} className={styles.source} onMouseEnter={() => setHover(seq)} onMouseLeave={() => setHover(null)} onClick={() => jumpTo(seq)} title={t('定位到原话')}>
               #{seq}
             </button>
           ))}
-          {item.confirmedAt && <span className={styles.when}>你确认于 {clock(item.confirmedAt)}</span>}
+          {item.confirmedAt && <span className={styles.when}>{t('你确认于 {time}', { time: clock(item.confirmedAt) })}</span>}
         </div>
       </div>
 
@@ -213,15 +217,15 @@ function Row({ item, members, group, onComplete }: { item: MemoryItem; members: 
       <div className={styles.actions}>
         {item.status === 'proposed' && !editing && (
           <>
-            <button className={styles.stampBtn} onClick={() => void confirm(item.id)} title="盖章确认：这条成为定论">
-              盖章
+            <button className={styles.stampBtn} onClick={() => void confirm(item.id)} title={t('盖章确认：这条成为定论')}>
+              {t('盖章')}
             </button>
-            <Button variant="quiet" size="sm" icon="edit" onClick={() => setEditing(true)} aria-label="改写" title="改写（双击内容也可以）" />
-            <Button variant="quiet" size="sm" icon="close" onClick={() => void reject(item.id)} aria-label="否决" title="否决：AI 之后不会再提" />
+            <Button variant="quiet" size="sm" icon="edit" onClick={() => setEditing(true)} aria-label={t('改写')} title={t('改写（双击内容也可以）')} />
+            <Button variant="quiet" size="sm" icon="close" onClick={() => void reject(item.id)} aria-label={t('否决')} title={t('否决：AI 之后不会再提')} />
           </>
         )}
         {(item.status === 'confirmed' || item.status === 'rejected') && (
-          <Button variant="quiet" size="sm" icon="retry" onClick={() => void reopen(item.id)} title={item.status === 'confirmed' ? '撤销确认' : '恢复为待确认'} aria-label="撤销" />
+          <Button variant="quiet" size="sm" icon="retry" onClick={() => void reopen(item.id)} title={item.status === 'confirmed' ? t('撤销确认') : t('恢复为待确认')} aria-label={t('撤销')} />
         )}
       </div>
     </article>
@@ -230,11 +234,12 @@ function Row({ item, members, group, onComplete }: { item: MemoryItem; members: 
 
 /** 确认印。用户刻了私印就盖私印，否则盖朱文「定」。从空中落下、压实，墨晕散开。 */
 function Stamp({ animate, seal }: { animate: boolean; seal: UserSealData | null }) {
+  const t = useT()
   const cls = [styles.stamp, seal && styles.stampSeal, animate && styles.stampAnimate].filter(Boolean).join(' ')
   return (
-    <span className={cls} aria-label="已确认" style={animate ? { animationName: 'stamp-in' } : undefined}>
+    <span className={cls} aria-label={t('已确认')} style={animate ? { animationName: 'stamp-in' } : undefined}>
       {animate && <span className={styles.bleed} style={{ animationName: 'ink-bleed' }} />}
-      {seal ? <UserSeal seal={seal} px={32} title="已确认" /> : <span className={styles.stampGlyph}>定</span>}
+      {seal ? <UserSeal seal={seal} px={32} title={t('已确认')} /> : <span className={styles.stampGlyph}>{t('定')}</span>}
     </span>
   )
 }

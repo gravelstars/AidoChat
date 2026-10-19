@@ -4,10 +4,12 @@ import { Seal, UserSeal } from '../../components/Seal'
 import type { SharePagePlan } from '../../lib/share/paginate'
 import { SHARE_WIDTH } from '../../lib/share/paginate'
 import type { ShareMessage } from '../../lib/share/snapshot'
+import { useT } from '../../i18n/react'
 import styles from './SharePage.module.css'
 
 /** 分享图中的消息内容：Markdown 同 GFM，但代码只保留原文并自动换行。 */
 export function MessageContent({ message }: { message: ShareMessage }) {
+  const t = useT()
   return (
     <>
       {message.content && (
@@ -25,9 +27,9 @@ export function MessageContent({ message }: { message: ShareMessage }) {
               </li>
             ) : (
               <li key={`${a.name}-${i}`} className={styles.documentItem}>
-                <span className={styles.docLabel}>附件</span>
+                <span className={styles.docLabel}>{t('附件')}</span>
                 <span>{a.name}</span>
-                {!!a.pageCount && <span className={styles.docMeta}>{a.pageCount} 页</span>}
+                {!!a.pageCount && <span className={styles.docMeta}>{t('{n} 页', { n: a.pageCount })}</span>}
               </li>
             ),
           )}
@@ -39,6 +41,7 @@ export function MessageContent({ message }: { message: ShareMessage }) {
 
 export function SharePageView({ plan }: { plan: SharePagePlan }) {
   const { snapshot } = plan
+  const t = useT()
   return (
     <article className={styles.page} data-paper={snapshot.paper} style={{ width: SHARE_WIDTH }}>
       <header className={styles.pageHead}>
@@ -61,7 +64,7 @@ export function SharePageView({ plan }: { plan: SharePagePlan }) {
               <div className={styles.main}>
                 <header className={styles.author}>
                   <span className={styles.name}>{chunk.message.author.name}</span>
-                  {chunk.continuation && <span className={styles.continued}>（续）</span>}
+                  {chunk.continuation && <span className={styles.continued}>{t('（续）')}</span>}
                   {snapshot.showTime && <time className={styles.time}>{chunk.message.time}</time>}
                 </header>
                 <div className={styles.content} dangerouslySetInnerHTML={{ __html: chunk.contentHtml }} />
@@ -72,7 +75,7 @@ export function SharePageView({ plan }: { plan: SharePagePlan }) {
       </main>
       <footer className={styles.pageFoot}>
         {snapshot.showSignature ? <span className={styles.signature}>AidoChat</span> : <span />}
-        <span className={styles.pageNo}>第 {plan.index} 页 · 共 {plan.total} 页</span>
+        <span className={styles.pageNo}>{t('第 {index} 页 · 共 {total} 页', { index: plan.index, total: plan.total })}</span>
       </footer>
     </article>
   )
