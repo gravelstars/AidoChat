@@ -31,8 +31,8 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="docs/assets/main-night.png">
-    <img src="docs/assets/main-day.png" alt="AidoChat with group list, conversation, and source-linked shared notes" width="920">
+    <source media="(prefers-color-scheme: dark)" srcset="docs/assets/main-night.en.png">
+    <img src="docs/assets/main-day.en.png" alt="AidoChat with group list, conversation, and source-linked shared notes" width="920">
   </picture>
 </p>
 
@@ -64,29 +64,29 @@ Choose your platform and download **0.1.4**:
 ## Features
 
 <p align="center">
-  <img src="docs/assets/feature-conversation.png" alt="Mention two members and choose sequential replies" width="760">
+  <img src="docs/assets/feature-conversation.en.png" alt="Mention two members and choose sequential replies" width="760">
 </p>
 
 ### Give the discussion an order
 Mention one member, several, or everyone; choose sequential or parallel replies. Stop at any time, and retry a failed or interrupted reply in place.
 
 <p align="center">
-  <img src="docs/assets/feature-memory-comparison.png" alt="Dashed AI proposals, solid user proposals, and stamped decisions" width="840"><br>
-  <img src="docs/assets/stamp.gif" alt="Clicking to stamp: the seal lands and ink spreads" width="240">
+  <img src="docs/assets/feature-memory-comparison.en.png" alt="Dashed AI proposals, solid user proposals, and stamped decisions" width="840"><br>
+  <img src="docs/assets/stamp.en.gif" alt="Clicking to stamp: the seal lands and ink spreads" width="240">
 </p>
 
 ### Proposals and decisions look different
 AI proposals use a dashed pencil line, your proposals use a solid ink line, and stamped decisions turn cinnabar. Source links jump back to the original message; AI cannot confirm on your behalf.
 
 <p align="center">
-  <img src="docs/assets/feature-papers.png" alt="Six papers: Xuan, Su, Ma, Qing, Ye, and Wujin" width="760">
+  <img src="docs/assets/feature-papers.en.png" alt="Six papers: Xuan, Su, Ma, Qing, Ye, and Wujin" width="760">
 </p>
 
 ### Six papers, one personal seal
 Choose among six paper themes, reading sizes and density, a full display name, and a separate short seal. Member avatars can differ per group.
 
 <p align="center">
-  <img src="docs/assets/feature-privacy.png" alt="Demo service settings never accept a Key or contact a real model" width="560">
+  <img src="docs/assets/feature-privacy.en.png" alt="Demo service settings never accept a Key or contact a real model" width="560">
 </p>
 
 ### Local records, services you choose

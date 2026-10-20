@@ -70,5 +70,7 @@ export function initLanguage(language: unknown): Language {
   const next = isLanguage(language) ? language : DEFAULT_LANGUAGE
   active = next
   if (typeof document !== 'undefined') document.documentElement.lang = next
+  // 启动时 App 之外已挂载的组件（例如演示版横幅）也要切换到同一语言。
+  listeners.forEach((listener) => listener())
   return next
 }

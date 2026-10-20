@@ -132,6 +132,7 @@ function PaperSection() {
 
 /** 纸样：在 data-paper 作用域里画一个缩小的界面，所有颜色都来自该纸的 token。 */
 function PaperSwatch({ id }: { id: PaperId }) {
+  const t = useT()
   return (
     <span className={styles.swatch} data-paper={id} aria-hidden="true">
       <span className={styles.swRail}>
@@ -156,7 +157,7 @@ function PaperSwatch({ id }: { id: PaperId }) {
         </span>
       </span>
       <span className={styles.swMemo}>
-        <span className={styles.swStamp}>定</span>
+        <span className={styles.swStamp}>{t('定')}</span>
         <span className={styles.swNote} />
         <span className={styles.swNote} data-pencil />
       </span>
@@ -246,6 +247,7 @@ function ReadingSection() {
   const setAppearance = useChat((s) => s.setAppearance)
   const seal = useChat((s) => s.userSeal)
   const t = useT()
+  const sampleName = t('墨白')
   return (
     <Section title={t('阅读')}>
       <div className={styles.readingRow}>
@@ -283,15 +285,15 @@ function ReadingSection() {
           <div>
             <div className={styles.sampleName} title={displayName}>{displayName}</div>
             <p className={styles.sampleText}>
-              <span className={styles.sampleAt}>@墨白</span> {t('正文行宽多少合适？')}
+              <span className={styles.sampleAt}>@{sampleName}</span> {t('正文行宽多少合适？')}
             </p>
           </div>
         </div>
         <div className={styles.sampleMsg}>
-          <Seal avatar={{ glyph: '墨', color: 'shiqing' }} size="md" />
+          <Seal avatar={{ glyph: sampleName.slice(0, 1), color: 'shiqing' }} size="md" />
           <div>
             <div className={styles.sampleName} style={{ color: 'var(--pigment-shiqing)' }}>
-              墨白
+              {sampleName}
             </div>
             <p className={styles.sampleText}>{t('中文正文每行 36 到 40 个字读起来最舒服，大约 720px。行距不要低于字号的 1.6 倍，否则段落会显得拥挤。')}</p>
           </div>

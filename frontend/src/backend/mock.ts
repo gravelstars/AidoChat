@@ -37,7 +37,13 @@ let idSeq = 1000
 const nid = (p: string) => `${p}${++idSeq}`
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms))
 
-const members: Member[] = [
+// 演示数据与界面语言一致；切换语言不会改写已有记录。
+const storedLanguage = readJSON<string>(demoKey('agc.language'))
+let language = typeof storedLanguage === 'string' && /^[a-z]{2,3}(-[A-Za-z0-9]{2,8})*$/.test(storedLanguage) ? storedLanguage : 'zh'
+const localized = (zh: string, en: string) => (language === 'zh' ? zh : en)
+const demoUserSeal: UserSeal = language === 'zh' ? DEFAULT_USER_SEAL : { text: 'Y', style: 'baiwen' }
+
+const membersZh: Member[] = [
   {
     id: 'mo', name: '墨白', avatar: { glyph: '墨', color: 'shiqing' }, brief: '管好看和好用，偶尔为一行字较真',
     rolePrompt: '你是一位对细节敏感的体验设计师，喜欢用具体的画面和例子说话，反对空洞的套话。', providerId: 'p1', model: 'claude-sonnet-5-5', contextTokens: 64000,
@@ -55,6 +61,27 @@ const members: Member[] = [
     rolePrompt: '你是一位数据分析师，习惯用数字和对比说明问题，也会诚实地说出数据覆盖不到的地方。', providerId: 'p3', model: 'qwen-max', contextTokens: 32000,
   },
 ]
+
+const membersEn: Member[] = [
+  {
+    id: 'mo', name: 'Mira', avatar: { glyph: 'M', color: 'shiqing' }, brief: 'Cares about how things look and feel',
+    rolePrompt: 'You are a detail-sensitive experience designer. You speak with concrete images and examples, and dislike empty jargon.', providerId: 'p1', model: 'claude-sonnet-5-5', contextTokens: 64000,
+  },
+  {
+    id: 'qy', name: 'Kai', avatar: { glyph: 'K', color: 'shilv' }, brief: 'Reads code, and what is between the lines',
+    rolePrompt: 'You are a stubborn code reviewer. You point out risks and offer workable alternatives. Direct, never unkind.', providerId: 'p2', model: 'deepseek-chat', contextTokens: 32000,
+  },
+  {
+    id: 'sy', name: 'June', avatar: { glyph: 'J', color: 'zheshi' }, brief: 'Keeps asking until the question is clear',
+    rolePrompt: 'You are a product thinker who asks good questions. You turn fuzzy ideas into small concrete questions and remind the group of the original goal.', providerId: 'p1', model: 'claude-haiku-5-5', contextTokens: 32000,
+  },
+  {
+    id: 'gl', name: 'Theo', avatar: { glyph: 'T', color: 'dai' }, brief: 'Tells stories with numbers, and admits what they miss',
+    rolePrompt: 'You are a data analyst. You explain with numbers and comparisons, and you are honest about what the data cannot show.', providerId: 'p3', model: 'qwen-max', contextTokens: 32000,
+  },
+]
+
+const members: Member[] = language === 'zh' ? membersZh : membersEn
 const memberById: Record<string, Member> = Object.fromEntries(members.map((m) => [m.id, m]))
 // 已软删除、但仍用于渲染历史消息的成员
 const retired = new Set<string>()
@@ -66,7 +93,7 @@ function msg(p: Partial<Message> & Pick<Message, 'groupId' | 'seq' | 'authorKind
   }
 }
 
-function seedHome(): GroupDetail {
+function seedHomeZh(): GroupDetail {
   const g = 'g1'
   const messages: Message[] = [
     msg({ groupId: g, seq: 1, authorKind: 'system', authorId: '', content: '你创建了群聊，邀请了 墨白、青砚、拾遗', createdAt: minutesAgo(180) }),
@@ -114,6 +141,53 @@ function seedHome(): GroupDetail {
   }
 }
 
+function seedHomeEn(): GroupDetail {
+  const g = 'g1'
+  const messages: Message[] = [
+    msg({ groupId: g, seq: 1, authorKind: 'system', authorId: '', content: 'You created the group and invited Mira, Kai, and June', createdAt: minutesAgo(180) }),
+    msg({ groupId: g, seq: 2, authorKind: 'user', authorId: USER_ID, turnId: 't1', mentions: ['mo', 'qy'], createdAt: minutesAgo(52),
+      content: '@Mira @Kai The homepage is three columns right now and feels scattered. I want to try a single column — take a look and tell me if it is feasible.' }),
+    msg({ groupId: g, seq: 3, authorKind: 'member', authorId: 'mo', turnId: 't1', replyToId: 'm-g1-2', model: 'claude-sonnet-5-5', contextSeq: 2, createdAt: minutesAgo(51),
+      content: 'Single column works, and it fits the mobile-first traffic. I would arrange it like this:\n\n1. **First screen**: one-line value proposition + search, drop the carousel\n2. **Core scenarios**: three vertical cards, one idea each\n3. **Trust**: customer logos and one quote\n\nThe “Latest” column can move to the footer; clicks there are low.' }),
+    msg({ groupId: g, seq: 4, authorKind: 'member', authorId: 'qy', turnId: 't1', replyToId: 'm-g1-2', model: 'deepseek-chat', contextSeq: 3, createdAt: minutesAgo(50),
+      content: 'I agree with Mira’s structure in #3. Two implementation notes:\n\n- If all three cards depend on API data, the first screen will flash empty — **add skeletons**\n- The carousel component is reused by three other pages; remove the homepage usage, but do not touch the component yet' }),
+    msg({ groupId: g, seq: 5, authorKind: 'user', authorId: USER_ID, turnId: 't2', createdAt: minutesAgo(40),
+      content: 'Single column it is. Keep the search box on the first screen; I will sketch the low-fidelity version.' }),
+    msg({ groupId: g, seq: 6, authorKind: 'user', authorId: USER_ID, turnId: 't3', mentions: ['sy'], createdAt: minutesAgo(22),
+      content: '@June What have we not considered from a product side?' }),
+    msg({ groupId: g, seq: 7, authorKind: 'member', authorId: 'sy', turnId: 't3', replyToId: 'm-g1-6', model: 'claude-haiku-5-5', contextSeq: 6, createdAt: minutesAgo(21),
+      content: 'Three questions to answer first:\n\n1. Old users enter Docs from the right column. Where does that entry live after the change? I suggest keeping it in the first-screen navigation.\n2. We agreed on single column for M1 but not the **desktop maximum width**. A single column will feel empty on large screens.\n3. How do we measure success? Pick one metric first, such as first screen → signup conversion.' }),
+    msg({ groupId: g, seq: 8, authorKind: 'user', authorId: USER_ID, turnId: 't4', mentions: ['mo'], mentionAll: false, createdAt: minutesAgo(9),
+      content: '@Mira What desktop width would you suggest?' }),
+    msg({ groupId: g, seq: 9, authorKind: 'member', authorId: 'mo', turnId: 't4', replyToId: 'm-g1-8', model: 'claude-sonnet-5-5', status: 'stopped', contextSeq: 8, createdAt: minutesAgo(8),
+      content: 'A body width of **720px** feels comfortable for English text (60–75 characters per line). Cards can stretch to 1080px, with light backgrounds in the margins.' }),
+  ]
+  const t = (n: number) => minutesAgo(n)
+  const memory: MemoryItem[] = [
+    { id: 'k1', groupId: g, ref: 1, kind: 'decision', content: 'The homepage moves from three columns to a single column', status: 'confirmed', origin: 'member', proposedBy: 'mo',
+      sources: [{ messageId: 'm-g1-3', seq: 3, role: 'proposed' }, { messageId: 'm-g1-5', seq: 5, role: 'discussed' }], confirmedAt: t(39), supersededBy: '', createdAt: t(45), updatedAt: t(39) },
+    { id: 'k2', groupId: g, ref: 2, kind: 'plan', content: 'Keep the search box on the first screen and drop the carousel', status: 'proposed', origin: 'user', proposedBy: USER_ID,
+      sources: [{ messageId: 'm-g1-3', seq: 3, role: 'proposed' }, { messageId: 'm-g1-5', seq: 5, role: 'discussed' }], supersededBy: '', createdAt: t(39), updatedAt: t(39) },
+    { id: 'k3', groupId: g, ref: 3, kind: 'plan', content: 'Use skeletons while card data loads to avoid an empty first screen', status: 'proposed', origin: 'member', proposedBy: 'qy',
+      sources: [{ messageId: 'm-g1-4', seq: 4, role: 'proposed' }], supersededBy: '', createdAt: t(39), updatedAt: t(39) },
+    { id: 'k4', groupId: g, ref: 4, kind: 'todo', content: 'Sketch a low-fidelity single-column homepage', status: 'proposed', origin: 'user', proposedBy: USER_ID,
+      sources: [{ messageId: 'm-g1-5', seq: 5, role: 'proposed' }], supersededBy: '', createdAt: t(39), updatedAt: t(39) },
+    { id: 'k5', groupId: g, ref: 5, kind: 'todo', content: 'Choose a success metric for the redesign', status: 'proposed', origin: 'member', proposedBy: 'sy',
+      sources: [{ messageId: 'm-g1-7', seq: 7, role: 'proposed' }], supersededBy: '', createdAt: t(20), updatedAt: t(20) },
+    { id: 'k6', groupId: g, ref: 6, kind: 'background', content: 'Most homepage traffic comes from mobile', status: 'proposed', origin: 'member', proposedBy: 'mo',
+      sources: [{ messageId: 'm-g1-3', seq: 3, role: 'proposed' }], supersededBy: '', createdAt: t(45), updatedAt: t(45) },
+    { id: 'k7', groupId: g, ref: 7, kind: 'plan', content: 'Keep the entire “Latest” column on the right side of the homepage', status: 'rejected', origin: 'member', proposedBy: 'qy',
+      sources: [{ messageId: 'm-g1-4', seq: 4, role: 'proposed' }], supersededBy: '', createdAt: t(45), updatedAt: t(30) },
+    { id: 'k8', groupId: g, ref: 8, kind: 'todo', content: 'Audit which pages reuse the carousel component', status: 'done', origin: 'member', proposedBy: 'qy',
+      sources: [{ messageId: 'm-g1-4', seq: 4, role: 'proposed' }], supersededBy: '', createdAt: t(45), updatedAt: t(25) },
+  ]
+  return {
+    group: { id: g, title: 'Should the homepage go single-column?', topic: 'The homepage may move from three columns to one — layout, implementation, and trade-offs', memberIds: ['mo', 'qy', 'sy'], memberAvatars: {}, archived: false,
+      defaultMode: 'serial', memoryCursor: 7, createdAt: minutesAgo(180), updatedAt: minutesAgo(8) },
+    messages, memory, busy: false,
+  }
+}
+
 function seedSmall(id: string, title: string, topic: string, memberIds: string[], lines: [string, string][]): GroupDetail {
   const messages = lines.map(([who, content], i) =>
     msg({ groupId: id, seq: i + 1, authorKind: who === USER_ID ? 'user' : 'member', authorId: who, content, createdAt: minutesAgo(600 - i * 3), turnId: `t${id}${Math.floor(i / 2)}` }),
@@ -121,8 +195,8 @@ function seedSmall(id: string, title: string, topic: string, memberIds: string[]
   return { group: { id, title, topic, memberIds, memberAvatars: {}, archived: false, defaultMode: 'parallel', memoryCursor: 0, createdAt: minutesAgo(900), updatedAt: minutesAgo(560) }, messages, memory: [], busy: false }
 }
 
-const db: Record<string, GroupDetail> = {
-  g1: seedHome(),
+const dbZh: Record<string, GroupDetail> = {
+  g1: seedHomeZh(),
   g2: seedSmall('g2', '一起读点 Go', '每周挑一个并发话题，慢慢读源码', ['qy', 'gl'], [
     [USER_ID, '@青砚 @观澜 这周想搞懂 context 取消是怎么传播的'],
     ['qy', '核心就一句话：**父 context 取消时，所有子 context 都会收到 Done 信号**。建议从 `context.WithCancel` 的源码读起，重点看 `propagateCancel`。'],
@@ -130,17 +204,24 @@ const db: Record<string, GroupDetail> = {
   g3: seedSmall('g3', '把周报写得像人话', '', ['sy'], [[USER_ID, '@拾遗 帮我把这周周报改得更有重点']]),
 }
 
+const dbEn: Record<string, GroupDetail> = {
+  g1: seedHomeEn(),
+  g2: seedSmall('g2', 'Reading a little Go', 'One concurrency topic a week, reading the source slowly', ['qy', 'gl'], [
+    [USER_ID, '@Kai @Theo This week I want to understand how context cancellation propagates'],
+    ['qy', 'The core idea is one sentence: **when a parent context is cancelled, every child context receives a Done signal**. Start with the source of `context.WithCancel`, especially `propagateCancel`.'],
+  ]),
+  g3: seedSmall('g3', 'Make the weekly update sound human', '', ['sy'], [[USER_ID, '@June Help me make this week’s update sound less like a template']]),
+}
+
+const db: Record<string, GroupDetail> = language === 'zh' ? dbZh : dbEn
+
 // 可变的模型服务与纪要整理设置（TASK-008 设置页）
 const providers: ProviderConfig[] = [
   { id: 'p1', name: 'Anthropic', kind: 'anthropic', baseUrl: 'https://api.anthropic.com', hasKey: true },
   { id: 'p2', name: 'DeepSeek', kind: 'openai', baseUrl: 'https://api.deepseek.com', hasKey: true },
-  { id: 'p3', name: '通义千问', kind: 'openai', baseUrl: 'https://dashscope.aliyuncs.com/compatible-mode/v1', hasKey: false },
+  { id: 'p3', name: localized('通义千问', 'Qwen'), kind: 'openai', baseUrl: 'https://dashscope.aliyuncs.com/compatible-mode/v1', hasKey: false },
 ]
 const memoryConfig: MemoryConfig = { providerId: '', model: '' }
-const storedLanguage = readJSON<string>(demoKey('agc.language'))
-let language = typeof storedLanguage === 'string' && /^[a-z]{2,3}(-[A-Za-z0-9]{2,8})*$/.test(storedLanguage) ? storedLanguage : 'zh'
-const localized = (zh: string, en: string) => (language === 'zh' ? zh : en)
-
 type Handler = (e: BackendEvent) => void
 const handlers = new Set<Handler>()
 let persistDemo = () => {}
@@ -168,7 +249,7 @@ const running = new Map<string, AbortController>()
 
 function summary(d: GroupDetail) {
   const last = [...d.messages].reverse().find((m) => m.status === 'done' || m.status === 'stopped')
-  const preview = last?.content.trim() || (last?.attachments?.length ? `[附件] ${last.attachments[0].name}（${last.attachments.length}份）` : '')
+  const preview = last?.content.trim() || (last?.attachments?.length ? localized(`[附件] ${last.attachments[0].name}（${last.attachments.length}份）`, `[Attachment] ${last.attachments[0].name} (${last.attachments.length})`) : '')
   return {
     ...d.group,
     lastMessage: last && { authorId: last.authorId, authorKind: last.authorKind, preview: preview.replace(/[#*`>\n-]+/g, ' ').slice(0, 60), at: last.createdAt },
@@ -179,8 +260,8 @@ function summary(d: GroupDetail) {
 function draftReply(self: Member, userText: string, before: Message[], mode: ReplyMode): string {
   const prev = before[before.length - 1]
   const prevName = prev ? memberById[prev.authorId]?.name : ''
-  const topic = userText.replace(/[@＠]\S+/g, '').trim().slice(0, 24) || '这个问题'
-  const lines: Record<string, string[]> = {
+  const topic = userText.replace(/[@＠]\S+/g, '').trim().slice(0, 24) || localized('这个问题', 'this topic')
+  const lines: Record<string, string[]> = language === 'zh' ? {
     mo: [
       `关于「${topic}」，从体验角度我的看法是：`,
       '',
@@ -214,8 +295,42 @@ function draftReply(self: Member, userText: string, before: Message[], mode: Rep
       '',
       mode === 'parallel' ? '我没看到其他人的回答，以上是我独立的判断。' : '有了这些再讨论方案会更有底。',
     ],
+  } : {
+    mo: [
+      `About “${topic}”, from an experience point of view:`,
+      '',
+      '1. **Protect readability**: keep body text around 60–75 characters per line with generous line height',
+      '2. **Reduce decisions per screen**: let people do one thing at a time',
+      '3. **Make state visible**: design loading, empty, and error states',
+      '',
+      'If we need a priority, start with #1: lowest cost, clearest payoff.',
+    ],
+    qy: [
+      prev ? `I agree with the direction ${prevName} raised in #${prev.seq}. A few implementation risks:` : `A few implementation notes on “${topic}”:`,
+      '',
+      '- Do not put expensive synchronous work on the render path; **virtualize lists over 200 items**',
+      '- Failures need a fallback; never leave the page blank',
+      '- Check the blast radius before editing; `grep` every reference',
+      '',
+      '```ts\n// A sensible data-fetching shape\nconst { data, error } = useQuery(key, fetcher, { staleTime: 30_000 })\n```',
+    ],
+    sy: [
+      prev ? `Building on ${prevName}, two product questions:` : `For “${topic}”, let me ask a few questions first:`,
+      '',
+      '1. Whose problem does this solve? Do we have concrete feedback?',
+      '2. Which metric tells us it worked?',
+      '',
+      'If those are unclear, I would wait before building.',
+    ],
+    gl: [
+      `Looking at “${topic}” through data, I would pull three numbers first:`,
+      '',
+      '| Metric | Definition | Current |\n| --- | --- | --- |\n| First-screen bounce | 7-day average | To pull |\n| Signup conversion | Homepage → signup | To pull |\n| Mobile share | UV | To pull |',
+      '',
+      mode === 'parallel' ? 'I have not seen the other replies; this is my independent read.' : 'With these numbers, the plan discussion will have a firmer floor.',
+    ],
   }
-  return (lines[self.id] ?? [`收到，关于「${topic}」我需要更多信息。`]).join('\n')
+  return (lines[self.id] ?? [localized(`收到，关于「${topic}」我需要更多信息。`, `Got it. I need more detail about “${topic}”.`)]).join('\n')
 }
 
 async function streamInto(groupId: string, m: Message, text: string, signal: AbortSignal) {
@@ -350,8 +465,8 @@ export function createMockBackend(): Backend {
       return {
         platform: forced ?? platform,
         appearance: { ...DEFAULT_APPEARANCE, ...readJSON<Appearance>(demoKey('agc.appearance')) },
-        userDisplayName: readJSON<{displayName:string}>(demoKey('agc.profile'))?.displayName || '你',
-        userSeal: { ...DEFAULT_USER_SEAL, ...readJSON<UserSeal>(demoKey('agc.seal')), ...readJSON<{seal:UserSeal}>(demoKey('agc.profile'))?.seal },
+        userDisplayName: readJSON<{displayName:string}>(demoKey('agc.profile'))?.displayName || localized('你', 'You'),
+        userSeal: { ...demoUserSeal, ...readJSON<UserSeal>(demoKey('agc.seal')), ...readJSON<{seal:UserSeal}>(demoKey('agc.profile'))?.seal },
         members: isDemo ? Object.values(memberById) : members,
         providers: structuredClone(providers),
         groups: Object.values(db).map(summary).sort((a, b) => b.updatedAt.localeCompare(a.updatedAt)),
@@ -546,7 +661,7 @@ export function createMockBackend(): Backend {
       const errors = validateUserProfile({displayName:'你',seal})
       if(errors.seal) throw new Error(errors.seal)
       const profile=readJSON<{displayName:string}>(demoKey('agc.profile'))
-      localStorage.setItem(demoKey('agc.profile'), JSON.stringify({displayName:profile?.displayName || '你',seal}))
+      localStorage.setItem(demoKey('agc.profile'), JSON.stringify({displayName:profile?.displayName || localized('你', 'You'),seal}))
     },
 
     async uploadAvatar(file) {

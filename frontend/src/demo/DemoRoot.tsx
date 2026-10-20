@@ -51,7 +51,7 @@ export function DemoRoot() {
       </span>
     </div>
     {hint && <div className={styles.hint}>
-      <span>{t('试试：@墨白 @青砚 发一条消息，再给纪要盖个章')}</span>
+      <span>{t('试试：用 @ 点名成员，发一条消息，再给纪要盖个章')}</span>
       <Button variant="quiet" size="sm" aria-label={t('关闭试用提示')} onClick={() => dismiss('hint-dismissed', setHint)}>{t('知道了')}</Button>
     </div>}
     <div className={styles.application}><App /></div>
