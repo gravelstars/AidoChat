@@ -61,6 +61,7 @@ export const Composer = forwardRef<ComposerHandle, Props>(function Composer({ st
   const [menuIndex, setMenuIndex] = useState(0)
   const [menuClosed, setMenuClosed] = useState(false)
   const [shaking, setShaking] = useState(false) // 忙碌时按 Enter 的抖动提示
+  const [mentionNudge, setMentionNudge] = useState(false) // 未 @ 成员时，发送前的温和提醒
   const composing = useRef(false)
   const t = useT()
   const mentionAll = getLanguage() === 'en' ? 'all' : '所有人'
@@ -71,6 +72,7 @@ export const Composer = forwardRef<ComposerHandle, Props>(function Composer({ st
     textRef.current=draft;setTextState(draft)
     setAttachments([]);attachmentRef.current=[];setAttachmentError('');setSending(false);sendingRef.current=false
     setMode(null)
+    setMentionNudge(false)
     area.current?.focus()
     return () => {
       epoch.current++
@@ -85,6 +87,11 @@ export const Composer = forwardRef<ComposerHandle, Props>(function Composer({ st
   const parsed = useMemo(() => parseMentions(text, groupMembers), [text, groupMembers])
   const targets = useMemo(() => planTargets(group.memberIds, parsed), [group.memberIds, parsed])
   const effectiveMode = mode ?? group.defaultMode
+
+  // 用户手动补上 @ 后，提醒自动消失。
+  useEffect(() => {
+    if (targets.length > 0) setMentionNudge(false)
+  }, [targets.length])
 
   // ---- @ 候选 ----
   const query = activeMentionQuery(text, caret)
@@ -125,13 +132,18 @@ export const Composer = forwardRef<ComposerHandle, Props>(function Composer({ st
     replaceRange(query.start, caret, `@${c.name} `)
   }
 
+  const insertMentionText = (name: string) => {
+    const el = area.current
+    const at = el?.selectionStart ?? textRef.current.length
+    const before = textRef.current.slice(0, at)
+    const pad = before && !/\s$/.test(before) ? ' ' : ''
+    replaceRange(at, at, `${pad}@${name} `)
+    setMentionNudge(false)
+  }
+
   useImperativeHandle(ref, () => ({
     insertMention(name) {
-      const el = area.current
-      const at = el?.selectionStart ?? text.length
-      const before = text.slice(0, at)
-      const pad = before && !/\s$/.test(before) ? ' ' : ''
-      replaceRange(at, at, `${pad}@${name} `)
+      insertMentionText(name)
     },
     focus() {
       area.current?.focus()
@@ -179,18 +191,24 @@ export const Composer = forwardRef<ComposerHandle, Props>(function Composer({ st
     finally {importControllers.current.delete(controller);pendingImports.current--;if(pendingImports.current===0) setImporting(false)}
   }
 
-  const submit = async () => {
+  const submit = async (force = false) => {
     const content = text.trim()
     const sent = [...attachmentRef.current]
     if ((!content && !sent.length) || sendingRef.current || pendingImports.current>0) return
     if (busy) { setShaking(false);requestAnimationFrame(() => setShaking(true));return }
+    // 软限制：第一次发送前提醒补 @；用户选择“仍然发送”时不再拦截。
+    if(!targets.length && !force) {
+      setMentionNudge(true)
+      setMenuClosed(true)
+      return
+    }
     if(sent.some(a=>a.kind==='image')) {
       const unsupported=targets.filter(id=>!members[id]?.supportsImages).map(id=>members[id]?.name ?? id)
       if(unsupported.length) {setAttachmentError(t('「{names}」尚未启用图片输入，请在成员设置中确认模型能力，或移除图片后发送', { names: unsupported.join(getLanguage() === 'en' ? ', ' : '、') }));return}
     }
     const session=epoch.current
     const original=textRef.current
-    sendingRef.current=true;inFlightIds.current=new Set(sent.map(a=>a.id));setSending(true);setAttachmentError('')
+    sendingRef.current=true;inFlightIds.current=new Set(sent.map(a=>a.id));setSending(true);setAttachmentError('');setMentionNudge(false)
     try {
       await send(content, mode ?? undefined, sent.map(a=>a.id))
       if(textDrafts.get(group.id)===original) textDrafts.set(group.id,'')
@@ -228,7 +246,8 @@ export const Composer = forwardRef<ComposerHandle, Props>(function Composer({ st
     }
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault()
-      void submit()
+      // 提醒已展示过时，再按一次 Enter 即按原样发送。
+      void submit(mentionNudge)
     }
   }
 
@@ -279,6 +298,19 @@ export const Composer = forwardRef<ComposerHandle, Props>(function Composer({ st
 
         {menuOpen ? (
           <div className={styles.strip}>{t('↑ ↓ 选择，Enter 或 Tab 确认，Esc 取消')}</div>
+        ) : mentionNudge ? (
+          <div className={styles.nudge} role="status">
+            <p className={styles.nudgeText}>{t('没有 @ 任何成员。这条消息会记在群里，但不会有人回复。')}</p>
+            <div className={styles.nudgeChoices}>
+              <span className={styles.nudgeHint}>{t('想听谁说话，就点一个名字：')}</span>
+              {groupMembers.map((m) => (
+                <Button key={m.id} variant="quiet" size="sm" onClick={() => insertMentionText(m.name)}>@{m.name}</Button>
+              ))}
+              <Button variant="quiet" size="sm" onClick={() => insertMentionText(mentionAll)}>@{mentionAll}</Button>
+              <span className={styles.spacer} />
+              <Button variant="quiet" size="sm" icon="close" aria-label={t('继续编辑')} title={t('继续编辑')} onClick={() => { setMentionNudge(false); area.current?.focus() }} />
+            </div>
+          </div>
         ) : (
           <TargetStrip group={group} targets={targets} members={members} mode={effectiveMode} hasText={!!text.trim()} busy={busy} />
         )}
@@ -326,8 +358,8 @@ export const Composer = forwardRef<ComposerHandle, Props>(function Composer({ st
               {t('停止')}
             </Button>
           ) : (
-            <Button variant="accent" size="sm" icon="send" onClick={() => void submit()} disabled={(!text.trim() && !attachments.length) || importing || sending}>
-              {t('发送')}
+            <Button variant="accent" size="sm" icon="send" onClick={() => void submit(mentionNudge)} disabled={(!text.trim() && !attachments.length) || importing || sending}>
+              {mentionNudge ? t('仍然发送') : t('发送')}
             </Button>
           )}
         </div>

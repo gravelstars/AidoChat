@@ -40,6 +40,33 @@
   color: var(--ink-2);
 }
 
+/* 未 @ 成员时的软提醒：先展示补 @ 的入口，也允许用户按原样发送。 */
+.nudge {
+  margin: var(--space-2) var(--space-3) 0;
+  padding: var(--space-2) var(--space-3);
+  border: 1px dashed var(--rule-strong);
+  border-radius: var(--radius-md);
+  background: var(--paper);
+  font-size: var(--text-xs);
+  color: var(--ink-2);
+}
+
+.nudgeText {
+  margin: 0;
+}
+
+.nudgeChoices {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1);
+  margin-top: var(--space-1);
+}
+
+.nudgeHint {
+  color: var(--ink-3);
+}
+
 .stripLabel {
   color: var(--ink-3);
 }

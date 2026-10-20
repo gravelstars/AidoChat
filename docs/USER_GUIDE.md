@@ -109,15 +109,17 @@ Renaming a member affects future mentions and the displayed name in history. Del
 
 ## 5. Group chat, mentions, and reply modes
 
-The order in which members are invited to a new group is also the order used for `@everyone` replies. **Manage** in the group header changes the group name, topic, default mode, and member order.
+The order in which members are invited to a new group is also the order used for `@all` replies. **Manage** in the group header changes the group name, topic, default mode, and member order.
 
 | Input / action | Behavior |
 | --- | --- |
 | Plain text without `@` | Only recorded in the group; no AI is called |
 | `@Member` | Only the mentioned member replies |
 | Multiple mentions | Generated in the selected sequential or parallel mode |
-| `@everyone` | Mentions every current group member in group order |
+| `@all` | Mentions every current group member in group order |
 | `@` inside AI text | Does not trigger other AIs and never causes an automatic loop |
+
+If you press **Send** without mentioning anyone, AidoChat first shows a gentle reminder with one-click member and `@all` chips. Add a mention to invite a reply, or choose **Send anyway** to keep the message as a note. The reminder never blocks sending.
 
 **Sequential**: each later member sees the completed replies earlier in the same turn. Good for review, additions, and cross-checking.
 

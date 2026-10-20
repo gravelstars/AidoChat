@@ -474,6 +474,10 @@ const locale: Locale = {
     '暂时没有待办': 'No tasks for now',
     '还没有方案，先聊聊看': 'No plans yet — talk it through first',
     '背景还是一片空白': 'No background yet',
+    '没有 @ 任何成员。这条消息会记在群里，但不会有人回复。': 'No one is mentioned. This message will be saved in the group, but no one will reply.',
+    '想听谁说话，就点一个名字：': 'To hear from someone, add them:',
+    '仍然发送': 'Send anyway',
+    '继续编辑': 'Keep editing',
   },
   errors: [
     [/^该群有回复正在进行，请稍候或先停止$/, 'A reply is already running in this group. Wait or stop it first.'],

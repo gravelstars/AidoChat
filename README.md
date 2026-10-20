@@ -98,7 +98,7 @@ The desktop app uses local SQLite and the system credential store. Attach images
 1. **Live demo**: open [gravelstars.github.io/AidoChat](https://gravelstars.github.io/AidoChat/) without a Key. Replies are preset and data stays in the current browser.
 2. **Download the desktop app**: pick the installer for your platform from [Releases](https://github.com/gravelstars/AidoChat/releases/latest), or follow the [build instructions](build/README.md) to build from source.
 3. **Configure a service**: add a base URL, Key, and an available model name in Settings or the member form.
-4. **Start a discussion**: create a group, add members, and type `@墨白` or `@所有人`.
+4. **Start a discussion**: create a group, add members, and type `@墨白` or `@all`.
 
 ## Build from source
 
